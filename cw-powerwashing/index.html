@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CW Powerwashing LLC — Fort Worth's #1 rated pressure washing company. 5-star rated, 166 reviews. Residential, commercial, driveways, graffiti removal. Call (682) 258-1526.">
+<title>CW Powerwashing LLC | Fort Worth, TX Pressure Washing</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0b1629;
+  --navy2:#0f1e38;
+  --navy3:#162848;
+  --orange:#f97316;
+  --orange2:#fb923c;
+  --blue:#0ea5e9;
+  --blue2:#38bdf8;
+  --white:#ffffff;
+  --gray:#94a3b8;
+  --light:#e2e8f0;
+  --card:#111f3a;
+  --radius:12px;
+  --shadow:0 4px 24px rgba(0,0,0,.4);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,sans-serif;background:var(--navy);color:var(--white);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+
+/* ── HEADER ── */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(11,22,41,.92);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+  transition:background .3s;
+}
+.header-inner{
+  max-width:1200px;margin:0 auto;padding:0 1.25rem;
+  height:64px;display:flex;align-items:center;justify-content:space-between;
+}
+.logo{display:flex;align-items:center;gap:.6rem}
+.logo-icon{
+  width:38px;height:38px;
+  background:linear-gradient(135deg,var(--orange),var(--orange2));
+  border-radius:8px;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.logo-icon svg{width:22px;height:22px;fill:#fff}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-name{font-size:.95rem;font-weight:800;letter-spacing:.5px;color:var(--white)}
+.logo-tagline{font-size:.65rem;color:var(--gray);letter-spacing:.5px;text-transform:uppercase}
+.header-phone{
+  display:flex;align-items:center;gap:.5rem;
+  background:linear-gradient(135deg,var(--orange),var(--orange2));
+  color:#fff;font-weight:700;font-size:.85rem;
+  padding:.5rem 1rem;border-radius:8px;
+  transition:transform .15s,box-shadow .15s;
+  white-space:nowrap;
+}
+.header-phone:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(249,115,22,.4)}
+.header-phone svg{width:14px;height:14px;fill:#fff;flex-shrink:0}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 120%, rgba(14,165,233,.18) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 20%, rgba(249,115,22,.12) 0%, transparent 60%),
+    linear-gradient(160deg, var(--navy) 0%, var(--navy2) 50%, #071020 100%);
+  display:flex;align-items:center;justify-content:center;
+  padding:80px 1.25rem 3rem;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230ea5e9' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events:none;
+}
+.hero-water{
+  position:absolute;bottom:0;left:0;right:0;height:120px;overflow:hidden;pointer-events:none;
+}
+.hero-water svg{width:100%;height:120px}
+.hero-content{max-width:780px;text-align:center;position:relative;z-index:1}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(249,115,22,.12);border:1px solid rgba(249,115,22,.3);
+  color:var(--orange2);font-size:.8rem;font-weight:600;
+  padding:.35rem .9rem;border-radius:99px;margin-bottom:1.5rem;
+  letter-spacing:.5px;text-transform:uppercase;
+}
+.hero-badge svg{width:14px;height:14px;fill:currentColor}
+h1{
+  font-size:clamp(2.4rem,6vw,4rem);font-weight:900;line-height:1.08;
+  letter-spacing:-1.5px;margin-bottom:1.25rem;
+}
+h1 span{
+  background:linear-gradient(135deg,var(--blue),var(--blue2) 50%,var(--orange));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-sub{font-size:1.15rem;color:var(--gray);max-width:540px;margin:0 auto 2.5rem;line-height:1.7}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:3rem}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:linear-gradient(135deg,var(--orange),var(--orange2));
+  color:#fff;font-weight:800;font-size:1.05rem;
+  padding:.9rem 2rem;border-radius:10px;
+  box-shadow:0 8px 32px rgba(249,115,22,.35);
+  transition:transform .15s,box-shadow .15s;
+  white-space:nowrap;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(249,115,22,.5)}
+.btn-primary svg{width:18px;height:18px;fill:#fff}
+.btn-secondary{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);
+  color:var(--white);font-weight:700;font-size:1rem;
+  padding:.9rem 1.75rem;border-radius:10px;
+  transition:background .15s,border-color .15s;
+  white-space:nowrap;
+}
+.btn-secondary:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25)}
+.hero-trust{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center}
+.trust-item{display:flex;align-items:center;gap:.45rem;color:var(--gray);font-size:.85rem;font-weight:500}
+.trust-item svg{width:16px;height:16px;fill:var(--orange)}
+.stars{color:#fbbf24;letter-spacing:1px;font-size:.9rem}
+
+/* ── SECTION BASE ── */
+section{padding:5rem 1.25rem}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-label{
+  display:inline-block;
+  color:var(--orange);font-size:.75rem;font-weight:700;letter-spacing:1.5px;
+  text-transform:uppercase;margin-bottom:.75rem;
+}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:900;letter-spacing:-1px;margin-bottom:1rem;line-height:1.1}
+.section-sub{color:var(--gray);font-size:1.05rem;max-width:560px;margin-bottom:3rem}
+
+/* ── SERVICES ── */
+.services{background:var(--navy2)}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.25rem;
+}
+.service-card{
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:var(--radius);
+  padding:1.75rem;
+  transition:transform .2s,border-color .2s,box-shadow .2s;
+  position:relative;overflow:hidden;
+  cursor:default;
+}
+.service-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--orange),var(--blue));
+  opacity:0;transition:opacity .2s;
+}
+.service-card:hover{transform:translateY(-4px);border-color:rgba(249,115,22,.25);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.service-card:hover::before{opacity:1}
+.service-icon{
+  width:52px;height:52px;border-radius:10px;
+  background:linear-gradient(135deg,rgba(249,115,22,.15),rgba(14,165,233,.1));
+  border:1px solid rgba(249,115,22,.2);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.1rem;
+  color:var(--orange);
+}
+.service-icon svg{width:26px;height:26px;flex-shrink:0}
+.service-card h3{font-size:1.1rem;font-weight:800;margin-bottom:.5rem}
+.service-card p{color:var(--gray);font-size:.9rem;line-height:1.6}
+.service-tag{
+  display:inline-block;margin-top:.9rem;
+  background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.2);
+  color:var(--blue2);font-size:.72rem;font-weight:600;letter-spacing:.5px;
+  padding:.25rem .65rem;border-radius:99px;text-transform:uppercase;
+}
+
+/* ── WHY CHOOSE US ── */
+.why{background:var(--navy)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;justify-items:center}
+.why-card{text-align:center;padding:2rem 1.5rem}
+.why-icon{
+  width:72px;height:72px;border-radius:50%;margin:0 auto 1.25rem;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,rgba(249,115,22,.15),rgba(14,165,233,.08));
+  border:2px solid rgba(249,115,22,.2);
+  color:var(--orange);
+}
+.why-icon svg{width:32px;height:32px;flex-shrink:0}
+.why-card h3{font-size:1.05rem;font-weight:800;margin-bottom:.5rem}
+.why-card p{color:var(--gray);font-size:.88rem}
+.why-stat{font-size:2.2rem;font-weight:900;background:linear-gradient(135deg,var(--orange),var(--blue2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:.25rem}
+
+/* ── PROCESS ── */
+.process{background:var(--navy2)}
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;position:relative}
+.process-steps::before{
+  content:'';position:absolute;top:28px;left:15%;right:15%;height:2px;
+  background:linear-gradient(90deg,var(--orange),var(--blue));
+  opacity:.25;
+}
+.process-step{text-align:center;position:relative;z-index:1}
+.step-num{
+  width:56px;height:56px;border-radius:50%;
+  background:linear-gradient(135deg,var(--orange),var(--orange2));
+  color:#fff;font-size:1.3rem;font-weight:900;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1rem;
+  box-shadow:0 6px 20px rgba(249,115,22,.35);
+}
+.process-step h3{font-size:1rem;font-weight:800;margin-bottom:.4rem}
+.process-step p{color:var(--gray);font-size:.88rem}
+
+/* ── REVIEWS ── */
+.reviews{background:var(--navy)}
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.review-card{
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:var(--radius);padding:1.75rem;
+  transition:transform .2s,box-shadow .2s;
+}
+.review-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.4)}
+.review-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1rem}
+.reviewer-avatar{
+  width:44px;height:44px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;font-weight:800;color:#fff;flex-shrink:0;
+}
+.av1{background:linear-gradient(135deg,#6366f1,#8b5cf6)}
+.av2{background:linear-gradient(135deg,#10b981,#059669)}
+.av3{background:linear-gradient(135deg,#f59e0b,#d97706)}
+.reviewer-info h4{font-size:.95rem;font-weight:700}
+.reviewer-info span{color:var(--gray);font-size:.8rem}
+.review-stars{color:#fbbf24;font-size:1rem;margin-bottom:.75rem}
+.review-text{color:var(--light);font-size:.9rem;line-height:1.7;font-style:italic}
+.review-date{color:var(--gray);font-size:.78rem;margin-top:.75rem}
+.google-badge{
+  display:inline-flex;align-items:center;gap:.75rem;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  border-radius:8px;padding:.75rem 1.25rem;margin-top:2.5rem;width:fit-content;
+}
+.google-badge>div{display:flex;flex-direction:column;justify-content:center;gap:.1rem}
+.google-badge span{color:var(--gray);font-size:.82rem}
+.rating-big{font-size:1.8rem;font-weight:900;color:#fbbf24;line-height:1}
+
+/* ── SERVICE AREA ── */
+.area{background:var(--navy2)}
+.area-content{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.area-map{
+  background:linear-gradient(135deg,var(--card),var(--navy3));
+  border:1px solid rgba(14,165,233,.15);
+  border-radius:var(--radius);
+  padding:2.5rem;
+  position:relative;overflow:hidden;min-height:300px;
+  display:flex;align-items:center;justify-content:center;
+}
+.area-map::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at center, rgba(14,165,233,.08) 0%, transparent 70%);
+}
+.map-pin-group{position:relative;z-index:1;text-align:center}
+.map-pin-icon{font-size:3.5rem;display:block;margin-bottom:.75rem;filter:drop-shadow(0 4px 12px rgba(249,115,22,.4))}
+.map-city{font-size:1.4rem;font-weight:900;color:var(--white)}
+.map-sub{color:var(--gray);font-size:.88rem;margin-top:.25rem}
+.coverage-ring{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:200px;height:200px;border-radius:50%;
+  border:1px dashed rgba(14,165,233,.2);animation:pulse-ring 3s ease-in-out infinite;
+}
+.coverage-ring:nth-child(2){width:300px;height:300px;animation-delay:.75s}
+.coverage-ring:nth-child(3){width:400px;height:400px;animation-delay:1.5s}
+@keyframes pulse-ring{0%,100%{opacity:.5;transform:translate(-50%,-50%) scale(1)}50%{opacity:.15;transform:translate(-50%,-50%) scale(1.02)}}
+.area-cities{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.6rem .5rem}
+.area-cities li{
+  display:flex;align-items:center;gap:.5rem;
+  color:var(--light);font-size:.9rem;
+}
+.area-cities li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--orange);flex-shrink:0}
+.area-text h2{margin-bottom:.75rem}
+.area-text p{color:var(--gray);margin-bottom:1.5rem}
+
+/* ── CTA BAND ── */
+.cta-band{
+  background:linear-gradient(135deg,rgba(249,115,22,.15),rgba(14,165,233,.1));
+  border-top:1px solid rgba(249,115,22,.2);
+  border-bottom:1px solid rgba(14,165,233,.15);
+  padding:4rem 1.25rem;text-align:center;
+}
+.cta-band h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.75rem}
+.cta-band p{color:var(--gray);margin-bottom:2rem;font-size:1.05rem}
+.cta-band .btn-primary{font-size:1.15rem;padding:1rem 2.5rem}
+
+/* ── FOOTER ── */
+footer{
+  background:#060d1a;
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:3rem 1.25rem 2rem;
+}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+.footer-about .logo{margin-bottom:1rem}
+.footer-about p{color:var(--gray);font-size:.88rem;line-height:1.7;max-width:280px}
+.footer-col h4{font-size:.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--orange);margin-bottom:1rem}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:.5rem}
+.footer-col a{color:var(--gray);font-size:.88rem;transition:color .15s}
+.footer-col a:hover{color:var(--white)}
+.footer-contact li{display:flex;align-items:flex-start;gap:.5rem;color:var(--gray);font-size:.88rem;margin-bottom:.6rem}
+.footer-contact li svg{width:14px;height:14px;fill:var(--orange);flex-shrink:0;margin-top:3px}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.06);
+  padding-top:1.5rem;
+  display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;
+}
+.footer-bottom p{color:var(--gray);font-size:.8rem}
+.badges{display:flex;flex-wrap:wrap;gap:.5rem}
+.badge{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+  color:var(--gray);font-size:.72rem;font-weight:600;letter-spacing:.5px;
+  padding:.25rem .7rem;border-radius:99px;text-transform:uppercase;
+}
+
+/* ── ANIMATIONS ── */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.stagger-1{transition-delay:.1s}
+.stagger-2{transition-delay:.2s}
+.stagger-3{transition-delay:.3s}
+.stagger-4{transition-delay:.4s}
+.stagger-5{transition-delay:.5s}
+.stagger-6{transition-delay:.6s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .area-content{grid-template-columns:1fr}
+  .area-map{min-height:220px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-about{grid-column:1/-1}
+  .process-steps::before{display:none}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .footer-grid{grid-template-columns:1fr}
+  .footer-about{grid-column:unset}
+  .hero-trust{gap:1rem}
+  .header-phone span.ph-text{display:none}
+  .area-cities{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/><path d="M7 14c0 2.76 2.24 5 5 5s5-2.24 5-5c0-1.64-.79-3.09-2-4H9c-1.21.91-2 2.36-2 4z" opacity=".3"/><path d="M9.5 7.5l1 1.5h3l1-1.5C14.05 6.89 13.08 6.5 12 6.5S9.95 6.89 9.5 7.5z"/></svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">CW Powerwashing</span>
+        <span class="logo-tagline">Fort Worth, TX · Est. 2018</span>
+      </div>
+    </a>
+    <a href="tel:6822581526" class="header-phone">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <span class="ph-text">(682) 258-1526</span>
+    </a>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge fade-up">
+      <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+      5-Star Rated · 166 Reviews · Fort Worth, TX
+    </div>
+    <h1 class="fade-up stagger-1">Fort Worth's Most<br><span>Trusted Pressure</span><br>Washing Team</h1>
+    <p class="hero-sub fade-up stagger-2">Residential &amp; commercial pressure washing, driveway cleaning, graffiti removal &amp; more. Fully licensed &amp; insured. Serving all of DFW.</p>
+    <div class="hero-ctas fade-up stagger-3">
+      <a href="tel:6822581526" class="btn-primary">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call Now: (682) 258-1526
+      </a>
+      <a href="#services" class="btn-secondary">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        View Services
+      </a>
+    </div>
+    <div class="hero-trust fade-up stagger-4">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        Licensed &amp; Insured
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        <span class="stars">★★★★★</span>&nbsp;166 Reviews
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Locally Owned &amp; Operated
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        Free Estimates
+      </div>
+    </div>
+  </div>
+  <div class="hero-water">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z" fill="rgba(14,165,233,0.06)"/>
+      <path d="M0,80 C360,40 720,100 1080,60 C1260,40 1380,70 1440,80 L1440,120 L0,120 Z" fill="rgba(14,165,233,0.04)"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <span class="section-label fade-up">What We Do</span>
+    <h2 class="fade-up stagger-1">Professional Cleaning<br>Services You Can Trust</h2>
+    <p class="section-sub fade-up stagger-2">From driveways to commercial buildings, we bring the power to make any surface look brand new.</p>
+    <div class="services-grid">
+
+      <div class="service-card fade-up stagger-1">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Residential Pressure Washing</h3>
+        <p>Complete exterior cleaning for your home — siding, brick, stucco, decks, patios, and more. Safe for all surface types.</p>
+        <span class="service-tag">Most Popular</span>
+      </div>
+
+      <div class="service-card fade-up stagger-2">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="12.01"/><path d="M8 12h.01M16 12h.01M8 16h.01M16 16h.01M12 16h.01"/></svg></div>
+        <h3>Commercial Pressure Washing</h3>
+        <p>Storefronts, parking lots, warehouses, and commercial properties. Maintain a clean, professional image that drives business.</p>
+        <span class="service-tag">High Volume</span>
+      </div>
+
+      <div class="service-card fade-up stagger-3">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Driveway &amp; Concrete Cleaning</h3>
+        <p>Remove years of oil stains, tire marks, algae, and grime. We restore driveways, sidewalks, and concrete to near-original condition.</p>
+        <span class="service-tag">Fast Service</span>
+      </div>
+
+      <div class="service-card fade-up stagger-4">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3>Graffiti Removal</h3>
+        <p>Professional-grade graffiti removal from all surfaces including brick, concrete, wood, and metal. Discreet, fast, and effective.</p>
+        <span class="service-tag">Quick Response</span>
+      </div>
+
+      <div class="service-card fade-up stagger-5">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="12" y1="3" x2="12" y2="21"/><line x1="2" y1="12" x2="22" y2="12"/></svg></div>
+        <h3>Window Cleaning</h3>
+        <p>Streak-free window cleaning for residential and commercial properties. Exterior and interior options available. Crystal clear results.</p>
+        <span class="service-tag">Streak-Free</span>
+      </div>
+
+      <div class="service-card fade-up stagger-6">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+        <h3>Solar Panel Cleaning</h3>
+        <p>Maximize your solar panel efficiency with professional cleaning. Dirty panels lose up to 25% output — we restore full performance.</p>
+        <span class="service-tag">Efficiency Boost</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY CHOOSE US ═══ -->
+<section class="why" id="why">
+  <div class="section-inner">
+    <span class="section-label fade-up">Why CW Powerwashing</span>
+    <h2 class="fade-up stagger-1">Fort Worth's Choice<br>for a Reason</h2>
+    <div class="why-grid">
+
+      <div class="why-card fade-up stagger-1">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="why-stat">5.0</div>
+        <h3>5-Star Rating</h3>
+        <p>166 verified Google reviews and counting. Our reputation speaks for itself.</p>
+      </div>
+
+      <div class="why-card fade-up stagger-2">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <div class="why-stat">100%</div>
+        <h3>Licensed &amp; Insured</h3>
+        <p>Fully licensed and insured for your complete peace of mind on every job.</p>
+      </div>
+
+      <div class="why-card fade-up stagger-3">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="why-stat">Local</div>
+        <h3>Locally Owned</h3>
+        <p>Fort Worth-based and community-focused. We treat your property like our own.</p>
+      </div>
+
+      <div class="why-card fade-up stagger-4">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+        <div class="why-stat">Pro</div>
+        <h3>Expert Equipment</h3>
+        <p>Commercial-grade pressure washers and eco-friendly cleaning solutions only.</p>
+      </div>
+
+      <div class="why-card fade-up stagger-5">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.6a16 16 0 0 0 5.49 5.49l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 17v-.08z"/></svg></div>
+        <div class="why-stat">Fast</div>
+        <h3>Free Estimates</h3>
+        <p>Quick, no-obligation quotes. We respond same day — because your time matters.</p>
+      </div>
+
+      <div class="why-card fade-up stagger-6">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="why-stat">Done</div>
+        <h3>Satisfaction Guaranteed</h3>
+        <p>We don't leave until you're 100% satisfied. That's the CW promise.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section class="process" id="process">
+  <div class="section-inner">
+    <span class="section-label fade-up">How It Works</span>
+    <h2 class="fade-up stagger-1">Simple as 1-2-3</h2>
+    <p class="section-sub fade-up stagger-2">We make getting a clean property as easy as possible.</p>
+    <div class="process-steps">
+      <div class="process-step fade-up stagger-1">
+        <div class="step-num">1</div>
+        <h3>Call or Text</h3>
+        <p>Reach out at (682) 258-1526. We'll ask a few quick questions about your property.</p>
+      </div>
+      <div class="process-step fade-up stagger-2">
+        <div class="step-num">2</div>
+        <h3>Free Estimate</h3>
+        <p>We provide a fast, no-obligation quote — often same day. Transparent, upfront pricing.</p>
+      </div>
+      <div class="process-step fade-up stagger-3">
+        <div class="step-num">3</div>
+        <h3>We Show Up</h3>
+        <p>Our crew arrives on time, does the job right, and leaves your property spotless.</p>
+      </div>
+      <div class="process-step fade-up stagger-4">
+        <div class="step-num">4</div>
+        <h3>You're Amazed</h3>
+        <p>Step back and see the transformation. Results that last — guaranteed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REVIEWS ═══ -->
+<section class="reviews" id="reviews">
+  <div class="section-inner">
+    <span class="section-label fade-up">Customer Reviews</span>
+    <h2 class="fade-up stagger-1">Don't Take Our<br>Word for It</h2>
+    <p class="section-sub fade-up stagger-2">Real customers. Real results. 166 five-star reviews on Google.</p>
+    <div class="reviews-grid">
+
+      <div class="review-card fade-up stagger-1">
+        <div class="review-header">
+          <div class="reviewer-avatar av1">MR</div>
+          <div class="reviewer-info">
+            <h4>Mike R.</h4>
+            <span>Fort Worth, TX</span>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"CW Powerwashing did an incredible job on my driveway and back patio. They showed up on time, worked fast, and the results were unbelievable. My driveway looks brand new — better than the day we poured it. Will absolutely use them again!"</p>
+        <p class="review-date">Reviewed 2 weeks ago via Google</p>
+      </div>
+
+      <div class="review-card fade-up stagger-2">
+        <div class="review-header">
+          <div class="reviewer-avatar av2">JL</div>
+          <div class="reviewer-info">
+            <h4>Jennifer L.</h4>
+            <span>Keller, TX</span>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Used CW for our storefront and parking area. The difference is night and day — it's like we got a brand new building exterior. Super professional, reasonably priced, and they worked around our business hours. Highly recommend to any business owner."</p>
+        <p class="review-date">Reviewed 1 month ago via Google</p>
+      </div>
+
+      <div class="review-card fade-up stagger-3">
+        <div class="review-header">
+          <div class="reviewer-avatar av3">DT</div>
+          <div class="reviewer-info">
+            <h4>David T.</h4>
+            <span>Arlington, TX</span>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Had graffiti on the side of our fence and these guys removed every trace of it within hours of calling. Fast, affordable, and you honestly can't tell it was ever there. Great communication throughout the whole process. Five stars without hesitation."</p>
+        <p class="review-date">Reviewed 3 weeks ago via Google</p>
+      </div>
+
+    </div>
+    <div class="google-badge fade-up stagger-4">
+      <span class="rating-big">5.0</span>
+      <div>
+        <div style="color:#fbbf24;font-size:1.1rem">★★★★★</div>
+        <span>166 Reviews on Google</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICE AREA ═══ -->
+<section class="area" id="area">
+  <div class="section-inner">
+    <div class="area-content">
+      <div class="area-map fade-up">
+        <div class="coverage-ring"></div>
+        <div class="coverage-ring"></div>
+        <div class="coverage-ring"></div>
+        <div class="map-pin-group">
+          <span class="map-pin-icon">📍</span>
+          <div class="map-city">Fort Worth, TX</div>
+          <div class="map-sub">DFW &amp; Surrounding Areas</div>
+        </div>
+      </div>
+      <div class="area-text fade-up stagger-2">
+        <span class="section-label">Service Area</span>
+        <h2>We Come to You Across All of DFW</h2>
+        <p>Based in Fort Worth, we serve the entire Dallas–Fort Worth metroplex and surrounding communities. No job too far — we bring the power to your door.</p>
+        <ul class="area-cities">
+          <li>Fort Worth</li>
+          <li>Dallas</li>
+          <li>Arlington</li>
+          <li>Keller</li>
+          <li>Southlake</li>
+          <li>Grapevine</li>
+          <li>Hurst</li>
+          <li>Euless</li>
+          <li>Bedford</li>
+          <li>North Richland Hills</li>
+          <li>Mansfield</li>
+          <li>Burleson</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BAND ═══ -->
+<div class="cta-band fade-up">
+  <div style="max-width:700px;margin:0 auto">
+    <h2>Ready for a Spotless Property?</h2>
+    <p>Call now for a free estimate. Same-day responses, competitive pricing, guaranteed results.</p>
+    <a href="tel:6822581526" class="btn-primary">
+      <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:#fff"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      (682) 258-1526 — Call or Text
+    </a>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer id="contact">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <div class="logo" style="margin-bottom:.75rem">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:#fff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/><path d="M7 14c0 2.76 2.24 5 5 5s5-2.24 5-5c0-1.64-.79-3.09-2-4H9c-1.21.91-2 2.36-2 4z" opacity=".3"/><path d="M9.5 7.5l1 1.5h3l1-1.5C14.05 6.89 13.08 6.5 12 6.5S9.95 6.89 9.5 7.5z"/></svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">CW Powerwashing LLC</span>
+            <span class="logo-tagline">Fort Worth, TX · Est. 2018</span>
+          </div>
+        </div>
+        <p>Fort Worth's most trusted pressure washing company. Locally owned, fully licensed &amp; insured. Serving all of DFW with 5-star quality you can count on.</p>
+        <div class="badges" style="margin-top:1rem">
+          <span class="badge">Licensed</span>
+          <span class="badge">Insured</span>
+          <span class="badge">5-Star Rated</span>
+          <span class="badge">Local</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Residential Washing</a></li>
+          <li><a href="#services">Commercial Washing</a></li>
+          <li><a href="#services">Driveway Cleaning</a></li>
+          <li><a href="#services">Graffiti Removal</a></li>
+          <li><a href="#services">Window Cleaning</a></li>
+          <li><a href="#services">Solar Panel Cleaning</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <a href="tel:6822581526" style="color:var(--light)">(682) 258-1526</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Fort Worth, TX 76100
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+            Mon–Sat: 7am – 7pm
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            DFW &amp; Surrounding Areas
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 CW Powerwashing LLC. All rights reserved. Fort Worth, TX.</p>
+      <p style="color:var(--gray);font-size:.78rem">Locally Owned &amp; Operated · Licensed &amp; Insured · 5-Star Rated</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Scroll animations
+(function(){
+  const els = document.querySelectorAll('.fade-up');
+  if(!('IntersectionObserver' in window)){
+    els.forEach(el=>el.classList.add('visible'));return;
+  }
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(el=>io.observe(el));
+})();
+
+// ── Header scroll effect
+(function(){
+  const h = document.getElementById('site-header');
+  let last=0;
+  window.addEventListener('scroll',()=>{
+    const y=window.scrollY;
+    if(y>80){h.style.background='rgba(6,13,26,.97)'}
+    else{h.style.background='rgba(11,22,41,.92)'}
+    last=y;
+  },{passive:true});
+})();
+
+// ── Smooth scroll for anchors
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+});
+
+// ── Hero counter animation for trust items
+(function(){
+  const badge = document.querySelector('.hero-badge');
+  if(!badge) return;
+  const io = new IntersectionObserver(entries=>{
+    if(entries[0].isIntersecting){
+      badge.style.animation='none';
+      badge.offsetHeight; // reflow
+      badge.style.animation='';
+      io.disconnect();
+    }
+  });
+  io.observe(badge);
+})();
+</script>
+</body>
+</html>
