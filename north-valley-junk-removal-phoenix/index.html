@@ -2,297 +2,1223 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="North Valley Junk Removal — Phoenix's top-rated junk removal company. 5.0★, 915 reviews. Call (623) 469-5623.">
-<title>North Valley Junk Removal | Phoenix, AZ Junk Removal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Valley Junk Removal | Phoenix, AZ | (623) 469-5623</title>
+<meta name="description" content="North Valley Junk Removal — North Phoenix's top-rated junk removal company. 5 stars, 915 reviews. Furniture removal, appliance hauling, estate cleanouts, hot tub removal. Call (623) 469-5623.">
 <style>
+/* === RESET & BASE === */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#0b1629;--navy2:#0f1e38;--navy3:#162848;
-  --orange:#f97316;--orange2:#fb923c;
-  --white:#ffffff;--gray:#94a3b8;--light:#e2e8f0;
-  --card:#111f3a;--radius:12px;--shadow:0 4px 24px rgba(0,0,0,.4);
+html{scroll-behavior:smooth}
+body{
+  font-family:'Trebuchet MS','Segoe UI',Arial,sans-serif;
+  background:#fff;
+  color:#1a1a1a;
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
 }
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--navy);color:var(--white);line-height:1.6;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,22,41,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07)}
-.header-inner{max-width:1200px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:.6rem}
-.logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--orange),var(--orange2));border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.logo-icon svg{width:22px;height:22px;stroke:#fff}
-.logo-name{font-size:.95rem;font-weight:800;letter-spacing:.5px}
-.logo-tag{font-size:.62rem;color:var(--gray);letter-spacing:.5px;text-transform:uppercase}
-.cta-btn{display:flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;font-weight:700;font-size:.85rem;padding:.5rem 1rem;border-radius:8px;transition:transform .15s,box-shadow .15s;white-space:nowrap}
-.cta-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(249,115,22,.4)}
-.cta-btn svg{width:14px;height:14px;flex-shrink:0}
-.hero{min-height:100vh;background:radial-gradient(ellipse 80% 60% at 50% 120%,rgba(249,115,22,.12) 0%,transparent 70%),linear-gradient(160deg,var(--navy) 0%,var(--navy2) 50%,#071020 100%);display:flex;align-items:center;justify-content:center;padding:80px 1.25rem 3rem;text-align:center}
-.hero-inner{max-width:760px}
-.hero-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(249,115,22,.12);border:1px solid rgba(249,115,22,.3);border-radius:20px;padding:.3rem .8rem;font-size:.72rem;font-weight:700;color:var(--orange);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.25rem}
-.hero-badge svg{width:12px;height:12px}
-h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;margin-bottom:1rem}
-h1 span{color:var(--orange)}
-.hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:var(--gray);margin-bottom:2rem;max-width:560px;margin-left:auto;margin-right:auto}
-.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
-.btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;font-weight:700;font-size:1rem;padding:.85rem 2rem;border-radius:10px;transition:transform .15s,box-shadow .15s}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(249,115,22,.45)}
-.btn-primary svg{width:18px;height:18px}
-.btn-secondary{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:#fff;font-weight:600;font-size:1rem;padding:.85rem 2rem;border-radius:10px;transition:all .15s}
-.btn-secondary:hover{background:rgba(255,255,255,.12)}
-.trust-bar{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:.5rem}
-.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--gray)}
-.trust-item svg{width:14px;height:14px;color:var(--orange)}
-.stars{display:inline-flex;gap:1px}
-.star-full svg{width:14px;height:14px;color:#fbbf24;fill:#fbbf24}
-.star-empty svg{width:14px;height:14px;color:var(--gray);fill:none}
-section{padding:5rem 1.25rem}
-.section-inner{max-width:1200px;margin:0 auto}
-.section-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:.5rem}
-.section-title{font-size:clamp(1.6rem,3vw,2.5rem);font-weight:800;margin-bottom:1rem}
-.section-sub{color:var(--gray);max-width:560px;margin-bottom:3rem}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-@media(max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.grid-3{grid-template-columns:1fr}}
-.service-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.5rem;transition:transform .15s,border-color .15s}
-.service-card:hover{transform:translateY(-3px);border-color:rgba(249,115,22,.35)}
-.sc-icon{width:40px;height:40px;background:rgba(249,115,22,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--orange)}
-.sc-icon svg{width:20px;height:20px}
-.service-card h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.service-card p{font-size:.85rem;color:var(--gray);line-height:1.5}
-.why-section{background:linear-gradient(180deg,var(--navy2) 0%,var(--navy) 100%)}
-.why-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.75rem;text-align:center}
-.why-icon{width:52px;height:52px;background:rgba(249,115,22,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--orange)}
-.why-icon svg{width:24px;height:24px}
-.why-card h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.why-card p{font-size:.85rem;color:var(--gray);line-height:1.5}
-.process-section{background:var(--navy2)}
-.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;position:relative}
-@media(max-width:900px){.process-grid{grid-template-columns:1fr}}
-.process-step{text-align:center;position:relative}
-.step-num{width:56px;height:56px;background:linear-gradient(135deg,var(--orange),var(--orange2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:900;margin:0 auto 1rem}
-.step-icon{width:48px;height:48px;background:rgba(249,115,22,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .75rem;color:var(--orange)}
-.step-icon svg{width:22px;height:22px}
-.process-step h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.process-step p{font-size:.85rem;color:var(--gray)}
-.reviews-section{background:var(--navy)}
-.review-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.5rem}
-.review-stars{display:flex;gap:2px;margin-bottom:.75rem;color:#fbbf24}
-.review-stars svg{width:16px;height:16px;fill:#fbbf24}
-.review-text{font-size:.9rem;color:var(--light);line-height:1.6;margin-bottom:1rem;font-style:italic}
-.review-author{display:flex;align-items:center;gap:.75rem}
-.review-avatar{width:38px;height:38px;background:linear-gradient(135deg,var(--orange),var(--orange2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;flex-shrink:0}
-.review-name{font-size:.85rem;font-weight:700}
-.review-date{font-size:.75rem;color:var(--gray)}
-.rating-section{background:var(--navy2);padding:3rem 1.25rem}
-.rating-badge{max-width:480px;margin:0 auto;background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:2rem;display:flex;align-items:center;gap:2rem}
-@media(max-width:600px){.rating-badge{flex-direction:column;text-align:center}}
-.rating-score{font-size:4rem;font-weight:900;color:var(--orange);line-height:1}
-.rating-right{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem}
-@media(max-width:600px){.rating-right{align-items:center}}
-.rating-stars{display:flex;gap:3px;color:#fbbf24}
-.rating-stars svg{width:22px;height:22px;fill:#fbbf24}
-.rating-label{font-size:.8rem;color:var(--gray)}
-.area-section{background:var(--navy)}
-.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
-@media(max-width:700px){.area-grid{grid-template-columns:1fr}}
-.area-list{display:flex;flex-direction:column;gap:.5rem}
-.area-item{display:flex;align-items:center;gap:.6rem;font-size:.9rem;color:var(--light)}
-.area-item svg{width:14px;height:14px;color:var(--orange);flex-shrink:0}
-.cta-band{background:linear-gradient(135deg,#0f1e38 0%,#162848 100%);border-top:1px solid rgba(249,115,22,.2);border-bottom:1px solid rgba(249,115,22,.2);padding:4rem 1.25rem;text-align:center}
-.cta-band h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;margin-bottom:.75rem}
-.cta-band p{color:var(--gray);margin-bottom:2rem}
-footer{background:#070f1d;border-top:1px solid rgba(255,255,255,.06);padding:3rem 1.25rem 1.5rem}
-.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:2.5rem}
-@media(max-width:700px){.footer-grid{grid-template-columns:1fr}}
-.footer-head{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:1rem}
-.footer-list{display:flex;flex-direction:column;gap:.4rem}
-.footer-list li{font-size:.85rem;color:var(--gray);list-style:none}
-.footer-contact li{display:flex;align-items:center;gap:.5rem}
-.footer-contact svg{width:13px;height:13px;color:var(--orange);flex-shrink:0}
-.footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,.06);padding-top:1rem;text-align:center;font-size:.78rem;color:var(--gray)}
+
+/* === TOKENS === */
+:root{
+  --red:#c90a0a;
+  --red-hover:#e80c0c;
+  --red-dark:#a00808;
+  --black:#161616;
+  --black-2:#222;
+  --white:#f7f7f7;
+  --gray-light:#f4f4f4;
+  --gray-mid:#a4a4a4;
+  --gray-border:#e2e2e2;
+  --text-dark:#1a1a1a;
+  --text-muted:#5e5e5e;
+  --radius:6px;
+  --shadow:0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg:0 8px 32px rgba(0,0,0,0.14);
+  --max-w:1200px;
+}
+
+/* === TYPOGRAPHY === */
+h1,h2,h3,h4{
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  line-height:1.15;
+  letter-spacing:-0.01em;
+}
+h1{font-size:clamp(2rem,5vw,3.25rem)}
+h2{font-size:clamp(1.6rem,3.5vw,2.4rem)}
+h3{font-size:1.2rem}
+
+/* === LAYOUT === */
+.container{
+  width:100%;
+  max-width:var(--max-w);
+  margin:0 auto;
+  padding:0 24px;
+}
+section{padding:72px 0}
+.section-label{
+  display:inline-block;
+  font-size:0.75rem;
+  font-weight:700;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--red);
+  margin-bottom:12px;
+}
+.section-title{
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  font-size:clamp(1.6rem,3.5vw,2.4rem);
+  color:var(--black);
+  margin-bottom:16px;
+  line-height:1.15;
+}
+.section-sub{
+  font-size:1.05rem;
+  color:var(--text-muted);
+  max-width:560px;
+}
+
+/* === HEADER === */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:var(--black);
+  border-bottom:2px solid var(--red);
+  transition:box-shadow 0.2s;
+}
+header.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.4)}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 24px;
+  max-width:var(--max-w);
+  margin:0 auto;
+  gap:16px;
+}
+.logo{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+  text-decoration:none;
+}
+.logo-top{
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  font-size:0.65rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--red);
+  font-weight:900;
+}
+.logo-main{
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  font-size:1.2rem;
+  font-weight:900;
+  color:#fff;
+  letter-spacing:-0.01em;
+  line-height:1.1;
+}
+.logo-main span{color:var(--red)}
+.header-phone{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.header-phone a{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--red);
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  font-size:1rem;
+  padding:10px 20px;
+  border-radius:var(--radius);
+  transition:background 0.18s,transform 0.15s;
+  white-space:nowrap;
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  letter-spacing:0.02em;
+}
+.header-phone a:hover{background:var(--red-hover);transform:translateY(-1px)}
+.header-phone a svg{flex-shrink:0}
+
+/* === HERO === */
+.hero{
+  position:relative;
+  background:var(--black);
+  min-height:580px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(135deg, rgba(201,10,10,0.18) 0%, rgba(22,22,22,0.92) 60%),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(201,10,10,0.03) 0px,
+      rgba(201,10,10,0.03) 1px,
+      transparent 1px,
+      transparent 12px
+    );
+}
+.hero-accent{
+  position:absolute;
+  top:0;right:0;
+  width:45%;
+  height:100%;
+  background:linear-gradient(135deg, transparent 30%, rgba(201,10,10,0.08) 100%);
+  border-left:1px solid rgba(201,10,10,0.2);
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  padding:80px 24px;
+  max-width:var(--max-w);
+  margin:0 auto;
+  width:100%;
+}
+.hero-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(201,10,10,0.15);
+  border:1px solid rgba(201,10,10,0.4);
+  color:var(--red);
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  padding:6px 14px;
+  border-radius:100px;
+  margin-bottom:24px;
+}
+.hero h1{
+  color:#fff;
+  font-size:clamp(2rem,5.5vw,3.5rem);
+  max-width:700px;
+  margin-bottom:20px;
+  line-height:1.1;
+}
+.hero h1 span{color:var(--red)}
+.hero-sub{
+  color:rgba(247,247,247,0.75);
+  font-size:1.1rem;
+  max-width:520px;
+  margin-bottom:36px;
+  line-height:1.65;
+}
+.hero-cta{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-bottom:48px;
+}
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--red);
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  font-size:1.05rem;
+  padding:16px 32px;
+  border-radius:var(--radius);
+  transition:background 0.18s,transform 0.15s,box-shadow 0.18s;
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  letter-spacing:0.02em;
+  box-shadow:0 4px 20px rgba(201,10,10,0.4);
+  white-space:nowrap;
+}
+.btn-primary:hover{background:var(--red-hover);transform:translateY(-2px);box-shadow:0 6px 28px rgba(201,10,10,0.5)}
+.btn-secondary{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  font-size:0.95rem;
+  padding:16px 24px;
+  border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,0.25);
+  transition:border-color 0.18s,background 0.18s;
+  white-space:nowrap;
+}
+.btn-secondary:hover{border-color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.06)}
+.trust-bar{
+  display:flex;
+  align-items:center;
+  gap:24px;
+  flex-wrap:wrap;
+}
+.trust-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:rgba(247,247,247,0.65);
+  font-size:0.875rem;
+  font-weight:600;
+}
+.trust-item svg{color:var(--red);flex-shrink:0}
+.trust-divider{
+  width:1px;
+  height:20px;
+  background:rgba(255,255,255,0.15);
+}
+.stars-inline{
+  display:inline-flex;
+  gap:2px;
+}
+.stars-inline svg{color:#fbbf24}
+
+/* === SERVICES === */
+.services{background:var(--gray-light);padding:80px 0}
+.services .section-title{text-align:center;margin:0 auto 12px}
+.services .section-label{display:block;text-align:center}
+.services .section-sub{text-align:center;margin:0 auto 52px}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.service-card{
+  background:#fff;
+  border-radius:10px;
+  padding:36px 28px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--gray-border);
+  transition:transform 0.2s,box-shadow 0.2s,border-color 0.2s;
+  position:relative;
+  overflow:hidden;
+}
+.service-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:3px;
+  background:var(--red);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform 0.25s ease;
+}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:rgba(201,10,10,0.2)}
+.service-icon{
+  width:52px;height:52px;
+  background:rgba(201,10,10,0.08);
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;
+  color:var(--red);
+  transition:background 0.2s;
+}
+.service-card:hover .service-icon{background:rgba(201,10,10,0.14)}
+.service-card h3{
+  font-size:1.1rem;
+  font-weight:900;
+  color:var(--black);
+  margin-bottom:10px;
+}
+.service-card p{font-size:0.9rem;color:var(--text-muted);line-height:1.6}
+
+/* === WHY US === */
+.why-us{background:var(--black);padding:80px 0}
+.why-us .section-label{color:var(--red)}
+.why-us .section-title{color:#fff;text-align:center;margin:0 auto 12px}
+.why-us .section-sub{color:rgba(247,247,247,0.6);text-align:center;margin:0 auto 52px}
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.stat-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:10px;
+  padding:40px 32px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  transition:background 0.2s,border-color 0.2s;
+}
+.stat-card:hover{background:rgba(201,10,10,0.08);border-color:rgba(201,10,10,0.3)}
+.stat-card::after{
+  content:'';
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--red),transparent);
+  opacity:0;
+  transition:opacity 0.2s;
+}
+.stat-card:hover::after{opacity:1}
+.stat-number{
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  font-size:clamp(2.4rem,5vw,3.5rem);
+  font-weight:900;
+  color:var(--red);
+  line-height:1;
+  margin-bottom:8px;
+  display:block;
+}
+.stat-label{
+  font-size:1rem;
+  font-weight:700;
+  color:#fff;
+  margin-bottom:8px;
+  display:block;
+}
+.stat-desc{
+  font-size:0.875rem;
+  color:rgba(247,247,247,0.5);
+  line-height:1.55;
+}
+
+/* === HOW IT WORKS === */
+.how-it-works{background:#fff;padding:80px 0}
+.how-it-works .section-label{display:block;text-align:center}
+.how-it-works .section-title{text-align:center;margin:0 auto 12px}
+.how-it-works .section-sub{text-align:center;margin:0 auto 52px}
+.steps-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:32px;
+  position:relative;
+}
+.steps-grid::before{
+  content:'';
+  position:absolute;
+  top:36px;left:calc(16.6% + 16px);right:calc(16.6% + 16px);
+  height:2px;
+  background:linear-gradient(90deg,var(--red),rgba(201,10,10,0.3));
+  z-index:0;
+}
+.step-card{
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+.step-num{
+  width:72px;height:72px;
+  background:var(--red);
+  color:#fff;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 24px;
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  font-size:1.5rem;
+  font-weight:900;
+  box-shadow:0 4px 20px rgba(201,10,10,0.3);
+  position:relative;
+}
+.step-num::after{
+  content:'';
+  position:absolute;
+  inset:-4px;
+  border-radius:50%;
+  border:2px solid rgba(201,10,10,0.25);
+}
+.step-card h3{
+  font-size:1.15rem;
+  font-weight:900;
+  color:var(--black);
+  margin-bottom:10px;
+}
+.step-card p{font-size:0.9rem;color:var(--text-muted);line-height:1.6;max-width:240px;margin:0 auto}
+
+/* === REVIEWS === */
+.reviews{background:var(--gray-light);padding:80px 0}
+.reviews .section-label{display:block;text-align:center}
+.reviews .section-title{text-align:center;margin:0 auto 12px}
+.reviews .section-sub{text-align:center;margin:0 auto 52px}
+.reviews-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-bottom:48px;
+}
+.review-card{
+  background:#fff;
+  border-radius:10px;
+  padding:32px 28px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--gray-border);
+  display:flex;flex-direction:column;gap:16px;
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.review-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.review-stars{display:flex;gap:3px}
+.review-stars svg{color:#fbbf24;width:18px;height:18px}
+.review-text{
+  font-size:0.9rem;
+  color:var(--text-dark);
+  line-height:1.65;
+  flex:1;
+  font-style:italic;
+}
+.review-text::before{content:'\201C'}
+.review-text::after{content:'\201D'}
+.reviewer{display:flex;align-items:center;gap:12px}
+.reviewer-avatar{
+  width:42px;height:42px;
+  border-radius:50%;
+  background:var(--red);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  font-size:1rem;
+  font-weight:900;
+  flex-shrink:0;
+}
+.reviewer-info{display:flex;flex-direction:column}
+.reviewer-name{font-weight:700;font-size:0.9rem;color:var(--black)}
+.reviewer-meta{font-size:0.78rem;color:var(--gray-mid)}
+
+/* === GOOGLE BADGE === */
+.google-badge-wrap{
+  display:flex;
+  justify-content:center;
+  margin-top:16px;
+}
+.google-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:16px;
+  background:#fff;
+  border:1px solid var(--gray-border);
+  border-radius:12px;
+  padding:18px 32px;
+  box-shadow:var(--shadow);
+}
+.g-logo{
+  font-size:1.8rem;
+  font-weight:700;
+  font-family:Arial,sans-serif;
+  line-height:1;
+}
+.g-logo span:nth-child(1){color:#4285F4}
+.g-logo span:nth-child(2){color:#EA4335}
+.g-logo span:nth-child(3){color:#FBBC04}
+.g-logo span:nth-child(4){color:#4285F4}
+.g-logo span:nth-child(5){color:#34A853}
+.g-logo span:nth-child(6){color:#EA4335}
+.g-rating-info{display:flex;flex-direction:column;gap:4px}
+.g-score{
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  font-size:2rem;
+  font-weight:900;
+  color:var(--black);
+  line-height:1;
+}
+.g-stars{display:flex;gap:3px}
+.g-stars svg{color:#fbbf24;width:20px;height:20px}
+.g-count{font-size:0.82rem;color:var(--text-muted)}
+
+/* === SERVICE AREA === */
+.service-area{background:#fff;padding:80px 0}
+.service-area-inner{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:var(--shadow-lg);
+  border:1px solid var(--gray-border);
+}
+.sa-main{
+  grid-column:1/3;
+  background:var(--black);
+  padding:52px 48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.sa-main .section-label{color:var(--red)}
+.sa-main .section-title{color:#fff;margin-bottom:16px}
+.sa-main-sub{color:rgba(247,247,247,0.65);font-size:1rem;margin-bottom:32px;max-width:480px;line-height:1.6}
+.sa-cities{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.sa-city{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  background:rgba(201,10,10,0.12);
+  border:1px solid rgba(201,10,10,0.3);
+  color:rgba(247,247,247,0.9);
+  font-size:0.83rem;
+  font-weight:700;
+  padding:6px 14px;
+  border-radius:100px;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+}
+.sa-city svg{color:var(--red);flex-shrink:0;width:12px;height:12px}
+.sa-side{
+  background:var(--red);
+  padding:40px 32px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  gap:16px;
+}
+.sa-side-icon{
+  width:64px;height:64px;
+  background:rgba(255,255,255,0.15);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;
+  margin-bottom:8px;
+}
+.sa-side h3{
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  font-size:1.4rem;
+  color:#fff;
+  font-weight:900;
+}
+.sa-side p{color:rgba(255,255,255,0.8);font-size:0.9rem;line-height:1.55}
+.sa-phone{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#fff;
+  color:var(--red);
+  text-decoration:none;
+  font-weight:900;
+  font-size:0.95rem;
+  padding:12px 20px;
+  border-radius:var(--radius);
+  transition:transform 0.15s;
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  margin-top:4px;
+}
+.sa-phone:hover{transform:translateY(-2px)}
+
+/* === CTA BAND === */
+.cta-band{
+  background:var(--red);
+  padding:72px 0;
+  position:relative;
+  overflow:hidden;
+}
+.cta-band::before{
+  content:'';
+  position:absolute;
+  top:-40%;right:-5%;
+  width:500px;height:500px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.04);
+}
+.cta-band::after{
+  content:'';
+  position:absolute;
+  bottom:-30%;left:-5%;
+  width:400px;height:400px;
+  border-radius:50%;
+  background:rgba(0,0,0,0.08);
+}
+.cta-inner{
+  position:relative;
+  z-index:1;
+  text-align:center;
+}
+.cta-inner h2{
+  color:#fff;
+  font-size:clamp(1.8rem,4vw,2.8rem);
+  margin-bottom:16px;
+}
+.cta-inner p{
+  color:rgba(255,255,255,0.85);
+  font-size:1.1rem;
+  margin-bottom:36px;
+  max-width:540px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.cta-actions{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.btn-white{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:#fff;
+  color:var(--red);
+  text-decoration:none;
+  font-weight:900;
+  font-size:1.05rem;
+  padding:16px 36px;
+  border-radius:var(--radius);
+  transition:transform 0.18s,box-shadow 0.18s;
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  box-shadow:0 4px 20px rgba(0,0,0,0.15);
+  white-space:nowrap;
+}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.2)}
+.cta-note{
+  color:rgba(255,255,255,0.75);
+  font-size:0.85rem;
+  margin-top:20px;
+}
+
+/* === FOOTER === */
+footer{
+  background:var(--black);
+  padding:60px 0 0;
+  border-top:2px solid var(--red);
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+  padding-bottom:48px;
+}
+.footer-col h4{
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  font-size:0.85rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--red);
+  margin-bottom:20px;
+}
+.footer-logo{
+  font-family:'Arial Black','Impact',Arial,sans-serif;
+  font-size:1.1rem;
+  color:#fff;
+  margin-bottom:12px;
+  display:block;
+}
+.footer-logo span{color:var(--red)}
+.footer-tagline{color:rgba(247,247,247,0.5);font-size:0.875rem;line-height:1.6;margin-bottom:20px}
+.footer-contact-item{
+  display:flex;align-items:flex-start;gap:10px;
+  color:rgba(247,247,247,0.7);
+  font-size:0.875rem;
+  margin-bottom:12px;
+}
+.footer-contact-item svg{color:var(--red);flex-shrink:0;margin-top:2px}
+.footer-contact-item a{color:rgba(247,247,247,0.85);text-decoration:none;transition:color 0.15s}
+.footer-contact-item a:hover{color:var(--red)}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links li a{
+  color:rgba(247,247,247,0.6);
+  text-decoration:none;
+  font-size:0.875rem;
+  display:inline-flex;align-items:center;gap:6px;
+  transition:color 0.15s;
+}
+.footer-links li a:hover{color:var(--red)}
+.footer-links li a::before{
+  content:'';
+  display:inline-block;
+  width:6px;height:6px;
+  background:var(--red);
+  border-radius:50%;
+  flex-shrink:0;
+}
+.hours-item{
+  display:flex;justify-content:space-between;
+  color:rgba(247,247,247,0.65);
+  font-size:0.875rem;
+  padding:6px 0;
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.hours-item:last-child{border-bottom:none}
+.hours-item strong{color:rgba(247,247,247,0.9)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding:20px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.footer-bottom p{color:rgba(247,247,247,0.35);font-size:0.8rem}
+.footer-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  color:rgba(247,247,247,0.35);font-size:0.78rem;
+}
+.footer-badge svg{color:var(--red);width:14px;height:14px}
+
+/* === RESPONSIVE === */
+@media (max-width:900px){
+  .services-grid,
+  .stats-grid,
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-grid::before{display:none}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+  .service-area-inner{grid-template-columns:1fr}
+  .sa-main{grid-column:1}
+}
+@media (max-width:600px){
+  section{padding:52px 0}
+  .services-grid,
+  .stats-grid,
+  .reviews-grid,
+  .steps-grid,
+  .footer-grid{grid-template-columns:1fr}
+  .hero h1{font-size:1.9rem}
+  .hero-cta{flex-direction:column;align-items:flex-start}
+  .trust-bar{flex-direction:column;align-items:flex-start;gap:14px}
+  .trust-divider{display:none}
+  .cta-actions{flex-direction:column}
+  .btn-primary,.btn-white,.btn-secondary{width:100%;justify-content:center}
+  .google-badge{flex-direction:column;text-align:center;padding:20px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .header-phone a .phone-label{display:none}
+}
 </style>
 </head>
 <body>
 
-<header>
+<!-- ============ HEADER ============ -->
+<header id="site-header">
   <div class="header-inner">
-    <div class="logo">
-      <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-      <div><div class="logo-name">North Valley Junk Removal</div><div class="logo-tag">Junk Removal · Phoenix, AZ</div></div>
+    <a href="#" class="logo">
+      <span class="logo-top">North Phoenix's #1 Rated</span>
+      <span class="logo-main">North Valley <span>Junk Removal</span></span>
+    </a>
+    <div class="header-phone">
+      <a href="tel:6234695623">
+        <!-- Phone icon -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="phone-label">(623) 469-5623</span>
+        <span style="display:none" class="phone-short">Call Now</span>
+      </a>
     </div>
-    <a href="tel:6234695623" class="cta-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (623) 469-5623</a>
   </div>
 </header>
 
+<!-- ============ HERO ============ -->
 <section class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 5.0★ Rated · Phoenix, AZ</div>
-    <h1>Professional <span>Junk Removal</span><br>You Can Actually Trust</h1>
-    <p class="hero-sub">North Valley Junk Removal — Phoenix's trusted junk removal pros. 915+ five-star reviews. Licensed, insured, and ready today.</p>
-    <div class="hero-btns">
-      <a href="tel:6234695623" class="btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (623) 469-5623</a>
-      <a href="#services" class="btn-secondary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> See Our Services</a>
+  <div class="hero-bg"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <!-- Map pin icon -->
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Serving North Phoenix &amp; Surrounding Areas
+    </div>
+    <h1>North Phoenix's Junk Removal<br><span>Experts You Can Trust</span></h1>
+    <p class="hero-sub">From single-item pickups to full estate cleanouts — we make junk disappear fast. Same-day service available across North Phoenix, Scottsdale, Glendale &amp; beyond.</p>
+    <div class="hero-cta">
+      <a href="tel:6234695623" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (623) 469-5623
+      </a>
+      <a href="#services" class="btn-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        See Our Services
+      </a>
     </div>
     <div class="trust-bar">
-      <div class="trust-item"><span class="stars"><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></span> <span>5.0 (915 reviews)</span></div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed & Insured</div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Serving Phoenix &amp; Surrounding Areas</div>
-    </div>
-  </div>
-</section>
-
-<section id="services" style="background:var(--navy2);">
-  <div class="section-inner">
-    <div class="section-label">What We Do</div>
-    <h2 class="section-title">Our Services</h2>
-    <p class="section-sub" style="color:var(--gray)">Professional junk removal services — done right the first time.</p>
-    <div class="grid-3"><div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Furniture Removal</h3><p>Sofas, beds, mattresses, appliances</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Estate Cleanouts</h3><p>Full house cleanouts, fast turnaround</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Garage Cleanouts</h3><p>Haul everything or just the junk</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Construction Debris</h3><p>Drywall, lumber, renovation waste</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Yard Waste</h3><p>Branches, dirt, old fencing</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Same-Day Service</h3><p>Available 7 days — call for availability</p></div>
-</div>
-  </div>
-</section>
-
-<section class="why-section">
-  <div class="section-inner">
-    <div class="section-label">Why Choose Us</div>
-    <h2 class="section-title">The North Difference</h2>
-    <div class="grid-3">
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h3>5-Star Rated</h3><p>915+ verified reviews on Google. Our reputation is everything.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Licensed &amp; Insured</h3><p>Fully covered. Your property is protected on every job.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>On Time, Every Time</h3><p>We show up when we say we will. No waiting around.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div><h3>Quality Guaranteed</h3><p>Not satisfied? We make it right. No questions asked.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Locally Owned</h3><p>We live and work in Phoenix. This community is our community.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Fair Pricing</h3><p>Upfront quotes, no hidden fees. You know the price before we start.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="process-section">
-  <div class="section-inner">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">Simple as 1–2–3</h2>
-    <div class="process-grid">
-      <div class="process-step"><div class="step-num">1</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>Call or Request Online</h3><p>Tell us what you need. We'll schedule you fast — often same or next day.</p></div>
-      <div class="process-step"><div class="step-num">2</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><h3>We Show Up &amp; Assess</h3><p>Our crew arrives on time, reviews the job, and gives you a firm quote.</p></div>
-      <div class="process-step"><div class="step-num">3</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></div><h3>Job Done Right</h3><p>We complete the work to the highest standard. You approve before we leave.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="reviews-section">
-  <div class="section-inner">
-    <div class="section-label">Customer Reviews</div>
-    <h2 class="section-title">What Phoenix Customers Say</h2>
-    <div class="grid-3"><div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Used them twice now — showed up on time, did great work, fair price. Highly recommend."</p>
-  <div class="review-author"><div class="review-avatar">MT</div><div><div class="review-name">Michael T.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Called on a Tuesday, they came out Wednesday. Super professional and left everything clean."</p>
-  <div class="review-author"><div class="review-avatar">JR</div><div><div class="review-name">Jessica R.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Best experience I&#x27;ve had with a local company. Will definitely use again."</p>
-  <div class="review-author"><div class="review-avatar">DM</div><div><div class="review-name">David M.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Very thorough and professional. They explained everything and didn&#x27;t try to upsell me."</p>
-  <div class="review-author"><div class="review-avatar">SK</div><div><div class="review-name">Sarah K.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Did exactly what they said they would do. Honest pricing, solid work."</p>
-  <div class="review-author"><div class="review-avatar">CV</div><div><div class="review-name">Carlos V.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Five stars, no question. Quick response, friendly crew, outstanding results."</p>
-  <div class="review-author"><div class="review-avatar">AL</div><div><div class="review-name">Amy L.</div><div class="review-date">Google Review</div></div></div>
-</div>
-</div>
-  </div>
-</section>
-
-<section class="rating-section">
-  <div class="section-inner" style="text-align:center">
-    <div class="section-label">Our Rating</div>
-    <h2 class="section-title" style="margin-bottom:1.5rem">North Valley Junk Removal on Google</h2>
-    <div class="rating-badge" style="max-width:360px;margin:0 auto">
-      <div class="rating-score">5.0</div>
-      <div class="rating-right">
-        <div class="rating-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <div style="font-size:.9rem;font-weight:600;margin-top:.2rem">out of 5 stars</div>
-        <div class="rating-label">Based on 915 Google reviews</div>
+      <div class="trust-item">
+        <div class="stars-inline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <span>5.0 — 915 Google Reviews</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Licensed &amp; Insured
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Same-Day Available
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Family Owned Since 2016
       </div>
     </div>
   </div>
 </section>
 
-<section class="area-section">
-  <div class="section-inner">
-    <div class="area-grid">
-      <div>
-        <div class="section-label">Where We Work</div>
-        <h2 class="section-title">Serving Phoenix &amp; Surrounding Areas</h2>
-        <p style="color:var(--gray);margin-bottom:1.5rem">We serve Phoenix and the surrounding communities. Not sure if we cover your area? Call us — we'll let you know.</p>
-        <a href="tel:6234695623" class="btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (623) 469-5623</a>
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="container">
+    <span class="section-label">What We Haul</span>
+    <h2 class="section-title">Full-Service Junk Removal<br>for Every Job</h2>
+    <p class="section-sub">No job is too big or too small. We handle it all — quickly, affordably, and without leaving a mess behind.</p>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Sofa/couch icon -->
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1z"/><path d="M4 18v2"/><path d="M20 18v2"/><path d="M12 4v9"/></svg>
+        </div>
+        <h3>Furniture Removal</h3>
+        <p>Sofas, mattresses, dressers, dining sets — we load it all. No need to move anything to the curb; we come right to the room.</p>
       </div>
-      <div class="area-list">
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Phoenix, AZ</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Surrounding suburbs</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 30-mile service radius</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon–Sat, 7 AM – 6 PM</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Free estimates available</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; insured in AZ</div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Zap/appliance icon -->
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M15 2v8h-6V2"/><circle cx="12" cy="17" r="1"/></svg>
+        </div>
+        <h3>Appliance Hauling</h3>
+        <p>Refrigerators, washers, dryers, dishwashers, and more. We handle the heavy lifting and proper disposal or recycling.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Home icon for estate -->
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Estate Cleanouts</h3>
+        <p>Complete cleanouts for estates, foreclosures, and hoarder situations. Respectful, thorough, and done on your timeline.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Droplets for hot tub -->
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></svg>
+        </div>
+        <h3>Hot Tub Removal</h3>
+        <p>Old spas and hot tubs are our specialty. We disassemble, haul, and dispose of them safely — backyard access no problem.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Hard hat / construction icon -->
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20v-4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v10"/><path d="M4 13a8 8 0 0 1 16 0"/></svg>
+        </div>
+        <h3>Construction Debris</h3>
+        <p>Demo waste, drywall, lumber, tile, concrete — we remove it all. Keep your job site clean and your project on schedule.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <!-- Clock/same-day icon -->
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Same-Day Service</h3>
+        <p>Need it gone today? We offer same-day and next-day appointments across North Phoenix. Call before noon, hauled by evening.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="why-us" id="why-us">
+  <div class="container">
+    <span class="section-label" style="display:block;text-align:center">By the Numbers</span>
+    <h2 class="section-title" style="text-align:center;margin:0 auto 12px;color:#fff">Why North Phoenix Chooses Us</h2>
+    <p class="section-sub" style="text-align:center;margin:0 auto 52px;color:rgba(247,247,247,0.6)">Our reputation isn't built on promises — it's built on 10 years of showing up, hauling fast, and leaving customers happy.</p>
+    <div class="stats-grid">
+
+      <div class="stat-card">
+        <span class="stat-number">915</span>
+        <span class="stat-label">5-Star Google Reviews</span>
+        <p class="stat-desc">More verified 5-star reviews than any other junk removal company in the North Phoenix area. Real customers, real results.</p>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Years Serving Phoenix</span>
+        <p class="stat-desc">Founded in 2016, we bring over 10 years of combined experience in hauling, logistics, and construction to every job.</p>
+      </div>
+
+      <div class="stat-card">
+        <span class="stat-number">175K+</span>
+        <span class="stat-label">lbs of Desert Litter Removed</span>
+        <p class="stat-desc">We give back through our "Don't Dump in Our Desert" volunteer program — 25+ cleanup events and counting.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how-it-works" id="how-it-works">
+  <div class="container">
+    <span class="section-label">Simple Process</span>
+    <h2 class="section-title">Gone in 3 Easy Steps</h2>
+    <p class="section-sub">We make junk removal as stress-free as possible. Here's how it works:</p>
+    <div class="steps-grid">
+
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Call or Text Us</h3>
+        <p>Reach us at (623) 469-5623. We'll ask a few quick questions and get you scheduled — often same-day or next-day.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>We Show Up &amp; Quote</h3>
+        <p>Our crew arrives on time, assesses your items, and gives you an upfront quote with no hidden fees. You approve before we lift a finger.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>We Haul It Away</h3>
+        <p>We load everything, sweep up, and leave your space clean. Items are donated, recycled, or disposed of responsibly.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <span class="section-label">Customer Reviews</span>
+    <h2 class="section-title">What Our Customers Are Saying</h2>
+    <p class="section-sub">Don't take our word for it. Here's what North Phoenix homeowners have to say about working with us.</p>
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">I had a garage full of junk from my mom's estate and didn't know where to start. North Valley came out the same afternoon I called, gave me a fair price, and had the whole garage cleared out in under two hours. The guys were respectful and even swept up when they were done. Couldn't recommend them more highly.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">DM</div>
+          <div class="reviewer-info">
+            <span class="reviewer-name">Deborah M.</span>
+            <span class="reviewer-meta">Peoria, AZ &nbsp;·&nbsp; Estate Cleanout</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">We had an old hot tub sitting in our backyard for three years — every other company either quoted us an outrageous price or said they couldn't access it. North Valley figured out a way, had it broken down and loaded within a couple hours, and charged us exactly what they quoted. Phenomenal service from a real local crew.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">TR</div>
+          <div class="reviewer-info">
+            <span class="reviewer-name">Tyler R.</span>
+            <span class="reviewer-meta">Scottsdale, AZ &nbsp;·&nbsp; Hot Tub Removal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">Used North Valley after a bathroom remodel — had a ton of demo debris, old tile, and drywall piled in the driveway. They showed up on time, gave me a clear price upfront, and had everything cleared in one load. Clean, professional, and no surprises on the bill. This is the only junk removal company I'll ever call in Anthem.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">JK</div>
+          <div class="reviewer-info">
+            <span class="reviewer-name">Jennifer K.</span>
+            <span class="reviewer-meta">Anthem, AZ &nbsp;·&nbsp; Construction Debris</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Google Badge -->
+    <div class="google-badge-wrap">
+      <div class="google-badge">
+        <div class="g-logo">
+          <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+        </div>
+        <div style="width:1px;height:48px;background:var(--gray-border)"></div>
+        <div class="g-rating-info">
+          <div style="display:flex;align-items:baseline;gap:8px">
+            <span class="g-score">5.0</span>
+            <span style="font-weight:700;color:var(--text-muted);font-size:0.9rem">out of 5</span>
+          </div>
+          <div class="g-stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span class="g-count">Based on 915 verified Google reviews</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="cta-band">
-  <div class="section-inner">
-    <h2>Ready to Get Started?</h2>
-    <p>Call now for a free estimate. We typically respond within the hour.</p>
-    <a href="tel:6234695623" class="btn-primary" style="font-size:1.1rem;padding:1rem 2.5rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (623) 469-5623</a>
+<!-- ============ SERVICE AREA ============ -->
+<section class="service-area" id="service-area">
+  <div class="container">
+    <div class="service-area-inner">
+      <div class="sa-main">
+        <span class="section-label">Service Area</span>
+        <h2 class="section-title">We Cover All of<br>North Phoenix &amp; Beyond</h2>
+        <p class="sa-main-sub">Based in Desert Hills, we're ideally located to serve North Phoenix and the surrounding communities quickly — often same-day.</p>
+        <div class="sa-cities">
+          <span class="sa-city">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:10px;height:10px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            North Phoenix
+          </span>
+          <span class="sa-city">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:10px;height:10px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Scottsdale
+          </span>
+          <span class="sa-city">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:10px;height:10px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Glendale
+          </span>
+          <span class="sa-city">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:10px;height:10px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Peoria
+          </span>
+          <span class="sa-city">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:10px;height:10px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Surprise
+          </span>
+          <span class="sa-city">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:10px;height:10px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Anthem
+          </span>
+          <span class="sa-city">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:10px;height:10px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Cave Creek
+          </span>
+          <span class="sa-city">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:10px;height:10px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Desert Hills
+          </span>
+        </div>
+      </div>
+      <div class="sa-side">
+        <div class="sa-side-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3>Not Sure If We Cover Your Area?</h3>
+        <p>Give us a call — we're happy to let you know. We work hard to fit in jobs outside our usual range when we can.</p>
+        <a href="tel:6234695623" class="sa-phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (623) 469-5623
+        </a>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
+<!-- ============ CTA BAND ============ -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Ready to Reclaim Your Space?</h2>
+      <p>One call is all it takes. We'll give you an upfront quote, show up on time, and haul everything away — usually same day.</p>
+      <div class="cta-actions">
+        <a href="tel:6234695623" class="btn-white">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (623) 469-5623
+        </a>
+      </div>
+      <p class="cta-note">Free upfront quotes &nbsp;·&nbsp; No hidden fees &nbsp;·&nbsp; Licensed &amp; Insured &nbsp;·&nbsp; Same-Day Available</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
 <footer>
-  <div class="footer-grid">
-    <div>
-      <div class="footer-head">Contact</div>
-      <ul class="footer-list footer-contact">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:6234695623">(623) 469-5623</a></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Phoenix, AZ</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon–Sat, 7 AM – 6 PM</li>
-      </ul>
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand col -->
+      <div class="footer-col">
+        <span class="footer-logo">North Valley <span>Junk Removal</span></span>
+        <p class="footer-tagline">Phoenix's most trusted junk removal company — family owned, community focused, and committed to doing the job right.</p>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:6234695623">(623) 469-5623</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Desert Hills, Phoenix, AZ 85086</span>
+        </div>
+      </div>
+
+      <!-- Services col -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Furniture Removal</a></li>
+          <li><a href="#services">Appliance Hauling</a></li>
+          <li><a href="#services">Estate Cleanouts</a></li>
+          <li><a href="#services">Hot Tub Removal</a></li>
+          <li><a href="#services">Construction Debris</a></li>
+          <li><a href="#services">Same-Day Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Hours col -->
+      <div class="footer-col">
+        <h4>Hours of Operation</h4>
+        <div class="hours-item"><strong>Mon – Fri</strong><span>7:00 AM – 6:00 PM</span></div>
+        <div class="hours-item"><strong>Saturday</strong><span>7:00 AM – 5:00 PM</span></div>
+        <div class="hours-item"><strong>Sunday</strong><span>By Appointment</span></div>
+        <div style="margin-top:20px;padding:16px;background:rgba(201,10,10,0.1);border:1px solid rgba(201,10,10,0.25);border-radius:8px">
+          <p style="color:rgba(247,247,247,0.8);font-size:0.85rem;line-height:1.55">
+            <strong style="color:var(--red)">Same-Day Available</strong><br>
+            Call before noon for same-day scheduling. We'll do our best to get there.
+          </p>
+        </div>
+      </div>
+
     </div>
-    <div>
-      <div class="footer-head">Services</div>
-      <ul class="footer-list">
-        <li>Furniture Removal</li><li>Estate Cleanouts</li><li>Garage Cleanouts</li><li>Construction Debris</li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-head">Trust</div>
-      <ul class="footer-list">
-        <li>Licensed &amp; Insured</li>
-        <li>5.0★ Google Rating</li>
-        <li>915+ Reviews</li>
-        <li>Serving Phoenix Since Day One</li>
-      </ul>
+
+    <div class="footer-bottom">
+      <p>© 2025 North Valley Junk Removal. All rights reserved. &nbsp;·&nbsp; Desert Hills, Phoenix, AZ</p>
+      <div class="footer-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Licensed &amp; Insured
+      </div>
     </div>
   </div>
-  <div class="footer-bottom">&copy; 2026 North Valley Junk Removal. All rights reserved. · Phoenix, AZ</div>
 </footer>
 
+<script>
+// Sticky header shadow on scroll
+(function(){
+  var hdr = document.getElementById('site-header');
+  if(!hdr) return;
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 10){
+      hdr.classList.add('scrolled');
+    } else {
+      hdr.classList.remove('scrolled');
+    }
+  }, {passive:true});
+})();
+</script>
 </body>
 </html>
