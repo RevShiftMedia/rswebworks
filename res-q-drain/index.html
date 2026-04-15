@@ -1,0 +1,1525 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RES-Q-DRAIN | Service d'Urgence Plomberie 24h — Montréal, Laval, Couronne Nord</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #1a3a5c;
+  --navy-dark: #0f2540;
+  --navy-mid: #1e4570;
+  --orange: #f5841f;
+  --orange-dark: #d96e10;
+  --white: #ffffff;
+  --grey-light: #f4f6f9;
+  --grey-mid: #e8ecf1;
+  --grey-text: #6b7a8d;
+  --text-dark: #1a2535;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-dark);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulseOrange {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245,132,31,0.5); }
+  50% { box-shadow: 0 0 0 16px rgba(245,132,31,0); }
+}
+@keyframes ripple {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes badgePop {
+  0% { opacity: 0; transform: scale(0.6); }
+  70% { transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ========== STICKY NAV ========== */
+#navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--white);
+  box-shadow: 0 2px 20px rgba(26,58,92,0.12);
+  transition: box-shadow 0.3s, background 0.3s;
+}
+#navbar.scrolled {
+  box-shadow: 0 4px 32px rgba(26,58,92,0.22);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+/* CSS Lifesaver Logo */
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  flex-shrink: 0;
+}
+.logo-ring-outer {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 4px solid var(--navy);
+  position: absolute;
+  top: 0; left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-ring-inner {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--navy);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-ring-inner::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--white);
+  position: absolute;
+}
+.logo-ring-segments {
+  position: absolute;
+  top: 0; left: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background:
+    conic-gradient(
+      var(--orange) 0deg 90deg,
+      transparent 90deg 180deg,
+      var(--orange) 180deg 270deg,
+      transparent 270deg 360deg
+    );
+  mask: radial-gradient(transparent 14px, black 14px, black 20px, transparent 20px);
+  -webkit-mask: radial-gradient(transparent 14px, black 14px, black 20px, transparent 20px);
+}
+.logo-duck {
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  width: 18px;
+  height: 14px;
+  font-size: 14px;
+  line-height: 1;
+}
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.logo-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 1px;
+}
+.logo-name span {
+  color: var(--orange);
+}
+.logo-tagline {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--grey-text);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+.nav-links a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--navy);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-links a:hover {
+  color: var(--orange);
+  background: rgba(245,132,31,0.08);
+}
+.nav-phone {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white) !important;
+  background: var(--orange) !important;
+  padding: 10px 18px !important;
+  border-radius: 6px !important;
+  transition: background 0.2s !important;
+}
+.nav-phone:hover {
+  background: var(--orange-dark) !important;
+  color: var(--white) !important;
+}
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--white);
+  border-top: 2px solid var(--grey-mid);
+  padding: 16px 24px 20px;
+  gap: 4px;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--navy);
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--grey-mid);
+}
+.mobile-menu a:hover { color: var(--orange); }
+.mobile-menu a.m-phone {
+  color: var(--orange);
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: none;
+  margin-top: 8px;
+}
+
+/* ========== HERO ========== */
+.hero {
+  min-height: 100vh;
+  background: var(--navy-dark);
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 72px;
+}
+/* Water/pipe CSS pattern */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(245,132,31,0.06) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(30,69,112,0.8) 0%, transparent 60%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 48px,
+      rgba(255,255,255,0.025) 48px,
+      rgba(255,255,255,0.025) 50px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 98px,
+      rgba(255,255,255,0.018) 98px,
+      rgba(255,255,255,0.018) 100px
+    );
+  pointer-events: none;
+}
+/* Ripple circles */
+.hero-ripple {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(245,132,31,0.15);
+  animation: ripple 4s ease-out infinite;
+}
+.hero-ripple:nth-child(1) { width: 200px; height: 200px; bottom: 10%; right: 15%; animation-delay: 0s; }
+.hero-ripple:nth-child(2) { width: 200px; height: 200px; bottom: 10%; right: 15%; animation-delay: 1.3s; }
+.hero-ripple:nth-child(3) { width: 200px; height: 200px; bottom: 10%; right: 15%; animation-delay: 2.6s; }
+/* Pipe decoration */
+.hero-pipe {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  opacity: 0.07;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      transparent,
+      transparent 60px,
+      rgba(255,255,255,0.3) 60px,
+      rgba(255,255,255,0.3) 62px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 60px,
+      rgba(255,255,255,0.15) 60px,
+      rgba(255,255,255,0.15) 62px
+    );
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  width: 100%;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--orange);
+  color: var(--white);
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 28px;
+  animation: badgePop 0.7s cubic-bezier(0.34,1.56,0.64,1) 0.2s both;
+  animation-fill-mode: both;
+}
+.hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--white);
+  animation: pulseOrange 1.5s ease-in-out infinite;
+}
+.hero-company {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(40px, 7vw, 90px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1;
+  letter-spacing: 2px;
+  animation: fadeInLeft 0.8s ease 0.3s both;
+  margin-bottom: 8px;
+}
+.hero-company span { color: var(--orange); }
+.hero-sub {
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(14px, 2vw, 18px);
+  color: rgba(255,255,255,0.7);
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  animation: fadeInLeft 0.8s ease 0.45s both;
+  margin-bottom: 36px;
+}
+.hero-phone-wrap {
+  animation: fadeInUp 0.8s ease 0.6s both;
+  margin-bottom: 36px;
+}
+.hero-phone-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 8px;
+}
+.hero-phone {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(36px, 6vw, 76px);
+  font-weight: 700;
+  color: var(--orange);
+  text-decoration: none;
+  letter-spacing: 2px;
+  line-height: 1;
+  transition: color 0.2s;
+  background: linear-gradient(90deg, var(--orange), #ffb347, var(--orange));
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+.hero-phone:hover {
+  -webkit-text-fill-color: var(--white);
+  color: var(--white);
+  animation: none;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  animation: fadeInUp 0.8s ease 0.75s both;
+  margin-bottom: 52px;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--orange);
+  color: var(--white);
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  animation: pulseOrange 2.5s ease-in-out infinite;
+}
+.btn-primary:hover {
+  background: var(--orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(245,132,31,0.4);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--white);
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.3);
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-secondary:hover {
+  border-color: var(--white);
+  background: rgba(255,255,255,0.06);
+}
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  animation: fadeInUp 0.8s ease 0.9s both;
+}
+.hero-stat {
+  padding: 20px 32px 20px 0;
+  border-right: 1px solid rgba(255,255,255,0.12);
+  margin-right: 32px;
+}
+.hero-stat:last-child { border-right: none; margin-right: 0; }
+.hero-stat-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--orange);
+  line-height: 1;
+}
+.hero-stat-label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+  font-weight: 400;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* ========== SECTION SHARED ========== */
+.section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.section-eyebrow {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+.section-title span { color: var(--orange); }
+.section-divider {
+  width: 56px;
+  height: 4px;
+  background: var(--orange);
+  border-radius: 2px;
+  margin: 18px auto 0;
+}
+.section-desc {
+  max-width: 560px;
+  margin: 18px auto 0;
+  font-size: 16px;
+  color: var(--grey-text);
+  line-height: 1.7;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ========== SERVICES ========== */
+#services {
+  padding: 96px 0;
+  background: var(--grey-light);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+.service-category {
+  background: var(--white);
+  border-radius: 12px;
+  border-top: 4px solid var(--navy);
+  padding: 32px 28px;
+  box-shadow: 0 4px 24px rgba(26,58,92,0.08);
+  transition: transform 0.25s, box-shadow 0.25s, border-top-color 0.25s;
+}
+.service-category:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(26,58,92,0.14);
+  border-top-color: var(--orange);
+}
+.service-cat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(26,58,92,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  transition: background 0.25s;
+}
+.service-category:hover .service-cat-icon {
+  background: rgba(245,132,31,0.12);
+}
+.service-cat-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+.service-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.service-list li {
+  font-size: 14px;
+  color: #4a5568;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+.service-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+/* ========== À PROPOS ========== */
+#apropos {
+  padding: 96px 0;
+  background: var(--white);
+}
+.apropos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.apropos-eyebrow {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+.apropos-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.15;
+  margin-bottom: 24px;
+}
+.apropos-title span { color: var(--orange); }
+.apropos-body {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.apropos-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 28px;
+}
+.apropos-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.apropos-highlight-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.apropos-highlight-text strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 2px;
+}
+.apropos-highlight-text span {
+  font-size: 13px;
+  color: var(--grey-text);
+}
+/* Trust badges */
+.trust-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.trust-badge {
+  background: var(--grey-light);
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  border: 1px solid var(--grey-mid);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.trust-badge:hover {
+  border-color: var(--orange);
+  box-shadow: 0 4px 20px rgba(245,132,31,0.12);
+}
+.trust-badge-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+  display: block;
+}
+.trust-badge-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.trust-badge-sub {
+  font-size: 11px;
+  color: var(--grey-text);
+  line-height: 1.4;
+}
+.trust-badge.featured {
+  background: var(--navy);
+  border-color: var(--navy);
+  grid-column: 1 / -1;
+}
+.trust-badge.featured .trust-badge-title { color: var(--white); }
+.trust-badge.featured .trust-badge-sub { color: rgba(255,255,255,0.6); }
+/* Payment row */
+.payment-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: var(--grey-light);
+  border-radius: 10px;
+  border: 1px solid var(--grey-mid);
+}
+.payment-label {
+  font-size: 13px;
+  color: var(--grey-text);
+  font-weight: 500;
+  margin-right: 4px;
+}
+.pay-badge {
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 5px 12px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.pay-visa {
+  background: #1a1f71;
+  color: #fff;
+  font-style: italic;
+  font-size: 14px;
+}
+.pay-interac {
+  background: #f8c200;
+  color: #333;
+}
+
+/* ========== CLIENTS ========== */
+#clients {
+  padding: 96px 0;
+  background: var(--grey-light);
+}
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+.client-badge {
+  background: var(--white);
+  border: 1px solid var(--grey-mid);
+  border-radius: 10px;
+  padding: 24px 16px;
+  text-align: center;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  cursor: default;
+}
+.client-badge:hover {
+  border-color: var(--orange);
+  box-shadow: 0 6px 24px rgba(245,132,31,0.12);
+  transform: translateY(-3px);
+}
+.client-badge-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+.client-badge-type {
+  font-size: 11px;
+  color: var(--grey-text);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* ========== ZONE DE SERVICE ========== */
+#zone {
+  padding: 80px 0;
+  background: var(--navy);
+  text-align: center;
+}
+.zone-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 20px;
+}
+.zone-cities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.zone-city {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(22px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 1px;
+  padding: 0 28px;
+  position: relative;
+}
+.zone-city:not(:last-child)::after {
+  content: '·';
+  position: absolute;
+  right: -2px;
+  color: var(--orange);
+  font-size: 40px;
+  line-height: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.zone-sub {
+  margin-top: 18px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1px;
+}
+
+/* ========== CTA BANNER ========== */
+.cta-banner {
+  padding: 72px 0;
+  background: var(--orange);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 20px,
+      rgba(255,255,255,0.04) 20px,
+      rgba(255,255,255,0.04) 40px
+    );
+}
+.cta-banner-inner {
+  position: relative;
+  z-index: 1;
+}
+.cta-available {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  color: var(--white);
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+.cta-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(20px, 3.5vw, 34px);
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+.cta-phone {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(44px, 7vw, 82px);
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: 2px;
+  line-height: 1;
+  transition: opacity 0.2s;
+}
+.cta-phone:hover { opacity: 0.85; }
+.cta-sub {
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
+  margin-top: 16px;
+  font-weight: 400;
+}
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  background: var(--white);
+  color: var(--orange);
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 36px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+.cta-btn:hover {
+  background: var(--navy);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: var(--navy-dark);
+  padding: 56px 0 0;
+  color: rgba(255,255,255,0.6);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.footer-brand .logo-name {
+  color: var(--white);
+  font-size: 24px;
+}
+.footer-brand .logo-ring-outer { border-color: var(--white); }
+.footer-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 16px;
+  color: rgba(255,255,255,0.5);
+}
+.footer-cert {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.footer-cert-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+}
+.footer-cert-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+  flex-shrink: 0;
+}
+.footer-col-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-links a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--orange); }
+.footer-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+.footer-contact-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+.footer-contact-val {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--white);
+}
+.footer-contact-val a {
+  color: var(--orange);
+  text-decoration: none;
+}
+.footer-contact-val a:hover { text-decoration: underline; }
+.footer-payment {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.footer-bottom {
+  margin-top: 48px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 24px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bottom-copy {
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+}
+.footer-bottom-rbq {
+  font-size: 12px;
+  color: rgba(255,255,255,0.3);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 960px) {
+  .apropos-grid { grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .hero-stat { padding: 16px 20px 16px 0; margin-right: 20px; }
+  .hero-stat-num { font-size: 26px; }
+  .zone-city { font-size: 22px; padding: 0 16px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .trust-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .hero-stats { flex-direction: column; gap: 0; }
+  .hero-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 12px 0; margin-right: 0; }
+  .hero-stat:last-child { border-bottom: none; }
+  .clients-grid { grid-template-columns: 1fr 1fr; }
+  .trust-grid { grid-template-columns: 1fr; }
+  .trust-badge.featured { grid-column: auto; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .zone-cities { flex-direction: column; gap: 8px; }
+  .zone-city::after { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==============================
+     STICKY NAVIGATION
+=============================== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="logo-icon">
+        <div class="logo-ring-outer"></div>
+        <div class="logo-ring-segments"></div>
+        <div class="logo-duck">🦆</div>
+      </div>
+      <div class="logo-text-group">
+        <span class="logo-name">RES<span>-Q-</span>DRAIN</span>
+        <span class="logo-tagline">Urgence 24h • Plomberie</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#clients">Clients</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="tel:5146679449" class="nav-phone">📞 514-667-9449</a></li>
+    </ul>
+    <div class="nav-hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#accueil" onclick="toggleMenu()">Accueil</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#apropos" onclick="toggleMenu()">À propos</a>
+    <a href="#clients" onclick="toggleMenu()">Clients</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <a href="tel:5146679449" class="m-phone">📞 514-667-9449</a>
+  </div>
+</nav>
+
+<!-- ==============================
+     HERO
+=============================== -->
+<section class="hero" id="accueil">
+  <div class="hero-ripple"></div>
+  <div class="hero-ripple"></div>
+  <div class="hero-ripple"></div>
+  <div class="hero-pipe"></div>
+
+  <div class="hero-content container">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Service d'urgence disponible maintenant
+    </div>
+
+    <div class="hero-company">RES<span>-Q-</span>DRAIN</div>
+    <div class="hero-sub">Plomberie Générale &nbsp;·&nbsp; Inspection &nbsp;·&nbsp; Rénovation</div>
+
+    <div class="hero-phone-wrap">
+      <div class="hero-phone-label">Appelez-nous — disponible 24h/7j</div>
+      <a href="tel:5146679449" class="hero-phone">514-667-9449</a>
+    </div>
+
+    <div class="hero-actions">
+      <a href="tel:5146679449" class="btn-primary">
+        📞 Appelez maintenant
+      </a>
+      <a href="#services" class="btn-secondary">
+        ▾ Nos services
+      </a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">25+</div>
+        <div class="hero-stat-label">Ans d'expérience</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">24h</div>
+        <div class="hero-stat-label">Service d'urgence</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">RBQ</div>
+        <div class="hero-stat-label">Licencié & assuré</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">3</div>
+        <div class="hero-stat-label">Régions desservies</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     SERVICES
+=============================== -->
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Ce que nous faisons</span>
+      <h2 class="section-title">Nos <span>Services</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Des solutions précises pour tous vos besoins en plomberie — urgences, inspections, rénovations et plus.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Urgence -->
+      <div class="service-category">
+        <div class="service-cat-icon">🚨</div>
+        <div class="service-cat-title">Urgence</div>
+        <ul class="service-list">
+          <li>Service d'urgence 24h/7j</li>
+          <li>Réparation urgence 24h</li>
+          <li>Débouchage de tuyaux et drains</li>
+          <li>Dégel de tuyaux et égouts</li>
+        </ul>
+      </div>
+
+      <!-- Inspection -->
+      <div class="service-category">
+        <div class="service-cat-icon">📷</div>
+        <div class="service-cat-title">Inspection par Caméra</div>
+        <ul class="service-list">
+          <li>Inspection par caméra enregistrée sur clé USB</li>
+          <li>Diagnostic de problèmes d'égout</li>
+          <li>Nettoyage de drain</li>
+          <li>Rapport détaillé d'événement</li>
+        </ul>
+      </div>
+
+      <!-- Plomberie -->
+      <div class="service-category">
+        <div class="service-cat-icon">🔧</div>
+        <div class="service-cat-title">Plomberie Générale</div>
+        <ul class="service-list">
+          <li>Plomberie générale</li>
+          <li>Remplacement et installation de toilette</li>
+          <li>Mise à jour tuyauterie, robinets et douche</li>
+          <li>Remplacement efficace d'équipements</li>
+          <li>Installation et entretien équipements sanitaires</li>
+        </ul>
+      </div>
+
+      <!-- Rénovation & Eau chaude -->
+      <div class="service-category">
+        <div class="service-cat-icon">🏠</div>
+        <div class="service-cat-title">Rénovation & Eau Chaude</div>
+        <ul class="service-list">
+          <li>Rénovation de plomberie complète</li>
+          <li>Salle de bain complète</li>
+          <li>Installation complète salle de bain et douche</li>
+          <li>Rénovation cuisine et résidence</li>
+          <li>Remplacement réservoir eau chaude</li>
+          <li>Installation chauffe-eau instantané</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     À PROPOS
+=============================== -->
+<section id="apropos">
+  <div class="container">
+    <div class="apropos-grid">
+
+      <!-- Left: Story -->
+      <div>
+        <span class="apropos-eyebrow">Notre histoire</span>
+        <h2 class="apropos-title">Une entreprise familiale<br>avec <span>25 ans</span> d'expertise</h2>
+        <p class="apropos-body">
+          RESQDRAIN est une entreprise familiale qui cumule plus de 25 années d'expérience, dont beaucoup de mandats avec des entreprises de service. Notre réputation est bâtie sur la confiance, la précision et des solutions durables.
+        </p>
+        <p class="apropos-body">
+          Avec notre expertise pour diagnostiquer et résoudre les problèmes, nous pouvons offrir des solutions précises et des rapports d'événement très détaillés — essentiels pour les assurances et la documentation de vos travaux.
+        </p>
+        <p class="apropos-body">
+          Notre entreprise détient une licence RBQ et nous sommes complètement assurés pour nos travaux à Montréal, Laval et la Couronne Nord.
+        </p>
+
+        <div class="apropos-highlights">
+          <div class="apropos-highlight">
+            <div class="apropos-highlight-icon">🏆</div>
+            <div class="apropos-highlight-text">
+              <strong>Entreprise familiale depuis 25 ans</strong>
+              <span>Expertise transmise et perfectionnée sur des centaines de mandats</span>
+            </div>
+          </div>
+          <div class="apropos-highlight">
+            <div class="apropos-highlight-icon">📋</div>
+            <div class="apropos-highlight-text">
+              <strong>Rapports détaillés d'événement</strong>
+              <span>Documentation précise pour assurances et suivi de travaux</span>
+            </div>
+          </div>
+          <div class="apropos-highlight">
+            <div class="apropos-highlight-icon">🌍</div>
+            <div class="apropos-highlight-text">
+              <strong>Montréal, Laval &amp; Couronne Nord</strong>
+              <span>Intervention rapide dans toute la région métropolitaine</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-row">
+          <span class="payment-label">Paiements acceptés :</span>
+          <span class="pay-badge pay-visa">VISA</span>
+          <span class="pay-badge pay-interac">Interac</span>
+        </div>
+      </div>
+
+      <!-- Right: Trust badges -->
+      <div>
+        <div class="trust-grid">
+          <div class="trust-badge featured">
+            <span class="trust-badge-icon">🛡️</span>
+            <div class="trust-badge-title">Assurance Responsabilité Complète</div>
+            <div class="trust-badge-sub">Tous nos travaux sont couverts. Travaillez en toute confiance.</div>
+          </div>
+          <div class="trust-badge">
+            <span class="trust-badge-icon">🏛️</span>
+            <div class="trust-badge-title">Licence RBQ</div>
+            <div class="trust-badge-sub">5697-5105-01<br>Régie du Bâtiment du Québec</div>
+          </div>
+          <div class="trust-badge">
+            <span class="trust-badge-icon">⭐</span>
+            <div class="trust-badge-title">Membre CMMTQ</div>
+            <div class="trust-badge-sub">Corporation des Maîtres Mécaniciens en Tuyauterie</div>
+          </div>
+          <div class="trust-badge">
+            <span class="trust-badge-icon">⏰</span>
+            <div class="trust-badge-title">Urgence 24h/7j</div>
+            <div class="trust-badge-sub">Disponible à toute heure, tous les jours</div>
+          </div>
+          <div class="trust-badge">
+            <span class="trust-badge-icon">👨‍👩‍👧</span>
+            <div class="trust-badge-title">Famille & Confiance</div>
+            <div class="trust-badge-sub">Entreprise familiale fondée sur les valeurs humaines</div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px; padding:20px; background:var(--navy); border-radius:12px; text-align:center;">
+          <div style="font-family:'Oswald',sans-serif; font-size:13px; letter-spacing:3px; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:8px;">Appelez maintenant</div>
+          <a href="tel:5146679449" style="font-family:'Oswald',sans-serif; font-size:32px; font-weight:700; color:var(--orange); text-decoration:none; letter-spacing:1px;">514-667-9449</a>
+          <div style="font-size:12px; color:rgba(255,255,255,0.4); margin-top:6px;">resqdrain@gmail.com</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     CLIENTS SATISFAITS
+=============================== -->
+<section id="clients">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Ils nous font confiance</span>
+      <h2 class="section-title">Des <span>Clients</span> Satisfaits</h2>
+      <div class="section-divider"></div>
+      <p class="section-desc">Des établissements prestigieux de Montréal choisissent RES-Q-DRAIN pour leur plomberie.</p>
+    </div>
+
+    <div class="clients-grid">
+      <div class="client-badge">
+        <div class="client-badge-name">Brasserie 701</div>
+        <div class="client-badge-type">Brasserie</div>
+      </div>
+      <div class="client-badge">
+        <div class="client-badge-name">Hôtel Place d'Armes</div>
+        <div class="client-badge-type">Hôtel</div>
+      </div>
+      <div class="client-badge">
+        <div class="client-badge-name">Corner Collection</div>
+        <div class="client-badge-type">Hôtel Boutique</div>
+      </div>
+      <div class="client-badge">
+        <div class="client-badge-name">KYO</div>
+        <div class="client-badge-type">Bar Japonais</div>
+      </div>
+      <div class="client-badge">
+        <div class="client-badge-name">Méchant Boeuf</div>
+        <div class="client-badge-type">Bar-Brasserie</div>
+      </div>
+      <div class="client-badge">
+        <div class="client-badge-name">NELLI</div>
+        <div class="client-badge-type">Bistro & Bar à Vin</div>
+      </div>
+      <div class="client-badge">
+        <div class="client-badge-name">NELLIGAN</div>
+        <div class="client-badge-type">Hôtel Luxueux</div>
+      </div>
+      <div class="client-badge">
+        <div class="client-badge-name">Rainspa</div>
+        <div class="client-badge-type">Destination Bien-être</div>
+      </div>
+      <div class="client-badge">
+        <div class="client-badge-name">Vinnie Gambini</div>
+        <div class="client-badge-type">Restaurant Italien</div>
+      </div>
+      <div class="client-badge">
+        <div class="client-badge-name">Gattomatto</div>
+        <div class="client-badge-type">Restaurant Avant-Garde</div>
+      </div>
+      <div class="client-badge">
+        <div class="client-badge-name">William Gray</div>
+        <div class="client-badge-type">Hôtel Spa</div>
+      </div>
+      <div class="client-badge">
+        <div class="client-badge-name">BEVO</div>
+        <div class="client-badge-type">Bar Pizzeria</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==============================
+     ZONE DE SERVICE
+=============================== -->
+<section id="zone">
+  <div class="container">
+    <div class="zone-title">Zone de Service</div>
+    <div class="zone-cities">
+      <div class="zone-city">Montréal</div>
+      <div class="zone-city">Laval</div>
+      <div class="zone-city">Couronne Nord</div>
+    </div>
+    <div class="zone-sub">Intervention rapide dans toute la région métropolitaine de Montréal</div>
+  </div>
+</section>
+
+<!-- ==============================
+     CTA BANNER
+=============================== -->
+<div class="cta-banner">
+  <div class="container cta-banner-inner">
+    <div class="cta-available">● Disponible maintenant — 24h/7j</div>
+    <div class="cta-title">Urgence plomberie? N'attendez pas.</div>
+    <a href="tel:5146679449" class="cta-phone">514-667-9449</a>
+    <div class="cta-sub">Montréal · Laval · Couronne Nord — Licence RBQ 5697-5105-01</div>
+    <div>
+      <a href="tel:5146679449" class="cta-btn">📞 Appelez maintenant — Gratuit</a>
+    </div>
+  </div>
+</div>
+
+<!-- ==============================
+     FOOTER
+=============================== -->
+<footer id="contact">
+  <div class="footer-grid">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:4px;">
+        <div class="logo-icon">
+          <div class="logo-ring-outer" style="border-color:rgba(255,255,255,0.4);"></div>
+          <div class="logo-ring-segments"></div>
+          <div class="logo-duck">🦆</div>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-name" style="color:#fff;">RES<span style="color:var(--orange);">-Q-</span>DRAIN</span>
+          <span class="logo-tagline" style="color:rgba(255,255,255,0.4);">Urgence 24h • Plomberie</span>
+        </div>
+      </div>
+      <p class="footer-desc">
+        Entreprise familiale de plomberie générale depuis plus de 25 ans. Urgences 24h, inspection par caméra, rénovation complète. Fiables, licenciés et assurés.
+      </p>
+      <div class="footer-cert">
+        <div class="footer-cert-item">
+          <span class="footer-cert-dot"></span>
+          Licence RBQ : 5697-5105-01
+        </div>
+        <div class="footer-cert-item">
+          <span class="footer-cert-dot"></span>
+          Membre CMMTQ
+        </div>
+        <div class="footer-cert-item">
+          <span class="footer-cert-dot"></span>
+          Assurance responsabilité complète
+        </div>
+      </div>
+      <div class="footer-payment" style="margin-top:18px;">
+        <span class="pay-badge pay-visa">VISA</span>
+        <span class="pay-badge pay-interac">Interac</span>
+      </div>
+    </div>
+
+    <!-- Services links -->
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Urgence 24h</a></li>
+        <li><a href="#services">Débouchage & Dégel</a></li>
+        <li><a href="#services">Inspection Caméra</a></li>
+        <li><a href="#services">Plomberie Générale</a></li>
+        <li><a href="#services">Rénovation Salle de Bain</a></li>
+        <li><a href="#services">Eau Chaude</a></li>
+      </ul>
+    </div>
+
+    <!-- Zones -->
+    <div>
+      <div class="footer-col-title">Zones</div>
+      <ul class="footer-links">
+        <li><a href="#zone">Montréal</a></li>
+        <li><a href="#zone">Laval</a></li>
+        <li><a href="#zone">Couronne Nord</a></li>
+        <li><a href="#zone">Rive-Nord</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label">Téléphone</span>
+        <span class="footer-contact-val"><a href="tel:5146679449">514-667-9449</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label">Courriel</span>
+        <span class="footer-contact-val"><a href="mailto:resqdrain@gmail.com">resqdrain@gmail.com</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label">Urgence</span>
+        <span class="footer-contact-val" style="color:var(--orange);">24h / 7 jours</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label">Entreprise</span>
+        <span class="footer-contact-val" style="font-size:12px; font-family:'Open Sans',sans-serif; color:rgba(255,255,255,0.5);">9314-0051 Québec Inc.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom" style="padding-bottom:24px;">
+    <div class="footer-bottom-copy">© 2024 RES-Q-DRAIN — 9314-0051 Québec Inc. Tous droits réservés.</div>
+    <div class="footer-bottom-rbq">RBQ : 5697-5105-01 &nbsp;·&nbsp; CMMTQ &nbsp;
