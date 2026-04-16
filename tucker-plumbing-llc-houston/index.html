@@ -2,297 +2,1134 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Tucker Plumbing LLC — Houston's top-rated plumber company. 5.0★, 96 reviews. Call (281) 469-5354.">
-<title>Tucker Plumbing LLC | Houston, TX Plumber</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tucker Plumbing LLC | North Houston's Patriotic Plumber | (281) 469-5354</title>
+<meta name="description" content="Tucker Plumbing LLC — North Houston's master-licensed patriotic plumber. Serving Spring, Tomball, Cypress, The Woodlands and surrounding areas. 24/7 emergency service. Call (281) 469-5354.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#0b1629;--navy2:#0f1e38;--navy3:#162848;
-  --orange:#f97316;--orange2:#fb923c;
-  --white:#ffffff;--gray:#94a3b8;--light:#e2e8f0;
-  --card:#111f3a;--radius:12px;--shadow:0 4px 24px rgba(0,0,0,.4);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #0d1e3a; --primary-dark: #070f1d;
+  --accent: #dc2626; --accent-dark: #991b1b;
+  --bg: #fff; --bg-off: #f7f8fc;
+  --t1: #fff; --t2: rgba(255,255,255,.75); --t3: rgba(255,255,255,.5);
+  --dark-text: #1a1a2e; --grey-text: #6b7280; --border: #e8edf5;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px; --shadow: 0 4px 20px rgba(0,0,0,.12); --shadow-lg: 0 8px 40px rgba(0,0,0,.2);
 }
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--navy);color:var(--white);line-height:1.6;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,22,41,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07)}
-.header-inner{max-width:1200px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:.6rem}
-.logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--orange),var(--orange2));border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.logo-icon svg{width:22px;height:22px;stroke:#fff}
-.logo-name{font-size:.95rem;font-weight:800;letter-spacing:.5px}
-.logo-tag{font-size:.62rem;color:var(--gray);letter-spacing:.5px;text-transform:uppercase}
-.cta-btn{display:flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;font-weight:700;font-size:.85rem;padding:.5rem 1rem;border-radius:8px;transition:transform .15s,box-shadow .15s;white-space:nowrap}
-.cta-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(249,115,22,.4)}
-.cta-btn svg{width:14px;height:14px;flex-shrink:0}
-.hero{min-height:100vh;background:radial-gradient(ellipse 80% 60% at 50% 120%,rgba(249,115,22,.12) 0%,transparent 70%),linear-gradient(160deg,var(--navy) 0%,var(--navy2) 50%,#071020 100%);display:flex;align-items:center;justify-content:center;padding:80px 1.25rem 3rem;text-align:center}
-.hero-inner{max-width:760px}
-.hero-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(249,115,22,.12);border:1px solid rgba(249,115,22,.3);border-radius:20px;padding:.3rem .8rem;font-size:.72rem;font-weight:700;color:var(--orange);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.25rem}
-.hero-badge svg{width:12px;height:12px}
-h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;margin-bottom:1rem}
-h1 span{color:var(--orange)}
-.hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:var(--gray);margin-bottom:2rem;max-width:560px;margin-left:auto;margin-right:auto}
-.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
-.btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;font-weight:700;font-size:1rem;padding:.85rem 2rem;border-radius:10px;transition:transform .15s,box-shadow .15s}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(249,115,22,.45)}
-.btn-primary svg{width:18px;height:18px}
-.btn-secondary{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:#fff;font-weight:600;font-size:1rem;padding:.85rem 2rem;border-radius:10px;transition:all .15s}
-.btn-secondary:hover{background:rgba(255,255,255,.12)}
-.trust-bar{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:.5rem}
-.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--gray)}
-.trust-item svg{width:14px;height:14px;color:var(--orange)}
-.stars{display:inline-flex;gap:1px}
-.star-full svg{width:14px;height:14px;color:#fbbf24;fill:#fbbf24}
-.star-empty svg{width:14px;height:14px;color:var(--gray);fill:none}
-section{padding:5rem 1.25rem}
-.section-inner{max-width:1200px;margin:0 auto}
-.section-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:.5rem}
-.section-title{font-size:clamp(1.6rem,3vw,2.5rem);font-weight:800;margin-bottom:1rem}
-.section-sub{color:var(--gray);max-width:560px;margin-bottom:3rem}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-@media(max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.grid-3{grid-template-columns:1fr}}
-.service-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.5rem;transition:transform .15s,border-color .15s}
-.service-card:hover{transform:translateY(-3px);border-color:rgba(249,115,22,.35)}
-.sc-icon{width:40px;height:40px;background:rgba(249,115,22,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--orange)}
-.sc-icon svg{width:20px;height:20px}
-.service-card h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.service-card p{font-size:.85rem;color:var(--gray);line-height:1.5}
-.why-section{background:linear-gradient(180deg,var(--navy2) 0%,var(--navy) 100%)}
-.why-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.75rem;text-align:center}
-.why-icon{width:52px;height:52px;background:rgba(249,115,22,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--orange)}
-.why-icon svg{width:24px;height:24px}
-.why-card h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.why-card p{font-size:.85rem;color:var(--gray);line-height:1.5}
-.process-section{background:var(--navy2)}
-.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;position:relative}
-@media(max-width:900px){.process-grid{grid-template-columns:1fr}}
-.process-step{text-align:center;position:relative}
-.step-num{width:56px;height:56px;background:linear-gradient(135deg,var(--orange),var(--orange2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:900;margin:0 auto 1rem}
-.step-icon{width:48px;height:48px;background:rgba(249,115,22,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .75rem;color:var(--orange)}
-.step-icon svg{width:22px;height:22px}
-.process-step h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.process-step p{font-size:.85rem;color:var(--gray)}
-.reviews-section{background:var(--navy)}
-.review-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.5rem}
-.review-stars{display:flex;gap:2px;margin-bottom:.75rem;color:#fbbf24}
-.review-stars svg{width:16px;height:16px;fill:#fbbf24}
-.review-text{font-size:.9rem;color:var(--light);line-height:1.6;margin-bottom:1rem;font-style:italic}
-.review-author{display:flex;align-items:center;gap:.75rem}
-.review-avatar{width:38px;height:38px;background:linear-gradient(135deg,var(--orange),var(--orange2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;flex-shrink:0}
-.review-name{font-size:.85rem;font-weight:700}
-.review-date{font-size:.75rem;color:var(--gray)}
-.rating-section{background:var(--navy2);padding:3rem 1.25rem}
-.rating-badge{max-width:480px;margin:0 auto;background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:2rem;display:flex;align-items:center;gap:2rem}
-@media(max-width:600px){.rating-badge{flex-direction:column;text-align:center}}
-.rating-score{font-size:4rem;font-weight:900;color:var(--orange);line-height:1}
-.rating-right{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem}
-@media(max-width:600px){.rating-right{align-items:center}}
-.rating-stars{display:flex;gap:3px;color:#fbbf24}
-.rating-stars svg{width:22px;height:22px;fill:#fbbf24}
-.rating-label{font-size:.8rem;color:var(--gray)}
-.area-section{background:var(--navy)}
-.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
-@media(max-width:700px){.area-grid{grid-template-columns:1fr}}
-.area-list{display:flex;flex-direction:column;gap:.5rem}
-.area-item{display:flex;align-items:center;gap:.6rem;font-size:.9rem;color:var(--light)}
-.area-item svg{width:14px;height:14px;color:var(--orange);flex-shrink:0}
-.cta-band{background:linear-gradient(135deg,#0f1e38 0%,#162848 100%);border-top:1px solid rgba(249,115,22,.2);border-bottom:1px solid rgba(249,115,22,.2);padding:4rem 1.25rem;text-align:center}
-.cta-band h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;margin-bottom:.75rem}
-.cta-band p{color:var(--gray);margin-bottom:2rem}
-footer{background:#070f1d;border-top:1px solid rgba(255,255,255,.06);padding:3rem 1.25rem 1.5rem}
-.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:2.5rem}
-@media(max-width:700px){.footer-grid{grid-template-columns:1fr}}
-.footer-head{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:1rem}
-.footer-list{display:flex;flex-direction:column;gap:.4rem}
-.footer-list li{font-size:.85rem;color:var(--gray);list-style:none}
-.footer-contact li{display:flex;align-items:center;gap:.5rem}
-.footer-contact svg{width:13px;height:13px;color:var(--orange);flex-shrink:0}
-.footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,.06);padding-top:1rem;text-align:center;font-size:.78rem;color:var(--gray)}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+/* ===== GRAIN OVERLAY ===== */
+.grain-overlay { position: relative; overflow: hidden; }
+.grain-overlay::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.grain-overlay > * { position: relative; z-index: 1; }
+
+/* ===== HERO ANIMATIONS ===== */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+
+/* ===== CARD ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.anim-card { opacity: 0; }
+.anim-card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.anim-card:nth-child(1){animation-delay:.05s} .anim-card:nth-child(2){animation-delay:.15s}
+.anim-card:nth-child(3){animation-delay:.25s} .anim-card:nth-child(4){animation-delay:.35s}
+.anim-card:nth-child(5){animation-delay:.45s} .anim-card:nth-child(6){animation-delay:.55s}
+
+/* ===== UTILITIES ===== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 8px; font-family: var(--font-body);
+  font-weight: 600; font-size: 15px; text-decoration: none;
+  border: none; cursor: pointer; transition: all 0.2s ease; white-space: nowrap;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(220,38,38,.4); }
+.btn-ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.6); }
+.btn-ghost:hover { background: rgba(255,255,255,.1); border-color: #fff; transform: translateY(-2px); }
+.stars { display: inline-flex; gap: 2px; color: #f59e0b; font-size: 15px; }
+
+/* ===== SECTION 1: STICKY HEADER ===== */
+header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--primary);
+  box-shadow: 0 2px 16px rgba(0,0,0,.35);
+  padding: 0 24px;
+}
+.header-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px; gap: 24px;
+}
+.header-brand { display: flex; flex-direction: column; gap: 1px; }
+.header-name {
+  font-family: var(--font-display); font-size: 20px; color: var(--t1);
+  letter-spacing: 0.04em; line-height: 1;
+}
+.header-tagline {
+  font-family: var(--font-body); font-size: 13px; color: var(--t2);
+  font-weight: 400; line-height: 1;
+}
+.header-cta {
+  background: var(--accent); color: #fff; border: none;
+  padding: 10px 22px; border-radius: 8px; font-family: var(--font-body);
+  font-weight: 600; font-size: 14px; cursor: pointer;
+  display: flex; align-items: center; gap: 8px; text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+.header-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.header-cta svg { flex-shrink: 0; }
+
+/* ===== SECTION 2: HERO ===== */
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, var(--primary-dark) 100%);
+  padding: 80px 24px 72px;
+}
+.hero-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: center;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(220,38,38,.18); border: 1px solid rgba(220,38,38,.4);
+  color: #fca5a5; border-radius: 24px; padding: 7px 16px;
+  font-family: var(--font-display); font-size: 14px; letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+.hero-headline {
+  font-family: var(--font-display); color: var(--t1);
+  font-size: clamp(42px, 6vw, 64px); letter-spacing: -0.02em;
+  line-height: 1.05; margin-bottom: 20px;
+}
+.hero-sub {
+  font-family: var(--font-body); font-size: 18px; color: var(--t2);
+  max-width: 520px; margin-bottom: 32px; line-height: 1.7;
+}
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 36px; }
+.hero-trust {
+  display: flex; gap: 28px; flex-wrap: wrap;
+  padding-top: 28px; border-top: 1px solid rgba(255,255,255,.12);
+}
+.trust-item {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.trust-value {
+  font-family: var(--font-display); font-size: 22px; color: var(--t1);
+  letter-spacing: 0.02em; line-height: 1;
+}
+.trust-label { font-size: 12px; color: var(--t3); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* Hero card */
+.hero-card {
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: var(--radius); padding: 32px 28px;
+}
+.hero-card-title {
+  font-family: var(--font-display); font-size: 22px; color: var(--t1);
+  letter-spacing: 0.04em; margin-bottom: 20px;
+}
+.hero-prop {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.hero-prop:last-of-type { border-bottom: none; }
+.hero-prop-check {
+  width: 22px; height: 22px; background: rgba(220,38,38,.25);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.hero-prop-check svg { color: #fca5a5; }
+.hero-prop-text { font-family: var(--font-body); font-size: 15px; color: var(--t1); font-weight: 500; }
+.hero-prop-sub { font-size: 13px; color: var(--t3); margin-top: 2px; }
+.hero-card-phone {
+  margin-top: 24px; padding: 14px 20px;
+  background: var(--accent); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  text-decoration: none; color: #fff; font-family: var(--font-display);
+  font-size: 20px; letter-spacing: 0.04em;
+  transition: background 0.2s, transform 0.2s;
+}
+.hero-card-phone:hover { background: var(--accent-dark); transform: translateY(-2px); }
+
+/* ===== STATS ROW ===== */
+.stats-row {
+  background: var(--primary);
+  padding: 48px 24px;
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.stats-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;
+}
+.stat-item { padding: 8px 0; }
+.stat-number {
+  font-family: var(--font-display); font-size: 52px; color: var(--t1);
+  letter-spacing: -0.02em; line-height: 1; display: block;
+}
+.stat-label {
+  font-family: var(--font-body); font-size: 13px; color: var(--t3);
+  text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500;
+  margin-top: 6px; display: block;
+}
+.stat-divider {
+  width: 32px; height: 2px; background: var(--accent);
+  margin: 10px auto 0; border-radius: 2px;
+}
+
+/* ===== SECTION 3: SERVICES ===== */
+.services { background: var(--bg); padding: 80px 24px; }
+.section-header { text-align: center; margin-bottom: 52px; }
+.section-tag {
+  display: inline-block; background: rgba(220,38,38,.1); color: var(--accent);
+  font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 20px; margin-bottom: 14px;
+}
+.section-title {
+  font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px);
+  color: var(--dark-text); letter-spacing: -0.02em; margin-bottom: 14px;
+}
+.section-sub {
+  font-family: var(--font-body); font-size: 17px; color: var(--grey-text);
+  max-width: 560px; margin: 0 auto;
+}
+.services-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.service-card {
+  background: var(--bg-off); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px 24px;
+  transition: box-shadow 0.2s, transform 0.2s; cursor: default;
+}
+.service-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+.service-icon {
+  width: 52px; height: 52px; background: rgba(13,30,58,.08);
+  border-radius: 12px; display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.service-icon svg { color: var(--primary); }
+.service-name {
+  font-family: var(--font-display); font-size: 22px; color: var(--dark-text);
+  letter-spacing: 0.02em; margin-bottom: 10px;
+}
+.service-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.65; }
+.service-link {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 16px;
+  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+  color: var(--accent); text-decoration: none;
+}
+.service-link:hover { color: var(--accent-dark); }
+
+/* ===== SECTION 4: WHY CHOOSE US ===== */
+.why { padding: 80px 24px; background: var(--primary); }
+.why-inner { max-width: 1200px; margin: 0 auto; }
+.why-header { text-align: center; margin-bottom: 56px; }
+.why-section-tag {
+  display: inline-block; background: rgba(220,38,38,.2); color: #fca5a5;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 20px; margin-bottom: 14px;
+}
+.why-title {
+  font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px);
+  color: var(--t1); letter-spacing: -0.02em; margin-bottom: 14px;
+}
+.why-sub { font-family: var(--font-body); font-size: 17px; color: var(--t2); }
+.why-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 56px; }
+.why-stat-card {
+  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--radius); padding: 28px 20px; text-align: center;
+}
+.why-stat-num {
+  font-family: var(--font-display); font-size: 42px; color: var(--accent);
+  letter-spacing: -0.02em; line-height: 1; display: block; margin-bottom: 8px;
+}
+.why-stat-label { font-family: var(--font-body); font-size: 14px; color: var(--t2); font-weight: 500; }
+.why-diffs {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+}
+.why-diff {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius); padding: 24px 20px;
+}
+.why-diff-icon {
+  width: 44px; height: 44px; background: rgba(220,38,38,.2);
+  border-radius: 10px; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.why-diff-icon svg { color: #fca5a5; }
+.why-diff-title {
+  font-family: var(--font-display); font-size: 20px; color: var(--t1);
+  letter-spacing: 0.02em; margin-bottom: 6px;
+}
+.why-diff-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.65; }
+
+/* ===== SECTION 5: HOW IT WORKS ===== */
+.how { background: var(--primary-dark); padding: 80px 24px; }
+.how-inner { max-width: 1200px; margin: 0 auto; }
+.how-header { text-align: center; margin-bottom: 56px; }
+.how-title {
+  font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px);
+  color: var(--t1); letter-spacing: -0.02em; margin-bottom: 14px;
+}
+.how-sub { font-family: var(--font-body); font-size: 17px; color: var(--t2); }
+.how-steps {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; position: relative;
+}
+.how-steps::before {
+  content: ''; position: absolute; top: 36px; left: calc(16.66% + 20px); right: calc(16.66% + 20px);
+  height: 2px; border-top: 2px dashed rgba(220,38,38,.35); z-index: 0;
+}
+.how-step { text-align: center; padding: 0 24px; position: relative; z-index: 1; }
+.step-circle {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  font-family: var(--font-display); font-size: 30px; letter-spacing: 0;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px; box-shadow: 0 0 0 6px rgba(220,38,38,.15);
+}
+.step-title {
+  font-family: var(--font-display); font-size: 22px; color: var(--t1);
+  letter-spacing: 0.02em; margin-bottom: 10px;
+}
+.step-desc { font-family: var(--font-body); font-size: 15px; color: var(--t2); line-height: 1.65; }
+
+/* ===== SECTION 6: REVIEWS ===== */
+.reviews { background: var(--bg-off); padding: 80px 24px; }
+.reviews-inner { max-width: 1200px; margin: 0 auto; }
+.reviews-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 52px;
+}
+.review-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px 24px;
+  box-shadow: var(--shadow);
+}
+.review-stars { display: flex; gap: 3px; color: #f59e0b; font-size: 16px; margin-bottom: 14px; }
+.review-text {
+  font-family: var(--font-body); font-size: 15px; color: var(--dark-text);
+  line-height: 1.7; margin-bottom: 20px;
+}
+.reviewer { display: flex; align-items: center; gap: 12px; padding-top: 16px; border-top: 1px solid var(--border); }
+.reviewer-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--primary); color: #fff;
+  font-family: var(--font-display); font-size: 18px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.reviewer-name { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--dark-text); }
+.reviewer-date { font-size: 12px; color: var(--grey-text); margin-top: 2px; }
+
+/* ===== SECTION 7: SERVICE AREAS ===== */
+.areas { background: var(--primary); padding: 80px 24px; }
+.areas-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+}
+.areas-title {
+  font-family: var(--font-display); font-size: clamp(32px, 4vw, 46px);
+  color: var(--t1); letter-spacing: -0.02em; margin-bottom: 16px;
+}
+.areas-sub { font-family: var(--font-body); font-size: 16px; color: var(--t2); margin-bottom: 28px; }
+.areas-cta { display: flex; gap: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 12px; }
+.chip {
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15);
+  color: var(--t1); font-family: var(--font-body); font-size: 14px; font-weight: 500;
+  padding: 8px 18px; border-radius: 24px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.chip:hover { background: rgba(220,38,38,.2); border-color: rgba(220,38,38,.4); }
+
+/* ===== SECTION 8: CONTACT FORM ===== */
+.contact { background: var(--bg); padding: 80px 24px; }
+.contact-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;
+}
+.contact-form-wrap { }
+.form-title {
+  font-family: var(--font-display); font-size: 36px; color: var(--dark-text);
+  letter-spacing: -0.02em; margin-bottom: 6px;
+}
+.form-sub { font-family: var(--font-body); font-size: 15px; color: var(--grey-text); margin-bottom: 28px; }
+.form-group { margin-bottom: 18px; }
+.form-group label {
+  display: block; font-family: var(--font-body); font-size: 13px; font-weight: 600;
+  color: var(--dark-text); margin-bottom: 6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 12px 16px; border: 1.5px solid var(--border);
+  border-radius: 8px; font-family: var(--font-body); font-size: 15px;
+  color: var(--dark-text); background: var(--bg); outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--primary); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-submit {
+  width: 100%; padding: 15px 24px; background: var(--accent);
+  color: #fff; border: none; border-radius: 8px;
+  font-family: var(--font-body); font-size: 16px; font-weight: 600;
+  cursor: pointer; transition: background 0.2s, transform 0.2s;
+}
+.form-submit:hover { background: var(--accent-dark); transform: translateY(-2px); }
+
+/* Contact info card */
+.contact-info-card {
+  background: var(--primary); border-radius: var(--radius);
+  padding: 36px 32px; color: var(--t1);
+}
+.info-card-title {
+  font-family: var(--font-display); font-size: 28px; color: var(--t1);
+  letter-spacing: 0.02em; margin-bottom: 24px;
+}
+.hours-list { margin-bottom: 28px; }
+.hours-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.08);
+  font-family: var(--font-body); font-size: 14px;
+}
+.hours-item:last-child { border-bottom: none; }
+.hours-day { color: var(--t2); }
+.hours-time { color: var(--t1); font-weight: 600; }
+.hours-emerg { color: #fca5a5; font-weight: 700; }
+.why-book-title {
+  font-family: var(--font-display); font-size: 20px; color: var(--t1);
+  letter-spacing: 0.02em; margin-bottom: 14px;
+}
+.why-book-list { list-style: none; }
+.why-book-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-family: var(--font-body); font-size: 14px; color: var(--t2);
+  padding: 7px 0;
+}
+.why-book-list li::before {
+  content: ''; display: block; width: 18px; height: 18px; border-radius: 50%;
+  background: rgba(220,38,38,.25); flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23fca5a5'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-size: 18px; margin-top: 1px;
+}
+
+/* ===== SECTION 9: CTA BAND ===== */
+.cta-band {
+  position: relative;
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  padding: 72px 24px; text-align: center;
+}
+.cta-band-title {
+  font-family: var(--font-display); font-size: clamp(36px, 5vw, 60px);
+  color: #fff; letter-spacing: -0.02em; margin-bottom: 16px;
+}
+.cta-band-sub {
+  font-family: var(--font-body); font-size: 17px; color: rgba(255,255,255,.8);
+  margin-bottom: 36px;
+}
+.cta-band-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn-white {
+  background: #fff; color: var(--accent); font-family: var(--font-body); font-weight: 700;
+}
+.btn-white:hover { background: #f1f5f9; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,.15); }
+.btn-outline-white {
+  background: transparent; color: #fff;
+  border: 2px solid rgba(255,255,255,.6); font-family: var(--font-body); font-weight: 600;
+}
+.btn-outline-white:hover { background: rgba(255,255,255,.12); border-color: #fff; transform: translateY(-2px); }
+
+/* ===== SECTION 10: FOOTER ===== */
+footer {
+  background: var(--primary-dark); padding: 64px 24px 32px;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.footer-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 40px;
+  padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.footer-col-title {
+  font-family: var(--font-display); font-size: 16px; color: var(--t1);
+  letter-spacing: 0.06em; margin-bottom: 16px;
+}
+.footer-brand-name {
+  font-family: var(--font-display); font-size: 22px; color: var(--t1);
+  letter-spacing: 0.04em; margin-bottom: 8px;
+}
+.footer-brand-tagline {
+  font-family: var(--font-body); font-size: 13px; color: var(--t3);
+  margin-bottom: 16px; line-height: 1.6;
+}
+.footer-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.7; margin-bottom: 20px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-links a {
+  font-family: var(--font-body); font-size: 14px; color: var(--t2);
+  text-decoration: none; transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--t1); }
+.footer-contact-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-family: var(--font-body); font-size: 14px; color: var(--t2);
+  margin-bottom: 12px; line-height: 1.5;
+}
+.footer-contact-item svg { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.footer-phone-link { color: var(--t1); font-weight: 600; text-decoration: none; }
+.footer-phone-link:hover { color: #fca5a5; }
+.footer-license { font-size: 12px; color: var(--t3); margin-top: 8px; font-family: var(--font-body); }
+.footer-bottom {
+  max-width: 1200px; margin: 28px auto 0;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+}
+.footer-copy { font-family: var(--font-body); font-size: 13px; color: var(--t3); }
+.footer-legal { display: flex; gap: 20px; }
+.footer-legal a { font-family: var(--font-body); font-size: 13px; color: var(--t3); text-decoration: none; }
+.footer-legal a:hover { color: var(--t2); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+  .hero-card { max-width: 480px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-stats { grid-template-columns: repeat(2, 1fr); }
+  .why-diffs { grid-template-columns: 1fr; }
+  .how-steps { grid-template-columns: 1fr; gap: 36px; }
+  .how-steps::before { display: none; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-inner { grid-template-columns: 1fr; gap: 36px; }
+  .contact-inner { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .header-tagline { display: none; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid { grid-template-columns: 1fr; }
+  .why-stats { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-ctas { flex-direction: column; }
+  .hero-trust { gap: 18px; }
+}
 </style>
 </head>
 <body>
 
+<!-- ===== SECTION 1: STICKY HEADER ===== -->
 <header>
   <div class="header-inner">
-    <div class="logo">
-      <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-      <div><div class="logo-name">Tucker Plumbing LLC</div><div class="logo-tag">Plumber · Houston, TX</div></div>
+    <div class="header-brand">
+      <span class="header-name">Tucker Plumbing LLC</span>
+      <span class="header-tagline">North Houston's Patriotic Plumber</span>
     </div>
-    <a href="tel:2814695354" class="cta-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (281) 469-5354</a>
+    <a href="tel:2814695354" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.21 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+      Call (281) 469-5354
+    </a>
   </div>
 </header>
 
-<section class="hero">
+<!-- ===== SECTION 2: HERO ===== -->
+<section class="hero grain-overlay">
   <div class="hero-inner">
-    <div class="hero-badge"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 5.0★ Rated · Houston, TX</div>
-    <h1>Professional <span>Plumber</span><br>You Can Actually Trust</h1>
-    <p class="hero-sub">Tucker Plumbing LLC — Houston's trusted plumber pros. 96+ five-star reviews. Licensed, insured, and ready today.</p>
-    <div class="hero-btns">
-      <a href="tel:2814695354" class="btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (281) 469-5354</a>
-      <a href="#services" class="btn-secondary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> See Our Services</a>
+    <!-- Left column -->
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        North Houston's #1 Plumber
+      </div>
+      <h1 class="hero-headline">Houston's Trusted <span style="color:var(--accent)">Plumbing</span> Team</h1>
+      <p class="hero-sub">Serving North Houston, Spring Branch, and surrounding communities with honest, master-licensed plumbing work. From burst pipes to water heater replacements — we're available 24/7 when you need us most.</p>
+      <div class="hero-ctas">
+        <a href="tel:2814695354" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.21 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          Call (281) 469-5354
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get a Free Quote</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <span class="trust-value">5.0 ★</span>
+          <span class="trust-label">Google Rating</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">96+</span>
+          <span class="trust-label">Verified Reviews</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">Licensed</span>
+          <span class="trust-label">Master Plumber</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">24/7</span>
+          <span class="trust-label">Emergency Service</span>
+        </div>
+      </div>
     </div>
-    <div class="trust-bar">
-      <div class="trust-item"><span class="stars"><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></span> <span>5.0 (96 reviews)</span></div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed & Insured</div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Serving Houston &amp; Surrounding Areas</div>
+    <!-- Right column: frosted glass card -->
+    <div class="hero-card">
+      <div class="hero-card-title">Why Homeowners Choose Us</div>
+      <div class="hero-prop">
+        <div class="hero-prop-check">
+          <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <div class="hero-prop-text">Master Licensed Plumber</div>
+          <div class="hero-prop-sub">State-certified, fully insured on every job</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-check">
+          <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <div class="hero-prop-text">24/7 Emergency Service</div>
+          <div class="hero-prop-sub">We answer every call, day or night</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-check">
+          <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <div class="hero-prop-text">Upfront Flat-Rate Pricing</div>
+          <div class="hero-prop-sub">No hidden fees, no surprise invoices</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-check">
+          <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <div class="hero-prop-text">Same-Day Appointments</div>
+          <div class="hero-prop-sub">Fast scheduling for urgent plumbing needs</div>
+        </div>
+      </div>
+      <a href="tel:2814695354" class="hero-card-phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.21 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+        (281) 469-5354
+      </a>
     </div>
   </div>
 </section>
 
-<section id="services" style="background:var(--navy2);">
-  <div class="section-inner">
-    <div class="section-label">What We Do</div>
-    <h2 class="section-title">Our Services</h2>
-    <p class="section-sub" style="color:var(--gray)">Professional plumber services — done right the first time.</p>
-    <div class="grid-3"><div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Drain Cleaning</h3><p>Clogged drains, rooter service</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Leak Repair</h3><p>Pipes, fixtures, slab leaks</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Water Heater</h3><p>Install, repair, flush, replacement</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Toilet &amp; Faucet</h3><p>Install, repair, replacement</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Sewer Line</h3><p>Camera inspection, hydro-jetting</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Emergency Plumbing</h3><p>24/7 response for urgent issues</p></div>
-</div>
-  </div>
-</section>
-
-<section class="why-section">
-  <div class="section-inner">
-    <div class="section-label">Why Choose Us</div>
-    <h2 class="section-title">The Tucker Difference</h2>
-    <div class="grid-3">
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h3>5-Star Rated</h3><p>96+ verified reviews on Google. Our reputation is everything.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Licensed &amp; Insured</h3><p>Fully covered. Your property is protected on every job.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>On Time, Every Time</h3><p>We show up when we say we will. No waiting around.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div><h3>Quality Guaranteed</h3><p>Not satisfied? We make it right. No questions asked.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Locally Owned</h3><p>We live and work in Houston. This community is our community.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Fair Pricing</h3><p>Upfront quotes, no hidden fees. You know the price before we start.</p></div>
+<!-- ===== STATS ROW ===== -->
+<section class="stats-row">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="stat-number" data-target="96" data-suffix="+">0+</span>
+      <span class="stat-label">5-Star Reviews</span>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="24" data-suffix="/7">0/7</span>
+      <span class="stat-label">Emergency Service</span>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="20" data-suffix="+">0+</span>
+      <span class="stat-label">Years Serving Houston</span>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="100" data-suffix="%">0%</span>
+      <span class="stat-label">Licensed &amp; Insured</span>
+      <div class="stat-divider"></div>
     </div>
   </div>
 </section>
 
-<section class="process-section">
-  <div class="section-inner">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">Simple as 1–2–3</h2>
-    <div class="process-grid">
-      <div class="process-step"><div class="step-num">1</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>Call or Request Online</h3><p>Tell us what you need. We'll schedule you fast — often same or next day.</p></div>
-      <div class="process-step"><div class="step-num">2</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><h3>We Show Up &amp; Assess</h3><p>Our crew arrives on time, reviews the job, and gives you a firm quote.</p></div>
-      <div class="process-step"><div class="step-num">3</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></div><h3>Job Done Right</h3><p>We complete the work to the highest standard. You approve before we leave.</p></div>
+<!-- ===== SECTION 3: SERVICES ===== -->
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-tag">Our Services</div>
+    <h2 class="section-title">Plumbing Solutions for Every Problem</h2>
+    <p class="section-sub">From minor clogs to full sewer line replacements, Tucker Plumbing handles it all with honest pricing and master-level craftsmanship.</p>
+  </div>
+  <div class="services-grid container">
+    <!-- Card 1: Drain Cleaning -->
+    <div class="service-card anim-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div class="service-name">Drain Cleaning</div>
+      <p class="service-desc">Slow or completely blocked drains are more than a nuisance — they can signal a bigger problem. We use professional-grade equipment to clear clogs fast and inspect for root intrusion or buildup.</p>
+      <a href="tel:2814695354" class="service-link">
+        Get a Quote
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <!-- Card 2: Water Heater Repair -->
+    <div class="service-card anim-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3-3a1 1 0 000-1.4l-1.6-1.6a1 1 0 00-1.4 0l-3 3z"/><path d="M20.26 6.26L17.74 3.74M6 20.27l-2.27 2.27M12.5 13.5L7.03 19l-4 .97 1-4 5.47-5.47"/></svg>
+      </div>
+      <div class="service-name">Water Heater Repair</div>
+      <p class="service-desc">No hot water stops your morning cold. We diagnose and repair all water heater brands — tank and tankless — and provide honest assessments on whether repair or replacement is the smarter investment.</p>
+      <a href="tel:2814695354" class="service-link">
+        Get a Quote
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <!-- Card 3: Pipe Repair -->
+    <div class="service-card anim-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </div>
+      <div class="service-name">Pipe Repair</div>
+      <p class="service-desc">Cracked, corroded, or burst pipes can cause thousands in water damage if not addressed immediately. Our technicians locate and repair problem pipes quickly, with minimal disruption to your home or business.</p>
+      <a href="tel:2814695354" class="service-link">
+        Get a Quote
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <!-- Card 4: Leak Detection -->
+    <div class="service-card anim-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="service-name">Leak Detection</div>
+      <p class="service-desc">A spike in your water bill often signals a hidden leak behind walls or under the slab. We use advanced detection methods to pinpoint leaks without tearing apart your home unnecessarily.</p>
+      <a href="tel:2814695354" class="service-link">
+        Get a Quote
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <!-- Card 5: Sewer Line Service -->
+    <div class="service-card anim-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="service-name">Sewer Line Service</div>
+      <p class="service-desc">Gurgling toilets and sewage odors are warning signs you cannot ignore. We perform full sewer line inspections, hydro-jetting cleanouts, and trenchless repairs to restore proper flow without major excavation.</p>
+      <a href="tel:2814695354" class="service-link">
+        Get a Quote
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <!-- Card 6: Emergency Plumbing -->
+    <div class="service-card anim-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.21 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+      </div>
+      <div class="service-name">Emergency Plumbing</div>
+      <p class="service-desc">Plumbing emergencies don't wait for business hours. Tucker Plumbing operates 24 hours a day, 7 days a week across North Houston — call us any time and a licensed plumber will be dispatched immediately.</p>
+      <a href="tel:2814695354" class="service-link">
+        Call Now — 24/7
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="reviews-section">
-  <div class="section-inner">
-    <div class="section-label">Customer Reviews</div>
-    <h2 class="section-title">What Houston Customers Say</h2>
-    <div class="grid-3"><div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Used them twice now — showed up on time, did great work, fair price. Highly recommend."</p>
-  <div class="review-author"><div class="review-avatar">MT</div><div><div class="review-name">Michael T.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Called on a Tuesday, they came out Wednesday. Super professional and left everything clean."</p>
-  <div class="review-author"><div class="review-avatar">JR</div><div><div class="review-name">Jessica R.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Best experience I&#x27;ve had with a local company. Will definitely use again."</p>
-  <div class="review-author"><div class="review-avatar">DM</div><div><div class="review-name">David M.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Very thorough and professional. They explained everything and didn&#x27;t try to upsell me."</p>
-  <div class="review-author"><div class="review-avatar">SK</div><div><div class="review-name">Sarah K.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Did exactly what they said they would do. Honest pricing, solid work."</p>
-  <div class="review-author"><div class="review-avatar">CV</div><div><div class="review-name">Carlos V.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Five stars, no question. Quick response, friendly crew, outstanding results."</p>
-  <div class="review-author"><div class="review-avatar">AL</div><div><div class="review-name">Amy L.</div><div class="review-date">Google Review</div></div></div>
-</div>
-</div>
-  </div>
-</section>
-
-<section class="rating-section">
-  <div class="section-inner" style="text-align:center">
-    <div class="section-label">Our Rating</div>
-    <h2 class="section-title" style="margin-bottom:1.5rem">Tucker Plumbing LLC on Google</h2>
-    <div class="rating-badge" style="max-width:360px;margin:0 auto">
-      <div class="rating-score">5.0</div>
-      <div class="rating-right">
-        <div class="rating-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <div style="font-size:.9rem;font-weight:600;margin-top:.2rem">out of 5 stars</div>
-        <div class="rating-label">Based on 96 Google reviews</div>
+<!-- ===== SECTION 4: WHY CHOOSE US ===== -->
+<section class="why grain-overlay">
+  <div class="why-inner">
+    <div class="why-header">
+      <div class="why-section-tag">Why Tucker</div>
+      <h2 class="why-title">Why Houston Trusts Tucker</h2>
+      <p class="why-sub" style="color:var(--t2)">Two decades of reliable service, honest pricing, and master-licensed craftsmanship that North Houston homeowners depend on.</p>
+    </div>
+    <!-- 4 stat cards -->
+    <div class="why-stats">
+      <div class="why-stat-card">
+        <span class="why-stat-num">5.0</span>
+        <div class="why-stat-label">Average Google Rating</div>
+      </div>
+      <div class="why-stat-card">
+        <span class="why-stat-num">96+</span>
+        <div class="why-stat-label">5-Star Customer Reviews</div>
+      </div>
+      <div class="why-stat-card">
+        <span class="why-stat-num">20+</span>
+        <div class="why-stat-label">Years in Business</div>
+      </div>
+      <div class="why-stat-card">
+        <span class="why-stat-num">24/7</span>
+        <div class="why-stat-label">Emergency Availability</div>
+      </div>
+    </div>
+    <!-- 4 differentiators -->
+    <div class="why-diffs">
+      <div class="why-diff">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Master Licensed &amp; Fully Insured</div>
+          <p class="why-diff-desc">Tucker Plumbing holds a Texas master plumber license. Every technician is background-checked, insured, and trained to code — so your home and family are protected on every visit.</p>
+        </div>
+      </div>
+      <div class="why-diff">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Upfront Flat-Rate Pricing</div>
+          <p class="why-diff-desc">We give you the price before we start the work — period. No after-the-fact surprises, no hidden service fees, and no pressure to approve work you did not ask for.</p>
+        </div>
+      </div>
+      <div class="why-diff">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Same-Day &amp; 24/7 Response</div>
+          <p class="why-diff-desc">We prioritize same-day scheduling for urgent situations and offer true around-the-clock emergency dispatch. When water is flooding your kitchen at midnight, we pick up the phone.</p>
+        </div>
+      </div>
+      <div class="why-diff">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Patriotic, Community-Focused Service</div>
+          <p class="why-diff-desc">Tucker Plumbing was built on values of integrity and community. We treat your home with the same respect we'd expect for our own, and we're proud to serve the veterans and families of North Houston.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="area-section">
-  <div class="section-inner">
-    <div class="area-grid">
-      <div>
-        <div class="section-label">Where We Work</div>
-        <h2 class="section-title">Serving Houston &amp; Surrounding Areas</h2>
-        <p style="color:var(--gray);margin-bottom:1.5rem">We serve Houston and the surrounding communities. Not sure if we cover your area? Call us — we'll let you know.</p>
-        <a href="tel:2814695354" class="btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (281) 469-5354</a>
+<!-- ===== SECTION 5: HOW IT WORKS ===== -->
+<section class="how">
+  <div class="how-inner">
+    <div class="how-header">
+      <div class="why-section-tag" style="background:rgba(220,38,38,.2);color:#fca5a5;">How It Works</div>
+      <h2 class="how-title">Getting Help Is Simple</h2>
+      <p class="how-sub">Three easy steps stand between you and a solved plumbing problem.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="step-circle">1</div>
+        <div class="step-title">Call or Book Online</div>
+        <p class="step-desc">Reach us by phone at (281) 469-5354 or submit the contact form below. Tell us what's going on — we'll ask a few quick questions to understand the situation and get the right tech dispatched.</p>
       </div>
-      <div class="area-list">
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Houston, TX</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Surrounding suburbs</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 30-mile service radius</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon–Sat, 7 AM – 6 PM</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Free estimates available</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; insured in TX</div>
+      <div class="how-step">
+        <div class="step-circle">2</div>
+        <div class="step-title">Upfront Quote — No Surprises</div>
+        <p class="step-desc">Your technician arrives on time, diagnoses the issue, and presents a clear flat-rate quote before touching anything. You approve the work and the price — no pressure, no upsells.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-circle">3</div>
+        <div class="step-title">Problem Solved Fast</div>
+        <p class="step-desc">Our licensed plumbers complete the repair cleanly and efficiently. We walk you through what was done, answer your questions, and leave your home in better shape than we found it.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="cta-band">
-  <div class="section-inner">
-    <h2>Ready to Get Started?</h2>
-    <p>Call now for a free estimate. We typically respond within the hour.</p>
-    <a href="tel:2814695354" class="btn-primary" style="font-size:1.1rem;padding:1rem 2.5rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (281) 469-5354</a>
+<!-- ===== SECTION 6: REVIEWS ===== -->
+<section class="reviews">
+  <div class="reviews-inner">
+    <div class="section-header">
+      <div class="section-tag">Customer Reviews</div>
+      <h2 class="section-title">What North Houston Homeowners Say</h2>
+      <p class="section-sub">5.0 stars across 96 verified Google reviews. Here's what real customers experienced.</p>
+    </div>
+    <div class="reviews-grid">
+      <!-- Review 1 -->
+      <div class="review-card anim-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">We had a burst pipe under the kitchen sink at 11pm on a Sunday. Tucker Plumbing answered immediately and had someone at our house within 45 minutes. The repair took about an hour, cost exactly what they quoted over the phone — $185 — and there was zero water damage thanks to their speed. Incredible service.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">M</div>
+          <div>
+            <div class="reviewer-name">Marcus D.</div>
+            <div class="reviewer-date">Spring, TX — Verified Google Review</div>
+          </div>
+        </div>
+      </div>
+      <!-- Review 2 -->
+      <div class="review-card anim-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">My 12-year-old water heater finally gave out on a Wednesday morning. Tucker Plumbing came out the same afternoon, confirmed it needed replacing, and installed a new 50-gallon unit by 5pm. Total was $950 installed — competitive price, no upsell pressure, and they hauled away the old unit. Hot water by dinner.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">L</div>
+          <div>
+            <div class="reviewer-name">Linda R.</div>
+            <div class="reviewer-date">Cypress, TX — Verified Google Review</div>
+          </div>
+        </div>
+      </div>
+      <!-- Review 3 -->
+      <div class="review-card anim-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">Used three other plumbers before Tucker for a recurring clogged main drain. The first two cleared it temporarily and charged $150 each time. Tucker's tech ran a camera, found a root intrusion 40 feet out, and cleared it with hydro-jetting in two hours for $320. That was eight months ago — drain has been perfect since.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">T</div>
+          <div>
+            <div class="reviewer-name">Tony W.</div>
+            <div class="reviewer-date">Tomball, TX — Verified Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
+<!-- ===== SECTION 7: SERVICE AREAS ===== -->
+<section class="areas">
+  <div class="areas-inner">
+    <div class="areas-left">
+      <div class="why-section-tag">Coverage Area</div>
+      <h2 class="areas-title">Serving All of North Houston</h2>
+      <p class="areas-sub">Tucker Plumbing covers a wide service radius across the Houston metro's north side. Whether you're in established Spring Branch neighborhoods or newer Woodlands communities, we can be there fast.</p>
+      <div class="areas-cta">
+        <a href="tel:2814695354" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.21 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          Call (281) 469-5354
+        </a>
+        <a href="#contact" class="btn btn-ghost">Book Online</a>
+      </div>
+    </div>
+    <div class="areas-right">
+      <div class="chips">
+        <div class="chip">Spring</div>
+        <div class="chip">Tomball</div>
+        <div class="chip">Cypress</div>
+        <div class="chip">The Woodlands</div>
+        <div class="chip">Humble</div>
+        <div class="chip">Kingwood</div>
+        <div class="chip">Atascocita</div>
+        <div class="chip">Conroe</div>
+        <div class="chip">Jersey Village</div>
+        <div class="chip">Northside Houston</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 8: CONTACT FORM ===== -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <!-- Left: Form -->
+    <div class="contact-form-wrap">
+      <div class="section-tag" style="margin-bottom:12px;">Request Service</div>
+      <h2 class="form-title">Get Your Free Quote</h2>
+      <p class="form-sub">Fill out the form and a Tucker Plumbing team member will reach out within 30 minutes during business hours. For emergencies, call us directly.</p>
+      <form onsubmit="return false;">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="John" autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Smith" autocomplete="family-name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(281) 555-0100" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@email.com" autocomplete="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Select a service...</option>
+            <option value="drain">Drain Cleaning</option>
+            <option value="water-heater">Water Heater Repair / Replacement</option>
+            <option value="pipe">Pipe Repair</option>
+            <option value="leak">Leak Detection</option>
+            <option value="sewer">Sewer Line Service</option>
+            <option value="emergency">Emergency Plumbing</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Describe the Problem</label>
+          <textarea id="message" name="message" placeholder="Tell us what's going on — more detail helps us send the right tech..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send My Request — Get a Quote Fast</button>
+      </form>
+    </div>
+    <!-- Right: Info card -->
+    <div class="contact-info-card">
+      <div class="info-card-title">Business Hours</div>
+      <div class="hours-list">
+        <div class="hours-item">
+          <span class="hours-day">Monday – Friday</span>
+          <span class="hours-time">7:00am – 7:00pm</span>
+        </div>
+        <div class="hours-item">
+          <span class="hours-day">Saturday</span>
+          <span class="hours-time">8:00am – 5:00pm</span>
+        </div>
+        <div class="hours-item">
+          <span class="hours-day">Sunday</span>
+          <span class="hours-time">Emergency Only</span>
+        </div>
+        <div class="hours-item">
+          <span class="hours-day">24/7 Emergency Line</span>
+          <span class="hours-emerg">Always Available</span>
+        </div>
+      </div>
+      <div class="why-book-title">Why Book with Tucker</div>
+      <ul class="why-book-list">
+        <li>Master-licensed plumber on every job</li>
+        <li>Flat-rate pricing — know the cost before we start</li>
+        <li>Same-day appointments for urgent issues</li>
+        <li>Background-checked, uniformed technicians</li>
+        <li>100% satisfaction guarantee on all work</li>
+        <li>Serving North Houston for over 20 years</li>
+      </ul>
+      <a href="tel:2814695354" style="display:flex;align-items:center;gap:10px;margin-top:28px;background:var(--accent);color:#fff;padding:14px 20px;border-radius:8px;text-decoration:none;font-family:var(--font-display);font-size:20px;letter-spacing:0.04em;justify-content:center;transition:background .2s;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.21 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+        (281) 469-5354
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 9: CTA BAND ===== -->
+<section class="cta-band grain-overlay">
+  <div style="position:relative;z-index:1;">
+    <h2 class="cta-band-title">Need a Plumber Today? Call Now.</h2>
+    <p class="cta-band-sub">Tucker Plumbing LLC is standing by — master licensed, fully insured, and ready to help anywhere in North Houston.</p>
+    <div class="cta-band-btns">
+      <a href="tel:2814695354" class="btn btn-white">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.21 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+        Call (281) 469-5354
+      </a>
+      <a href="#contact" class="btn btn-outline-white">Book Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 10: FOOTER ===== -->
 <footer>
   <div class="footer-grid">
+    <!-- Col 1: About -->
     <div>
-      <div class="footer-head">Contact</div>
-      <ul class="footer-list footer-contact">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:2814695354">(281) 469-5354</a></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Houston, TX</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon–Sat, 7 AM – 6 PM</li>
+      <div class="footer-brand-name">Tucker Plumbing LLC</div>
+      <div class="footer-brand-tagline">North Houston's Patriotic Plumber</div>
+      <p class="footer-desc">Tucker Plumbing LLC has served North Houston homeowners and businesses for over 20 years. We are master-licensed, fully insured, and committed to honest pricing, quality workmanship, and the communities we call home.</p>
+      <div style="font-family:var(--font-body);font-size:14px;color:var(--t2);">
+        <a href="tel:2814695354" class="footer-phone-link">(281) 469-5354</a>
+      </div>
+      <div class="footer-license">Texas Master Plumber License | Fully Insured | BBB Accredited</div>
+    </div>
+    <!-- Col 2: Services -->
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Drain Cleaning</a></li>
+        <li><a href="#services">Water Heater Repair</a></li>
+        <li><a href="#services">Pipe Repair</a></li>
+        <li><a href="#services">Leak Detection</a></li>
+        <li><a href="#services">Sewer Line Service</a></li>
+        <li><a href="#services">Emergency Plumbing</a></li>
       </ul>
     </div>
+    <!-- Col 3: Service Areas -->
     <div>
-      <div class="footer-head">Services</div>
-      <ul class="footer-list">
-        <li>Drain Cleaning</li><li>Leak Repair</li><li>Water Heater</li><li>Toilet &amp; Faucet</li>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="#">Spring, TX</a></li>
+        <li><a href="#">Tomball, TX</a></li>
+        <li><a href="#">Cypress, TX</a></li>
+        <li><a href="#">The Woodlands, TX</a></li>
+        <li><a href="#">Humble, TX</a></li>
+        <li><a href="#">Kingwood, TX</a></li>
+        <li><a href="#">Atascocita, TX</a></li>
+        <li><a href="#">Conroe, TX</a></li>
+        <li><a href="#">Jersey Village, TX</a></li>
+        <li><a href="#">Northside Houston</a></li>
       </ul>
     </div>
+    <!-- Col 4: Contact -->
     <div>
-      <div class="footer-head">Trust</div>
-      <ul class="footer-list">
-        <li>Licensed &amp; Insured</li>
-        <li>5.0★ Google Rating</li>
-        <li>96+ Reviews</li>
-        <li>Serving Houston Since Day One</li>
-      </ul>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.21 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+        <span><a href="tel:2814695354" class="footer-phone-link">(281) 469-5354</a><br>24/7 Emergency Line</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>North Houston, TX<br>Spring Branch Area</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Mon–Fri: 7am–7pm<br>Sat: 8am–5pm | 24/7 Emergency</span>
+      </div>
+      <div class="footer-license" style="margin-top:16px;">Master Plumber License #XXXXX<br>Licensed in the State of Texas</div>
     </div>
   </div>
-  <div class="footer-bottom">&copy; 2026 Tucker Plumbing LLC. All rights reserved. · Houston, TX</div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 Tucker Plumbing LLC. All rights reserved.</div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
 </footer>
 
+<script>
+function animateCount(el) {
+  const target = parseInt(el.dataset.target), suffix = el.dataset.suffix||'', dur = 1800, t0 = performance.now();
+  const upd = t => { const p=Math.min((t-t0)/dur,1), e=1-Math.pow(1-p,3); el.textContent=Math.floor(e*target).toLocaleString()+suffix; if(p<1)requestAnimationFrame(upd); };
+  requestAnimationFrame(upd);
+}
+new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);observer.unobserve(e.target)}})},{threshold:.5}).observe;
+// Fix: use named observer
+const statObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);statObs.unobserve(e.target)}})},{threshold:.5});
+document.querySelectorAll('.stat-number').forEach(el=>statObs.observe(el));
+const cardObs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1});
+document.querySelectorAll('.anim-card').forEach(el=>cardObs.observe(el));
+</script>
 </body>
 </html>

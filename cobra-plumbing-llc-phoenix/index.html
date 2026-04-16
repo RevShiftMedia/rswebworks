@@ -2,297 +2,976 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Cobra Plumbing LLC — Phoenix's top-rated plumber company. 4.8★, 122 reviews. Call (602) 663-8432.">
-<title>Cobra Plumbing LLC | Phoenix, AZ Plumber</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cobra Plumbing LLC | Phoenix's Top-Rated Plumber | (602) 663-8432</title>
+<meta name="description" content="Cobra Plumbing LLC — Phoenix's most trusted licensed plumber. Serving Scottsdale, Tempe, Mesa, Chandler and the greater Phoenix area. 24/7 emergency service. Call (602) 663-8432.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#0b1629;--navy2:#0f1e38;--navy3:#162848;
-  --orange:#f97316;--orange2:#fb923c;
-  --white:#ffffff;--gray:#94a3b8;--light:#e2e8f0;
-  --card:#111f3a;--radius:12px;--shadow:0 4px 24px rgba(0,0,0,.4);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --primary:#0f1f38; --primary-dark:#070f1d;
+  --accent:#f97316; --accent-dark:#c2410c;
+  --bg:#fff; --bg-off:#f7f8fc;
+  --t1:#fff; --t2:rgba(255,255,255,.75); --t3:rgba(255,255,255,.5);
+  --dark-text:#1a1a2e; --grey-text:#6b7280; --border:#e8edf5;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-body:'Open Sans',sans-serif;
+  --radius:12px; --shadow:0 4px 20px rgba(0,0,0,.12); --shadow-lg:0 8px 40px rgba(0,0,0,.2);
 }
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--navy);color:var(--white);line-height:1.6;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,22,41,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07)}
-.header-inner{max-width:1200px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:.6rem}
-.logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--orange),var(--orange2));border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.logo-icon svg{width:22px;height:22px;stroke:#fff}
-.logo-name{font-size:.95rem;font-weight:800;letter-spacing:.5px}
-.logo-tag{font-size:.62rem;color:var(--gray);letter-spacing:.5px;text-transform:uppercase}
-.cta-btn{display:flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;font-weight:700;font-size:.85rem;padding:.5rem 1rem;border-radius:8px;transition:transform .15s,box-shadow .15s;white-space:nowrap}
-.cta-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(249,115,22,.4)}
-.cta-btn svg{width:14px;height:14px;flex-shrink:0}
-.hero{min-height:100vh;background:radial-gradient(ellipse 80% 60% at 50% 120%,rgba(249,115,22,.12) 0%,transparent 70%),linear-gradient(160deg,var(--navy) 0%,var(--navy2) 50%,#071020 100%);display:flex;align-items:center;justify-content:center;padding:80px 1.25rem 3rem;text-align:center}
-.hero-inner{max-width:760px}
-.hero-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(249,115,22,.12);border:1px solid rgba(249,115,22,.3);border-radius:20px;padding:.3rem .8rem;font-size:.72rem;font-weight:700;color:var(--orange);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.25rem}
-.hero-badge svg{width:12px;height:12px}
-h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;margin-bottom:1rem}
-h1 span{color:var(--orange)}
-.hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:var(--gray);margin-bottom:2rem;max-width:560px;margin-left:auto;margin-right:auto}
-.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
-.btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;font-weight:700;font-size:1rem;padding:.85rem 2rem;border-radius:10px;transition:transform .15s,box-shadow .15s}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(249,115,22,.45)}
-.btn-primary svg{width:18px;height:18px}
-.btn-secondary{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:#fff;font-weight:600;font-size:1rem;padding:.85rem 2rem;border-radius:10px;transition:all .15s}
-.btn-secondary:hover{background:rgba(255,255,255,.12)}
-.trust-bar{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:.5rem}
-.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--gray)}
-.trust-item svg{width:14px;height:14px;color:var(--orange)}
-.stars{display:inline-flex;gap:1px}
-.star-full svg{width:14px;height:14px;color:#fbbf24;fill:#fbbf24}
-.star-empty svg{width:14px;height:14px;color:var(--gray);fill:none}
-section{padding:5rem 1.25rem}
-.section-inner{max-width:1200px;margin:0 auto}
-.section-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:.5rem}
-.section-title{font-size:clamp(1.6rem,3vw,2.5rem);font-weight:800;margin-bottom:1rem}
-.section-sub{color:var(--gray);max-width:560px;margin-bottom:3rem}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-@media(max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.grid-3{grid-template-columns:1fr}}
-.service-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.5rem;transition:transform .15s,border-color .15s}
-.service-card:hover{transform:translateY(-3px);border-color:rgba(249,115,22,.35)}
-.sc-icon{width:40px;height:40px;background:rgba(249,115,22,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--orange)}
-.sc-icon svg{width:20px;height:20px}
-.service-card h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.service-card p{font-size:.85rem;color:var(--gray);line-height:1.5}
-.why-section{background:linear-gradient(180deg,var(--navy2) 0%,var(--navy) 100%)}
-.why-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.75rem;text-align:center}
-.why-icon{width:52px;height:52px;background:rgba(249,115,22,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--orange)}
-.why-icon svg{width:24px;height:24px}
-.why-card h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.why-card p{font-size:.85rem;color:var(--gray);line-height:1.5}
-.process-section{background:var(--navy2)}
-.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;position:relative}
-@media(max-width:900px){.process-grid{grid-template-columns:1fr}}
-.process-step{text-align:center;position:relative}
-.step-num{width:56px;height:56px;background:linear-gradient(135deg,var(--orange),var(--orange2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:900;margin:0 auto 1rem}
-.step-icon{width:48px;height:48px;background:rgba(249,115,22,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .75rem;color:var(--orange)}
-.step-icon svg{width:22px;height:22px}
-.process-step h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.process-step p{font-size:.85rem;color:var(--gray)}
-.reviews-section{background:var(--navy)}
-.review-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.5rem}
-.review-stars{display:flex;gap:2px;margin-bottom:.75rem;color:#fbbf24}
-.review-stars svg{width:16px;height:16px;fill:#fbbf24}
-.review-text{font-size:.9rem;color:var(--light);line-height:1.6;margin-bottom:1rem;font-style:italic}
-.review-author{display:flex;align-items:center;gap:.75rem}
-.review-avatar{width:38px;height:38px;background:linear-gradient(135deg,var(--orange),var(--orange2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;flex-shrink:0}
-.review-name{font-size:.85rem;font-weight:700}
-.review-date{font-size:.75rem;color:var(--gray)}
-.rating-section{background:var(--navy2);padding:3rem 1.25rem}
-.rating-badge{max-width:480px;margin:0 auto;background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:2rem;display:flex;align-items:center;gap:2rem}
-@media(max-width:600px){.rating-badge{flex-direction:column;text-align:center}}
-.rating-score{font-size:4rem;font-weight:900;color:var(--orange);line-height:1}
-.rating-right{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem}
-@media(max-width:600px){.rating-right{align-items:center}}
-.rating-stars{display:flex;gap:3px;color:#fbbf24}
-.rating-stars svg{width:22px;height:22px;fill:#fbbf24}
-.rating-label{font-size:.8rem;color:var(--gray)}
-.area-section{background:var(--navy)}
-.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
-@media(max-width:700px){.area-grid{grid-template-columns:1fr}}
-.area-list{display:flex;flex-direction:column;gap:.5rem}
-.area-item{display:flex;align-items:center;gap:.6rem;font-size:.9rem;color:var(--light)}
-.area-item svg{width:14px;height:14px;color:var(--orange);flex-shrink:0}
-.cta-band{background:linear-gradient(135deg,#0f1e38 0%,#162848 100%);border-top:1px solid rgba(249,115,22,.2);border-bottom:1px solid rgba(249,115,22,.2);padding:4rem 1.25rem;text-align:center}
-.cta-band h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;margin-bottom:.75rem}
-.cta-band p{color:var(--gray);margin-bottom:2rem}
-footer{background:#070f1d;border-top:1px solid rgba(255,255,255,.06);padding:3rem 1.25rem 1.5rem}
-.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:2.5rem}
-@media(max-width:700px){.footer-grid{grid-template-columns:1fr}}
-.footer-head{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:1rem}
-.footer-list{display:flex;flex-direction:column;gap:.4rem}
-.footer-list li{font-size:.85rem;color:var(--gray);list-style:none}
-.footer-contact li{display:flex;align-items:center;gap:.5rem}
-.footer-contact svg{width:13px;height:13px;color:var(--orange);flex-shrink:0}
-.footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,.06);padding-top:1rem;text-align:center;font-size:.78rem;color:var(--gray)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);color:var(--dark-text);line-height:1.65}
+h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-0.02em}
+
+/* ===== GRAIN OVERLAY ===== */
+.grain-overlay{position:relative;overflow:hidden}
+.grain-overlay::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.12;pointer-events:none;z-index:0}
+.grain-overlay>*{position:relative;z-index:1}
+
+/* ===== HERO ANIMATIONS ===== */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{animation:heroFadeUp .5s ease-out .1s both}
+.hero-headline{animation:heroFadeUp .5s ease-out .2s both}
+.hero-sub{animation:heroFadeUp .5s ease-out .35s both}
+.hero-ctas{animation:heroFadeUp .5s ease-out .5s both}
+.hero-trust{animation:heroFadeUp .5s ease-out .65s both}
+.hero-card{animation:heroFadeUp .5s ease-out .4s both}
+
+/* ===== CARD ANIMATIONS ===== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.anim-card{opacity:0}
+.anim-card.visible{animation:fadeUp .4s ease-out forwards}
+.anim-card:nth-child(1){animation-delay:.05s}.anim-card:nth-child(2){animation-delay:.15s}
+.anim-card:nth-child(3){animation-delay:.25s}.anim-card:nth-child(4){animation-delay:.35s}
+.anim-card:nth-child(5){animation-delay:.45s}.anim-card:nth-child(6){animation-delay:.55s}
+
+/* ===== UTILITIES ===== */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 28px;border-radius:8px;font-family:var(--font-body);
+  font-weight:600;font-size:15px;text-decoration:none;
+  border:none;cursor:pointer;transition:all 0.2s ease;white-space:nowrap;
+}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 6px 24px rgba(249,115,22,.4)}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+.btn-ghost:hover{background:rgba(255,255,255,.1);border-color:#fff;transform:translateY(-2px)}
+
+/* ===== SECTION 1: STICKY HEADER ===== */
+header{
+  position:sticky;top:0;z-index:1000;
+  background:var(--primary);
+  box-shadow:0 2px 16px rgba(0,0,0,.35);
+  padding:0 24px;
+}
+.header-inner{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  height:72px;gap:24px;
+}
+.header-brand{display:flex;flex-direction:column;gap:1px}
+.header-name{font-family:var(--font-display);font-size:20px;color:var(--t1);letter-spacing:0.04em;line-height:1}
+.header-tagline{font-family:var(--font-body);font-size:13px;color:var(--t2);font-weight:400;line-height:1}
+.header-cta{
+  background:var(--accent);color:#fff;border:none;
+  padding:10px 22px;border-radius:8px;font-family:var(--font-body);
+  font-weight:600;font-size:14px;cursor:pointer;
+  display:flex;align-items:center;gap:8px;text-decoration:none;
+  transition:background 0.2s,transform 0.2s;white-space:nowrap;
+}
+.header-cta:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.header-cta svg{flex-shrink:0}
+
+/* ===== SECTION 2: HERO ===== */
+.hero{
+  background:linear-gradient(135deg,#070f1d 0%,#0f1f38 60%,#070f1d 100%);
+  padding:80px 24px 72px;
+}
+.hero-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:60% 40%;gap:48px;align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(249,115,22,.18);border:1px solid rgba(249,115,22,.4);
+  color:#fdba74;border-radius:24px;padding:7px 16px;
+  font-family:var(--font-display);font-size:14px;letter-spacing:0.08em;
+  margin-bottom:20px;
+}
+.hero-headline{
+  font-family:var(--font-display);color:var(--t1);
+  font-size:clamp(42px,6vw,64px);letter-spacing:-0.02em;
+  line-height:1.05;margin-bottom:20px;
+}
+.hero-sub{
+  font-family:var(--font-body);font-size:18px;color:var(--t2);
+  max-width:520px;margin-bottom:32px;line-height:1.7;
+}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px}
+.hero-trust{
+  display:flex;gap:28px;flex-wrap:wrap;
+  padding-top:28px;border-top:1px solid rgba(255,255,255,.12);
+}
+.trust-item{display:flex;flex-direction:column;gap:2px}
+.trust-value{font-family:var(--font-display);font-size:22px;color:var(--t1);letter-spacing:0.02em;line-height:1}
+.trust-label{font-size:12px;color:var(--t3);font-weight:500;text-transform:uppercase;letter-spacing:0.06em}
+
+/* Hero card */
+.hero-card{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:var(--radius);padding:32px 28px;
+}
+.hero-card-title{font-family:var(--font-display);font-size:22px;color:var(--t1);letter-spacing:0.04em;margin-bottom:20px}
+.hero-prop{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08);
+}
+.hero-prop:last-of-type{border-bottom:none}
+.hero-prop-check{
+  width:22px;height:22px;background:rgba(249,115,22,.25);
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.hero-prop-check svg{color:#fdba74}
+.hero-prop-text{font-family:var(--font-body);font-size:15px;color:var(--t1);font-weight:500}
+.hero-prop-sub{font-size:13px;color:var(--t3);margin-top:2px}
+.hero-card-phone{
+  margin-top:24px;padding:14px 20px;
+  background:var(--accent);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  text-decoration:none;color:#fff;font-family:var(--font-display);
+  font-size:20px;letter-spacing:0.04em;
+  transition:background 0.2s,transform 0.2s;
+}
+.hero-card-phone:hover{background:var(--accent-dark);transform:translateY(-2px)}
+
+/* ===== STATS ROW ===== */
+.stats-row{
+  background:var(--primary);
+  padding:48px 24px;
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.stats-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;
+}
+.stat-item{padding:8px 0}
+.stat-number{font-family:var(--font-display);font-size:52px;color:var(--t1);letter-spacing:-0.02em;line-height:1;display:block}
+.stat-label{font-family:var(--font-body);font-size:13px;color:var(--t3);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;margin-top:6px;display:block}
+.stat-divider{width:32px;height:2px;background:var(--accent);margin:10px auto 0;border-radius:2px}
+
+/* ===== SECTION 3: SERVICES ===== */
+.services{background:var(--bg);padding:80px 24px}
+.section-header{text-align:center;margin-bottom:52px}
+.section-tag{
+  display:inline-block;background:rgba(249,115,22,.1);color:var(--accent);
+  font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;
+  padding:6px 16px;border-radius:20px;margin-bottom:14px;
+}
+.section-title{font-family:var(--font-display);font-size:clamp(32px,4vw,48px);color:var(--dark-text);letter-spacing:-0.02em;margin-bottom:14px}
+.section-sub{font-family:var(--font-body);font-size:17px;color:var(--grey-text);max-width:560px;margin:0 auto}
+.services-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{
+  background:var(--bg-off);border:1px solid var(--border);
+  border-radius:var(--radius);padding:28px 24px;
+  transition:box-shadow 0.2s,transform 0.2s;cursor:default;
+}
+.service-card:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
+.service-icon{
+  width:52px;height:52px;background:rgba(249,115,22,.12);
+  border-radius:12px;display:flex;align-items:center;justify-content:center;
+  margin-bottom:16px;
+}
+.service-icon svg{color:var(--accent);stroke:var(--accent)}
+.service-name{font-family:var(--font-display);font-size:22px;color:var(--dark-text);letter-spacing:0.02em;margin-bottom:10px}
+.service-desc{font-family:var(--font-body);font-size:14px;color:var(--grey-text);line-height:1.65}
+.service-link{
+  display:inline-flex;align-items:center;gap:6px;margin-top:16px;
+  font-family:var(--font-body);font-size:14px;font-weight:600;
+  color:var(--accent);text-decoration:none;
+}
+.service-link:hover{color:var(--accent-dark)}
+
+/* ===== SECTION 4: WHY CHOOSE US ===== */
+.why{padding:80px 24px;background:var(--primary)}
+.why-inner{max-width:1200px;margin:0 auto}
+.why-header{text-align:center;margin-bottom:56px}
+.why-section-tag{
+  display:inline-block;background:rgba(249,115,22,.2);color:#fdba74;
+  font-size:12px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;
+  padding:6px 16px;border-radius:20px;margin-bottom:14px;
+}
+.why-title{font-family:var(--font-display);font-size:clamp(32px,4vw,48px);color:var(--t1);letter-spacing:-0.02em;margin-bottom:14px}
+.why-sub{font-family:var(--font-body);font-size:17px;color:var(--t2)}
+.why-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:56px}
+.why-stat-card{
+  background:var(--primary-dark);border:1px solid rgba(255,255,255,.1);
+  border-radius:var(--radius);padding:28px 20px;text-align:center;
+}
+.why-stat-num{font-family:var(--font-display);font-size:42px;color:var(--accent);letter-spacing:-0.02em;line-height:1;display:block;margin-bottom:8px}
+.why-stat-label{font-family:var(--font-body);font-size:14px;color:var(--t2);font-weight:500}
+.why-diffs{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.why-diff{
+  display:flex;gap:16px;align-items:flex-start;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius);padding:24px 20px;
+}
+.why-diff-icon{width:44px;height:44px;background:rgba(249,115,22,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why-diff-icon svg{color:#fdba74}
+.why-diff-title{font-family:var(--font-display);font-size:20px;color:var(--t1);letter-spacing:0.02em;margin-bottom:6px}
+.why-diff-desc{font-family:var(--font-body);font-size:14px;color:var(--t2);line-height:1.65}
+
+/* ===== SECTION 5: HOW IT WORKS ===== */
+.how{background:var(--primary-dark);padding:80px 24px}
+.how-inner{max-width:1200px;margin:0 auto}
+.how-header{text-align:center;margin-bottom:56px}
+.how-title{font-family:var(--font-display);font-size:clamp(32px,4vw,48px);color:var(--t1);letter-spacing:-0.02em;margin-bottom:14px}
+.how-sub{font-family:var(--font-body);font-size:17px;color:var(--t2)}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+.how-steps::before{
+  content:'';position:absolute;top:36px;left:calc(16.66% + 20px);right:calc(16.66% + 20px);
+  height:2px;border-top:2px dashed rgba(249,115,22,.35);z-index:0;
+}
+.how-step{text-align:center;padding:0 24px;position:relative;z-index:1}
+.step-circle{
+  width:72px;height:72px;border-radius:50%;
+  background:var(--accent);color:#fff;
+  font-family:var(--font-display);font-size:30px;letter-spacing:0;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 24px;box-shadow:0 0 0 6px rgba(249,115,22,.15);
+}
+.step-title{font-family:var(--font-display);font-size:22px;color:var(--t1);letter-spacing:0.02em;margin-bottom:10px}
+.step-desc{font-family:var(--font-body);font-size:15px;color:var(--t2);line-height:1.65}
+
+/* ===== SECTION 6: REVIEWS ===== */
+.reviews{background:var(--bg-off);padding:80px 24px}
+.reviews-inner{max-width:1200px;margin:0 auto}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.review-card{
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:var(--radius);padding:28px 24px;
+  box-shadow:var(--shadow);
+}
+.review-stars{display:flex;gap:3px;color:#f59e0b;font-size:16px;margin-bottom:14px}
+.review-text{font-family:var(--font-body);font-size:15px;color:var(--dark-text);line-height:1.7;margin-bottom:20px}
+.reviewer{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--border)}
+.reviewer-avatar{
+  width:40px;height:40px;border-radius:50%;
+  background:var(--primary);color:#fff;
+  font-family:var(--font-display);font-size:18px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.reviewer-name{font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--dark-text)}
+.reviewer-meta{font-size:12px;color:var(--grey-text);margin-top:2px}
+.google-badge{display:inline-flex;align-items:center;gap:5px;margin-top:5px;font-family:var(--font-body);font-size:11px;font-weight:600;color:var(--grey-text)}
+
+/* ===== SECTION 7: SERVICE AREAS ===== */
+.areas{background:var(--primary);padding:80px 24px}
+.areas-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.areas-title{font-family:var(--font-display);font-size:clamp(32px,4vw,46px);color:var(--t1);letter-spacing:-0.02em;margin-bottom:16px}
+.areas-sub{font-family:var(--font-body);font-size:16px;color:var(--t2);margin-bottom:28px}
+.areas-cta{display:flex;gap:14px}
+.chips{display:flex;flex-wrap:wrap;gap:12px}
+.chip{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);
+  color:var(--t1);font-family:var(--font-body);font-size:14px;font-weight:500;
+  padding:8px 18px;border-radius:24px;
+  transition:background 0.2s,border-color 0.2s;
+}
+.chip:hover{background:rgba(249,115,22,.2);border-color:rgba(249,115,22,.4)}
+
+/* ===== SECTION 8: CONTACT FORM ===== */
+.contact{background:var(--bg);padding:80px 24px}
+.contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.form-title{font-family:var(--font-display);font-size:36px;color:var(--dark-text);letter-spacing:-0.02em;margin-bottom:6px}
+.form-sub{font-family:var(--font-body);font-size:15px;color:var(--grey-text);margin-bottom:28px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--dark-text);margin-bottom:6px}
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;padding:12px 16px;border:1.5px solid var(--border);
+  border-radius:8px;font-family:var(--font-body);font-size:15px;
+  color:var(--dark-text);background:var(--bg);outline:none;
+  transition:border-color 0.2s;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--primary)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-submit{
+  width:100%;padding:15px 24px;background:var(--accent);
+  color:#fff;border:none;border-radius:8px;
+  font-family:var(--font-body);font-size:16px;font-weight:600;
+  cursor:pointer;transition:background 0.2s,transform 0.2s;
+}
+.form-submit:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.contact-info-card{background:var(--primary);border-radius:var(--radius);padding:36px 32px;color:var(--t1)}
+.info-card-title{font-family:var(--font-display);font-size:28px;color:var(--t1);letter-spacing:0.02em;margin-bottom:24px}
+.hours-list{margin-bottom:28px}
+.hours-item{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:10px 0;border-bottom:1px solid rgba(255,255,255,.08);
+  font-family:var(--font-body);font-size:14px;
+}
+.hours-item:last-child{border-bottom:none}
+.hours-day{color:var(--t2)}
+.hours-time{color:var(--t1);font-weight:600}
+.hours-emerg{color:#fdba74;font-weight:700}
+.why-book-title{font-family:var(--font-display);font-size:20px;color:var(--t1);letter-spacing:0.02em;margin-bottom:14px}
+.why-book-list{list-style:none}
+.why-book-list li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-family:var(--font-body);font-size:14px;color:var(--t2);
+  padding:7px 0;
+}
+.why-book-list li::before{
+  content:'';display:block;width:18px;height:18px;border-radius:50%;
+  background:rgba(249,115,22,.25);flex-shrink:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23fdba74'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  background-size:18px;margin-top:1px;
+}
+
+/* ===== SECTION 9: CTA BAND ===== */
+.cta-band{
+  position:relative;
+  background:linear-gradient(135deg,var(--accent-dark),var(--accent));
+  padding:72px 24px;text-align:center;
+}
+.cta-band-title{font-family:var(--font-display);font-size:clamp(36px,5vw,60px);color:#fff;letter-spacing:-0.02em;margin-bottom:16px}
+.cta-band-sub{font-family:var(--font-body);font-size:17px;color:rgba(255,255,255,.85);margin-bottom:36px}
+.cta-band-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--accent-dark);font-family:var(--font-body);font-weight:700}
+.btn-white:hover{background:#f1f5f9;transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.15)}
+.btn-outline-white{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);font-family:var(--font-body);font-weight:600}
+.btn-outline-white:hover{background:rgba(255,255,255,.12);border-color:#fff;transform:translateY(-2px)}
+
+/* ===== SECTION 10: FOOTER ===== */
+footer{background:var(--primary-dark);padding:64px 24px 32px;border-top:1px solid rgba(255,255,255,.06)}
+.footer-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:2fr 1fr 1fr 1.2fr;gap:40px;
+  padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08);
+}
+.footer-col-title{font-family:var(--font-display);font-size:16px;color:var(--t1);letter-spacing:0.06em;margin-bottom:16px}
+.footer-brand-name{font-family:var(--font-display);font-size:22px;color:var(--t1);letter-spacing:0.04em;margin-bottom:8px}
+.footer-brand-tagline{font-family:var(--font-body);font-size:13px;color:var(--t3);margin-bottom:16px;line-height:1.6}
+.footer-desc{font-family:var(--font-body);font-size:14px;color:var(--t2);line-height:1.7;margin-bottom:20px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-links a{font-family:var(--font-body);font-size:14px;color:var(--t2);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--t1)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:10px;font-family:var(--font-body);font-size:14px;color:var(--t2);margin-bottom:12px;line-height:1.5}
+.footer-contact-item svg{color:var(--accent);flex-shrink:0;margin-top:2px}
+.footer-phone-link{color:var(--t1);font-weight:600;text-decoration:none}
+.footer-phone-link:hover{color:#fdba74}
+.footer-license{font-size:12px;color:var(--t3);margin-top:8px;font-family:var(--font-body)}
+.footer-bottom{max-width:1200px;margin:28px auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-family:var(--font-body);font-size:13px;color:var(--t3)}
+.footer-legal{display:flex;gap:20px}
+.footer-legal a{font-family:var(--font-body);font-size:13px;color:var(--t3);text-decoration:none}
+.footer-legal a:hover{color:var(--t2)}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:36px}
+  .hero-card{max-width:480px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .why-stats{grid-template-columns:repeat(2,1fr)}
+  .why-diffs{grid-template-columns:1fr}
+  .how-steps{grid-template-columns:1fr;gap:36px}
+  .how-steps::before{display:none}
+  .reviews-grid{grid-template-columns:1fr}
+  .areas-inner{grid-template-columns:1fr;gap:36px}
+  .contact-inner{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .header-tagline{display:none}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:1fr}
+  .why-stats{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-ctas{flex-direction:column}
+  .hero-trust{gap:18px}
+}
 </style>
 </head>
 <body>
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="google-g" viewBox="0 0 24 24">
+    <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+    <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+    <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+    <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+  </symbol>
+  <symbol id="ico-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.21 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+  </symbol>
+  <symbol id="ico-star" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+  </symbol>
+</svg>
 
+<!-- ===== SECTION 1: STICKY HEADER ===== -->
 <header>
   <div class="header-inner">
-    <div class="logo">
-      <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-      <div><div class="logo-name">Cobra Plumbing LLC</div><div class="logo-tag">Plumber · Phoenix, AZ</div></div>
+    <div class="header-brand">
+      <span class="header-name">Cobra Plumbing LLC</span>
+      <span class="header-tagline">Phoenix's Most Reliable Plumber</span>
     </div>
-    <a href="tel:6026638432" class="cta-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (602) 663-8432</a>
+    <a href="tel:6026638432" class="header-cta">
+      <svg width="16" height="16"><use href="#ico-phone"/></svg>
+      Call (602) 663-8432
+    </a>
   </div>
 </header>
 
-<section class="hero">
+<!-- ===== SECTION 2: HERO ===== -->
+<section class="hero grain-overlay">
   <div class="hero-inner">
-    <div class="hero-badge"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 4.8★ Rated · Phoenix, AZ</div>
-    <h1>Professional <span>Plumber</span><br>You Can Actually Trust</h1>
-    <p class="hero-sub">Cobra Plumbing LLC — Phoenix's trusted plumber pros. 122+ five-star reviews. Licensed, insured, and ready today.</p>
-    <div class="hero-btns">
-      <a href="tel:6026638432" class="btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (602) 663-8432</a>
-      <a href="#services" class="btn-secondary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> See Our Services</a>
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="14" height="14"><use href="#ico-star"/></svg>
+        Phoenix's Top-Rated Plumber
+      </div>
+      <h1 class="hero-headline">Phoenix's Trusted <span style="color:var(--accent)">Plumbing</span> Experts</h1>
+      <p class="hero-sub">Serving Phoenix, Scottsdale, Paradise Valley, and the greater metro with licensed plumbing you can count on — available 24/7 when it matters most.</p>
+      <div class="hero-ctas">
+        <a href="tel:6026638432" class="btn btn-primary">
+          <svg width="16" height="16"><use href="#ico-phone"/></svg>
+          Call (602) 663-8432
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get a Free Quote</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <span class="trust-value">4.8 &#9733;</span>
+          <span class="trust-label">Google Rating</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">122+</span>
+          <span class="trust-label">Verified Reviews</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">Licensed</span>
+          <span class="trust-label">Licensed AZ</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-value">24/7</span>
+          <span class="trust-label">Emergency Service</span>
+        </div>
+      </div>
     </div>
-    <div class="trust-bar">
-      <div class="trust-item"><span class="stars"><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-empty"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></span> <span>4.8 (122 reviews)</span></div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed & Insured</div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Serving Phoenix &amp; Surrounding Areas</div>
+    <!-- Right: frosted glass card -->
+    <div class="hero-card">
+      <div class="hero-card-title">Why Phoenix Chooses Cobra</div>
+      <div class="hero-prop">
+        <div class="hero-prop-check">
+          <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <div class="hero-prop-text">Licensed Arizona Plumber</div>
+          <div class="hero-prop-sub">State-certified and fully insured on every job</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-check">
+          <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <div class="hero-prop-text">24/7 Emergency Service</div>
+          <div class="hero-prop-sub">We answer every call, day or night</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-check">
+          <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <div class="hero-prop-text">Upfront Pricing Guaranteed</div>
+          <div class="hero-prop-sub">Know the cost before we start — no surprises</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-check">
+          <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+        </div>
+        <div>
+          <div class="hero-prop-text">Same-Day Service Available</div>
+          <div class="hero-prop-sub">Fast scheduling for urgent plumbing needs</div>
+        </div>
+      </div>
+      <a href="tel:6026638432" class="hero-card-phone">
+        <svg width="18" height="18"><use href="#ico-phone"/></svg>
+        (602) 663-8432
+      </a>
     </div>
   </div>
 </section>
 
-<section id="services" style="background:var(--navy2);">
-  <div class="section-inner">
-    <div class="section-label">What We Do</div>
-    <h2 class="section-title">Our Services</h2>
-    <p class="section-sub" style="color:var(--gray)">Professional plumber services — done right the first time.</p>
-    <div class="grid-3"><div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Drain Cleaning</h3><p>Clogged drains, rooter service</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Leak Repair</h3><p>Pipes, fixtures, slab leaks</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Water Heater</h3><p>Install, repair, flush, replacement</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Toilet &amp; Faucet</h3><p>Install, repair, replacement</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Sewer Line</h3><p>Camera inspection, hydro-jetting</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Emergency Plumbing</h3><p>24/7 response for urgent issues</p></div>
-</div>
-  </div>
-</section>
-
-<section class="why-section">
-  <div class="section-inner">
-    <div class="section-label">Why Choose Us</div>
-    <h2 class="section-title">The Cobra Difference</h2>
-    <div class="grid-3">
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h3>5-Star Rated</h3><p>122+ verified reviews on Google. Our reputation is everything.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Licensed &amp; Insured</h3><p>Fully covered. Your property is protected on every job.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>On Time, Every Time</h3><p>We show up when we say we will. No waiting around.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div><h3>Quality Guaranteed</h3><p>Not satisfied? We make it right. No questions asked.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Locally Owned</h3><p>We live and work in Phoenix. This community is our community.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Fair Pricing</h3><p>Upfront quotes, no hidden fees. You know the price before we start.</p></div>
+<!-- ===== STATS ROW ===== -->
+<section class="stats-row">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <span class="stat-number" data-target="122" data-suffix="+">0+</span>
+      <span class="stat-label">5-Star Reviews</span>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="24" data-suffix="/7">0/7</span>
+      <span class="stat-label">Emergency Service</span>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="15" data-suffix="+">0+</span>
+      <span class="stat-label">Years in Phoenix</span>
+      <div class="stat-divider"></div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="100" data-suffix="%">0%</span>
+      <span class="stat-label">Licensed &amp; Insured</span>
+      <div class="stat-divider"></div>
     </div>
   </div>
 </section>
 
-<section class="process-section">
-  <div class="section-inner">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">Simple as 1–2–3</h2>
-    <div class="process-grid">
-      <div class="process-step"><div class="step-num">1</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>Call or Request Online</h3><p>Tell us what you need. We'll schedule you fast — often same or next day.</p></div>
-      <div class="process-step"><div class="step-num">2</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><h3>We Show Up &amp; Assess</h3><p>Our crew arrives on time, reviews the job, and gives you a firm quote.</p></div>
-      <div class="process-step"><div class="step-num">3</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></div><h3>Job Done Right</h3><p>We complete the work to the highest standard. You approve before we leave.</p></div>
+<!-- ===== SECTION 3: SERVICES ===== -->
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-tag">Our Services</div>
+    <h2 class="section-title">Plumbing Solutions for Every Problem</h2>
+    <p class="section-sub">From stubborn clogs to complete repipes, Cobra Plumbing handles it all with honest pricing and licensed expertise across greater Phoenix.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card anim-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 00-5 5c0 5 5 11 5 11s5-6 5-11a5 5 0 00-5-5z"/><circle cx="12" cy="7" r="1.5" fill="currentColor" stroke="none"/></svg>
+      </div>
+      <div class="service-name">Drain Cleaning</div>
+      <p class="service-desc">A slow or blocked drain often signals a bigger problem underneath. We clear clogs fast using professional-grade equipment and inspect for root intrusion or buildup that will cause repeat issues.</p>
+      <a href="tel:6026638432" class="service-link">Get a Quote <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="service-card anim-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3-3a1 1 0 000-1.4l-1.6-1.6a1 1 0 00-1.4 0l-3 3z"/><path d="M20.26 6.26L17.74 3.74M6 20.27l-2.27 2.27M12.5 13.5L7.03 19l-4 .97 1-4 5.47-5.47"/></svg>
+      </div>
+      <div class="service-name">Water Heater Install / Repair</div>
+      <p class="service-desc">Cold water on a Phoenix morning stops your day cold. We diagnose and repair all tank and tankless brands, giving you an honest recommendation on whether repair or a new installation saves you more money.</p>
+      <a href="tel:6026638432" class="service-link">Get a Quote <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="service-card anim-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </div>
+      <div class="service-name">Pipe Repair &amp; Repiping</div>
+      <p class="service-desc">Cracked or corroded pipes can cause thousands in water damage if ignored. Our technicians locate and repair problem pipes quickly and, when needed, perform full repipes with minimal disruption to your home.</p>
+      <a href="tel:6026638432" class="service-link">Get a Quote <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="service-card anim-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="service-name">Leak Detection</div>
+      <p class="service-desc">A spike in your water bill often means a hidden leak behind walls or under your slab. We use advanced non-invasive detection to pinpoint the source before any demolition — saving you money and unnecessary damage.</p>
+      <a href="tel:6026638432" class="service-link">Get a Quote <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="service-card anim-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="service-name">Sewer Line Service</div>
+      <p class="service-desc">Gurgling toilets and sewer odors are warnings you cannot ignore. We perform full camera inspections, hydro-jetting cleanouts, and trenchless repairs that restore your sewer line without tearing up your yard.</p>
+      <a href="tel:6026638432" class="service-link">Get a Quote <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="service-card anim-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.21 2 2 0 012 .01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+      </div>
+      <div class="service-name">Emergency Plumbing</div>
+      <p class="service-desc">Plumbing emergencies don't respect business hours — and in Phoenix's extreme heat, a burst pipe causes damage fast. Cobra operates around the clock with licensed technicians dispatched the moment you call.</p>
+      <a href="tel:6026638432" class="service-link">Call Now — 24/7 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 
-<section class="reviews-section">
-  <div class="section-inner">
-    <div class="section-label">Customer Reviews</div>
-    <h2 class="section-title">What Phoenix Customers Say</h2>
-    <div class="grid-3"><div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Used them twice now — showed up on time, did great work, fair price. Highly recommend."</p>
-  <div class="review-author"><div class="review-avatar">MT</div><div><div class="review-name">Michael T.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Called on a Tuesday, they came out Wednesday. Super professional and left everything clean."</p>
-  <div class="review-author"><div class="review-avatar">JR</div><div><div class="review-name">Jessica R.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Best experience I&#x27;ve had with a local company. Will definitely use again."</p>
-  <div class="review-author"><div class="review-avatar">DM</div><div><div class="review-name">David M.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Very thorough and professional. They explained everything and didn&#x27;t try to upsell me."</p>
-  <div class="review-author"><div class="review-avatar">SK</div><div><div class="review-name">Sarah K.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Did exactly what they said they would do. Honest pricing, solid work."</p>
-  <div class="review-author"><div class="review-avatar">CV</div><div><div class="review-name">Carlos V.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Five stars, no question. Quick response, friendly crew, outstanding results."</p>
-  <div class="review-author"><div class="review-avatar">AL</div><div><div class="review-name">Amy L.</div><div class="review-date">Google Review</div></div></div>
-</div>
-</div>
-  </div>
-</section>
-
-<section class="rating-section">
-  <div class="section-inner" style="text-align:center">
-    <div class="section-label">Our Rating</div>
-    <h2 class="section-title" style="margin-bottom:1.5rem">Cobra Plumbing LLC on Google</h2>
-    <div class="rating-badge" style="max-width:360px;margin:0 auto">
-      <div class="rating-score">4.8</div>
-      <div class="rating-right">
-        <div class="rating-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <div style="font-size:.9rem;font-weight:600;margin-top:.2rem">out of 5 stars</div>
-        <div class="rating-label">Based on 122 Google reviews</div>
+<!-- ===== SECTION 4: WHY CHOOSE US ===== -->
+<section class="why grain-overlay">
+  <div class="why-inner">
+    <div class="why-header">
+      <div class="why-section-tag">Why Cobra</div>
+      <h2 class="why-title">Why Phoenix Chooses Cobra Plumbing</h2>
+      <p class="why-sub">Over 15 years of dependable service, transparent pricing, and Arizona-licensed craftsmanship that Phoenix homeowners trust with their most important investment.</p>
+    </div>
+    <div class="why-stats">
+      <div class="why-stat-card">
+        <span class="why-stat-num">4.8</span>
+        <div class="why-stat-label">Average Google Rating</div>
+      </div>
+      <div class="why-stat-card">
+        <span class="why-stat-num">122+</span>
+        <div class="why-stat-label">5-Star Customer Reviews</div>
+      </div>
+      <div class="why-stat-card">
+        <span class="why-stat-num">15+</span>
+        <div class="why-stat-label">Years Serving Phoenix</div>
+      </div>
+      <div class="why-stat-card">
+        <span class="why-stat-num">24/7</span>
+        <div class="why-stat-label">Emergency Availability</div>
+      </div>
+    </div>
+    <div class="why-diffs">
+      <div class="why-diff anim-card">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Arizona Licensed &amp; Fully Insured</div>
+          <p class="why-diff-desc">Cobra Plumbing holds a current Arizona plumber's license. Every technician is background-checked, insured, and trained to state code — your home and family are fully protected on every visit.</p>
+        </div>
+      </div>
+      <div class="why-diff anim-card">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Upfront Pricing — No Surprises</div>
+          <p class="why-diff-desc">We give you a clear quote before any work begins. No hidden fees, no upsells you didn't ask for, and no pressure — just transparent pricing you can make a confident decision about.</p>
+        </div>
+      </div>
+      <div class="why-diff anim-card">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Same-Day &amp; 24/7 Response</div>
+          <p class="why-diff-desc">We prioritize same-day scheduling for urgent situations and offer true around-the-clock emergency dispatch. When a pipe bursts at 2am in a Phoenix summer, we answer and get a tech on the road immediately.</p>
+        </div>
+      </div>
+      <div class="why-diff anim-card">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 00-3-3l-4 9v11h11.28a2 2 0 002-1.7l1.38-9a2 2 0 00-2-2.3H14z"/><path d="M7 22H4a2 2 0 01-2-2v-7a2 2 0 012-2h3"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Workmanship Guaranteed</div>
+          <p class="why-diff-desc">We stand behind every repair and installation with a satisfaction guarantee. If something isn't right, we come back and make it right — no questions asked. That commitment is why Phoenix homeowners call Cobra first.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="area-section">
-  <div class="section-inner">
-    <div class="area-grid">
-      <div>
-        <div class="section-label">Where We Work</div>
-        <h2 class="section-title">Serving Phoenix &amp; Surrounding Areas</h2>
-        <p style="color:var(--gray);margin-bottom:1.5rem">We serve Phoenix and the surrounding communities. Not sure if we cover your area? Call us — we'll let you know.</p>
-        <a href="tel:6026638432" class="btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (602) 663-8432</a>
+<!-- ===== SECTION 5: HOW IT WORKS ===== -->
+<section class="how">
+  <div class="how-inner">
+    <div class="how-header">
+      <div class="why-section-tag" style="background:rgba(249,115,22,.2);color:#fdba74;">How It Works</div>
+      <h2 class="how-title">Getting Help Is Simple</h2>
+      <p class="how-sub">Three easy steps stand between you and a solved plumbing problem — no runaround, no waiting on hold.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="step-circle">1</div>
+        <div class="step-title">Call or Schedule Online</div>
+        <p class="step-desc">Reach us at (602) 663-8432 or fill out the contact form below. Tell us what's happening and we'll dispatch the right technician to your address promptly.</p>
       </div>
-      <div class="area-list">
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Phoenix, AZ</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Surrounding suburbs</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 30-mile service radius</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon–Sat, 7 AM – 6 PM</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Free estimates available</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; insured in AZ</div>
+      <div class="how-step">
+        <div class="step-circle">2</div>
+        <div class="step-title">Technician Arrives — Gives Upfront Quote</div>
+        <p class="step-desc">Your technician arrives on time, diagnoses the issue, and presents a clear flat-rate quote before touching anything. You approve the price — zero pressure, zero guesswork.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-circle">3</div>
+        <div class="step-title">Work Done Right, Guaranteed</div>
+        <p class="step-desc">Our licensed plumbers complete the job cleanly and efficiently. We walk you through what was done, answer your questions, and back the work with a satisfaction guarantee before we head out.</p>
       </div>
     </div>
   </div>
 </section>
 
-<div class="cta-band">
-  <div class="section-inner">
-    <h2>Ready to Get Started?</h2>
-    <p>Call now for a free estimate. We typically respond within the hour.</p>
-    <a href="tel:6026638432" class="btn-primary" style="font-size:1.1rem;padding:1rem 2.5rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (602) 663-8432</a>
+<!-- ===== SECTION 6: REVIEWS ===== -->
+<section class="reviews">
+  <div class="reviews-inner">
+    <div class="section-header">
+      <div class="section-tag">Customer Reviews</div>
+      <h2 class="section-title">What Phoenix Homeowners Are Saying</h2>
+      <p class="section-sub">4.8 stars across 122 verified Google reviews. Real customers, real experiences with Cobra Plumbing.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card anim-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+        </div>
+        <p class="review-text">A pipe burst in our kitchen on a Sunday afternoon right in the middle of a Phoenix heat wave. Cobra answered immediately and had a technician at our door in about 45 minutes. He assessed everything, gave an honest quote on the spot, and finished the repair within two hours. I expected a massive Sunday emergency surcharge and it never appeared — the price matched exactly what he quoted. Straightforward, fast, and genuinely professional from the first call to the moment he left.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">D</div>
+          <div>
+            <div class="reviewer-name">Dana R.</div>
+            <div class="reviewer-meta">Phoenix, AZ</div>
+            <div class="google-badge">
+              <svg width="12" height="12"><use href="#google-g"/></svg>
+              Verified Google Review
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card anim-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+        </div>
+        <p class="review-text">My water heater was a 20-year-old tank unit that had been limping along with rusty water and a troubling rumbling sound. Cobra came out the same afternoon, confirmed it was beyond saving, and walked me through every replacement option with actual prices attached. Zero pressure to choose the most expensive model. They installed a new unit that same day, hauled away the old one, and the final price matched the quote exactly. I appreciated how transparent the whole experience was from start to finish.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">M</div>
+          <div>
+            <div class="reviewer-name">Marcus T.</div>
+            <div class="reviewer-meta">Scottsdale, AZ</div>
+            <div class="google-badge">
+              <svg width="12" height="12"><use href="#google-g"/></svg>
+              Verified Google Review
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card anim-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+          <svg width="16" height="16"><use href="#ico-star"/></svg>
+        </div>
+        <p class="review-text">My water bill jumped nearly $80 in a single month with no obvious explanation. Cobra ran a full leak detection sweep and found a slab leak under my living room floor — left untreated, it would have caused serious structural damage over time. The technician explained exactly what was happening, showed me the readings, and quoted a fair price to resolve it. The repair was done that same afternoon without tearing out walls or flooring unnecessarily. Catching it early saved me from a far more costly and devastating situation.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">L</div>
+          <div>
+            <div class="reviewer-name">Linda P.</div>
+            <div class="reviewer-meta">Paradise Valley, AZ</div>
+            <div class="google-badge">
+              <svg width="12" height="12"><use href="#google-g"/></svg>
+              Verified Google Review
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
+<!-- ===== SECTION 7: SERVICE AREAS ===== -->
+<section class="areas">
+  <div class="areas-inner">
+    <div class="areas-left">
+      <div class="why-section-tag">Coverage Area</div>
+      <h2 class="areas-title">Serving All of Greater Phoenix</h2>
+      <p class="areas-sub">Cobra Plumbing covers a wide radius across the Phoenix metro. Whether you're in the heart of the city or an established suburb, we can be at your door fast with a fully stocked service vehicle.</p>
+      <div class="areas-cta">
+        <a href="tel:6026638432" class="btn btn-primary">
+          <svg width="16" height="16"><use href="#ico-phone"/></svg>
+          Call (602) 663-8432
+        </a>
+        <a href="#contact" class="btn btn-ghost">Book Online</a>
+      </div>
+    </div>
+    <div class="areas-right">
+      <div class="chips">
+        <div class="chip">Scottsdale</div>
+        <div class="chip">Tempe</div>
+        <div class="chip">Mesa</div>
+        <div class="chip">Chandler</div>
+        <div class="chip">Glendale</div>
+        <div class="chip">Peoria</div>
+        <div class="chip">Gilbert</div>
+        <div class="chip">Ahwatukee</div>
+        <div class="chip">Arcadia</div>
+        <div class="chip">Camelback East</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 8: CONTACT FORM ===== -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-form-wrap">
+      <div class="section-tag" style="margin-bottom:12px;">Request Service</div>
+      <h2 class="form-title">Get Your Free Quote</h2>
+      <p class="form-sub">Fill out the form and a Cobra Plumbing team member will reach out within 30 minutes during business hours. For emergencies, call (602) 663-8432 directly.</p>
+      <form onsubmit="return false;">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="John" autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Smith" autocomplete="family-name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(602) 555-0100" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@email.com" autocomplete="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Select a service...</option>
+            <option value="drain">Drain Cleaning</option>
+            <option value="water-heater">Water Heater Install / Repair</option>
+            <option value="pipe">Pipe Repair &amp; Repiping</option>
+            <option value="leak">Leak Detection</option>
+            <option value="sewer">Sewer Line Service</option>
+            <option value="emergency">Emergency Plumbing</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Describe the Problem</label>
+          <textarea id="message" name="message" placeholder="Tell us what's happening — more detail helps us send the right technician..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send My Request — Get a Quote Fast</button>
+      </form>
+    </div>
+    <div class="contact-info-card">
+      <div class="info-card-title">Business Hours</div>
+      <div class="hours-list">
+        <div class="hours-item">
+          <span class="hours-day">Monday – Saturday</span>
+          <span class="hours-time">7:00am – 8:00pm</span>
+        </div>
+        <div class="hours-item">
+          <span class="hours-day">Sunday</span>
+          <span class="hours-time">Emergency Only</span>
+        </div>
+        <div class="hours-item">
+          <span class="hours-day">Emergency Line</span>
+          <span class="hours-emerg">24/7 Always Available</span>
+        </div>
+      </div>
+      <div class="why-book-title">Why Book with Cobra</div>
+      <ul class="why-book-list">
+        <li>Instant online confirmation after you submit</li>
+        <li>Upfront estimate before any work begins</li>
+        <li>No overtime charge on evenings or weekends</li>
+        <li>Arizona-licensed plumber on every job</li>
+        <li>Background-checked, uniformed technicians</li>
+        <li>100% satisfaction guarantee on all work</li>
+      </ul>
+      <a href="tel:6026638432" style="display:flex;align-items:center;gap:10px;margin-top:28px;background:var(--accent);color:#fff;padding:14px 20px;border-radius:8px;text-decoration:none;font-family:var(--font-display);font-size:20px;letter-spacing:0.04em;justify-content:center;transition:background .2s;">
+        <svg width="18" height="18"><use href="#ico-phone"/></svg>
+        (602) 663-8432
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 9: CTA BAND ===== -->
+<section class="cta-band grain-overlay">
+  <div style="position:relative;z-index:1;">
+    <h2 class="cta-band-title">Phoenix's Most Trusted Plumber — Call Now</h2>
+    <p class="cta-band-sub">Cobra Plumbing LLC is standing by — Arizona-licensed, fully insured, and ready to solve your plumbing problem anywhere in the greater Phoenix area.</p>
+    <div class="cta-band-btns">
+      <a href="tel:6026638432" class="btn btn-white">
+        <svg width="16" height="16"><use href="#ico-phone"/></svg>
+        Call (602) 663-8432
+      </a>
+      <a href="#contact" class="btn btn-outline-white">Book Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 10: FOOTER ===== -->
 <footer>
   <div class="footer-grid">
     <div>
-      <div class="footer-head">Contact</div>
-      <ul class="footer-list footer-contact">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:6026638432">(602) 663-8432</a></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Phoenix, AZ</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon–Sat, 7 AM – 6 PM</li>
+      <div class="footer-brand-name">Cobra Plumbing LLC</div>
+      <div class="footer-brand-tagline">Phoenix's Most Reliable Plumber</div>
+      <p class="footer-desc">Cobra Plumbing LLC has served Phoenix homeowners for over 15 years. Arizona-licensed, fully insured, and committed to honest pricing and quality workmanship across the greater Phoenix metro.</p>
+      <div style="font-family:var(--font-body);font-size:14px;color:var(--t2);">
+        <a href="tel:6026638432" class="footer-phone-link">(602) 663-8432</a>
+      </div>
+      <div class="footer-license">AZ ROC License #XXXXXX | Fully Insured | Licensed Plumber</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Drain Cleaning</a></li>
+        <li><a href="#services">Water Heater Install / Repair</a></li>
+        <li><a href="#services">Pipe Repair &amp; Repiping</a></li>
+        <li><a href="#services">Leak Detection</a></li>
+        <li><a href="#services">Sewer Line Service</a></li>
+        <li><a href="#services">Emergency Plumbing</a></li>
       </ul>
     </div>
     <div>
-      <div class="footer-head">Services</div>
-      <ul class="footer-list">
-        <li>Drain Cleaning</li><li>Leak Repair</li><li>Water Heater</li><li>Toilet &amp; Faucet</li>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="#">Phoenix, AZ</a></li>
+        <li><a href="#">Scottsdale, AZ</a></li>
+        <li><a href="#">Tempe, AZ</a></li>
+        <li><a href="#">Mesa, AZ</a></li>
+        <li><a href="#">Chandler, AZ</a></li>
+        <li><a href="#">Glendale, AZ</a></li>
+        <li><a href="#">Peoria, AZ</a></li>
+        <li><a href="#">Gilbert, AZ</a></li>
+        <li><a href="#">Ahwatukee, AZ</a></li>
+        <li><a href="#">Paradise Valley, AZ</a></li>
       </ul>
     </div>
     <div>
-      <div class="footer-head">Trust</div>
-      <ul class="footer-list">
-        <li>Licensed &amp; Insured</li>
-        <li>4.8★ Google Rating</li>
-        <li>122+ Reviews</li>
-        <li>Serving Phoenix Since Day One</li>
-      </ul>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16"><use href="#ico-phone"/></svg>
+        <span><a href="tel:6026638432" class="footer-phone-link">(602) 663-8432</a><br>24/7 Emergency Line</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Phoenix, AZ<br>Greater Metro Area</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Mon–Sat: 7am–8pm<br>Emergency: 24/7</span>
+      </div>
+      <div class="footer-license" style="margin-top:16px;">AZ ROC License #XXXXXX<br>Licensed in the State of Arizona</div>
     </div>
   </div>
-  <div class="footer-bottom">&copy; 2026 Cobra Plumbing LLC. All rights reserved. · Phoenix, AZ</div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 Cobra Plumbing LLC. All rights reserved.</div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
 </footer>
 
+<script>
+function animateCount(el){const t=parseInt(el.dataset.target),s=el.dataset.suffix||'',d=1800,t0=performance.now();const u=n=>{const p=Math.min((n-t0)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.floor(e*t).toLocaleString()+s;if(p<1)requestAnimationFrame(u)};requestAnimationFrame(u)}
+const sO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);sO.unobserve(e.target)}})},{threshold:.5});
+document.querySelectorAll('.stat-number').forEach(el=>sO.observe(el));
+const cO=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1});
+document.querySelectorAll('.anim-card').forEach(el=>cO.observe(el));
+</script>
 </body>
 </html>

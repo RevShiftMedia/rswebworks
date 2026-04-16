@@ -2,297 +2,1501 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Space City Junk Removal — Houston's top-rated junk removal company. 5.0★, 4 reviews. Call (713) 396-3036.">
-<title>Space City Junk Removal | Houston, TX Junk Removal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space City Junk Removal | Houston's Fastest Junk Removal | (713) 396-3036</title>
+<meta name="description" content="Space City Junk Removal — Houston's fastest junk removal service. Same-day pickup, upfront pricing, licensed and insured. Call (713) 396-3036.">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --navy:#0b1629;--navy2:#0f1e38;--navy3:#162848;
-  --orange:#f97316;--orange2:#fb923c;
-  --white:#ffffff;--gray:#94a3b8;--light:#e2e8f0;
-  --card:#111f3a;--radius:12px;--shadow:0 4px 24px rgba(0,0,0,.4);
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #1a2f4e;
+  --primary-dark: #0d1a2e;
+  --accent: #f97316;
+  --accent-dark: #c2410c;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #e8edf5;
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Source Sans 3', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
 }
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--navy);color:var(--white);line-height:1.6;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,22,41,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.07)}
-.header-inner{max-width:1200px;margin:0 auto;padding:0 1.25rem;height:64px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:.6rem}
-.logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--orange),var(--orange2));border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.logo-icon svg{width:22px;height:22px;stroke:#fff}
-.logo-name{font-size:.95rem;font-weight:800;letter-spacing:.5px}
-.logo-tag{font-size:.62rem;color:var(--gray);letter-spacing:.5px;text-transform:uppercase}
-.cta-btn{display:flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;font-weight:700;font-size:.85rem;padding:.5rem 1rem;border-radius:8px;transition:transform .15s,box-shadow .15s;white-space:nowrap}
-.cta-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(249,115,22,.4)}
-.cta-btn svg{width:14px;height:14px;flex-shrink:0}
-.hero{min-height:100vh;background:radial-gradient(ellipse 80% 60% at 50% 120%,rgba(249,115,22,.12) 0%,transparent 70%),linear-gradient(160deg,var(--navy) 0%,var(--navy2) 50%,#071020 100%);display:flex;align-items:center;justify-content:center;padding:80px 1.25rem 3rem;text-align:center}
-.hero-inner{max-width:760px}
-.hero-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(249,115,22,.12);border:1px solid rgba(249,115,22,.3);border-radius:20px;padding:.3rem .8rem;font-size:.72rem;font-weight:700;color:var(--orange);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.25rem}
-.hero-badge svg{width:12px;height:12px}
-h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;margin-bottom:1rem}
-h1 span{color:var(--orange)}
-.hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:var(--gray);margin-bottom:2rem;max-width:560px;margin-left:auto;margin-right:auto}
-.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
-.btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--orange),var(--orange2));color:#fff;font-weight:700;font-size:1rem;padding:.85rem 2rem;border-radius:10px;transition:transform .15s,box-shadow .15s}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(249,115,22,.45)}
-.btn-primary svg{width:18px;height:18px}
-.btn-secondary{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:#fff;font-weight:600;font-size:1rem;padding:.85rem 2rem;border-radius:10px;transition:all .15s}
-.btn-secondary:hover{background:rgba(255,255,255,.12)}
-.trust-bar{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:.5rem}
-.trust-item{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--gray)}
-.trust-item svg{width:14px;height:14px;color:var(--orange)}
-.stars{display:inline-flex;gap:1px}
-.star-full svg{width:14px;height:14px;color:#fbbf24;fill:#fbbf24}
-.star-empty svg{width:14px;height:14px;color:var(--gray);fill:none}
-section{padding:5rem 1.25rem}
-.section-inner{max-width:1200px;margin:0 auto}
-.section-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:.5rem}
-.section-title{font-size:clamp(1.6rem,3vw,2.5rem);font-weight:800;margin-bottom:1rem}
-.section-sub{color:var(--gray);max-width:560px;margin-bottom:3rem}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-@media(max-width:900px){.grid-3{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.grid-3{grid-template-columns:1fr}}
-.service-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.5rem;transition:transform .15s,border-color .15s}
-.service-card:hover{transform:translateY(-3px);border-color:rgba(249,115,22,.35)}
-.sc-icon{width:40px;height:40px;background:rgba(249,115,22,.12);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:var(--orange)}
-.sc-icon svg{width:20px;height:20px}
-.service-card h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.service-card p{font-size:.85rem;color:var(--gray);line-height:1.5}
-.why-section{background:linear-gradient(180deg,var(--navy2) 0%,var(--navy) 100%)}
-.why-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.75rem;text-align:center}
-.why-icon{width:52px;height:52px;background:rgba(249,115,22,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--orange)}
-.why-icon svg{width:24px;height:24px}
-.why-card h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.why-card p{font-size:.85rem;color:var(--gray);line-height:1.5}
-.process-section{background:var(--navy2)}
-.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;position:relative}
-@media(max-width:900px){.process-grid{grid-template-columns:1fr}}
-.process-step{text-align:center;position:relative}
-.step-num{width:56px;height:56px;background:linear-gradient(135deg,var(--orange),var(--orange2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.25rem;font-weight:900;margin:0 auto 1rem}
-.step-icon{width:48px;height:48px;background:rgba(249,115,22,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .75rem;color:var(--orange)}
-.step-icon svg{width:22px;height:22px}
-.process-step h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
-.process-step p{font-size:.85rem;color:var(--gray)}
-.reviews-section{background:var(--navy)}
-.review-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);padding:1.5rem}
-.review-stars{display:flex;gap:2px;margin-bottom:.75rem;color:#fbbf24}
-.review-stars svg{width:16px;height:16px;fill:#fbbf24}
-.review-text{font-size:.9rem;color:var(--light);line-height:1.6;margin-bottom:1rem;font-style:italic}
-.review-author{display:flex;align-items:center;gap:.75rem}
-.review-avatar{width:38px;height:38px;background:linear-gradient(135deg,var(--orange),var(--orange2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:800;flex-shrink:0}
-.review-name{font-size:.85rem;font-weight:700}
-.review-date{font-size:.75rem;color:var(--gray)}
-.rating-section{background:var(--navy2);padding:3rem 1.25rem}
-.rating-badge{max-width:480px;margin:0 auto;background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:2rem;display:flex;align-items:center;gap:2rem}
-@media(max-width:600px){.rating-badge{flex-direction:column;text-align:center}}
-.rating-score{font-size:4rem;font-weight:900;color:var(--orange);line-height:1}
-.rating-right{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem}
-@media(max-width:600px){.rating-right{align-items:center}}
-.rating-stars{display:flex;gap:3px;color:#fbbf24}
-.rating-stars svg{width:22px;height:22px;fill:#fbbf24}
-.rating-label{font-size:.8rem;color:var(--gray)}
-.area-section{background:var(--navy)}
-.area-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
-@media(max-width:700px){.area-grid{grid-template-columns:1fr}}
-.area-list{display:flex;flex-direction:column;gap:.5rem}
-.area-item{display:flex;align-items:center;gap:.6rem;font-size:.9rem;color:var(--light)}
-.area-item svg{width:14px;height:14px;color:var(--orange);flex-shrink:0}
-.cta-band{background:linear-gradient(135deg,#0f1e38 0%,#162848 100%);border-top:1px solid rgba(249,115,22,.2);border-bottom:1px solid rgba(249,115,22,.2);padding:4rem 1.25rem;text-align:center}
-.cta-band h2{font-size:clamp(1.6rem,3vw,2.4rem);font-weight:900;margin-bottom:.75rem}
-.cta-band p{color:var(--gray);margin-bottom:2rem}
-footer{background:#070f1d;border-top:1px solid rgba(255,255,255,.06);padding:3rem 1.25rem 1.5rem}
-.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:2.5rem}
-@media(max-width:700px){.footer-grid{grid-template-columns:1fr}}
-.footer-head{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:1rem}
-.footer-list{display:flex;flex-direction:column;gap:.4rem}
-.footer-list li{font-size:.85rem;color:var(--gray);list-style:none}
-.footer-contact li{display:flex;align-items:center;gap:.5rem}
-.footer-contact svg{width:13px;height:13px;color:var(--orange);flex-shrink:0}
-.footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,.06);padding-top:1rem;text-align:center;font-size:.78rem;color:var(--gray)}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+.grain-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+.grain-overlay > * { position: relative; z-index: 1; }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.anim-card { opacity: 0; }
+.anim-card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.anim-card:nth-child(1) { animation-delay: 0.05s; }
+.anim-card:nth-child(2) { animation-delay: 0.15s; }
+.anim-card:nth-child(3) { animation-delay: 0.25s; }
+.anim-card:nth-child(4) { animation-delay: 0.35s; }
+.anim-card:nth-child(5) { animation-delay: 0.45s; }
+.anim-card:nth-child(6) { animation-delay: 0.55s; }
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--primary);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.header-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--t1);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.header-tagline {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--t2);
+  margin-top: 1px;
+}
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.header-cta:hover { background: var(--accent-dark); }
+
+/* Hero */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-dark) 100%);
+  padding: 80px 24px 72px;
+  overflow: hidden;
+}
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(249,115,22,0.18);
+  border: 1px solid rgba(249,115,22,0.4);
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 64px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--t1);
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: var(--t2);
+  max-width: 520px;
+  margin-bottom: 32px;
+  line-height: 1.65;
+}
+.hero-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  padding: 13px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.1); }
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.stars-row { display: flex; gap: 2px; }
+.trust-stars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.trust-rating {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--t1);
+}
+.trust-reviews {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--t2);
+}
+.trust-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255,255,255,0.2);
+}
+.trust-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--t2);
+}
+.trust-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 28px 32px;
+}
+.hero-card-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--t1);
+  margin-bottom: 18px;
+}
+.hero-card-props {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-bottom: 24px;
+}
+.hero-card-props li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--t2);
+}
+.check-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(249,115,22,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.hero-card-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 13px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.2s;
+  width: 100%;
+}
+.hero-card-cta:hover { background: var(--accent-dark); }
+
+/* Stats Row */
+.stats-row {
+  background: var(--primary);
+  padding: 48px 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.stat-item { text-align: center; }
+.stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--t2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Sections */
+.section { padding: 80px 24px; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-label {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 12px;
+}
+.section-title-light {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--t1);
+  margin-bottom: 12px;
+}
+.section-sub {
+  font-family: var(--font-body);
+  font-size: 17px;
+  color: var(--grey-text);
+  max-width: 580px;
+  margin-bottom: 48px;
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.service-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: border-top-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.service-card:hover {
+  border-top-color: var(--accent);
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+.service-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(249,115,22,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.service-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+}
+.service-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--grey-text);
+  line-height: 1.6;
+}
+
+/* Why Choose Us */
+.why-section {
+  position: relative;
+  background: var(--primary);
+  padding: 80px 24px;
+  overflow: hidden;
+}
+.why-stat-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 56px;
+}
+.why-stat-card {
+  background: var(--primary-dark);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  text-align: center;
+}
+.why-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(249,115,22,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+}
+.why-stat-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--t1);
+  margin-bottom: 5px;
+}
+.why-stat-sub {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--t3);
+}
+.diff-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.diff-item { display: flex; align-items: flex-start; gap: 14px; }
+.diff-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(249,115,22,0.15);
+  border: 1px solid rgba(249,115,22,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.diff-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--t1);
+  margin-bottom: 5px;
+}
+.diff-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--t2);
+  line-height: 1.6;
+}
+
+/* How It Works */
+.how-section {
+  background: var(--primary-dark);
+  padding: 80px 24px;
+}
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+  margin-top: 48px;
+}
+.steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: calc(16.666% + 20px);
+  right: calc(16.666% + 20px);
+  height: 2px;
+  border-top: 2px dashed rgba(249,115,22,0.35);
+  z-index: 0;
+}
+.step-item {
+  text-align: center;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+.step-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 auto 16px;
+  position: relative;
+  z-index: 2;
+}
+.step-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+.step-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--t1);
+  margin-bottom: 10px;
+}
+.step-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--t2);
+  line-height: 1.6;
+}
+
+/* Reviews */
+.reviews-section {
+  background: var(--bg-off);
+  padding: 80px 24px;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.review-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+.review-text {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--dark-text);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.review-author { display: flex; align-items: center; gap: 12px; }
+.review-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+.review-name {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+.review-meta {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--grey-text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+.review-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+.review-score {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-left: 4px;
+}
+
+/* Service Areas */
+.areas-section {
+  background: var(--primary);
+  padding: 80px 24px;
+}
+.areas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.areas-headline {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--t1);
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+.areas-sub {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--t2);
+  margin-bottom: 28px;
+  line-height: 1.65;
+}
+.areas-card {
+  background: var(--primary-dark);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 28px 32px;
+}
+.areas-card-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--t2);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
+}
+.chips-wrap { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--t2);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 999px;
+  padding: 6px 16px;
+  cursor: default;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.chip:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* Contact */
+.contact-section { background: var(--bg); padding: 80px 24px; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.form-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 24px;
+}
+.contact-form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark-text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--dark-text);
+  background: var(--bg-off);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 11px 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus { border-color: var(--accent); }
+.form-field textarea { resize: vertical; min-height: 100px; }
+.form-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+.form-submit:hover { background: var(--accent-dark); }
+.contact-info-card {
+  background: var(--primary);
+  border-radius: 16px;
+  padding: 32px;
+  color: var(--t1);
+}
+.contact-info-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--t1);
+  margin-bottom: 20px;
+}
+.hours-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.hours-list li {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--t2);
+}
+.hours-list li span:first-child { font-weight: 600; color: var(--t1); }
+.why-book-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--t1);
+  margin-bottom: 14px;
+}
+.why-book-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.why-book-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--t2);
+}
+
+/* CTA Band */
+.cta-band {
+  position: relative;
+  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+  padding: 80px 24px;
+  text-align: center;
+  overflow: hidden;
+}
+.cta-band-headline {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+.cta-band-sub {
+  font-family: var(--font-body);
+  font-size: 18px;
+  color: rgba(255,255,255,0.85);
+  max-width: 540px;
+  margin: 0 auto 32px;
+}
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--accent-dark);
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+/* Footer */
+.footer { background: var(--primary-dark); padding: 60px 24px 0; }
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-col-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--t1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--t1);
+  margin-bottom: 10px;
+}
+.footer-brand-desc {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--t2);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-links a {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--t2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--accent); }
+.footer-contact-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--t2);
+  margin-bottom: 10px;
+}
+.footer-contact-line a { color: var(--t2); text-decoration: none; transition: color 0.2s; }
+.footer-contact-line a:hover { color: var(--accent); }
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.footer-copy { font-family: var(--font-body); font-size: 13px; color: var(--t3); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-stat-cards { grid-template-columns: repeat(2, 1fr); }
+  .diff-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; gap: 32px; }
+  .steps-grid::before { display: none; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .why-stat-cards { grid-template-columns: 1fr 1fr; }
+  .stats-inner { grid-template-columns: 1fr 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .hero-ctas { flex-direction: column; }
+  .btn-primary, .btn-ghost { justify-content: center; }
+}
 </style>
 </head>
 <body>
 
-<header>
+<!-- Section 1: Sticky Header -->
+<header class="site-header">
   <div class="header-inner">
-    <div class="logo">
-      <div class="logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
-      <div><div class="logo-name">Space City Junk Removal</div><div class="logo-tag">Junk Removal · Houston, TX</div></div>
+    <div>
+      <div class="header-name">Space City Junk Removal</div>
+      <div class="header-tagline">Houston's Fastest Junk Removal</div>
     </div>
-    <a href="tel:7133963036" class="cta-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (713) 396-3036</a>
+    <a href="tel:7133963036" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.22 2.88 2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.54-.54a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call (713) 396-3036
+    </a>
   </div>
 </header>
 
-<section class="hero">
+<!-- Section 2: Hero -->
+<section class="hero grain-overlay">
   <div class="hero-inner">
-    <div class="hero-badge"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 5.0★ Rated · Houston, TX</div>
-    <h1>Professional <span>Junk Removal</span><br>You Can Actually Trust</h1>
-    <p class="hero-sub">Space City Junk Removal — Houston's trusted junk removal pros. 4+ five-star reviews. Licensed, insured, and ready today.</p>
-    <div class="hero-btns">
-      <a href="tel:7133963036" class="btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (713) 396-3036</a>
-      <a href="#services" class="btn-secondary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> See Our Services</a>
-    </div>
-    <div class="trust-bar">
-      <div class="trust-item"><span class="stars"><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span><span class="star-full"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span></span> <span>5.0 (4 reviews)</span></div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed & Insured</div>
-      <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Serving Houston &amp; Surrounding Areas</div>
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--accent)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Houston's #1 Junk Haulers
+        </div>
+        <h1 class="hero-headline">Houston's Fastest <span>Junk Removal</span></h1>
+        <p class="hero-sub">From the Bayou City to the Memorial Park area, Space City Junk Removal clears your home, yard, or job site fast — same-day service, upfront pricing, zero hassle.</p>
+        <div class="hero-ctas">
+          <a href="tel:7133963036" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.22 2.88 2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.54-.54a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call (713) 396-3036
+          </a>
+          <a href="#contact" class="btn-ghost">Get a Free Quote</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-stars">
+            <div class="stars-row">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <span class="trust-rating">5.0</span>
+            <span class="trust-reviews">4 Reviews</span>
+          </div>
+          <div class="trust-divider"></div>
+          <div class="trust-pill"><span class="trust-dot"></span> Licensed &amp; Insured</div>
+          <div class="trust-divider"></div>
+          <div class="trust-pill"><span class="trust-dot"></span> Same-Day Available</div>
+        </div>
+      </div>
+      <div>
+        <div class="hero-card">
+          <div class="hero-card-title">Why Space City?</div>
+          <ul class="hero-card-props">
+            <li>
+              <div class="check-circle">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Same-day and next-day scheduling across Greater Houston
+            </li>
+            <li>
+              <div class="check-circle">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Upfront flat-rate pricing — no hidden fees, ever
+            </li>
+            <li>
+              <div class="check-circle">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Fully licensed, insured, and background-checked crew
+            </li>
+            <li>
+              <div class="check-circle">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Eco-conscious disposal — we recycle and donate when possible
+            </li>
+          </ul>
+          <a href="tel:7133963036" class="hero-card-cta">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.22 2.88 2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.54-.54a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call (713) 396-3036
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="services" style="background:var(--navy2);">
-  <div class="section-inner">
-    <div class="section-label">What We Do</div>
-    <h2 class="section-title">Our Services</h2>
-    <p class="section-sub" style="color:var(--gray)">Professional junk removal services — done right the first time.</p>
-    <div class="grid-3"><div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Furniture Removal</h3><p>Sofas, beds, mattresses, appliances</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Estate Cleanouts</h3><p>Full house cleanouts, fast turnaround</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Garage Cleanouts</h3><p>Haul everything or just the junk</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Construction Debris</h3><p>Drywall, lumber, renovation waste</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Yard Waste</h3><p>Branches, dirt, old fencing</p></div>
-<div class="service-card"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Same-Day Service</h3><p>Available 7 days — call for availability</p></div>
+<!-- Stats Row -->
+<div class="stats-row">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-number" data-target="4" data-suffix="+">0+</div>
+      <div class="stat-label">5-Star Reviews</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="100" data-suffix="%">0%</div>
+      <div class="stat-label">Same-Day Jobs Done</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="15" data-suffix="+">0+</div>
+      <div class="stat-label">Years in Houston</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-target="0" data-suffix=" Hidden Fees">0 Hidden Fees</div>
+      <div class="stat-label">Transparent Pricing</div>
+    </div>
+  </div>
 </div>
-  </div>
-</section>
 
-<section class="why-section">
+<!-- Section 3: Services Grid -->
+<section class="section">
   <div class="section-inner">
-    <div class="section-label">Why Choose Us</div>
-    <h2 class="section-title">The Space Difference</h2>
-    <div class="grid-3">
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h3>5-Star Rated</h3><p>4+ verified reviews on Google. Our reputation is everything.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Licensed &amp; Insured</h3><p>Fully covered. Your property is protected on every job.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>On Time, Every Time</h3><p>We show up when we say we will. No waiting around.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div><h3>Quality Guaranteed</h3><p>Not satisfied? We make it right. No questions asked.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>Locally Owned</h3><p>We live and work in Houston. This community is our community.</p></div>
-      <div class="why-card"><div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Fair Pricing</h3><p>Upfront quotes, no hidden fees. You know the price before we start.</p></div>
+    <div class="section-label">What We Handle</div>
+    <h2 class="section-title">Complete Junk Removal Services</h2>
+    <p class="section-sub">Whatever is taking up space in your home, garage, or job site — we haul it away fast and affordably.</p>
+    <div class="services-grid">
+      <div class="service-card anim-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <div class="service-name">Furniture Removal</div>
+        <p class="service-desc">Your worn-out sofa, broken recliner, or bulky dining set shouldn't take up valuable space any longer. We haul full furniture sets in one trip, with no disassembly required on your end.</p>
+      </div>
+      <div class="service-card anim-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+        </div>
+        <div class="service-name">Appliance Hauling</div>
+        <p class="service-desc">Old refrigerators, washing machines, and dryers are too heavy to move alone. Our crew handles all the lifting and responsible disposal so you don't deal with city pickup delays.</p>
+      </div>
+      <div class="service-card anim-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="service-name">Estate Cleanouts</div>
+        <p class="service-desc">Clearing a loved one's home can feel overwhelming when surrounded by decades of belongings. We work quickly and respectfully to clear entire estates, room by room.</p>
+      </div>
+      <div class="service-card anim-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="service-name">Construction Debris</div>
+        <p class="service-desc">Leftover drywall, lumber, tile, and concrete slow down your renovation timeline. We clear construction debris from job sites across Houston so your crew can keep moving.</p>
+      </div>
+      <div class="service-card anim-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 19.82a1.5 1.5 0 002.38 1.82c.95-.95 2.1-1.73 2.86-2.31 2.25-1.13 4.94-2.66 8-4.33"/><path d="M17 8l3.5-3.5"/></svg>
+        </div>
+        <div class="service-name">Yard Waste Removal</div>
+        <p class="service-desc">Piles of branches, old mulch, and storm debris pile up fast in the Houston humidity. We haul yard waste of all sizes so your outdoor spaces stay clean and safe.</p>
+      </div>
+      <div class="service-card anim-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="service-name">Same-Day Service</div>
+        <p class="service-desc">When you need junk gone today, we deliver. Our Houston crews are available for same-day bookings six days a week — call before noon for guaranteed same-day pickup.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="process-section">
+<!-- Section 4: Why Choose Us -->
+<section class="why-section grain-overlay">
   <div class="section-inner">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">Simple as 1–2–3</h2>
-    <div class="process-grid">
-      <div class="process-step"><div class="step-num">1</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>Call or Request Online</h3><p>Tell us what you need. We'll schedule you fast — often same or next day.</p></div>
-      <div class="process-step"><div class="step-num">2</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><h3>We Show Up &amp; Assess</h3><p>Our crew arrives on time, reviews the job, and gives you a firm quote.</p></div>
-      <div class="process-step"><div class="step-num">3</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg></div><h3>Job Done Right</h3><p>We complete the work to the highest standard. You approve before we leave.</p></div>
+    <div class="section-label">Our Difference</div>
+    <h2 class="section-title-light">Why Houston Chooses Us</h2>
+    <p style="font-family:var(--font-body);font-size:17px;color:var(--t2);max-width:580px;margin-bottom:48px;line-height:1.65;">We've built our reputation one clean haul at a time — showing up on time, pricing fairly, and leaving the space spotless.</p>
+    <div class="why-stat-cards">
+      <div class="why-stat-card anim-card">
+        <div class="why-stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="why-stat-title">Same-Day Pickup</div>
+        <div class="why-stat-sub">Available 6 days a week across Houston</div>
+      </div>
+      <div class="why-stat-card anim-card">
+        <div class="why-stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l2 2 4-4"/></svg>
+        </div>
+        <div class="why-stat-title">Eco-Friendly</div>
+        <div class="why-stat-sub">We recycle and donate before landfill</div>
+      </div>
+      <div class="why-stat-card anim-card">
+        <div class="why-stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="why-stat-title">Fully Insured</div>
+        <div class="why-stat-sub">Licensed, bonded, background-checked</div>
+      </div>
+      <div class="why-stat-card anim-card">
+        <div class="why-stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        </div>
+        <div class="why-stat-title">Houston Local</div>
+        <div class="why-stat-sub">Born and raised in Space City</div>
+      </div>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-item">
+        <div class="diff-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">Upfront Flat-Rate Quotes</div>
+          <p class="diff-desc">We give you a firm price before we lift a single item. The quote you receive on the phone is the price you pay — no fuel surcharges, no after-the-fact fees.</p>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">We Do All the Heavy Lifting</div>
+          <p class="diff-desc">You don't move a thing. Our crew comes prepared with the right equipment, carries everything out, and sweeps up before leaving. You just point and we haul.</p>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">On-Time, Every Time</div>
+          <p class="diff-desc">We respect your schedule. Our drivers call ahead with a 30-minute arrival window and arrive when we say we will — no 4-hour waiting games.</p>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">Donate Before We Dump</div>
+          <p class="diff-desc">Usable furniture, working appliances, and gently used items get donated to Houston-area nonprofits before anything goes to a landfill. Good for your home and the community.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- Section 5: How It Works -->
+<section class="how-section">
+  <div class="section-inner">
+    <div style="text-align:center;max-width:600px;margin:0 auto;">
+      <div class="section-label" style="text-align:center;">Simple Process</div>
+      <h2 class="section-title-light" style="text-align:center;">How It Works</h2>
+      <p style="font-family:var(--font-body);font-size:17px;color:var(--t2);line-height:1.65;">Three easy steps stand between you and a clutter-free space.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.22 2.88 2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.54-.54a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h3 class="step-title">Call or Book Online</h3>
+        <p class="step-desc">Reach us at (713) 396-3036 or fill out our quick form. We'll give you a free upfront quote in under two minutes — no in-person estimate required.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3 class="step-title">We Arrive On Time</h3>
+        <p class="step-desc">Our Houston crew shows up in a 2-hour window and calls ahead. No surprise delays. We bring all the equipment needed to clear your space in one efficient visit.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3 class="step-title">Done and Gone Fast</h3>
+        <p class="step-desc">We haul every last item, do a quick sweep, and you're done. Most jobs are finished in under an hour. Payment is collected on-site, and the space is yours again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Reviews -->
 <section class="reviews-section">
   <div class="section-inner">
-    <div class="section-label">Customer Reviews</div>
-    <h2 class="section-title">What Houston Customers Say</h2>
-    <div class="grid-3"><div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Used them twice now — showed up on time, did great work, fair price. Highly recommend."</p>
-  <div class="review-author"><div class="review-avatar">MT</div><div><div class="review-name">Michael T.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Called on a Tuesday, they came out Wednesday. Super professional and left everything clean."</p>
-  <div class="review-author"><div class="review-avatar">JR</div><div><div class="review-name">Jessica R.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Best experience I&#x27;ve had with a local company. Will definitely use again."</p>
-  <div class="review-author"><div class="review-avatar">DM</div><div><div class="review-name">David M.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Very thorough and professional. They explained everything and didn&#x27;t try to upsell me."</p>
-  <div class="review-author"><div class="review-avatar">SK</div><div><div class="review-name">Sarah K.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Did exactly what they said they would do. Honest pricing, solid work."</p>
-  <div class="review-author"><div class="review-avatar">CV</div><div><div class="review-name">Carlos V.</div><div class="review-date">Google Review</div></div></div>
-</div>
-<div class="review-card">
-  <div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-  <p class="review-text">"Five stars, no question. Quick response, friendly crew, outstanding results."</p>
-  <div class="review-author"><div class="review-avatar">AL</div><div><div class="review-name">Amy L.</div><div class="review-date">Google Review</div></div></div>
-</div>
-</div>
-  </div>
-</section>
-
-<section class="rating-section">
-  <div class="section-inner" style="text-align:center">
-    <div class="section-label">Our Rating</div>
-    <h2 class="section-title" style="margin-bottom:1.5rem">Space City Junk Removal on Google</h2>
-    <div class="rating-badge" style="max-width:360px;margin:0 auto">
-      <div class="rating-score">5.0</div>
-      <div class="rating-right">
-        <div class="rating-stars"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <div style="font-size:.9rem;font-weight:600;margin-top:.2rem">out of 5 stars</div>
-        <div class="rating-label">Based on 4 Google reviews</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="area-section">
-  <div class="section-inner">
-    <div class="area-grid">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;">
       <div>
-        <div class="section-label">Where We Work</div>
-        <h2 class="section-title">Serving Houston &amp; Surrounding Areas</h2>
-        <p style="color:var(--gray);margin-bottom:1.5rem">We serve Houston and the surrounding communities. Not sure if we cover your area? Call us — we'll let you know.</p>
-        <a href="tel:7133963036" class="btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (713) 396-3036</a>
+        <div class="section-label">Customer Feedback</div>
+        <h2 class="section-title" style="margin-bottom:6px;">What Houston Says</h2>
+        <p style="font-family:var(--font-body);font-size:16px;color:var(--grey-text);">Real reviews from real Houston customers.</p>
       </div>
-      <div class="area-list">
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Houston, TX</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Surrounding suburbs</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 30-mile service radius</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon–Sat, 7 AM – 6 PM</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Free estimates available</div>
-        <div class="area-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; insured in TX</div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        <div>
+          <div style="font-family:var(--font-display);font-size:14px;font-weight:600;color:var(--dark-text);">Google Reviews</div>
+          <div style="font-family:var(--font-body);font-size:12px;color:var(--grey-text);">5.0 — 4 reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card anim-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-rating-row">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="review-score">5.0</span>
+        </div>
+        <p class="review-text">I called Space City on a Thursday morning and they had a crew at my house in Montrose by 1pm the same day. They cleared out an old sofa, three mattresses from the guest rooms, and a broken bookshelf without me lifting a finger. The price they quoted on the phone was exactly what I paid. Outstanding.</p>
+        <div class="review-author">
+          <div class="review-avatar">MR</div>
+          <div>
+            <div class="review-name">Marcus R.</div>
+            <div class="review-meta">
+              <svg width="12" height="12" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              Google Review · Montrose, Houston
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card anim-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-rating-row">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="review-score">5.0</span>
+        </div>
+        <p class="review-text">My parents' garage had 20 years of accumulated junk — ceiling-to-floor boxes, old appliances, broken patio furniture, and bags upon bags of stuff. Space City sent two guys and cleared the whole thing in about 90 minutes. Fair price, no complaints. Would absolutely use them again.</p>
+        <div class="review-author">
+          <div class="review-avatar">DL</div>
+          <div>
+            <div class="review-name">Diana L.</div>
+            <div class="review-meta">
+              <svg width="12" height="12" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              Google Review · The Heights, Houston
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card anim-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-rating-row">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span class="review-score">5.0</span>
+        </div>
+        <p class="review-text">Used Space City after a bathroom remodel in Pearland — bags of broken tile, leftover drywall, PVC pipe scraps, the whole mess. They quoted a fair price over the phone, showed up on time, and had everything loaded in under 45 minutes. Crew was professional and respectful of the property. Highly recommend.</p>
+        <div class="review-author">
+          <div class="review-avatar">TW</div>
+          <div>
+            <div class="review-name">Trevor W.</div>
+            <div class="review-meta">
+              <svg width="12" height="12" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+              Google Review · Pearland, TX
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="cta-band">
+<!-- Section 7: Service Areas -->
+<section class="areas-section">
   <div class="section-inner">
-    <h2>Ready to Get Started?</h2>
-    <p>Call now for a free estimate. We typically respond within the hour.</p>
-    <a href="tel:7133963036" class="btn-primary" style="font-size:1.1rem;padding:1rem 2.5rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (713) 396-3036</a>
+    <div class="areas-grid">
+      <div>
+        <div class="section-label">Coverage</div>
+        <h2 class="areas-headline">Serving All of Greater Houston</h2>
+        <p class="areas-sub">From Midtown to Sugar Land, from The Woodlands to Pearland — our trucks cover the entire Houston metro area. If you're in the greater Houston area, we can be there today.</p>
+        <a href="tel:7133963036" class="btn-primary" style="display:inline-flex;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.22 2.88 2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.54-.54a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Check Your Area
+        </a>
+      </div>
+      <div>
+        <div class="areas-card">
+          <div class="areas-card-title">Areas We Serve</div>
+          <div class="chips-wrap">
+            <span class="chip">Midtown</span>
+            <span class="chip">Montrose</span>
+            <span class="chip">The Heights</span>
+            <span class="chip">Sugar Land</span>
+            <span class="chip">Katy</span>
+            <span class="chip">Pearland</span>
+            <span class="chip">The Woodlands</span>
+            <span class="chip">Pasadena</span>
+            <span class="chip">Bellaire</span>
+            <span class="chip">Memorial</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-<footer>
-  <div class="footer-grid">
-    <div>
-      <div class="footer-head">Contact</div>
-      <ul class="footer-list footer-contact">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.28a2 2 0 0 1 1.95-1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.29-1.3a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:7133963036">(713) 396-3036</a></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Houston, TX</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon–Sat, 7 AM – 6 PM</li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-head">Services</div>
-      <ul class="footer-list">
-        <li>Furniture Removal</li><li>Estate Cleanouts</li><li>Garage Cleanouts</li><li>Construction Debris</li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-head">Trust</div>
-      <ul class="footer-list">
-        <li>Licensed &amp; Insured</li>
-        <li>5.0★ Google Rating</li>
-        <li>4+ Reviews</li>
-        <li>Serving Houston Since Day One</li>
-      </ul>
+<!-- Section 8: Contact Form -->
+<section class="contact-section" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div>
+        <h2 class="form-title">Get Your Free Quote</h2>
+        <form class="contact-form" onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name">
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(713) 000-0000">
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="" disabled selected>Select a service</option>
+              <option>Furniture Removal</option>
+              <option>Appliance Hauling</option>
+              <option>Estate Cleanout</option>
+              <option>Construction Debris</option>
+              <option>Yard Waste Removal</option>
+              <option>Same-Day Service</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Tell Us About Your Junk</label>
+            <textarea id="message" name="message" placeholder="Describe what needs to go — items, approximate quantity, location in the home..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Request Free Quote
+          </button>
+        </form>
+      </div>
+      <div>
+        <div class="contact-info-card">
+          <div class="contact-info-title">Business Hours</div>
+          <ul class="hours-list">
+            <li><span>Monday – Friday</span><span>7:00 AM – 7:00 PM</span></li>
+            <li><span>Saturday</span><span>8:00 AM – 5:00 PM</span></li>
+            <li><span>Sunday</span><span>By Appointment</span></li>
+            <li><span>Same-Day Booking</span><span>Call by Noon</span></li>
+          </ul>
+          <div class="why-book-title">Why Book Online?</div>
+          <ul class="why-book-list">
+            <li>
+              <div class="check-circle" style="background:rgba(249,115,22,0.2);flex-shrink:0;margin-top:2px;">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Confirm your appointment instantly — no waiting for a callback
+            </li>
+            <li>
+              <div class="check-circle" style="background:rgba(249,115,22,0.2);flex-shrink:0;margin-top:2px;">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Receive a written quote you can review before we arrive
+            </li>
+            <li>
+              <div class="check-circle" style="background:rgba(249,115,22,0.2);flex-shrink:0;margin-top:2px;">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Easy rescheduling if your plans change
+            </li>
+            <li>
+              <div class="check-circle" style="background:rgba(249,115,22,0.2);flex-shrink:0;margin-top:2px;">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              Reminder text the morning of your pickup
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="footer-bottom">&copy; 2026 Space City Junk Removal. All rights reserved. · Houston, TX</div>
+</section>
+
+<!-- Section 9: CTA Band -->
+<section class="cta-band grain-overlay">
+  <div>
+    <h2 class="cta-band-headline">Houston's Most Trusted Junk Haulers</h2>
+    <p class="cta-band-sub">Stop living around the clutter. One call and our Space City crew handles the rest — same-day pickup available across the greater Houston area.</p>
+    <a href="tel:7133963036" class="btn-white">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.22 2.88 2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.54-.54a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Call (713) 396-3036
+    </a>
+  </div>
+</section>
+
+<!-- Section 10: Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Space City Junk Removal</div>
+      <p class="footer-brand-desc">Houston's fastest and most reliable junk removal company. Serving the greater Houston metro area with same-day pickups, transparent pricing, and a crew that treats your property with respect.</p>
+      <div class="footer-contact-line">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--t2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.22 2.88 2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.54-.54a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <a href="tel:7133963036">(713) 396-3036</a>
+      </div>
+      <div class="footer-contact-line">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--t2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:1px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Houston, TX
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#contact">Furniture Removal</a></li>
+        <li><a href="#contact">Appliance Hauling</a></li>
+        <li><a href="#contact">Estate Cleanouts</a></li>
+        <li><a href="#contact">Construction Debris</a></li>
+        <li><a href="#contact">Yard Waste Removal</a></li>
+        <li><a href="#contact">Same-Day Service</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="#contact">Midtown Houston</a></li>
+        <li><a href="#contact">Montrose</a></li>
+        <li><a href="#contact">The Heights</a></li>
+        <li><a href="#contact">Sugar Land</a></li>
+        <li><a href="#contact">Katy</a></li>
+        <li><a href="#contact">Pearland</a></li>
+        <li><a href="#contact">The Woodlands</a></li>
+        <li><a href="#contact">Pasadena</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:7133963036">(713) 396-3036</a></li>
+        <li><a href="#contact">Get a Free Quote</a></li>
+        <li><a href="#contact">Same-Day Booking</a></li>
+      </ul>
+      <div style="margin-top:20px;">
+        <div style="font-family:var(--font-display);font-size:13px;color:var(--t2);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;">Hours</div>
+        <div style="font-family:var(--font-body);font-size:13px;color:var(--t2);line-height:1.8;">Mon – Fri: 7AM – 7PM<br>Saturday: 8AM – 5PM<br>Sunday: By Appt.</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 Space City Junk Removal. All rights reserved. Houston, TX.</div>
+    <div class="footer-copy">Licensed &amp; Insured · Serving Greater Houston</div>
+  </div>
 </footer>
 
+<script>
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); observer.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-number').forEach(el => observer.observe(el));
+
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.anim-card').forEach(el => cardObserver.observe(el));
+</script>
 </body>
 </html>
