@@ -36,12 +36,126 @@ NICHES = [
 ]
 
 CITIES = [
-    "Fort Worth TX", "Dallas TX", "Arlington TX", "Plano TX", "Irving TX",
-    "Houston TX", "San Antonio TX", "Austin TX", "Phoenix AZ", "Tucson AZ",
-    "Mesa AZ", "Scottsdale AZ", "Las Vegas NV", "Henderson NV",
-    "Albuquerque NM", "Oklahoma City OK", "Tulsa OK", "Memphis TN",
-    "Nashville TN", "Louisville KY", "Indianapolis IN", "Columbus OH",
-    "Kansas City MO", "Omaha NE", "Wichita KS",
+    # Texas
+    "Houston TX", "San Antonio TX", "Dallas TX", "Austin TX", "Fort Worth TX",
+    "El Paso TX", "Arlington TX", "Corpus Christi TX", "Plano TX", "Laredo TX",
+    "Lubbock TX", "Garland TX", "Irving TX", "Amarillo TX", "Grand Prairie TX",
+    "McKinney TX", "Frisco TX", "Killeen TX", "Pasadena TX", "Mesquite TX",
+    # Florida
+    "Jacksonville FL", "Miami FL", "Tampa FL", "Orlando FL", "St Petersburg FL",
+    "Hialeah FL", "Tallahassee FL", "Fort Lauderdale FL", "Port St Lucie FL",
+    "Cape Coral FL", "Pembroke Pines FL", "Hollywood FL", "Gainesville FL",
+    "Miramar FL", "Coral Springs FL", "Clearwater FL", "Palm Bay FL", "Lakeland FL",
+    # California
+    "Los Angeles CA", "San Diego CA", "San Jose CA", "San Francisco CA",
+    "Fresno CA", "Sacramento CA", "Long Beach CA", "Oakland CA", "Bakersfield CA",
+    "Anaheim CA", "Santa Ana CA", "Riverside CA", "Stockton CA", "Chula Vista CA",
+    "Irvine CA", "Fremont CA", "San Bernardino CA", "Modesto CA", "Fontana CA",
+    # New York
+    "New York NY", "Buffalo NY", "Rochester NY", "Yonkers NY", "Syracuse NY",
+    "Albany NY", "New Rochelle NY", "Mount Vernon NY",
+    # Pennsylvania
+    "Philadelphia PA", "Pittsburgh PA", "Allentown PA", "Erie PA", "Reading PA",
+    "Scranton PA", "Bethlehem PA", "Lancaster PA",
+    # Illinois
+    "Chicago IL", "Aurora IL", "Joliet IL", "Naperville IL", "Rockford IL",
+    "Springfield IL", "Peoria IL", "Elgin IL",
+    # Ohio
+    "Columbus OH", "Cleveland OH", "Cincinnati OH", "Toledo OH", "Akron OH",
+    "Dayton OH", "Parma OH", "Canton OH",
+    # Georgia
+    "Atlanta GA", "Augusta GA", "Columbus GA", "Macon GA", "Savannah GA",
+    "Athens GA", "Sandy Springs GA", "Roswell GA",
+    # North Carolina
+    "Charlotte NC", "Raleigh NC", "Greensboro NC", "Durham NC", "Winston-Salem NC",
+    "Fayetteville NC", "Cary NC", "Wilmington NC",
+    # Michigan
+    "Detroit MI", "Grand Rapids MI", "Warren MI", "Sterling Heights MI",
+    "Lansing MI", "Ann Arbor MI", "Flint MI", "Dearborn MI",
+    # Arizona
+    "Phoenix AZ", "Tucson AZ", "Mesa AZ", "Chandler AZ", "Scottsdale AZ",
+    "Glendale AZ", "Gilbert AZ", "Tempe AZ", "Peoria AZ", "Surprise AZ",
+    # Tennessee
+    "Nashville TN", "Memphis TN", "Knoxville TN", "Chattanooga TN",
+    "Clarksville TN", "Murfreesboro TN",
+    # Washington
+    "Seattle WA", "Spokane WA", "Tacoma WA", "Vancouver WA", "Bellevue WA",
+    "Kirkland WA", "Renton WA", "Redmond WA",
+    # Colorado
+    "Denver CO", "Colorado Springs CO", "Aurora CO", "Fort Collins CO",
+    "Lakewood CO", "Thornton CO", "Arvada CO", "Pueblo CO",
+    # Nevada
+    "Las Vegas NV", "Henderson NV", "Reno NV", "North Las Vegas NV",
+    # Indiana
+    "Indianapolis IN", "Fort Wayne IN", "Evansville IN", "South Bend IN",
+    "Carmel IN", "Fishers IN", "Bloomington IN",
+    # Missouri
+    "Kansas City MO", "St Louis MO", "Springfield MO", "Columbia MO",
+    # Wisconsin
+    "Milwaukee WI", "Madison WI", "Green Bay WI", "Kenosha WI", "Racine WI",
+    # Minnesota
+    "Minneapolis MN", "St Paul MN", "Rochester MN", "Duluth MN",
+    # Maryland
+    "Baltimore MD", "Frederick MD", "Rockville MD", "Gaithersburg MD",
+    # Virginia
+    "Virginia Beach VA", "Norfolk VA", "Chesapeake VA", "Richmond VA",
+    "Newport News VA", "Alexandria VA", "Hampton VA", "Roanoke VA",
+    # New Jersey
+    "Newark NJ", "Jersey City NJ", "Paterson NJ", "Elizabeth NJ", "Trenton NJ",
+    # South Carolina
+    "Columbia SC", "Charleston SC", "North Charleston SC", "Greenville SC",
+    # Alabama
+    "Birmingham AL", "Montgomery AL", "Huntsville AL", "Mobile AL",
+    # Louisiana
+    "New Orleans LA", "Baton Rouge LA", "Shreveport LA", "Metairie LA",
+    # Kentucky
+    "Louisville KY", "Lexington KY", "Bowling Green KY",
+    # Oregon
+    "Portland OR", "Salem OR", "Eugene OR", "Gresham OR", "Hillsboro OR",
+    # Oklahoma
+    "Oklahoma City OK", "Tulsa OK", "Norman OK", "Broken Arrow OK",
+    # Connecticut
+    "Bridgeport CT", "New Haven CT", "Hartford CT", "Stamford CT",
+    # Iowa
+    "Des Moines IA", "Cedar Rapids IA", "Davenport IA",
+    # Mississippi
+    "Jackson MS", "Gulfport MS", "Southaven MS",
+    # Arkansas
+    "Little Rock AR", "Fort Smith AR", "Fayetteville AR",
+    # Nebraska
+    "Omaha NE", "Lincoln NE",
+    # Kansas
+    "Wichita KS", "Overland Park KS", "Kansas City KS",
+    # New Mexico
+    "Albuquerque NM", "Las Cruces NM", "Rio Rancho NM",
+    # Utah
+    "Salt Lake City UT", "West Valley City UT", "Provo UT", "West Jordan UT",
+    # Idaho
+    "Boise ID", "Nampa ID", "Meridian ID",
+    # Montana
+    "Billings MT", "Missoula MT", "Great Falls MT",
+    # Wyoming
+    "Cheyenne WY", "Casper WY",
+    # North Dakota
+    "Fargo ND", "Bismarck ND",
+    # South Dakota
+    "Sioux Falls SD", "Rapid City SD",
+    # West Virginia
+    "Charleston WV", "Huntington WV",
+    # Maine
+    "Portland ME", "Lewiston ME",
+    # New Hampshire
+    "Manchester NH", "Nashua NH",
+    # Vermont
+    "Burlington VT",
+    # Rhode Island
+    "Providence RI", "Cranston RI",
+    # Delaware
+    "Wilmington DE", "Dover DE",
+    # Hawaii
+    "Honolulu HI", "Pearl City HI",
+    # Alaska
+    "Anchorage AK", "Fairbanks AK",
 ]
 
 NICHES_PER_RUN = 3
@@ -397,7 +511,7 @@ def main():
                     "flaw":          ", ".join(flaws),
                     "niche":         niche,
                     "quality_score": quality_score,
-                    "slug":          make_slug(name, city),
+                    "slug":          make_slug(name, city_name, city_state),
                     "status":        "",
                     "date_found":    today,
                 }
