@@ -649,12 +649,27 @@ Never use emoji. Always inline SVG. Use `stroke="currentColor"` and set color vi
 - **Key differentiators:** 24/7 emergency, licensed & insured, upfront pricing, no hidden fees
 - **Services:** Drain Cleaning, Water Heater Repair, Pipe Repair, Leak Detection, Sewer Line, Emergency
 
-### HVAC / Electrician
+### HVAC
 - **Fonts:** Bebas Neue + Open Sans
-- **Aesthetic:** Technical authority — deep charcoal, electric blue or safety orange accents
-- **Tone:** Certified expert. Precision work. Your comfort depends on us.
-- **Key differentiators:** NATE certified, same-day, financing available, 10-year warranty
-- **Services:** AC Repair, Heating, Installation, Maintenance, Emergency, Duct Cleaning
+- **Aesthetic:** Technical authority — deep charcoal or dark navy, electric blue or cool teal accents
+- **Tone:** Certified comfort expert. Your AC goes down in Phoenix summer? We're there in hours.
+- **Key differentiators:** NATE certified, same-day service, financing available, 10-year parts warranty
+- **Primary color direction:** Dark navy (#0d1e3a) or deep charcoal (#1a1e21)
+- **Accent color direction:** Electric blue (#0ea5e9) or teal (#0891b2) — darken for text on white sections
+- **Services:** AC Repair, Heating Repair, System Installation, Maintenance Plans, Emergency Service, Duct Cleaning
+- **Trust signals:** "NATE Certified", "Licensed & Insured", "Same-Day Service", "10-Year Warranty", "Financing Available"
+- **Review themes:** AC broke on a 110° day, heater went out the night before a cold snap, annual maintenance caught a failing part before it failed
+
+### Electrician
+- **Fonts:** Bebas Neue + Open Sans
+- **Aesthetic:** High-voltage precision — very dark charcoal or near-black, bold safety yellow or electric blue accent
+- **Tone:** Licensed. Safe. Correct. One call, done right. No guesswork, no fire hazards.
+- **Key differentiators:** Licensed & bonded, code-compliant work, upfront pricing, same-day available
+- **Primary color direction:** Very dark charcoal (#111827) or near-black (#0d1117)
+- **Accent color direction:** Safety yellow (#eab308) or electric blue (#2563eb) — if yellow, darken to #854d0e for text on white
+- **Services:** Panel Upgrades, Outlet & Switch Repair, Ceiling Fan Install, EV Charger Install, Lighting Install, Emergency Electrical
+- **Trust signals:** "Licensed & Bonded", "Code-Compliant Work", "Upfront Pricing", "Insured", "Same-Day Available"
+- **Review themes:** Panel upgrade for new appliances, outlet stopped working (tripped GFCI or wiring issue), EV charger install in garage
 
 ### Junk Removal / Hauling
 - **Fonts:** Oswald + Source Sans 3
@@ -670,12 +685,16 @@ Never use emoji. Always inline SVG. Use `stroke="currentColor"` and set color vi
 - **Key differentiators:** Pet-safe, same-day, satisfaction guarantee, family-owned
 - **Services:** Roach, Rodent, Termite, Mosquito, Bed Bug, Ant
 
-### Roofing / Construction
+### Roofing
 - **Fonts:** Anton + DM Sans
-- **Aesthetic:** Heavy-duty structural — deep charcoal or brick red, bold yellow or white accents
-- **Tone:** Serious protection. Storm-tested. Built to last.
-- **Key differentiators:** Licensed & bonded, free inspection, insurance claims, local
-- **Services:** Roof Repair, Replacement, Storm Damage, Gutters, Inspections, Emergency Tarping
+- **Aesthetic:** Heavy-duty structural — deep charcoal or dark slate, bold white or safety orange accents
+- **Tone:** Serious protection. Your biggest investment is your home — we don't cut corners. Storm-tested, locally trusted.
+- **Key differentiators:** Licensed & bonded, free inspection, insurance claims assistance, local (not a national chain)
+- **Primary color direction:** Deep charcoal (#1c1c1c) or dark slate (#1e293b)
+- **Accent color direction:** Safety orange (#f97316) or bold white — avoid red (looks alarming, not trustworthy)
+- **Services:** Roof Repair, Full Roof Replacement, Storm Damage Repair, Gutter Install & Repair, Free Inspections, Emergency Tarping
+- **Trust signals:** "Licensed & Bonded", "Free Inspection", "Insurance Claims Specialist", "Local — Not a Franchise", "Lifetime Workmanship Warranty"
+- **Review themes:** Hail damage caught by free inspection, full replacement after 25-year-old roof failed, emergency tarp after storm kept interior dry
 
 ### Lawn / Landscaping / Tree
 - **Fonts:** Playfair Display + Lora
