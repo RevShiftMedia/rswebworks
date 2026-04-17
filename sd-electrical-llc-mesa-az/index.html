@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SD Electrical LLC | Licensed Electrician Mesa, AZ | (480) 382-7345</title>
+<meta name="description" content="SD Electrical LLC — licensed and insured electricians serving Mesa, AZ. Panel upgrades, EV chargers, outlet installs, and emergency electrical. Call (480) 382-7345.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600&display=swap');
+:root {
+  --primary: #1c2b3a;
+  --primary-dark: #111c26;
+  --accent: #0ea5e9;
+  --accent-dark: #0284c7;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #e8edf5;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* Animations */
+@keyframes heroFadeUp { from{opacity:0;transform:translateY(32px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+.hero-badge{animation:heroFadeUp 0.5s ease-out 0.1s both}
+.hero-headline{animation:heroFadeUp 0.5s ease-out 0.2s both}
+.hero-sub{animation:heroFadeUp 0.5s ease-out 0.35s both}
+.hero-ctas{animation:heroFadeUp 0.5s ease-out 0.5s both}
+.hero-trust{animation:heroFadeUp 0.5s ease-out 0.65s both}
+.hero-card{animation:heroFadeUp 0.5s ease-out 0.4s both}
+.card{opacity:0}
+.card.visible{animation:fadeUp 0.4s ease-out forwards}
+.card.visible:nth-child(1){animation-delay:0.1s}
+.card.visible:nth-child(2){animation-delay:0.2s}
+.card.visible:nth-child(3){animation-delay:0.3s}
+.card.visible:nth-child(4){animation-delay:0.4s}
+.card.visible:nth-child(5){animation-delay:0.5s}
+.card.visible:nth-child(6){animation-delay:0.6s}
+
+/* Grain overlay */
+.hero, .cta-band { position: relative; }
+.hero::after, .cta-band::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.hero > *, .cta-band > * { position: relative; z-index: 1; }
+
+/* HEADER */
+header {
+  background: var(--primary);
+  position: sticky; top: 0; z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  transition: box-shadow 0.3s;
+}
+header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.45); }
+.header-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.header-brand { display: flex; flex-direction: column; gap: 2px; }
+.header-brand .biz-name {
+  font-family: var(--font-display); font-size: 20px; font-weight: 700;
+  color: var(--t1); letter-spacing: 0.04em; line-height: 1;
+}
+.header-brand .biz-tagline { font-size: 13px; color: var(--t2); line-height: 1; }
+.header-cta {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--accent); color: var(--t1);
+  font-family: var(--font-display); font-size: 16px; letter-spacing: 0.04em;
+  padding: 10px 20px; border-radius: 8px; text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.header-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.header-cta svg { flex-shrink: 0; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  padding: 100px 0 80px;
+}
+.hero-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: center;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: var(--t1);
+  font-family: var(--font-display); font-size: 13px; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 6px 16px; border-radius: 100px;
+  margin-bottom: 20px;
+}
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 64px);
+  color: var(--t1); line-height: 1.05; margin-bottom: 18px;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-size: 18px; color: var(--t2); margin-bottom: 32px; max-width: 520px;
+}
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--accent); color: var(--t1);
+  font-family: var(--font-display); font-size: 18px; letter-spacing: 0.04em;
+  padding: 14px 28px; border-radius: var(--radius); text-decoration: none;
+  transition: background 0.2s, transform 0.2s; border: none; cursor: pointer;
+}
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: transparent; color: var(--t1);
+  font-family: var(--font-display); font-size: 18px; letter-spacing: 0.04em;
+  padding: 14px 28px; border-radius: var(--radius); text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.6);
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+.btn-ghost:hover { border-color: var(--t1); background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+.hero-trust { display: flex; align-items: center; gap: 12px; }
+.stars { display: flex; gap: 3px; }
+.stars svg { color: #fbbf24; }
+.trust-text { font-size: 14px; color: var(--t2); }
+.trust-sep { width: 1px; height: 20px; background: rgba(255,255,255,0.25); }
+
+/* Hero card */
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px; padding: 32px; color: var(--t1);
+}
+.hero-card-title {
+  font-family: var(--font-display); font-size: 24px; margin-bottom: 20px;
+  color: var(--t1);
+}
+.hero-card-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.hero-card-list li {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 15px; color: var(--t2);
+}
+.hero-card-list li .check {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: rgba(14,165,233,0.2); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.hero-card-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0; }
+.hero-card-cta {
+  display: block; text-align: center;
+  background: var(--accent); color: var(--t1);
+  font-family: var(--font-display); font-size: 17px; letter-spacing: 0.04em;
+  padding: 13px; border-radius: 10px; text-decoration: none;
+  transition: background 0.2s;
+}
+.hero-card-cta:hover { background: var(--accent-dark); }
+
+/* STATS ROW */
+.stats-row {
+  background: var(--primary); padding: 0;
+}
+.stats-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: repeat(4,1fr);
+}
+.stat-box {
+  padding: 32px 24px; text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.stat-box:last-child { border-right: none; }
+.stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--accent); line-height: 1; margin-bottom: 6px;
+}
+.stat-label { font-size: 13px; color: var(--t2); text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* SERVICES */
+.services { background: var(--bg); }
+.section-label {
+  font-family: var(--font-display); font-size: 10px; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--accent); margin-bottom: 10px; display: block;
+}
+.section-title { font-family: var(--font-display); font-size: 36px; color: var(--dark-text); margin-bottom: 48px; }
+.services-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
+}
+.service-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-top: 3px solid var(--border);
+  border-radius: var(--radius); padding: 28px;
+  transition: border-top-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+.service-card:hover { border-top-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow); }
+.service-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: rgba(14,165,233,0.12); display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.service-name { font-family: var(--font-display); font-size: 17px; color: var(--dark-text); margin-bottom: 8px; }
+.service-desc { font-size: 14px; color: var(--grey-text); margin-bottom: 14px; line-height: 1.6; }
+.service-link { font-size: 14px; color: var(--accent); text-decoration: none; font-weight: 600; }
+.service-link:hover { color: var(--accent-dark); }
+
+/* WHY US */
+.why-us { background: var(--primary); }
+.why-us-title { font-family: var(--font-display); font-size: 36px; color: var(--t1); margin-bottom: 40px; }
+.why-stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-bottom: 48px; }
+.why-stat-card {
+  background: var(--primary-dark); border-radius: var(--radius); padding: 24px;
+  text-align: center;
+}
+.why-stat-num { font-family: var(--font-display); font-size: 36px; color: var(--accent); line-height: 1; margin-bottom: 6px; }
+.why-stat-label { font-size: 13px; color: var(--t2); }
+.diff-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+.diff-item {
+  display: flex; align-items: flex-start; gap: 16px;
+  background: rgba(255,255,255,0.04); border-radius: var(--radius); padding: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.diff-icon {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(14,165,233,0.15); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.diff-title { font-family: var(--font-display); font-size: 18px; color: var(--t1); margin-bottom: 4px; }
+.diff-desc { font-size: 14px; color: var(--t2); }
+
+/* HOW IT WORKS */
+.how-it-works { background: var(--primary-dark); }
+.how-title { font-family: var(--font-display); font-size: 36px; color: var(--t1); margin-bottom: 60px; text-align: center; }
+.steps-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; position: relative; }
+.step { text-align: center; padding: 0 32px; position: relative; }
+.step:not(:last-child)::after {
+  content: ''; position: absolute; top: 30px; right: -10%;
+  width: 20%; height: 1px; border-top: 2px dashed rgba(255,255,255,0.15);
+}
+.step-num {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--accent); display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 26px; color: var(--t1);
+  margin: 0 auto 20px;
+}
+.step-icon { margin-bottom: 14px; }
+.step-title { font-family: var(--font-display); font-size: 20px; color: var(--t1); margin-bottom: 10px; }
+.step-desc { font-size: 14px; color: var(--t2); }
+
+/* REVIEWS */
+.reviews { background: var(--bg-off); }
+.reviews-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 16px; }
+.reviews-title { font-family: var(--font-display); font-size: 36px; color: var(--dark-text); }
+.google-badge {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px;
+}
+.google-badge-text { font-size: 13px; color: var(--grey-text); }
+.google-badge-rating { font-family: var(--font-display); font-size: 18px; color: var(--dark-text); }
+.reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.review-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow);
+}
+.review-stars { display: flex; gap: 3px; margin-bottom: 14px; }
+.review-text { font-size: 14px; color: #374151; line-height: 1.7; margin-bottom: 20px; }
+.review-author { display: flex; align-items: center; gap: 12px; }
+.review-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--accent); display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 16px; color: var(--t1); flex-shrink: 0;
+}
+.review-name { font-size: 14px; font-weight: 600; color: var(--dark-text); }
+.review-date { font-size: 12px; color: var(--grey-text); }
+
+/* SERVICE AREAS */
+.service-areas { background: var(--primary); }
+.areas-inner { display: grid; grid-template-columns: repeat(2,1fr); gap: 48px; align-items: center; }
+.areas-headline { font-family: var(--font-display); font-size: 36px; color: var(--t1); margin-bottom: 16px; }
+.areas-text { font-size: 15px; color: var(--t2); margin-bottom: 28px; line-height: 1.7; }
+.areas-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: var(--t1);
+  font-family: var(--font-display); font-size: 18px; letter-spacing: 0.04em;
+  padding: 14px 28px; border-radius: var(--radius); text-decoration: none;
+  transition: background 0.2s;
+}
+.areas-cta:hover { background: var(--accent-dark); }
+.areas-card {
+  background: var(--primary-dark); border-radius: 16px; padding: 32px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.areas-card-title { font-family: var(--font-display); font-size: 20px; color: var(--t1); margin-bottom: 20px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip {
+  padding: 8px 16px; border-radius: 100px;
+  background: rgba(255,255,255,0.08); color: var(--t2);
+  font-size: 14px; font-weight: 600; cursor: default;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.2s, color 0.2s;
+}
+.chip:hover { background: var(--accent); color: var(--t1); border-color: var(--accent); }
+
+/* CONTACT */
+.contact { background: var(--bg); }
+.contact-inner { display: grid; grid-template-columns: repeat(2,1fr); gap: 48px; }
+.contact-title { font-family: var(--font-display); font-size: 36px; color: var(--dark-text); margin-bottom: 32px; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 12px 16px;
+  border: 1px solid var(--border); border-radius: 8px;
+  font-family: var(--font-body); font-size: 14px; color: var(--dark-text);
+  background: var(--bg); transition: border-color 0.2s;
+  appearance: none; -webkit-appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { outline: none; border-color: var(--accent); }
+.form-group textarea { resize: vertical; min-height: 110px; }
+.btn-submit {
+  width: 100%; padding: 16px;
+  background: var(--accent); color: var(--t1);
+  font-family: var(--font-display); font-size: 20px; letter-spacing: 0.04em;
+  border: none; border-radius: var(--radius); cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-submit:hover { background: var(--accent-dark); transform: translateY(-2px); }
+.contact-info-card {
+  background: var(--primary-dark); border-radius: 16px; padding: 32px;
+  color: var(--t1); align-self: start;
+}
+.contact-info-title { font-family: var(--font-display); font-size: 24px; margin-bottom: 28px; }
+.info-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 24px; }
+.info-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: rgba(14,165,233,0.15); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.info-label { font-size: 12px; color: var(--t3); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+.info-value { font-size: 15px; color: var(--t1); font-weight: 600; }
+.info-sub { font-size: 13px; color: var(--t2); margin-top: 2px; }
+
+/* CTA BAND */
+.cta-band {
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  padding: 80px 0; text-align: center;
+}
+.cta-band-headline {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  color: var(--t1); margin-bottom: 14px;
+}
+.cta-band-sub { font-size: 17px; color: var(--t2); margin-bottom: 32px; }
+.btn-white {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--t1); color: var(--accent);
+  font-family: var(--font-display); font-size: 20px; letter-spacing: 0.04em;
+  padding: 16px 36px; border-radius: var(--radius); text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+
+/* FOOTER */
+footer { background: var(--primary-dark); padding: 72px 0 0; }
+.footer-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 40px; padding-bottom: 48px; }
+.footer-col-title {
+  font-family: var(--font-display); font-size: 16px; letter-spacing: 0.05em;
+  color: var(--t1); margin-bottom: 18px; text-transform: uppercase;
+}
+.footer-brand-name { font-family: var(--font-display); font-size: 22px; color: var(--t1); margin-bottom: 10px; }
+.footer-brand-desc { font-size: 14px; color: var(--t2); line-height: 1.7; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 14px; color: var(--t2); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-contact-item { font-size: 14px; color: var(--t2); margin-bottom: 10px; }
+.footer-contact-item strong { color: var(--t1); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 24px; display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.footer-copy { font-size: 13px; color: var(--t3); }
+.license-badge {
+  font-size: 12px; color: var(--t3);
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 100px; padding: 4px 12px;
+}
+
+/* Responsive */
+@media(max-width:900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); }
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .why-stats-grid { grid-template-columns: repeat(2,1fr); }
+  .diff-grid { grid-template-columns: 1fr; }
+  .steps-row { grid-template-columns: 1fr; gap: 40px; }
+  .step:not(:last-child)::after { display: none; }
+  .reviews-grid { grid-template-columns: repeat(2,1fr); }
+  .areas-inner { grid-template-columns: 1fr; }
+  .contact-inner { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:600px) {
+  .stats-inner { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .why-stats-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-ctas { flex-direction: column; }
+  .header-inner { padding: 0 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <span class="biz-name">SD Electrical LLC</span>
+      <span class="biz-tagline">Licensed &amp; Insured &middot; Mesa, AZ</span>
+    </div>
+    <a href="tel:4803827345" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      (480) 382-7345
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Licensed Mesa Electrician
+      </div>
+      <h1 class="hero-headline">
+        Mesa's Trusted<br><span>Electrical Experts</span><br>Since Day One
+      </h1>
+      <p class="hero-sub">Serving Dobson Ranch, Red Mountain, Eastmark, and all of Mesa with fast, reliable electrical work. Licensed, insured, and ready today.</p>
+      <div class="hero-ctas">
+        <a href="tel:4803827345" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          CALL (480) 382-7345
+        </a>
+        <a href="#contact" class="btn-ghost">GET FREE ESTIMATE</a>
+      </div>
+      <div class="hero-trust">
+        <div class="stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <span class="trust-text">4.9 Rating (36 Reviews)</span>
+        <span class="trust-sep"></span>
+        <span class="trust-text">Licensed &amp; Insured</span>
+        <span class="trust-sep"></span>
+        <span class="trust-text">Same-Day Service</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Get Your Free Estimate</div>
+      <ul class="hero-card-list">
+        <li>
+          <span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Panel upgrades &amp; replacements
+        </li>
+        <li>
+          <span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+          EV charger installation (Level 2)
+        </li>
+        <li>
+          <span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Outlet, switch &amp; breaker repair
+        </li>
+        <li>
+          <span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+          24/7 emergency electrical service
+        </li>
+        <li>
+          <span class="check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>
+          Ceiling fan &amp; lighting installs
+        </li>
+      </ul>
+      <hr class="hero-card-divider">
+      <a href="tel:4803827345" class="hero-card-cta">Call for Same-Day Availability</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS ROW -->
+<div class="stats-row">
+  <div class="stats-inner">
+    <div class="stat-box">
+      <div class="stat-number" data-target="500" data-suffix="+">0</div>
+      <div class="stat-label">Jobs Completed</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" data-target="10" data-suffix="+ Yrs">0</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" data-target="36">0</div>
+      <div class="stat-label">5-Star Reviews</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" data-target="100" data-suffix="%">0</div>
+      <div class="stat-label">Satisfaction Guaranteed</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="container">
+    <span class="section-label">What We Do</span>
+    <h2 class="section-title">Electrical Services in Mesa, AZ</h2>
+    <div class="services-grid">
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h4"/></svg>
+        </div>
+        <div class="service-name">Panel Upgrades</div>
+        <p class="service-desc">Upgrade your electrical panel to safely support modern appliances, EV chargers, and increased load demands in your Mesa home.</p>
+        <a href="#contact" class="service-link">Learn More &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <div class="service-name">Outlet &amp; Switch</div>
+        <p class="service-desc">Install or replace outlets, switches, GFCI receptacles, and USB charging ports throughout your home quickly and safely.</p>
+        <a href="#contact" class="service-link">Learn More &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/></svg>
+        </div>
+        <div class="service-name">Ceiling Fan Install</div>
+        <p class="service-desc">Professional ceiling fan installation in any room, including new wiring and switch upgrades for optimal comfort year-round.</p>
+        <a href="#contact" class="service-link">Learn More &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/><path d="M9 7h6M9 11h4"/></svg>
+        </div>
+        <div class="service-name">EV Charger</div>
+        <p class="service-desc">Level 2 home EV charger installation with dedicated circuit and breaker, compatible with Tesla, Ford, GM, and all major brands.</p>
+        <a href="#contact" class="service-link">Learn More &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <div class="service-name">Lighting Install</div>
+        <p class="service-desc">Recessed lighting, under-cabinet LED strips, outdoor security lights, and decorative fixtures installed by licensed professionals.</p>
+        <a href="#contact" class="service-link">Learn More &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="service-name">Emergency Electrical</div>
+        <p class="service-desc">Tripped breakers, burning smells, sparking outlets — we respond fast to electrical emergencies throughout Mesa and the East Valley.</p>
+        <a href="#contact" class="service-link">Learn More &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-us">
+  <div class="container">
+    <h2 class="why-us-title">Why Mesa Homeowners Choose SD Electrical</h2>
+    <div class="why-stats-grid">
+      <div class="why-stat-card card">
+        <div class="why-stat-num">4.9</div>
+        <div class="why-stat-label">Average Google Rating</div>
+      </div>
+      <div class="why-stat-card card">
+        <div class="why-stat-num">36+</div>
+        <div class="why-stat-label">Verified 5-Star Reviews</div>
+      </div>
+      <div class="why-stat-card card">
+        <div class="why-stat-num">Same Day</div>
+        <div class="why-stat-label">Service Available</div>
+      </div>
+      <div class="why-stat-card card">
+        <div class="why-stat-num">100%</div>
+        <div class="why-stat-label">Licensed &amp; Insured</div>
+      </div>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-item card">
+        <div class="diff-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">Licensed &amp; Insured</div>
+          <p class="diff-desc">Fully licensed with the Arizona Registrar of Contractors. We carry liability and workers' comp so you're always protected.</p>
+        </div>
+      </div>
+      <div class="diff-item card">
+        <div class="diff-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">Upfront Pricing</div>
+          <p class="diff-desc">No hidden fees or surprise charges. You'll receive a clear written estimate before any work begins — guaranteed.</p>
+        </div>
+      </div>
+      <div class="diff-item card">
+        <div class="diff-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">Same-Day Available</div>
+          <p class="diff-desc">Many jobs can be scheduled and completed the same day. Call before noon for best availability across Mesa and the East Valley.</p>
+        </div>
+      </div>
+      <div class="diff-item card">
+        <div class="diff-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">5-Star Rated</div>
+          <p class="diff-desc">With a 4.9 average across 36 Google reviews, our reputation speaks for itself. We treat every home like it's our own.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="container">
+    <h2 class="how-title">How It Works</h2>
+    <div class="steps-row">
+      <div class="step card">
+        <div class="step-num">1</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="step-title">Call for a Free Quote</div>
+        <p class="step-desc">Reach out by phone or form. Describe your electrical need and we'll provide a fast, honest, no-obligation estimate.</p>
+      </div>
+      <div class="step card">
+        <div class="step-num">2</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <div class="step-title">We Diagnose &amp; Plan</div>
+        <p class="step-desc">Our licensed electrician arrives on time, assesses the issue thoroughly, and walks you through the recommended solution.</p>
+      </div>
+      <div class="step card">
+        <div class="step-num">3</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="step-title">Work Done Right</div>
+        <p class="step-desc">We complete the work cleanly, safely, and to code. Every job is backed by our satisfaction guarantee before we leave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <h2 class="reviews-title">What Our Customers Say</h2>
+      <div class="google-badge">
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div>
+          <div class="google-badge-rating">4.9 / 5.0</div>
+          <div class="google-badge-text">36 Google Reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">SD Electrical came out the same day I called about a tripping breaker in my Dobson Ranch home. The technician was professional, explained everything clearly, and had it fixed within two hours. Pricing was fair and upfront with no surprises on the final bill. Highly recommend to anyone in Mesa looking for a trustworthy electrician.</p>
+        <div class="review-author">
+          <div class="review-avatar">MR</div>
+          <div>
+            <div class="review-name">Michael R.</div>
+            <div class="review-date">Dobson Ranch, Mesa &bull; 3 weeks ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">We had SD Electrical install a Level 2 EV charger in our garage out in Eastmark and the whole experience was smooth from start to finish. They pulled the permit, ran the dedicated circuit, and installed our charger in one afternoon. The electrician was knowledgeable and answered all my questions about load capacity. Five stars without hesitation.</p>
+        <div class="review-author">
+          <div class="review-avatar">JK</div>
+          <div>
+            <div class="review-name">Jennifer K.</div>
+            <div class="review-date">Eastmark, Mesa &bull; 1 month ago</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">Called SD Electrical when I noticed a burning smell coming from an outlet in my Red Mountain home. They arrived within two hours and identified a loose connection that could have caused a fire. The repair was done quickly and the electrician also checked the rest of our panel at no extra charge. Saved us from a potential disaster — absolute professionals.</p>
+        <div class="review-author">
+          <div class="review-avatar">DT</div>
+          <div>
+            <div class="review-name">David T.</div>
+            <div class="review-date">Red Mountain, Mesa &bull; 2 months ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="service-areas">
+  <div class="container">
+    <div class="areas-inner">
+      <div>
+        <h2 class="areas-headline">Serving Mesa and the East Valley</h2>
+        <p class="areas-text">SD Electrical LLC provides licensed electrical services throughout Mesa and surrounding East Valley communities. Whether you're in a Dobson Ranch subdivision or a new build in San Tan Valley, our team is ready to help. We know the local codes and neighborhoods inside and out.</p>
+        <a href="tel:4803827345" class="areas-cta">Call for Service in Your Area</a>
+      </div>
+      <div class="areas-card">
+        <div class="areas-card-title">Areas We Serve</div>
+        <div class="chips">
+          <span class="chip">Mesa</span>
+          <span class="chip">Gilbert</span>
+          <span class="chip">Chandler</span>
+          <span class="chip">Tempe</span>
+          <span class="chip">Scottsdale</span>
+          <span class="chip">Apache Junction</span>
+          <span class="chip">Queen Creek</span>
+          <span class="chip">Ahwatukee</span>
+          <span class="chip">San Tan Valley</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div>
+        <h2 class="contact-title">Get a Free Estimate</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(480) 555-0100">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com">
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option>Panel Upgrade</option>
+              <option>EV Charger</option>
+              <option>Outlets &amp; Switches</option>
+              <option>Lighting</option>
+              <option>Ceiling Fan</option>
+              <option>Emergency</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us More</label>
+            <textarea id="message" name="message" placeholder="Describe your electrical issue or project..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send My Free Estimate Request</button>
+        </form>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-info-title">Contact SD Electrical</div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-value">(480) 382-7345</div>
+            <div class="info-sub">Call or text anytime</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-value">info@sdelectricalmesa.com</div>
+            <div class="info-sub">We respond within hours</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Business Hours</div>
+            <div class="info-value">Mon–Fri: 8am–6pm</div>
+            <div class="info-sub">Sat: 9am–3pm &bull; Emergency calls accepted</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Service Area</div>
+            <div class="info-value">Mesa, AZ &amp; East Valley</div>
+            <div class="info-sub">Gilbert, Chandler, Tempe &amp; more</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container" style="text-align:center;">
+    <h2 class="cta-band-headline">Ready to Fix Your Electrical Problem Today?</h2>
+    <p class="cta-band-sub">Call now for same-day service. Licensed, insured, and trusted by Mesa homeowners.</p>
+    <a href="tel:4803827345" class="btn-white">Call (480) 382-7345</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">SD Electrical LLC</div>
+        <p class="footer-brand-desc">Licensed and insured electricians serving Mesa, AZ and the East Valley. Residential and commercial electrical work done right.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Panel Upgrades</a></li>
+          <li><a href="#contact">EV Charger Install</a></li>
+          <li><a href="#contact">Outlet &amp; Switch</a></li>
+          <li><a href="#contact">Ceiling Fan Install</a></li>
+          <li><a href="#contact">Lighting Install</a></li>
+          <li><a href="#contact">Emergency Electrical</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Mesa, AZ</a></li>
+          <li><a href="#contact">Gilbert, AZ</a></li>
+          <li><a href="#contact">Chandler, AZ</a></li>
+          <li><a href="#contact">Tempe, AZ</a></li>
+          <li><a href="#contact">Scottsdale, AZ</a></li>
+          <li><a href="#contact">Queen Creek, AZ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item"><strong>(480) 382-7345</strong></div>
+        <div class="footer-contact-item">info@sdelectricalmesa.com</div>
+        <div class="footer-contact-item">Mesa, AZ 85201</div>
+        <div class="footer-contact-item" style="color:var(--t3);font-size:13px;">Mon–Fri 8am–6pm<br>Sat 9am–3pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom" style="max-width:1100px;margin:0 auto;">
+    <span class="footer-copy">&copy; 2026 SD Electrical LLC. All rights reserved.</span>
+    <span class="license-badge">Arizona Licensed &amp; Insured Electrician</span>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + (el.dataset.suffix || '');
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.2 });
+document.querySelectorAll('.card').forEach(c => cardObserver.observe(c));
+
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) animateCount(e.target); });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => statObserver.observe(el));
+</script>
+</body>
+</html>
