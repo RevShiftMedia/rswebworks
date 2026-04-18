@@ -3,19 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Mesa Electrician | Electrical Contractor Mesa AZ | (480) 701-4348</title>
-<meta name="description" content="Your Mesa Electrician — licensed and bonded electrical contractor serving Mesa, AZ and surrounding areas. Panel upgrades, EV charger install, emergency electrical. Call (480) 701-4348.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Your Mesa Electrician | Licensed Electrical Contractor Mesa, AZ</title>
+<meta name="description" content="Mesa's most trusted electrician. Licensed, bonded & insured. Panel upgrades, EV chargers, emergency service. 5-star rated. Call (480) 701-4348.">
 <style>
-/* ===================== CSS RESET & VARIABLES ===================== */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap');
+
 :root {
-  --primary: #3c335d;
-  --primary-dark: #332b4f;
-  --accent: #962e21;
-  --accent-dark: #78251a;
+  --primary: #2e2748;
+  --primary-dark: #1a1430;
+  --accent: #eab308;
+  --accent-dark: #a16207;
   --bg: #ffffff;
   --bg-off: #f7f8fc;
   --t1: #ffffff;
@@ -30,905 +27,623 @@
   --shadow: 0 4px 20px rgba(0,0,0,0.12);
   --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
 }
-html { scroll-behavior: smooth; }
-body { font-family: var(--font-body); font-weight: 400; color: var(--dark-text); background: var(--bg); line-height: 1.6; overflow-x: hidden; }
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
-img { max-width: 100%; display: block; }
-button, input, select, textarea { font-family: var(--font-body); }
 
-/* ===================== ANIMATIONS ===================== */
-@keyframes heroFadeUp {
-  from { opacity: 0; transform: translateY(32px); }
-  to   { opacity: 1; transform: translateY(0); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: var(--dark-text);
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(234,179,8,0.4); transition: all 0.15s ease;
+  text-decoration: none; letter-spacing: 0.05em;
 }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(234,179,8,0.5); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 600;
+  padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.15s ease; text-decoration: none; letter-spacing: 0.05em;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+
+@media (max-width: 900px) {
+  .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
+}
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-.hero-badge  { opacity: 0; animation: heroFadeUp 0.65s ease forwards 0.1s; }
-.hero-headline { opacity: 0; animation: heroFadeUp 0.65s ease forwards 0.2s; }
-.hero-sub    { opacity: 0; animation: heroFadeUp 0.65s ease forwards 0.35s; }
-.hero-ctas   { opacity: 0; animation: heroFadeUp 0.65s ease forwards 0.5s; }
-.hero-trust  { opacity: 0; animation: heroFadeUp 0.65s ease forwards 0.65s; }
-.hero-card   { opacity: 0; animation: heroFadeUp 0.65s ease forwards 0.4s; }
-
-.fade-card { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
-.fade-card.visible { opacity: 1; transform: translateY(0); }
-
-/* ===================== UTILITIES ===================== */
-.container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-.section-label { font-family: var(--font-display); font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; display: block; }
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-family: var(--font-body); font-weight: 600; font-size: 15px;
-  padding: 14px 26px; border-radius: var(--radius); cursor: pointer;
-  border: none; transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-  text-decoration: none; white-space: nowrap;
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-.btn:active { transform: scale(0.97); }
-.btn-accent { background: var(--accent); color: #fff; box-shadow: 0 4px 16px rgba(150,46,33,0.35); }
-.btn-accent:hover { background: var(--accent-dark); box-shadow: 0 6px 24px rgba(150,46,33,0.45); }
-.btn-ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.75); }
-.btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
-.btn-white { background: #fff; color: var(--accent); }
-.btn-white:hover { background: #f0f0f0; }
 
-/* ===================== HEADER ===================== */
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1).visible { animation-delay: 0.1s; }
+.card:nth-child(2).visible { animation-delay: 0.2s; }
+.card:nth-child(3).visible { animation-delay: 0.3s; }
+.card:nth-child(4).visible { animation-delay: 0.4s; }
+.card:nth-child(5).visible { animation-delay: 0.5s; }
+.card:nth-child(6).visible { animation-delay: 0.6s; }
+
+/* HEADER */
 .site-header {
-  position: sticky; top: 0; z-index: 1000;
-  background: var(--primary);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
-  transition: box-shadow 0.3s ease;
+  background: var(--primary); position: sticky; top: 0; z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3); transition: box-shadow 0.2s;
 }
-.site-header.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,0.5); }
+.site-header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.45); }
 .header-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 24px; max-width: 1160px; margin: 0 auto; gap: 16px;
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; height: 68px;
 }
-.header-brand { display: flex; flex-direction: column; gap: 2px; }
-.header-brand .name {
-  font-family: var(--font-display); font-size: 26px; color: var(--t1);
-  letter-spacing: 1px; line-height: 1; text-transform: uppercase;
+.header-brand h1 { font-family: var(--font-display); font-size: 20px; color: white; letter-spacing: 0.05em; line-height: 1.1; }
+.header-brand span { display: block; font-family: var(--font-body); font-size: 11px; color: var(--t2); letter-spacing: 0.06em; font-weight: 400; text-transform: uppercase; margin-top: 1px; }
+.header-nav { display: flex; gap: 28px; align-items: center; }
+.header-nav a { font-family: var(--font-body); font-size: 14px; color: var(--t2); text-decoration: none; transition: color 0.15s; }
+.header-nav a:hover { color: white; }
+.header-cta {
+  background: var(--accent); color: var(--dark-text); font-family: var(--font-display); font-size: 14px;
+  padding: 10px 20px; border-radius: 7px; text-decoration: none;
+  display: flex; align-items: center; gap: 7px; letter-spacing: 0.05em;
+  box-shadow: 0 2px 10px rgba(234,179,8,0.35); transition: all 0.15s;
 }
-.header-brand .tagline { font-size: 13px; color: var(--t2); font-weight: 300; letter-spacing: 0.5px; }
-.header-cta { flex-shrink: 0; }
+.header-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(234,179,8,0.45); }
+@media (max-width: 768px) { .header-nav { display: none; } }
 
-/* ===================== HERO ===================== */
+/* HERO */
 .hero {
-  position: relative; overflow: hidden;
   background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-  padding: 80px 0 72px;
+  padding: 100px 0 80px; position: relative; overflow: hidden;
 }
 .hero::after {
-  content: '';
-  position: absolute; inset: 0;
+  content: ''; position: absolute; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
   opacity: 0.12; pointer-events: none; z-index: 0;
 }
 .hero > * { position: relative; z-index: 1; }
 .hero-inner {
-  display: grid; grid-template-columns: 60fr 40fr; gap: 48px; align-items: center;
-  max-width: 1160px; margin: 0 auto; padding: 0 24px;
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: center;
 }
 .hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--accent); color: #fff;
-  font-family: var(--font-display); font-size: 13px; letter-spacing: 2px;
-  padding: 7px 16px; border-radius: 100px; margin-bottom: 20px;
-  text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: 8px; background: var(--accent);
+  padding: 6px 14px; border-radius: 20px; font-family: var(--font-display); font-size: 11px;
+  letter-spacing: 0.1em; color: var(--dark-text); text-transform: uppercase; margin-bottom: 20px;
 }
-.hero-headline {
-  font-family: var(--font-display);
-  font-size: clamp(42px, 6vw, 64px);
-  color: var(--t1); line-height: 1.05; margin-bottom: 18px; text-transform: uppercase;
-}
+.hero-headline { font-family: var(--font-display); font-size: clamp(42px, 6vw, 64px); color: white; line-height: 1.05; margin-bottom: 20px; letter-spacing: -0.02em; }
 .hero-headline span { color: var(--accent); }
-.hero-sub { font-size: 18px; color: var(--t2); margin-bottom: 32px; max-width: 480px; font-weight: 300; line-height: 1.7; }
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 32px; }
-.hero-trust {
-  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-  font-size: 13px; color: var(--t2); font-weight: 400;
-}
-.hero-trust .stars { display: flex; gap: 3px; }
-.hero-trust .stars svg { color: #f59e0b; }
-.hero-trust-sep { opacity: 0.4; }
+.hero-sub { font-family: var(--font-body); font-size: 18px; color: var(--t2); line-height: 1.65; margin-bottom: 32px; max-width: 480px; }
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+.hero-trust { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.hero-trust-stars { display: flex; align-items: center; gap: 4px; }
+.hero-trust-text { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+.trust-sep { width: 1px; height: 16px; background: rgba(255,255,255,0.25); }
 
-/* Hero Card */
 .hero-card {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.15);
-  backdrop-filter: blur(12px);
-  border-radius: 16px; padding: 28px 32px;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3); backdrop-filter: blur(12px); border-radius: 16px; padding: 28px 32px;
 }
-.hero-card h3 { font-family: var(--font-display); font-size: 20px; color: var(--t1); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; }
-.value-prop { display: flex; gap: 14px; margin-bottom: 18px; }
-.value-prop:last-of-type { margin-bottom: 0; }
-.vp-icon {
-  flex-shrink: 0; width: 36px; height: 36px; border-radius: 8px;
-  background: rgba(150,46,33,0.18); display: flex; align-items: center; justify-content: center; color: var(--accent);
+.hero-card-title { font-family: var(--font-display); font-size: 18px; color: white; margin-bottom: 20px; letter-spacing: 0.05em; }
+.hero-card-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+.hero-card-item:last-of-type { margin-bottom: 24px; }
+.hero-card-check {
+  width: 22px; height: 22px; background: rgba(234,179,8,0.2); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0; margin-top: 2px;
 }
-.vp-content .vp-title { font-family: var(--font-display); font-size: 16px; color: var(--t1); letter-spacing: 0.5px; text-transform: uppercase; line-height: 1.2; }
-.vp-content .vp-desc { font-size: 13px; color: var(--t2); font-weight: 300; margin-top: 2px; }
+.hero-card-item-title { font-family: var(--font-display); font-size: 15px; color: white; letter-spacing: 0.03em; }
+.hero-card-item-sub { font-family: var(--font-body); font-size: 12px; color: var(--t3); margin-top: 1px; }
 .hero-card-phone {
-  margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.12);
-  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.12); padding-top: 20px;
+  font-family: var(--font-display); font-size: 22px; color: var(--accent);
+  letter-spacing: 0.05em; display: flex; align-items: center; gap: 10px;
 }
-.hero-card-phone .phone-label { font-size: 12px; color: var(--t3); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
-.hero-card-phone .phone-number {
-  font-family: var(--font-display); font-size: 28px; color: var(--accent);
-  letter-spacing: 1.5px; display: flex; align-items: center; justify-content: center; gap: 8px;
-}
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } }
 
-/* ===================== STATS ROW ===================== */
-.stats-row { background: var(--primary); padding: 56px 0; border-top: 1px solid rgba(255,255,255,0.08); }
-.stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,0.08); border-radius: var(--radius); overflow: hidden; }
-.stat-box {
-  background: var(--primary); padding: 36px 24px; text-align: center;
-  transition: background 0.2s ease;
-}
-.stat-box:hover { background: var(--primary-dark); }
-.stat-number {
-  font-family: var(--font-display); font-size: 52px; color: var(--accent);
-  line-height: 1; margin-bottom: 8px; display: block;
-}
-.stat-number sup { font-size: 26px; vertical-align: super; }
-.stat-label { font-size: 14px; color: var(--t2); font-weight: 300; letter-spacing: 0.5px; }
+/* STATS */
+.stats-row { background: var(--primary); padding: 36px 0; }
+.stats-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat-box { text-align: center; padding: 20px; border-right: 1px solid rgba(255,255,255,0.1); }
+.stat-box:last-child { border-right: none; }
+.stat-number { font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px); color: var(--accent); line-height: 1; margin-bottom: 6px; }
+.stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+@media (max-width: 600px) { .stats-inner { grid-template-columns: repeat(2, 1fr); } .stat-box:nth-child(2) { border-right: none; } }
 
-/* ===================== SERVICES GRID ===================== */
-.services { background: var(--bg); padding: 88px 0; }
-.section-header { text-align: center; margin-bottom: 56px; }
-.section-header h2 { font-family: var(--font-display); font-size: clamp(32px,4vw,48px); color: var(--dark-text); text-transform: uppercase; margin-bottom: 12px; }
-.section-header p { font-size: 16px; color: var(--grey-text); max-width: 540px; margin: 0 auto; font-weight: 300; }
-.services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+/* SERVICES */
+.services-section { background: var(--bg); }
+.section-label { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; margin-bottom: 12px; }
+.section-title { font-family: var(--font-display); font-size: 36px; color: var(--dark-text); margin-bottom: 10px; letter-spacing: -0.02em; }
+.section-sub { font-family: var(--font-body); font-size: 16px; color: var(--grey-text); margin-bottom: 48px; max-width: 560px; line-height: 1.65; }
+
 .service-card {
   background: var(--bg); border: 1px solid var(--border); border-top: 3px solid transparent;
-  border-radius: var(--radius); padding: 32px 28px;
-  transition: border-top-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); transition: all 0.25s ease;
 }
-.service-card:hover { border-top-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow); }
+.service-card:hover { border-top-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .service-icon {
-  width: 52px; height: 52px; border-radius: 50%;
-  background: rgba(150,46,33,0.12); display: flex; align-items: center; justify-content: center;
-  color: var(--accent); margin-bottom: 18px;
+  width: 54px; height: 54px; background: rgba(234,179,8,0.12); border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; color: var(--accent); margin-bottom: 16px;
 }
-.service-name { font-family: var(--font-display); font-size: 17px; color: var(--dark-text); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px; }
-.service-desc { font-size: 14px; color: var(--grey-text); line-height: 1.65; margin-bottom: 16px; font-weight: 300; }
-.service-link {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 13px; font-weight: 600; color: var(--accent);
-  transition: gap 0.2s ease;
-}
-.service-link:hover { gap: 10px; }
+.service-name { font-family: var(--font-display); font-size: 17px; color: var(--dark-text); margin-bottom: 8px; letter-spacing: 0.02em; }
+.service-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 14px; }
+.service-link { font-family: var(--font-body); font-size: 13px; color: var(--accent-dark); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+.service-link:hover { color: var(--accent); }
 
-/* ===================== WHY CHOOSE US ===================== */
-.why-us {
-  position: relative; overflow: hidden;
-  background: var(--primary); padding: 88px 0;
-}
-.why-us::after {
-  content: '';
-  position: absolute; inset: 0;
+/* WHY CHOOSE US */
+.why-section { background: var(--primary); position: relative; overflow: hidden; }
+.why-section::after {
+  content: ''; position: absolute; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  opacity: 0.12; pointer-events: none; z-index: 0;
+  opacity: 0.1; pointer-events: none; z-index: 0;
 }
-.why-us > * { position: relative; z-index: 1; }
-.why-us .section-header h2 { color: var(--t1); }
-.why-us .section-header p { color: var(--t2); }
-.why-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-bottom: 56px; }
-.why-stat-card {
-  background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius); padding: 28px 20px; text-align: center;
-}
-.why-stat-card .w-num { font-family: var(--font-display); font-size: 40px; color: var(--accent); line-height: 1; margin-bottom: 6px; }
-.why-stat-card .w-label { font-size: 13px; color: var(--t2); font-weight: 300; }
-.differentiators { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; }
-.diff-item {
-  display: flex; gap: 16px; background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 24px;
-}
-.diff-check {
-  flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%;
-  background: rgba(150,46,33,0.2); display: flex; align-items: center; justify-content: center;
-  color: var(--accent); margin-top: 2px;
-}
-.diff-content h4 { font-family: var(--font-display); font-size: 18px; color: var(--t1); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 6px; }
-.diff-content p { font-size: 14px; color: var(--t2); font-weight: 300; line-height: 1.65; }
+.why-section > * { position: relative; z-index: 1; }
+.why-section .section-title { color: white; }
+.why-section .section-sub { color: var(--t2); }
+.why-stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 56px; }
+.why-stat-card { background: var(--primary-dark); border-radius: var(--radius); padding: 24px 20px; text-align: center; }
+.why-stat-num { font-family: var(--font-display); font-size: 36px; color: var(--accent); margin-bottom: 4px; letter-spacing: 0.02em; }
+.why-stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.why-item { display: flex; align-items: flex-start; gap: 16px; }
+.why-icon-wrap { width: 44px; height: 44px; background: rgba(234,179,8,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0; }
+.why-item-title { font-family: var(--font-display); font-size: 17px; color: white; margin-bottom: 4px; letter-spacing: 0.03em; }
+.why-item-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.6; }
+@media (max-width: 900px) { .why-stat-grid { grid-template-columns: repeat(2, 1fr); } .why-grid { grid-template-columns: 1fr; } }
 
-/* ===================== HOW IT WORKS ===================== */
-.how-it-works { background: var(--primary-dark); padding: 88px 0; }
-.how-it-works .section-header h2 { color: var(--t1); }
-.how-it-works .section-header p { color: var(--t2); }
-.steps-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; position: relative; }
-.steps-row::before {
-  content: ''; position: absolute; top: 38px; left: calc(100%/6); right: calc(100%/6);
-  height: 2px; border-top: 2px dashed rgba(255,255,255,0.2); z-index: 0;
-}
-.step {
-  text-align: center; padding: 0 32px;
-  position: relative; z-index: 1;
-}
-.step-num {
-  width: 76px; height: 76px; border-radius: 50%;
-  background: var(--accent); color: #fff;
-  font-family: var(--font-display); font-size: 32px;
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 20px; position: relative; z-index: 2;
-  box-shadow: 0 4px 20px rgba(150,46,33,0.4);
-}
-.step-icon {
-  width: 48px; height: 48px; border-radius: 50%;
-  background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center;
-  color: var(--t2); margin: 0 auto 16px;
-}
-.step h3 { font-family: var(--font-display); font-size: 22px; color: var(--t1); text-transform: uppercase; margin-bottom: 10px; letter-spacing: 0.5px; }
-.step p { font-size: 14px; color: var(--t2); font-weight: 300; line-height: 1.65; }
+/* HOW IT WORKS */
+.how-section { background: var(--primary-dark); }
+.how-section .section-title { color: white; }
+.how-section .section-sub { color: var(--t2); }
+.how-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; position: relative; }
+.how-steps::before { content: ''; position: absolute; top: 32px; left: 16.67%; right: 16.67%; height: 1px; border-top: 2px dashed rgba(255,255,255,0.15); z-index: 0; }
+.how-step { text-align: center; padding: 0 24px; position: relative; z-index: 1; }
+.how-step-num { width: 64px; height: 64px; border-radius: 50%; background: var(--accent); font-family: var(--font-display); font-size: 28px; color: var(--dark-text); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+.how-step-icon { color: white; margin-bottom: 14px; }
+.how-step-title { font-family: var(--font-display); font-size: 18px; color: white; margin-bottom: 8px; letter-spacing: 0.03em; }
+.how-step-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.6; }
+@media (max-width: 600px) { .how-steps { grid-template-columns: 1fr; } .how-steps::before { display: none; } .how-step { margin-bottom: 36px; } }
 
-/* ===================== REVIEWS ===================== */
-.reviews { background: var(--bg-off); padding: 88px 0; }
-.reviews .section-header h2 { color: var(--dark-text); }
-.reviews .section-header p { color: var(--grey-text); }
-.reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-.review-card {
-  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 32px 28px; box-shadow: var(--shadow);
-}
-.review-quote { color: var(--accent); margin-bottom: 16px; opacity: 0.5; }
-.review-text { font-size: 15px; color: var(--dark-text); line-height: 1.7; margin-bottom: 20px; font-weight: 300; }
-.review-stars { display: flex; gap: 3px; color: #f59e0b; margin-bottom: 14px; }
+/* REVIEWS */
+.reviews-section { background: var(--bg-off); }
+.reviews-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
+.google-badge { display: flex; align-items: center; gap: 10px; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; }
+.google-badge-rating { font-family: var(--font-display); font-size: 24px; color: var(--dark-text); letter-spacing: 0.02em; }
+.google-badge-sub { font-family: var(--font-body); font-size: 11px; color: var(--grey-text); }
+.review-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); transition: all 0.25s ease; }
+.review-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); transform: translateY(-3px); }
+.review-stars { display: flex; gap: 3px; color: var(--accent); margin-bottom: 4px; }
+.review-text { font-family: var(--font-body); font-style: italic; font-size: 15px; line-height: 1.7; color: var(--dark-text); margin-bottom: 20px; }
+.review-divider { border: none; border-top: 1px solid var(--border); margin: 0 0 16px; }
 .review-author { display: flex; align-items: center; gap: 12px; }
-.review-avatar {
-  width: 44px; height: 44px; border-radius: 50%; background: var(--primary);
-  font-family: var(--font-display); font-size: 18px; color: #fff;
-  display: flex; align-items: center; justify-content: center;
-}
-.review-name { font-weight: 600; font-size: 14px; color: var(--dark-text); }
-.review-location { font-size: 13px; color: var(--grey-text); font-weight: 300; }
+.review-avatar { width: 40px; height: 40px; border-radius: 50%; background: rgba(234,179,8,0.15); font-family: var(--font-display); font-size: 16px; color: var(--accent-dark); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.review-name { font-family: var(--font-display); font-size: 15px; color: var(--dark-text); letter-spacing: 0.02em; }
+.review-location { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); }
 
-/* ===================== SERVICE AREAS ===================== */
-.service-areas { background: var(--primary); padding: 88px 0; }
-.areas-inner { display: grid; grid-template-columns: repeat(2,1fr); gap: 64px; align-items: center; }
-.areas-left h2 { font-family: var(--font-display); font-size: clamp(32px,4vw,48px); color: var(--t1); text-transform: uppercase; margin-bottom: 16px; }
-.areas-left p { font-size: 16px; color: var(--t2); font-weight: 300; line-height: 1.7; margin-bottom: 28px; }
-.areas-card {
-  background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--radius); padding: 32px;
-}
-.areas-card h3 { font-family: var(--font-display); font-size: 20px; color: var(--t1); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 20px; }
-.chips { display: flex; flex-wrap: wrap; gap: 10px; }
-.chip {
-  font-size: 13px; font-weight: 600; color: var(--t2);
-  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
-  padding: 8px 16px; border-radius: 100px; cursor: default;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-.chip:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+/* SERVICE AREAS */
+.areas-section { background: var(--primary); }
+.areas-section .section-title { color: white; }
+.areas-section .section-sub { color: var(--t2); }
+.areas-inner-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.areas-card { background: var(--primary-dark); border-radius: var(--radius); padding: 28px; border: 1px solid rgba(255,255,255,0.08); }
+.areas-card-title { font-family: var(--font-display); font-size: 16px; color: var(--t2); margin-bottom: 16px; letter-spacing: 0.05em; text-transform: uppercase; }
+.area-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.area-chip { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 6px 14px; font-family: var(--font-body); font-size: 13px; color: var(--t2); cursor: pointer; transition: all 0.2s; }
+.area-chip:hover { background: var(--accent); color: var(--dark-text); border-color: var(--accent); }
+@media (max-width: 768px) { .areas-inner-grid { grid-template-columns: 1fr; } }
 
-/* ===================== CONTACT FORM ===================== */
-.contact { background: var(--bg); padding: 88px 0; }
-.contact-inner { display: grid; grid-template-columns: repeat(2,1fr); gap: 56px; align-items: start; }
-.contact-form-wrap h2 { font-family: var(--font-display); font-size: clamp(28px,3.5vw,42px); color: var(--dark-text); text-transform: uppercase; margin-bottom: 8px; }
-.contact-form-wrap p { font-size: 15px; color: var(--grey-text); margin-bottom: 28px; font-weight: 300; }
-.form-row { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
-.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
-.form-group label { font-size: 13px; font-weight: 600; color: var(--dark-text); letter-spacing: 0.3px; }
-.form-group input,
-.form-group select,
-.form-group textarea {
-  padding: 12px 16px; border: 1.5px solid var(--border); border-radius: 10px;
-  font-size: 14px; color: var(--dark-text); background: var(--bg);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease; outline: none;
-}
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(150,46,33,0.12);
-}
-.form-group textarea { resize: vertical; min-height: 120px; }
-.btn-submit { width: 100%; justify-content: center; font-size: 16px; padding: 16px; border-radius: 10px; }
-.contact-info-card {
-  background: var(--primary-dark); border-radius: var(--radius); padding: 36px;
-  color: var(--t1);
-}
-.contact-info-card h3 { font-family: var(--font-display); font-size: 24px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 28px; }
-.info-item { display: flex; gap: 14px; margin-bottom: 22px; }
-.info-icon {
-  flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px;
-  background: rgba(150,46,33,0.2); display: flex; align-items: center; justify-content: center;
-  color: var(--accent);
-}
-.info-content .info-label { font-size: 12px; color: var(--t3); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 3px; }
-.info-content .info-value { font-size: 15px; color: var(--t1); font-weight: 400; }
-.info-content .info-value a { color: var(--t1); }
-.info-content .info-value a:hover { color: var(--accent); }
-.hours-list { margin-top: 4px; }
-.hours-list li { font-size: 14px; color: var(--t2); font-weight: 300; margin-bottom: 3px; display: flex; justify-content: space-between; gap: 16px; }
+/* CONTACT */
+.contact-section { background: white; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.form-group { margin-bottom: 18px; }
+.form-label { display: block; font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; }
+input, select, textarea { width: 100%; background: var(--bg-off); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; font-family: var(--font-body); font-size: 14px; color: var(--dark-text); transition: border-color 0.2s; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(234,179,8,0.1); }
+textarea { resize: vertical; min-height: 110px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.submit-btn { width: 100%; background: var(--accent); color: var(--dark-text); font-family: var(--font-display); font-size: 16px; letter-spacing: 0.05em; padding: 15px 24px; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 16px rgba(234,179,8,0.35); transition: all 0.15s; }
+.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(234,179,8,0.45); }
+.contact-info-card { background: var(--primary); border-radius: var(--radius); padding: 32px; color: white; }
+.contact-info-title { font-family: var(--font-display); font-size: 24px; color: white; margin-bottom: 24px; letter-spacing: 0.03em; }
+.contact-info-item { display: flex; gap: 14px; margin-bottom: 20px; }
+.contact-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.contact-item-label { font-family: var(--font-display); font-size: 13px; color: var(--t3); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 3px; }
+.contact-item-value { font-family: var(--font-body); font-size: 15px; color: white; }
+@media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
 
-/* ===================== CTA BAND ===================== */
-.cta-band {
-  position: relative; overflow: hidden;
-  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
-  padding: 72px 0; text-align: center;
-}
+/* CTA BAND */
+.cta-band { background: linear-gradient(135deg, var(--accent-dark), var(--accent)); padding: 80px 0; text-align: center; position: relative; overflow: hidden; }
 .cta-band::after {
-  content: '';
-  position: absolute; inset: 0;
+  content: ''; position: absolute; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
   opacity: 0.12; pointer-events: none; z-index: 0;
 }
 .cta-band > * { position: relative; z-index: 1; }
-.cta-band h2 { font-family: var(--font-display); font-size: clamp(36px,5vw,58px); color: var(--t1); text-transform: uppercase; margin-bottom: 14px; letter-spacing: 1px; }
-.cta-band p { font-size: 17px; color: var(--t2); font-weight: 300; max-width: 480px; margin: 0 auto 32px; line-height: 1.65; }
+.cta-band-headline { font-family: var(--font-display); font-size: clamp(28px, 4vw, 42px); color: var(--dark-text); margin-bottom: 12px; letter-spacing: -0.02em; }
+.cta-band-sub { font-family: var(--font-body); font-size: 17px; color: rgba(26,26,46,0.75); margin-bottom: 32px; }
+.cta-band-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--dark-text); color: white; font-family: var(--font-display); font-size: 16px; letter-spacing: 0.05em; padding: 16px 36px; border-radius: 8px; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.25); transition: all 0.15s; }
+.cta-band-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
 
-/* ===================== FOOTER ===================== */
-.footer { background: var(--primary-dark); padding: 64px 0 0; }
-.footer-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 40px; padding-bottom: 48px; }
-.footer-brand .brand-name { font-family: var(--font-display); font-size: 24px; color: var(--t1); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
-.footer-brand p { font-size: 14px; color: var(--t3); line-height: 1.7; font-weight: 300; margin-bottom: 16px; }
-.footer-phone { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 20px; color: var(--accent); letter-spacing: 1px; }
-.footer-col h4 { font-family: var(--font-display); font-size: 16px; color: var(--t1); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px; }
-.footer-col ul { display: flex; flex-direction: column; gap: 10px; }
-.footer-col ul li a { font-size: 14px; color: var(--t3); font-weight: 300; transition: color 0.2s ease; }
-.footer-col ul li a:hover { color: var(--accent); }
-.footer-contact-item { display: flex; gap: 10px; margin-bottom: 12px; }
-.footer-contact-item svg { flex-shrink: 0; color: var(--accent); margin-top: 2px; }
-.footer-contact-item span { font-size: 14px; color: var(--t3); font-weight: 300; line-height: 1.5; }
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 24px;
-  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
-  max-width: 1160px; margin: 0 auto;
-}
-.footer-bottom p { font-size: 13px; color: var(--t3); font-weight: 300; }
-
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-  .stats-grid { grid-template-columns: repeat(2,1fr); }
-  .services-grid { grid-template-columns: repeat(2,1fr); }
-  .why-stats { grid-template-columns: repeat(2,1fr); }
-  .differentiators { grid-template-columns: 1fr; }
-  .steps-row { grid-template-columns: 1fr; gap: 40px; }
-  .steps-row::before { display: none; }
-  .reviews-grid { grid-template-columns: repeat(2,1fr); }
-  .areas-inner { grid-template-columns: 1fr; gap: 40px; }
-  .contact-inner { grid-template-columns: 1fr; gap: 40px; }
-  .footer-grid { grid-template-columns: repeat(2,1fr); }
-}
-@media (max-width: 600px) {
-  .header-inner { flex-wrap: wrap; }
-  .hero-ctas { flex-direction: column; }
-  .stats-grid { grid-template-columns: 1fr; }
-  .services-grid { grid-template-columns: 1fr; }
-  .why-stats { grid-template-columns: 1fr; }
-  .reviews-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; text-align: center; }
-}
+/* FOOTER */
+.site-footer { background: var(--primary-dark); padding: 72px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.footer-brand-name { font-family: var(--font-display); font-size: 20px; color: white; letter-spacing: 0.05em; margin-bottom: 10px; }
+.footer-brand-desc { font-family: var(--font-body); font-size: 14px; color: var(--t3); line-height: 1.65; margin-bottom: 20px; }
+.footer-col-title { font-family: var(--font-display); font-size: 13px; color: var(--t2); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 9px; }
+.footer-links a { font-family: var(--font-body); font-size: 14px; color: var(--t3); text-decoration: none; transition: color 0.15s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom { padding: 20px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-copy { font-family: var(--font-body); font-size: 12px; color: var(--t3); }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
-<!-- ===================== HEADER ===================== -->
 <header class="site-header" id="site-header">
   <div class="header-inner">
     <div class="header-brand">
-      <span class="name">Your Mesa Electrician</span>
-      <span class="tagline">Electrical Contractor serving Mesa Arizona</span>
+      <h1>YOUR MESA ELECTRICIAN</h1>
+      <span>Licensed Electrical Contractor &middot; Mesa, AZ</span>
     </div>
-    <div class="header-cta">
-      <a href="tel:4807014348" class="btn btn-accent">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.07a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        (480) 701-4348
-      </a>
-    </div>
+    <nav class="header-nav">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:4807014348" class="header-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (480) 701-4348
+    </a>
   </div>
 </header>
 
-<!-- ===================== HERO ===================== -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-left">
       <div class="hero-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Licensed &amp; Bonded Mesa Electrician
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Mesa's #1 Rated Electrician
       </div>
-      <h1 class="hero-headline">Mesa's Most Trusted <span>Electricians</span></h1>
-      <p class="hero-sub">Serving Dobson Ranch, Red Mountain, Eastmark, and all of Mesa, AZ with fast, reliable electrical work done right the first time.</p>
+      <h2 class="hero-headline">Mesa's Most <span>Trusted</span> Electricians</h2>
+      <p class="hero-sub">Background-checked, drug-screened professionals serving Mesa and the East Valley since 2003. Every technician licensed, insured, and trained to protect your family and your home.</p>
       <div class="hero-ctas">
-        <a href="tel:4807014348" class="btn btn-accent">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.07a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          CALL (480) 701-4348
+        <a href="tel:4807014348" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (480) 701-4348
         </a>
-        <a href="#contact" class="btn btn-ghost">FREE ESTIMATE</a>
+        <a href="#contact" class="btn-ghost">Get Free Estimate</a>
       </div>
       <div class="hero-trust">
-        <div class="stars">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <div class="hero-trust-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <span>5.0</span>
-        <span class="hero-trust-sep">|</span>
-        <span>29 Reviews</span>
-        <span class="hero-trust-sep">|</span>
-        <span>Licensed &amp; Insured</span>
-        <span class="hero-trust-sep">|</span>
-        <span>Same-Day Service</span>
+        <span class="hero-trust-text">5.0 &middot; 29 Google Reviews</span>
+        <div class="trust-sep"></div>
+        <span class="hero-trust-text">Licensed &amp; Insured</span>
+        <div class="trust-sep"></div>
+        <span class="hero-trust-text">Background Checked</span>
       </div>
     </div>
-    <div class="hero-right">
-      <div class="hero-card">
-        <h3>Why Homeowners Choose Us</h3>
-        <div class="value-prop">
-          <div class="vp-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div class="vp-content">
-            <div class="vp-title">Same-Day Availability</div>
-            <div class="vp-desc">Most jobs booked and completed within 24 hours, including weekends.</div>
-          </div>
-        </div>
-        <div class="value-prop">
-          <div class="vp-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <div class="vp-content">
-            <div class="vp-title">Licensed &amp; Fully Insured</div>
-            <div class="vp-desc">Arizona-licensed electricians with $1M liability coverage on every job.</div>
-          </div>
-        </div>
-        <div class="value-prop">
-          <div class="vp-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-          </div>
-          <div class="vp-content">
-            <div class="vp-title">Upfront Flat Pricing</div>
-            <div class="vp-desc">You get a clear quote before we start — no surprises on the final bill.</div>
-          </div>
-        </div>
-        <div class="value-prop">
-          <div class="vp-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <div class="vp-content">
-            <div class="vp-title">Workmanship Guarantee</div>
-            <div class="vp-desc">All electrical work backed by our 1-year labor warranty, no questions asked.</div>
-          </div>
-        </div>
-        <div class="hero-card-phone">
-          <div class="phone-label">Call Anytime</div>
-          <a href="tel:4807014348" class="phone-number">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.07a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            (480) 701-4348
-          </a>
-        </div>
+    <div class="hero-card">
+      <div class="hero-card-title">WHY HOMEOWNERS CHOOSE US</div>
+      <div class="hero-card-item">
+        <div class="hero-card-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="hero-card-item-title">Background Checked Techs</div><div class="hero-card-item-sub">Drug screened &amp; professionally trained</div></div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hero-card-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="hero-card-item-title">Upfront Flat-Rate Pricing</div><div class="hero-card-item-sub">No hidden fees, ever</div></div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hero-card-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="hero-card-item-title">Same-Day Service Available</div><div class="hero-card-item-sub">Emergency calls answered 24/7</div></div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hero-card-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="hero-card-item-title">Licensed &amp; Bonded in AZ</div><div class="hero-card-item-sub">Fully insured, code-compliant</div></div>
+      </div>
+      <div class="hero-card-phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (480) 701-4348
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== STATS ROW ===================== -->
-<section class="stats-row">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-box">
-        <span class="stat-number" data-target="15" data-suffix="+">0</span>
-        <span class="stat-label">Years in Service</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-number" data-target="500" data-suffix="+">0</span>
-        <span class="stat-label">Projects Completed</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-number" data-target="29">0</span>
-        <span class="stat-label">5-Star Reviews</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-number" data-target="8">0</span>
-        <span class="stat-label">Licensed Cities Served</span>
-      </div>
-    </div>
+<div class="stats-row">
+  <div class="stats-inner">
+    <div class="stat-box"><div class="stat-number" data-target="500" data-suffix="+">500+</div><div class="stat-label">Projects Completed</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="29">29</div><div class="stat-label">5-Star Reviews</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="20" data-suffix="+">20+</div><div class="stat-label">Years in Mesa</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="100" data-suffix="%">100%</div><div class="stat-label">Satisfaction Guaranteed</div></div>
   </div>
-</section>
+</div>
 
-<!-- ===================== SERVICES GRID ===================== -->
-<section class="services" id="services">
+<section class="services-section" id="services">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label">What We Do</span>
-      <h2>Electrical Services in Mesa, AZ</h2>
-      <p>From routine repairs to full panel upgrades, our licensed electricians handle it all — fast and by the book.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card fade-card">
-        <div class="service-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="16 2 12 7 8 2"/></svg>
-        </div>
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Electrical Services Done Right</h2>
+    <p class="section-sub">From flickering outlets to full panel upgrades &mdash; Mesa homeowners rely on us for precise, code-compliant electrical work with zero surprises on the invoice.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M8 6v4"/><path d="M8 14v4"/><path d="M16 6v4"/><path d="M16 14v4"/><path d="M2 12h20"/></svg></div>
         <div class="service-name">Panel Upgrades</div>
-        <p class="service-desc">Outdated panels trip breakers and create fire risks. We upgrade your electrical panel to modern 200-amp service, giving your home the capacity it needs safely.</p>
-        <a href="#contact" class="service-link">
-          Get a Quote
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        <p class="service-desc">Outdated 100A panels are a fire risk and an insurance liability. We upgrade to 200A systems &mdash; permitted, inspected, and warranted.</p>
+        <a href="#contact" class="service-link">Schedule Inspection &rarr;</a>
       </div>
-      <div class="service-card fade-card">
-        <div class="service-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-        </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07M8.46 8.46a5 5 0 0 0 0 7.07"/></svg></div>
         <div class="service-name">Outlet &amp; Switch Repair</div>
-        <p class="service-desc">Dead outlets and flickering switches are more than annoying — they signal wiring issues. We diagnose, repair, or replace them so your home runs reliably again.</p>
-        <a href="#contact" class="service-link">
-          Get a Quote
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        <p class="service-desc">Dead outlets and warm faceplates signal wiring faults. We find the root cause and fix it right &mdash; not just reset the breaker and leave.</p>
+        <a href="#contact" class="service-link">Get Same-Day Help &rarr;</a>
       </div>
-      <div class="service-card fade-card">
-        <div class="service-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-        </div>
-        <div class="service-name">Ceiling Fan Install</div>
-        <p class="service-desc">Stay cool without skyrocketing the A/C bill. We install ceiling fans in any room, including mounting to joists and wiring new circuits where none exist.</p>
-        <a href="#contact" class="service-link">
-          Get a Quote
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div>
+        <div class="service-name">Ceiling Fan Installation</div>
+        <p class="service-desc">Proper box mounting, balanced wiring, and safe installation so your fan runs smooth for decades through every Arizona summer.</p>
+        <a href="#contact" class="service-link">Book Install &rarr;</a>
       </div>
-      <div class="service-card fade-card">
-        <div class="service-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        </div>
-        <div class="service-name">EV Charger Install</div>
-        <p class="service-desc">Charge your EV at home overnight without stress. We install Level 2 EVSE chargers with a dedicated 240V circuit, permitted and inspected for full peace of mind.</p>
-        <a href="#contact" class="service-link">
-          Get a Quote
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="service-name">EV Charger Installation</div>
+        <p class="service-desc">Level 2 EVSE with a dedicated 240V circuit. We handle city permits and inspections so your charger is safe, fast, and manufacturer-warranted.</p>
+        <a href="#contact" class="service-link">Get EV Quote &rarr;</a>
       </div>
-      <div class="service-card fade-card">
-        <div class="service-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="9" y1="18" x2="15" y2="18"/><line x1="12" y1="2" x2="12" y2="9"/><path d="M4.22 10.22a8 8 0 1015.56 0"/></svg>
-        </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
         <div class="service-name">Lighting Installation</div>
-        <p class="service-desc">Dull or dated lighting dims your home's value. We install recessed lights, under-cabinet lighting, and smart dimmer systems that transform any space in your Mesa home.</p>
-        <a href="#contact" class="service-link">
-          Get a Quote
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        <p class="service-desc">Recessed cans, pendant fixtures, under-cabinet strips, and landscape lighting &mdash; installed cleanly with zero visible wire runs.</p>
+        <a href="#contact" class="service-link">Design Consultation &rarr;</a>
       </div>
-      <div class="service-card fade-card">
-        <div class="service-icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
         <div class="service-name">Emergency Electrical</div>
-        <p class="service-desc">Sparking outlets, burning smells, or a complete power outage can't wait until Monday. Our emergency electricians respond fast across Mesa and the East Valley.</p>
-        <a href="tel:4807014348" class="service-link">
-          Call Now — 24/7
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+        <p class="service-desc">Burning smell at 2 AM? Breaker won't reset? We answer emergency calls around the clock &mdash; electrical hazards don't wait for business hours.</p>
+        <a href="#contact" class="service-link">Emergency Line &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== WHY CHOOSE US ===================== -->
-<section class="why-us" id="about">
+<section class="why-section">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label">Why Choose Us</span>
-      <h2>Mesa's Preferred Electrical Pros</h2>
-      <p>Local electricians who treat your home like their own — honest pricing, clean work, zero runaround.</p>
+    <div class="section-label">The Difference</div>
+    <h2 class="section-title">Why Mesa Chooses Us</h2>
+    <p class="section-sub">We're not a call center dispatching strangers &mdash; every tech is vetted, trained in-house, and arrives in a marked vehicle wearing a uniform with ID.</p>
+    <div class="why-stat-grid">
+      <div class="why-stat-card"><div class="why-stat-num" data-target="500" data-suffix="+">500+</div><div class="why-stat-label">Homes Serviced</div></div>
+      <div class="why-stat-card"><div class="why-stat-num" data-target="20" data-suffix=" Yrs">20 Yrs</div><div class="why-stat-label">Mesa Experience</div></div>
+      <div class="why-stat-card"><div class="why-stat-num" data-target="100" data-suffix="%">100%</div><div class="why-stat-label">Background Checked</div></div>
+      <div class="why-stat-card"><div class="why-stat-num">5.0</div><div class="why-stat-label">Average Rating</div></div>
     </div>
-    <div class="why-stats">
-      <div class="why-stat-card fade-card">
-        <div class="w-num">5.0</div>
-        <div class="w-label">Average Google Rating</div>
+    <div class="why-grid">
+      <div class="why-item card">
+        <div class="why-icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><div class="why-item-title">Licensed &amp; Bonded in Arizona</div><div class="why-item-desc">Every job is permitted where required and performed to Arizona building code. Your permit history stays clean.</div></div>
       </div>
-      <div class="why-stat-card fade-card">
-        <div class="w-num">24/7</div>
-        <div class="w-label">Emergency Response</div>
+      <div class="why-item card">
+        <div class="why-icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="why-item-title">Upfront Flat-Rate Pricing</div><div class="why-item-desc">You approve the price before we start. No time-and-material surprises, no tack-on fees at the end of a job.</div></div>
       </div>
-      <div class="why-stat-card fade-card">
-        <div class="w-num">1-Yr</div>
-        <div class="w-label">Workmanship Warranty</div>
+      <div class="why-item card">
+        <div class="why-icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div><div class="why-item-title">Same-Day Appointments</div><div class="why-item-desc">We keep open slots every day for same-day calls. Most Mesa requests are scheduled within 4 hours.</div></div>
       </div>
-      <div class="why-stat-card fade-card">
-        <div class="w-num">$0</div>
-        <div class="w-label">Diagnostic Fee with Repair</div>
-      </div>
-    </div>
-    <div class="differentiators">
-      <div class="diff-item fade-card">
-        <div class="diff-check">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div class="diff-content">
-          <h4>Background-Checked Technicians</h4>
-          <p>Every electrician on our team passes a full background check and drug screening. You can feel confident inviting us into your Mesa home.</p>
-        </div>
-      </div>
-      <div class="diff-item fade-card">
-        <div class="diff-check">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div class="diff-content">
-          <h4>Permit &amp; Inspection Ready</h4>
-          <p>We pull the necessary permits for panel work and new circuits, and schedule City of Mesa inspections — protecting your home's value and resale.</p>
-        </div>
-      </div>
-      <div class="diff-item fade-card">
-        <div class="diff-check">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div class="diff-content">
-          <h4>Clean, Respectful Worksite</h4>
-          <p>We lay drop cloths, wear shoe covers, and clean up completely before we leave. Your home looks exactly as we found it — minus the electrical problem.</p>
-        </div>
-      </div>
-      <div class="diff-item fade-card">
-        <div class="diff-check">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <div class="diff-content">
-          <h4>Upfront Written Estimates</h4>
-          <p>No hourly billing surprises. You review and approve a fixed price before any work begins — and that number is the number on your invoice.</p>
-        </div>
+      <div class="why-item card">
+        <div class="why-icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div><div class="why-item-title">Family-Owned, Mesa Local</div><div class="why-item-desc">We live here. Your referrals are our livelihood &mdash; we treat every home like we're signing our name to the work.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== HOW IT WORKS ===================== -->
-<section class="how-it-works" id="process">
+<section class="how-section">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label">Our Process</span>
-      <h2>Simple as 1, 2, 3</h2>
-      <p>Getting your electrical work done shouldn't be stressful. Here's exactly what to expect when you call us.</p>
-    </div>
-    <div class="steps-row">
-      <div class="step fade-card">
-        <div class="step-num">1</div>
-        <div class="step-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.07a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        </div>
-        <h3>Schedule a Call</h3>
-        <p>Call or submit our online form. We'll confirm your appointment time within minutes — often same-day for Mesa and the East Valley.</p>
+    <div class="section-label">The Process</div>
+    <h2 class="section-title">Simple. Fast. Done Right.</h2>
+    <p class="section-sub">Three steps from your call to a safe, inspected result &mdash; no runaround, no waiting weeks for a callback.</p>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <div class="how-step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="how-step-title">Call or Request Online</div>
+        <p class="how-step-desc">Describe the issue &mdash; we listen, ask the right questions, and give an honest estimate before scheduling anything.</p>
       </div>
-      <div class="step fade-card">
-        <div class="step-num">2</div>
-        <div class="step-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <h3>We Diagnose &amp; Quote</h3>
-        <p>Our licensed electrician inspects your issue, explains what's needed in plain English, and hands you a clear written quote before touching a single wire.</p>
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <div class="how-step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <div class="how-step-title">We Show Up On Time</div>
+        <p class="how-step-desc">Your tech arrives in a marked truck, shows ID, and walks you through the plan &mdash; before touching a single wire.</p>
       </div>
-      <div class="step fade-card">
-        <div class="step-num">3</div>
-        <div class="step-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <h3>Work Done Right</h3>
-        <p>We complete the job to code, clean up the workspace, and walk you through everything we did. Your satisfaction — and your safety — is fully guaranteed.</p>
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <div class="how-step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="how-step-title">Inspected &amp; Guaranteed</div>
+        <p class="how-step-desc">Work is tested, cleaned up, and covered by a 12-month workmanship warranty. Anything off &mdash; we're back at no charge.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== REVIEWS ===================== -->
-<section class="reviews" id="reviews">
+<section class="reviews-section" id="reviews">
   <div class="container">
-    <div class="section-header">
-      <span class="section-label">Customer Reviews</span>
-      <h2>What Mesa Homeowners Say</h2>
-      <p>Don't take our word for it — here's what real customers across Mesa have to say about our electrical work.</p>
-    </div>
-    <div class="reviews-grid">
-      <div class="review-card fade-card">
-        <div class="review-quote">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.956.76-3.022.66-1.065 1.515-1.867 2.558-2.403L9.373 5c-.8.396-1.56.898-2.26 1.505-.71.607-1.34 1.305-1.9 2.094s-.98 1.68-1.25 2.69-.346 2.04-.217 3.1c.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.365l.002.001zm9.124 0c0-.88-.23-1.618-.69-2.217-.326-.42-.77-.692-1.327-.817-.56-.124-1.074-.13-1.54-.022-.16-.94.09-1.95.75-3.02.66-1.06 1.514-1.86 2.557-2.4L18.49 5c-.8.396-1.555.898-2.26 1.505-.708.607-1.34 1.305-1.894 2.094-.556.79-.97 1.68-1.24 2.69-.273 1-.345 2.04-.217 3.1.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.365l.002.001z"/></svg>
-        </div>
-        <div class="review-stars">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="review-text">I called on a Tuesday morning because two of our kitchen circuits kept tripping under normal load. The technician arrived by noon, diagnosed a double-tapped breaker in our panel within 20 minutes, and had everything corrected by 1:30 PM. He showed me exactly what was wrong and what he fixed. The price matched the quote exactly — not a penny more. I've been a Dobson Ranch homeowner for 11 years and this is now my go-to electrician, full stop.</p>
-        <div class="review-author">
-          <div class="review-avatar">M</div>
-          <div>
-            <div class="review-name">Mark T.</div>
-            <div class="review-location">Dobson Ranch, Mesa AZ</div>
-          </div>
-        </div>
-      </div>
-      <div class="review-card fade-card">
-        <div class="review-quote">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.956.76-3.022.66-1.065 1.515-1.867 2.558-2.403L9.373 5c-.8.396-1.56.898-2.26 1.505-.71.607-1.34 1.305-1.9 2.094s-.98 1.68-1.25 2.69-.346 2.04-.217 3.1c.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.365l.002.001zm9.124 0c0-.88-.23-1.618-.69-2.217-.326-.42-.77-.692-1.327-.817-.56-.124-1.074-.13-1.54-.022-.16-.94.09-1.95.75-3.02.66-1.06 1.514-1.86 2.557-2.4L18.49 5c-.8.396-1.555.898-2.26 1.505-.708.607-1.34 1.305-1.894 2.094-.556.79-.97 1.68-1.24 2.69-.273 1-.345 2.04-.217 3.1.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.365l.002.001z"/></svg>
-        </div>
-        <div class="review-stars">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="review-text">We just bought a Tesla and needed a Level 2 charger installed in our garage. I got three quotes and Your Mesa Electrician was the only company that pulled a permit and offered an inspection-ready install. They ran a dedicated 60-amp circuit from our panel, mounted the NEMA 14-50 outlet cleanly on the wall, and had us charging the same afternoon they came out. The inspector passed it on the first visit. Money well spent — highly recommend for any EV charger work in the Red Mountain area.</p>
-        <div class="review-author">
-          <div class="review-avatar">S</div>
-          <div>
-            <div class="review-name">Sara K.</div>
-            <div class="review-location">Red Mountain, Mesa AZ</div>
-          </div>
-        </div>
-      </div>
-      <div class="review-card fade-card">
-        <div class="review-quote">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.192 15.757c0-.88-.23-1.618-.69-2.217-.326-.412-.768-.683-1.327-.812-.55-.128-1.07-.137-1.54-.028-.16-.95.1-1.956.76-3.022.66-1.065 1.515-1.867 2.558-2.403L9.373 5c-.8.396-1.56.898-2.26 1.505-.71.607-1.34 1.305-1.9 2.094s-.98 1.68-1.25 2.69-.346 2.04-.217 3.1c.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.365l.002.001zm9.124 0c0-.88-.23-1.618-.69-2.217-.326-.42-.77-.692-1.327-.817-.56-.124-1.074-.13-1.54-.022-.16-.94.09-1.95.75-3.02.66-1.06 1.514-1.86 2.557-2.4L18.49 5c-.8.396-1.555.898-2.26 1.505-.708.607-1.34 1.305-1.894 2.094-.556.79-.97 1.68-1.24 2.69-.273 1-.345 2.04-.217 3.1.168 1.4.62 2.52 1.356 3.35.735.84 1.652 1.26 2.748 1.26.965 0 1.766-.29 2.4-.878.628-.576.94-1.365.94-2.365l.002.001z"/></svg>
-        </div>
-        <div class="review-stars">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <p class="review-text">Had a scary situation — noticed a burning smell near our main panel late on a Friday evening. Called the after-hours line and had a tech at our Eastmark home by 9:30 PM. He found an overloaded 100-amp service that was overheating at the main lugs and condemned the panel on the spot for safety. He returned Saturday morning with a 200-amp panel and had us fully back up by 3 PM. His clear explanation of the hazard and fast response genuinely made me feel our family was safe. Worth every dollar.</p>
-        <div class="review-author">
-          <div class="review-avatar">J</div>
-          <div>
-            <div class="review-name">Jamie R.</div>
-            <div class="review-location">Eastmark, Mesa AZ</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== SERVICE AREAS ===================== -->
-<section class="service-areas" id="areas">
-  <div class="container">
-    <div class="areas-inner">
-      <div class="areas-left fade-card">
-        <span class="section-label">Coverage</span>
-        <h2>Serving Mesa &amp; the East Valley</h2>
-        <p>We're locally based in Mesa and can reach most East Valley communities the same day you call. Whether you're in central Mesa or out in Queen Creek, we'll show up on time with the right tools for the job.</p>
-        <a href="tel:4807014348" class="btn btn-accent">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.07a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          Check My Area — Call Now
-        </a>
-      </div>
-      <div class="areas-right fade-card">
-        <div class="areas-card">
-          <h3>Neighborhoods We Serve</h3>
-          <div class="chips">
-            <span class="chip">Mesa</span>
-            <span class="chip">Gilbert</span>
-            <span class="chip">Chandler</span>
-            <span class="chip">Tempe</span>
-            <span class="chip">Scottsdale</span>
-            <span class="chip">Apache Junction</span>
-            <span class="chip">Queen Creek</span>
-            <span class="chip">Ahwatukee</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CONTACT FORM ===================== -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="contact-inner">
-      <div class="contact-form-wrap">
-        <span class="section-label">Get in Touch</span>
-        <h2>Request a Free Estimate</h2>
-        <p>Fill out the form below and we'll reach out within one business hour to confirm your appointment. No obligation, no pressure.</p>
-        <form>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="fname" placeholder="John" autocomplete="given-name">
-            </div>
-            <div class="form-group">
-              <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lname" placeholder="Smith" autocomplete="family-name">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="(480) 555-0100" autocomplete="tel">
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="john@example.com" autocomplete="email">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="service">Service Needed</label>
-            <select id="service" name="service">
-              <option value="" disabled selected>Select a service...</option>
-              <option value="panel">Panel Upgrade</option>
-              <option value="outlet">Outlet / Switch Repair</option>
-              <option value="fan">Ceiling Fan Installation</option>
-              <option value="ev">EV Charger Installation</option>
-              <option value="lighting">Lighting Installation</option>
-              <option value="emergency">Emergency Electrical</option>
-              <option value="other">Other / Not Sure</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Tell Us About Your Project</label>
-            <textarea id="message" name="message" placeholder="Briefly describe what's going on — any details help us prepare..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-accent btn-submit">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            Send My Request
-          </button>
-        </form>
-      </div>
+    <div class="reviews-header">
       <div>
-        <div class="contact-info-card">
-          <h3>Contact Information</h3>
-          <div class="info-item">
-            <div class="info-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.07a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            </div>
-            <div class="info-content">
-              <div class="info-label">Phone</div>
-              <div class="info-value"><a href="tel:4807014348">(480) 701-4348</a></div>
-            </div>
-          </div>
-          <div class="info-item">
-            <div class="info-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div class="info-content">
-              <div class="info-label">Email</div>
-              <div class="info-value"><a href="mailto:info@yourmesaelectrician.com">info@yourmesaelectrician.com</a></div>
-            </div>
-          </div>
-          <div class="info-item">
-            <div class="info-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="info-content">
-              <div class="info-label">Service Area</div>
-              <div class="info-value">Mesa, AZ and East Valley</div>
-            </div>
-          </div>
-          <div class="info-item">
-            <div class="info-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="info-content">
-              <div class="info-label">Business Hours</div>
-              <div class="info-value">
-                <ul class="hours-list">
-                  <li><span>Mon – Fri</span><span>7:00 AM – 7:00 PM</span></li>
-                  <li><span>Saturday</span><span>8:00 AM – 5:00 PM</span></li>
-                  <li><span>Sunday</span><span>Emergency Only</span></li>
-                  <li><span>24/7</span><span>Emergency Line</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="info-item" style="margin-bottom:0;">
-            <div class="info-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div class="info-content">
-              <div class="info-label">License</div>
-              <div class="info-value">Arizona Licensed &amp; Bonded Electrician</div>
-            </div>
+        <div class="section-label">What Clients Say</div>
+        <h2 class="section-title">5 Stars Across the Board</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div><div class="google-badge-rating">5.0</div><div class="google-badge-sub">29 Google Reviews</div></div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Had a bathroom outlet go completely dead at 10 PM &mdash; sparks when I touched the wall plate. Called and a tech was at my door in Dobson Ranch within 45 minutes. Fixed a burned wire connection, replaced the GFCI, and the price matched exactly what they quoted. No nonsense. These are my electricians for life."</p>
+        <hr class="review-divider">
+        <div class="review-author">
+          <div class="review-avatar">RK</div>
+          <div><div class="review-name">RACHEL K.</div><div class="review-location">Mesa (Dobson Ranch) &middot; Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Upgraded my whole panel from 100 to 200 amps for a new HVAC unit. They pulled the permit, scheduled the city inspection, and had us back on by 4 PM the same day. The tech walked me through every step and left the garage spotless. Fair price &mdash; not padded. Will use again."</p>
+        <hr class="review-divider">
+        <div class="review-author">
+          <div class="review-avatar">MT</div>
+          <div><div class="review-name">MARCUS T.</div><div class="review-location">Mesa, AZ &middot; Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"I live alone and was nervous about strangers in my home. They told me about their background-check policy when I booked &mdash; that sold me. The electrician arrived with an ID badge, installed two ceiling fans in under two hours, was polite the whole time. I felt completely safe. That's rare."</p>
+        <hr class="review-divider">
+        <div class="review-author">
+          <div class="review-avatar">LP</div>
+          <div><div class="review-name">LINDA P.</div><div class="review-location">Gilbert, AZ &middot; Google Review</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas-section" id="areas">
+  <div class="container">
+    <div class="areas-inner-grid">
+      <div class="areas-left">
+        <div class="section-label">Where We Work</div>
+        <h2 class="section-title">Serving Mesa &amp; the East Valley</h2>
+        <p class="section-sub">From downtown Mesa to the Superstition Freeway corridor &mdash; our licensed techs are stationed throughout the East Valley for fast response.</p>
+        <a href="tel:4807014348" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Check My Area
+        </a>
+      </div>
+      <div class="areas-card">
+        <div class="areas-card-title">Service Coverage</div>
+        <div class="area-chips">
+          <div class="area-chip">Mesa</div>
+          <div class="area-chip">Gilbert</div>
+          <div class="area-chip">Chandler</div>
+          <div class="area-chip">Tempe</div>
+          <div class="area-chip">Scottsdale</div>
+          <div class="area-chip">Queen Creek</div>
+          <div class="area-chip">Ahwatukee</div>
+          <div class="area-chip">Apache Junction</div>
+          <div class="area-chip">San Tan Valley</div>
+          <div class="area-chip">Fountain Hills</div>
+          <div class="area-chip">Gold Canyon</div>
+          <div class="area-chip">Dobson Ranch</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-label">Request Service</div>
+    <h2 class="section-title" style="margin-bottom:8px;">Get Your Free Estimate</h2>
+    <p class="section-sub">Fill out the form and we'll contact you within one business hour. Emergency? Call us directly.</p>
+    <div class="contact-grid">
+      <div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">First Name</label><input type="text" placeholder="John"></div>
+          <div class="form-group"><label class="form-label">Last Name</label><input type="text" placeholder="Smith"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" placeholder="(480) 555-0100"></div>
+        <div class="form-group"><label class="form-label">Email Address</label><input type="email" placeholder="john@example.com"></div>
+        <div class="form-group">
+          <label class="form-label">Service Needed</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Panel Upgrade</option>
+            <option>Outlet / Switch Repair</option>
+            <option>Ceiling Fan Installation</option>
+            <option>EV Charger Installation</option>
+            <option>Lighting Installation</option>
+            <option>Emergency Service</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Describe the Issue</label><textarea placeholder="Tell us what's happening &mdash; when did it start, what have you noticed?"></textarea></div>
+        <button class="submit-btn">Send Request &mdash; We'll Call Within 1 Hour</button>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-info-title">Reach Us Directly</div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="contact-item-label">Phone</div><div class="contact-item-value">(480) 701-4348</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="contact-item-label">Service Area</div><div class="contact-item-value">Mesa, AZ &amp; East Valley</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="contact-item-label">Hours</div><div class="contact-item-value">Mon&ndash;Sat 7AM&ndash;7PM<br>Emergency: 24/7</div></div>
+        </div>
+        <div style="margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.12);">
+          <div style="font-family:var(--font-display);font-size:14px;color:var(--t2);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px;">Credentials</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:var(--font-body);font-size:14px;color:var(--t2);">Licensed &amp; Bonded &mdash; AZ ROC</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:var(--font-body);font-size:14px;color:var(--t2);">Fully Insured &mdash; $1M Liability</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:var(--font-body);font-size:14px;color:var(--t2);">Background Checked &mdash; All Techs</span></div>
+            <div style="display:flex;align-items:center;gap:8px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><polyline points="20 6 9 17 4 12"/></svg><span style="font-family:var(--font-body);font-size:14px;color:var(--t2);">12-Month Workmanship Warranty</span></div>
           </div>
         </div>
       </div>
@@ -936,203 +651,99 @@ button, input, select, textarea { font-family: var(--font-body); }
   </div>
 </section>
 
-<!-- ===================== CTA BAND ===================== -->
-<section class="cta-band">
+<div class="cta-band">
   <div class="container">
-    <h2>Ready to Fix Your Electrical Problem?</h2>
-    <p>Call now for same-day service across Mesa and the East Valley. Licensed, insured, and ready to work today.</p>
-    <a href="tel:4807014348" class="btn btn-white">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.07a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      CALL (480) 701-4348 NOW
+    <h2 class="cta-band-headline">Electrical Problem? Don't Wait.</h2>
+    <p class="cta-band-sub">Mesa's trusted team is standing by &mdash; same-day appointments available now.</p>
+    <a href="tel:4807014348" class="cta-band-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (480) 701-4348 Now
     </a>
   </div>
-</section>
+</div>
 
-<!-- ===================== FOOTER ===================== -->
-<footer class="footer">
+<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="brand-name">Your Mesa Electrician</div>
-        <p>Mesa's trusted licensed electrical contractor. Serving the East Valley with honest pricing, permitted work, and a 1-year workmanship guarantee.</p>
-        <a href="tel:4807014348" class="footer-phone">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.07a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          (480) 701-4348
-        </a>
+      <div>
+        <div class="footer-brand-name">YOUR MESA ELECTRICIAN</div>
+        <p class="footer-brand-desc">Licensed, background-checked electrical contractors serving Mesa and the East Valley since 2003. Family-owned. 5-star rated. Flat-rate pricing with zero hidden fees.</p>
+        <div style="display:flex;gap:4px;margin-top:4px;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span style="font-family:var(--font-body);font-size:12px;color:var(--t3);margin-left:6px;">5.0 (29 reviews)</span>
+        </div>
       </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
           <li><a href="#services">Panel Upgrades</a></li>
-          <li><a href="#services">Outlet &amp; Switch Repair</a></li>
-          <li><a href="#services">Ceiling Fan Install</a></li>
-          <li><a href="#services">EV Charger Installation</a></li>
-          <li><a href="#services">Lighting Installation</a></li>
+          <li><a href="#services">Outlet &amp; Switch</a></li>
+          <li><a href="#services">Ceiling Fans</a></li>
+          <li><a href="#services">EV Charger Install</a></li>
+          <li><a href="#services">Lighting</a></li>
           <li><a href="#services">Emergency Electrical</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Service Areas</h4>
-        <ul>
-          <li><a href="#areas">Mesa, AZ</a></li>
-          <li><a href="#areas">Gilbert, AZ</a></li>
-          <li><a href="#areas">Chandler, AZ</a></li>
-          <li><a href="#areas">Tempe, AZ</a></li>
-          <li><a href="#areas">Scottsdale, AZ</a></li>
-          <li><a href="#areas">Queen Creek, AZ</a></li>
-          <li><a href="#areas">Apache Junction, AZ</a></li>
-          <li><a href="#areas">Ahwatukee, AZ</a></li>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#areas">Mesa</a></li>
+          <li><a href="#areas">Gilbert</a></li>
+          <li><a href="#areas">Chandler</a></li>
+          <li><a href="#areas">Tempe</a></li>
+          <li><a href="#areas">Scottsdale</a></li>
+          <li><a href="#areas">Queen Creek</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <div class="footer-contact-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.07a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          <span>(480) 701-4348</span>
-        </div>
-        <div class="footer-contact-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>info@yourmesaelectrician.com</span>
-        </div>
-        <div class="footer-contact-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>Mesa, AZ 85201</span>
-        </div>
-        <div class="footer-contact-item">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Mon–Fri 7AM–7PM<br>Sat 8AM–5PM<br>24/7 Emergency</span>
-        </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:4807014348">(480) 701-4348</a></li>
+          <li><a href="#contact">Request Estimate</a></li>
+          <li><a href="#contact">Emergency Line</a></li>
+        </ul>
+        <div style="margin-top:20px;font-family:var(--font-body);font-size:12px;color:var(--t3);line-height:1.7;">Licensed &amp; Bonded<br>AZ ROC Licensed<br>Insured to $1M</div>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom" style="border-top:1px solid rgba(255,255,255,0.08); padding:20px 24px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
-    <p>&#169; 2026 Your Mesa Electrician. All rights reserved. Licensed Electrical Contractor — Mesa, AZ.</p>
-    <p>Serving Mesa, Gilbert, Chandler, Tempe, Scottsdale &amp; the East Valley</p>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 Your Mesa Electrician. All rights reserved.</div>
+      <div class="footer-copy">Arizona Licensed Electrical Contractor &middot; Mesa, AZ</div>
+    </div>
   </div>
 </footer>
 
-<!-- ===================== JAVASCRIPT ===================== -->
 <script>
-(function() {
-  'use strict';
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
 
-  /* ---------- Header scroll class ---------- */
-  var header = document.getElementById('site-header');
-  function onScroll() {
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  if (isNaN(target)) return;
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
 
-  /* ---------- Stat counter animation ---------- */
-  function animateCount(el, target, suffix, duration) {
-    var start = 0;
-    var startTime = null;
-    suffix = suffix || '';
-    duration = duration || 1600;
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); cardObs.unobserve(e.target); } });
+}, { threshold: 0.15 });
+document.querySelectorAll('.card').forEach(el => cardObs.observe(el));
 
-    function easeOutQuart(t) {
-      return 1 - Math.pow(1 - t, 4);
-    }
-
-    function step(timestamp) {
-      if (!startTime) startTime = timestamp;
-      var elapsed = timestamp - startTime;
-      var progress = Math.min(elapsed / duration, 1);
-      var eased = easeOutQuart(progress);
-      var current = Math.floor(eased * target);
-      el.textContent = current + suffix;
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      } else {
-        el.textContent = target + suffix;
-      }
-    }
-    requestAnimationFrame(step);
-  }
-
-  /* ---------- IntersectionObserver for stat counters ---------- */
-  var statNumbers = document.querySelectorAll('.stat-number[data-target]');
-  if (statNumbers.length && 'IntersectionObserver' in window) {
-    var statsObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          var target = parseInt(el.getAttribute('data-target'), 10);
-          var suffix = el.getAttribute('data-suffix') || '';
-          animateCount(el, target, suffix, 1600);
-          statsObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.4 });
-
-    statNumbers.forEach(function(el) {
-      statsObserver.observe(el);
-    });
-  } else {
-    /* Fallback: set final values immediately */
-    statNumbers.forEach(function(el) {
-      var target = el.getAttribute('data-target');
-      var suffix = el.getAttribute('data-suffix') || '';
-      el.textContent = target + suffix;
-    });
-  }
-
-  /* ---------- IntersectionObserver for fade-card elements ---------- */
-  var fadeCards = document.querySelectorAll('.fade-card');
-  if (fadeCards.length && 'IntersectionObserver' in window) {
-    var fadeObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          var delay = entry.target.getAttribute('data-delay') || 0;
-          setTimeout(function() {
-            entry.target.classList.add('visible');
-          }, parseFloat(delay) * 1000);
-          fadeObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    /* Assign stagger delays within each parent container */
-    var containers = document.querySelectorAll('.services-grid, .why-stats, .differentiators, .steps-row, .reviews-grid, .areas-inner, .how-it-works .steps-row');
-    containers.forEach(function(container) {
-      var cards = container.querySelectorAll('.fade-card');
-      cards.forEach(function(card, i) {
-        card.setAttribute('data-delay', (i * 0.12).toString());
-      });
-    });
-
-    fadeCards.forEach(function(card) {
-      fadeObserver.observe(card);
-    });
-  } else {
-    /* Fallback: show all cards */
-    fadeCards.forEach(function(card) {
-      card.classList.add('visible');
-    });
-  }
-
-  /* ---------- Form submit (prevent default, show success) ---------- */
-  var form = document.querySelector('.contact form');
-  if (form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var btn = form.querySelector('.btn-submit');
-      var originalText = btn.innerHTML;
-      btn.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Request Sent!';
-      btn.style.background = '#2a7d4f';
-      setTimeout(function() {
-        btn.innerHTML = originalText;
-        btn.style.background = '';
-        form.reset();
-      }, 3500);
-    });
-  }
-
-})();
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => statObs.observe(el));
 </script>
 </body>
 </html>
