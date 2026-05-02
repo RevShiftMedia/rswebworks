@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JJ Power Junk Removal | Pasadena, TX</title>
+<meta name="description" content="JJ Power Junk Removal — Pasadena's powerhouse hauling crew. Fast, affordable, fully insured. 5-star rated. Call (713) 340-9893.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+:root{--primary:#1c3a2a;--primary-dark:#0e1f17;--accent:#f97316;--accent-dark:#ea6c0a;--bg:#ffffff;--bg-off:#f5f9f6;--text:#1a1a1a;--text-muted:#5a5a5a;--border:#dde8e1;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:'Oswald',sans-serif;line-height:1.15}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+.section{padding:80px 0}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{animation:heroFadeUp .6s ease both;animation-delay:.1s}
+.hero-headline{animation:heroFadeUp .6s ease both;animation-delay:.25s}
+.hero-sub{animation:heroFadeUp .6s ease both;animation-delay:.4s}
+.hero-ctas{animation:heroFadeUp .6s ease both;animation-delay:.55s}
+.hero-trust{animation:heroFadeUp .6s ease both;animation-delay:.7s}
+.hero-card{animation:heroFadeUp .7s ease both;animation-delay:.35s}
+.card-anim{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.card-anim.visible{opacity:1;transform:translateY(0)}
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:var(--primary);padding:14px 0;box-shadow:0 2px 12px rgba(0,0,0,.4)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Oswald',sans-serif;font-size:1.25rem;font-weight:700;color:#fff;letter-spacing:.03em}
+.logo span{color:var(--accent)}
+.header-cta{display:flex;align-items:center;gap:18px}
+.header-phone{font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;color:#fff}
+.header-phone:hover{color:var(--accent)}
+.btn-header{background:var(--accent);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:.9rem;padding:9px 20px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase;transition:background .2s;white-space:nowrap}
+.btn-header:hover{background:var(--accent-dark)}
+/* HERO */
+.hero{position:relative;overflow:hidden;background:var(--primary);padding:90px 0 80px}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 80% 50%,rgba(249,115,22,.1) 0%,transparent 70%)}
+.hero::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");opacity:.12;pointer-events:none;z-index:0}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:60% 40%;gap:48px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(249,115,22,.15);border:1px solid rgba(249,115,22,.35);border-radius:100px;padding:6px 16px;margin-bottom:20px}
+.hero-badge span{font-family:'Oswald',sans-serif;font-size:.8rem;font-weight:600;color:var(--accent);letter-spacing:.08em;text-transform:uppercase}
+.hero-headline{font-size:clamp(2.4rem,5.5vw,3.8rem);font-weight:700;color:#fff;margin-bottom:16px;letter-spacing:-.01em}
+.hero-headline em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.78);margin-bottom:32px;max-width:520px;line-height:1.65}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.btn-primary{display:inline-block;background:var(--accent);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:1.05rem;padding:14px 28px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase;transition:background .2s,transform .15s}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.btn-outline{display:inline-block;background:transparent;color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:1.05rem;padding:13px 28px;border-radius:4px;border:2px solid rgba(255,255,255,.35);letter-spacing:.04em;text-transform:uppercase;transition:border-color .2s,background .2s}
+.btn-outline:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.07)}
+.hero-trust{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:.88rem;color:rgba(255,255,255,.65)}
+.trust-dot{width:4px;height:4px;background:rgba(255,255,255,.3);border-radius:50%}
+.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:32px 28px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.card-title{font-family:'Oswald',sans-serif;font-size:1.15rem;font-weight:600;color:#fff;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.15)}
+.card-feature{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.card-feature:last-child{border-bottom:none}
+.card-feature-icon{width:36px;height:36px;background:rgba(249,115,22,.15);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.card-feature-icon svg{width:18px;height:18px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card-feature-label{font-weight:600;color:#fff;font-family:'Oswald',sans-serif;font-size:.88rem}
+.card-feature-text{font-size:.9rem;color:rgba(255,255,255,.78)}
+/* STATS */
+.stats{background:var(--accent);padding:44px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.stat-item{padding:0 20px;border-right:1px solid rgba(255,255,255,.25)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:'Oswald',sans-serif;font-size:2.6rem;font-weight:700;color:#fff;line-height:1;margin-bottom:4px}
+.stat-label{font-size:.88rem;color:rgba(255,255,255,.85);font-weight:500;text-transform:uppercase;letter-spacing:.06em}
+/* SECTIONS */
+.section-label{font-family:'Oswald',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.section-title{font-size:clamp(1.9rem,3.5vw,2.6rem);font-weight:700;color:var(--primary);margin-bottom:14px}
+.section-lead{font-size:1.05rem;color:var(--text-muted);max-width:580px;line-height:1.65}
+.section-head{margin-bottom:48px}
+/* SERVICES — icon-TOP */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;text-align:center;transition:box-shadow .25s,transform .2s,border-color .25s}
+.service-card:hover{box-shadow:0 8px 28px rgba(0,0,0,.09);transform:translateY(-3px);border-color:var(--accent)}
+.service-icon{width:56px;height:56px;background:rgba(249,115,22,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.service-icon svg{width:28px;height:28px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.service-card h3{font-family:'Oswald',sans-serif;font-size:1.08rem;font-weight:600;color:var(--primary);margin-bottom:10px}
+.service-card p{font-size:.9rem;color:var(--text-muted);line-height:1.55}
+/* WHY */
+.why{background:var(--bg-off)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.why-card{background:#fff;border-radius:12px;padding:32px 28px;border:1px solid var(--border);text-align:center;transition:box-shadow .25s,transform .2s}
+.why-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.08);transform:translateY(-2px)}
+.why-icon{width:60px;height:60px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.why-icon svg{width:28px;height:28px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.why-card h3{font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:600;color:var(--primary);margin-bottom:10px}
+.why-card p{font-size:.92rem;color:var(--text-muted);line-height:1.6}
+/* HOW */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);position:relative;margin-top:48px}
+.steps::before{content:'';position:absolute;top:40px;left:16.66%;right:16.66%;height:2px;background:linear-gradient(90deg,var(--accent),rgba(249,115,22,.2));z-index:0}
+.step{text-align:center;padding:0 24px;position:relative;z-index:1}
+.step-num{width:80px;height:80px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;border:4px solid var(--accent)}
+.step-num span{font-family:'Oswald',sans-serif;font-size:1.8rem;font-weight:700;color:var(--accent)}
+.step h3{font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:600;color:var(--primary);margin-bottom:10px}
+.step p{font-size:.9rem;color:var(--text-muted);line-height:1.6}
+/* REVIEWS — white backgrounds */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.review-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;transition:box-shadow .25s}
+.review-card:hover{box-shadow:0 6px 20px rgba(0,0,0,.07)}
+.stars-row{display:flex;gap:3px;margin-bottom:12px}
+.stars-row svg{width:17px;height:17px;fill:#f59e0b}
+.quote-icon{margin-bottom:10px}
+.quote-icon svg{width:28px;height:28px;fill:var(--accent);opacity:.25}
+.review-text{font-size:.93rem;color:var(--text-muted);line-height:1.65;margin-bottom:16px}
+.reviewer{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--border)}
+.reviewer-avatar{width:42px;height:42px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-weight:700;font-size:1rem;color:#fff;flex-shrink:0}
+.reviewer-name{font-family:'Oswald',sans-serif;font-size:.92rem;font-weight:600;color:var(--primary)}
+.reviewer-date{font-size:.8rem;color:var(--text-muted)}
+/* AREAS */
+.areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
+.area-pill{background:var(--bg-off);border:1px solid var(--border);border-radius:8px;padding:12px 16px;text-align:center;font-family:'Oswald',sans-serif;font-size:.9rem;font-weight:500;color:var(--primary);transition:background .2s,border-color .2s,color .2s}
+.area-pill:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+/* CONTACT */
+.contact{background:var(--bg-off)}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info p{font-size:.97rem;color:var(--text-muted);line-height:1.65;margin-bottom:28px}
+.contact-detail{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.contact-detail svg{width:20px;height:20px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.contact-detail span{font-size:.95rem;color:var(--text-muted)}
+.contact-detail strong{color:var(--primary)}
+form{display:flex;flex-direction:column;gap:14px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,textarea,select{width:100%;padding:12px 16px;border:1.5px solid var(--border);border-radius:6px;font-family:'Source Sans 3',sans-serif;font-size:.95rem;color:var(--text);background:#fff;transition:border-color .2s;outline:none}
+input:focus,textarea:focus,select:focus{border-color:var(--accent)}
+textarea{resize:vertical;min-height:110px}
+.btn-submit{background:var(--accent);color:#fff;border:none;cursor:pointer;font-family:'Oswald',sans-serif;font-weight:600;font-size:1.05rem;padding:14px 28px;border-radius:4px;letter-spacing:.04em;text-transform:uppercase;transition:background .2s}
+.btn-submit:hover{background:var(--accent-dark)}
+/* CTA */
+.cta-band{position:relative;overflow:hidden;background:var(--primary);padding:70px 0;text-align:center}
+.cta-band::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");opacity:.12;pointer-events:none}
+.cta-inner{position:relative;z-index:1}
+.cta-band h2{font-family:'Oswald',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:#fff;margin-bottom:14px}
+.cta-band p{font-size:1.05rem;color:rgba(255,255,255,.75);margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+/* FOOTER */
+footer{background:var(--primary-dark);padding:40px 0 24px}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:32px}
+.footer-brand p{font-size:.88rem;color:rgba(255,255,255,.5);line-height:1.65;margin-top:12px}
+.footer-col h4{font-family:'Oswald',sans-serif;font-size:.95rem;font-weight:600;color:rgba(255,255,255,.85);margin-bottom:14px;letter-spacing:.05em;text-transform:uppercase}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:8px}
+.footer-col ul li a{font-size:.88rem;color:rgba(255,255,255,.5);transition:color .2s}
+.footer-col ul li a:hover{color:var(--accent)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.footer-bottom p{font-size:.82rem;color:rgba(255,255,255,.35)}
+@media(max-width:900px){
+  .hero-inner,.contact-inner{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .services-grid,.why-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr}.steps::before{display:none}
+  .areas-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  .stat-item{border-right:none}
+}
+@media(max-width:600px){
+  .services-grid,.why-grid,.reviews-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .hero{padding:60px 0 50px}.section{padding:56px 0}
+  .btn-header{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">JJ <span>Power Junk Removal</span></div>
+    <div class="header-cta">
+      <a href="tel:7133409893" class="header-phone">(713) 340-9893</a>
+      <a href="#contact" class="btn-header">Free Quote</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#f97316"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <span>5-Star Rated — Pasadena, TX</span>
+      </div>
+      <h1 class="hero-headline">Pasadena's Powerhouse <em>Junk Removal</em></h1>
+      <p class="hero-sub">JJ Power brings muscle and speed to every haul. From Genoa to Southmore — furniture, appliances, debris, and more cleared fast and affordably.</p>
+      <div class="hero-ctas">
+        <a href="tel:7133409893" class="btn-primary">Call (713) 340-9893</a>
+        <a href="#contact" class="btn-outline">Get Free Quote</a>
+      </div>
+      <div class="hero-trust">
+        <span class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured
+        </span>
+        <span class="trust-dot"></span>
+        <span class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Same-Day Available
+        </span>
+        <span class="trust-dot"></span>
+        <span class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          5-Star Service
+        </span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-title">The JJ Power Difference</div>
+      <div class="card-feature">
+        <div class="card-feature-icon"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+        <div><div class="card-feature-label">Powerhouse Speed</div><div class="card-feature-text">Most jobs cleared in under 2 hours</div></div>
+      </div>
+      <div class="card-feature">
+        <div class="card-feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <div><div class="card-feature-label">Same-Day Service</div><div class="card-feature-text">Call now, cleared today</div></div>
+      </div>
+      <div class="card-feature">
+        <div class="card-feature-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div><div class="card-feature-label">Upfront Pricing</div><div class="card-feature-text">No surprises — ever</div></div>
+      </div>
+      <div class="card-feature">
+        <div class="card-feature-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><div class="card-feature-label">Fully Insured</div><div class="card-feature-text">Your property is protected</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="stat-num" data-target="5" data-suffix="★">5★</div><div class="stat-label">Google Rating</div></div>
+      <div class="stat-item"><div class="stat-num" data-target="2" data-suffix="hr">2hr</div><div class="stat-label">Avg Job Time</div></div>
+      <div class="stat-item"><div class="stat-num" data-target="100" data-suffix="%">100%</div><div class="stat-label">Satisfaction</div></div>
+      <div class="stat-item"><div class="stat-num" data-target="7" data-suffix=" days">7 days</div><div class="stat-label">Available</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Our Services</div>
+      <h2 class="section-title">Junk Removal With Real Power</h2>
+      <p class="section-lead">JJ Power handles everything — residential, commercial, heavy hauling. If it needs to go, we'll make it disappear.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card card-anim">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h3>Full Property Cleanouts</h3>
+        <p>Complete home, estate, or commercial property cleared top-to-bottom. We handle it all in one trip.</p>
+      </div>
+      <div class="service-card card-anim">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/></svg></div>
+        <h3>Furniture &amp; Couch Removal</h3>
+        <p>Sofas, loveseats, sectionals, and recliners — no piece is too big for JJ Power's crew to haul.</p>
+      </div>
+      <div class="service-card card-anim">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 22v-4h6v4M9 6h6M9 10h6"/></svg></div>
+        <h3>Appliance Removal</h3>
+        <p>Refrigerators, washing machines, water heaters — safely disconnected and removed without a scratch.</p>
+      </div>
+      <div class="service-card card-anim">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Yard Waste &amp; Storm Debris</h3>
+        <p>Tree branches, brush piles, and storm cleanup — your yard cleared fast when it matters most.</p>
+      </div>
+      <div class="service-card card-anim">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Construction Debris</h3>
+        <p>Renovation and demo waste removed from residential and light commercial sites — fast turnaround.</p>
+      </div>
+      <div class="service-card card-anim">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+        <h3>Garage &amp; Attic Cleanouts</h3>
+        <p>Years of clutter cleared in one visit. We do all the heavy lifting and leave the space broom-clean.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section why">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Why JJ Power</div>
+      <h2 class="section-title">Pasadena's Powerhouse Team</h2>
+      <p class="section-lead">When you need junk gone fast by a team that shows up and delivers, JJ Power is who Pasadena calls.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card card-anim">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+        <h3>Power &amp; Speed</h3>
+        <p>Our experienced crew works efficiently — most jobs cleared completely in under two hours from arrival.</p>
+      </div>
+      <div class="why-card card-anim">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Fully Licensed &amp; Insured</h3>
+        <p>Every job is covered — your property, your belongings, and your peace of mind are always protected.</p>
+      </div>
+      <div class="why-card card-anim">
+        <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>Honest Pricing</h3>
+        <p>You see the price before we start. No add-ons, no hidden fees — the quote is the final number.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">The Process</div>
+      <h2 class="section-title">3 Steps to a Clean Space</h2>
+      <p class="section-lead">From your first call to a cleared property — JJ Power keeps it simple and stress-free.</p>
+    </div>
+    <div class="steps">
+      <div class="step card-anim">
+        <div class="step-num"><span>1</span></div>
+        <h3>Call or Book Online</h3>
+        <p>Reach us by phone or form. We'll answer fast, confirm your items, and lock in a time that works for you.</p>
+      </div>
+      <div class="step card-anim">
+        <div class="step-num"><span>2</span></div>
+        <h3>On-Site Quote</h3>
+        <p>We arrive on time, look over everything, and give you a clear upfront price. No obligation to commit.</p>
+      </div>
+      <div class="step card-anim">
+        <div class="step-num"><span>3</span></div>
+        <h3>Loaded &amp; Gone</h3>
+        <p>Approve the quote and our crew gets to work immediately. Everything out, space swept clean, done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Customer Reviews</div>
+      <h2 class="section-title">What Customers Say</h2>
+      <p class="section-lead">Pasadena customers who've experienced the JJ Power difference.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card card-anim">
+        <div class="stars-row">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <div class="quote-icon"><svg viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm10 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg></div>
+        <p class="review-text">JJ Power showed up within two hours of my call and cleared a full truck load from my garage. Strong crew, fair price, no nonsense. Exactly what I needed.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">BK</div>
+          <div><div class="reviewer-name">Brandon K.</div><div class="reviewer-date">Pasadena, TX — Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card card-anim">
+        <div class="stars-row">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <div class="quote-icon"><svg viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm10 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg></div>
+        <p class="review-text">Hired JJ Power to clear storm debris after Hurricane season. They came the next morning, hauled everything, and my yard looked brand new. Highly recommend!</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SM</div>
+          <div><div class="reviewer-name">Sandra M.</div><div class="reviewer-date">Deer Park, TX — Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card card-anim">
+        <div class="stars-row">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <div class="quote-icon"><svg viewBox="0 0 24 24"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm10 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg></div>
+        <p class="review-text">Helped me clear out a rental unit between tenants. Fast, professional, and left it completely clean. Will keep JJ Power's number for every turnover I do.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">TV</div>
+          <div><div class="reviewer-name">Tony V.</div><div class="reviewer-date">South Houston, TX — Google Review</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Coverage Area</div>
+      <h2 class="section-title">Areas We Serve</h2>
+      <p class="section-lead">JJ Power serves Pasadena and the broader Greater Houston area.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-pill">Pasadena</div>
+      <div class="area-pill">South Houston</div>
+      <div class="area-pill">Deer Park</div>
+      <div class="area-pill">La Porte</div>
+      <div class="area-pill">Friendswood</div>
+      <div class="area-pill">Pearland</div>
+      <div class="area-pill">League City</div>
+      <div class="area-pill">Baytown</div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title" style="font-size:1.9rem">Request Your Free Quote</h2>
+        <p>Ready for JJ Power to take care of it? Call or fill out the form — we'll get back to you fast with a fair, upfront price.</p>
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 1.18 2 2 0 014 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 8.15a16 16 0 006.29 6.29l1.45-1.45a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span><strong>(713) 340-9893</strong> — Call or Text Anytime</span>
+        </div>
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Serving <strong>Pasadena, TX</strong> and surrounding areas</span>
+        </div>
+        <div class="contact-detail">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>Available <strong>7 days a week</strong>, 7am–8pm</span>
+        </div>
+      </div>
+      <form onsubmit="return false;">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required>
+          <input type="tel" placeholder="Phone Number" required>
+        </div>
+        <input type="email" placeholder="Email Address">
+        <select>
+          <option value="">Type of Service</option>
+          <option>Furniture Removal</option>
+          <option>Appliance Removal</option>
+          <option>Full Property Cleanout</option>
+          <option>Yard / Storm Debris</option>
+          <option>Construction Debris</option>
+          <option>Garage Cleanout</option>
+          <option>Other</option>
+        </select>
+        <textarea placeholder="Tell us what needs to go..."></textarea>
+        <button type="submit" class="btn-submit">Send My Free Quote Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <h2>Power Through the Junk — Call Today</h2>
+    <p>JJ Power Junk Removal is Pasadena's hardest-working hauling team. Same-day service available — call now.</p>
+    <div class="cta-btns">
+      <a href="tel:7133409893" class="btn-primary">Call (713) 340-9893</a>
+      <a href="#contact" class="btn-outline">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">JJ <span>Power Junk Removal</span></div>
+        <p>Pasadena's powerhouse hauling team — fast, affordable, fully insured junk removal serving Greater Houston.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Property Cleanouts</a></li>
+          <li><a href="#">Furniture Removal</a></li>
+          <li><a href="#">Appliance Removal</a></li>
+          <li><a href="#">Yard Debris Hauling</a></li>
+          <li><a href="#">Garage Cleanouts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Areas Served</h4>
+        <ul>
+          <li><a href="#">Pasadena, TX</a></li>
+          <li><a href="#">South Houston, TX</a></li>
+          <li><a href="#">Deer Park, TX</a></li>
+          <li><a href="#">La Porte, TX</a></li>
+          <li><a href="#">Baytown, TX</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 JJ Power Junk Removal. All rights reserved.</p>
+      <p>Pasadena, TX — Licensed &amp; Insured</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function animateCount(el){
+  const target=parseInt(el.dataset.target),suffix=el.dataset.suffix||'',duration=1800,start=performance.now();
+  const update=(t)=>{const p=Math.min((t-start)/duration,1),ease=1-Math.pow(1-p,3);el.textContent=Math.floor(ease*target).toLocaleString()+suffix;if(p<1)requestAnimationFrame(update);};
+  requestAnimationFrame(update);
+}
+const cardObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');cardObs.unobserve(e.target);}});},{threshold:0.2});
+document.querySelectorAll('.card-anim').forEach(el=>cardObs.observe(el));
+const statObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){animateCount(e.target);statObs.unobserve(e.target);}});},{threshold:0.5});
+document.querySelectorAll('.stat-num[data-target]').forEach(el=>statObs.observe(el));
+</script>
+</body>
+</html>

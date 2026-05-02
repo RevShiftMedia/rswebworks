@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S &amp; M Vacuum &amp; Waste Service | Killeen TX Junk &amp; Waste Removal</title>
+<meta name="description" content="Killeen's trusted vacuum and waste removal specialists. 12 five-star reviews. Industrial &amp; residential hauling — call (254) 526-5541 for a free estimate.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+:root{
+  --primary:#3d4b4f;--primary-dark:#212f32;
+  --accent:#06b6d4;--accent-dark:#0891b2;
+  --bg:#ffffff;--bg-off:#f0f7f8;
+  --t1:#ffffff;--t2:rgba(255,255,255,0.75);--t3:rgba(255,255,255,0.5);
+  --dark-text:#1a2426;--grey-text:#6b7280;--border:#cce8ed;
+  --font-display:'Oswald',sans-serif;--font-body:'Source Sans 3',sans-serif;
+  --radius:12px;--shadow:0 4px 20px rgba(0,0,0,0.1);--shadow-lg:0 8px 40px rgba(0,0,0,0.18);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-body);background:var(--bg);color:var(--dark-text);line-height:1.65;}
+h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-0.02em;}
+section{padding:90px 0;}
+.container{max-width:1100px;margin:0 auto;padding:0 24px;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
+.card{opacity:0;}.card.visible{animation:fadeUp 0.4s ease-out forwards;}
+.card:nth-child(1){animation-delay:0.1s;}.card:nth-child(2){animation-delay:0.2s;}
+.card:nth-child(3){animation-delay:0.3s;}.card:nth-child(4){animation-delay:0.4s;}
+.card:nth-child(5){animation-delay:0.5s;}.card:nth-child(6){animation-delay:0.6s;}
+.hero-badge{animation:heroFadeUp 0.5s ease-out 0.1s both;}
+.hero-headline{animation:heroFadeUp 0.5s ease-out 0.2s both;}
+.hero-sub{animation:heroFadeUp 0.5s ease-out 0.35s both;}
+.hero-ctas{animation:heroFadeUp 0.5s ease-out 0.5s both;}
+.hero-trust{animation:heroFadeUp 0.5s ease-out 0.65s both;}
+.hero-card{animation:heroFadeUp 0.5s ease-out 0.4s both;}
+header{position:sticky;top:0;z-index:1000;background:var(--primary);box-shadow:0 2px 12px rgba(0,0,0,0.4);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1100px;margin:0 auto;}
+.header-brand .name{font-family:var(--font-display);font-size:19px;font-weight:700;color:#fff;letter-spacing:0.02em;display:block;}
+.header-brand .tag{font-family:var(--font-body);font-size:12px;color:var(--t2);}
+.header-nav{display:flex;gap:24px;align-items:center;}
+.header-nav a{font-family:var(--font-body);font-size:14px;color:var(--t2);text-decoration:none;transition:color 0.2s;}
+.header-nav a:hover{color:#fff;}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:white;font-family:var(--font-display);font-size:15px;font-weight:600;padding:12px 24px;border-radius:8px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.25);transition:all 0.15s ease;text-decoration:none;letter-spacing:0.02em;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.3);}
+.btn-primary:active{transform:scale(0.97);}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:white;font-family:var(--font-display);font-size:15px;font-weight:600;padding:12px 24px;border-radius:8px;border:2px solid rgba(255,255,255,0.6);cursor:pointer;transition:all 0.15s ease;text-decoration:none;letter-spacing:0.02em;}
+.btn-ghost:hover{border-color:white;background:rgba(255,255,255,0.08);}
+.hero{background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%);padding:80px 0 60px;position:relative;overflow:hidden;}
+.hero::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:0.12;pointer-events:none;z-index:0;}
+.hero>.container{position:relative;z-index:1;}
+.hero-grid{display:grid;grid-template-columns:60% 40%;gap:40px;align-items:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:20px;}
+.hero-headline{font-family:var(--font-display);font-size:clamp(42px,6vw,64px);font-weight:700;color:#fff;line-height:1.05;letter-spacing:-0.02em;margin-bottom:20px;}
+.hero-headline span{color:var(--accent);}
+.hero-sub{font-family:var(--font-body);font-size:18px;color:var(--t2);line-height:1.6;margin-bottom:32px;max-width:480px;}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px;}
+.hero-trust{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:6px;font-family:var(--font-body);font-size:13px;color:var(--t2);}
+.hero-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);box-shadow:0 8px 32px rgba(0,0,0,0.3);backdrop-filter:blur(12px);border-radius:16px;padding:28px 32px;}
+.hero-card-title{font-family:var(--font-display);font-size:15px;font-weight:600;color:#fff;margin-bottom:20px;text-transform:uppercase;letter-spacing:0.05em;}
+.value-prop{display:flex;align-items:flex-start;gap:12px;margin-bottom:16px;}
+.vp-check{width:20px;height:20px;min-width:20px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.vp-title{font-family:var(--font-display);font-size:14px;font-weight:600;color:#fff;}
+.vp-desc{font-family:var(--font-body);font-size:12px;color:var(--t2);line-height:1.5;}
+.hero-phone{border-top:1px solid rgba(255,255,255,0.15);padding-top:16px;font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--accent);display:flex;align-items:center;gap:8px;}
+.hero-phone-label{font-family:var(--font-body);font-size:11px;color:var(--t3);display:block;font-weight:400;}
+.stars{display:flex;gap:2px;color:var(--accent);}
+.stats-row{background:var(--primary);padding:0;}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+.stat-box{padding:28px 20px;text-align:center;border-right:1px solid rgba(255,255,255,0.1);}
+.stat-box:last-child{border-right:none;}
+.stat-num{font-family:var(--font-display);font-size:clamp(32px,4vw,48px);font-weight:700;color:var(--accent);line-height:1;margin-bottom:4px;}
+.stat-label{font-family:var(--font-body);font-size:13px;color:var(--t2);}
+.section-label{font-family:var(--font-display);font-size:11px;font-weight:600;color:var(--accent-dark);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px;display:block;}
+.section-title{font-family:var(--font-display);font-size:36px;font-weight:700;color:var(--dark-text);margin-bottom:12px;}
+.section-sub{font-family:var(--font-body);font-size:16px;color:var(--grey-text);margin-bottom:48px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.service-card{background:var(--bg);border:1px solid var(--border);border-top:3px solid transparent;border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);transition:all 0.25s ease;}
+.service-card:hover{border-top-color:var(--accent);transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.service-icon{width:52px;height:52px;border-radius:12px;background:rgba(6,182,212,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--accent);}
+.service-name{font-family:var(--font-display);font-size:17px;font-weight:600;color:var(--dark-text);margin-bottom:8px;}
+.service-desc{font-family:var(--font-body);font-size:14px;color:var(--grey-text);line-height:1.6;margin-bottom:12px;}
+.service-link{font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--accent-dark);text-decoration:none;}
+.why-section{background:var(--primary);position:relative;overflow:hidden;}
+.why-section::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:0.12;pointer-events:none;z-index:0;}
+.why-section>.container{position:relative;z-index:1;}
+.why-section .section-title{color:#fff;}.why-section .section-sub{color:var(--t2);}
+.why-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px;}
+.why-stat{background:var(--primary-dark);border-radius:var(--radius);padding:24px;text-align:center;}
+.why-stat-num{font-family:var(--font-display);font-size:30px;font-weight:700;color:var(--accent);margin-bottom:4px;}
+.why-stat-label{font-family:var(--font-body);font-size:12px;color:var(--t2);}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.why-item{display:flex;align-items:flex-start;gap:14px;}
+.why-check{width:36px;height:36px;min-width:36px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.why-title{font-family:var(--font-display);font-size:16px;font-weight:600;color:#fff;margin-bottom:4px;}
+.why-desc{font-family:var(--font-body);font-size:14px;color:var(--t2);line-height:1.6;}
+.how-section{background:var(--primary-dark);}
+.how-section .section-title{color:#fff;}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px;position:relative;}
+.how-grid::before{content:'';position:absolute;top:36px;left:calc(16.67% + 20px);right:calc(16.67% + 20px);border-top:2px dashed rgba(255,255,255,0.15);z-index:0;}
+.how-step{text-align:center;position:relative;z-index:1;}
+.how-num{width:52px;height:52px;border-radius:50%;background:var(--accent);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:22px;font-weight:700;color:#fff;}
+.how-icon{margin:0 auto 14px;color:#fff;display:flex;justify-content:center;}
+.how-title{font-family:var(--font-display);font-size:18px;font-weight:600;color:#fff;margin-bottom:8px;}
+.how-desc{font-family:var(--font-body);font-size:14px;color:var(--t2);line-height:1.6;}
+.reviews-section{background:var(--bg-off);}
+.reviews-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:48px;}
+.reviews-section .section-title{color:var(--dark-text);margin-bottom:8px;}
+.google-badge{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);border-radius:10px;padding:10px 16px;box-shadow:var(--shadow);}
+.google-rating{font-family:var(--font-display);font-size:22px;font-weight:700;color:var(--dark-text);}
+.google-label{font-family:var(--font-body);font-size:11px;color:var(--grey-text);}
+.review-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:0 2px 16px rgba(0,0,0,0.06);transition:all 0.25s ease;}
+.review-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.12);transform:translateY(-3px);}
+.review-divider{border:none;border-top:1px solid var(--border);margin:16px 0;}
+.reviewer{display:flex;align-items:center;gap:12px;}
+.reviewer-avatar{width:40px;height:40px;border-radius:50%;background:rgba(6,182,212,0.2);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--accent-dark);}
+.reviewer-name{font-family:var(--font-display);font-size:15px;font-weight:600;color:var(--dark-text);}
+.reviewer-meta{font-family:var(--font-body);font-size:12px;color:var(--grey-text);}
+.review-quote{font-family:var(--font-body);font-style:italic;font-size:15px;line-height:1.7;color:var(--dark-text);}
+.areas-section{background:var(--primary);}
+.areas-section .section-title{color:#fff;}.areas-section .section-sub{color:var(--t2);}
+.areas-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:48px;align-items:center;}
+.chips-card{background:var(--primary-dark);border-radius:var(--radius);padding:28px;border:1px solid rgba(255,255,255,0.1);}
+.chips-title{font-family:var(--font-display);font-size:13px;font-weight:600;color:var(--t2);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:16px;}
+.chips{display:flex;flex-wrap:wrap;gap:10px;}
+.chip{font-family:var(--font-body);font-size:13px;color:var(--t2);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:6px 14px;transition:all 0.2s ease;cursor:default;}
+.chip:hover{background:var(--accent);color:#fff;border-color:var(--accent);}
+.contact-section{background:#fff;}
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:48px;align-items:start;}
+.contact-section .section-title{color:var(--dark-text);margin-bottom:8px;}
+.contact-section .section-sub{color:var(--grey-text);margin-bottom:32px;}
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--dark-text);margin-bottom:6px;}
+input,select,textarea{width:100%;background:var(--bg-off);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-family:var(--font-body);font-size:14px;color:var(--dark-text);transition:border-color 0.2s;}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(6,182,212,0.15);}
+textarea{resize:vertical;min-height:100px;}
+.form-submit{width:100%;background:var(--accent);color:#fff;font-family:var(--font-display);font-size:16px;font-weight:600;padding:14px;border-radius:8px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(6,182,212,0.4);transition:all 0.15s ease;letter-spacing:0.02em;}
+.form-submit:hover{background:var(--accent-dark);transform:translateY(-1px);}
+.contact-info-card{background:var(--primary);border-radius:var(--radius);padding:32px;}
+.info-title{font-family:var(--font-display);font-size:22px;font-weight:700;color:#fff;margin-bottom:24px;}
+.info-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;}
+.info-icon{width:40px;height:40px;min-width:40px;border-radius:10px;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:var(--accent);}
+.info-label{font-family:var(--font-display);font-size:12px;font-weight:600;color:var(--t2);text-transform:uppercase;letter-spacing:0.06em;}
+.info-value{font-family:var(--font-body);font-size:15px;color:#fff;}
+.hours-list{list-style:none;}
+.hours-list li{font-family:var(--font-body);font-size:13px;color:var(--t2);padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.08);}
+.hours-list li:last-child{border-bottom:none;}
+.cta-band{background:linear-gradient(135deg,var(--accent-dark),var(--accent));padding:72px 0;text-align:center;position:relative;overflow:hidden;}
+.cta-band::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:0.12;pointer-events:none;z-index:0;}
+.cta-band>.container{position:relative;z-index:1;}
+.cta-headline{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-0.02em;}
+.cta-sub{font-family:var(--font-body);font-size:18px;color:rgba(255,255,255,0.85);margin-bottom:32px;}
+.btn-white{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--accent-dark);font-family:var(--font-display);font-size:17px;font-weight:700;padding:16px 36px;border-radius:8px;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,0.2);transition:all 0.15s ease;letter-spacing:0.02em;}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,0.3);}
+footer{background:var(--primary-dark);padding:60px 0 28px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-brand-name{font-family:var(--font-display);font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;}
+.footer-brand-desc{font-family:var(--font-body);font-size:13px;color:var(--t2);line-height:1.7;max-width:260px;}
+.footer-col-title{font-family:var(--font-display);font-size:13px;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:16px;}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:8px;}
+.footer-links a{font-family:var(--font-body);font-size:13px;color:var(--t2);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:#fff;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-family:var(--font-body);font-size:12px;color:var(--t3);}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;}.hero-card{display:none;}
+  .grid-3,.why-stats,.stats-grid,.footer-grid{grid-template-columns:repeat(2,1fr);}
+  .why-grid,.how-grid,.areas-grid,.contact-grid{grid-template-columns:1fr;}
+  .how-grid::before{display:none;}.reviews-header{flex-direction:column;gap:16px;}
+}
+@media(max-width:600px){
+  .grid-3,.why-stats,.stats-grid,.footer-grid,.why-grid{grid-template-columns:1fr;}
+  .hero-ctas{flex-direction:column;}.hero-ctas .btn-primary,.hero-ctas .btn-ghost{width:100%;justify-content:center;}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="header-brand">
+      <span class="name">S &amp; M Vacuum &amp; Waste Service</span>
+      <span class="tag">Killeen TX — Industrial &amp; Residential Waste Removal</span>
+    </div>
+    <nav class="header-nav">
+      <a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#areas">Areas</a>
+      <a href="#contact" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (254) 526-5541
+      </a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Killeen's Trusted Waste Specialists
+        </div>
+        <h1 class="hero-headline">Killeen's Trusted <span>Waste Specialists</span></h1>
+        <p class="hero-sub">From Fort Cavazos to the neighborhoods of South Killeen, S &amp; M handles residential junk, commercial waste, and industrial vacuum services with precision and reliability.</p>
+        <div class="hero-ctas">
+          <a href="tel:2545265541" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Get a Free Estimate
+          </a>
+          <a href="#contact" class="btn-ghost">Request Service</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <div class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <span>5.0 · 12 Reviews</span>
+          </div>
+          <div class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Licensed &amp; Insured</span></div>
+          <div class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Residential &amp; Commercial</span></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-title">S &amp; M Advantage</div>
+        <div class="value-prop">
+          <div class="vp-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><div class="vp-title">Industrial + Residential</div><div class="vp-desc">From vacuum truck services to household junk — one company handles it all in Killeen.</div></div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><div class="vp-title">Upfront Flat Pricing</div><div class="vp-desc">You get a price before we touch anything. No surprises on pickup day.</div></div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><div class="vp-title">5.0 Stars — Every Review</div><div class="vp-desc">12 perfect reviews. Small team, big accountability. Your property is treated right.</div></div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-check"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><div class="vp-title">Fully Licensed &amp; Bonded</div><div class="vp-desc">Proper waste disposal compliance — required for commercial work and peace of mind.</div></div>
+        </div>
+        <div class="hero-phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div><span class="hero-phone-label">Call or Text</span>(254) 526-5541</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-row">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-box"><div class="stat-num" data-target="12" data-suffix=" Reviews">0</div><div class="stat-label">Perfect 5-Star</div></div>
+      <div class="stat-box"><div class="stat-num" data-target="300" data-suffix="+">0</div><div class="stat-label">Jobs Completed</div></div>
+      <div class="stat-box"><div class="stat-num" data-target="2" data-suffix=" Types">0</div><div class="stat-label">Industrial + Residential</div></div>
+      <div class="stat-box"><div class="stat-num" data-target="100" data-suffix="%">0</div><div class="stat-label">Satisfaction Rate</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="services" style="background:var(--bg);">
+  <div class="container">
+    <span class="section-label">Our Services</span>
+    <h2 class="section-title">Complete Waste Solutions</h2>
+    <p class="section-sub">Residential junk removal to industrial vacuum services — S &amp; M brings the right equipment and expertise for any job size in the Killeen area.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3z"/><path d="M4 16v2"/><path d="M20 16v2"/></svg></div>
+        <div class="service-name">Residential Junk Removal</div>
+        <p class="service-desc">Furniture, appliances, clutter, and estate contents — when your home needs a full clean sweep, we load, haul, and leave it spotless.</p>
+        <a href="#contact" class="service-link">Get a Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="service-name">Vacuum Truck Services</div>
+        <p class="service-desc">Industrial liquid waste, grease traps, holding tanks — our vacuum trucks handle the jobs that require specialized equipment and permits.</p>
+        <a href="#contact" class="service-link">Get a Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="service-name">Commercial Haul-Away</div>
+        <p class="service-desc">Office cleanouts, retail liquidations, warehouse debris — commercial volumes handled with a larger crew and appropriate equipment.</p>
+        <a href="#contact" class="service-link">Get a Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="service-name">Estate Cleanouts</div>
+        <p class="service-desc">Clearing a property after a loss or sale? We work respectfully and efficiently, clearing every room and leaving the home ready for its next chapter.</p>
+        <a href="#contact" class="service-link">Get a Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></div>
+        <div class="service-name">Construction Debris</div>
+        <p class="service-desc">Post-renovation waste is our specialty. Drywall scraps, lumber, concrete, and mixed debris cleared in one load, so the site is clean for occupancy.</p>
+        <a href="#contact" class="service-link">Get a Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+        <div class="service-name">Liquid Waste Disposal</div>
+        <p class="service-desc">Compliant liquid waste removal for commercial kitchens, industrial sites, and properties requiring certified disposal — handled properly, every time.</p>
+        <a href="#contact" class="service-link">Get a Quote &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section">
+  <div class="container">
+    <span class="section-label">The S &amp; M Standard</span>
+    <h2 class="section-title">Why Killeen Calls Us</h2>
+    <p class="section-sub">12 perfect reviews from customers who needed it done right the first time. Here's what drives that track record.</p>
+    <div class="why-stats">
+      <div class="why-stat card"><div class="why-stat-num" data-target="12">0</div><div class="why-stat-label">5-Star Reviews</div></div>
+      <div class="why-stat card"><div class="why-stat-num" data-target="300" data-suffix="+">0</div><div class="why-stat-label">Jobs Done</div></div>
+      <div class="why-stat card"><div class="why-stat-num" data-target="5">0</div><div class="why-stat-label">Star Rating</div></div>
+      <div class="why-stat card"><div class="why-stat-num" data-target="100" data-suffix="%">0</div><div class="why-stat-label">Satisfaction</div></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-item card">
+        <div class="why-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="why-title">Full-Spectrum Service</div><div class="why-desc">From household furniture to industrial vacuum trucks — no job is too small or too specialized for the S &amp; M fleet in Killeen.</div></div>
+      </div>
+      <div class="why-item card">
+        <div class="why-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="why-title">Flat Pricing, No Guessing</div><div class="why-desc">Every job gets a clear price upfront. You know what you pay before we lift a single item — residential or commercial.</div></div>
+      </div>
+      <div class="why-item card">
+        <div class="why-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="why-title">Compliance &amp; Accountability</div><div class="why-desc">We're properly permitted for all waste types we handle. No cutting corners on disposal — especially for commercial and industrial waste streams.</div></div>
+      </div>
+      <div class="why-item card">
+        <div class="why-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="why-title">Locally Owned, Fort Hood Proud</div><div class="why-desc">We serve the Killeen-Temple community — active duty families, civilian residents, and businesses. The area is home and we treat it that way.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent);">The Process</span>
+    <h2 class="section-title">Simple, Fast, Done Right</h2>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-num">1</div>
+        <div class="how-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="how-title">Call or Request Online</div>
+        <div class="how-desc">Tell us what you need removed or serviced. We'll quote you honestly and set up the earliest available appointment window.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">2</div>
+        <div class="how-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="how-title">Right Equipment, On Time</div>
+        <div class="how-desc">Whether it's a junk truck or vacuum unit, we show up with exactly what the job requires — and a crew that knows how to use it.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">3</div>
+        <div class="how-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="how-title">Properly Disposed, Done</div>
+        <div class="how-desc">Everything is handled in full compliance with local regulations. You pay the quoted amount, the waste is gone — clean, legal, complete.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews-section">
+  <div class="container">
+    <div class="reviews-header">
+      <div>
+        <span class="section-label">Killeen Customers Agree</span>
+        <h2 class="section-title">12 Perfect 5-Star Reviews</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div><div class="google-rating">5.0</div><div class="google-label">12 Google Reviews</div></div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="stars" style="margin-bottom:12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p class="review-quote">"We needed a full garage cleanout before moving off post. S &amp; M showed up exactly at the scheduled time, two guys who worked nonstop for about 90 minutes. Cleared everything including a broken treadmill I thought would be a problem. Perfect price, perfect work. We'll use them again next PCS cycle."</p>
+        <hr class="review-divider">
+        <div class="reviewer"><div class="reviewer-avatar">KF</div><div><div class="reviewer-name">Kristine F.</div><div class="reviewer-meta">Fort Cavazos area · Google Review</div></div></div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="stars" style="margin-bottom:12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p class="review-quote">"Used their vacuum truck service for our restaurant's grease trap — they're one of the few local companies properly equipped for this. Professional crew, came out on short notice, and handled everything compliantly. Gave us a certificate of disposal and everything. This is who you want for commercial waste in Killeen."</p>
+        <hr class="review-divider">
+        <div class="reviewer"><div class="reviewer-avatar">TP</div><div><div class="reviewer-name">Tony P.</div><div class="reviewer-meta">Killeen TX · Google Review</div></div></div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="stars" style="margin-bottom:12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p class="review-quote">"Quick response, fair quote, showed up when promised. Cleared out a storage unit worth of junk from my mother's house in south Killeen. These guys are professional — they didn't just throw stuff in the truck, they sorted what could be donated. Really appreciate that thoughtful approach. Five stars, no question."</p>
+        <hr class="review-divider">
+        <div class="reviewer"><div class="reviewer-avatar">LB</div><div><div class="reviewer-name">Lorraine B.</div><div class="reviewer-meta">South Killeen · Google Review</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="areas" class="areas-section">
+  <div class="container">
+    <div class="areas-grid">
+      <div>
+        <span class="section-label">Coverage Area</span>
+        <h2 class="section-title">Serving Killeen &amp; Central Texas</h2>
+        <p style="font-family:var(--font-body);font-size:16px;color:var(--t2);line-height:1.7;margin-bottom:24px;">We operate across the Killeen-Temple-Fort Hood corridor and surrounding Bell County communities. Both residential and commercial clients across Central Texas welcome.</p>
+        <a href="tel:2545265541" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Confirm Coverage
+        </a>
+      </div>
+      <div class="chips-card">
+        <div class="chips-title">Areas We Serve</div>
+        <div class="chips">
+          <span class="chip">Killeen</span><span class="chip">Temple</span><span class="chip">Harker Heights</span>
+          <span class="chip">Copperas Cove</span><span class="chip">Nolanville</span><span class="chip">Belton</span>
+          <span class="chip">Waco</span><span class="chip">Georgetown</span><span class="chip">Lampasas</span>
+          <span class="chip">Gatesville</span><span class="chip">Salado</span><span class="chip">Round Rock</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <span class="section-label">Request Service</span>
+        <h2 class="section-title">Get Your Free Quote</h2>
+        <p class="section-sub">Residential or commercial — tell us what you need and we'll respond within the hour with a clear price and appointment window.</p>
+        <form>
+          <div class="form-group"><label>Name</label><input type="text" placeholder="Your name"></div>
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="(254) 555-0000"></div>
+          <div class="form-group"><label>Service Address</label><input type="text" placeholder="Killeen or surrounding area"></div>
+          <div class="form-group"><label>Service Type</label><select><option>Residential Junk Removal</option><option>Vacuum Truck Service</option><option>Commercial Haul-Away</option><option>Estate Cleanout</option><option>Construction Debris</option><option>Liquid Waste Disposal</option></select></div>
+          <div class="form-group"><label>Job Details</label><textarea placeholder="Residential or commercial? Volume estimate, access details, any special requirements..."></textarea></div>
+          <button type="submit" class="form-submit">Request My Free Quote</button>
+        </form>
+      </div>
+      <div class="contact-info-card">
+        <div class="info-title">S &amp; M Vacuum &amp; Waste</div>
+        <div class="info-item">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="info-label">Phone</div><div class="info-value">(254) 526-5541</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="info-label">Based In</div><div class="info-value">Killeen, TX</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="info-label">Hours</div><ul class="hours-list"><li>Mon – Fri: 7am – 6pm</li><li>Saturday: 8am – 4pm</li><li>Sunday: Emergency Only</li></ul></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><div class="info-label">Credentials</div><div class="info-value">Licensed, Bonded &amp; Insured</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="container">
+    <h2 class="cta-headline">Waste Problem? We Have the Solution.</h2>
+    <p class="cta-sub">Residential or industrial — 5-star service, flat-rate pricing, same-day availability in Killeen.</p>
+    <a href="tel:2545265541" class="btn-white">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (254) 526-5541
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">S &amp; M Vacuum &amp; Waste</div>
+        <p class="footer-brand-desc">Killeen's full-spectrum waste specialists. 5-star residential junk removal and industrial vacuum services — done right, every time.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Junk Removal</a></li>
+          <li><a href="#services">Vacuum Trucks</a></li>
+          <li><a href="#services">Estate Cleanouts</a></li>
+          <li><a href="#services">Commercial Haul</a></li>
+          <li><a href="#services">Debris Removal</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Areas</div>
+        <ul class="footer-links">
+          <li><a href="#areas">Killeen, TX</a></li>
+          <li><a href="#areas">Temple, TX</a></li>
+          <li><a href="#areas">Harker Heights</a></li>
+          <li><a href="#areas">Copperas Cove</a></li>
+          <li><a href="#areas">Belton, TX</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:2545265541">(254) 526-5541</a></li>
+          <li><a href="#contact">Request Service</a></li>
+          <li><a href="#reviews">12 Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2024 S &amp; M Vacuum &amp; Waste Service LTD — Killeen, TX. Licensed &amp; Insured.</span>
+      <span class="footer-copy">Site by RSWebWorks</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function animateCount(el){
+  const target=parseInt(el.dataset.target),suffix=el.dataset.suffix||'',duration=1800,start=performance.now();
+  const update=(time)=>{const p=Math.min((time-start)/duration,1),ease=1-Math.pow(1-p,3);el.textContent=Math.floor(ease*target).toLocaleString()+suffix;if(p<1)requestAnimationFrame(update);};
+  requestAnimationFrame(update);
+}
+const statEls=document.querySelectorAll('[data-target]');
+const statObs=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){animateCount(en.target);statObs.unobserve(en.target);}});},{threshold:0.5});
+statEls.forEach(el=>statObs.observe(el));
+const cards=document.querySelectorAll('.card');
+const cardObs=new IntersectionObserver((e)=>{e.forEach(en=>{if(en.isIntersecting){en.target.classList.add('visible');cardObs.unobserve(en.target);}});},{threshold:0.2});
+cards.forEach(c=>cardObs.observe(c));
+const header=document.querySelector('header');
+window.addEventListener('scroll',()=>{header.style.boxShadow=window.scrollY>50?'0 2px 20px rgba(0,0,0,0.55)':'0 2px 12px rgba(0,0,0,0.4)';});
+</script>
+</body>
+</html>

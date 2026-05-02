@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Charlie's Junk Removal | Mesquite, TX — Fast, Reliable Hauling</title>
+<meta name="description" content="Charlie's Junk Removal in Mesquite, TX. Same-day junk hauling, furniture removal, estate cleanouts, and construction debris removal. Call (469) 494-7744 for a free estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#1a1a1a;
+  --primary-dark:#080808;
+  --accent:#ca8a04;
+  --accent-dark:#a87003;
+  --bg:#ffffff;
+  --bg-off:#fdf9ee;
+  --border:#e4d9b0;
+  --text:#1a1a1a;
+  --text-muted:#5a5a5a;
+  --radius:8px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+
+/* BUTTONS */
+.btn-primary{display:inline-block;background:var(--accent);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;letter-spacing:.04em;text-transform:uppercase;padding:14px 32px;border-radius:var(--radius);border:none;cursor:pointer;transition:background .2s,transform .15s}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-outline{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;letter-spacing:.04em;text-transform:uppercase;padding:12px 30px;border-radius:var(--radius);cursor:pointer;transition:background .2s,color .2s,transform .15s}
+.btn-outline:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+.section-label{font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.section-title{font-family:'Oswald',sans-serif;font-size:2.2rem;font-weight:700;line-height:1.2;margin-bottom:16px}
+.section-sub{color:var(--text-muted);font-size:1.05rem;max-width:560px}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:var(--primary-dark);border-bottom:2px solid var(--accent)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:66px;gap:24px}
+.logo{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.35rem;color:#fff;letter-spacing:.03em;display:flex;align-items:center;gap:10px}
+.logo-icon{width:32px;height:32px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-icon svg{width:18px;height:18px;color:#fff}
+nav{display:flex;align-items:center;gap:28px}
+nav a{font-family:'Oswald',sans-serif;font-size:.9rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.8);transition:color .2s}
+nav a:hover{color:var(--accent)}
+.header-cta{font-size:.85rem}
+
+/* HERO */
+.hero{position:relative;background:var(--primary);overflow:hidden;min-height:560px;display:flex;align-items:center}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--primary-dark) 0%,#2c2c2c 60%,#1a1a1a 100%);z-index:0}
+.hero::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");opacity:.12;pointer-events:none;z-index:0}
+.hero-accent-bar{position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--accent);z-index:1}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:60fr 40fr;gap:48px;align-items:center;padding:80px 0}
+.hero-eyebrow{font-family:'Oswald',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;animation:heroFadeUp .6s ease both;animation-delay:.1s}
+.hero h1{font-family:'Oswald',sans-serif;font-weight:700;font-size:3.1rem;line-height:1.1;color:#fff;margin-bottom:20px;animation:heroFadeUp .6s ease both;animation-delay:.2s}
+.hero h1 strong{color:var(--accent)}
+.hero-sub{color:rgba(255,255,255,.78);font-size:1.1rem;line-height:1.65;margin-bottom:32px;animation:heroFadeUp .6s ease both;animation-delay:.3s}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:heroFadeUp .6s ease both;animation-delay:.4s}
+.hero-trust{display:flex;align-items:center;gap:14px;margin-top:28px;animation:heroFadeUp .6s ease both;animation-delay:.5s}
+.hero-stars{color:var(--accent);font-size:1.15rem;letter-spacing:2px}
+.hero-trust-text{color:rgba(255,255,255,.7);font-size:.92rem}
+.hero-trust-text strong{color:#fff}
+.hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:32px 28px;backdrop-filter:blur(12px);animation:heroFadeUp .6s ease both;animation-delay:.6s}
+.hero-card-title{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;letter-spacing:.04em;margin-bottom:20px;text-transform:uppercase}
+.hero-card-item{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.hero-card-item:last-child{border-bottom:none}
+.hero-card-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:5px}
+.hero-card-text{color:rgba(255,255,255,.85);font-size:.97rem;line-height:1.5}
+.hero-card-text strong{color:#fff;font-weight:600}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* STATS */
+.stats-band{background:var(--primary-dark);border-top:3px solid var(--accent);border-bottom:3px solid var(--accent)}
+.stats-inner{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;padding:0}
+.stat-item{padding:36px 20px;border-right:1px solid rgba(255,255,255,.08)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:'Oswald',sans-serif;font-size:2.6rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:6px}
+.stat-label{color:rgba(255,255,255,.7);font-size:.88rem;letter-spacing:.06em;text-transform:uppercase}
+
+/* SERVICES */
+.services{padding:90px 0;background:var(--bg)}
+.services-header{text-align:center;margin-bottom:52px}
+.services-header .section-sub{margin:0 auto}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.service-card{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:28px;transition:box-shadow .25s,transform .25s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card:hover{box-shadow:0 8px 28px rgba(0,0,0,.1);transform:translateY(-4px)}
+.service-card .service-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.service-card .service-header svg{width:36px;height:36px;flex-shrink:0;color:var(--accent)}
+.service-card .service-header h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.15rem;margin:0}
+.service-card p{color:var(--text-muted);font-size:.97rem;line-height:1.6}
+.card-anim{opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
+.card-anim.visible{opacity:1;transform:translateY(0)}
+
+/* WHY US */
+.why-us{padding:90px 0;background:var(--bg-off)}
+.why-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-content .section-sub{margin-bottom:36px}
+.why-list{display:flex;flex-direction:column;gap:20px}
+.why-item{display:flex;align-items:flex-start;gap:16px}
+.why-icon{width:46px;height:46px;background:var(--primary);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why-icon svg{width:22px;height:22px;color:var(--accent)}
+.why-item h4{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.08rem;margin-bottom:4px}
+.why-item p{color:var(--text-muted);font-size:.95rem}
+.why-visual{position:relative}
+.why-img-block{background:var(--primary);border-radius:14px;padding:48px 36px;text-align:center;color:#fff}
+.why-img-block .big-stat{font-family:'Oswald',sans-serif;font-size:5rem;font-weight:700;color:var(--accent);line-height:1}
+.why-img-block .big-stat-label{font-size:1.1rem;color:rgba(255,255,255,.75);margin-top:8px;margin-bottom:28px}
+.why-badges{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+.why-badge{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:14px 18px}
+.why-badge svg{width:22px;height:22px;color:var(--accent);flex-shrink:0}
+.why-badge span{color:rgba(255,255,255,.88);font-size:.95rem}
+
+/* HOW IT WORKS */
+.how-it-works{padding:90px 0;background:var(--bg)}
+.how-header{text-align:center;margin-bottom:52px}
+.how-header .section-sub{margin:0 auto}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+.step-card{text-align:center;padding:36px 28px;border-radius:10px;border:1px solid var(--border);background:var(--bg);position:relative}
+.step-number{font-family:'Oswald',sans-serif;font-size:3rem;font-weight:700;color:var(--accent);opacity:.18;line-height:1;margin-bottom:16px}
+.step-icon{width:58px;height:58px;background:var(--bg-off);border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.step-icon svg{width:26px;height:26px;color:var(--accent)}
+.step-card h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.15rem;margin-bottom:10px}
+.step-card p{color:var(--text-muted);font-size:.95rem}
+.step-arrow{display:none}
+
+/* REVIEWS */
+.reviews{padding:90px 0;background:var(--bg-off)}
+.reviews-header{text-align:center;margin-bottom:52px}
+.reviews-header .section-sub{margin:0 auto}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.review-card{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:30px 28px}
+.review-stars{color:var(--accent);font-size:1.1rem;letter-spacing:3px;margin-bottom:16px}
+.review-quote-mark{width:32px;height:24px;margin-bottom:14px;color:var(--accent);opacity:.35}
+.review-text{color:var(--text-muted);font-size:.97rem;line-height:1.65;margin-bottom:18px;font-style:italic}
+.review-author{font-family:'Oswald',sans-serif;font-weight:600;font-size:.95rem;color:var(--primary)}
+.review-location{font-size:.85rem;color:var(--text-muted)}
+
+/* SERVICE AREAS */
+.service-areas{padding:90px 0;background:var(--primary)}
+.areas-header{text-align:center;margin-bottom:48px}
+.areas-header .section-label{color:var(--accent)}
+.areas-header .section-title{color:#fff}
+.areas-header .section-sub{color:rgba(255,255,255,.7);margin:0 auto}
+.areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:40px}
+.area-chip{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:16px 18px;text-align:center;transition:background .2s,border-color .2s}
+.area-chip:hover{background:rgba(202,138,4,.12);border-color:var(--accent)}
+.area-chip svg{width:20px;height:20px;color:var(--accent);margin:0 auto 8px}
+.area-chip span{display:block;font-family:'Oswald',sans-serif;font-weight:500;color:#fff;font-size:.95rem}
+.areas-note{text-align:center;color:rgba(255,255,255,.6);font-size:.92rem}
+
+/* CONTACT */
+.contact{padding:90px 0;background:var(--bg)}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info .section-sub{margin-bottom:32px}
+.contact-details{display:flex;flex-direction:column;gap:20px}
+.contact-item{display:flex;align-items:flex-start;gap:14px}
+.contact-item-icon{width:44px;height:44px;background:var(--bg-off);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-item-icon svg{width:20px;height:20px;color:var(--accent)}
+.contact-item h4{font-family:'Oswald',sans-serif;font-weight:600;font-size:.95rem;margin-bottom:2px}
+.contact-item p{color:var(--text-muted);font-size:.95rem}
+.contact-item a{color:var(--accent);font-weight:600}
+.contact-form{background:var(--bg-off);border:1px solid var(--border);border-radius:12px;padding:36px 32px}
+.contact-form h3{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.35rem;margin-bottom:24px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.88rem;font-weight:600;color:var(--text-muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:var(--radius);font-family:'Source Sans 3',sans-serif;font-size:.97rem;background:#fff;color:var(--text);outline:none;transition:border-color .2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent)}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-submit{width:100%;padding:15px;font-size:1.05rem}
+
+/* CTA BAND */
+.cta-band{position:relative;background:var(--accent);overflow:hidden;padding:70px 0}
+.cta-band::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");opacity:.14;pointer-events:none;z-index:0}
+.cta-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta-text h2{font-family:'Oswald',sans-serif;font-weight:700;font-size:2.3rem;color:var(--primary-dark);margin-bottom:8px}
+.cta-text p{color:rgba(26,26,26,.78);font-size:1.05rem}
+.cta-actions{display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0}
+.btn-cta-dark{display:inline-block;background:var(--primary);color:#fff;font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;letter-spacing:.04em;text-transform:uppercase;padding:14px 32px;border-radius:var(--radius);transition:background .2s,transform .15s}
+.btn-cta-dark:hover{background:var(--primary-dark);transform:translateY(-2px)}
+.btn-cta-outline{display:inline-block;border:2px solid var(--primary);color:var(--primary);font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;letter-spacing:.04em;text-transform:uppercase;padding:12px 30px;border-radius:var(--radius);transition:background .2s,color .2s,transform .15s}
+.btn-cta-outline:hover{background:var(--primary);color:#fff;transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:var(--primary-dark);color:rgba(255,255,255,.65);padding:52px 0 28px}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand .logo{margin-bottom:16px}
+.footer-brand p{font-size:.9rem;line-height:1.65}
+.footer-col h4{font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;color:#fff;letter-spacing:.06em;margin-bottom:16px;text-transform:uppercase}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul li a{font-size:.9rem;transition:color .2s}
+.footer-col ul li a:hover{color:var(--accent)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;align-items:center;justify-content:space-between;font-size:.85rem;flex-wrap:wrap;gap:12px}
+.footer-bottom a{color:rgba(255,255,255,.5)}
+.footer-bottom a:hover{color:var(--accent)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero-card{display:none}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .stat-item:nth-child(2){border-right:none}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .why-inner{grid-template-columns:1fr}
+  .why-visual{display:none}
+  .steps-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .areas-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-inner{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .footer-brand{grid-column:1/-1}
+}
+@media(max-width:600px){
+  nav{display:none}
+  .section-title{font-size:1.75rem}
+  .hero h1{font-size:2.2rem}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .areas-grid{grid-template-columns:repeat(2,1fr)}
+  .form-row{grid-template-columns:1fr}
+  .cta-inner{flex-direction:column;text-align:center}
+  .cta-actions{justify-content:center}
+  .footer-inner{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+        </div>
+        Charlie's Junk Removal
+      </div>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#why-us">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#areas">Areas</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="tel:4694947744" class="btn-primary btn-cta header-cta">(469) 494-7744</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-accent-bar"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Mesquite's #1 Junk Removal Service</p>
+        <h1>Mesquite's Dependable <strong>Junk Crew</strong></h1>
+        <p class="hero-sub">Full-service junk hauling, furniture removal, and estate cleanouts for Mesquite and the greater Dallas area. We show up on time, price fairly, and leave your space spotless.</p>
+        <div class="hero-actions">
+          <a href="tel:4694947744" class="btn-primary">Call (469) 494-7744</a>
+          <a href="#contact" class="btn-outline">Free Estimate</a>
+        </div>
+        <div class="hero-trust">
+          <span class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="hero-trust-text"><strong>5.0 Stars</strong> &mdash; 63 verified reviews</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <p class="hero-card-title">Why Choose Charlie's</p>
+        <div class="hero-card-item">
+          <div class="hero-card-dot"></div>
+          <p class="hero-card-text"><strong>Same-Day Service</strong> — Call before noon for same-day pickup</p>
+        </div>
+        <div class="hero-card-item">
+          <div class="hero-card-dot"></div>
+          <p class="hero-card-text"><strong>Upfront Pricing</strong> — No hidden fees, ever. Flat-rate quotes on-site</p>
+        </div>
+        <div class="hero-card-item">
+          <div class="hero-card-dot"></div>
+          <p class="hero-card-text"><strong>Eco-Responsible</strong> — We donate, recycle, and divert from landfill</p>
+        </div>
+        <div class="hero-card-item">
+          <div class="hero-card-dot"></div>
+          <p class="hero-card-text"><strong>Fully Insured</strong> — Your home and property protected</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-num" data-target="500" data-suffix="+">0</div>
+        <div class="stat-label">Jobs Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="5" data-suffix="&#9733;">0</div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="63" data-suffix="">0</div>
+        <div class="stat-label">Verified Reviews</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="100" data-suffix="%">0</div>
+        <div class="stat-label">Satisfaction Rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <p class="section-label">What We Do</p>
+      <h2 class="section-title">Full-Service Junk Removal</h2>
+      <p class="section-sub">From single-item pickups to full property cleanouts, Charlie's handles it all — fast, affordable, and stress-free.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card card-anim">
+        <div class="service-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          <h3>Full Property Cleanouts</h3>
+        </div>
+        <p>Clearing an entire home, office, or storage unit? We haul everything out efficiently — saving you time, labor, and trips to the dump.</p>
+      </div>
+      <div class="service-card card-anim">
+        <div class="service-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <h3>Furniture &amp; Appliance Removal</h3>
+        </div>
+        <p>Old couches, mattresses, refrigerators, washing machines — we do the heavy lifting so you don't have to. No stairs too steep for our crew.</p>
+      </div>
+      <div class="service-card card-anim">
+        <div class="service-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12c0-2.76 1.12-5.26 2.93-7.07"/><path d="M12 6v6l4 2"/></svg>
+          <h3>Yard Waste &amp; Debris Hauling</h3>
+        </div>
+        <p>Branches, brush, soil, old fencing — we haul all yard waste and landscaping debris quickly. Leave the mess to us.</p>
+      </div>
+      <div class="service-card card-anim">
+        <div class="service-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><path d="M9 20v-5h6v5"/></svg>
+          <h3>Construction Debris Removal</h3>
+        </div>
+        <p>Drywall scraps, lumber, flooring, concrete — we remove all post-renovation debris so contractors and homeowners can focus on what's next.</p>
+      </div>
+      <div class="service-card card-anim">
+        <div class="service-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          <h3>Hot Tub &amp; Swing Set Removal</h3>
+        </div>
+        <p>Oversized outdoor items require special handling. Our experienced crew safely disassembles and removes hot tubs, swing sets, and trampolines.</p>
+      </div>
+      <div class="service-card card-anim">
+        <div class="service-header">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <h3>Estate Cleanouts</h3>
+        </div>
+        <p>Respectful, thorough estate and foreclosure cleanouts. We work quickly and carefully to clear the property so you can move forward with peace of mind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us" id="why-us">
+  <div class="container">
+    <div class="why-inner">
+      <div class="why-content card-anim">
+        <p class="section-label">Why Charlie's</p>
+        <h2 class="section-title">Mesquite Trusts Charlie's Crew</h2>
+        <p class="section-sub">We built our reputation one job at a time — showing up when we say, hauling everything you need gone, and leaving you with a spotless space.</p>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h4>Same-Day Service Available</h4>
+              <p>Call before noon and we'll often have a crew at your door the same day. Fast response, no long waits.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div>
+              <h4>Transparent Upfront Pricing</h4>
+              <p>We quote before we haul. No surprise charges at the end — just honest, fair pricing based on volume and labor.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 0 0 6.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 0 0 6.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+            </div>
+            <div>
+              <h4>Eco-Friendly Disposal</h4>
+              <p>We donate usable items to local charities, recycle what we can, and minimize landfill impact on every job.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual card-anim">
+        <div class="why-img-block">
+          <div class="big-stat">63</div>
+          <p class="big-stat-label">5-Star Reviews and Counting</p>
+          <a href="tel:4694947744" class="btn-primary" style="width:100%;text-align:center;display:block">Call Now — Same Day Available</a>
+          <div class="why-badges">
+            <div class="why-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Fully Licensed &amp; Insured</span>
+            </div>
+            <div class="why-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>No Hidden Fees, Ever</span>
+            </div>
+            <div class="why-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>On-Time Guaranteed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works" id="how-it-works">
+  <div class="container">
+    <div class="how-header">
+      <p class="section-label">Simple Process</p>
+      <h2 class="section-title">3 Easy Steps to a Clutter-Free Space</h2>
+      <p class="section-sub">Getting rid of your junk is easier than you think. We handle everything from scheduling to cleanup.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card card-anim">
+        <div class="step-number">01</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>Call or Book Online</h3>
+        <p>Reach us by phone or submit the form below. Tell us what needs to go and we'll schedule a time that works for you — often same-day.</p>
+      </div>
+      <div class="step-card card-anim">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="step-number">02</div>
+        <h3>Free On-Site Estimate</h3>
+        <p>Our crew arrives on schedule, assesses the job, and gives you a firm quote — no pressure, no obligation. Approve and we get to work immediately.</p>
+      </div>
+      <div class="step-card card-anim">
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="step-number">03</div>
+        <h3>We Haul It Away</h3>
+        <p>We load, haul, and sweep up after ourselves. You get a clean space — and a receipt for any items donated or recycled on your behalf.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <p class="section-label">Customer Reviews</p>
+      <h2 class="section-title">What Mesquite Residents Are Saying</h2>
+      <p class="section-sub">63 five-star reviews from real customers across Mesquite, Garland, Rowlett, and beyond.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card card-anim">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <svg class="review-quote-mark" viewBox="0 0 40 30" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 30V18.333C0 7.5 6.667 1.667 20 0l2.667 4C16 5.667 12.333 9 12 14h8V30H0zm22 0V18.333C22 7.5 28.667 1.667 42 0l2.667 4C38 5.667 34.333 9 34 14h8V30H22z"/></svg>
+        <p class="review-text">Charlie's team was out within hours of my call. They cleared an entire garage full of old furniture, boxes, and broken tools without complaint. Pricing was exactly what they quoted. Absolutely will call again.</p>
+        <p class="review-author">Marcus T.</p>
+        <p class="review-location">Mesquite, TX</p>
+      </div>
+      <div class="review-card card-anim">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <svg class="review-quote-mark" viewBox="0 0 40 30" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 30V18.333C0 7.5 6.667 1.667 20 0l2.667 4C16 5.667 12.333 9 12 14h8V30H0zm22 0V18.333C22 7.5 28.667 1.667 42 0l2.667 4C38 5.667 34.333 9 34 14h8V30H22z"/></svg>
+        <p class="review-text">I needed an old hot tub removed from my backyard before a fence contractor showed up. Charlie's made it happen the same morning I called. They were fast, professional, and the price was very fair.</p>
+        <p class="review-author">Denise R.</p>
+        <p class="review-location">Garland, TX</p>
+      </div>
+      <div class="review-card card-anim">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <svg class="review-quote-mark" viewBox="0 0 40 30" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M0 30V18.333C0 7.5 6.667 1.667 20 0l2.667 4C16 5.667 12.333 9 12 14h8V30H0zm22 0V18.333C22 7.5 28.667 1.667 42 0l2.667 4C38 5.667 34.333 9 34 14h8V30H22z"/></svg>
+        <p class="review-text">Used Charlie's for an estate cleanout after my mother passed. They were respectful, efficient, and incredibly kind given the circumstances. Donated what could be donated and hauled the rest. Highly recommend.</p>
+        <p class="review-author">Kevin S.</p>
+        <p class="review-location">Rowlett, TX</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="service-areas" id="areas">
+  <div class="container">
+    <div class="areas-header">
+      <p class="section-label">Service Areas</p>
+      <h2 class="section-title">Serving Mesquite and Surrounding Communities</h2>
+      <p class="section-sub">Based in Mesquite — we serve the entire eastern Dallas metro. Not sure if we cover your area? Give us a call.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Mesquite</span>
+      </div>
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Garland</span>
+      </div>
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Rowlett</span>
+      </div>
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Balch Springs</span>
+      </div>
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Sunnyvale</span>
+      </div>
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Forney</span>
+      </div>
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Rockwall</span>
+      </div>
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Sachse</span>
+      </div>
+    </div>
+    <p class="areas-note">And all surrounding neighborhoods — call us to confirm your zip code.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info card-anim">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Ready to Reclaim Your Space?</h2>
+        <p class="section-sub">Call now or fill out the form and we'll get back to you within the hour. Same-day service available.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:4694947744">(469) 494-7744</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h4>Hours</h4>
+              <p>Monday–Saturday: 7am–7pm<br>Sunday: 8am–5pm</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>Mesquite, TX &mdash; Serving the greater Dallas area</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form card-anim">
+        <h3>Get Your Free Estimate</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="(469) 555-0100">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="john@email.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Full Property Cleanout</option>
+            <option>Furniture &amp; Appliance Removal</option>
+            <option>Yard Waste Hauling</option>
+            <option>Construction Debris Removal</option>
+            <option>Hot Tub / Swing Set Removal</option>
+            <option>Estate Cleanout</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tell Us About Your Job</label>
+          <textarea placeholder="Describe what needs to be removed and the approximate amount..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary form-submit">Request Free Estimate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <h2>Same-Day Service Available in Mesquite</h2>
+        <p>Call before noon and we'll often have a crew at your door today. No junk too big, no job too small.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="tel:4694947744" class="btn-cta-dark">(469) 494-7744</a>
+        <a href="#contact" class="btn-cta-outline">Free Estimate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:14px">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+          </div>
+          Charlie's Junk Removal
+        </div>
+        <p>Mesquite's dependable junk crew. Serving homeowners, landlords, and contractors across the eastern Dallas metro with honest pricing and same-day reliability.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Property Cleanouts</a></li>
+          <li><a href="#services">Furniture Removal</a></li>
+          <li><a href="#services">Yard Debris Hauling</a></li>
+          <li><a href="#services">Construction Debris</a></li>
+          <li><a href="#services">Estate Cleanouts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="#areas">Mesquite</a></li>
+          <li><a href="#areas">Garland</a></li>
+          <li><a href="#areas">Rowlett</a></li>
+          <li><a href="#areas">Balch Springs</a></li>
+          <li><a href="#areas">Forney &amp; Sachse</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 Charlie's Junk Removal. All rights reserved.</span>
+      <span>Mesquite, TX &mdash; <a href="tel:4694947744">(469) 494-7744</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function animateCount(el){
+  const target=parseInt(el.dataset.target),suffix=el.dataset.suffix||'',duration=1800,start=performance.now();
+  const update=(t)=>{const p=Math.min((t-start)/duration,1),ease=1-Math.pow(1-p,3);el.textContent=Math.floor(ease*target).toLocaleString()+suffix;if(p<1)requestAnimationFrame(update);};
+  requestAnimationFrame(update);
+}
+const cardObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');cardObs.unobserve(e.target);}});},{threshold:0.2});
+document.querySelectorAll('.card-anim').forEach(el=>cardObs.observe(el));
+const statObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){animateCount(e.target);statObs.unobserve(e.target);}});},{threshold:0.5});
+document.querySelectorAll('.stat-num[data-target]').forEach(el=>statObs.observe(el));
+</script>
+</body>
+</html>
