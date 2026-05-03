@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G2G Junk Removal | Denton, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#0f1a0f;
+  --black-deep:#080e08;
+  --black-mid:#162116;
+  --green:#609e12;
+  --green-dark:#4a7a0d;
+  --green-light:#74bb16;
+  --white:#ffffff;
+  --off-white:#f4f7f2;
+  --gray-light:#e3eade;
+  --gray-text:#5c6e56;
+  --text-dark:#0f1a0f;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;color:var(--text-dark);background:#fff;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,14,8,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(96,158,18,0.2)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo-icon{width:36px;height:36px;flex-shrink:0}
+.nav-logo-text{font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:700;color:#fff;line-height:1.15;letter-spacing:0.04em}
+.nav-logo-sub{font-size:0.62rem;font-weight:400;color:var(--green);display:block;letter-spacing:0.12em;text-transform:uppercase}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-phone{color:var(--green);font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;text-decoration:none;letter-spacing:0.04em}
+.nav-phone:hover{color:#fff}
+.btn-nav{background:var(--green);color:#fff;font-family:'Oswald',sans-serif;font-size:0.85rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:9px 20px;border-radius:4px;text-decoration:none;transition:background .2s}
+.btn-nav:hover{background:var(--green-dark)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--black-deep);overflow:hidden;padding-top:68px}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(150deg,#050a05 0%,#0f1a0f 55%,#162116 100%)}
+.hero-grain{position:absolute;inset:0;opacity:0.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+.hero-glow{position:absolute;bottom:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(96,158,18,0.08) 0%,transparent 70%);pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(96,158,18,0.1);border:1px solid rgba(96,158,18,0.3);border-radius:100px;padding:6px 16px;margin-bottom:24px;opacity:0;animation:heroFadeUp .6s .1s forwards}
+.hero-badge svg{width:14px;height:14px;fill:var(--green)}
+.hero-badge span{font-size:0.75rem;font-weight:600;color:var(--green);letter-spacing:0.1em;text-transform:uppercase}
+.hero-h1{font-family:'Oswald',sans-serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:700;color:#fff;line-height:1.1;letter-spacing:-0.01em;margin-bottom:20px;opacity:0;animation:heroFadeUp .6s .2s forwards}
+.hero-h1 span{color:var(--green)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,0.7);line-height:1.65;margin-bottom:32px;max-width:500px;opacity:0;animation:heroFadeUp .6s .3s forwards}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;opacity:0;animation:heroFadeUp .6s .4s forwards}
+.btn-primary{background:var(--green);color:#fff;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:15px 32px;border-radius:4px;text-decoration:none;transition:background .2s,transform .2s;display:inline-block}
+.btn-primary:hover{background:var(--green-dark);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:#fff;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:15px 32px;border-radius:4px;text-decoration:none;border:2px solid rgba(255,255,255,0.28);transition:border-color .2s,transform .2s;display:inline-block}
+.btn-outline:hover{border-color:#fff;transform:translateY(-2px)}
+.hero-trust{display:flex;gap:24px;flex-wrap:wrap;opacity:0;animation:heroFadeUp .6s .5s forwards}
+.trust-item{display:flex;align-items:center;gap:7px}
+.trust-item svg{width:15px;height:15px;flex-shrink:0;fill:var(--green)}
+.trust-item span{font-size:0.82rem;color:rgba(255,255,255,0.55);font-weight:500}
+
+/* Hero card — frosted glass */
+.hero-card{background:rgba(255,255,255,0.05);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:32px;opacity:0;animation:heroFadeUp .6s .25s forwards}
+.hero-card-label{font-family:'Oswald',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin-bottom:20px}
+.rating-display{display:flex;align-items:center;gap:14px;padding:18px;background:rgba(96,158,18,0.08);border-radius:10px;margin-bottom:18px;border:1px solid rgba(96,158,18,0.12)}
+.rating-score{font-family:'Oswald',sans-serif;font-size:3rem;font-weight:700;color:#fff;line-height:1}
+.rating-info{display:flex;flex-direction:column;gap:5px}
+.rating-stars{display:flex;gap:2px}
+.rating-stars svg{width:16px;height:16px;fill:#f59e0b}
+.rating-sub{font-size:0.75rem;color:rgba(255,255,255,0.45);letter-spacing:0.04em}
+.card-checklist{display:flex;flex-direction:column;gap:10px}
+.cl-item{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.cl-item:last-child{border-bottom:none;padding-bottom:0}
+.cl-dot{width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0}
+.cl-item span{font-size:0.87rem;color:rgba(255,255,255,0.72);font-weight:500}
+
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* SERVICES */
+.services{padding:90px 24px;background:var(--off-white)}
+.section-label{font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--green-dark);margin-bottom:12px}
+.section-title{font-family:'Oswald',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:var(--black);line-height:1.2;margin-bottom:16px}
+.section-sub{font-size:1rem;color:var(--gray-text);line-height:1.65;max-width:560px}
+.section-head{margin-bottom:52px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto}
+.svc-card{background:#fff;border-radius:10px;padding:32px 24px;border:1px solid var(--gray-light);transition:box-shadow .25s,transform .25s;opacity:0;transform:translateY(24px)}
+.svc-card.visible{opacity:1;transform:translateY(0)}
+.svc-card:hover{box-shadow:0 8px 28px rgba(15,26,15,0.1);transform:translateY(-4px)}
+.svc-icon{width:56px;height:56px;border-radius:12px;background:rgba(96,158,18,0.08);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.svc-icon svg{width:28px;height:28px;fill:var(--green-dark)}
+.svc-name{font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:600;color:var(--black);margin-bottom:10px}
+.svc-desc{font-size:0.88rem;color:var(--gray-text);line-height:1.65;margin-bottom:14px}
+.svc-cta{font-size:0.82rem;font-weight:600;color:var(--green-dark);text-decoration:none}
+.svc-cta:hover{color:var(--black)}
+
+/* WHY — 2-column feature checklist */
+.why{padding:90px 24px;background:var(--black)}
+.why .section-title{color:#fff}
+.why .section-sub{color:rgba(255,255,255,0.58)}
+.why-inner{max-width:1100px;margin:0 auto}
+.why-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:52px;align-items:start}
+.why-left h3{font-family:'Oswald',sans-serif;font-size:1.5rem;font-weight:700;color:#fff;line-height:1.3;margin-bottom:20px}
+.why-left p{font-size:0.92rem;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:28px}
+.why-big-stat{background:rgba(96,158,18,0.1);border:1px solid rgba(96,158,18,0.2);border-radius:10px;padding:24px;text-align:center}
+.why-big-num{font-family:'Oswald',sans-serif;font-size:3.5rem;font-weight:700;color:var(--green);line-height:1;display:block}
+.why-big-label{font-size:0.8rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.1em;margin-top:6px;display:block}
+.why-checklist{display:flex;flex-direction:column;gap:0;opacity:0;transform:translateY(24px)}
+.why-checklist.visible{opacity:1;transform:translateY(0)}
+.why-check-item{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.why-check-item:first-child{padding-top:0}
+.why-check-item:last-child{border-bottom:none}
+.check-circle{width:28px;height:28px;border-radius:50%;background:rgba(96,158,18,0.15);border:1px solid rgba(96,158,18,0.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.check-circle svg{width:14px;height:14px;fill:var(--green)}
+.check-text strong{font-family:'Oswald',sans-serif;font-size:0.95rem;font-weight:600;color:#fff;display:block;margin-bottom:4px}
+.check-text span{font-size:0.83rem;color:rgba(255,255,255,0.55);line-height:1.55}
+
+/* STATS */
+.stats{padding:72px 24px;background:#fff}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+.stat-block{opacity:0;transform:translateY(20px)}
+.stat-block.visible{opacity:1;transform:translateY(0)}
+.stat-num{font-family:'Oswald',sans-serif;font-size:3rem;font-weight:700;color:var(--black);line-height:1}
+.stat-num .stat-suffix{font-size:2rem}
+.stat-label{font-size:0.88rem;color:var(--gray-text);margin-top:8px;font-weight:500}
+.stat-rule{width:36px;height:3px;background:var(--green);border-radius:2px;margin:12px auto 0}
+
+/* PROCESS */
+.process{padding:90px 24px;background:var(--off-white)}
+.process-inner{max-width:1100px;margin:0 auto}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:52px}
+.step-card{background:#fff;border-radius:10px;padding:32px 24px;border:1px solid var(--gray-light);position:relative;opacity:0;transform:translateY(24px)}
+.step-card.visible{opacity:1;transform:translateY(0)}
+.step-num-tag{position:absolute;top:20px;right:20px;font-family:'Oswald',sans-serif;font-size:2rem;font-weight:700;color:rgba(96,158,18,0.12);line-height:1}
+.step-icon{width:54px;height:54px;border-radius:12px;background:rgba(96,158,18,0.08);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.step-icon svg{width:26px;height:26px;fill:var(--green-dark)}
+.step-title{font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;color:var(--black);margin-bottom:10px}
+.step-body{font-size:0.86rem;color:var(--gray-text);line-height:1.65}
+
+/* AREAS */
+.areas{padding:90px 24px;background:var(--black-mid)}
+.areas-inner{max-width:1200px;margin:0 auto}
+.areas .section-title{color:#fff}
+.areas .section-sub{color:rgba(255,255,255,0.55)}
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.area-chip{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px 20px;display:flex;align-items:center;gap:10px;opacity:0;transform:translateY(14px)}
+.area-chip.visible{opacity:1;transform:translateY(0)}
+.area-pin{width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0}
+.area-chip span{font-size:0.88rem;color:rgba(255,255,255,0.75);font-weight:500}
+
+/* REVIEWS — dark with green top stripe */
+.reviews{padding:90px 24px;background:var(--black-deep)}
+.reviews-inner{max-width:1200px;margin:0 auto}
+.reviews .section-title{color:#fff}
+.reviews .section-sub{color:rgba(255,255,255,0.55)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.review-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:28px;border-top:2px solid var(--green);opacity:0;transform:translateY(24px)}
+.review-card.visible{opacity:1;transform:translateY(0)}
+.review-stars{display:flex;gap:3px;margin-bottom:14px}
+.review-stars svg{width:15px;height:15px;fill:#f59e0b}
+.review-text{font-size:0.9rem;color:rgba(255,255,255,0.68);line-height:1.65;margin-bottom:20px;font-style:italic}
+.reviewer-row{display:flex;align-items:center;gap:12px}
+.reviewer-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--green-dark),var(--green));display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;color:#fff;flex-shrink:0}
+.reviewer-name{font-family:'Oswald',sans-serif;font-size:0.9rem;font-weight:600;color:#fff}
+.reviewer-verified{font-size:0.72rem;color:var(--green);margin-top:2px}
+
+/* FAQ */
+.faq{padding:90px 24px;background:var(--off-white)}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-list{margin-top:48px;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border:1px solid var(--gray-light);border-radius:8px;overflow:hidden}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;color:var(--black);background:none;border:none;cursor:pointer;text-align:left;gap:16px}
+.faq-q:hover{color:var(--green-dark)}
+.faq-icon{width:20px;height:20px;flex-shrink:0;fill:var(--green-dark);transition:transform .25s}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-item.open .faq-a{max-height:200px}
+.faq-a-inner{padding:0 24px 20px;font-size:0.9rem;color:var(--gray-text);line-height:1.7}
+
+/* CTA BAND */
+.cta-band{position:relative;padding:90px 24px;background:var(--black-deep);overflow:hidden;text-align:center}
+.cta-grain{position:absolute;inset:0;opacity:0.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+.cta-glow{position:absolute;bottom:-80px;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(96,158,18,0.09) 0%,transparent 70%);pointer-events:none}
+.cta-inner{position:relative;z-index:2;max-width:700px;margin:0 auto}
+.cta-label{font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
+.cta-title{font-family:'Oswald',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:20px}
+.cta-sub{font-size:1rem;color:rgba(255,255,255,0.58);line-height:1.65;margin-bottom:36px}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-cta{background:var(--green);color:#fff;font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:16px 40px;border-radius:4px;text-decoration:none;transition:background .2s,transform .2s}
+.btn-cta:hover{background:var(--green-dark);transform:translateY(-2px)}
+.btn-cta-ghost{background:transparent;color:#fff;font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:16px 40px;border-radius:4px;text-decoration:none;border:2px solid rgba(255,255,255,0.28);transition:border-color .2s,transform .2s}
+.btn-cta-ghost:hover{border-color:#fff;transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:#05080505;background-color:#060e06;padding:50px 24px 28px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand-name{font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:0.04em}
+.footer-brand-name span{color:var(--green)}
+.footer-brand-desc{font-size:0.85rem;color:rgba(255,255,255,0.38);line-height:1.65;max-width:280px}
+.footer-col-title{font-family:'Oswald',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:0.85rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--green)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:0.78rem;color:rgba(255,255,255,0.25)}
+.footer-copy span{color:rgba(255,255,255,0.38)}
+.footer-badge{font-size:0.72rem;color:rgba(96,158,18,0.3);letter-spacing:0.06em}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .why-layout{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr 1fr}
+  .stats-inner{grid-template-columns:1fr 1fr}
+  .areas-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:600px){
+  .nav-cta .btn-nav{display:none}
+  .services-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .stats-inner{grid-template-columns:1fr}
+  .areas-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column}
+  .cta-actions{flex-direction:column;align-items:center}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none">
+        <rect width="36" height="36" rx="6" fill="#609e12"/>
+        <path d="M10 12h6v4H10zM20 12h6v4H20zM8 20h20v4H8z" fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+        <path d="M12 16v4M24 16v4" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <div class="nav-logo-text">
+        G2G Junk Removal
+        <span class="nav-logo-sub">Denton, TX</span>
+      </div>
+    </a>
+    <div class="nav-cta">
+      <a href="tel:9402890489" class="nav-phone">(940) 289-0489</a>
+      <a href="#contact" class="btn-nav">Get a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span>5 Stars · 40 Reviews · Denton's Reliable Crew</span>
+      </div>
+      <h1 class="hero-h1">Denton's <span>Reliable</span><br>Junk Removal</h1>
+      <p class="hero-sub">G2G Junk Removal delivers what we promise — on-time arrivals, fair pricing, and a completely clear space when we're done. Trusted by Denton homeowners and businesses.</p>
+      <div class="hero-btns">
+        <a href="tel:9402890489" class="btn-primary">Call (940) 289-0489</a>
+        <a href="#services" class="btn-outline">See Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#609e12" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span>On-Time Every Visit</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#609e12" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span>No Hidden Fees</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#609e12" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span>Fully Insured</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-label">G2G at a Glance</div>
+      <div class="rating-display">
+        <div class="rating-score">5★</div>
+        <div class="rating-info">
+          <div class="rating-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="rating-sub">40 Google Reviews · Denton, TX</div>
+        </div>
+      </div>
+      <div class="card-checklist">
+        <div class="cl-item"><div class="cl-dot"></div><span>Residential & commercial jobs</span></div>
+        <div class="cl-item"><div class="cl-dot"></div><span>Upfront, volume-based pricing</span></div>
+        <div class="cl-item"><div class="cl-dot"></div><span>Same-day & next-day available</span></div>
+        <div class="cl-item"><div class="cl-dot"></div><span>We sweep up when we're done</span></div>
+        <div class="cl-item"><div class="cl-dot"></div><span>Available 7 days a week</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="section-head">
+      <div class="section-label">What We Remove</div>
+      <h2 class="section-title">Full-Service Junk Hauling in Denton</h2>
+      <p class="section-sub">One item or a full property — G2G Junk Removal handles all sizes of residential and commercial cleanouts across Denton County.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke="#4a7a0d" stroke-width="1.8" fill="none"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" stroke="#4a7a0d" stroke-width="1.8" fill="none"/></svg>
+        </div>
+        <div class="svc-name">Furniture Removal</div>
+        <p class="svc-desc">Sofas, recliners, bed frames, dining tables — we haul away any size furniture from any location in your home.</p>
+        <a href="tel:9402890489" class="svc-cta">Request Pickup →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#4a7a0d" stroke-width="1.8" fill="none"/><path d="M8 21H16M12 17V21" stroke="#4a7a0d" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div class="svc-name">Appliance Haul-Away</div>
+        <p class="svc-desc">Refrigerators, dishwashers, washers, dryers — we disconnect and remove all major appliances safely.</p>
+        <a href="tel:9402890489" class="svc-cta">Request Pickup →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 21H21M5 21V7L12 3L19 7V21" stroke="#4a7a0d" stroke-width="1.8" fill="none" stroke-linejoin="round"/><rect x="9" y="14" width="6" height="7" stroke="#4a7a0d" stroke-width="1.8" fill="none"/></svg>
+        </div>
+        <div class="svc-name">Home & Estate Cleanouts</div>
+        <p class="svc-desc">Full property clearances for estates, foreclosures, or moves — respectful, efficient, and thorough.</p>
+        <a href="tel:9402890489" class="svc-cta">Request Pickup →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M2 20H22M4 20V12L12 4L20 12V20" stroke="#4a7a0d" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="svc-name">Garage & Attic Cleanout</div>
+        <p class="svc-desc">Clear out years of accumulated junk in a single visit. We sort, remove, and clean up after ourselves.</p>
+        <a href="tel:9402890489" class="svc-cta">Request Pickup →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#4a7a0d" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="#4a7a0d" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="svc-name">Construction Debris</div>
+        <p class="svc-desc">Drywall, lumber, concrete, tile — we haul renovation and demo waste so your project stays on schedule.</p>
+        <a href="tel:9402890489" class="svc-cta">Request Pickup →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 10H3M21 6H3M21 14H3M21 18H3" stroke="#4a7a0d" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div class="svc-name">Commercial Cleanouts</div>
+        <p class="svc-desc">Office liquidations, retail fixture removal, business property cleanouts — handled efficiently and discreetly.</p>
+        <a href="tel:9402890489" class="svc-cta">Request Pickup →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY — 2-column feature checklist layout -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="section-label">Why G2G</div>
+    <h2 class="section-title">Reliability You Can Count On</h2>
+    <p class="section-sub">Denton's most dependable junk removal crew — here's exactly what you get every time you call G2G.</p>
+    <div class="why-layout">
+      <div class="why-left fade-up">
+        <h3>40 Five-Star Reviews — Earned One Job at a Time</h3>
+        <p>We built our reputation in Denton the old-fashioned way: showing up on time, doing what we said we'd do, and charging what we quoted. Every single job. No shortcuts, no excuses.</p>
+        <div class="why-big-stat">
+          <span class="why-big-num">5.0</span>
+          <span class="why-big-label">Perfect Google Rating · 40 Reviews</span>
+        </div>
+      </div>
+      <div class="why-checklist">
+        <div class="why-check-item">
+          <div class="check-circle"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#609e12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <div class="check-text">
+            <strong>On-Time Arrivals</strong>
+            <span>We respect your schedule. When we say 9AM, we're there at 9AM — not "sometime in the morning."</span>
+          </div>
+        </div>
+        <div class="why-check-item">
+          <div class="check-circle"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#609e12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <div class="check-text">
+            <strong>Upfront Pricing</strong>
+            <span>You get a firm quote before we move a single item. The number you approve is the number on your receipt.</span>
+          </div>
+        </div>
+        <div class="why-check-item">
+          <div class="check-circle"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#609e12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <div class="check-text">
+            <strong>We Do the Heavy Lifting</strong>
+            <span>From any floor, any room. You don't need to move a thing — our crew carries everything out themselves.</span>
+          </div>
+        </div>
+        <div class="why-check-item">
+          <div class="check-circle"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#609e12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <div class="check-text">
+            <strong>Responsible Disposal</strong>
+            <span>We sort items for donation, recycling, and proper disposal. We don't just dump everything in a landfill.</span>
+          </div>
+        </div>
+        <div class="why-check-item">
+          <div class="check-circle"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#609e12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <div class="check-text">
+            <strong>Fully Licensed & Insured</strong>
+            <span>Complete peace of mind when our crew is in your home or on your property. Fully covered, always.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-block">
+      <div class="stat-num"><span class="counter" data-target="40">0</span><span class="stat-suffix">+</span></div>
+      <div class="stat-label">5-Star Reviews</div>
+      <div class="stat-rule"></div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num"><span class="counter" data-target="500">0</span><span class="stat-suffix">+</span></div>
+      <div class="stat-label">Jobs Completed</div>
+      <div class="stat-rule"></div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num"><span class="counter" data-target="100">0</span><span class="stat-suffix">%</span></div>
+      <div class="stat-label">Satisfaction Rate</div>
+      <div class="stat-rule"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="process-inner">
+    <div class="section-head">
+      <div class="section-label">Getting Started</div>
+      <h2 class="section-title">From First Call to Clear Space</h2>
+      <p class="section-sub">G2G keeps the process simple — three steps and your junk is gone.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step-card">
+        <div class="step-num-tag">01</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92V21a2 2 0 01-2.18 2A19.79 19.79 0 013.87 14.45 19.42 19.42 0 011.07 7.09 2 2 0 013.06 5H7a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 12.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 19.92z" stroke="#4a7a0d" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="step-title">Call for an Estimate</div>
+        <p class="step-body">Call (940) 289-0489 to describe what needs to go. We'll provide a quick estimate and confirm our earliest available pickup window.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num-tag">02</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="#4a7a0d" stroke-width="1.8" fill="none"/><path d="M12 7V12L15 15" stroke="#4a7a0d" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div class="step-title">We Arrive On Schedule</div>
+        <p class="step-body">Our crew shows up when we said we would. We do a walkthrough, confirm the final price, and get to work — no delays.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num-tag">03</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#4a7a0d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="step-title">Space Cleared</div>
+        <p class="step-body">We load everything, sweep the area, and leave. You're left with a completely clear space and total peace of mind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="areas">
+  <div class="areas-inner">
+    <div class="section-label">Coverage Area</div>
+    <h2 class="section-title">Serving Denton & Surrounding Cities</h2>
+    <p class="section-sub">Based in Denton with reliable service throughout Denton County and north DFW.</p>
+    <div class="areas-grid">
+      <div class="area-chip"><div class="area-pin"></div><span>Denton, TX</span></div>
+      <div class="area-chip"><div class="area-pin"></div><span>Lewisville, TX</span></div>
+      <div class="area-chip"><div class="area-pin"></div><span>Corinth, TX</span></div>
+      <div class="area-chip"><div class="area-pin"></div><span>Flower Mound, TX</span></div>
+      <div class="area-chip"><div class="area-pin"></div><span>Sanger, TX</span></div>
+      <div class="area-chip"><div class="area-pin"></div><span>Highland Village, TX</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="section-label">What Customers Say</div>
+    <h2 class="section-title">40 Five-Star Stories from Denton</h2>
+    <p class="section-sub">Real reviews from real Denton neighbors — here's why G2G Junk Removal is the reliable choice.</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"G2G came out to clear my late father's house. They were kind, fast, and didn't break a single thing. Cleared an entire three-bedroom house in under five hours. Truly impressed."</p>
+        <div class="reviewer-row">
+          <div class="reviewer-avatar">C</div>
+          <div>
+            <div class="reviewer-name">Carol F.</div>
+            <div class="reviewer-verified">✓ Google Review · Denton</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Booked them for a garage cleanout — 20 years of junk. They showed up right on time, quoted me a fair price, and had everything cleared before lunch. Highly recommend G2G to anyone in Denton."</p>
+        <div class="reviewer-row">
+          <div class="reviewer-avatar">E</div>
+          <div>
+            <div class="reviewer-name">Ethan P.</div>
+            <div class="reviewer-verified">✓ Google Review · Denton</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"No-nonsense service. Called Monday, they came Tuesday. Quoted a price, stuck to it, hauled everything away, and cleaned up. Exactly what you want — no drama, just results."</p>
+        <div class="reviewer-row">
+          <div class="reviewer-avatar">W</div>
+          <div>
+            <div class="reviewer-name">Wayne G.</div>
+            <div class="reviewer-verified">✓ Google Review · Corinth</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="section-label">Questions</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q">
+          Do you serve all of Denton County?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#4a7a0d" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Yes — we serve Denton and surrounding communities including Lewisville, Corinth, Flower Mound, Highland Village, Sanger, and more. Call us to confirm we cover your area.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          How do you price your services?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#4a7a0d" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Pricing is based on volume — how much space your items take in our truck. We assess on-site and give you a firm quote before starting. No hidden fees or hourly charges.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Can you accommodate same-day pickups?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#4a7a0d" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Same-day and next-day pickups are frequently available depending on our schedule. Call us in the morning for the best chance of same-day service in the Denton area.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Do I need to be home during the pickup?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#4a7a0d" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">For interior access, yes — someone needs to be present. For garage or exterior-only jobs, arrangements can sometimes be made. Call us and we'll work something out.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          What can't you take?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#4a7a0d" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">We cannot haul hazardous materials such as paint, chemicals, fuel, asbestos, or biohazardous waste. Everything else — furniture, appliances, construction debris, electronics — we handle.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band" id="contact">
+  <div class="cta-grain"></div>
+  <div class="cta-glow"></div>
+  <div class="cta-inner">
+    <div class="cta-label">Ready to Clear Your Space?</div>
+    <h2 class="cta-title">Denton's Reliable Junk Removal — G2G</h2>
+    <p class="cta-sub">Five stars across 40 reviews. On-time arrivals. Honest pricing. Call G2G Junk Removal and experience the difference reliability makes.</p>
+    <div class="cta-actions">
+      <a href="tel:9402890489" class="btn-cta">Call (940) 289-0489</a>
+      <a href="#services" class="btn-cta-ghost">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">G2G <span>Junk Removal</span></div>
+        <p class="footer-brand-desc">Denton's most reliable junk removal crew. Perfect 5-star rating across 40 verified reviews. On-time, honest, and thorough — every single job.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links">
+          <a href="#">Furniture Removal</a>
+          <a href="#">Appliance Haul-Away</a>
+          <a href="#">Home Cleanouts</a>
+          <a href="#">Construction Debris</a>
+          <a href="#">Commercial Cleanouts</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-links">
+          <a href="tel:9402890489">(940) 289-0489</a>
+          <a href="#">Denton, TX</a>
+          <a href="#">7 Days a Week</a>
+          <a href="#">Free Estimates</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 <span>G2G Junk Removal</span> · Denton, TX · All rights reserved</div>
+      <div class="footer-badge">RELIABLE JUNK REMOVAL · DENTON TX</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const cls = el.classList[0];
+      const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains(cls));
+      const idx = siblings.indexOf(el);
+      setTimeout(() => el.classList.add('visible'), idx * 90);
+      observer.unobserve(el);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.svc-card, .stat-block, .step-card, .area-chip, .review-card').forEach(el => observer.observe(el));
+
+// Why checklist and left col fade-up
+const fadeObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      fadeObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.why-checklist, .fade-up').forEach(el => fadeObs.observe(el));
+
+const cObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.target);
+      let current = 0;
+      const step = Math.ceil(target / 100);
+      const timer = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = current;
+        if (current >= target) clearInterval(timer);
+      }, 16);
+      cObs.unobserve(el);
+    }
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.counter').forEach(el => cObs.observe(el));
+
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>

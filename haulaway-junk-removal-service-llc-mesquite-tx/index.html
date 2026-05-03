@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HaulAway Junk Removal — Mesquite's Same-Day Haulers | (469) 412-4699</title>
+<meta name="description" content="HaulAway Junk Removal Service, LLC — Mesquite's same-day junk haulers. 64 five-star reviews. Furniture, appliances, estates, debris. Call (469) 412-4699.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #1d1d1d;
+  --primary-dark: #0a0a0a;
+  --accent: #e68a00;
+  --accent-dark: #b36b00;
+  --bg: #ffffff;
+  --bg-off: #f6f7f9;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.72);
+  --t3: rgba(255,255,255,0.45);
+  --dark-text: #111827;
+  --grey-text: #6b7280;
+  --border: #e5e9f0;
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Source Sans 3', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 18px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 36px rgba(0,0,0,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(230,138,0,0.35); transition: all 0.15s ease;
+  text-decoration: none; letter-spacing: 0.02em;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(230,138,0,0.45); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 600;
+  padding: 13px 28px; border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.55); cursor: pointer;
+  transition: all 0.15s ease; text-decoration: none; letter-spacing: 0.02em;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.07); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+
+@media (max-width: 900px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-3, .grid-2 { grid-template-columns: 1fr; } }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1).visible { animation-delay: 0.1s; }
+.card:nth-child(2).visible { animation-delay: 0.2s; }
+.card:nth-child(3).visible { animation-delay: 0.3s; }
+.card:nth-child(4).visible { animation-delay: 0.4s; }
+.card:nth-child(5).visible { animation-delay: 0.5s; }
+.card:nth-child(6).visible { animation-delay: 0.6s; }
+
+/* HEADER */
+header {
+  background: var(--primary-dark);
+  position: sticky; top: 0; z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.6);
+  border-bottom: 1px solid rgba(230,138,0,0.2);
+}
+header.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,0.8); }
+.header-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; height: 68px;
+}
+.brand-block { display: flex; align-items: center; gap: 12px; }
+.brand-icon {
+  width: 38px; height: 38px; border-radius: 8px;
+  background: var(--accent); display: flex; align-items: center; justify-content: center;
+  color: white;
+}
+.brand-name { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: white; letter-spacing: 0.04em; }
+.brand-tag { font-family: var(--font-body); font-size: 11px; color: var(--t3); letter-spacing: 0.02em; }
+.header-right { display: flex; align-items: center; gap: 12px; }
+.header-phone { font-family: var(--font-display); font-size: 14px; color: var(--t2); }
+@media (max-width: 600px) { .header-phone { display: none; } }
+
+/* HERO */
+.hero {
+  background: linear-gradient(150deg, var(--primary-dark) 0%, var(--primary) 100%);
+  padding: 80px 0; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; bottom: -80px; right: -80px;
+  width: 400px; height: 400px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(230,138,0,0.08), transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.15; pointer-events: none; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-layout {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: center;
+}
+@media (max-width: 900px) { .hero-layout { grid-template-columns: 1fr; } .hero-card { display: none; } }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(230,138,0,0.15); border: 1px solid rgba(230,138,0,0.4);
+  color: var(--accent); font-family: var(--font-display); font-size: 11px;
+  font-weight: 600; padding: 6px 14px; border-radius: 100px;
+  letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px;
+}
+.hero-headline {
+  font-family: var(--font-display); color: white;
+  font-size: clamp(40px, 5.8vw, 62px); font-weight: 700;
+  line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 20px;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-family: var(--font-body); font-size: 17px; color: var(--t2);
+  line-height: 1.65; margin-bottom: 32px; max-width: 460px;
+}
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 30px; }
+.hero-trust {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  font-family: var(--font-body); font-size: 13px; color: var(--t3);
+}
+.trust-item { display: flex; align-items: center; gap: 5px; }
+.trust-sep { width: 1px; height: 14px; background: rgba(255,255,255,0.18); }
+
+.hero-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-top: 2px solid rgba(230,138,0,0.5);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  backdrop-filter: blur(16px);
+  border-radius: 16px; padding: 30px 26px;
+}
+.hero-card-headline {
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  color: white; margin-bottom: 6px;
+}
+.hero-card-sub {
+  font-family: var(--font-body); font-size: 13px; color: var(--t3);
+  margin-bottom: 24px; padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.cprop {
+  display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;
+}
+.cprop-check {
+  width: 24px; height: 24px; border-radius: 50%;
+  background: rgba(230,138,0,0.18); display: flex; align-items: center;
+  justify-content: center; color: var(--accent); flex-shrink: 0; margin-top: 1px;
+}
+.cprop h4 { font-family: var(--font-display); font-size: 14px; color: white; margin-bottom: 2px; }
+.cprop p { font-family: var(--font-body); font-size: 12px; color: var(--t3); line-height: 1.4; }
+.card-tel {
+  margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.08);
+  font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white;
+  display: flex; align-items: center; gap: 8px;
+}
+.card-tel svg { color: var(--accent); }
+
+/* STATS */
+.stats-row { background: var(--primary); padding: 0; }
+.stats-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.stat-box {
+  padding: 30px 20px; text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.stat-box:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--font-display); font-size: clamp(30px, 3.5vw, 46px);
+  font-weight: 700; color: white; line-height: 1; margin-bottom: 6px;
+}
+.stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+@media (max-width: 600px) { .stats-inner { grid-template-columns: repeat(2, 1fr); } }
+
+/* SERVICES */
+.services { background: var(--bg); }
+.section-label { font-family: var(--font-display); font-size: 10px; font-weight: 600; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+.section-title { font-family: var(--font-display); font-size: 36px; font-weight: 700; color: var(--dark-text); margin-bottom: 12px; }
+.section-sub { font-family: var(--font-body); font-size: 16px; color: var(--grey-text); margin-bottom: 48px; max-width: 520px; }
+
+.svc-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-top: 3px solid transparent; border-radius: var(--radius);
+  padding: 28px 22px; box-shadow: var(--shadow); transition: all 0.25s ease;
+}
+.svc-card:hover { border-top-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.svc-icon {
+  width: 52px; height: 52px; border-radius: 12px;
+  background: rgba(230,138,0,0.1);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--accent); margin-bottom: 16px;
+}
+.svc-name { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--dark-text); margin-bottom: 8px; }
+.svc-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 14px; }
+.svc-link { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; }
+
+/* WHY */
+.why { background: var(--primary); position: relative; overflow: hidden; }
+.why::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.why > .container { position: relative; z-index: 1; }
+.why .section-title { color: white; }
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
+.why-card {
+  background: var(--primary-dark); border-radius: var(--radius);
+  padding: 28px 24px; border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.25s;
+}
+.why-card:hover { border-color: rgba(230,138,0,0.3); transform: translateY(-2px); }
+.why-card-header { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.why-card-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: rgba(230,138,0,0.15); display: flex; align-items: center;
+  justify-content: center; color: var(--accent); flex-shrink: 0;
+}
+.why-card h3 { font-family: var(--font-display); font-size: 16px; color: white; }
+.why-card p { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.6; }
+@media (max-width: 600px) { .why-grid { grid-template-columns: 1fr; } }
+
+/* HOW */
+.how { background: var(--primary-dark); }
+.how .section-title { color: white; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 48px; }
+.step { text-align: center; padding: 0 28px; position: relative; }
+.step:not(:last-child)::after {
+  content: ''; position: absolute; top: 26px;
+  left: calc(50% + 30px); width: calc(100% - 60px);
+  height: 2px; border-top: 2px dashed rgba(255,255,255,0.12);
+}
+.step-num {
+  width: 54px; height: 54px; border-radius: 50%;
+  background: var(--accent); display: flex; align-items: center;
+  justify-content: center; font-family: var(--font-display); font-size: 20px;
+  font-weight: 700; color: white; margin: 0 auto 18px;
+}
+.step h3 { font-family: var(--font-display); font-size: 17px; color: white; margin-bottom: 8px; }
+.step p { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.55; }
+@media (max-width: 600px) { .steps { grid-template-columns: 1fr; } .step:not(:last-child)::after { display: none; } }
+
+/* REVIEWS */
+.reviews { background: var(--bg-off); }
+.reviews-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 44px; flex-wrap: wrap; gap: 16px; }
+.google-badge {
+  display: flex; align-items: center; gap: 10px;
+  background: white; border: 1px solid var(--border);
+  border-radius: 10px; padding: 10px 16px;
+}
+.gbadge-score { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--dark-text); }
+.gbadge-txt { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); }
+.gbadge-stars { display: flex; gap: 2px; color: #fbbf24; }
+
+.review-card {
+  background: white; border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06); transition: all 0.25s;
+}
+.review-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); transform: translateY(-3px); }
+.rv-text { font-family: var(--font-body); font-style: italic; font-size: 15px; line-height: 1.7; color: var(--dark-text); margin-bottom: 20px; }
+.rv-divider { border: none; border-top: 1px solid var(--border); margin: 0 0 16px; }
+.rv-author { display: flex; align-items: center; gap: 12px; }
+.rv-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(230,138,0,0.18); display: flex; align-items: center;
+  justify-content: center; font-family: var(--font-display); font-size: 14px; font-weight: 700;
+  color: var(--accent); flex-shrink: 0;
+}
+.rv-name { font-family: var(--font-display); font-size: 15px; font-weight: 600; color: var(--dark-text); }
+.rv-loc { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); }
+
+/* AREAS */
+.areas { background: var(--primary); }
+.areas-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.areas .section-title { color: white; }
+.areas-body { font-family: var(--font-body); font-size: 16px; color: var(--t2); line-height: 1.7; margin-bottom: 28px; }
+.area-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.area-chip {
+  font-family: var(--font-body); font-size: 13px; padding: 7px 16px;
+  border-radius: 100px; border: 1px solid rgba(255,255,255,0.2); color: var(--t2); transition: all 0.2s;
+}
+.area-chip:hover { background: var(--accent); border-color: var(--accent); color: white; }
+@media (max-width: 600px) { .areas-layout { grid-template-columns: 1fr; } }
+
+/* CONTACT */
+.contact { background: white; }
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; }
+.form-group { margin-bottom: 16px; }
+.form-label { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); display: block; margin-bottom: 6px; }
+input, select, textarea {
+  width: 100%; background: var(--bg-off); border: 1px solid var(--border);
+  border-radius: 8px; padding: 12px 14px; font-family: var(--font-body);
+  font-size: 14px; color: var(--dark-text); transition: border-color 0.2s;
+}
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(230,138,0,0.1); }
+textarea { resize: vertical; min-height: 110px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.btn-submit {
+  width: 100%; background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  padding: 15px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(230,138,0,0.35); transition: all 0.15s; letter-spacing: 0.03em;
+}
+.btn-submit:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.cinfo-box { background: var(--primary); border-radius: 16px; padding: 36px 28px; }
+.cinfo-title { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; margin-bottom: 24px; }
+.cinfo-row { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 22px; }
+.cinfo-icon { width: 40px; height: 40px; border-radius: 10px; background: rgba(230,138,0,0.15); display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0; }
+.cinfo-label { font-family: var(--font-display); font-size: 11px; color: var(--t3); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 2px; }
+.cinfo-val { font-family: var(--font-body); font-size: 15px; color: white; }
+@media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; } }
+
+/* CTA BAND */
+.cta-band {
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  padding: 80px 0; position: relative; overflow: hidden;
+}
+.cta-band::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.cta-band > .container { position: relative; z-index: 1; text-align: center; }
+.cta-band h2 { font-family: var(--font-display); font-size: clamp(28px, 4vw, 42px); font-weight: 700; color: white; margin-bottom: 12px; }
+.cta-band p { font-family: var(--font-body); font-size: 17px; color: rgba(255,255,255,0.85); margin-bottom: 32px; }
+.cta-dark-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--primary-dark); color: white;
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  padding: 15px 36px; border-radius: 8px; text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: all 0.15s;
+}
+.cta-dark-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+
+/* FOOTER */
+footer { background: var(--primary-dark); padding: 64px 0 0; border-top: 1px solid rgba(230,138,0,0.15); }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
+.footer-brand-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: white; margin-bottom: 8px; letter-spacing: 0.04em; }
+.footer-brand-desc { font-family: var(--font-body); font-size: 14px; color: var(--t3); line-height: 1.6; }
+.footer-col-title { font-family: var(--font-display); font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { font-family: var(--font-body); font-size: 14px; color: var(--t2); text-decoration: none; transition: color 0.15s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.footer-copy { font-family: var(--font-body); font-size: 13px; color: var(--t3); }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-inner">
+    <div class="brand-block">
+      <div class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">HaulAway</div>
+        <div class="brand-tag">Junk Removal Service, LLC — Mesquite, TX</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="header-phone">(469) 412-4699</span>
+      <a href="tel:4694124699" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Now
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-layout">
+    <div>
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        5 Stars &mdash; 64 Google Reviews
+      </div>
+      <h1 class="hero-headline">Mesquite's <span>Same-Day</span> Junk Haulers</h1>
+      <p class="hero-sub">When you need it gone now, HaulAway shows up. From a single sofa to a full property cleanout near Mesquite Rodeo, our crew moves fast, prices fair, and leaves your space completely clear.</p>
+      <div class="hero-ctas">
+        <a href="tel:4694124699" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (469) 412-4699
+        </a>
+        <a href="#contact" class="btn-ghost">Get Free Quote</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          5.0 &bull; 64 Reviews
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">Fully Insured LLC</div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">Same-Day Available</div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">No Hidden Fees</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-headline">Why HaulAway?</div>
+      <div class="hero-card-sub">Mesquite's LLC-backed, insured crew ready today</div>
+      <div class="cprop">
+        <div class="cprop-check">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <h4>LLC Registered &amp; Insured</h4>
+          <p>Legitimate business, not a side hustle. Your property is protected.</p>
+        </div>
+      </div>
+      <div class="cprop">
+        <div class="cprop-check">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <h4>Upfront Flat Pricing</h4>
+          <p>Quote before we start. No clock running. No hidden disposal fees.</p>
+        </div>
+      </div>
+      <div class="cprop">
+        <div class="cprop-check">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <h4>Full-Service Crew</h4>
+          <p>We carry everything out — you don't lift a finger on our jobs.</p>
+        </div>
+      </div>
+      <div class="cprop">
+        <div class="cprop-check">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <h4>Eco-Friendly Disposal</h4>
+          <p>Items that can be donated or recycled get a second life, not a landfill spot.</p>
+        </div>
+      </div>
+      <div class="card-tel">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (469) 412-4699
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="stats-inner">
+    <div class="stat-box">
+      <div class="stat-num" data-target="64" data-suffix="">0</div>
+      <div class="stat-label">5-Star Reviews</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" data-target="300" data-suffix="+">0</div>
+      <div class="stat-label">Loads Hauled</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" data-target="1" data-suffix=" day">0</div>
+      <div class="stat-label">Average Turnaround</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" data-target="100" data-suffix="%">0</div>
+      <div class="stat-label">Job Completion Rate</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="container">
+    <div class="section-label">What We Remove</div>
+    <h2 class="section-title">Full-Service Junk Hauling</h2>
+    <p class="section-sub">Big job, small job, heavy job — HaulAway handles it all with a licensed, insured crew and zero excuses.</p>
+    <div class="grid-3">
+      <div class="svc-card card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3z"/><path d="M4 16v2"/><path d="M20 16v2"/></svg>
+        </div>
+        <div class="svc-name">Furniture Pickup</div>
+        <div class="svc-desc">Sectionals, bed frames, dressers, mattresses — our crew carries it out from any room. Heavy items included, no upcharge.</div>
+        <a href="#contact" class="svc-link">Get a quote &rarr;</a>
+      </div>
+      <div class="svc-card card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="svc-name">Appliance Removal</div>
+        <div class="svc-desc">Refrigerators, washers, dryers, and more. We disconnect, carry out, and ensure proper recycling so it doesn't end up in a ditch.</div>
+        <a href="#contact" class="svc-link">Get a quote &rarr;</a>
+      </div>
+      <div class="svc-card card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="svc-name">Estate &amp; House Cleanouts</div>
+        <div class="svc-desc">Moving, downsizing, or handling a loved one's estate — we clear every room efficiently and with respect for the situation.</div>
+        <a href="#contact" class="svc-link">Get a quote &rarr;</a>
+      </div>
+      <div class="svc-card card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+        </div>
+        <div class="svc-name">Construction Debris</div>
+        <div class="svc-desc">Post-renovation rubble, drywall scraps, lumber cutoffs, tiles — cleared so your job site is ready for the next phase fast.</div>
+        <a href="#contact" class="svc-link">Get a quote &rarr;</a>
+      </div>
+      <div class="svc-card card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        </div>
+        <div class="svc-name">Yard &amp; Outdoor Debris</div>
+        <div class="svc-desc">Brush piles, old fencing, landscaping waste, storm debris. We clear the yard so you don't have to make a dozen trips to the dump.</div>
+        <a href="#contact" class="svc-link">Get a quote &rarr;</a>
+      </div>
+      <div class="svc-card card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="svc-name">Same-Day Rush Hauls</div>
+        <div class="svc-desc">Call by noon and we're often there same afternoon. HaulAway keeps trucks moving daily to hit tight turnarounds across DFW.</div>
+        <a href="#contact" class="svc-link">Get a quote &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="container">
+    <div class="section-label">The HaulAway Difference</div>
+    <h2 class="section-title">An LLC You Can Trust. Results You Can See.</h2>
+    <div class="why-grid">
+      <div class="why-card card">
+        <div class="why-card-header">
+          <div class="why-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Legitimate LLC, Fully Insured</h3>
+        </div>
+        <p>HaulAway Junk Removal Service is a registered LLC — not a guy with a pickup truck. You're covered on every job, every time.</p>
+      </div>
+      <div class="why-card card">
+        <div class="why-card-header">
+          <div class="why-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Price Lock — No Surprises</h3>
+        </div>
+        <p>The quote you get on-site is the price you pay. No "we forgot to factor in stairs" upcharges after the work is done.</p>
+      </div>
+      <div class="why-card card">
+        <div class="why-card-header">
+          <div class="why-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Same-Day Turnaround</h3>
+        </div>
+        <p>Call early enough and we're there that day. We run multiple trucks and schedule to minimize your wait time.</p>
+      </div>
+      <div class="why-card card">
+        <div class="why-card-header">
+          <div class="why-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          </div>
+          <h3>Responsible Disposal</h3>
+        </div>
+        <p>We sort before we dump. Usable items go to donation centers, recyclables go to proper facilities. Not everything lands in a landfill.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="container">
+    <div class="section-label" style="color: var(--accent);">Our Process</div>
+    <h2 class="section-title">Call. Quote. Gone.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>You Call or Book</h3>
+        <p>Tell us what needs hauling and where. We'll lock in a time — same day or whenever works for you.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>On-Site Quote</h3>
+        <p>We arrive, size up the job, and hand you a firm number. You approve it before a single item is moved.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Hauled. Done. Clean.</h3>
+        <p>We load the truck, sweep up any mess, and roll out. Your property is clear. Zero effort on your part.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div>
+        <div class="section-label">Reviews</div>
+        <h2 class="section-title">64 Reasons to Call HaulAway</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div>
+          <div class="gbadge-score">5.0</div>
+          <div class="gbadge-txt">64 Google Reviews</div>
+        </div>
+        <div class="gbadge-stars">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="rv-text">Had three broken appliances sitting in my garage for two years — I kept putting off dealing with them. HaulAway showed up, gave me a quote that was way lower than I expected, and had everything gone in 30 minutes. My garage actually has space now. Should've called months ago.</p>
+        <hr class="rv-divider">
+        <div class="rv-author">
+          <div class="rv-avatar">BR</div>
+          <div>
+            <div class="rv-name">Brandon R.</div>
+            <div class="rv-loc">Mesquite, TX &bull; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="rv-text">I'm a property manager and use HaulAway for unit turnovers. They're reliable, show up when they say, and handle whatever volume I throw at them. Best part is the pricing is flat — I can budget consistently without worrying about surprise charges. They're my go-to for every property now.</p>
+        <hr class="rv-divider">
+        <div class="rv-author">
+          <div class="rv-avatar">LC</div>
+          <div>
+            <div class="rv-name">Linda C.</div>
+            <div class="rv-loc">Garland, TX &bull; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="rv-text">Post-remodel debris was piling up in my backyard and my contractor needed the space cleared fast. HaulAway came out next morning, loaded up all the drywall and lumber scraps, and were gone before noon. Efficient, professional, and honestly great guys. Zero complaints.</p>
+        <hr class="rv-divider">
+        <div class="rv-author">
+          <div class="rv-avatar">TM</div>
+          <div>
+            <div class="rv-name">Tom M.</div>
+            <div class="rv-loc">Balch Springs, TX &bull; Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="areas">
+  <div class="container">
+    <div class="areas-layout">
+      <div>
+        <div class="section-label">Service Area</div>
+        <h2 class="section-title">East DFW &amp; Beyond</h2>
+        <p class="areas-body">HaulAway runs trucks daily across Mesquite and the surrounding DFW metro. Same-day pickup is frequently available — call to check your area and get on the schedule.</p>
+        <a href="tel:4694124699" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Check My Area
+        </a>
+      </div>
+      <div style="background: var(--primary-dark); border-radius: 16px; padding: 32px; border: 1px solid rgba(230,138,0,0.15);">
+        <div style="font-family: var(--font-display); font-size: 11px; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px;">We Serve These Areas</div>
+        <div class="area-chips">
+          <span class="area-chip">Mesquite</span>
+          <span class="area-chip">Garland</span>
+          <span class="area-chip">Rowlett</span>
+          <span class="area-chip">Balch Springs</span>
+          <span class="area-chip">Sunnyvale</span>
+          <span class="area-chip">Forney</span>
+          <span class="area-chip">Rockwall</span>
+          <span class="area-chip">Seagoville</span>
+          <span class="area-chip">Dallas</span>
+          <span class="area-chip">Sachse</span>
+          <span class="area-chip">Wylie</span>
+          <span class="area-chip">Richardson</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div>
+        <div class="section-label">Get Started</div>
+        <h2 class="section-title">Request Your Free Quote</h2>
+        <p style="font-family: var(--font-body); font-size: 16px; color: var(--grey-text); margin-bottom: 28px;">We respond fast. Or skip the form and just call — we pick up.</p>
+        <form onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">First Name</label>
+              <input type="text" placeholder="First name">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name</label>
+              <input type="text" placeholder="Last name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone</label>
+            <input type="tel" placeholder="(469) 000-0000">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Address</label>
+            <input type="text" placeholder="Your address in Mesquite or DFW">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Job Type</label>
+            <select>
+              <option>Furniture Removal</option>
+              <option>Appliances</option>
+              <option>Estate / House Cleanout</option>
+              <option>Construction Debris</option>
+              <option>Yard Waste</option>
+              <option>Same-Day Rush</option>
+              <option>Mixed / Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Details</label>
+            <textarea placeholder="What needs to go? Rough volume, any notes about access..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Get My Free Quote</button>
+        </form>
+      </div>
+      <div class="cinfo-box">
+        <div class="cinfo-title">Call or Text Us</div>
+        <div class="cinfo-row">
+          <div class="cinfo-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="cinfo-label">Phone</div>
+            <div class="cinfo-val">(469) 412-4699</div>
+          </div>
+        </div>
+        <div class="cinfo-row">
+          <div class="cinfo-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="cinfo-label">Hours</div>
+            <div class="cinfo-val">Mon–Sat: 7AM–7PM<br>Sun: 8AM–5PM</div>
+          </div>
+        </div>
+        <div class="cinfo-row">
+          <div class="cinfo-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="cinfo-label">Service Area</div>
+            <div class="cinfo-val">Mesquite, TX &amp; DFW Metro</div>
+          </div>
+        </div>
+        <div class="cinfo-row">
+          <div class="cinfo-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="cinfo-label">Credentials</div>
+            <div class="cinfo-val">LLC Registered &bull; Fully Insured</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Don't Let Junk Sit Another Day</h2>
+    <p>Same-day service. LLC registered. Upfront price. Just one call away.</p>
+    <a href="tel:4694124699" class="cta-dark-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (469) 412-4699
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">HaulAway Junk Removal</div>
+        <p class="footer-brand-desc">Mesquite's same-day junk hauling LLC. Serving East DFW with transparent pricing, a licensed and insured crew, and 64 perfect five-star reviews backing every job.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Furniture Pickup</a></li>
+          <li><a href="#contact">Appliance Removal</a></li>
+          <li><a href="#contact">Estate Cleanouts</a></li>
+          <li><a href="#contact">Construction Debris</a></li>
+          <li><a href="#contact">Yard Debris</a></li>
+          <li><a href="#contact">Same-Day Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Areas</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Mesquite</a></li>
+          <li><a href="#contact">Garland</a></li>
+          <li><a href="#contact">Balch Springs</a></li>
+          <li><a href="#contact">Rowlett</a></li>
+          <li><a href="#contact">Forney</a></li>
+          <li><a href="#contact">Dallas</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:4694124699">(469) 412-4699</a></li>
+          <li><a href="#contact">Free Quote</a></li>
+          <li><a href="#contact">Same-Day Booking</a></li>
+        </ul>
+        <div style="margin-top: 20px; font-family: var(--font-body); font-size: 13px; color: var(--t3);">Mon–Sat 7AM–7PM<br>Sun 8AM–5PM</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2024 HaulAway Junk Removal Service, LLC. Mesquite, TX.</div>
+      <div class="footer-copy">LLC Registered &bull; Fully Insured</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 50);
+});
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => statObs.observe(el));
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); cardObs.unobserve(e.target); } });
+}, { threshold: 0.2 });
+document.querySelectorAll('.card').forEach(c => cardObs.observe(c));
+</script>
+</body>
+</html>

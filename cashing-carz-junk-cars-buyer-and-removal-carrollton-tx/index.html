@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cashing Carz | Junk Car Buyers & Removal | Carrollton, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#022a52;
+  --navy-deep:#011a35;
+  --navy-mid:#03356a;
+  --gold:#d4a017;
+  --gold-light:#e8b520;
+  --gold-dark:#a87d10;
+  --white:#ffffff;
+  --off-white:#f5f7fa;
+  --gray-light:#e4e9f0;
+  --gray-text:#637080;
+  --text-dark:#022a52;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;color:var(--text-dark);background:#fff;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(1,26,53,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(212,160,23,0.2)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo-icon{width:36px;height:36px;flex-shrink:0}
+.nav-logo-text{font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:700;color:#fff;line-height:1.15;letter-spacing:0.03em}
+.nav-logo-sub{font-size:0.62rem;font-weight:400;color:var(--gold);display:block;letter-spacing:0.12em;text-transform:uppercase}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-phone{color:var(--gold);font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;text-decoration:none;letter-spacing:0.04em}
+.nav-phone:hover{color:#fff}
+.btn-nav{background:var(--gold);color:var(--navy-deep);font-family:'Oswald',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:9px 20px;border-radius:4px;text-decoration:none;transition:background .2s}
+.btn-nav:hover{background:var(--gold-light)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--navy-deep);overflow:hidden;padding-top:68px}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(145deg,#000d1c 0%,#011a35 40%,#022a52 100%)}
+.hero-grain{position:absolute;inset:0;opacity:0.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+.hero-diag{position:absolute;right:0;top:0;width:45%;height:100%;background:linear-gradient(135deg,transparent 0%,rgba(212,160,23,0.04) 100%);clip-path:polygon(15% 0,100% 0,100% 100%,0% 100%)}
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212,160,23,0.12);border:1px solid rgba(212,160,23,0.35);border-radius:100px;padding:6px 16px;margin-bottom:24px;opacity:0;animation:heroFadeUp .6s .1s forwards}
+.hero-badge svg{width:14px;height:14px;fill:var(--gold)}
+.hero-badge span{font-size:0.75rem;font-weight:600;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase}
+.hero-h1{font-family:'Oswald',sans-serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:700;color:#fff;line-height:1.1;letter-spacing:-0.01em;margin-bottom:20px;opacity:0;animation:heroFadeUp .6s .2s forwards}
+.hero-h1 span{color:var(--gold)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,0.72);line-height:1.65;margin-bottom:32px;max-width:520px;opacity:0;animation:heroFadeUp .6s .3s forwards}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;opacity:0;animation:heroFadeUp .6s .4s forwards}
+.btn-primary{background:var(--gold);color:var(--navy-deep);font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:15px 32px;border-radius:4px;text-decoration:none;transition:background .2s,transform .2s;display:inline-block}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:#fff;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:15px 32px;border-radius:4px;text-decoration:none;border:2px solid rgba(255,255,255,0.3);transition:border-color .2s,transform .2s;display:inline-block}
+.btn-outline:hover{border-color:#fff;transform:translateY(-2px)}
+.hero-trust{display:flex;gap:24px;flex-wrap:wrap;opacity:0;animation:heroFadeUp .6s .5s forwards}
+.trust-item{display:flex;align-items:center;gap:7px}
+.trust-item svg{width:16px;height:16px;flex-shrink:0}
+.trust-item span{font-size:0.82rem;color:rgba(255,255,255,0.58);font-weight:500}
+
+/* Hero Card — frosted glass */
+.hero-card{background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:32px;border-top:2px solid var(--gold);opacity:0;animation:heroFadeUp .6s .25s forwards}
+.hero-card-title{font-family:'Oswald',sans-serif;font-size:0.85rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+.cash-offer-block{background:rgba(212,160,23,0.1);border:1px solid rgba(212,160,23,0.2);border-radius:10px;padding:20px;margin-bottom:20px;text-align:center}
+.cash-offer-label{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:8px}
+.cash-offer-amount{font-family:'Oswald',sans-serif;font-size:2.8rem;font-weight:700;color:var(--gold);line-height:1}
+.cash-offer-sub{font-size:0.8rem;color:rgba(255,255,255,0.5);margin-top:6px}
+.card-perks{display:flex;flex-direction:column;gap:10px}
+.perk-row{display:flex;align-items:center;gap:10px}
+.perk-icon{width:22px;height:22px;border-radius:50%;background:rgba(212,160,23,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.perk-icon svg{width:12px;height:12px;fill:var(--gold)}
+.perk-row span{font-size:0.87rem;color:rgba(255,255,255,0.75);font-weight:500}
+
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* SERVICES */
+.services{padding:90px 24px;background:var(--off-white)}
+.section-label{font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:12px}
+.section-title{font-family:'Oswald',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:16px}
+.section-sub{font-size:1rem;color:var(--gray-text);line-height:1.65;max-width:560px}
+.section-head{margin-bottom:52px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto}
+.svc-card{background:#fff;border-radius:10px;padding:32px 24px;border:1px solid var(--gray-light);transition:box-shadow .25s,transform .25s;opacity:0;transform:translateY(24px)}
+.svc-card.visible{opacity:1;transform:translateY(0)}
+.svc-card:hover{box-shadow:0 8px 32px rgba(2,42,82,0.1);transform:translateY(-4px)}
+.svc-icon{width:56px;height:56px;border-radius:12px;background:rgba(212,160,23,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.svc-icon svg{width:28px;height:28px;fill:var(--gold-dark)}
+.svc-name{font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:10px}
+.svc-desc{font-size:0.88rem;color:var(--gray-text);line-height:1.65;margin-bottom:16px}
+.svc-link{font-size:0.82rem;font-weight:600;color:var(--gold-dark);text-decoration:none}
+.svc-link:hover{color:var(--navy)}
+
+/* WHY — 2x2 dark feature card grid */
+.why{padding:90px 24px;background:var(--navy)}
+.why .section-title{color:#fff}
+.why .section-sub{color:rgba(255,255,255,0.6)}
+.why-inner{max-width:1100px;margin:0 auto}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:52px}
+.why-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:32px;border-left:3px solid var(--gold);opacity:0;transform:translateY(24px)}
+.why-card.visible{opacity:1;transform:translateY(0)}
+.why-card-icon{width:48px;height:48px;border-radius:10px;background:rgba(212,160,23,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.why-card-icon svg{width:24px;height:24px;fill:var(--gold)}
+.why-card h3{font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:10px}
+.why-card p{font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.68}
+
+/* STATS */
+.stats{padding:72px 24px;background:#fff}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+.stat-block{opacity:0;transform:translateY(20px)}
+.stat-block.visible{opacity:1;transform:translateY(0)}
+.stat-num{font-family:'Oswald',sans-serif;font-size:3rem;font-weight:700;color:var(--navy);line-height:1}
+.stat-num .stat-suffix{font-size:2rem}
+.stat-label{font-size:0.88rem;color:var(--gray-text);margin-top:8px;font-weight:500}
+.stat-accent{width:40px;height:4px;background:var(--gold);border-radius:2px;margin:12px auto 0}
+
+/* PROCESS */
+.process{padding:90px 24px;background:var(--navy-mid)}
+.process-inner{max-width:1100px;margin:0 auto}
+.process .section-title{color:#fff}
+.process .section-sub{color:rgba(255,255,255,0.6)}
+.process .section-label{color:var(--gold)}
+.process-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:52px;position:relative}
+.process-row::before{content:'';position:absolute;top:40px;left:calc(50% - 33%);right:calc(50% - 33%);height:1px;background:rgba(212,160,23,0.3);z-index:0}
+.proc-step{position:relative;z-index:1;text-align:center;padding:0 20px;opacity:0;transform:translateY(24px)}
+.proc-step.visible{opacity:1;transform:translateY(0)}
+.proc-circle{width:80px;height:80px;border-radius:50%;background:rgba(212,160,23,0.12);border:2px solid rgba(212,160,23,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.proc-circle svg{width:36px;height:36px;fill:var(--gold)}
+.proc-num{font-family:'Oswald',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:rgba(212,160,23,0.6);margin-bottom:8px}
+.proc-title{font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;color:#fff;margin-bottom:8px}
+.proc-body{font-size:0.84rem;color:rgba(255,255,255,0.55);line-height:1.65}
+
+/* AREAS */
+.areas{padding:90px 24px;background:var(--off-white)}
+.areas-inner{max-width:1200px;margin:0 auto}
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.area-chip{background:#fff;border:1px solid var(--gray-light);border-radius:8px;padding:14px 20px;display:flex;align-items:center;gap:10px;opacity:0;transform:translateY(14px)}
+.area-chip.visible{opacity:1;transform:translateY(0)}
+.area-chip svg{width:15px;height:15px;fill:var(--gold-dark);flex-shrink:0}
+.area-chip span{font-size:0.88rem;color:var(--text-dark);font-weight:500}
+
+/* REVIEWS — dark cards with left border */
+.reviews{padding:90px 24px;background:var(--navy-deep)}
+.reviews-inner{max-width:1200px;margin:0 auto}
+.reviews .section-title{color:#fff}
+.reviews .section-sub{color:rgba(255,255,255,0.55)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.review-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:28px;border-left:3px solid var(--gold);opacity:0;transform:translateY(24px)}
+.review-card.visible{opacity:1;transform:translateY(0)}
+.review-stars{display:flex;gap:3px;margin-bottom:14px}
+.review-stars svg{width:15px;height:15px;fill:#f59e0b}
+.review-text{font-size:0.9rem;color:rgba(255,255,255,0.7);line-height:1.65;margin-bottom:20px;font-style:italic}
+.reviewer-row{display:flex;align-items:center;gap:12px}
+.reviewer-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dark),var(--gold));display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;color:var(--navy-deep);flex-shrink:0}
+.reviewer-name{font-family:'Oswald',sans-serif;font-size:0.9rem;font-weight:600;color:#fff}
+.reviewer-sub{font-size:0.72rem;color:var(--gold);margin-top:2px}
+
+/* FAQ */
+.faq{padding:90px 24px;background:var(--off-white)}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-list{margin-top:48px;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border:1px solid var(--gray-light);border-radius:8px;overflow:hidden}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;color:var(--navy);background:none;border:none;cursor:pointer;text-align:left;gap:16px}
+.faq-q:hover{color:var(--gold-dark)}
+.faq-icon{width:20px;height:20px;flex-shrink:0;fill:var(--gold-dark);transition:transform .25s}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-item.open .faq-a{max-height:200px}
+.faq-a-inner{padding:0 24px 20px;font-size:0.9rem;color:var(--gray-text);line-height:1.7}
+
+/* CTA BAND */
+.cta-band{position:relative;padding:90px 24px;background:var(--navy-deep);overflow:hidden;text-align:center}
+.cta-grain{position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+.cta-top-border{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.cta-inner{position:relative;z-index:2;max-width:700px;margin:0 auto}
+.cta-label{font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.cta-title{font-family:'Oswald',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:20px}
+.cta-sub{font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:36px}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-cta{background:var(--gold);color:var(--navy-deep);font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:16px 40px;border-radius:4px;text-decoration:none;transition:background .2s,transform .2s}
+.btn-cta:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-cta-ghost{background:transparent;color:#fff;font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:16px 40px;border-radius:4px;text-decoration:none;border:2px solid rgba(255,255,255,0.3);transition:border-color .2s,transform .2s}
+.btn-cta-ghost:hover{border-color:#fff;transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:#000e21;padding:50px 24px 28px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand-name{font-family:'Oswald',sans-serif;font-size:1.25rem;font-weight:700;color:#fff;margin-bottom:10px}
+.footer-brand-name span{color:var(--gold)}
+.footer-brand-desc{font-size:0.85rem;color:rgba(255,255,255,0.38);line-height:1.65;max-width:280px}
+.footer-col-title{font-family:'Oswald',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:0.85rem;color:rgba(255,255,255,0.48);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:0.78rem;color:rgba(255,255,255,0.26)}
+.footer-copy span{color:rgba(255,255,255,0.4)}
+.footer-badge{font-size:0.72rem;color:rgba(212,160,23,0.3);letter-spacing:0.06em}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr}
+  .process-row{grid-template-columns:1fr 1fr}
+  .process-row::before{display:none}
+  .stats-inner{grid-template-columns:1fr 1fr}
+  .areas-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:600px){
+  .nav-cta .btn-nav{display:none}
+  .services-grid{grid-template-columns:1fr}
+  .process-row{grid-template-columns:1fr}
+  .stats-inner{grid-template-columns:1fr}
+  .areas-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column}
+  .cta-actions{flex-direction:column;align-items:center}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none">
+        <rect width="36" height="36" rx="6" fill="#d4a017"/>
+        <path d="M6 22 Q8 18 12 17 L14 13 H22 L24 17 Q28 18 30 22 L30 26 Q30 27 29 27 H25 Q24 27 24 26 V25 H12 V26 Q12 27 11 27 H7 Q6 27 6 26 Z" fill="#011a35"/>
+        <circle cx="12" cy="25" r="2.5" fill="#d4a017"/>
+        <circle cx="24" cy="25" r="2.5" fill="#d4a017"/>
+      </svg>
+      <div class="nav-logo-text">
+        Cashing Carz
+        <span class="nav-logo-sub">Carrollton, TX</span>
+      </div>
+    </a>
+    <div class="nav-cta">
+      <a href="tel:8178356585" class="nav-phone">(817) 835-6585</a>
+      <a href="#contact" class="btn-nav">Get Cash Offer</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-diag"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span>5 Stars · 175 Reviews · Carrollton's #1 Junk Car Buyers</span>
+      </div>
+      <h1 class="hero-h1">We Buy Your<br><span>Junk Cars</span> Fast</h1>
+      <p class="hero-sub">Running or not, we'll make you a cash offer and haul it away for free. Cashing Carz serves all of Carrollton and the DFW area — fast, fair, and hassle-free.</p>
+      <div class="hero-btns">
+        <a href="tel:8178356585" class="btn-primary">Get Your Cash Offer</a>
+        <a href="#services" class="btn-outline">How It Works</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10" stroke="#d4a017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#d4a017" stroke-width="1.8"/></svg>
+          <span>Free Towing Included</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10" stroke="#d4a017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#d4a017" stroke-width="1.8"/></svg>
+          <span>Same-Day Pickup</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10" stroke="#d4a017" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#d4a017" stroke-width="1.8"/></svg>
+          <span>Any Make, Any Condition</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Your Cash Offer Awaits</div>
+      <div class="cash-offer-block">
+        <div class="cash-offer-label">Instant Quote Available</div>
+        <div class="cash-offer-amount">$$$</div>
+        <div class="cash-offer-sub">Call now — offers in under 5 minutes</div>
+      </div>
+      <div class="card-perks">
+        <div class="perk-row">
+          <div class="perk-icon"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#d4a017" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <span>Running or non-running vehicles</span>
+        </div>
+        <div class="perk-row">
+          <div class="perk-icon"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#d4a017" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <span>Free tow — no hidden charges</span>
+        </div>
+        <div class="perk-row">
+          <div class="perk-icon"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#d4a017" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <span>Cash in hand at pickup</span>
+        </div>
+        <div class="perk-row">
+          <div class="perk-icon"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#d4a017" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <span>We handle all the paperwork</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="section-head">
+      <div class="section-label">What We Buy & Remove</div>
+      <h2 class="section-title">We Take It All Off Your Hands</h2>
+      <p class="section-sub">From wrecked sedans to non-running trucks — Cashing Carz buys and removes all types of unwanted vehicles and junk.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v5a2 2 0 01-2 2h-2m-2 4a2 2 0 100-4 2 2 0 000 4zm-8 0a2 2 0 100-4 2 2 0 000 4z" stroke="#a87d10" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="svc-name">Junk Car Buying</div>
+        <p class="svc-desc">We pay top dollar for your old, wrecked, or non-running car. Get a cash offer over the phone and we come to you.</p>
+        <a href="tel:8178356585" class="svc-link">Get Offer Now →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M1 3h22M6 3l1 7h10L18 3M7 10l-2 8h14l-2-8" stroke="#a87d10" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="svc-name">Free Towing</div>
+        <p class="svc-desc">Don't worry about moving a thing. We bring our own equipment and haul your vehicle away at zero cost to you.</p>
+        <a href="tel:8178356585" class="svc-link">Get Offer Now →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#a87d10" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="#a87d10" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="svc-name">Wrecked & Totaled Vehicles</div>
+        <p class="svc-desc">Totaled by an accident or flood? We buy damaged vehicles regardless of condition — no title required in some cases.</p>
+        <a href="tel:8178356585" class="svc-link">Get Offer Now →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2" stroke="#a87d10" stroke-width="1.8" fill="none"/><path d="M16 8h4l3 3v5h-7V8z" stroke="#a87d10" stroke-width="1.8" fill="none" stroke-linejoin="round"/><circle cx="5.5" cy="18.5" r="2.5" stroke="#a87d10" stroke-width="1.8" fill="none"/><circle cx="18.5" cy="18.5" r="2.5" stroke="#a87d10" stroke-width="1.8" fill="none"/></svg>
+        </div>
+        <div class="svc-name">Trucks & SUVs</div>
+        <p class="svc-desc">Old pickup trucks, large SUVs, vans — we buy and remove all types of large vehicles for competitive cash prices.</p>
+        <a href="tel:8178356585" class="svc-link">Get Offer Now →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="#a87d10" stroke-width="1.8" fill="none"/><path d="M12 7V12L15 15" stroke="#a87d10" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div class="svc-name">Same-Day Removal</div>
+        <p class="svc-desc">Need it gone today? Call by noon and we'll often accommodate same-day pickup throughout the Carrollton area.</p>
+        <a href="tel:8178356585" class="svc-link">Get Offer Now →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="#a87d10" stroke-width="1.8" fill="none"/><path d="M14 2V8H20M16 13H8M16 17H8M10 9H8" stroke="#a87d10" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div class="svc-name">Paperwork Handled</div>
+        <p class="svc-desc">We take care of all the title transfer paperwork. You just sign and collect your cash — zero hassle, zero trips to the DMV.</p>
+        <a href="tel:8178356585" class="svc-link">Get Offer Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY — 2x2 dark feature card grid -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="section-label">Why Choose Cashing Carz</div>
+    <h2 class="section-title">Carrollton's Top-Rated Junk Car Buyers</h2>
+    <p class="section-sub">175 five-star reviews and counting. Here's why DFW sellers trust us over the competition.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#d4a017"/></svg>
+        </div>
+        <h3>Top Dollar, Guaranteed</h3>
+        <p>We analyze current scrap and parts markets to give you the highest possible offer for your vehicle. Our 175 five-star reviews speak to fair, consistent pricing that beats the competition every time.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#d4a017" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>100% Transparent Process</h3>
+        <p>No bait-and-switch. The offer we give over the phone is the cash you receive at pickup — or we don't take the car. Zero fine print, zero surprise deductions when we arrive.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="#d4a017" stroke-width="1.8" fill="none"/><path d="M12 7V12L15 15" stroke="#d4a017" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <h3>Fastest Pickup in DFW</h3>
+        <p>When you call Cashing Carz, we move fast. Same-day pickups are frequently available throughout Carrollton and the wider DFW area. Your car is gone before the end of the day.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" stroke="#d4a017" stroke-width="1.8" fill="none"/><circle cx="9" cy="7" r="4" stroke="#d4a017" stroke-width="1.8" fill="none"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#d4a017" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <h3>Local, Trustworthy Team</h3>
+        <p>We're a Carrollton-based operation, not a national call center. When you call us, you reach a local team that knows the DFW market and treats every customer like a neighbor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-block">
+      <div class="stat-num"><span class="counter" data-target="175">0</span><span class="stat-suffix">+</span></div>
+      <div class="stat-label">5-Star Reviews</div>
+      <div class="stat-accent"></div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num"><span class="counter" data-target="1000">0</span><span class="stat-suffix">+</span></div>
+      <div class="stat-label">Vehicles Purchased</div>
+      <div class="stat-accent"></div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num"><span class="counter" data-target="24">0</span><span class="stat-suffix">h</span></div>
+      <div class="stat-label">Average Pickup Time</div>
+      <div class="stat-accent"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="process-inner">
+    <div class="section-head">
+      <div class="section-label">Simple Process</div>
+      <h2 class="section-title">Cash for Cars in 3 Steps</h2>
+      <p class="section-sub">From first call to cash in hand — the fastest junk car process in Carrollton.</p>
+    </div>
+    <div class="process-row">
+      <div class="proc-step">
+        <div class="proc-circle">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92V21a2 2 0 01-2.18 2A19.79 19.79 0 013.87 14.45 19.42 19.42 0 011.07 7.09 2 2 0 013.06 5H7a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 12.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 19.92z" stroke="#d4a017" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="proc-num">Step 01</div>
+        <div class="proc-title">Call for a Quote</div>
+        <p class="proc-body">Call (817) 835-6585 and tell us about your vehicle — make, model, year, and condition. We'll give you a firm cash offer in minutes.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-circle">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="#d4a017" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="proc-num">Step 02</div>
+        <div class="proc-title">We Schedule Pickup</div>
+        <p class="proc-body">Accept the offer and we'll set a pickup time — often same day. Our crew arrives with everything needed to tow your vehicle.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-circle">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" stroke="#d4a017" stroke-width="1.8" fill="none"/><path d="M16 7V5a2 2 0 00-4 0v2M12 12v4M10 14h4" stroke="#d4a017" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div class="proc-num">Step 03</div>
+        <div class="proc-title">Cash in Your Hand</div>
+        <p class="proc-body">We arrive, do a quick inspection, sign the paperwork, and hand you your cash on the spot. Your car is gone — your money is yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="areas">
+  <div class="areas-inner">
+    <div class="section-label">Service Area</div>
+    <h2 class="section-title">Serving Carrollton & DFW</h2>
+    <p class="section-sub">We buy junk cars across the entire DFW Metroplex — fast pickup wherever you are.</p>
+    <div class="areas-grid">
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z" stroke="#a87d10" stroke-width="1.8" fill="none"/><circle cx="12" cy="10" r="3" stroke="#a87d10" stroke-width="1.8" fill="none"/></svg>
+        <span>Carrollton, TX</span>
+      </div>
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z" stroke="#a87d10" stroke-width="1.8" fill="none"/><circle cx="12" cy="10" r="3" stroke="#a87d10" stroke-width="1.8" fill="none"/></svg>
+        <span>Dallas, TX</span>
+      </div>
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z" stroke="#a87d10" stroke-width="1.8" fill="none"/><circle cx="12" cy="10" r="3" stroke="#a87d10" stroke-width="1.8" fill="none"/></svg>
+        <span>Fort Worth, TX</span>
+      </div>
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z" stroke="#a87d10" stroke-width="1.8" fill="none"/><circle cx="12" cy="10" r="3" stroke="#a87d10" stroke-width="1.8" fill="none"/></svg>
+        <span>Irving, TX</span>
+      </div>
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z" stroke="#a87d10" stroke-width="1.8" fill="none"/><circle cx="12" cy="10" r="3" stroke="#a87d10" stroke-width="1.8" fill="none"/></svg>
+        <span>Plano, TX</span>
+      </div>
+      <div class="area-chip">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z" stroke="#a87d10" stroke-width="1.8" fill="none"/><circle cx="12" cy="10" r="3" stroke="#a87d10" stroke-width="1.8" fill="none"/></svg>
+        <span>Garland, TX</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="section-label">Customer Reviews</div>
+    <h2 class="section-title">175 Reasons to Call Us First</h2>
+    <p class="section-sub">Real experiences from DFW sellers who turned their old cars into cash with Cashing Carz.</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Had a dead truck sitting in my driveway for two years. Called Cashing Carz on Monday morning and by Tuesday afternoon it was gone and I had $400 in my pocket. Easy as pie."</p>
+        <div class="reviewer-row">
+          <div class="reviewer-avatar">R</div>
+          <div>
+            <div class="reviewer-name">Robert H.</div>
+            <div class="reviewer-sub">✓ Google Review · Carrollton</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"I was skeptical at first — too good to be true. But they gave me the exact amount they quoted, towed it for free, and the whole thing was done in under an hour. Highly recommend."</p>
+        <div class="reviewer-row">
+          <div class="reviewer-avatar">L</div>
+          <div>
+            <div class="reviewer-name">Laura V.</div>
+            <div class="reviewer-sub">✓ Google Review · Dallas</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Sold them a totaled SUV with no title. They knew exactly how to handle it and made the whole process simple. Got more cash than I expected and they were on time. Will use again."</p>
+        <div class="reviewer-row">
+          <div class="reviewer-avatar">J</div>
+          <div>
+            <div class="reviewer-name">James C.</div>
+            <div class="reviewer-sub">✓ Google Review · Irving</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="section-label">Got Questions?</div>
+    <h2 class="section-title">Common Questions About Selling Your Car</h2>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q">
+          Do you buy cars that don't run?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#a87d10" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Absolutely. We buy vehicles in any condition — running or not, wrecked, flooded, or just old. As long as it's a vehicle, we'll make you an offer and tow it for free.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Do I need the title to sell my car?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#a87d10" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">In many cases, yes — but not always. Call us and describe your situation. We work with customers on title issues regularly and can often still purchase your vehicle.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          How quickly can you pick up my vehicle?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#a87d10" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">We frequently offer same-day pickup in the Carrollton and DFW area. Call us in the morning and we can often be at your location by end of day.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Is the towing really free?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#a87d10" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Yes, completely free. We bring our own equipment, load your vehicle, and there's no towing charge deducted from your offer. What we quote is what you receive.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          What types of vehicles do you buy?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#a87d10" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Cars, trucks, SUVs, vans, motorcycles — we buy all types. Any make, any model, any year. Give us a call and we'll assess your vehicle and make a fair offer.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band" id="contact">
+  <div class="cta-grain"></div>
+  <div class="cta-top-border"></div>
+  <div class="cta-inner">
+    <div class="cta-label">Get Your Cash Today</div>
+    <h2 class="cta-title">Turn Your Junk Car Into Cash — Today</h2>
+    <p class="cta-sub">Call Cashing Carz now for a free, no-obligation quote. We'll give you a fair offer, pick it up for free, and put cash in your hands — often the same day.</p>
+    <div class="cta-actions">
+      <a href="tel:8178356585" class="btn-cta">Call (817) 835-6585</a>
+      <a href="#services" class="btn-cta-ghost">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Cashing <span>Carz</span></div>
+        <p class="footer-brand-desc">Carrollton's top-rated junk car buyers. We buy any vehicle in any condition, tow it for free, and pay cash on the spot. Serving DFW since day one.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links">
+          <a href="#">Junk Car Buying</a>
+          <a href="#">Free Towing</a>
+          <a href="#">Wrecked Vehicles</a>
+          <a href="#">Trucks & SUVs</a>
+          <a href="#">Same-Day Pickup</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-links">
+          <a href="tel:8178356585">(817) 835-6585</a>
+          <a href="#">Carrollton, TX</a>
+          <a href="#">DFW Metroplex</a>
+          <a href="#">Free Cash Offers</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 <span>Cashing Carz</span> · Junk Cars Buyer & Removal · Carrollton, TX</div>
+      <div class="footer-badge">TOP-RATED JUNK CAR BUYERS · DFW</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains(el.classList[0]));
+      const idx = siblings.indexOf(el);
+      setTimeout(() => el.classList.add('visible'), idx * 90);
+      observer.unobserve(el);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.svc-card, .why-card, .stat-block, .proc-step, .area-chip, .review-card').forEach(el => observer.observe(el));
+
+const cObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.target);
+      const duration = 1600;
+      const step = Math.ceil(target / (duration / 16));
+      let current = 0;
+      const timer = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = current;
+        if (current >= target) clearInterval(timer);
+      }, 16);
+      cObs.unobserve(el);
+    }
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.counter').forEach(el => cObs.observe(el));
+
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>

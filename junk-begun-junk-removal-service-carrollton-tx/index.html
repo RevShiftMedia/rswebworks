@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Junk Begun Junk Removal | Carrollton, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --forest:#1f3d1f;
+  --forest-deep:#162d16;
+  --forest-mid:#254a25;
+  --coral:#ff6b35;
+  --coral-dark:#e0531f;
+  --white:#ffffff;
+  --off-white:#f6f9f4;
+  --gray-light:#e4ece4;
+  --gray-text:#5a6b5a;
+  --text-dark:#1f3d1f;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;color:var(--text-dark);background:#fff;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(22,45,22,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,107,53,0.2)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo-icon{width:36px;height:36px;flex-shrink:0}
+.nav-logo-text{font-family:'Oswald',sans-serif;font-size:1.15rem;font-weight:600;color:#fff;line-height:1.15;letter-spacing:0.02em}
+.nav-logo-sub{font-size:0.62rem;font-weight:400;color:var(--coral);display:block;letter-spacing:0.12em;text-transform:uppercase}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-phone{color:var(--coral);font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;text-decoration:none;letter-spacing:0.04em}
+.nav-phone:hover{color:#fff}
+.btn-nav{background:var(--coral);color:#fff;font-family:'Oswald',sans-serif;font-size:0.85rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:9px 20px;border-radius:4px;text-decoration:none;transition:background .2s}
+.btn-nav:hover{background:var(--coral-dark)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--forest-deep);overflow:hidden;padding-top:68px}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0e1f0e 0%,#1f3d1f 55%,#254a25 100%)}
+.hero-grain{position:absolute;inset:0;opacity:0.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+.hero-arc{position:absolute;right:-120px;bottom:-120px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,0.07) 0%,transparent 70%);pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,107,53,0.12);border:1px solid rgba(255,107,53,0.35);border-radius:100px;padding:6px 16px;margin-bottom:24px;opacity:0;animation:heroFadeUp .6s .1s forwards}
+.hero-badge svg{width:14px;height:14px;fill:var(--coral);flex-shrink:0}
+.hero-badge span{font-size:0.75rem;font-weight:600;color:var(--coral);letter-spacing:0.1em;text-transform:uppercase}
+.hero-h1{font-family:'Oswald',sans-serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:700;color:#fff;line-height:1.1;letter-spacing:-0.01em;margin-bottom:20px;opacity:0;animation:heroFadeUp .6s .2s forwards}
+.hero-h1 span{color:var(--coral)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,0.72);line-height:1.65;margin-bottom:32px;max-width:500px;opacity:0;animation:heroFadeUp .6s .3s forwards}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;opacity:0;animation:heroFadeUp .6s .4s forwards}
+.btn-primary{background:var(--coral);color:#fff;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:15px 32px;border-radius:4px;text-decoration:none;transition:background .2s,transform .2s;display:inline-block}
+.btn-primary:hover{background:var(--coral-dark);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:#fff;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:15px 32px;border-radius:4px;text-decoration:none;border:2px solid rgba(255,255,255,0.35);transition:border-color .2s,transform .2s;display:inline-block}
+.btn-outline:hover{border-color:#fff;transform:translateY(-2px)}
+.hero-trust{display:flex;gap:24px;flex-wrap:wrap;opacity:0;animation:heroFadeUp .6s .5s forwards}
+.trust-item{display:flex;align-items:center;gap:7px}
+.trust-item svg{width:16px;height:16px;flex-shrink:0}
+.trust-item span{font-size:0.82rem;color:rgba(255,255,255,0.62);font-weight:500}
+
+/* Hero Card — frosted glass */
+.hero-card{background:rgba(255,255,255,0.07);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.13);border-radius:14px;padding:32px;opacity:0;animation:heroFadeUp .6s .25s forwards}
+.hero-card-label{font-family:'Oswald',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:20px}
+.rating-row{display:flex;align-items:center;gap:10px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.1)}
+.rating-big{font-family:'Oswald',sans-serif;font-size:3.2rem;font-weight:700;color:#fff;line-height:1}
+.rating-detail{display:flex;flex-direction:column;gap:4px}
+.rating-stars{display:flex;gap:3px}
+.rating-stars svg{width:16px;height:16px;fill:#f59e0b}
+.rating-count{font-size:0.78rem;color:rgba(255,255,255,0.5)}
+.card-checklist{display:flex;flex-direction:column;gap:12px}
+.check-item{display:flex;align-items:center;gap:10px}
+.check-icon{width:24px;height:24px;border-radius:50%;background:rgba(255,107,53,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.check-icon svg{width:13px;height:13px;fill:var(--coral)}
+.check-item span{font-size:0.88rem;color:rgba(255,255,255,0.78);font-weight:500}
+
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* SERVICES */
+.services{padding:90px 24px;background:var(--off-white)}
+.section-label{font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);margin-bottom:12px}
+.section-title{font-family:'Oswald',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:var(--forest);line-height:1.2;margin-bottom:16px}
+.section-sub{font-size:1rem;color:var(--gray-text);line-height:1.65;max-width:560px}
+.section-head{margin-bottom:52px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto}
+/* Icon-top card layout */
+.svc-card{background:#fff;border-radius:10px;padding:32px 24px;border:1px solid var(--gray-light);transition:box-shadow .25s,transform .25s;opacity:0;transform:translateY(24px)}
+.svc-card.visible{opacity:1;transform:translateY(0)}
+.svc-card:hover{box-shadow:0 8px 32px rgba(31,61,31,0.1);transform:translateY(-4px)}
+.svc-icon{width:56px;height:56px;border-radius:12px;background:rgba(255,107,53,0.08);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.svc-icon svg{width:28px;height:28px;fill:var(--coral)}
+.svc-name{font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:600;color:var(--forest);margin-bottom:10px}
+.svc-desc{font-size:0.88rem;color:var(--gray-text);line-height:1.65;margin-bottom:16px}
+.svc-link{font-size:0.82rem;font-weight:600;color:var(--coral);text-decoration:none;letter-spacing:0.03em}
+.svc-link:hover{color:var(--coral-dark)}
+
+/* WHY — alternating feature rows */
+.why{padding:90px 24px;background:var(--forest)}
+.why .section-title{color:#fff}
+.why .section-sub{color:rgba(255,255,255,0.6)}
+.why-inner{max-width:1100px;margin:0 auto}
+.why-rows{display:flex;flex-direction:column;gap:48px;margin-top:52px}
+.why-row{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:start;opacity:0;transform:translateY(24px)}
+.why-row.visible{opacity:1;transform:translateY(0)}
+.why-icon-col{width:88px;flex-shrink:0}
+.why-icon-big{width:88px;height:88px;border-radius:16px;background:rgba(255,107,53,0.12);border:1px solid rgba(255,107,53,0.2);display:flex;align-items:center;justify-content:center}
+.why-icon-big svg{width:40px;height:40px;fill:var(--coral)}
+.why-text h3{font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:600;color:#fff;margin-bottom:10px}
+.why-text p{font-size:0.9rem;color:rgba(255,255,255,0.65);line-height:1.7}
+.why-divider{width:100%;height:1px;background:rgba(255,255,255,0.07)}
+
+/* STATS */
+.stats{padding:70px 24px;background:#fff}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+.stat-block{opacity:0;transform:translateY(20px)}
+.stat-block.visible{opacity:1;transform:translateY(0)}
+.stat-num{font-family:'Oswald',sans-serif;font-size:3rem;font-weight:700;color:var(--forest);line-height:1}
+.stat-num .stat-suffix{font-size:2rem}
+.stat-label{font-size:0.88rem;color:var(--gray-text);margin-top:8px;font-weight:500}
+.stat-bar{width:48px;height:4px;background:var(--coral);border-radius:2px;margin:14px auto 0}
+
+/* PROCESS */
+.process{padding:90px 24px;background:var(--off-white)}
+.process-inner{max-width:1100px;margin:0 auto}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:52px}
+.step-card{background:#fff;border-radius:10px;padding:32px 24px;border:1px solid var(--gray-light);text-align:center;opacity:0;transform:translateY(24px)}
+.step-card.visible{opacity:1;transform:translateY(0)}
+.step-num{width:52px;height:52px;border-radius:50%;background:var(--coral);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Oswald',sans-serif;font-size:1.3rem;font-weight:700;color:#fff}
+.step-title{font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;color:var(--forest);margin-bottom:10px}
+.step-body{font-size:0.86rem;color:var(--gray-text);line-height:1.65}
+
+/* AREAS */
+.areas{padding:90px 24px;background:var(--forest-mid)}
+.areas-inner{max-width:1200px;margin:0 auto}
+.areas .section-title{color:#fff}
+.areas .section-sub{color:rgba(255,255,255,0.6)}
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.area-chip{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:16px 20px;display:flex;align-items:center;gap:10px;opacity:0;transform:translateY(14px)}
+.area-chip.visible{opacity:1;transform:translateY(0)}
+.area-dot{width:8px;height:8px;border-radius:50%;background:var(--coral);flex-shrink:0}
+.area-chip span{font-size:0.88rem;color:rgba(255,255,255,0.8);font-weight:500}
+
+/* REVIEWS — white cards on light bg */
+.reviews{padding:90px 24px;background:var(--off-white)}
+.reviews-inner{max-width:1200px;margin:0 auto}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.review-card{background:#fff;border:1px solid var(--gray-light);border-radius:10px;padding:28px;position:relative;opacity:0;transform:translateY(24px)}
+.review-card.visible{opacity:1;transform:translateY(0)}
+.review-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--coral);border-radius:10px 10px 0 0}
+.review-stars{display:flex;gap:3px;margin-bottom:14px}
+.review-stars svg{width:16px;height:16px;fill:#f59e0b}
+.review-text{font-size:0.9rem;color:var(--gray-text);line-height:1.65;margin-bottom:20px;font-style:italic}
+.reviewer-row{display:flex;align-items:center;gap:12px}
+.reviewer-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--forest),var(--forest-mid));display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;color:#fff;flex-shrink:0}
+.reviewer-name{font-family:'Oswald',sans-serif;font-size:0.9rem;font-weight:600;color:var(--forest)}
+.reviewer-sub{font-size:0.72rem;color:var(--coral);margin-top:2px}
+
+/* FAQ */
+.faq{padding:90px 24px;background:#fff}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-list{margin-top:48px;display:flex;flex-direction:column;gap:12px}
+.faq-item{border:1px solid var(--gray-light);border-radius:8px;overflow:hidden}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;color:var(--forest);background:none;border:none;cursor:pointer;text-align:left;gap:16px}
+.faq-q:hover{color:var(--coral)}
+.faq-icon{width:20px;height:20px;flex-shrink:0;fill:var(--coral);transition:transform .25s}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-item.open .faq-q{background:var(--off-white)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-item.open .faq-a{max-height:200px}
+.faq-a-inner{padding:0 24px 20px;font-size:0.9rem;color:var(--gray-text);line-height:1.7;background:var(--off-white)}
+
+/* CTA BAND */
+.cta-band{position:relative;padding:90px 24px;background:var(--forest-deep);overflow:hidden;text-align:center}
+.cta-grain{position:absolute;inset:0;opacity:0.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+.cta-accent{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,0.08) 0%,transparent 70%);pointer-events:none}
+.cta-inner{position:relative;z-index:2;max-width:700px;margin:0 auto}
+.cta-label{font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);margin-bottom:16px}
+.cta-title{font-family:'Oswald',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:20px}
+.cta-sub{font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.65;margin-bottom:36px}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-cta{background:var(--coral);color:#fff;font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:16px 40px;border-radius:4px;text-decoration:none;transition:background .2s,transform .2s}
+.btn-cta:hover{background:var(--coral-dark);transform:translateY(-2px)}
+.btn-cta-ghost{background:transparent;color:#fff;font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:16px 40px;border-radius:4px;text-decoration:none;border:2px solid rgba(255,255,255,0.3);transition:border-color .2s,transform .2s}
+.btn-cta-ghost:hover{border-color:#fff;transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:#0f1f0f;padding:50px 24px 28px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand-name{font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:10px}
+.footer-brand-name span{color:var(--coral)}
+.footer-brand-desc{font-size:0.85rem;color:rgba(255,255,255,0.4);line-height:1.65;max-width:280px}
+.footer-col-title{font-family:'Oswald',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:0.85rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--coral)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:0.78rem;color:rgba(255,255,255,0.28)}
+.footer-copy span{color:rgba(255,255,255,0.4)}
+.footer-badge{font-size:0.72rem;color:rgba(255,255,255,0.2);letter-spacing:0.06em}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .why-rows{gap:32px}
+  .process-grid{grid-template-columns:1fr 1fr}
+  .stats-inner{grid-template-columns:1fr 1fr}
+  .areas-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:600px){
+  .nav-cta .btn-nav{display:none}
+  .services-grid{grid-template-columns:1fr}
+  .why-row{grid-template-columns:1fr;text-align:left}
+  .why-icon-col{width:auto}
+  .process-grid{grid-template-columns:1fr}
+  .stats-inner{grid-template-columns:1fr}
+  .areas-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column}
+  .cta-actions{flex-direction:column;align-items:center}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="36" rx="6" fill="#1f3d1f"/>
+        <path d="M18 6 C12 6 8 10 8 15 C8 20 12 23 18 23 C24 23 28 20 28 15 C28 10 24 6 18 6Z" fill="#ff6b35" opacity="0.9"/>
+        <path d="M18 23 L18 30" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        <path d="M14 27 L22 27" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="nav-logo-text">
+        Junk Begun
+        <span class="nav-logo-sub">Carrollton, TX</span>
+      </div>
+    </a>
+    <div class="nav-cta">
+      <a href="tel:9454466603" class="nav-phone">(945) 446-6603</a>
+      <a href="#contact" class="btn-nav">Free Estimate</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-arc"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span>4.9 Stars · 186 Reviews · Carrollton's Premier Choice</span>
+      </div>
+      <h1 class="hero-h1">Carrollton's <span>Premier</span><br>Junk Removal</h1>
+      <p class="hero-sub">Junk Begun gets the job done — fast, friendly, and hassle-free. Whether it's a single item or a full-property cleanout, we haul it all so you don't have to.</p>
+      <div class="hero-btns">
+        <a href="tel:9454466603" class="btn-primary">Call (945) 446-6603</a>
+        <a href="#services" class="btn-outline">See What We Haul</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10" stroke="#ff6b35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#ff6b35" stroke-width="1.8"/></svg>
+          <span>4.9★ on Google</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10" stroke="#ff6b35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#ff6b35" stroke-width="1.8"/></svg>
+          <span>186 Happy Customers</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10" stroke="#ff6b35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#ff6b35" stroke-width="1.8"/></svg>
+          <span>Eco-Friendly Disposal</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-label">Why Carrollton Trusts Us</div>
+      <div class="rating-row">
+        <div class="rating-big">4.9</div>
+        <div class="rating-detail">
+          <div class="rating-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="rating-count">186 Google Reviews</div>
+        </div>
+      </div>
+      <div class="card-checklist">
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#ff6b35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <span>Residential & Commercial</span>
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#ff6b35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <span>We donate usable items</span>
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#ff6b35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <span>Upfront, flat pricing</span>
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#ff6b35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg></div>
+          <span>Weekend availability</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="section-head">
+      <div class="section-label">What We Remove</div>
+      <h2 class="section-title">Full-Service Junk Hauling</h2>
+      <p class="section-sub">From a single heavy appliance to a complete estate cleanout — Junk Begun handles it all with speed and care.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke="#ff6b35" stroke-width="1.8" fill="none"/><path d="M16 21V7M8 21V7" stroke="#ff6b35" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <div class="svc-name">Furniture Removal</div>
+        <p class="svc-desc">Sofas, beds, dressers, dining sets — we carry every piece out and haul it away without damaging your home.</p>
+        <a href="tel:9454466603" class="svc-link">Get a Free Quote →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="13" rx="2" stroke="#ff6b35" stroke-width="1.8" fill="none"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" stroke="#ff6b35" stroke-width="1.8" fill="none"/></svg>
+        </div>
+        <div class="svc-name">Appliance Pickup</div>
+        <p class="svc-desc">Refrigerators, washers, dryers, dishwashers — we handle the heavy lifting and proper disposal.</p>
+        <a href="tel:9454466603" class="svc-link">Get a Free Quote →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 21H21M5 21V7L12 3L19 7V21" stroke="#ff6b35" stroke-width="1.8" fill="none" stroke-linejoin="round"/><rect x="9" y="14" width="6" height="7" fill="none" stroke="#ff6b35" stroke-width="1.8"/></svg>
+        </div>
+        <div class="svc-name">Full Home Cleanout</div>
+        <p class="svc-desc">Clearing an entire property? We can strip a home down to the walls — hauling everything out in one efficient visit.</p>
+        <a href="tel:9454466603" class="svc-link">Get a Free Quote →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 6H21L19 20H5L3 6Z" stroke="#ff6b35" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2" stroke="#ff6b35" stroke-width="1.8" fill="none"/></svg>
+        </div>
+        <div class="svc-name">Garage & Storage</div>
+        <p class="svc-desc">Decades of clutter cleared fast. We sort through and haul away everything you no longer want or need.</p>
+        <a href="tel:9454466603" class="svc-link">Get a Free Quote →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#ff6b35" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="#ff6b35" stroke-width="1.8" stroke-linejoin="round" fill="none"/></svg>
+        </div>
+        <div class="svc-name">Construction Waste</div>
+        <p class="svc-desc">Drywall scraps, lumber, tile, flooring rip-out — we clear renovation debris so your project can move forward.</p>
+        <a href="tel:9454466603" class="svc-link">Get a Free Quote →</a>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke="#ff6b35" stroke-width="1.8" fill="none"/><path d="M4 20C4 17 7.58 15 12 15C16.42 15 20 17 20 20" stroke="#ff6b35" stroke-width="1.8" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div class="svc-name">Estate Services</div>
+        <p class="svc-desc">Compassionate, respectful estate cleanouts that preserve dignity while clearing a loved one's space efficiently.</p>
+        <a href="tel:9454466603" class="svc-link">Get a Free Quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY — alternating feature rows -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="section-label">Why Junk Begun</div>
+    <h2 class="section-title">We Go Above & Beyond</h2>
+    <p class="section-sub">Nearly 200 five-star reviews don't happen by accident. Here's what makes Junk Begun the team Carrollton calls first.</p>
+    <div class="why-rows">
+      <div class="why-row">
+        <div class="why-icon-col">
+          <div class="why-icon-big">
+            <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#ff6b35"/></svg>
+          </div>
+        </div>
+        <div class="why-text">
+          <h3>Nearly 200 Five-Star Reviews</h3>
+          <p>Our 4.9-star rating across 186 reviews tells the story better than we ever could. Carrollton homeowners trust Junk Begun because we consistently deliver — on time, on price, and on quality. Every job gets our full effort, whether it's one chair or a full house.</p>
+        </div>
+      </div>
+      <div class="why-divider"></div>
+      <div class="why-row">
+        <div class="why-icon-col">
+          <div class="why-icon-big">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="#ff6b35" stroke-width="1.8" fill="none"/><path d="M9 9H9.01M15 9H15.01M9 12H15M9 15H13" stroke="#ff6b35" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+        <div class="why-text">
+          <h3>Honest, Up-Front Pricing</h3>
+          <p>We price by volume — how much space your items take up in our truck. You get a clear, firm quote before we move a thing. No bait-and-switch, no surprise charges at the end. The number we give you is the number on your receipt.</p>
+        </div>
+      </div>
+      <div class="why-divider"></div>
+      <div class="why-row">
+        <div class="why-icon-col">
+          <div class="why-icon-big">
+            <svg viewBox="0 0 24 24"><path d="M7 16C7 13.8 8.8 12 11 12H20C22.2 12 24 13.8 24 16V17H0V16C0 13.8 1.8 12 4 12H7V16Z" stroke="#ff6b35" stroke-width="1.8" fill="none" stroke-linejoin="round"/><circle cx="5" cy="19" r="2" stroke="#ff6b35" stroke-width="1.8" fill="none"/><circle cx="19" cy="19" r="2" stroke="#ff6b35" stroke-width="1.8" fill="none"/><path d="M7 9H17V12H7V9Z" stroke="#ff6b35" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="why-text">
+          <h3>We Donate, Don't Just Dump</h3>
+          <p>Before anything hits the landfill, our team sorts through your items for anything that can be donated or recycled. Furniture, clothing, electronics — we partner with local charities to give usable goods a second life and keep waste out of Carrollton's landfills.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-block">
+      <div class="stat-num"><span class="counter" data-target="186">0</span><span class="stat-suffix">+</span></div>
+      <div class="stat-label">5-Star Reviews</div>
+      <div class="stat-bar"></div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num"><span class="counter" data-target="4">0</span><span class="stat-suffix">.9★</span></div>
+      <div class="stat-label">Google Rating</div>
+      <div class="stat-bar"></div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num"><span class="counter" data-target="100">0</span><span class="stat-suffix">%</span></div>
+      <div class="stat-label">Eco-Sorted Loads</div>
+      <div class="stat-bar"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="process-inner">
+    <div class="section-head">
+      <div class="section-label">Getting Started</div>
+      <h2 class="section-title">How Junk Begun Works</h2>
+      <p class="section-sub">Simple, straightforward, and stress-free from first call to clean space.</p>
+    </div>
+    <div class="process-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-title">Call for a Quote</div>
+        <p class="step-body">Ring us at (945) 446-6603 and describe what you need removed. We'll give you a ballpark price right away — no waiting, no forms.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-title">We Show Up Ready</div>
+        <p class="step-body">Our crew arrives on time in your scheduled window with all the equipment needed. We do a quick walkthrough and confirm the final price — no surprises.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-title">Space Cleared, Done</div>
+        <p class="step-body">We haul everything away and sweep up after ourselves. You get a clean, cleared space — and one less thing to worry about.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="areas">
+  <div class="areas-inner">
+    <div class="section-label">Where We Serve</div>
+    <h2 class="section-title">Serving Carrollton & DFW</h2>
+    <p class="section-sub">Based in Carrollton with fast service throughout the northern DFW corridor and surrounding communities.</p>
+    <div class="areas-grid">
+      <div class="area-chip"><div class="area-dot"></div><span>Carrollton, TX</span></div>
+      <div class="area-chip"><div class="area-dot"></div><span>Farmers Branch, TX</span></div>
+      <div class="area-chip"><div class="area-dot"></div><span>Addison, TX</span></div>
+      <div class="area-chip"><div class="area-dot"></div><span>Irving, TX</span></div>
+      <div class="area-chip"><div class="area-dot"></div><span>Coppell, TX</span></div>
+      <div class="area-chip"><div class="area-dot"></div><span>Lewisville, TX</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS — white cards -->
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="section-label">Customer Stories</div>
+    <h2 class="section-title">What Carrollton Says</h2>
+    <p class="section-sub">Real reviews from real Carrollton neighbors — 186 five-star reasons to call Junk Begun.</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Second time I've used Junk Begun and they're just as good as the first. Prompt, professional, and they actually swept out my garage when they were done. Worth every penny."</p>
+        <div class="reviewer-row">
+          <div class="reviewer-avatar">K</div>
+          <div>
+            <div class="reviewer-name">Kevin A.</div>
+            <div class="reviewer-sub">✓ Google Review · Carrollton</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Booked them for an estate cleanout after my father passed. They were so kind and understanding. Efficient, respectful, and the price was more than fair. Junk Begun is the real deal."</p>
+        <div class="reviewer-row">
+          <div class="reviewer-avatar">S</div>
+          <div>
+            <div class="reviewer-name">Sandra M.</div>
+            <div class="reviewer-sub">✓ Google Review · Carrollton</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"They removed an old hot tub from my backyard — something I thought would take days. These guys had it out in under three hours. Fast, no damage to my fence, and great attitude the whole time."</p>
+        <div class="reviewer-row">
+          <div class="reviewer-avatar">T</div>
+          <div>
+            <div class="reviewer-name">Thomas B.</div>
+            <div class="reviewer-sub">✓ Google Review · Carrollton</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="section-label">FAQs</div>
+    <h2 class="section-title">Common Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q">
+          What areas do you serve?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#ff6b35" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">We're based in Carrollton and serve the broader DFW area including Farmers Branch, Addison, Irving, Coppell, Lewisville, and more. Call us to confirm availability in your area.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          How is pricing calculated?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#ff6b35" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">We charge by volume — the amount of space your junk takes up in our truck. We give you a firm quote on-site before starting. No hourly rates, no hidden fees.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Do you offer same-day service?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#ff6b35" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Yes — same-day and next-day service is frequently available depending on our schedule. Call early in the day for the best chance at same-day pickup.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          What happens to my donated items?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#ff6b35" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">We sort your items and deliver usable goods to local charities, thrift stores, and donation centers. We believe in giving furniture and household items a second chance before they go to the landfill.</div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Do you require a minimum load?
+          <svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#ff6b35" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">No minimum load required. We'll pick up a single item or an entire household — you only pay for the space your items take up in our truck.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band" id="contact">
+  <div class="cta-grain"></div>
+  <div class="cta-accent"></div>
+  <div class="cta-inner">
+    <div class="cta-label">Time to Get Started</div>
+    <h2 class="cta-title">Junk Begun — Let's Get It Done</h2>
+    <p class="cta-sub">Join nearly 200 happy Carrollton customers. Call for a free estimate and let us handle the heavy lifting while you reclaim your space.</p>
+    <div class="cta-actions">
+      <a href="tel:9454466603" class="btn-cta">Call (945) 446-6603</a>
+      <a href="#services" class="btn-cta-ghost">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Junk <span>Begun</span></div>
+        <p class="footer-brand-desc">Carrollton's premier junk removal service. Trusted by nearly 200 local homeowners. We haul it all — fast, fairly priced, and eco-responsible.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links">
+          <a href="#">Furniture Removal</a>
+          <a href="#">Appliance Pickup</a>
+          <a href="#">Home Cleanouts</a>
+          <a href="#">Construction Debris</a>
+          <a href="#">Estate Services</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact Us</div>
+        <div class="footer-links">
+          <a href="tel:9454466603">(945) 446-6603</a>
+          <a href="#">Carrollton, TX</a>
+          <a href="#">Available 7 Days</a>
+          <a href="#">Free Estimates</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 <span>Junk Begun Junk Removal Service</span> · Carrollton, TX · All rights reserved</div>
+      <div class="footer-badge">PREMIER JUNK REMOVAL · CARROLLTON TX</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains(el.classList[0]));
+      const idx = siblings.indexOf(el);
+      setTimeout(() => el.classList.add('visible'), idx * 90);
+      observer.unobserve(el);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.svc-card, .why-row, .stat-block, .step-card, .area-chip, .review-card').forEach(el => observer.observe(el));
+
+// Stat counter
+const cObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.target);
+      const duration = 1600;
+      const step = Math.ceil(target / (duration / 16));
+      let current = 0;
+      const timer = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = current;
+        if (current >= target) clearInterval(timer);
+      }, 16);
+      cObs.unobserve(el);
+    }
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.counter').forEach(el => cObs.observe(el));
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jb's Junk Removal & Dumpster Rentals | Denton, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#111111;
+  --black-deep:#080808;
+  --black-mid:#1a1a1a;
+  --coral:#EC3449;
+  --coral-dark:#c9263b;
+  --coral-light:#f04560;
+  --white:#ffffff;
+  --off-white:#f7f5f5;
+  --gray-light:#e8e4e4;
+  --gray-text:#6b6060;
+  --text-dark:#111111;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;color:var(--text-dark);background:#fff;overflow-x:hidden}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,8,0.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(236,52,73,0.18)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo-icon{width:36px;height:36px;flex-shrink:0}
+.nav-logo-text{font-family:'Oswald',sans-serif;font-size:1.15rem;font-weight:700;color:#fff;line-height:1.15;letter-spacing:0.02em}
+.nav-logo-sub{font-size:0.62rem;font-weight:400;color:var(--coral);display:block;letter-spacing:0.12em;text-transform:uppercase}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-phone{color:var(--coral);font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;text-decoration:none}
+.nav-phone:hover{color:#fff}
+.btn-nav{background:var(--coral);color:#fff;font-family:'Oswald',sans-serif;font-size:0.85rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:9px 20px;border-radius:4px;text-decoration:none;transition:background .2s}
+.btn-nav:hover{background:var(--coral-dark)}
+
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--black-deep);overflow:hidden;padding-top:68px}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(140deg,#050505 0%,#111111 50%,#1a1a1a 100%)}
+.hero-grain{position:absolute;inset:0;opacity:0.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+.hero-slash{position:absolute;right:-80px;top:0;bottom:0;width:400px;background:linear-gradient(135deg,transparent 30%,rgba(236,52,73,0.04) 100%);transform:skewX(-8deg)}
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(236,52,73,0.1);border:1px solid rgba(236,52,73,0.3);border-radius:100px;padding:6px 16px;margin-bottom:24px;opacity:0;animation:heroFadeUp .6s .1s forwards}
+.hero-badge svg{width:14px;height:14px;fill:var(--coral)}
+.hero-badge span{font-size:0.75rem;font-weight:600;color:var(--coral);letter-spacing:0.1em;text-transform:uppercase}
+.hero-h1{font-family:'Oswald',sans-serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:20px;opacity:0;animation:heroFadeUp .6s .2s forwards}
+.hero-h1 span{color:var(--coral)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,0.7);line-height:1.65;margin-bottom:32px;max-width:500px;opacity:0;animation:heroFadeUp .6s .3s forwards}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;opacity:0;animation:heroFadeUp .6s .4s forwards}
+.btn-primary{background:var(--coral);color:#fff;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:15px 32px;border-radius:4px;text-decoration:none;transition:background .2s,transform .2s;display:inline-block}
+.btn-primary:hover{background:var(--coral-dark);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:#fff;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:15px 32px;border-radius:4px;text-decoration:none;border:2px solid rgba(255,255,255,0.28);transition:border-color .2s,transform .2s;display:inline-block}
+.btn-outline:hover{border-color:#fff;transform:translateY(-2px)}
+.hero-trust{display:flex;gap:24px;flex-wrap:wrap;opacity:0;animation:heroFadeUp .6s .5s forwards}
+.trust-item{display:flex;align-items:center;gap:7px}
+.trust-item svg{width:15px;height:15px;flex-shrink:0;fill:var(--coral)}
+.trust-item span{font-size:0.82rem;color:rgba(255,255,255,0.55);font-weight:500}
+.hero-card{background:rgba(255,255,255,0.05);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:32px;opacity:0;animation:heroFadeUp .6s .25s forwards}
+.hero-card-label{font-family:'Oswald',sans-serif;font-size:0.82rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:20px}
+.hero-rating-row{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.hero-stars{display:flex;gap:3px}
+.hero-stars svg{width:18px;height:18px;fill:#f59e0b}
+.hero-review-count{font-size:0.85rem;color:rgba(255,255,255,0.5)}
+.hero-services-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hero-svc-pill{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:6px;padding:9px 12px}
+.hero-svc-pill svg{width:13px;height:13px;fill:var(--coral);flex-shrink:0}
+.hero-svc-pill span{font-size:0.8rem;color:rgba(255,255,255,0.7);font-weight:500}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+.services{padding:90px 24px;background:var(--off-white)}
+.section-label{font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral-dark);margin-bottom:12px}
+.section-title{font-family:'Oswald',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;color:var(--black);line-height:1.2;margin-bottom:16px}
+.section-sub{font-size:1rem;color:var(--gray-text);line-height:1.65;max-width:560px}
+.section-head{margin-bottom:52px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto}
+.svc-card{background:#fff;border-radius:10px;padding:32px 24px;border:1px solid var(--gray-light);transition:box-shadow .25s,transform .25s;opacity:0;transform:translateY(24px)}
+.svc-card.visible{opacity:1;transform:translateY(0)}
+.svc-card:hover{box-shadow:0 8px 28px rgba(17,17,17,0.1);transform:translateY(-4px)}
+.svc-icon{width:54px;height:54px;border-radius:12px;background:rgba(236,52,73,0.08);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.svc-icon svg{width:27px;height:27px;fill:var(--coral-dark)}
+.svc-name{font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;color:var(--black);margin-bottom:8px}
+.svc-desc{font-size:0.87rem;color:var(--gray-text);line-height:1.65;margin-bottom:14px}
+.svc-tag{display:inline-block;font-size:0.72rem;font-weight:600;color:var(--coral);background:rgba(236,52,73,0.07);padding:3px 10px;border-radius:100px;letter-spacing:0.06em}
+
+/* WHY — 2 wide feature cards */
+.why{padding:90px 24px;background:var(--black)}
+.why .section-title{color:#fff}
+.why .section-sub{color:rgba(255,255,255,0.58)}
+.why-inner{max-width:1100px;margin:0 auto}
+.why-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:52px}
+.why-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:36px;opacity:0;transform:translateY(24px)}
+.why-card.visible{opacity:1;transform:translateY(0)}
+.why-card-top{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.why-icon{width:52px;height:52px;border-radius:12px;background:rgba(236,52,73,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why-icon svg{width:26px;height:26px;fill:var(--coral)}
+.why-card-headline{font-family:'Oswald',sans-serif;font-size:1.15rem;font-weight:600;color:#fff}
+.why-card-body{font-size:0.9rem;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:20px}
+.why-bullets{display:flex;flex-direction:column;gap:9px}
+.why-bullet{display:flex;align-items:flex-start;gap:9px}
+.why-bullet svg{width:14px;height:14px;fill:var(--coral);flex-shrink:0;margin-top:3px}
+.why-bullet span{font-size:0.83rem;color:rgba(255,255,255,0.65)}
+
+.stats{padding:72px 24px;background:#fff}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+.stat-block{opacity:0;transform:translateY(20px)}
+.stat-block.visible{opacity:1;transform:translateY(0)}
+.stat-num{font-family:'Oswald',sans-serif;font-size:3rem;font-weight:700;color:var(--black);line-height:1}
+.stat-num .stat-suffix{font-size:2rem}
+.stat-label{font-size:0.88rem;color:var(--gray-text);margin-top:8px;font-weight:500}
+.stat-rule{width:36px;height:3px;background:var(--coral);border-radius:2px;margin:12px auto 0}
+
+.process{padding:90px 24px;background:var(--off-white)}
+.process-inner{max-width:1100px;margin:0 auto}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:52px}
+.step-card{background:#fff;border-radius:10px;padding:32px 24px;border:1px solid var(--gray-light);text-align:center;opacity:0;transform:translateY(24px)}
+.step-card.visible{opacity:1;transform:translateY(0)}
+.step-badge{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--coral);font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:18px}
+.step-title{font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;color:var(--black);margin-bottom:10px}
+.step-body{font-size:0.86rem;color:var(--gray-text);line-height:1.65}
+
+.areas{padding:90px 24px;background:var(--black-mid)}
+.areas-inner{max-width:1200px;margin:0 auto}
+.areas .section-title{color:#fff}
+.areas .section-sub{color:rgba(255,255,255,0.55)}
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.area-chip{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:14px 20px;display:flex;align-items:center;gap:10px;opacity:0;transform:translateY(14px)}
+.area-chip.visible{opacity:1;transform:translateY(0)}
+.area-chip svg{width:14px;height:14px;fill:var(--coral);flex-shrink:0}
+.area-chip span{font-size:0.88rem;color:rgba(255,255,255,0.75);font-weight:500}
+
+/* REVIEWS — white cards */
+.reviews{padding:90px 24px;background:var(--off-white)}
+.reviews-inner{max-width:1200px;margin:0 auto}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.review-card{background:#fff;border:1px solid var(--gray-light);border-radius:10px;padding:28px;opacity:0;transform:translateY(24px);position:relative;overflow:hidden}
+.review-card.visible{opacity:1;transform:translateY(0)}
+.review-card::after{content:'❝';position:absolute;bottom:-10px;right:16px;font-size:5rem;color:rgba(236,52,73,0.06);line-height:1;font-family:Georgia,serif}
+.review-stars{display:flex;gap:3px;margin-bottom:14px}
+.review-stars svg{width:15px;height:15px;fill:#f59e0b}
+.review-text{font-size:0.9rem;color:var(--gray-text);line-height:1.65;margin-bottom:20px;font-style:italic;position:relative;z-index:1}
+.reviewer-row{display:flex;align-items:center;gap:12px;position:relative;z-index:1}
+.reviewer-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--coral-dark),var(--coral));display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:700;color:#fff;flex-shrink:0}
+.reviewer-name{font-family:'Oswald',sans-serif;font-size:0.9rem;font-weight:600;color:var(--black)}
+.reviewer-verified{font-size:0.72rem;color:var(--coral-dark);margin-top:2px}
+
+.faq{padding:90px 24px;background:#fff}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-list{margin-top:48px;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border:1px solid var(--gray-light);border-radius:8px;overflow:hidden}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 24px;font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;color:var(--black);background:none;border:none;cursor:pointer;text-align:left;gap:16px}
+.faq-q:hover{color:var(--coral-dark)}
+.faq-icon{width:20px;height:20px;flex-shrink:0;fill:var(--coral-dark);transition:transform .25s}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-item.open .faq-a{max-height:200px}
+.faq-a-inner{padding:0 24px 20px;font-size:0.9rem;color:var(--gray-text);line-height:1.7}
+
+.cta-band{position:relative;padding:90px 24px;background:var(--black-deep);overflow:hidden;text-align:center}
+.cta-grain{position:absolute;inset:0;opacity:0.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+.cta-inner{position:relative;z-index:2;max-width:700px;margin:0 auto}
+.cta-label{font-size:0.75rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);margin-bottom:16px}
+.cta-title{font-family:'Oswald',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:20px}
+.cta-sub{font-size:1rem;color:rgba(255,255,255,0.58);line-height:1.65;margin-bottom:36px}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-cta{background:var(--coral);color:#fff;font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:16px 40px;border-radius:4px;text-decoration:none;transition:background .2s,transform .2s}
+.btn-cta:hover{background:var(--coral-dark);transform:translateY(-2px)}
+.btn-cta-ghost{background:transparent;color:#fff;font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:16px 40px;border-radius:4px;text-decoration:none;border:2px solid rgba(255,255,255,0.28);transition:border-color .2s,transform .2s}
+.btn-cta-ghost:hover{border-color:#fff;transform:translateY(-2px)}
+
+footer{background:#060606;padding:50px 24px 28px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand-name{font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:10px}
+.footer-brand-name span{color:var(--coral)}
+.footer-brand-desc{font-size:0.85rem;color:rgba(255,255,255,0.38);line-height:1.65;max-width:280px}
+.footer-col-title{font-family:'Oswald',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:16px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:0.85rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--coral)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:0.78rem;color:rgba(255,255,255,0.25)}
+.footer-copy span{color:rgba(255,255,255,0.38)}
+.footer-badge{font-size:0.72rem;color:rgba(255,255,255,0.18);letter-spacing:0.06em}
+
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}.hero-card{display:none}
+  .services-grid{grid-template-columns:1fr 1fr}.why-cards{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr 1fr}.stats-inner{grid-template-columns:1fr 1fr}
+  .areas-grid{grid-template-columns:1fr 1fr}.reviews-grid{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:600px){
+  .nav-cta .btn-nav{display:none}.services-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}.stats-inner{grid-template-columns:1fr}
+  .areas-grid{grid-template-columns:1fr 1fr}.reviews-grid{grid-template-columns:1fr}
+  .hero-btns{flex-direction:column}.cta-actions{flex-direction:column;align-items:center}
+  .footer-top{grid-template-columns:1fr}.footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none">
+        <rect width="36" height="36" rx="6" fill="#EC3449"/>
+        <path d="M8 26 L14 10 H22 L28 26" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M10 20H26" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="nav-logo-text">Jb's Junk Removal<span class="nav-logo-sub">Denton, TX · Dumpster Rentals</span></div>
+    </a>
+    <div class="nav-cta">
+      <a href="tel:8175672728" class="nav-phone">(817) 567-2728</a>
+      <a href="#contact" class="btn-nav">Get a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-grain"></div><div class="hero-slash"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <span>5 Stars · 153 Reviews · Denton's Expert Crew</span>
+      </div>
+      <h1 class="hero-h1">Denton's <span>Expert</span><br>Junk Removal</h1>
+      <p class="hero-sub">Full-service junk hauling and dumpster rentals for Denton homeowners and businesses. 153 five-star reviews and years of experience you can count on.</p>
+      <div class="hero-btns">
+        <a href="tel:8175672728" class="btn-primary">Call (817) 567-2728</a>
+        <a href="#services" class="btn-outline">View Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Junk Removal</span></div>
+        <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Dumpster Rentals</span></div>
+        <div class="trust-item"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>153 Five-Star Reviews</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-label">Jb's at a Glance</div>
+      <div class="hero-rating-row">
+        <div class="hero-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="hero-review-count">5.0 · 153 Google Reviews</div>
+      </div>
+      <div class="hero-services-list">
+        <div class="hero-svc-pill"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Full Junk Removal</span></div>
+        <div class="hero-svc-pill"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Dumpster Rentals</span></div>
+        <div class="hero-svc-pill"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Estate Cleanouts</span></div>
+        <div class="hero-svc-pill"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Construction Debris</span></div>
+        <div class="hero-svc-pill"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Same-Day Available</span></div>
+        <div class="hero-svc-pill"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Upfront Pricing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div style="max-width:1200px;margin:0 auto">
+    <div class="section-head">
+      <div class="section-label">Services</div>
+      <h2 class="section-title">Junk Removal & Dumpster Rentals</h2>
+      <p class="section-sub">Two ways to handle your junk — let us haul it away, or rent a dumpster and fill it on your timeline. Jb's has Denton covered either way.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke="#c9263b" stroke-width="1.8" fill="none"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" stroke="#c9263b" stroke-width="1.8" fill="none"/></svg></div>
+        <div class="svc-name">Full Junk Removal</div>
+        <p class="svc-desc">We come in, carry everything out, and haul it away. No heavy lifting for you — just a clear space.</p>
+        <div class="svc-tag">Most Popular</div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 6H21L19 20H5L3 6Z" stroke="#c9263b" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2" stroke="#c9263b" stroke-width="1.8" fill="none"/></svg></div>
+        <div class="svc-name">Dumpster Rentals</div>
+        <p class="svc-desc">Rent a dumpster for your renovation, cleanout, or project. We drop it, you fill it, we haul it away.</p>
+        <div class="svc-tag">Flexible Rental Periods</div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 21H21M5 21V7L12 3L19 7V21" stroke="#c9263b" stroke-width="1.8" fill="none" stroke-linejoin="round"/><rect x="9" y="14" width="6" height="7" stroke="#c9263b" stroke-width="1.8" fill="none"/></svg></div>
+        <div class="svc-name">Estate & Home Cleanouts</div>
+        <p class="svc-desc">Full property clearances handled respectfully and efficiently — estates, foreclosures, rental turnovers.</p>
+        <div class="svc-tag">Full Service</div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#c9263b" stroke-width="1.8" fill="none"/><path d="M8 21H16M12 17V21" stroke="#c9263b" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <div class="svc-name">Appliance Removal</div>
+        <p class="svc-desc">Refrigerators, washers, dryers, water heaters — we disconnect and haul all heavy appliances.</p>
+        <div class="svc-tag">Same-Day Available</div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#c9263b" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="#c9263b" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg></div>
+        <div class="svc-name">Construction Debris</div>
+        <p class="svc-desc">Demo waste, drywall, lumber, tile — we clear renovation debris fast so your project can progress.</p>
+        <div class="svc-tag">Contractor Friendly</div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M2 20H22M4 20V12L12 4L20 12V20" stroke="#c9263b" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg></div>
+        <div class="svc-name">Garage & Attic Cleanout</div>
+        <p class="svc-desc">Years of accumulated clutter cleared in one visit. We sort items and leave your space completely clear.</p>
+        <div class="svc-tag">Eco-Sorted</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY — 2 wide feature cards -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="section-label">The Jb's Difference</div>
+    <h2 class="section-title">Why Denton Relies on Jb's</h2>
+    <p class="section-sub">153 five-star reviews across junk removal and dumpster rentals — two services, one reliable team.</p>
+    <div class="why-cards">
+      <div class="why-card">
+        <div class="why-card-top">
+          <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#EC3449"/></svg></div>
+          <div class="why-card-headline">153 Five-Star Reviews & Counting</div>
+        </div>
+        <p class="why-card-body">Jb's has built an exceptional reputation in Denton through years of consistent, professional service. Our 5-star average across 153 reviews isn't luck — it's the result of doing the right thing on every single job.</p>
+        <div class="why-bullets">
+          <div class="why-bullet"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Perfect 5.0 Google rating across all services</span></div>
+          <div class="why-bullet"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Trusted by hundreds of Denton homeowners</span></div>
+          <div class="why-bullet"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Commercial and residential expertise</span></div>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-card-top">
+          <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#EC3449" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg></div>
+          <div class="why-card-headline">Two Services, One Dependable Team</div>
+        </div>
+        <p class="why-card-body">Whether you need us to haul everything away in one visit or prefer a dumpster on your schedule, Jb's handles both. We're Denton's only expert in full-service junk removal and flexible dumpster rentals.</p>
+        <div class="why-bullets">
+          <div class="why-bullet"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Upfront pricing — no surprise fees at the end</span></div>
+          <div class="why-bullet"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Same-day junk removal frequently available</span></div>
+          <div class="why-bullet"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="#EC3449" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg><span>Flexible dumpster rental periods — you set the pace</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-block"><div class="stat-num"><span class="counter" data-target="153">0</span><span class="stat-suffix">+</span></div><div class="stat-label">5-Star Reviews</div><div class="stat-rule"></div></div>
+    <div class="stat-block"><div class="stat-num"><span class="counter" data-target="1200">0</span><span class="stat-suffix">+</span></div><div class="stat-label">Jobs Completed</div><div class="stat-rule"></div></div>
+    <div class="stat-block"><div class="stat-num"><span class="counter" data-target="2">0</span><span class="stat-suffix"> Services</span></div><div class="stat-label">Hauling + Dumpsters</div><div class="stat-rule"></div></div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="process-inner">
+    <div class="section-head">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Simple Booking, Fast Results</h2>
+      <p class="section-sub">Whether booking junk removal or a dumpster rental, the process with Jb's is always quick and easy.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step-card"><div class="step-badge">1</div><div class="step-title">Call for a Quote</div><p class="step-body">Call (817) 567-2728 and tell us what you need. We give you a fast estimate for junk removal or dumpster rental — no obligation.</p></div>
+      <div class="step-card"><div class="step-badge">2</div><div class="step-title">Schedule Your Service</div><p class="step-body">Pick a time that works for you. We offer same-day and next-day availability for junk removal, and flexible drop-off windows for dumpster rentals.</p></div>
+      <div class="step-card"><div class="step-badge">3</div><div class="step-title">Done — Space Cleared</div><p class="step-body">Our crew arrives, works efficiently, and leaves everything clean. You get the cleared space — and the peace of mind — you were looking for.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="areas">
+  <div class="areas-inner">
+    <div class="section-label">Service Area</div>
+    <h2 class="section-title">Serving Denton & Surrounding Areas</h2>
+    <p class="section-sub">Based in Denton with reliable junk removal and dumpster delivery throughout the region.</p>
+    <div class="areas-grid">
+      <div class="area-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="#EC3449" stroke-width="1.8" fill="none"/><path d="M12 2C8 2 5 5.5 5 10c0 6 7 12 7 12s7-6 7-12c0-4.5-3-8-7-8z" stroke="#EC3449" stroke-width="1.8" fill="none"/></svg><span>Denton, TX</span></div>
+      <div class="area-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="#EC3449" stroke-width="1.8" fill="none"/><path d="M12 2C8 2 5 5.5 5 10c0 6 7 12 7 12s7-6 7-12c0-4.5-3-8-7-8z" stroke="#EC3449" stroke-width="1.8" fill="none"/></svg><span>Lewisville, TX</span></div>
+      <div class="area-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="#EC3449" stroke-width="1.8" fill="none"/><path d="M12 2C8 2 5 5.5 5 10c0 6 7 12 7 12s7-6 7-12c0-4.5-3-8-7-8z" stroke="#EC3449" stroke-width="1.8" fill="none"/></svg><span>Flower Mound, TX</span></div>
+      <div class="area-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="#EC3449" stroke-width="1.8" fill="none"/><path d="M12 2C8 2 5 5.5 5 10c0 6 7 12 7 12s7-6 7-12c0-4.5-3-8-7-8z" stroke="#EC3449" stroke-width="1.8" fill="none"/></svg><span>Corinth, TX</span></div>
+      <div class="area-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="#EC3449" stroke-width="1.8" fill="none"/><path d="M12 2C8 2 5 5.5 5 10c0 6 7 12 7 12s7-6 7-12c0-4.5-3-8-7-8z" stroke="#EC3449" stroke-width="1.8" fill="none"/></svg><span>Sanger, TX</span></div>
+      <div class="area-chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3" stroke="#EC3449" stroke-width="1.8" fill="none"/><path d="M12 2C8 2 5 5.5 5 10c0 6 7 12 7 12s7-6 7-12c0-4.5-3-8-7-8z" stroke="#EC3449" stroke-width="1.8" fill="none"/></svg><span>Highland Village, TX</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="section-label">Reviews</div>
+    <h2 class="section-title">153 Reasons Denton Trusts Jb's</h2>
+    <p class="section-sub">Real feedback from Denton homeowners and contractors who've used both our junk removal and dumpster rental services.</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="review-text">"Rented a dumpster for a kitchen remodel. Drop-off was on time, pickup was smooth, and the price was exactly what they quoted. Way easier than hauling everything myself. Will use again."</p>
+        <div class="reviewer-row"><div class="reviewer-avatar">G</div><div><div class="reviewer-name">Greg L.</div><div class="reviewer-verified">✓ Google Review · Denton</div></div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="review-text">"Jb's cleared my entire two-car garage in less than three hours. The crew was polite, efficient, and swept the floor before they left. Pricing was fair and there were zero hidden charges."</p>
+        <div class="reviewer-row"><div class="reviewer-avatar">H</div><div><div class="reviewer-name">Hannah M.</div><div class="reviewer-verified">✓ Google Review · Denton</div></div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <p class="review-text">"Used them for an estate cleanout after losing my uncle. The team was so respectful and professional. They worked around items we wanted to keep and removed everything else without a fuss."</p>
+        <div class="reviewer-row"><div class="reviewer-avatar">V</div><div><div class="reviewer-name">Vanessa R.</div><div class="reviewer-verified">✓ Google Review · Corinth</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q">What sizes of dumpsters do you offer?<svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#c9263b" stroke-width="2" stroke-linecap="round" fill="none"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">We offer multiple dumpster sizes to fit different projects — from small home cleanouts to large construction jobs. Call us at (817) 567-2728 and we'll recommend the right size for your project and budget.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How long can I keep the dumpster?<svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#c9263b" stroke-width="2" stroke-linecap="round" fill="none"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">Rental periods are flexible — we work around your project schedule. Standard rentals are typically several days, but we can accommodate longer periods. Ask about extended rental pricing when you call.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can you do same-day junk removal?<svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#c9263b" stroke-width="2" stroke-linecap="round" fill="none"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes, same-day pickups are frequently available in Denton and surrounding areas. Call us early in the day for the best chance of same-day service.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do I need to be present for junk removal?<svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#c9263b" stroke-width="2" stroke-linecap="round" fill="none"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">For interior access, yes — someone needs to be available. For exterior jobs or dumpster drop-offs, arrangements can often be made remotely. Call us to discuss your specific situation.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What can't go in the dumpster?<svg class="faq-icon" viewBox="0 0 24 24"><path d="M12 5V19M5 12H19" stroke="#c9263b" stroke-width="2" stroke-linecap="round" fill="none"/></svg></button>
+        <div class="faq-a"><div class="faq-a-inner">Hazardous materials including paint, chemicals, asbestos, and medical waste cannot go in the dumpster. All other household, renovation, and construction debris is generally acceptable. Call us with specific questions.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="contact">
+  <div class="cta-grain"></div>
+  <div class="cta-inner">
+    <div class="cta-label">Get Started Today</div>
+    <h2 class="cta-title">Denton's Expert in Junk Removal & Dumpster Rentals</h2>
+    <p class="cta-sub">153 five-star reviews. Two services. One dependable team. Call Jb's and let us handle the heavy work.</p>
+    <div class="cta-actions">
+      <a href="tel:8175672728" class="btn-cta">Call (817) 567-2728</a>
+      <a href="#services" class="btn-cta-ghost">View Services</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Jb's <span>Junk Removal & Dumpster Rentals</span></div>
+        <p class="footer-brand-desc">Denton's expert in full-service junk removal and dumpster rentals. 153 five-star reviews and counting. Available 7 days a week.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links"><a href="#">Full Junk Removal</a><a href="#">Dumpster Rentals</a><a href="#">Estate Cleanouts</a><a href="#">Appliance Removal</a><a href="#">Construction Debris</a></div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-links"><a href="tel:8175672728">(817) 567-2728</a><a href="#">Denton, TX</a><a href="#">7 Days a Week</a><a href="#">Free Estimates</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2024 <span>Jb's Junk Removal & Dumpster Rentals</span> · Denton, TX</div>
+      <div class="footer-badge">EXPERT JUNK REMOVAL · DUMPSTER RENTALS · DENTON TX</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target, cls = el.classList[0];
+      const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains(cls));
+      setTimeout(() => el.classList.add('visible'), siblings.indexOf(el) * 90);
+      obs.unobserve(el);
+    }
+  });
+}, {threshold:0.12});
+document.querySelectorAll('.svc-card,.why-card,.stat-block,.step-card,.area-chip,.review-card').forEach(el=>obs.observe(el));
+const cObs = new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){const el=entry.target,target=parseInt(el.dataset.target),step=Math.ceil(target/100);let c=0;const t=setInterval(()=>{c=Math.min(c+step,target);el.textContent=c;if(c>=target)clearInterval(t);},16);cObs.unobserve(el);}});},{threshold:0.4});
+document.querySelectorAll('.counter').forEach(el=>cObs.observe(el));
+document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.closest('.faq-item'),isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!isOpen)item.classList.add('open');});});
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}});});
+</script>
+</body>
+</html>
