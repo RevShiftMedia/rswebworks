@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Republic Services — Euless, TX | Waste Disposal &amp; Recycling</title>
+<meta name="description" content="Republic Services in Euless, TX offers waste disposal, recycling, roll-off dumpster rentals, and commercial hauling for the DFW area. Call (817) 354-2300 for service information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;font-weight:400;color:#1a1a1a;background:#f4f7f4;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+:root{
+  --primary:#0d3324;
+  --primary-dark:#081f17;
+  --accent:#f97316;
+  --accent-dark:#ea6c0a;
+  --text:#1a1a1a;
+  --text-light:#556658;
+  --bg:#f4f7f4;
+  --white:#ffffff;
+  --radius:8px;
+  --shadow:0 4px 24px rgba(13,51,36,0.09);
+}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:var(--primary);
+  padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  height:66px;
+  box-shadow:0 2px 16px rgba(0,0,0,0.3);
+}
+.nav-logo{
+  font-family:'Oswald',sans-serif;
+  font-size:1.2rem;font-weight:700;
+  color:var(--white);letter-spacing:0.04em;
+  text-decoration:none;
+}
+.nav-logo em{color:var(--accent);font-style:normal;}
+.nav-phone{
+  font-family:'Oswald',sans-serif;
+  font-size:1.05rem;font-weight:600;
+  color:var(--white);text-decoration:none;
+  background:var(--accent);
+  padding:9px 20px;border-radius:var(--radius);
+  transition:background 0.2s,transform 0.15s;
+  white-space:nowrap;
+}
+.nav-phone:hover{background:var(--accent-dark);transform:translateY(-1px);}
+
+/* HERO */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--primary) 0%,#0f3d2a 55%,var(--primary-dark) 100%);
+  padding:96px 5% 80px;
+  min-height:620px;
+  display:flex;align-items:center;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:1;
+}
+.hero::after{
+  content:'';position:absolute;
+  right:-100px;top:-100px;
+  width:480px;height:480px;
+  background:radial-gradient(circle,rgba(249,115,22,0.13) 0%,transparent 70%);
+  pointer-events:none;z-index:1;
+}
+.hero-inner{
+  position:relative;z-index:2;
+  width:100%;max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:60% 40%;gap:56px;align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.38);
+  color:#fdba74;font-size:0.82rem;font-weight:600;
+  padding:6px 16px;border-radius:50px;
+  letter-spacing:0.07em;text-transform:uppercase;
+  margin-bottom:22px;
+  animation:heroFadeUp 0.6s ease both;animation-delay:0.1s;
+}
+.hero-badge svg{fill:var(--accent);}
+.hero h1{
+  font-family:'Oswald',sans-serif;
+  font-size:clamp(2.3rem,4.6vw,3.8rem);
+  font-weight:700;line-height:1.1;
+  color:var(--white);margin-bottom:22px;
+  animation:heroFadeUp 0.6s ease both;animation-delay:0.2s;
+}
+.hero h1 em{color:var(--accent);font-style:normal;}
+.hero-sub{
+  font-size:1.12rem;color:rgba(255,255,255,0.75);
+  max-width:520px;margin-bottom:36px;line-height:1.72;
+  animation:heroFadeUp 0.6s ease both;animation-delay:0.3s;
+}
+.hero-ctas{
+  display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px;
+  animation:heroFadeUp 0.6s ease both;animation-delay:0.4s;
+}
+.btn-primary{
+  font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;
+  background:var(--accent);color:var(--white);
+  padding:14px 30px;border-radius:var(--radius);
+  text-decoration:none;display:inline-block;
+  transition:background 0.2s,transform 0.2s;
+  box-shadow:0 4px 16px rgba(249,115,22,0.3);
+}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);}
+.btn-outline{
+  font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;
+  background:transparent;color:var(--white);
+  padding:14px 30px;border-radius:var(--radius);
+  border:2px solid rgba(255,255,255,0.3);
+  text-decoration:none;display:inline-block;
+  transition:border-color 0.2s,transform 0.2s;
+}
+.btn-outline:hover{border-color:var(--white);transform:translateY(-2px);}
+.hero-trust{
+  display:flex;gap:24px;flex-wrap:wrap;
+  animation:heroFadeUp 0.6s ease both;animation-delay:0.5s;
+}
+.trust-pill{
+  display:flex;align-items:center;gap:7px;
+  color:rgba(255,255,255,0.65);font-size:0.88rem;
+}
+.trust-pill svg{fill:var(--accent);flex-shrink:0;}
+
+/* FROSTED GLASS HERO CARD */
+.hero-card{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.16);
+  border-radius:18px;padding:38px 32px;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  animation:heroFadeUp 0.6s ease both;animation-delay:0.3s;
+}
+.card-eyebrow{
+  font-family:'Oswald',sans-serif;font-size:0.78rem;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.5);margin-bottom:10px;
+}
+.card-rating-row{display:flex;align-items:baseline;gap:12px;margin-bottom:6px;}
+.card-score{
+  font-family:'Oswald',sans-serif;font-size:2.6rem;font-weight:700;color:var(--white);
+}
+.card-stars-partial{color:#fbbf24;font-size:1.1rem;letter-spacing:2px;}
+.card-count{color:rgba(255,255,255,0.5);font-size:0.88rem;margin-bottom:20px;}
+.card-sep{border:none;border-top:1px solid rgba(255,255,255,0.12);margin:18px 0;}
+.card-list{display:flex;flex-direction:column;gap:13px;}
+.card-list-item{
+  display:flex;align-items:center;gap:11px;
+  color:rgba(255,255,255,0.8);font-size:0.94rem;
+}
+.card-list-item svg{fill:var(--accent);flex-shrink:0;}
+.card-btn{
+  display:block;text-align:center;margin-top:26px;
+  background:var(--accent);color:var(--white);
+  font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;
+  padding:13px 20px;border-radius:var(--radius);
+  text-decoration:none;transition:background 0.2s;
+}
+.card-btn:hover{background:var(--accent-dark);}
+
+/* TRUST STRIP */
+.trust-strip{
+  background:var(--white);border-bottom:1px solid #d4e6d8;
+  padding:36px 5%;
+}
+.trust-strip-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+}
+.tstrip-item{
+  display:flex;align-items:center;gap:18px;
+  background:var(--bg);border-radius:var(--radius);
+  padding:22px 24px;
+}
+.tstrip-icon{
+  width:50px;height:50px;flex-shrink:0;
+  background:var(--accent);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+.tstrip-icon svg{fill:var(--white);}
+.tstrip-item h3{
+  font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;
+  color:var(--primary);margin-bottom:3px;
+}
+.tstrip-item p{font-size:0.84rem;color:var(--text-light);line-height:1.5;}
+
+/* SERVICES */
+.services{padding:88px 5%;background:var(--bg);}
+.section-hd{text-align:center;max-width:720px;margin:0 auto 60px;}
+.eyebrow{
+  display:block;font-family:'Oswald',sans-serif;
+  font-size:0.78rem;letter-spacing:0.13em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:14px;
+}
+.section-hd h2{
+  font-family:'Oswald',sans-serif;
+  font-size:clamp(1.85rem,3vw,2.65rem);font-weight:700;
+  color:var(--primary);margin-bottom:18px;line-height:1.18;
+}
+.section-hd p{color:var(--text-light);font-size:1rem;line-height:1.7;}
+
+.svc-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+/* icon-INLINE: icon + title on same line via .svc-head */
+.svc-card{
+  background:var(--white);border-radius:var(--radius);
+  padding:30px 26px 26px;
+  box-shadow:var(--shadow);
+  border-bottom:3px solid transparent;
+  transition:border-color 0.22s,transform 0.22s,box-shadow 0.22s;
+}
+.svc-card:hover{
+  border-bottom-color:var(--accent);
+  transform:translateY(-4px);
+  box-shadow:0 12px 32px rgba(13,51,36,0.12);
+}
+.svc-head{
+  display:flex;align-items:center;gap:14px;margin-bottom:12px;
+}
+.svc-icon{
+  width:46px;height:46px;flex-shrink:0;
+  background:rgba(249,115,22,0.1);border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:center;
+}
+.svc-icon svg{fill:var(--accent);}
+.svc-head h3{
+  font-family:'Oswald',sans-serif;font-weight:600;font-size:1.1rem;
+  color:var(--primary);line-height:1.25;
+}
+.svc-card p{color:var(--text-light);font-size:0.92rem;line-height:1.67;}
+
+/* PROCESS */
+.process{padding:88px 5%;background:var(--white);}
+.process-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:48px;
+}
+.proc-step{text-align:center;padding:0 16px;}
+.proc-num{
+  font-family:'Oswald',sans-serif;font-size:5rem;font-weight:700;
+  color:rgba(249,115,22,0.13);line-height:1;margin-bottom:20px;
+  display:block;
+}
+.proc-step h3{
+  font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:600;
+  color:var(--primary);margin-bottom:14px;
+}
+.proc-step p{color:var(--text-light);font-size:0.95rem;line-height:1.7;}
+
+/* STATS */
+.stats-strip{background:var(--primary);padding:68px 5%;}
+.stats-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  text-align:center;
+}
+.stat-num{
+  font-family:'Oswald',sans-serif;font-size:2.9rem;font-weight:700;
+  color:var(--accent);line-height:1;margin-bottom:10px;
+  display:flex;align-items:baseline;justify-content:center;gap:2px;
+}
+.stat-num .sfx{font-size:2rem;}
+.stat-lbl{
+  font-size:0.86rem;color:rgba(255,255,255,0.58);
+  text-transform:uppercase;letter-spacing:0.07em;
+}
+
+/* WHY US */
+.why-us{padding:88px 5%;background:var(--bg);}
+.why-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(2,1fr);gap:28px;
+}
+.why-item{
+  display:flex;gap:22px;align-items:flex-start;
+  background:var(--white);border-radius:var(--radius);
+  padding:30px 28px;box-shadow:var(--shadow);
+}
+.why-icon{
+  width:50px;height:50px;flex-shrink:0;
+  background:var(--primary);border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:center;
+}
+.why-icon svg{fill:var(--accent);}
+.why-item h3{
+  font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;
+  color:var(--primary);margin-bottom:7px;
+}
+.why-item p{color:var(--text-light);font-size:0.91rem;line-height:1.65;}
+
+/* REVIEWS — WHITE treatment */
+.reviews{padding:88px 5%;background:var(--white);}
+.reviews-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+}
+.review-card{
+  background:var(--white);
+  border:1px solid #e0e8e2;
+  border-radius:var(--radius);padding:32px 26px;
+  box-shadow:var(--shadow);
+}
+.rev-stars{color:#f59e0b;font-size:0.95rem;letter-spacing:3px;margin-bottom:18px;}
+.rev-quote{
+  color:#374151;font-size:0.95rem;line-height:1.74;
+  margin-bottom:22px;font-style:italic;
+}
+.rev-author{
+  color:#6b7280;font-size:0.82rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:0.06em;
+}
+
+/* CTA BAND */
+.cta-band{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%);
+  padding:88px 5%;text-align:center;
+}
+.cta-band::before{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:1;
+}
+.cta-inner{position:relative;z-index:2;max-width:780px;margin:0 auto;}
+.cta-band h2{
+  font-family:'Oswald',sans-serif;
+  font-size:clamp(1.85rem,3.2vw,2.7rem);font-weight:700;
+  color:var(--white);margin-bottom:18px;
+}
+.cta-band p{color:rgba(255,255,255,0.7);font-size:1.06rem;margin-bottom:36px;line-height:1.7;}
+.cta-band .btn-primary{font-size:1.12rem;padding:16px 40px;}
+
+/* FOOTER */
+.footer{background:var(--primary-dark);padding:56px 5% 32px;}
+.footer-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:48px;
+  margin-bottom:40px;
+}
+.footer-brand p{color:rgba(255,255,255,0.42);font-size:0.9rem;line-height:1.7;margin-top:14px;}
+.footer-col h4{
+  font-family:'Oswald',sans-serif;font-size:0.82rem;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:18px;
+}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:9px;}
+.footer-col a{color:rgba(255,255,255,0.48);font-size:0.9rem;text-decoration:none;transition:color 0.2s;}
+.footer-col a:hover{color:var(--white);}
+.footer-addr{font-style:normal;color:rgba(255,255,255,0.48);font-size:0.9rem;line-height:1.9;}
+.footer-addr a{color:rgba(255,255,255,0.48);text-decoration:none;transition:color 0.2s;}
+.footer-addr a:hover{color:var(--white);}
+.footer-bottom{
+  max-width:1200px;margin:0 auto;
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding-top:24px;text-align:center;
+  color:rgba(255,255,255,0.25);font-size:0.8rem;
+}
+
+/* ANIMATIONS */
+@keyframes heroFadeUp{
+  from{opacity:0;transform:translateY(26px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.fade-up{
+  opacity:0;transform:translateY(32px);
+  transition:opacity 0.62s ease,transform 0.62s ease;
+}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+.fade-up:nth-child(2){transition-delay:0.1s;}
+.fade-up:nth-child(3){transition-delay:0.18s;}
+.fade-up:nth-child(4){transition-delay:0.26s;}
+.fade-up:nth-child(5){transition-delay:0.12s;}
+.fade-up:nth-child(6){transition-delay:0.22s;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:44px;}
+  .hero-card{max-width:480px;}
+  .trust-strip-inner,
+  .svc-grid,
+  .process-grid,
+  .stats-inner,
+  .footer-grid{grid-template-columns:repeat(2,1fr);}
+  .reviews-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:600px){
+  .hero{padding:72px 5% 56px;min-height:auto;}
+  .hero-ctas{flex-direction:column;}
+  .btn-primary,.btn-outline{text-align:center;width:100%;}
+  .trust-strip-inner,
+  .svc-grid,
+  .process-grid,
+  .stats-inner,
+  .why-grid,
+  .reviews-grid,
+  .footer-grid{grid-template-columns:1fr;}
+}
+
+/* SERVICE AREAS */
+.areas{padding:72px 24px;background:var(--primary)}
+.areas .section-tag{background:rgba(255,255,255,.1);color:rgba(255,255,255,.85)}
+.areas .section-title{color:var(--white)}
+.areas .section-sub{color:rgba(255,255,255,.55)}
+.areas-grid{max-width:920px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.area-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.85);padding:10px 22px;border-radius:50px;font-size:.9rem;font-weight:600;letter-spacing:.02em}
+
+/* FAQ */
+.faq{padding:72px 24px;background:var(--white)}
+.faq .section-tag{background:rgba(0,0,0,.06);color:var(--text-light)}
+.faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq-item{background:var(--bg);border:1px solid #e4e4e7;border-radius:var(--radius);padding:22px 26px}
+.faq-q{font-family:'Oswald',sans-serif;font-size:1.06rem;font-weight:600;color:var(--primary);margin-bottom:8px}
+.faq-a{color:var(--text-light);font-size:.93rem;line-height:1.6}
+
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-logo">Republic<em> Services</em></div>
+  <a href="tel:+18173542300" class="nav-phone">(817) 354-2300</a>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.5c.8-2 1.5-3.5 3.5-4.5 2.5-1.5 7-1 10-4.5 3-3.5 0-8 0-8s-.5 4.5-2 6z"/></svg>
+        Euless Area Disposal &amp; Recycling Facility
+      </div>
+      <h1>Euless <em>Waste &amp; Disposal</em><br>Solutions</h1>
+      <p class="hero-sub">Republic Services operates the DFW region's most reliable waste disposal and recycling facility. From roll-off dumpster rentals to commercial waste collection, we keep Euless and the surrounding area clean and moving forward.</p>
+      <div class="hero-ctas">
+        <a href="tel:+18173542300" class="btn-primary">Call (817) 354-2300</a>
+        <a href="#services" class="btn-outline">View Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          Permitted &amp; Regulated
+        </div>
+        <div class="trust-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.5c.8-2 1.5-3.5 3.5-4.5 2.5-1.5 7-1 10-4.5 3-3.5 0-8 0-8s-.5 4.5-2 6z"/></svg>
+          Eco-Responsible Recycling
+        </div>
+        <div class="trust-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+          Commercial &amp; Residential
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-eyebrow">Google Reviews</div>
+      <div class="card-rating-row">
+        <div class="card-score">3.3</div>
+        <div class="card-stars-partial">★★★</div>
+      </div>
+      <div class="card-count">Based on 273 reviews</div>
+      <hr class="card-sep">
+      <div class="card-list">
+        <div class="card-list-item">
+          <svg width="17" height="17" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          State-Permitted Facility
+        </div>
+        <div class="card-list-item">
+          <svg width="17" height="17" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.5c.8-2 1.5-3.5 3.5-4.5 2.5-1.5 7-1 10-4.5 3-3.5 0-8 0-8s-.5 4.5-2 6z"/></svg>
+          Recycling &amp; Diversion Programs
+        </div>
+        <div class="card-list-item">
+          <svg width="17" height="17" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+          Serving Euless, TX &amp; DFW
+        </div>
+      </div>
+      <a href="tel:+18173542300" class="card-btn">Contact Our Facility</a>
+    </div>
+  </div>
+</section>
+
+<section class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="tstrip-item fade-up">
+      <div class="tstrip-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      </div>
+      <div>
+        <h3>Fully Permitted Facility</h3>
+        <p>State-regulated and fully permitted for waste transfer, recycling, and disposal operations.</p>
+      </div>
+    </div>
+    <div class="tstrip-item fade-up">
+      <div class="tstrip-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.5c.8-2 1.5-3.5 3.5-4.5 2.5-1.5 7-1 10-4.5 3-3.5 0-8 0-8s-.5 4.5-2 6z"/></svg>
+      </div>
+      <div>
+        <h3>Active Recycling Programs</h3>
+        <p>We divert thousands of tons from landfill each year through on-site sorting and recycling.</p>
+      </div>
+    </div>
+    <div class="tstrip-item fade-up">
+      <div class="tstrip-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+      </div>
+      <div>
+        <h3>Residential &amp; Commercial</h3>
+        <p>We serve homeowners, contractors, businesses, and municipalities across the DFW region.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-hd">
+    <span class="eyebrow">Our Services</span>
+    <h2>Comprehensive Waste Management for Euless &amp; DFW</h2>
+    <p>From roll-off dumpster rentals to large-scale commercial waste contracts, Republic Services offers the full spectrum of disposal and recycling solutions for the Euless area.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card fade-up">
+      <div class="svc-head">
+        <div class="svc-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24"><path d="M15 4l-1-2H5L3 4H0v2h24V4zM3 22h14l1-12H2L3 22z"/></svg>
+        </div>
+        <h3>Roll-Off Dumpster Rental</h3>
+      </div>
+      <p>Available in multiple sizes for construction projects, home renovations, large cleanouts, and commercial use. Flexible rental periods and reliable delivery across the DFW area.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-head">
+        <div class="svc-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+        </div>
+        <h3>Commercial Waste Collection</h3>
+      </div>
+      <p>Scheduled pickup and haul-away services for businesses of all sizes, including offices, restaurants, retail locations, and industrial facilities throughout the Euless area.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-head">
+        <div class="svc-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.5c.8-2 1.5-3.5 3.5-4.5 2.5-1.5 7-1 10-4.5 3-3.5 0-8 0-8s-.5 4.5-2 6z"/></svg>
+        </div>
+        <h3>Recycling &amp; Diversion</h3>
+      </div>
+      <p>On-site sorting for cardboard, metals, plastics, and electronics keeps materials out of landfill. Our recycling diversion programs help businesses meet sustainability targets.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-head">
+        <div class="svc-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        </div>
+        <h3>Construction &amp; Demo Debris</h3>
+      </div>
+      <p>Contractors rely on our facility for efficient C&amp;D debris disposal. We accept concrete, drywall, lumber, roofing materials, and mixed demolition waste with straightforward tipping fees.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-head">
+        <div class="svc-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+        </div>
+        <h3>Bulk Item &amp; Special Waste</h3>
+      </div>
+      <p>Mattresses, appliances, tires, electronics, and other special-category items accepted with appropriate handling. Call ahead to confirm acceptance requirements and current tipping fees.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-head">
+        <div class="svc-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+        </div>
+        <h3>Municipal &amp; Government Contracts</h3>
+      </div>
+      <p>Long-term waste management agreements for cities, counties, and public agencies. We provide reliable, compliant disposal services with full reporting and documentation support.</p>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="section-hd">
+    <span class="eyebrow">How to Use Our Facility</span>
+    <h2>Getting Waste Disposed Is Straightforward</h2>
+    <p>Whether you're dropping off a single load or arranging ongoing commercial service, working with our Euless facility is simple and efficient.</p>
+  </div>
+  <div class="process-grid">
+    <div class="proc-step fade-up">
+      <span class="proc-num">01</span>
+      <h3>Call or Schedule Ahead</h3>
+      <p>Contact our facility at (817) 354-2300 for current operating hours, accepted materials, and tipping fee schedules. For roll-off rentals or commercial accounts, we'll arrange a site consultation.</p>
+    </div>
+    <div class="proc-step fade-up">
+      <span class="proc-num">02</span>
+      <h3>Arrive at the Facility</h3>
+      <p>Our Euless location accepts loads during operating hours. Scale weighing, ticketing, and material sorting are handled on-site with minimal wait times for most load types.</p>
+    </div>
+    <div class="proc-step fade-up">
+      <span class="proc-num">03</span>
+      <h3>Responsible Disposal</h3>
+      <p>Your material is processed and disposed of in full compliance with state and federal environmental regulations. Recyclable materials are diverted before anything reaches the landfill cell.</p>
+    </div>
+  </div>
+</section>
+
+<section class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item fade-up">
+      <div class="stat-num"><span class="count" data-target="40">0</span><span class="sfx">+</span></div>
+      <div class="stat-lbl">Years in Operation</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num"><span class="count" data-target="273">0</span></div>
+      <div class="stat-lbl">Google Reviews</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num"><span class="count" data-target="1000">0</span><span class="sfx">+</span></div>
+      <div class="stat-lbl">Loads Processed Daily</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num"><span class="count" data-target="25">0</span><span class="sfx">%</span></div>
+      <div class="stat-lbl">Landfill Diversion Rate</div>
+    </div>
+  </div>
+</section>
+
+<section class="why-us">
+  <div class="section-hd">
+    <span class="eyebrow">Why Republic Services</span>
+    <h2>Trusted Waste Infrastructure for DFW</h2>
+    <p>Republic Services is one of the largest environmental services companies in North America. Here's what our Euless facility brings to the region.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-item fade-up">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      </div>
+      <div>
+        <h3>Regulatory Compliance</h3>
+        <p>Our facility operates under strict state and federal environmental permits. Every load is handled in full compliance with TCEQ regulations — protecting groundwater, air quality, and community health.</p>
+      </div>
+    </div>
+    <div class="why-item fade-up">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.5c.8-2 1.5-3.5 3.5-4.5 2.5-1.5 7-1 10-4.5 3-3.5 0-8 0-8s-.5 4.5-2 6z"/></svg>
+      </div>
+      <div>
+        <h3>Sustainability Commitment</h3>
+        <p>We invest in recycling infrastructure, landfill gas capture, and organic diversion programs. Our goal is to reduce the environmental footprint of every ton that comes through our gates.</p>
+      </div>
+    </div>
+    <div class="why-item fade-up">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+      </div>
+      <div>
+        <h3>Large-Scale Capacity</h3>
+        <p>Our Euless facility can handle the volume demands of major construction projects, municipal contracts, and regional waste management needs without the delays smaller sites face.</p>
+      </div>
+    </div>
+    <div class="why-item fade-up">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+      </div>
+      <div>
+        <h3>Transparent Reporting</h3>
+        <p>Commercial accounts receive detailed disposal records and diversion reports. Our documentation satisfies regulatory requirements and supports corporate sustainability reporting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="section-hd">
+    <span class="eyebrow">Customer Feedback</span>
+    <h2>What Contractors &amp; Businesses Are Saying</h2>
+    <p>Reliable disposal infrastructure matters. Here's feedback from contractors, businesses, and residents who regularly use our Euless facility.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card fade-up">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-quote">"We've been bringing our construction debris here for years. The scale process is fast, the staff know their materials, and tipping fees are fair and clearly posted. Highly dependable."</p>
+      <div class="rev-author">— Greg T., General Contractor, Arlington TX</div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-quote">"Republic handles our commercial waste contract for three locations in the DFW area. Pickup is always on schedule and the reporting they provide makes compliance easy to track."</p>
+      <div class="rev-author">— Sandra M., Facilities Manager, Euless TX</div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-quote">"The roll-off rental was delivered the morning after I called and picked up right when scheduled. Driver was courteous and careful with the placement. Smooth experience start to finish."</p>
+      <div class="rev-author">— Brian L., Homeowner, Bedford TX</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-inner">
+    <h2>Need Reliable Waste Disposal in the Euless Area?</h2>
+    <p>Whether you need a roll-off dumpster, a commercial waste contract, or a single drop-off, our facility is ready to serve. Call to confirm hours, accepted materials, and current pricing.</p>
+    <a href="tel:+18173542300" class="btn-primary">Call (817) 354-2300</a>
+  </div>
+</section>
+
+
+<!-- SERVICE AREAS -->
+<section class="areas">
+  <div class="section-header fade-up">
+    <div class="section-tag">Service Area</div>
+    <h2 class="section-title">Proudly Serving Euless &amp; Mid-Cities</h2>
+    <p class="section-sub">Fast, reliable junk removal across Euless and the surrounding DFW communities — same-day and next-day scheduling available.</p>
+  </div>
+  <div class="areas-grid fade-up">
+    <div class="area-chip">Euless</div>
+    <div class="area-chip">Hurst</div>
+    <div class="area-chip">Bedford</div>
+    <div class="area-chip">Grapevine</div>
+    <div class="area-chip">Colleyville</div>
+    <div class="area-chip">Irving</div>
+    <div class="area-chip">Arlington</div>
+    <div class="area-chip">Fort Worth</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-header fade-up">
+    <div class="section-tag">FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Quick answers to what Euless customers ask us most before booking.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item fade-up">
+      <div class="faq-q">How quickly can you come out?</div>
+      <div class="faq-a">We offer same-day and next-day appointments across Euless and surrounding areas. In most cases we can arrive within a few hours of your call — reach out and we'll lock in a time that works for you.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">How is pricing determined?</div>
+      <div class="faq-a">Pricing is based on the volume and type of junk being removed. We provide a firm, upfront quote on-site before any work begins. No hourly rates, no hidden fees — the price we quote is the price you pay.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">What items do you haul away?</div>
+      <div class="faq-a">We take almost everything: furniture, appliances, electronics, construction debris, yard waste, mattresses, hot tubs, and general household junk. The only exceptions are hazardous materials like chemicals, paint, and asbestos.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">Do I need to be home during the removal?</div>
+      <div class="faq-a">Not always. As long as we can access the junk and you've approved the quote in advance, we can complete the job without you present. We send a confirmation once the work is done and everything is cleaned up.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">Do you donate or recycle items?</div>
+      <div class="faq-a">Yes — we divert as much as possible from the landfill. Usable furniture and goods are donated to local Euless-area charities, and recyclable materials are sorted and processed responsibly.</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">Republic<em> Services</em></div>
+      <p>Euless area waste disposal, recycling, and roll-off dumpster rental. Serving contractors, businesses, and residents across the DFW Metroplex.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Roll-Off Dumpsters</a></li>
+        <li><a href="#services">Commercial Waste</a></li>
+        <li><a href="#services">Recycling Programs</a></li>
+        <li><a href="#services">C&amp;D Debris Disposal</a></li>
+        <li><a href="#services">Municipal Contracts</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <address class="footer-addr">
+        <a href="tel:+18173542300">(817) 354-2300</a><br>
+        Euless, TX 76040<br>
+        Serving DFW &amp; North Texas
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2024 Republic Services. All rights reserved. Euless, TX facility serving Arlington, Bedford, Hurst, Irving, and the greater DFW region.
+  </div>
+</footer>
+
+<script>
+(function(){
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting) e.target.classList.add('visible');
+    });
+  },{threshold:0.12});
+  document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
+
+  function animCount(el){
+    var target=parseInt(el.dataset.target,10);
+    var dur=2000,start=performance.now();
+    function step(now){
+      var p=Math.min((now-start)/dur,1);
+      var ease=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*ease).toLocaleString();
+      if(p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var cObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){animCount(e.target);cObs.unobserve(e.target);}
+    });
+  },{threshold:0.5});
+  document.querySelectorAll('.count').forEach(function(el){cObs.observe(el);});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DFW Clutter Busters | Junk Removal &amp; Cleanout Services in Richardson, TX</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #0d2412;
+  --primary-dark: #061508;
+  --accent: #22c55e;
+  --accent-dark: #15803d;
+  --bg: #ffffff;
+  --bg-off: #f4faf6;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #111827;
+  --grey-text: #6b7280;
+  --border: #e2f0e8;
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Source Sans 3', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+a { text-decoration: none; }
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+@keyframes heroFadeUp { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+.hero-badge { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1).visible { animation-delay: 0.1s; }
+.card:nth-child(2).visible { animation-delay: 0.2s; }
+.card:nth-child(3).visible { animation-delay: 0.3s; }
+.card:nth-child(4).visible { animation-delay: 0.4s; }
+.card:nth-child(5).visible { animation-delay: 0.5s; }
+.card:nth-child(6).visible { animation-delay: 0.6s; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(34,197,94,0.35); transition: all 0.15s ease;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(34,197,94,0.45); }
+.btn-primary:active { transform: scale(0.97); }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px; background: transparent; color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 600;
+  padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6); cursor: pointer; transition: all 0.15s ease;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; } }
+
+header { background: var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.6); }
+.header-inner { max-width: 1100px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.biz-name { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: white; }
+.tagline { font-size: 12px; color: var(--t2); margin-top: 1px; }
+.header-cta { display: flex; align-items: center; gap: 8px; background: var(--accent); color: white; font-family: var(--font-display); font-size: 14px; font-weight: 700; padding: 10px 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(34,197,94,0.3); }
+
+.hero { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%); padding: 80px 0 70px; position: relative; overflow: hidden; }
+.hero::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.12; pointer-events: none; z-index: 0; }
+.hero > * { position: relative; z-index: 1; }
+.hero-grid { display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: center; }
+.badge-pill { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: white; font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 18px; }
+.hero-headline { font-size: clamp(42px, 6vw, 64px); font-weight: 700; color: white; line-height: 1.05; margin-bottom: 18px; }
+.hero-headline span { color: var(--accent); }
+.hero-sub { font-size: 18px; color: var(--t2); line-height: 1.6; margin-bottom: 30px; max-width: 480px; }
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 28px; }
+.hero-trust { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--t2); flex-wrap: wrap; }
+.stars { display: flex; color: var(--accent); gap: 2px; }
+.tdiv { opacity: 0.4; }
+.hero-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 8px 32px rgba(0,0,0,0.3); backdrop-filter: blur(12px); border-radius: 16px; padding: 28px 32px; }
+.card-title { font-size: 14px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 18px; }
+/* icon-LEFT style for value props */
+.vp { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.vp:last-of-type { border-bottom: none; }
+.vp-ico { width: 36px; height: 36px; border-radius: 8px; background: rgba(34,197,94,0.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); }
+.vp strong { display: block; font-family: var(--font-display); font-size: 14px; color: white; }
+.vp span { font-size: 12px; color: var(--t2); }
+.card-phone { margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--accent); }
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+
+.stats-bar { background: var(--primary); padding: 32px 0; }
+.stats-inner { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.stat-box { text-align: center; padding: 16px; border-right: 1px solid rgba(255,255,255,0.1); }
+.stat-box:last-child { border-right: none; }
+.stat-num { font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px); font-weight: 700; color: var(--accent); line-height: 1; display: block; margin-bottom: 4px; }
+.stat-lbl { font-size: 13px; color: var(--t2); }
+@media (max-width: 600px) { .stats-inner { grid-template-columns: repeat(2, 1fr); } .stat-box:nth-child(2) { border-right: none; } }
+
+.sec-label { font-family: var(--font-display); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.sec-title { font-size: 36px; font-weight: 700; color: var(--dark-text); margin-bottom: 10px; }
+.sec-sub { color: var(--grey-text); font-size: 16px; margin-bottom: 48px; }
+
+/* Icon-LEFT service cards */
+.svc-card { background: var(--bg); border: 1px solid var(--border); border-left: 4px solid transparent; border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); transition: all 0.25s ease; display: flex; gap: 18px; align-items: flex-start; }
+.svc-card:hover { border-left-color: var(--accent); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.svc-icon { width: 48px; height: 48px; border-radius: 12px; background: rgba(34,197,94,0.1); display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0; }
+.svc-body h3 { font-size: 17px; font-weight: 700; color: var(--dark-text); margin-bottom: 6px; }
+.svc-body p { font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 10px; }
+.svc-link { font-size: 13px; font-weight: 600; color: var(--accent-dark); }
+
+.why-sec { background: var(--primary); padding: 90px 0; position: relative; overflow: hidden; }
+.why-sec::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.1; pointer-events: none; z-index: 0; }
+.why-sec .container { position: relative; z-index: 1; }
+.why-stat { background: var(--primary-dark); border-radius: var(--radius); padding: 24px; text-align: center; }
+.why-num { font-family: var(--font-display); font-size: 36px; font-weight: 700; color: var(--accent); }
+.why-lbl { font-size: 13px; color: var(--t2); }
+.diff-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 36px; }
+.diff-row { display: flex; align-items: flex-start; gap: 14px; }
+.diff-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(34,197,94,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); }
+.diff-row h4 { font-size: 16px; color: white; margin-bottom: 4px; }
+.diff-row p { font-size: 13px; color: var(--t2); }
+@media (max-width: 600px) { .diff-grid { grid-template-columns: 1fr; } }
+
+.how-sec { background: var(--primary-dark); padding: 90px 0; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; position: relative; margin-top: 48px; }
+.steps::before { content: ''; position: absolute; top: 26px; left: 16.67%; right: 16.67%; height: 0; border-top: 2px dashed rgba(255,255,255,0.15); z-index: 0; }
+.step { text-align: center; padding: 0 24px; position: relative; z-index: 1; }
+.step-num { width: 52px; height: 52px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 24px; font-weight: 700; color: white; margin: 0 auto 16px; }
+.step-ico { color: white; margin-bottom: 12px; display: block; }
+.step h3 { font-size: 18px; color: white; margin-bottom: 8px; }
+.step p { font-size: 14px; color: var(--t2); }
+@media (max-width: 600px) { .steps { grid-template-columns: 1fr; } .steps::before { display: none; } }
+
+/* Off-white review cards */
+.rev-sec { background: var(--bg-off); padding: 90px 0; }
+.rev-hdr { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 16px; }
+.g-badge { display: flex; align-items: center; gap: 8px; background: white; border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; font-size: 13px; color: var(--dark-text); }
+.rev-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.05); transition: all 0.25s ease; }
+.rev-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.1); transform: translateY(-3px); }
+.rev-stars { display: flex; gap: 2px; color: #f59e0b; margin-bottom: 12px; }
+.rev-quote { font-style: italic; font-size: 15px; line-height: 1.7; color: var(--dark-text); margin-bottom: 16px; }
+.rev-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+.rev-author { display: flex; align-items: center; gap: 12px; }
+.rev-avatar { width: 40px; height: 40px; border-radius: 50%; background: rgba(34,197,94,0.15); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--accent-dark); }
+.rev-name { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--dark-text); }
+.rev-loc { font-size: 12px; color: var(--grey-text); }
+
+.areas-sec { background: var(--primary); padding: 90px 0; }
+.areas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; align-items: center; }
+.areas-left h2 { font-size: 36px; color: white; margin-bottom: 14px; }
+.areas-left p { color: var(--t2); font-size: 16px; margin-bottom: 28px; }
+.areas-card { background: var(--primary-dark); border-radius: var(--radius); padding: 28px; }
+.areas-card h4 { font-size: 13px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 100px; padding: 6px 14px; font-size: 13px; color: var(--t2); cursor: default; transition: all 0.2s; }
+.chip:hover { background: var(--accent); color: white; border-color: var(--accent); }
+@media (max-width: 900px) { .areas-grid { grid-template-columns: 1fr; } }
+
+.contact-sec { background: white; padding: 90px 0; }
+.contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
+.form-group { margin-bottom: 16px; }
+.form-lbl { font-size: 13px; font-weight: 600; color: var(--dark-text); display: block; margin-bottom: 6px; }
+input, select, textarea { width: 100%; background: var(--bg-off); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; font-family: var(--font-body); font-size: 14px; color: var(--dark-text); transition: border-color 0.2s; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(34,197,94,0.1); }
+textarea { resize: vertical; min-height: 100px; }
+.btn-submit { width: 100%; background: var(--accent); color: white; font-family: var(--font-display); font-size: 16px; font-weight: 700; padding: 16px; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 16px rgba(34,197,94,0.3); transition: all 0.15s ease; margin-top: 8px; }
+.btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(34,197,94,0.4); }
+.info-card { background: var(--primary); border-radius: var(--radius); padding: 36px; }
+.info-card h3 { font-size: 24px; color: white; margin-bottom: 24px; }
+.info-row { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+.info-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.info-row strong { display: block; font-family: var(--font-display); color: white; font-size: 14px; margin-bottom: 2px; }
+.info-row span { color: var(--t2); font-size: 14px; }
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.cta-band { background: linear-gradient(135deg, var(--accent-dark), var(--accent)); padding: 70px 0; position: relative; overflow: hidden; text-align: center; }
+.cta-band::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.15; pointer-events: none; z-index: 0; }
+.cta-band > * { position: relative; z-index: 1; }
+.cta-band h2 { font-size: clamp(28px, 4vw, 42px); color: white; margin-bottom: 12px; }
+.cta-band p { color: rgba(255,255,255,0.85); margin-bottom: 30px; font-size: 17px; }
+.cta-btn-dark { display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: white; font-family: var(--font-display); font-size: 16px; font-weight: 700; padding: 16px 36px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: all 0.15s ease; }
+.cta-btn-dark:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+
+footer { background: var(--primary-dark); padding: 60px 0 28px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+.footer-brand h3 { font-size: 20px; color: white; margin-bottom: 10px; }
+.footer-brand p { font-size: 14px; color: var(--t2); line-height: 1.6; }
+.footer-col h4 { font-size: 12px; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 8px; }
+.footer-col a { font-size: 14px; color: var(--t2); transition: color 0.2s; }
+.footer-col a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-size: 13px; color: var(--t3); }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="header-inner">
+    <div>
+      <div class="biz-name">DFW Clutter Busters</div>
+      <div class="tagline">Junk Removal &amp; Cleanout Specialists &bull; Richardson, TX</div>
+    </div>
+    <a href="tel:9725899129" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (972) 589-9129
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="badge-pill hero-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Richardson's Trusted Cleanout Crew
+        </div>
+        <h1 class="hero-headline">Richardson's Go-To <span>Clutter</span> Removal Team</h1>
+        <p class="hero-sub">From Arapaho Road to Campbell Road, Spring Valley to Beltline — we bust through the clutter, haul it all away, and leave your property clean and organized. Click-to-call easy.</p>
+        <div class="hero-ctas">
+          <a href="tel:9725899129" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (972) 589-9129
+          </a>
+          <a href="#contact" class="btn-ghost">Free Estimate</a>
+        </div>
+        <div class="hero-trust">
+          <div class="stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span>5.0 &bull; 8 Reviews</span>
+          <span class="tdiv">|</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Licensed &amp; Insured</span>
+          <span class="tdiv">|</span>
+          <span>No Click-to-Call Problem Fixed</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="card-title">The DFW Clutter Busters Promise</div>
+        <div class="vp">
+          <div class="vp-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><strong>Same-Day or Next-Day</strong><span>Fast scheduling, no long waits</span></div>
+        </div>
+        <div class="vp">
+          <div class="vp-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><strong>Licensed &amp; Fully Insured</strong><span>Every job covered, no exceptions</span></div>
+        </div>
+        <div class="vp">
+          <div class="vp-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <div><strong>Upfront Pricing</strong><span>Firm quote before any work begins</span></div>
+        </div>
+        <div class="vp">
+          <div class="vp-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/></svg></div>
+          <div><strong>Eco-Friendly Hauling</strong><span>Donate, recycle, then dispose</span></div>
+        </div>
+        <div class="card-phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (972) 589-9129
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-box"><span class="stat-num" data-target="300" data-suffix="+">0+</span><div class="stat-lbl">Cleanouts Completed</div></div>
+    <div class="stat-box"><span class="stat-num" data-target="8" data-suffix="">0</span><div class="stat-lbl">5-Star Reviews</div></div>
+    <div class="stat-box"><span class="stat-num" data-target="100" data-suffix="%">0%</span><div class="stat-lbl">No Hidden Fees</div></div>
+    <div class="stat-box"><span class="stat-num" data-target="1" data-suffix=" Call">0</span><div class="stat-lbl">To Get Started</div></div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="sec-label">What We Remove</div>
+    <h2 class="sec-title">Simplify Your Space Today</h2>
+    <p class="sec-sub">One call covers everything — furniture, appliances, debris, or a full property cleanout.</p>
+    <div class="grid-3">
+      <div class="svc-card card">
+        <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3z"/><path d="M4 16v2"/><path d="M20 16v2"/></svg></div>
+        <div class="svc-body"><h3>Furniture Removal</h3><p>Sofas, mattresses, dining sets, office chairs — we carry it all out and dispose of it responsibly.</p><span class="svc-link">Book removal →</span></div>
+      </div>
+      <div class="svc-card card">
+        <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="svc-body"><h3>Appliance Hauling</h3><p>Refrigerators, washers, dryers, microwaves — we handle heavy appliance removal with proper recycling.</p><span class="svc-link">Book removal →</span></div>
+      </div>
+      <div class="svc-card card">
+        <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="svc-body"><h3>Full Home Cleanouts</h3><p>Moving out, estate sale, or just a fresh start — we clear the entire property down to empty.</p><span class="svc-link">Book cleanout →</span></div>
+      </div>
+      <div class="svc-card card">
+        <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="svc-body"><h3>Construction Cleanup</h3><p>Renovation debris, drywall, lumber, tile — we haul the leftovers so your project can wrap on time.</p><span class="svc-link">Book cleanup →</span></div>
+      </div>
+      <div class="svc-card card">
+        <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+        <div class="svc-body"><h3>Garage &amp; Storage</h3><p>Overstuffed garage, storage unit, or attic — one truck run and it's completely cleared out.</p><span class="svc-link">Book cleanout →</span></div>
+      </div>
+      <div class="svc-card card">
+        <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="svc-body"><h3>Hot Tub &amp; Shed Removal</h3><p>Broken hot tubs, old sheds, swing sets — the heavy stuff no one else wants to touch.</p><span class="svc-link">Book removal →</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-sec">
+  <div class="container">
+    <div class="sec-label" style="color:rgba(255,255,255,0.45)">Our Advantage</div>
+    <h2 class="sec-title" style="color:white;margin-bottom:10px">Why DFW Chooses Us</h2>
+    <p style="color:var(--t2);font-size:16px;margin-bottom:40px">Hundreds of satisfied Richardson and DFW homeowners trust us for one simple reason — we do what we say.</p>
+    <div class="grid-4" style="margin-bottom:40px">
+      <div class="why-stat card"><div class="why-num" data-target="300" data-suffix="+">0</div><div class="why-lbl">Jobs Done</div></div>
+      <div class="why-stat card"><div class="why-num">5.0</div><div class="why-lbl">Star Rating</div></div>
+      <div class="why-stat card"><div class="why-num" data-target="0" data-suffix="Hidden Fees">0</div><div class="why-lbl">Surprises</div></div>
+      <div class="why-stat card"><div class="why-num" data-target="100" data-suffix="%">0%</div><div class="why-lbl">Satisfaction</div></div>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-row card"><div class="diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><h4>Price Transparency</h4><p>We walk through your items, give you a number, and that's what you pay. Zero surprises on the bill.</p></div></div>
+      <div class="diff-row card"><div class="diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><h4>Fast Turnaround</h4><p>We schedule around you. Same-day and next-day availability keep your timeline on track.</p></div></div>
+      <div class="diff-row card"><div class="diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><h4>Locally Rooted</h4><p>Richardson-based, DFW-focused. We know the neighborhoods and we're invested in keeping them clean.</p></div></div>
+      <div class="diff-row card"><div class="diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><h4>Responsible Disposal</h4><p>We sort, donate, and recycle before anything goes to the landfill. Better for DFW. Better for everyone.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="how-sec">
+  <div class="container">
+    <div class="sec-label" style="color:rgba(255,255,255,0.45)">How It Works</div>
+    <h2 class="sec-title" style="color:white">3 Steps to a Clutter-Free Space</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <svg class="step-ico" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <h3>Call or Book Online</h3>
+        <p>Call (972) 589-9129 or fill out the form. We confirm your appointment within the hour.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <svg class="step-ico" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        <h3>We Quote On-Site</h3>
+        <p>Our crew arrives, assesses the job, and gives you a firm price before touching a single item.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <svg class="step-ico" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <h3>Clear Space, Gone Clutter</h3>
+        <p>We load the truck, broom-sweep the area, and haul everything away. You're left with a fresh, empty space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rev-sec">
+  <div class="container">
+    <div class="rev-hdr">
+      <div><div class="sec-label">Customer Stories</div><h2 class="sec-title">What Our Clients Say</h2></div>
+      <div class="g-badge"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>5.0 &bull; Google Reviews</div>
+    </div>
+    <div class="grid-3">
+      <div class="rev-card card">
+        <div class="rev-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="rev-quote">Helped clear out my late mother's home in Richardson. The DFW Clutter Busters crew was professional, fast, and handled everything with care. They finished a 3-bedroom house in about 4 hours. The quote was exactly what I paid. Highly recommend for estate cleanouts.</p>
+        <hr class="rev-divider"><div class="rev-author"><div class="rev-avatar">JL</div><div><div class="rev-name">Jennifer L.</div><div class="rev-loc">Richardson &bull; Google Review</div></div></div>
+      </div>
+      <div class="rev-card card">
+        <div class="rev-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="rev-quote">I had a garage so packed I couldn't walk in it. Called DFW Clutter Busters on a Tuesday afternoon and they were there Wednesday morning. Two guys cleared it completely in 2.5 hours. They even swept and organized what I asked to keep. Honestly felt like a miracle.</p>
+        <hr class="rev-divider"><div class="rev-author"><div class="rev-avatar">RN</div><div><div class="rev-name">Robert N.</div><div class="rev-loc">Plano &bull; Google Review</div></div></div>
+      </div>
+      <div class="rev-card card">
+        <div class="rev-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="rev-quote">Rented a storage unit for years and finally decided to sort through it. DFW Clutter Busters came with a big truck and hauled out what I didn't need in one trip. They were easy to work with and priced fairly. This is how junk removal should work everywhere.</p>
+        <hr class="rev-divider"><div class="rev-author"><div class="rev-avatar">TW</div><div><div class="rev-name">Tamara W.</div><div class="rev-loc">Garland &bull; Google Review</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas-sec">
+  <div class="container">
+    <div class="areas-grid">
+      <div class="areas-left">
+        <div class="sec-label" style="color:rgba(255,255,255,0.45)">Service Area</div>
+        <h2>Covering All of DFW</h2>
+        <p>Based in Richardson, we serve Collin, Dallas, and Tarrant counties. If you're in the metro, we can be there fast.</p>
+        <a href="tel:9725899129" class="btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Schedule Pickup</a>
+      </div>
+      <div class="areas-card">
+        <h4>Cities We Serve</h4>
+        <div class="chips"><span class="chip">Richardson</span><span class="chip">Plano</span><span class="chip">Garland</span><span class="chip">Allen</span><span class="chip">McKinney</span><span class="chip">Dallas</span><span class="chip">Frisco</span><span class="chip">Carrollton</span><span class="chip">Rowlett</span><span class="chip">Wylie</span><span class="chip">Sachse</span><span class="chip">Murphy</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-sec" id="contact">
+  <div class="container">
+    <div class="sec-label">Request a Quote</div>
+    <h2 class="sec-title">Get Your Free Estimate</h2>
+    <p class="sec-sub">No obligation. Just describe your job and we'll get back to you fast.</p>
+    <div class="contact-grid">
+      <div>
+        <div class="form-group"><label class="form-lbl">Full Name</label><input type="text" placeholder="Jane Smith"></div>
+        <div class="form-group"><label class="form-lbl">Phone Number</label><input type="tel" placeholder="(972) 555-0100"></div>
+        <div class="form-group"><label class="form-lbl">Email</label><input type="email" placeholder="jane@email.com"></div>
+        <div class="form-group"><label class="form-lbl">Type of Job</label><select><option>Furniture Removal</option><option>Appliance Hauling</option><option>Home Cleanout</option><option>Garage Cleanout</option><option>Construction Debris</option><option>Hot Tub / Shed Removal</option><option>Other</option></select></div>
+        <div class="form-group"><label class="form-lbl">Describe the Job</label><textarea placeholder="What needs to be removed? How many items?"></textarea></div>
+        <button class="btn-submit">Request My Free Quote</button>
+      </div>
+      <div class="info-card">
+        <h3>Get in Touch</h3>
+        <div class="info-row"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><strong>Phone</strong><span>(972) 589-9129</span></div></div>
+        <div class="info-row"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><strong>Hours</strong><span>Mon&ndash;Sat: 7am&ndash;7pm &bull; Sun: 9am&ndash;5pm</span></div></div>
+        <div class="info-row"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><strong>Based In</strong><span>Richardson, TX &mdash; Serving DFW Metro</span></div></div>
+        <div class="info-row"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><strong>Fully Insured</strong><span>Every job, every time</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Start Your Cleanout Today</h2>
+    <p>Same-day and next-day slots available. Upfront pricing, eco-friendly hauling, zero drama.</p>
+    <a href="tel:9725899129" class="cta-btn-dark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (972) 589-9129</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><h3>DFW Clutter Busters</h3><p>Richardson's dedicated junk removal and cleanout crew. We simplify your space — same day, fair price, every time.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="#">Furniture Removal</a></li><li><a href="#">Appliance Hauling</a></li><li><a href="#">Home Cleanouts</a></li><li><a href="#">Garage Cleanouts</a></li><li><a href="#">Construction Debris</a></li></ul></div>
+      <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="#">Richardson, TX</a></li><li><a href="#">Plano, TX</a></li><li><a href="#">Garland, TX</a></li><li><a href="#">Allen, TX</a></li><li><a href="#">McKinney, TX</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:9725899129">(972) 589-9129</a></li><li><a href="#">Mon&ndash;Sat: 7am&ndash;7pm</a></li><li><a href="#">Sunday: 9am&ndash;5pm</a></li><li><a href="#">Licensed &amp; Insured</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2025 DFW Clutter Busters. All rights reserved.</span><span>Serving Richardson, TX &amp; DFW Metro</span></div>
+  </div>
+</footer>
+
+<script>
+const hdr = document.getElementById('hdr');
+window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', window.scrollY > 50));
+const obs = new IntersectionObserver((e) => { e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('visible'); obs.unobserve(x.target); } }); }, { threshold: 0.2 });
+document.querySelectorAll('.card').forEach(c => obs.observe(c));
+function animateCount(el) {
+  const target = parseInt(el.dataset.target), suffix = el.dataset.suffix || '', dur = 1800, s = performance.now();
+  const tick = t => { const p = Math.min((t-s)/dur,1), e = 1-Math.pow(1-p,3); el.textContent = Math.floor(e*target).toLocaleString()+suffix; if(p<1) requestAnimationFrame(tick); };
+  requestAnimationFrame(tick);
+}
+const sObs = new IntersectionObserver((e) => { e.forEach(x => { if(x.isIntersecting) { animateCount(x.target); sObs.unobserve(x.target); } }); }, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => sObs.observe(el));
+</script>
+</body>
+</html>

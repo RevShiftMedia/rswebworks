@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yellow Rose Junk Removal &amp; Hauling — Mansfield, TX</title>
+<meta name="description" content="Yellow Rose Junk Removal serves Mansfield, TX with 5-star junk hauling. Furniture, appliances, estate cleanouts, construction debris — same-day service. Call (214) 402-5501.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;font-weight:400;color:#1a1a1a;background:#f7f5f1;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+:root{
+  --primary:#1a1205;
+  --primary-dark:#0d0a02;
+  --accent:#d97706;
+  --accent-dark:#b45309;
+  --text:#1a1a1a;
+  --text-light:#5e5040;
+  --bg:#f7f5f1;
+  --white:#ffffff;
+  --radius:8px;
+  --shadow:0 4px 24px rgba(26,18,5,0.10);
+}
+
+.nav{position:sticky;top:0;z-index:100;background:var(--primary);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:66px;box-shadow:0 2px 16px rgba(0,0,0,0.35);}
+.nav-logo{font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:700;color:var(--white);letter-spacing:0.04em;text-decoration:none;}
+.nav-logo em{color:var(--accent);font-style:normal;}
+.nav-phone{font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;color:var(--white);text-decoration:none;background:var(--accent);padding:9px 20px;border-radius:var(--radius);transition:background 0.2s,transform 0.15s;white-space:nowrap;}
+.nav-phone:hover{background:var(--accent-dark);transform:translateY(-1px);}
+
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--primary) 0%,#251a08 55%,var(--primary-dark) 100%);padding:96px 5% 80px;min-height:620px;display:flex;align-items:center;}
+.hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");pointer-events:none;z-index:1;}
+.hero::after{content:'';position:absolute;right:-80px;top:-80px;width:460px;height:460px;background:radial-gradient(circle,rgba(217,119,6,0.16) 0%,transparent 70%);pointer-events:none;z-index:1;}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:60% 40%;gap:56px;align-items:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(217,119,6,0.16);border:1px solid rgba(217,119,6,0.4);color:#fcd34d;font-size:0.82rem;font-weight:600;padding:6px 16px;border-radius:50px;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:22px;animation:heroFadeUp 0.6s ease both;animation-delay:0.1s;}
+.hero-badge svg{fill:var(--accent);}
+.hero h1{font-family:'Oswald',sans-serif;font-size:clamp(2.3rem,4.6vw,3.8rem);font-weight:700;line-height:1.1;color:var(--white);margin-bottom:22px;animation:heroFadeUp 0.6s ease both;animation-delay:0.2s;}
+.hero h1 em{color:var(--accent);font-style:normal;}
+.hero-sub{font-size:1.12rem;color:rgba(255,255,255,0.74);max-width:520px;margin-bottom:36px;line-height:1.72;animation:heroFadeUp 0.6s ease both;animation-delay:0.3s;}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px;animation:heroFadeUp 0.6s ease both;animation-delay:0.4s;}
+.btn-primary{font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;background:var(--accent);color:var(--white);padding:14px 30px;border-radius:var(--radius);text-decoration:none;display:inline-block;transition:background 0.2s,transform 0.2s;box-shadow:0 4px 16px rgba(217,119,6,0.35);}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);}
+.btn-outline{font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;background:transparent;color:var(--white);padding:14px 30px;border-radius:var(--radius);border:2px solid rgba(255,255,255,0.3);text-decoration:none;display:inline-block;transition:border-color 0.2s,transform 0.2s;}
+.btn-outline:hover{border-color:var(--white);transform:translateY(-2px);}
+.hero-trust{display:flex;gap:24px;flex-wrap:wrap;animation:heroFadeUp 0.6s ease both;animation-delay:0.5s;}
+.trust-pill{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.64);font-size:0.88rem;}
+.trust-pill svg{fill:var(--accent);flex-shrink:0;}
+
+.hero-card{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:18px;padding:38px 32px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:heroFadeUp 0.6s ease both;animation-delay:0.3s;}
+.card-eyebrow{font-family:'Oswald',sans-serif;font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:10px;}
+.card-rating-row{display:flex;align-items:baseline;gap:12px;margin-bottom:6px;}
+.card-score{font-family:'Oswald',sans-serif;font-size:2.6rem;font-weight:700;color:var(--white);}
+.card-stars{color:#fbbf24;font-size:1.3rem;letter-spacing:3px;}
+.card-count{color:rgba(255,255,255,0.5);font-size:0.88rem;margin-bottom:20px;}
+.card-sep{border:none;border-top:1px solid rgba(255,255,255,0.12);margin:18px 0;}
+.card-list{display:flex;flex-direction:column;gap:13px;}
+.card-list-item{display:flex;align-items:center;gap:11px;color:rgba(255,255,255,0.8);font-size:0.94rem;}
+.card-list-item svg{fill:var(--accent);flex-shrink:0;}
+.card-btn{display:block;text-align:center;margin-top:26px;background:var(--accent);color:var(--white);font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;padding:13px 20px;border-radius:var(--radius);text-decoration:none;transition:background 0.2s;}
+.card-btn:hover{background:var(--accent-dark);}
+
+.trust-strip{background:var(--white);border-bottom:1px solid #e0d5c0;padding:36px 5%;}
+.trust-strip-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.tstrip-item{display:flex;align-items:center;gap:18px;background:var(--bg);border-radius:var(--radius);padding:22px 24px;}
+.tstrip-icon{width:50px;height:50px;flex-shrink:0;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.tstrip-icon svg{fill:var(--white);}
+.tstrip-item h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;color:var(--primary);margin-bottom:3px;}
+.tstrip-item p{font-size:0.84rem;color:var(--text-light);line-height:1.5;}
+
+.services{padding:88px 5%;background:var(--bg);}
+.section-hd{text-align:center;max-width:720px;margin:0 auto 60px;}
+.eyebrow{display:block;font-family:'Oswald',sans-serif;font-size:0.78rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
+.section-hd h2{font-family:'Oswald',sans-serif;font-size:clamp(1.85rem,3vw,2.65rem);font-weight:700;color:var(--primary);margin-bottom:18px;line-height:1.18;}
+.section-hd p{color:var(--text-light);font-size:1rem;line-height:1.7;}
+
+.svc-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+/* icon-INLINE: icon + title on same line via .svc-head */
+.svc-card{background:var(--white);border-radius:var(--radius);padding:30px 26px 26px;box-shadow:var(--shadow);border-bottom:3px solid transparent;transition:border-color 0.22s,transform 0.22s,box-shadow 0.22s;}
+.svc-card:hover{border-bottom-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 32px rgba(26,18,5,0.12);}
+.svc-head{display:flex;align-items:center;gap:14px;margin-bottom:12px;}
+.svc-icon{width:46px;height:46px;flex-shrink:0;background:rgba(217,119,6,0.1);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;}
+.svc-icon svg{fill:var(--accent);}
+.svc-head h3{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.1rem;color:var(--primary);line-height:1.25;}
+.svc-card p{color:var(--text-light);font-size:0.92rem;line-height:1.67;}
+
+.process{padding:88px 5%;background:var(--white);}
+.process-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:48px;}
+.proc-step{text-align:center;padding:0 16px;}
+.proc-num{font-family:'Oswald',sans-serif;font-size:5rem;font-weight:700;color:rgba(217,119,6,0.13);line-height:1;margin-bottom:20px;display:block;}
+.proc-step h3{font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:600;color:var(--primary);margin-bottom:14px;}
+.proc-step p{color:var(--text-light);font-size:0.95rem;line-height:1.7;}
+
+.stats-strip{background:var(--primary);padding:68px 5%;}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+.stat-num{font-family:'Oswald',sans-serif;font-size:2.9rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:10px;display:flex;align-items:baseline;justify-content:center;gap:2px;}
+.stat-num .sfx{font-size:2rem;}
+.stat-lbl{font-size:0.86rem;color:rgba(255,255,255,0.58);text-transform:uppercase;letter-spacing:0.07em;}
+
+.why-us{padding:88px 5%;background:var(--bg);}
+.why-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:28px;}
+.why-item{display:flex;gap:22px;align-items:flex-start;background:var(--white);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow);}
+.why-icon{width:50px;height:50px;flex-shrink:0;background:var(--primary);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;}
+.why-icon svg{fill:var(--accent);}
+.why-item h3{font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;color:var(--primary);margin-bottom:7px;}
+.why-item p{color:var(--text-light);font-size:0.91rem;line-height:1.65;}
+
+/* WHITE review treatment */
+.reviews{padding:88px 5%;background:var(--white);}
+.reviews-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.review-card{background:var(--white);border:1px solid #e0d5c0;border-radius:var(--radius);padding:32px 26px;box-shadow:var(--shadow);}
+.rev-stars{color:#f59e0b;font-size:0.95rem;letter-spacing:3px;margin-bottom:18px;}
+.rev-quote{color:#374151;font-size:0.95rem;line-height:1.74;margin-bottom:22px;font-style:italic;}
+.rev-author{color:#6b7280;font-size:0.82rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;}
+
+.cta-band{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%);padding:88px 5%;text-align:center;}
+.cta-band::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");pointer-events:none;z-index:1;}
+.cta-inner{position:relative;z-index:2;max-width:780px;margin:0 auto;}
+.cta-band h2{font-family:'Oswald',sans-serif;font-size:clamp(1.85rem,3.2vw,2.7rem);font-weight:700;color:var(--white);margin-bottom:18px;}
+.cta-band p{color:rgba(255,255,255,0.7);font-size:1.06rem;margin-bottom:36px;line-height:1.7;}
+.cta-band .btn-primary{font-size:1.12rem;padding:16px 40px;}
+
+.footer{background:var(--primary-dark);padding:56px 5% 32px;}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-bottom:40px;}
+.footer-brand p{color:rgba(255,255,255,0.42);font-size:0.9rem;line-height:1.7;margin-top:14px;}
+.footer-col h4{font-family:'Oswald',sans-serif;font-size:0.82rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:9px;}
+.footer-col a{color:rgba(255,255,255,0.48);font-size:0.9rem;text-decoration:none;transition:color 0.2s;}
+.footer-col a:hover{color:var(--white);}
+.footer-addr{font-style:normal;color:rgba(255,255,255,0.48);font-size:0.9rem;line-height:1.9;}
+.footer-addr a{color:rgba(255,255,255,0.48);text-decoration:none;transition:color 0.2s;}
+.footer-addr a:hover{color:var(--white);}
+.footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.07);padding-top:24px;text-align:center;color:rgba(255,255,255,0.24);font-size:0.8rem;}
+
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}
+.fade-up{opacity:0;transform:translateY(32px);transition:opacity 0.62s ease,transform 0.62s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+.fade-up:nth-child(2){transition-delay:0.1s;}.fade-up:nth-child(3){transition-delay:0.18s;}.fade-up:nth-child(4){transition-delay:0.26s;}
+.fade-up:nth-child(5){transition-delay:0.12s;}.fade-up:nth-child(6){transition-delay:0.22s;}
+
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:44px;}.hero-card{max-width:480px;}.trust-strip-inner,.svc-grid,.process-grid,.stats-inner,.footer-grid{grid-template-columns:repeat(2,1fr);}.reviews-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.hero{padding:72px 5% 56px;min-height:auto;}.hero-ctas{flex-direction:column;}.btn-primary,.btn-outline{text-align:center;width:100%;}.trust-strip-inner,.svc-grid,.process-grid,.stats-inner,.why-grid,.reviews-grid,.footer-grid{grid-template-columns:1fr;}}
+
+/* SERVICE AREAS */
+.areas{padding:72px 24px;background:var(--primary)}
+.areas .section-tag{background:rgba(255,255,255,.1);color:rgba(255,255,255,.85)}
+.areas .section-title{color:var(--white)}
+.areas .section-sub{color:rgba(255,255,255,.55)}
+.areas-grid{max-width:920px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.area-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.85);padding:10px 22px;border-radius:50px;font-size:.9rem;font-weight:600;letter-spacing:.02em}
+
+/* FAQ */
+.faq{padding:72px 24px;background:var(--white)}
+.faq .section-tag{background:rgba(0,0,0,.06);color:var(--text-light)}
+.faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq-item{background:var(--bg);border:1px solid #e4e4e7;border-radius:var(--radius);padding:22px 26px}
+.faq-q{font-family:'Oswald',sans-serif;font-size:1.06rem;font-weight:600;color:var(--primary);margin-bottom:8px}
+.faq-a{color:var(--text-light);font-size:.93rem;line-height:1.6}
+
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-logo">Yellow Rose<em> Junk Removal</em></div>
+  <a href="tel:+12144025501" class="nav-phone">(214) 402-5501</a>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Mansfield's 5-Star Junk Haulers
+      </div>
+      <h1>Mansfield's <em>Trusted</em><br>Junk Removal &amp; Hauling</h1>
+      <p class="hero-sub">Yellow Rose Junk Removal brings genuine Texas pride to every job. Furniture, appliances, estate cleanouts, construction debris — we haul it all with the reliability and care that 91 five-star reviews have recognized. Same-day service across Mansfield and DFW.</p>
+      <div class="hero-ctas">
+        <a href="tel:+12144025501" class="btn-primary">Call (214) 402-5501</a>
+        <a href="#services" class="btn-outline">What We Haul</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-pill"><svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>Licensed &amp; Insured</div>
+        <div class="trust-pill"><svg width="15" height="15" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>Same-Day Available</div>
+        <div class="trust-pill"><svg width="15" height="15" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>Free Estimates</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-eyebrow">Google Reviews</div>
+      <div class="card-rating-row"><div class="card-score">5.0</div><div class="card-stars">★★★★★</div></div>
+      <div class="card-count">91 verified reviews</div>
+      <hr class="card-sep">
+      <div class="card-list">
+        <div class="card-list-item"><svg width="17" height="17" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>Licensed &amp; Fully Insured</div>
+        <div class="card-list-item"><svg width="17" height="17" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>Same-Day Hauling Available</div>
+        <div class="card-list-item"><svg width="17" height="17" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>Proudly Serving Mansfield, TX</div>
+      </div>
+      <a href="tel:+12144025501" class="card-btn">Get Your Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="tstrip-item fade-up"><div class="tstrip-icon"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><div><h3>Licensed &amp; Insured</h3><p>Full liability coverage on every job — your property and your peace of mind are protected.</p></div></div>
+    <div class="tstrip-item fade-up"><div class="tstrip-icon"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div><div><h3>Same-Day Pickup</h3><p>Call before noon and we'll dispatch a crew to your Mansfield property today.</p></div></div>
+    <div class="tstrip-item fade-up"><div class="tstrip-icon"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div><div><h3>Transparent Pricing</h3><p>We quote before we haul. No surprises — the number you approve is the number you pay.</p></div></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-hd">
+    <span class="eyebrow">Services</span>
+    <h2>Full-Service Hauling for Mansfield Homes &amp; Businesses</h2>
+    <p>From single-item pickups to complete property clearances, Yellow Rose handles any junk removal job in Mansfield with speed, care, and the professionalism your property deserves.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card fade-up">
+      <div class="svc-head"><div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M21 9V7c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v2c-1.1 0-2 .9-2 2v5h1.33L4 18h1l1-2h12l1 2h1l1.67-2H22v-5c0-1.1-.9-2-2-2zm-2-2v2H5V7h14zm2 9H3v-3c0-.55.45-1 1-1h16c.55 0 1 .45 1 1v3z"/></svg></div><h3>Furniture Removal</h3></div>
+      <p>Sofas, beds, dining sets, office chairs, dressers — every furniture piece hauled safely. We donate what still has life left and properly dispose of the rest.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-head"><div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"/></svg></div><h3>Appliance Disposal</h3></div>
+      <p>Refrigerators, washers, dryers, stoves, and water heaters removed with certified eco-compliant disposal including Freon-safe handling. No appliance too heavy or awkward.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-head"><div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div><h3>Estate &amp; Home Cleanouts</h3></div>
+      <p>Downsizing, estate transitions, rental turnovers, or long-accumulated clutter — we clear entire properties top to bottom, handling every room with care and efficiency.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-head"><div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M15 4l-1-2H5L3 4H0v2h24V4zM3 22h14l1-12H2L3 22z"/></svg></div><h3>Construction Debris</h3></div>
+      <p>Post-renovation waste, drywall, lumber, roofing shingles, tile, and concrete cleared fast so contractors and homeowners in Mansfield can keep their projects on track.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-head"><div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.5c.8-2 1.5-3.5 3.5-4.5 2.5-1.5 7-1 10-4.5 3-3.5 0-8 0-8s-.5 4.5-2 6z"/></svg></div><h3>Yard &amp; Outdoor Hauling</h3></div>
+      <p>Old patio furniture, grills, sheds, swing sets, hot tubs, and yard waste removed and hauled away. We restore your outdoor space so it's something you're proud of again.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-head"><div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div><h3>Commercial Junk Removal</h3></div>
+      <p>Office furniture, retail fixtures, warehouse materials, and large-volume business junk removed on your schedule. We serve Mansfield businesses with commercial-grade capacity.</p>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="section-hd">
+    <span class="eyebrow">How It Works</span>
+    <h2>From First Call to Clear Property</h2>
+    <p>We've built our process to be as easy as possible for Mansfield homeowners and businesses. Here's exactly what working with Yellow Rose Junk Removal looks like.</p>
+  </div>
+  <div class="process-grid">
+    <div class="proc-step fade-up"><span class="proc-num">01</span><h3>Call or Book Online</h3><p>Reach us at (214) 402-5501 or request a free estimate online. We'll schedule a same-day or next-day appointment that works with your timetable across Mansfield and DFW.</p></div>
+    <div class="proc-step fade-up"><span class="proc-num">02</span><h3>On-Site Quote</h3><p>Our crew arrives on time, walks the job, and gives you a firm price before moving a single item. Approve it and we get to work immediately — no delays, no paperwork.</p></div>
+    <div class="proc-step fade-up"><span class="proc-num">03</span><h3>Cleared &amp; Clean</h3><p>We load everything efficiently, sweep the space clean, and haul it all to proper disposal, recycling, or donation facilities. Your property is left exactly the way you imagined.</p></div>
+  </div>
+</section>
+
+<section class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item fade-up"><div class="stat-num"><span class="count" data-target="6">0</span><span class="sfx">+</span></div><div class="stat-lbl">Years in Business</div></div>
+    <div class="stat-item fade-up"><div class="stat-num"><span class="count" data-target="9000">0</span><span class="sfx">+</span></div><div class="stat-lbl">Items Hauled</div></div>
+    <div class="stat-item fade-up"><div class="stat-num"><span class="count" data-target="91">0</span></div><div class="stat-lbl">5-Star Reviews</div></div>
+    <div class="stat-item fade-up"><div class="stat-num"><span class="count" data-target="550">0</span><span class="sfx">+</span></div><div class="stat-lbl">Happy Customers</div></div>
+  </div>
+</section>
+
+<section class="why-us">
+  <div class="section-hd">
+    <span class="eyebrow">The Yellow Rose Way</span>
+    <h2>Why Mansfield Trusts Yellow Rose</h2>
+    <p>91 five-star reviews don't happen by accident. They come from doing the same things right, job after job. Here's what sets Yellow Rose Junk Removal apart in Mansfield.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-item fade-up"><div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div><div><h3>Licensed &amp; Fully Insured</h3><p>Every job we accept is covered under our general liability policy. Your Mansfield property is protected from the moment our crew arrives to the moment the last load leaves your property.</p></div></div>
+    <div class="why-item fade-up"><div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div><div><h3>Same-Day Availability</h3><p>We keep daily slots reserved for urgent jobs. Call before noon and we'll have a crew at your Mansfield address before the day is done — no waiting until next week to get your space back.</p></div></div>
+    <div class="why-item fade-up"><div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div><div><h3>No Hidden Fees, Ever</h3><p>We give you a price before we start. That price is what you pay — full stop. No fuel surcharges, no stair fees tacked on last minute, no "we forgot to mention" charges at invoice time.</p></div></div>
+    <div class="why-item fade-up"><div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.5c.8-2 1.5-3.5 3.5-4.5 2.5-1.5 7-1 10-4.5 3-3.5 0-8 0-8s-.5 4.5-2 6z"/></svg></div><div><h3>Texas-Proud Eco Disposal</h3><p>We take responsibility for what we haul. Usable items go to Mansfield-area donation centers, recyclables are sorted properly, and we work to minimize what ends up in landfill every single job.</p></div></div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="section-hd">
+    <span class="eyebrow">Reviews</span>
+    <h2>What Mansfield Customers Are Saying</h2>
+    <p>91 five-star reviews across Mansfield and DFW. Here's why our neighbors keep calling Yellow Rose first whenever junk needs hauling.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card fade-up"><div class="rev-stars">★★★★★</div><p class="rev-quote">"Yellow Rose cleared out my storage unit and back patio in one visit. Fast, polite, and left everything swept up. The price matched the quote exactly — zero surprises. Great Mansfield crew."</p><div class="rev-author">— Ashley M., Mansfield TX</div></div>
+    <div class="review-card fade-up"><div class="rev-stars">★★★★★</div><p class="rev-quote">"They did a full estate cleanout for my grandfather's house in three days. Careful, professional, and treated the property with real respect. I'm grateful for the work they did."</p><div class="rev-author">— Robert T., Arlington TX</div></div>
+    <div class="review-card fade-up"><div class="rev-stars">★★★★★</div><p class="rev-quote">"Same-day service, just like they promised. Called at 9 AM and the crew was at my door by 2 PM. Had a full garage of old furniture cleared in about two hours. Can't beat it."</p><div class="rev-author">— Sandra B., Mansfield TX</div></div>
+  </div>
+</section>
+
+<section class="cta-band"><div class="cta-inner"><h2>Ready to Clear Your Mansfield Property?</h2><p>One call to Yellow Rose and a crew will be on their way. Same-day availability, free upfront estimates, and 91 five-star reviews backing every job we take.</p><a href="tel:+12144025501" class="btn-primary">Call (214) 402-5501 Now</a></div></section>
+
+
+<!-- SERVICE AREAS -->
+<section class="areas">
+  <div class="section-header fade-up">
+    <div class="section-tag">Service Area</div>
+    <h2 class="section-title">Proudly Serving Mansfield &amp; South DFW</h2>
+    <p class="section-sub">Fast, reliable junk removal across Mansfield and the surrounding DFW communities — same-day and next-day scheduling available.</p>
+  </div>
+  <div class="areas-grid fade-up">
+    <div class="area-chip">Mansfield</div>
+    <div class="area-chip">Arlington</div>
+    <div class="area-chip">Grand Prairie</div>
+    <div class="area-chip">Midlothian</div>
+    <div class="area-chip">Burleson</div>
+    <div class="area-chip">Kennedale</div>
+    <div class="area-chip">Fort Worth</div>
+    <div class="area-chip">Crowley</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-header fade-up">
+    <div class="section-tag">FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Quick answers to what Mansfield customers ask us most before booking.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item fade-up">
+      <div class="faq-q">How quickly can you come out?</div>
+      <div class="faq-a">We offer same-day and next-day appointments across Mansfield and surrounding areas. In most cases we can arrive within a few hours of your call — reach out and we'll lock in a time that works for you.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">How is pricing determined?</div>
+      <div class="faq-a">Pricing is based on the volume and type of junk being removed. We provide a firm, upfront quote on-site before any work begins. No hourly rates, no hidden fees — the price we quote is the price you pay.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">What items do you haul away?</div>
+      <div class="faq-a">We take almost everything: furniture, appliances, electronics, construction debris, yard waste, mattresses, hot tubs, and general household junk. The only exceptions are hazardous materials like chemicals, paint, and asbestos.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">Do I need to be home during the removal?</div>
+      <div class="faq-a">Not always. As long as we can access the junk and you've approved the quote in advance, we can complete the job without you present. We send a confirmation once the work is done and everything is cleaned up.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">Do you donate or recycle items?</div>
+      <div class="faq-a">Yes — we divert as much as possible from the landfill. Usable furniture and goods are donated to local Mansfield-area charities, and recyclable materials are sorted and processed responsibly.</div>
+    </div>
+
+    <div class="faq-item fade-up">
+      <div class="faq-q">How do I prepare for the crew's arrival?</div>
+      <div class="faq-a">Very little prep is needed on your end. Just make sure we have access to the items being removed. You don't need to move anything or break anything down — our crew handles all the heavy lifting and loading from wherever the junk is located.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">Are there any items you won't take?</div>
+      <div class="faq-a">We handle nearly everything, but we cannot transport hazardous waste including motor oil, paint, pesticides, asbestos, or medical waste. For those materials, your local Mansfield city services or a certified hazmat hauler is the right call. Everything else — we've got you covered.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">What payment methods do you accept?</div>
+      <div class="faq-a">We accept cash, credit cards, and most major payment apps. Payment is collected after the job is complete and you're satisfied with the work — not before. We keep the process simple and straightforward from start to finish.</div>
+    
+    <div class="faq-item fade-up">
+      <div class="faq-q">Can you handle large or heavy items like hot tubs or safes?</div>
+      <div class="faq-a">Yes — our crews are equipped and trained to handle oversized, heavy items including hot tubs, exercise equipment, large safes, and pianos. Just let us know in advance so we can bring the right team and equipment for the job in Mansfield.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">Do you serve surrounding areas outside Mansfield?</div>
+      <div class="faq-a">Absolutely. While Mansfield is our home base, we regularly serve customers throughout the DFW Metroplex. Check out our service area section above or give us a call — if you're within our range, we'll make it work and get you scheduled quickly.</div>
+    </div>
+</div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="nav-logo">Yellow Rose<em> Junk Removal</em></div><p>Mansfield's 5-star junk removal and hauling service. Licensed, insured, and proud to serve the Mansfield community and all of DFW.</p></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="#services">Furniture Removal</a></li><li><a href="#services">Appliance Disposal</a></li><li><a href="#services">Estate Cleanouts</a></li><li><a href="#services">Construction Debris</a></li><li><a href="#services">Commercial Junk Removal</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><address class="footer-addr"><a href="tel:+12144025501">(214) 402-5501</a><br>Mansfield, TX 76063<br>Serving Mansfield, Arlington &amp; DFW</address></div>
+  </div>
+  <div class="footer-bottom">&copy; 2024 Yellow Rose Junk Removal &amp; Hauling. All rights reserved. Serving Mansfield, Arlington, Grand Prairie, Midlothian, and the DFW Metroplex.</div>
+</footer>
+
+<script>
+(function(){
+  var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.12});
+  document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
+  function animCount(el){var target=parseInt(el.dataset.target,10);var dur=2000,start=performance.now();function step(now){var p=Math.min((now-start)/dur,1);var ease=1-Math.pow(1-p,3);el.textContent=Math.round(target*ease).toLocaleString();if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+  var cObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){animCount(e.target);cObs.unobserve(e.target);}});},{threshold:0.5});
+  document.querySelectorAll('.count').forEach(function(el){cObs.observe(el);});
+})();
+</script>
+</body>
+</html>

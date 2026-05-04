@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Junk Master — Grapevine, TX | Expert Junk Removal &amp; Hauling</title>
+<meta name="description" content="Junk Master is Grapevine's expert hauling service. Furniture, appliances, yard waste, construction debris — removed fast. Call (866) 738-3311 for a free estimate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;font-weight:400;color:#1a1a1a;background:#f5f7f5;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+:root{
+  --primary:#0d1117;
+  --primary-dark:#050709;
+  --accent:#16a34a;
+  --accent-dark:#15803d;
+  --text:#1a1a1a;
+  --text-light:#5a6470;
+  --bg:#f5f7f5;
+  --white:#ffffff;
+  --radius:8px;
+  --shadow:0 4px 24px rgba(13,17,23,0.10);
+}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:var(--primary);
+  padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  height:66px;
+  box-shadow:0 2px 16px rgba(0,0,0,0.35);
+}
+.nav-logo{
+  font-family:'Oswald',sans-serif;
+  font-size:1.25rem;font-weight:700;
+  color:var(--white);letter-spacing:0.04em;
+  text-decoration:none;
+}
+.nav-logo em{color:var(--accent);font-style:normal;}
+.nav-phone{
+  font-family:'Oswald',sans-serif;
+  font-size:1.05rem;font-weight:600;
+  color:var(--white);text-decoration:none;
+  background:var(--accent);
+  padding:9px 20px;border-radius:var(--radius);
+  transition:background 0.2s,transform 0.15s;
+  white-space:nowrap;
+}
+.nav-phone:hover{background:var(--accent-dark);transform:translateY(-1px);}
+
+/* HERO */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(140deg,var(--primary) 0%,#111820 55%,var(--primary-dark) 100%);
+  padding:96px 5% 80px;
+  min-height:620px;
+  display:flex;align-items:center;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:1;
+}
+.hero::after{
+  content:'';position:absolute;
+  left:-80px;bottom:-120px;
+  width:500px;height:500px;
+  background:radial-gradient(circle,rgba(22,163,74,0.12) 0%,transparent 70%);
+  pointer-events:none;z-index:1;
+}
+.hero-inner{
+  position:relative;z-index:2;
+  width:100%;max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:60% 40%;gap:56px;align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(22,163,74,0.15);border:1px solid rgba(22,163,74,0.38);
+  color:#86efac;font-size:0.82rem;font-weight:600;
+  padding:6px 16px;border-radius:50px;
+  letter-spacing:0.07em;text-transform:uppercase;
+  margin-bottom:22px;
+  animation:heroFadeUp 0.6s ease both;animation-delay:0.1s;
+}
+.hero-badge svg{fill:var(--accent);}
+.hero h1{
+  font-family:'Oswald',sans-serif;
+  font-size:clamp(2.4rem,4.8vw,3.9rem);
+  font-weight:700;line-height:1.08;
+  color:var(--white);margin-bottom:22px;
+  animation:heroFadeUp 0.6s ease both;animation-delay:0.2s;
+}
+.hero h1 em{color:var(--accent);font-style:normal;}
+.hero-sub{
+  font-size:1.12rem;color:rgba(255,255,255,0.75);
+  max-width:520px;margin-bottom:36px;line-height:1.72;
+  animation:heroFadeUp 0.6s ease both;animation-delay:0.3s;
+}
+.hero-ctas{
+  display:flex;gap:16px;flex-wrap:wrap;margin-bottom:36px;
+  animation:heroFadeUp 0.6s ease both;animation-delay:0.4s;
+}
+.btn-primary{
+  font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;
+  background:var(--accent);color:var(--white);
+  padding:14px 30px;border-radius:var(--radius);
+  text-decoration:none;display:inline-block;
+  transition:background 0.2s,transform 0.2s;
+  box-shadow:0 4px 16px rgba(22,163,74,0.32);
+}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);}
+.btn-outline{
+  font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;
+  background:transparent;color:var(--white);
+  padding:14px 30px;border-radius:var(--radius);
+  border:2px solid rgba(255,255,255,0.3);
+  text-decoration:none;display:inline-block;
+  transition:border-color 0.2s,transform 0.2s;
+}
+.btn-outline:hover{border-color:var(--white);transform:translateY(-2px);}
+.hero-trust{
+  display:flex;gap:24px;flex-wrap:wrap;
+  animation:heroFadeUp 0.6s ease both;animation-delay:0.5s;
+}
+.trust-pill{
+  display:flex;align-items:center;gap:7px;
+  color:rgba(255,255,255,0.65);font-size:0.88rem;
+}
+.trust-pill svg{fill:var(--accent);flex-shrink:0;}
+
+/* FROSTED GLASS HERO CARD */
+.hero-card{
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:18px;padding:38px 32px;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  animation:heroFadeUp 0.6s ease both;animation-delay:0.3s;
+}
+.card-eyebrow{
+  font-family:'Oswald',sans-serif;font-size:0.78rem;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.5);margin-bottom:10px;
+}
+.card-rating-row{display:flex;align-items:baseline;gap:12px;margin-bottom:6px;}
+.card-score{
+  font-family:'Oswald',sans-serif;font-size:2.6rem;font-weight:700;color:var(--white);
+}
+.card-stars{color:#fbbf24;font-size:1.3rem;letter-spacing:3px;}
+.card-count{color:rgba(255,255,255,0.5);font-size:0.88rem;margin-bottom:20px;}
+.card-sep{border:none;border-top:1px solid rgba(255,255,255,0.12);margin:18px 0;}
+.card-list{display:flex;flex-direction:column;gap:13px;}
+.card-list-item{
+  display:flex;align-items:center;gap:11px;
+  color:rgba(255,255,255,0.8);font-size:0.94rem;
+}
+.card-list-item svg{fill:var(--accent);flex-shrink:0;}
+.card-btn{
+  display:block;text-align:center;margin-top:26px;
+  background:var(--accent);color:var(--white);
+  font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;
+  padding:13px 20px;border-radius:var(--radius);
+  text-decoration:none;transition:background 0.2s;
+}
+.card-btn:hover{background:var(--accent-dark);}
+
+/* TRUST STRIP */
+.trust-strip{
+  background:var(--white);border-bottom:1px solid #dde8dd;
+  padding:36px 5%;
+}
+.trust-strip-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+}
+.tstrip-item{
+  display:flex;align-items:center;gap:18px;
+  background:var(--bg);border-radius:var(--radius);
+  padding:22px 24px;
+}
+.tstrip-icon{
+  width:50px;height:50px;flex-shrink:0;
+  background:var(--accent);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+.tstrip-icon svg{fill:var(--white);}
+.tstrip-item h3{
+  font-family:'Oswald',sans-serif;font-weight:600;font-size:1rem;
+  color:var(--primary);margin-bottom:3px;
+}
+.tstrip-item p{font-size:0.84rem;color:var(--text-light);line-height:1.5;}
+
+/* SERVICES */
+.services{padding:88px 5%;background:var(--bg);}
+.section-hd{text-align:center;max-width:720px;margin:0 auto 60px;}
+.eyebrow{
+  display:block;font-family:'Oswald',sans-serif;
+  font-size:0.78rem;letter-spacing:0.13em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:14px;
+}
+.section-hd h2{
+  font-family:'Oswald',sans-serif;
+  font-size:clamp(1.85rem,3vw,2.65rem);font-weight:700;
+  color:var(--primary);margin-bottom:18px;line-height:1.18;
+}
+.section-hd p{color:var(--text-light);font-size:1rem;line-height:1.7;}
+
+.svc-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+/* icon-LEFT: icon on left, text on right (flex-row) */
+.svc-card{
+  background:var(--white);border-radius:var(--radius);
+  padding:28px 24px;
+  box-shadow:var(--shadow);
+  display:flex;flex-direction:row;align-items:flex-start;gap:20px;
+  border-left:3px solid transparent;
+  transition:border-color 0.22s,transform 0.22s,box-shadow 0.22s;
+}
+.svc-card:hover{
+  border-left-color:var(--accent);
+  transform:translateY(-4px);
+  box-shadow:0 12px 32px rgba(13,17,23,0.13);
+}
+.svc-icon{
+  width:52px;height:52px;
+  background:rgba(22,163,74,0.1);border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.svc-icon svg{fill:var(--accent);}
+.svc-content{flex:1;}
+.svc-content h3{
+  font-family:'Oswald',sans-serif;font-weight:600;font-size:1.1rem;
+  color:var(--primary);margin-bottom:9px;line-height:1.3;
+}
+.svc-content p{color:var(--text-light);font-size:0.92rem;line-height:1.66;}
+
+/* PROCESS */
+.process{padding:88px 5%;background:var(--white);}
+.process-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:48px;
+}
+.proc-step{text-align:center;padding:0 16px;}
+.proc-num{
+  font-family:'Oswald',sans-serif;font-size:5rem;font-weight:700;
+  color:rgba(22,163,74,0.14);line-height:1;margin-bottom:20px;
+  display:block;
+}
+.proc-step h3{
+  font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:600;
+  color:var(--primary);margin-bottom:14px;
+}
+.proc-step p{color:var(--text-light);font-size:0.95rem;line-height:1.7;}
+
+/* STATS */
+.stats-strip{background:var(--primary);padding:68px 5%;}
+.stats-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  text-align:center;
+}
+.stat-num{
+  font-family:'Oswald',sans-serif;font-size:2.9rem;font-weight:700;
+  color:var(--accent);line-height:1;margin-bottom:10px;
+  display:flex;align-items:baseline;justify-content:center;gap:2px;
+}
+.stat-num .sfx{font-size:2rem;}
+.stat-lbl{
+  font-size:0.86rem;color:rgba(255,255,255,0.58);
+  text-transform:uppercase;letter-spacing:0.07em;
+}
+
+/* WHY US */
+.why-us{padding:88px 5%;background:var(--bg);}
+.why-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(2,1fr);gap:28px;
+}
+.why-item{
+  display:flex;gap:22px;align-items:flex-start;
+  background:var(--white);border-radius:var(--radius);
+  padding:30px 28px;box-shadow:var(--shadow);
+}
+.why-icon{
+  width:50px;height:50px;flex-shrink:0;
+  background:var(--primary);border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:center;
+}
+.why-icon svg{fill:var(--accent);}
+.why-item h3{
+  font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;
+  color:var(--primary);margin-bottom:7px;
+}
+.why-item p{color:var(--text-light);font-size:0.91rem;line-height:1.65;}
+
+/* REVIEWS — OFF-WHITE treatment */
+.reviews{padding:88px 5%;background:var(--white);}
+.reviews-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+}
+.review-card{
+  background:#f4faf6;
+  border:1px solid #c3e0cc;
+  border-radius:var(--radius);padding:32px 26px;
+}
+.rev-stars{color:#f59e0b;font-size:0.95rem;letter-spacing:3px;margin-bottom:18px;}
+.rev-quote{
+  color:#2d3b32;font-size:0.95rem;line-height:1.74;
+  margin-bottom:22px;font-style:italic;
+}
+.rev-author{
+  color:#6b8070;font-size:0.82rem;font-weight:600;
+  text-transform:uppercase;letter-spacing:0.06em;
+}
+
+/* CTA BAND */
+.cta-band{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%);
+  padding:88px 5%;text-align:center;
+}
+.cta-band::before{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:1;
+}
+.cta-inner{position:relative;z-index:2;max-width:780px;margin:0 auto;}
+.cta-band h2{
+  font-family:'Oswald',sans-serif;
+  font-size:clamp(1.85rem,3.2vw,2.7rem);font-weight:700;
+  color:var(--white);margin-bottom:18px;
+}
+.cta-band p{color:rgba(255,255,255,0.7);font-size:1.06rem;margin-bottom:36px;line-height:1.7;}
+.cta-band .btn-primary{font-size:1.12rem;padding:16px 40px;}
+
+/* FOOTER */
+.footer{background:var(--primary-dark);padding:56px 5% 32px;}
+.footer-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:48px;
+  margin-bottom:40px;
+}
+.footer-brand p{color:rgba(255,255,255,0.42);font-size:0.9rem;line-height:1.7;margin-top:14px;}
+.footer-col h4{
+  font-family:'Oswald',sans-serif;font-size:0.82rem;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:18px;
+}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:9px;}
+.footer-col a{color:rgba(255,255,255,0.48);font-size:0.9rem;text-decoration:none;transition:color 0.2s;}
+.footer-col a:hover{color:var(--white);}
+.footer-addr{font-style:normal;color:rgba(255,255,255,0.48);font-size:0.9rem;line-height:1.9;}
+.footer-addr a{color:rgba(255,255,255,0.48);text-decoration:none;transition:color 0.2s;}
+.footer-addr a:hover{color:var(--white);}
+.footer-bottom{
+  max-width:1200px;margin:0 auto;
+  border-top:1px solid rgba(255,255,255,0.07);
+  padding-top:24px;text-align:center;
+  color:rgba(255,255,255,0.25);font-size:0.8rem;
+}
+
+/* ANIMATIONS */
+@keyframes heroFadeUp{
+  from{opacity:0;transform:translateY(26px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.fade-up{
+  opacity:0;transform:translateY(32px);
+  transition:opacity 0.62s ease,transform 0.62s ease;
+}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+.fade-up:nth-child(2){transition-delay:0.1s;}
+.fade-up:nth-child(3){transition-delay:0.18s;}
+.fade-up:nth-child(4){transition-delay:0.26s;}
+.fade-up:nth-child(5){transition-delay:0.12s;}
+.fade-up:nth-child(6){transition-delay:0.22s;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:44px;}
+  .hero-card{max-width:480px;}
+  .trust-strip-inner,
+  .svc-grid,
+  .process-grid,
+  .stats-inner,
+  .footer-grid{grid-template-columns:repeat(2,1fr);}
+  .reviews-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:600px){
+  .hero{padding:72px 5% 56px;min-height:auto;}
+  .hero-ctas{flex-direction:column;}
+  .btn-primary,.btn-outline{text-align:center;width:100%;}
+  .trust-strip-inner,
+  .svc-grid,
+  .process-grid,
+  .stats-inner,
+  .why-grid,
+  .reviews-grid,
+  .footer-grid{grid-template-columns:1fr;}
+}
+
+/* SERVICE AREAS */
+.areas{padding:72px 24px;background:var(--primary)}
+.areas .section-tag{background:rgba(255,255,255,.1);color:rgba(255,255,255,.85)}
+.areas .section-title{color:var(--white)}
+.areas .section-sub{color:rgba(255,255,255,.55)}
+.areas-grid{max-width:920px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.area-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.85);padding:10px 22px;border-radius:50px;font-size:.9rem;font-weight:600;letter-spacing:.02em}
+
+/* FAQ */
+.faq{padding:72px 24px;background:var(--white)}
+.faq .section-tag{background:rgba(0,0,0,.06);color:var(--text-light)}
+.faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq-item{background:var(--bg);border:1px solid #e4e4e7;border-radius:var(--radius);padding:22px 26px}
+.faq-q{font-family:'Oswald',sans-serif;font-size:1.06rem;font-weight:600;color:var(--primary);margin-bottom:8px}
+.faq-a{color:var(--text-light);font-size:.93rem;line-height:1.6}
+
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-logo">Junk<em> Master</em></div>
+  <a href="tel:+18667383311" class="nav-phone">(866) 738-3311</a>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Grapevine's Expert Junk Removal Crew
+      </div>
+      <h1>Grapevine's <em>Master-Level</em><br>Junk Hauling</h1>
+      <p class="hero-sub">We've mastered the art of getting junk out fast. Furniture, appliances, yard waste, construction debris — our experienced crew handles any load with precision and professionalism. Call for a same-day estimate.</p>
+      <div class="hero-ctas">
+        <a href="tel:+18667383311" class="btn-primary">Call (866) 738-3311</a>
+        <a href="#services" class="btn-outline">See All Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <div class="trust-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+          Same-Day Available
+        </div>
+        <div class="trust-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          Free Estimates
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-eyebrow">Google Reviews</div>
+      <div class="card-rating-row">
+        <div class="card-score">5.0</div>
+        <div class="card-stars">★★★★★</div>
+      </div>
+      <div class="card-count">26 verified reviews</div>
+      <hr class="card-sep">
+      <div class="card-list">
+        <div class="card-list-item">
+          <svg width="17" height="17" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          Licensed &amp; Fully Insured
+        </div>
+        <div class="card-list-item">
+          <svg width="17" height="17" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+          Same-Day Hauling Available
+        </div>
+        <div class="card-list-item">
+          <svg width="17" height="17" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+          Proudly Serving Grapevine, TX
+        </div>
+      </div>
+      <a href="tel:+18667383311" class="card-btn">Get a Free Quote Today</a>
+    </div>
+  </div>
+</section>
+
+<section class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="tstrip-item fade-up">
+      <div class="tstrip-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      </div>
+      <div>
+        <h3>Licensed &amp; Insured</h3>
+        <p>Every crew member is covered. Your property stays protected start to finish.</p>
+      </div>
+    </div>
+    <div class="tstrip-item fade-up">
+      <div class="tstrip-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M13 2.05V4.07c3.39.49 6 3.39 6 6.93 0 3.21-1.81 6.01-4.5 7.48L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.94-9.45-9-9.95zM11 2.05C5.95 2.55 2 6.82 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5v-5l-1.5 1.48C7.81 17.01 6 14.21 6 11c0-3.54 2.61-6.44 6-6.93V2.05z"/></svg>
+      </div>
+      <div>
+        <h3>Same-Day Dispatch</h3>
+        <p>Call before noon and we can often have a truck at your door today.</p>
+      </div>
+    </div>
+    <div class="tstrip-item fade-up">
+      <div class="tstrip-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+      </div>
+      <div>
+        <h3>No Hidden Fees</h3>
+        <p>We give you a firm quote before we haul a single item. No surprises on the bill.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-hd">
+    <span class="eyebrow">Our Services</span>
+    <h2>Expert Junk Hauling for Every Situation</h2>
+    <p>From a single old sofa to a full estate cleanout, Junk Master handles it all. No job is too big, no timeline too tight for our Grapevine crew.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24"><path d="M21 9V7c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v2c-1.1 0-2 .9-2 2v5h1.33L4 18h1l1-2h12l1 2h1l1.67-2H22v-5c0-1.1-.9-2-2-2zm-2-2v2H5V7h14zm2 9H3v-3c0-.55.45-1 1-1h16c.55 0 1 .45 1 1v3z"/></svg>
+      </div>
+      <div class="svc-content">
+        <h3>Furniture Hauling</h3>
+        <p>Sofas, mattresses, bed frames, dressers, dining tables, office chairs — any furniture piece, any size. We handle the heavy lifting and responsible disposal.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24"><path d="M4 6h18V4H4c-1.1 0-2 .9-2 2v11H0v3h14v-3H4V6zm19 2h-6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1zm-1 9h-4v-7h4v7z"/></svg>
+      </div>
+      <div class="svc-content">
+        <h3>Appliance Removal</h3>
+        <p>Refrigerators, washers, dryers, microwaves, water heaters — we remove all major appliances with certified eco-friendly disposal, including Freon-compliant handling.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+      </div>
+      <div class="svc-content">
+        <h3>Home &amp; Estate Cleanouts</h3>
+        <p>Full-property clearances for estates, rental units, foreclosures, and downsizing moves. We clear everything efficiently and treat every property with respect.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24"><path d="M15 4l-1-2H5L3 4H0v2h24V4zM3 22h14l1-12H2L3 22z"/></svg>
+      </div>
+      <div class="svc-content">
+        <h3>Construction Debris</h3>
+        <p>Post-renovation waste, drywall, tile, lumber, roofing shingles, concrete, and demo scraps — cleared fast so your project can keep rolling without delays.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.5c.8-2 1.5-3.5 3.5-4.5 2.5-1.5 7-1 10-4.5 3-3.5 0-8 0-8s-.5 4.5-2 6z"/></svg>
+      </div>
+      <div class="svc-content">
+        <h3>Yard Waste &amp; Outdoor Junk</h3>
+        <p>Old grills, patio furniture, sheds, hot tubs, tree branches, lawn equipment — we clear outdoor spaces and haul away yard debris efficiently and affordably.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+      </div>
+      <div class="svc-content">
+        <h3>Commercial Junk Removal</h3>
+        <p>Office purges, retail closeouts, restaurant equipment, and warehouse materials — we keep Grapevine businesses moving with high-capacity commercial hauling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="section-hd">
+    <span class="eyebrow">How It Works</span>
+    <h2>Three Steps to a Clutter-Free Property</h2>
+    <p>Our process is designed for speed and simplicity. From your first call to a clean, clear space — here's what working with Junk Master looks like.</p>
+  </div>
+  <div class="process-grid">
+    <div class="proc-step fade-up">
+      <span class="proc-num">01</span>
+      <h3>Book Your Appointment</h3>
+      <p>Call (866) 738-3311 or request a quote online. We offer flexible scheduling including same-day and next-day appointments across Grapevine and the greater DFW area.</p>
+    </div>
+    <div class="proc-step fade-up">
+      <span class="proc-num">02</span>
+      <h3>Get an On-Site Quote</h3>
+      <p>Our crew arrives in a marked truck, walks the job with you, and provides a firm written estimate. You approve the price before a single item is touched.</p>
+    </div>
+    <div class="proc-step fade-up">
+      <span class="proc-num">03</span>
+      <h3>We Clear It All Out</h3>
+      <p>Once approved, we work quickly to load everything, sweep the area, and haul it all away. We handle sorting, recycling, and donation on the back end so you don't have to.</p>
+    </div>
+  </div>
+</section>
+
+<section class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item fade-up">
+      <div class="stat-num"><span class="count" data-target="5">0</span><span class="sfx">+</span></div>
+      <div class="stat-lbl">Years in Business</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num"><span class="count" data-target="5000">0</span><span class="sfx">+</span></div>
+      <div class="stat-lbl">Loads Hauled</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num"><span class="count" data-target="26">0</span></div>
+      <div class="stat-lbl">5-Star Reviews</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-num"><span class="count" data-target="100">0</span><span class="sfx">%</span></div>
+      <div class="stat-lbl">Satisfaction Rate</div>
+    </div>
+  </div>
+</section>
+
+<section class="why-us">
+  <div class="section-hd">
+    <span class="eyebrow">Why Junk Master</span>
+    <h2>We've Mastered the Details That Matter</h2>
+    <p>Our perfect 5-star rating comes from doing the small things right. Here's what sets Junk Master apart from the rest of Grapevine's junk removal options.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-item fade-up">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      </div>
+      <div>
+        <h3>Professional, Insured Crews</h3>
+        <p>Every technician on our team is background-checked, trained, and covered under our comprehensive liability policy. We take full responsibility for every job we accept.</p>
+      </div>
+    </div>
+    <div class="why-item fade-up">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+      </div>
+      <div>
+        <h3>Rapid Turnaround</h3>
+        <p>We understand that your time is valuable. Our streamlined process means faster quotes, faster loading, and faster cleanup — without cutting corners on quality or care.</p>
+      </div>
+    </div>
+    <div class="why-item fade-up">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+      </div>
+      <div>
+        <h3>Flat, Honest Pricing</h3>
+        <p>Our quote is your final price. We factor in volume, weight, and access before we give a number — so there are no add-ons or adjustments once we get started on your job.</p>
+      </div>
+    </div>
+    <div class="why-item fade-up">
+      <div class="why-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21H5.5c.8-2 1.5-3.5 3.5-4.5 2.5-1.5 7-1 10-4.5 3-3.5 0-8 0-8s-.5 4.5-2 6z"/></svg>
+      </div>
+      <div>
+        <h3>Green Disposal Practices</h3>
+        <p>We donate usable items to Grapevine-area charities, recycle metals and electronics properly, and minimize what goes to landfill on every single job we complete.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="section-hd">
+    <span class="eyebrow">What Customers Say</span>
+    <h2>A Perfect 5-Star Record in Grapevine</h2>
+    <p>26 reviews. 26 satisfied customers. Here's what real Grapevine residents are saying about their experience with Junk Master.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card fade-up">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-quote">"Junk Master is exactly what their name says. They showed up, assessed the job in two minutes, and had my garage completely cleared before I finished my morning coffee. Genuinely impressive."</p>
+      <div class="rev-author">— Theresa B., Grapevine TX</div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-quote">"I've used three different junk removal services in DFW. None of them came close to the professionalism and speed of Junk Master. They'll be my first call every time going forward."</p>
+      <div class="rev-author">— Kevin A., Hurst TX</div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-quote">"Fair price, punctual crew, and they left the space cleaner than they found it. My patio is finally usable again after years of accumulated junk. Couldn't be happier."</p>
+      <div class="rev-author">— Melissa D., Southlake TX</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-inner">
+    <h2>Your Grapevine Property Deserves a Fresh Start</h2>
+    <p>Don't let junk take over your space any longer. One call to Junk Master and we'll have a crew at your door — same-day or next-day, always with a free upfront estimate.</p>
+    <a href="tel:+18667383311" class="btn-primary">Call (866) 738-3311 Now</a>
+  </div>
+</section>
+
+
+<!-- SERVICE AREAS -->
+<section class="areas">
+  <div class="section-header fade-up">
+    <div class="section-tag">Service Area</div>
+    <h2 class="section-title">Proudly Serving Grapevine &amp; DFW</h2>
+    <p class="section-sub">Fast, reliable junk removal across Grapevine and the surrounding DFW communities — same-day and next-day scheduling available.</p>
+  </div>
+  <div class="areas-grid fade-up">
+    <div class="area-chip">Grapevine</div>
+    <div class="area-chip">Southlake</div>
+    <div class="area-chip">Colleyville</div>
+    <div class="area-chip">Hurst</div>
+    <div class="area-chip">Euless</div>
+    <div class="area-chip">Bedford</div>
+    <div class="area-chip">Coppell</div>
+    <div class="area-chip">Irving</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-header fade-up">
+    <div class="section-tag">FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Quick answers to what Grapevine customers ask us most before booking.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item fade-up">
+      <div class="faq-q">How quickly can you come out?</div>
+      <div class="faq-a">We offer same-day and next-day appointments across Grapevine and surrounding areas. In most cases we can arrive within a few hours of your call — reach out and we'll lock in a time that works for you.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">How is pricing determined?</div>
+      <div class="faq-a">Pricing is based on the volume and type of junk being removed. We provide a firm, upfront quote on-site before any work begins. No hourly rates, no hidden fees — the price we quote is the price you pay.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">What items do you haul away?</div>
+      <div class="faq-a">We take almost everything: furniture, appliances, electronics, construction debris, yard waste, mattresses, hot tubs, and general household junk. The only exceptions are hazardous materials like chemicals, paint, and asbestos.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">Do I need to be home during the removal?</div>
+      <div class="faq-a">Not always. As long as we can access the junk and you've approved the quote in advance, we can complete the job without you present. We send a confirmation once the work is done and everything is cleaned up.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">Do you donate or recycle items?</div>
+      <div class="faq-a">Yes — we divert as much as possible from the landfill. Usable furniture and goods are donated to local Grapevine-area charities, and recyclable materials are sorted and processed responsibly.</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">Junk<em> Master</em></div>
+      <p>Grapevine's expert junk removal crew. Professional hauling for homes and businesses across DFW — fast, insured, and always upfront.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Furniture Hauling</a></li>
+        <li><a href="#services">Appliance Removal</a></li>
+        <li><a href="#services">Estate Cleanouts</a></li>
+        <li><a href="#services">Construction Debris</a></li>
+        <li><a href="#services">Yard Waste</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <address class="footer-addr">
+        <a href="tel:+18667383311">(866) 738-3311</a><br>
+        Grapevine, TX 76051<br>
+        Serving Grapevine &amp; DFW
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2024 Junk Master. All rights reserved. Serving Grapevine, Euless, Hurst, Bedford, Keller, and the DFW Metroplex.
+  </div>
+</footer>
+
+<script>
+(function(){
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting) e.target.classList.add('visible');
+    });
+  },{threshold:0.12});
+  document.querySelectorAll('.fade-up').forEach(function(el){obs.observe(el);});
+
+  function animCount(el){
+    var target=parseInt(el.dataset.target,10);
+    var dur=2000,start=performance.now();
+    function step(now){
+      var p=Math.min((now-start)/dur,1);
+      var ease=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*ease).toLocaleString();
+      if(p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var cObs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){animCount(e.target);cObs.unobserve(e.target);}
+    });
+  },{threshold:0.5});
+  document.querySelectorAll('.count').forEach(function(el){cObs.observe(el);});
+})();
+</script>
+</body>
+</html>

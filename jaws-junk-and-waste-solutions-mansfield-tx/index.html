@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAWS Junk & Waste Solutions | Mansfield, TX Junk Removal</title>
+<meta name="description" content="JAWS Junk & Waste Solutions — Mansfield TX's trusted junk removal crew. Residential & commercial hauling, same-day service. Call (817) 203-4161.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1a1b1f;
+  --primary-dark: #0e0f12;
+  --accent: #d9bb28;
+  --accent-dark: #b89d1a;
+  --text: #1a1b1f;
+  --text-light: #52525b;
+  --bg: #f5f5f4;
+  --white: #ffffff;
+  --radius: 10px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.13);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/* NAV */
+nav{background:var(--primary);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.35)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:66px}
+.nav-logo{font-family:'Oswald',sans-serif;font-size:1.35rem;font-weight:700;color:var(--white);letter-spacing:.5px;line-height:1.1}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:#d4d4d8;font-size:.93rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:#0e0f12;padding:9px 22px;border-radius:var(--radius);font-weight:700;font-size:.93rem;transition:background .2s}
+.nav-cta:hover{background:var(--accent-dark)}
+
+/* HERO */
+.hero{background:var(--primary);position:relative;overflow:hidden;padding:90px 24px 80px}
+.hero::before{content:'';position:absolute;inset:0;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px;pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:60% 40%;gap:48px;align-items:center;position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(217,187,40,.15);border:1px solid rgba(217,187,40,.3);color:var(--accent);font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 14px;border-radius:50px;margin-bottom:20px;opacity:0;animation:heroFadeUp .6s ease forwards;animation-delay:.1s}
+.hero h1{font-family:'Oswald',sans-serif;font-size:clamp(2.2rem,4.5vw,3.3rem);font-weight:700;color:var(--white);line-height:1.1;margin-bottom:18px;opacity:0;animation:heroFadeUp .6s ease forwards;animation-delay:.2s}
+.hero h1 em{color:var(--accent);font-style:normal}
+.hero-sub{color:#a1a1aa;font-size:1.07rem;max-width:500px;margin-bottom:32px;opacity:0;animation:heroFadeUp .6s ease forwards;animation-delay:.3s}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:heroFadeUp .6s ease forwards;animation-delay:.4s}
+.btn-primary{background:var(--accent);color:#0e0f12;padding:14px 30px;border-radius:var(--radius);font-weight:700;font-size:1rem;transition:background .2s,transform .15s}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.btn-outline{border:2px solid rgba(255,255,255,.3);color:var(--white);padding:13px 28px;border-radius:var(--radius);font-weight:600;font-size:1rem;transition:border-color .2s,background .2s}
+.btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,.07)}
+.hero-trust{display:flex;align-items:center;gap:14px;margin-top:26px;opacity:0;animation:heroFadeUp .6s ease forwards;animation-delay:.5s}
+.hero-trust .stars{color:var(--accent);font-size:1.1rem;letter-spacing:1px}
+.hero-trust span{color:#a1a1aa;font-size:.88rem}
+.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:16px;padding:32px 28px;opacity:0;animation:heroFadeUp .6s ease forwards;animation-delay:.3s}
+.hero-card-title{font-family:'Oswald',sans-serif;color:var(--white);font-size:1.05rem;font-weight:600;margin-bottom:20px;letter-spacing:.3px}
+.hero-card-item{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.hero-card-item:last-child{margin-bottom:0}
+.hci-icon{width:38px;height:38px;border-radius:8px;background:rgba(217,187,40,.18);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hci-icon svg{width:18px;height:18px}
+.hci-label{color:#d4d4d8;font-size:.9rem}
+.hci-val{color:var(--white);font-weight:600;font-size:.95rem}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* TRUST STRIP */
+.trust-strip{background:var(--accent);padding:14px 24px}
+.trust-strip-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:9px;color:#0e0f12;font-weight:700;font-size:.9rem}
+.trust-item svg{width:18px;height:18px;flex-shrink:0}
+
+/* SERVICES */
+.services{padding:84px 24px;background:var(--white)}
+.section-header{text-align:center;max-width:640px;margin:0 auto 52px}
+.section-tag{display:inline-block;background:rgba(217,187,40,.13);color:#a08a10;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 12px;border-radius:50px;margin-bottom:12px}
+.section-title{font-family:'Oswald',sans-serif;font-size:clamp(1.7rem,3vw,2.3rem);font-weight:700;color:var(--primary);margin-bottom:10px;line-height:1.15}
+.section-sub{color:var(--text-light);font-size:1rem}
+.svc-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+/* icon-LEFT style */
+.svc-card{background:var(--bg);border-radius:var(--radius);padding:26px 24px;display:flex;align-items:flex-start;gap:18px;border:1px solid #e4e4e7;transition:box-shadow .25s,transform .25s}
+.svc-card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.svc-icon{width:48px;height:48px;border-radius:10px;background:var(--primary);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.svc-icon svg{width:24px;height:24px}
+.svc-content{}
+.svc-card h3{font-family:'Oswald',sans-serif;font-size:1.08rem;font-weight:600;color:var(--primary);margin-bottom:6px}
+.svc-card p{color:var(--text-light);font-size:.9rem;line-height:1.55}
+
+/* PROCESS */
+.process{padding:84px 24px;background:var(--primary)}
+.process .section-tag{background:rgba(217,187,40,.18);color:var(--accent)}
+.process .section-title{color:var(--white)}
+.process .section-sub{color:#a1a1aa}
+.proc-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.proc-card{text-align:center;padding:32px 24px}
+.proc-num{font-family:'Oswald',sans-serif;font-size:2.8rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:12px}
+.proc-card h3{font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:600;color:var(--white);margin-bottom:10px}
+.proc-card p{color:#a1a1aa;font-size:.92rem}
+
+/* STATS */
+.stats{padding:72px 24px;background:var(--accent)}
+.stats-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.stat-val{font-family:'Oswald',sans-serif;font-size:2.5rem;font-weight:700;color:#0e0f12;line-height:1}
+.stat-label{color:#433800;font-size:.88rem;font-weight:600;margin-top:6px;text-transform:uppercase;letter-spacing:.05em}
+
+/* WHY US */
+.why-us{padding:84px 24px;background:var(--white)}
+.why-us .section-tag{background:rgba(217,187,40,.13);color:#a08a10}
+.why-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.why-card{background:var(--bg);border-radius:var(--radius);padding:28px 26px;display:flex;align-items:flex-start;gap:18px;border:1px solid #e4e4e7}
+.why-icon{width:44px;height:44px;border-radius:9px;background:var(--primary);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why-icon svg{width:22px;height:22px}
+.why-card h3{font-family:'Oswald',sans-serif;font-size:1.05rem;font-weight:600;color:var(--primary);margin-bottom:6px}
+.why-card p{color:var(--text-light);font-size:.9rem;line-height:1.55}
+
+/* REVIEWS */
+.reviews{padding:84px 24px;background:var(--bg)}
+.reviews .section-tag{background:rgba(217,187,40,.13);color:#a08a10}
+.rev-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+/* OFF-WHITE review cards */
+.rev-card{background:#f4faf6;border-radius:var(--radius);padding:28px 26px;border:1px solid #d4e8dc}
+.rev-stars{color:var(--accent);font-size:1.05rem;margin-bottom:10px;letter-spacing:1px}
+.rev-text{color:#374151;font-size:.93rem;line-height:1.6;margin-bottom:16px}
+.rev-author{font-weight:700;font-size:.88rem;color:var(--primary)}
+.rev-meta{color:var(--text-light);font-size:.8rem;margin-top:2px}
+
+/* CTA BAND */
+.cta-band{background:var(--primary);padding:80px 24px;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px;pointer-events:none}
+.cta-inner{max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.cta-band h2{font-family:'Oswald',sans-serif;font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:700;color:var(--white);margin-bottom:14px}
+.cta-band p{color:#a1a1aa;font-size:1.03rem;margin-bottom:32px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.card-btn{background:var(--accent);color:#0e0f12;padding:15px 36px;border-radius:var(--radius);font-weight:700;font-size:1.05rem;transition:background .2s,transform .15s}
+.card-btn:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.card-btn-outline{border:2px solid rgba(255,255,255,.3);color:var(--white);padding:14px 32px;border-radius:var(--radius);font-weight:600;font-size:1rem;transition:border-color .2s,background .2s}
+.card-btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,.07)}
+
+/* FOOTER */
+footer{background:var(--primary-dark);padding:52px 24px 30px}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-bottom:36px}
+.footer-brand .nav-logo{font-size:1.2rem;margin-bottom:12px}
+.footer-brand p{color:#71717a;font-size:.88rem;line-height:1.6}
+.footer-col h4{font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;color:var(--white);margin-bottom:14px;letter-spacing:.3px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:8px}
+.footer-col ul li a{color:#71717a;font-size:.88rem;transition:color .2s}
+.footer-col ul li a:hover{color:var(--accent)}
+.footer-col .contact-line{display:flex;align-items:center;gap:8px;color:#71717a;font-size:.88rem;margin-bottom:8px}
+.footer-col .contact-line svg{width:15px;height:15px;flex-shrink:0;color:var(--accent)}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:22px;border-top:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.footer-bottom p{color:#52525b;font-size:.82rem}
+
+/* FADE-UP ANIMATION */
+.fade-up{opacity:0;transform:translateY(26px);transition:opacity .55s ease,transform .55s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .svc-grid,.proc-grid,.rev-grid,.footer-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  .why-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+}
+@media(max-width:600px){
+  .svc-grid,.proc-grid,.rev-grid,.footer-grid{grid-template-columns:1fr}
+  .trust-strip-inner{gap:18px}
+  .hero-btns,.cta-btns{flex-direction:column;align-items:stretch}
+}
+
+/* SERVICE AREAS */
+.areas{padding:72px 24px;background:var(--primary)}
+.areas .section-tag{background:rgba(255,255,255,.1);color:rgba(255,255,255,.85)}
+.areas .section-title{color:var(--white)}
+.areas .section-sub{color:rgba(255,255,255,.55)}
+.areas-grid{max-width:920px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.area-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.85);padding:10px 22px;border-radius:50px;font-size:.9rem;font-weight:600;letter-spacing:.02em}
+
+/* FAQ */
+.faq{padding:72px 24px;background:var(--white)}
+.faq .section-tag{background:rgba(0,0,0,.06);color:var(--text-light)}
+.faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq-item{background:var(--bg);border:1px solid #e4e4e7;border-radius:var(--radius);padding:22px 26px}
+.faq-q{font-family:'Oswald',sans-serif;font-size:1.06rem;font-weight:600;color:var(--primary);margin-bottom:8px}
+.faq-a{color:var(--text-light);font-size:.93rem;line-height:1.6}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo"><span>JAWS</span> Junk &amp; Waste</div>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">How It Works</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:8172034161" class="nav-cta">Call (817) 203-4161</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-tag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
+        Mansfield's Junk &amp; Waste Solutions
+      </div>
+      <h1>Mansfield's <em>Junk &amp; Waste</em> Solutions Crew</h1>
+      <p class="hero-sub">JAWS hauls it all — household junk, construction debris, yard waste, and commercial cleanouts. Fast scheduling, fair pricing, zero-hassle removal.</p>
+      <div class="hero-btns">
+        <a href="tel:8172034161" class="btn-primary">Call (817) 203-4161</a>
+        <a href="#services" class="btn-outline">See Services</a>
+      </div>
+      <div class="hero-trust">
+        <span class="stars">★★★★★</span>
+        <span>4.9 stars · 53 Google Reviews · Mansfield, TX</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Why Mansfield Trusts JAWS</div>
+      <div class="hero-card-item">
+        <div class="hci-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div><div class="hci-label">Availability</div><div class="hci-val">Same-Day & Next-Day</div></div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hci-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div><div class="hci-label">Rating</div><div class="hci-val">4.9★ (53 Reviews)</div></div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hci-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div><div class="hci-label">Service</div><div class="hci-val">Residential &amp; Commercial</div></div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hci-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-4 0v2M12 12v4"/></svg>
+        </div>
+        <div><div class="hci-label">Pricing</div><div class="hci-val">Upfront & No Surprises</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Same-Day Available
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      Licensed &amp; Insured
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      4.9★ Google Rating
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-4 0v2"/></svg>
+      Upfront Pricing
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
+      Eco-Friendly Hauling
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header fade-up">
+    <div class="section-tag">Our Services</div>
+    <h2 class="section-title">Full-Service Junk &amp; Waste Removal</h2>
+    <p class="section-sub">From single items to full property cleanouts — JAWS handles it with the same speed and professionalism every time.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="svc-content">
+        <h3>Residential Junk Removal</h3>
+        <p>Attics, garages, sheds, and interior spaces cleared quickly. We haul old furniture, appliances, and accumulated clutter.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-4 0v2M12 12v4"/></svg>
+      </div>
+      <div class="svc-content">
+        <h3>Commercial Cleanouts</h3>
+        <p>Office moves, retail closures, warehouse cleanouts — we work on your schedule to minimize business disruption.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><path d="M2 20h20M6 20V10M12 20V4M18 20v-8"/></svg>
+      </div>
+      <div class="svc-content">
+        <h3>Construction Debris</h3>
+        <p>Drywall scraps, lumber, concrete, roofing materials — post-renovation debris hauled fast so your project stays on track.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="svc-content">
+        <h3>Estate &amp; Foreclosure Cleanouts</h3>
+        <p>Sensitive, professional service during difficult transitions. We clear properties quickly and treat belongings with care.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      </div>
+      <div class="svc-content">
+        <h3>Appliance &amp; Furniture Removal</h3>
+        <p>Old refrigerators, washers, sofas, mattresses — we disconnect, haul, and responsibly dispose or donate.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg>
+      </div>
+      <div class="svc-content">
+        <h3>Yard Waste &amp; Green Junk</h3>
+        <p>Tree branches, brush piles, old landscaping materials, and lawn debris hauled from your Mansfield property.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="section-header fade-up">
+    <div class="section-tag">How It Works</div>
+    <h2 class="section-title">Three Steps to a Junk-Free Space</h2>
+    <p class="section-sub">JAWS makes junk removal simple, fast, and stress-free every single time.</p>
+  </div>
+  <div class="proc-grid">
+    <div class="proc-card fade-up">
+      <div class="proc-num">01</div>
+      <h3>Book Your Appointment</h3>
+      <p>Call or text us to schedule. We offer same-day and next-day appointments across Mansfield and surrounding DFW areas.</p>
+    </div>
+    <div class="proc-card fade-up">
+      <div class="proc-num">02</div>
+      <h3>We Arrive &amp; Quote</h3>
+      <p>Our crew arrives on time, reviews your junk, and provides a transparent upfront quote — no hidden fees, no surprises.</p>
+    </div>
+    <div class="proc-card fade-up">
+      <div class="proc-num">03</div>
+      <h3>We Haul Everything</h3>
+      <p>Say yes and we get to work immediately. We load, haul, and sweep up — leaving your space clean and clutter-free.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="fade-up">
+      <div class="stat-val" data-target="500">0</div>
+      <div class="stat-label">Jobs Completed</div>
+    </div>
+    <div class="fade-up">
+      <div class="stat-val" data-target="53">0</div>
+      <div class="stat-label">Google Reviews</div>
+    </div>
+    <div class="fade-up">
+      <div class="stat-val" data-suffix="★" data-float="4.9">4.9</div>
+      <div class="stat-label">Average Rating</div>
+    </div>
+    <div class="fade-up">
+      <div class="stat-val" data-target="100" data-suffix="%">0</div>
+      <div class="stat-label">Satisfaction Rate</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us" id="why-us">
+  <div class="section-header fade-up">
+    <div class="section-tag">Why Choose JAWS</div>
+    <h2 class="section-title">The JAWS Difference in Mansfield</h2>
+    <p class="section-sub">We're not just another junk hauling company — we're your neighbors, and we show up like it.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card fade-up">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div>
+        <h3>On-Time, Every Time</h3>
+        <p>We respect your schedule. Our team arrives in the promised window — no long waits, no vague ETAs.</p>
+      </div>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <div>
+        <h3>Fully Licensed &amp; Insured</h3>
+        <p>Your property is protected. JAWS carries full liability coverage so you can book with confidence.</p>
+      </div>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <div>
+        <h3>Local Mansfield Team</h3>
+        <p>We live and work here. We know the neighborhoods, the disposal options, and how to get things done efficiently.</p>
+      </div>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d9bb28" stroke-width="2.2"><path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z"/></svg>
+      </div>
+      <div>
+        <h3>Professional, Friendly Crew</h3>
+        <p>Uniformed, courteous, and careful — our team works efficiently without cutting corners or leaving a mess.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-header fade-up">
+    <div class="section-tag">Customer Reviews</div>
+    <h2 class="section-title">What Mansfield Customers Say</h2>
+    <p class="section-sub">4.9 stars across 53 Google reviews. Real Mansfield neighbors, real results.</p>
+  </div>
+  <div class="rev-grid">
+    <div class="rev-card fade-up">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-text">"JAWS showed up within two hours of my call and cleared out my entire garage. The crew was professional, fast, and left everything spotless. Couldn't believe how quick and painless the whole process was."</p>
+      <div class="rev-author">Marcus T.</div>
+      <div class="rev-meta">Mansfield, TX · Google Review</div>
+    </div>
+    <div class="rev-card fade-up">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-text">"Used JAWS for a commercial office cleanout — multiple rooms of old furniture and equipment. They were prompt, fair on pricing, and finished faster than expected. Will definitely use again for our other locations."</p>
+      <div class="rev-author">Sandra L.</div>
+      <div class="rev-meta">Mansfield, TX · Google Review</div>
+    </div>
+    <div class="rev-card fade-up">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-text">"After our renovation, we had a massive pile of debris in the driveway. JAWS came out same day and hauled it all away. Super easy to schedule, great communication, and the price was right. Highly recommend!"</p>
+      <div class="rev-author">Kevin &amp; Amy R.</div>
+      <div class="rev-meta">Mansfield, TX · Google Review</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band" id="contact">
+  <div class="cta-inner">
+    <h2>Ready to Bite Back Against Clutter?</h2>
+    <p>Same-day scheduling available. Call JAWS now for a free, no-obligation quote — Mansfield and all of DFW.</p>
+    <div class="cta-btns">
+      <a href="tel:8172034161" class="card-btn">Call (817) 203-4161</a>
+      <a href="#services" class="card-btn-outline">View All Services</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- SERVICE AREAS -->
+<section class="areas">
+  <div class="section-header fade-up">
+    <div class="section-tag">Service Area</div>
+    <h2 class="section-title">Proudly Serving Mansfield & South DFW</h2>
+    <p class="section-sub">Fast junk removal across Mansfield and the surrounding DFW communities — usually same-day or next-day.</p>
+  </div>
+  <div class="areas-grid fade-up">
+    <div class="area-chip">Mansfield</div>
+    <div class="area-chip">Arlington</div>
+    <div class="area-chip">Grand Prairie</div>
+    <div class="area-chip">Midlothian</div>
+    <div class="area-chip">Burleson</div>
+    <div class="area-chip">Kennedale</div>
+    <div class="area-chip">Fort Worth</div>
+    <div class="area-chip">Crowley</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-header fade-up">
+    <div class="section-tag">FAQ</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Quick answers to what Mansfield customers ask us most.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item fade-up">
+      <div class="faq-q">How fast can you come out?</div>
+      <div class="faq-a">We offer same-day and next-day appointments across Mansfield and surrounding areas. In many cases we can arrive within a few hours of your call — just reach out and we'll find a time that works.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">How is pricing determined?</div>
+      <div class="faq-a">Our pricing is based on the volume and type of junk being removed. We provide a firm, upfront quote on-site before any work begins — no hourly rates, no hidden fees, no surprises on your final bill.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">What items do you accept?</div>
+      <div class="faq-a">We haul almost everything: furniture, appliances, electronics, construction debris, yard waste, mattresses, hot tubs, and general household junk. The few exceptions are hazardous materials like paint, chemicals, and asbestos.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">Do I need to be home during the removal?</div>
+      <div class="faq-a">Not necessarily. As long as we can access the junk and you've approved the quote in advance, our crew can complete the job without you present. We'll send a confirmation when the work is done.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">Do you donate or recycle?</div>
+      <div class="faq-a">Yes. We sort items and divert as much as possible from the landfill — donating usable furniture and goods to local Mansfield-area charities and recycling materials whenever feasible.</div>
+    </div>
+
+    <div class="faq-item fade-up">
+      <div class="faq-q">How do I prepare for the crew's arrival?</div>
+      <div class="faq-a">Very little prep is needed on your end. Just make sure we have access to the items being removed. You don't need to move anything or break anything down — our crew handles all the heavy lifting and loading from wherever the junk is located.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">Are there any items you won't take?</div>
+      <div class="faq-a">We handle nearly everything, but we cannot transport hazardous waste including motor oil, paint, pesticides, asbestos, or medical waste. For those materials, your local Mansfield city services or a certified hazmat hauler is the right call. Everything else — we've got you covered.</div>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">What payment methods do you accept?</div>
+      <div class="faq-a">We accept cash, credit cards, and most major payment apps. Payment is collected after the job is complete and you're satisfied with the work — not before. We keep the process simple and straightforward from start to finish.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo"><span>JAWS</span> Junk &amp; Waste</div>
+      <p>Mansfield's trusted junk removal and waste hauling crew. Fast, professional, and locally owned.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Residential Junk Removal</a></li>
+        <li><a href="#services">Commercial Cleanouts</a></li>
+        <li><a href="#services">Construction Debris</a></li>
+        <li><a href="#services">Estate Cleanouts</a></li>
+        <li><a href="#services">Appliance Removal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81a19.79 19.79 0 01-3.07-8.64A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (817) 203-4161
+      </div>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Mansfield, TX &amp; DFW Area
+      </div>
+      <div class="contact-line">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Mon–Sat 7am–7pm
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 JAWS Junk &amp; Waste Solutions. All rights reserved.</p>
+    <p>Proudly serving Mansfield &amp; DFW, TX</p>
+  </div>
+</footer>
+
+<script>
+// Intersection Observer fade-up
+const fadeEls = document.querySelectorAll('.fade-up');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+fadeEls.forEach(el => observer.observe(el));
+
+// Stat counter
+const statEls = document.querySelectorAll('.stat-val[data-target]');
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = parseInt(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const dur = 1600;
+    let start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      const p = Math.min((ts - start) / dur, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(ease * target) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+    statObserver.unobserve(el);
+  });
+}, { threshold: 0.3 });
+statEls.forEach(el => statObserver.observe(el));
+</script>
+</body>
+</html>
