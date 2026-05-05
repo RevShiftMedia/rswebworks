@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Up Dumpsters | Dumpster Rental &amp; Junk Removal in Killeen, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #32373c;
+  --primary-dark: #252a2e;
+  --primary-darkest: #181c1f;
+  --accent: #ff6900;
+  --accent-dark: #e05a00;
+  --text-light: #f0eeec;
+  --text-muted: #9a9fa4;
+  --bg-white: #ffffff;
+  --bg-off: #f8f7f5;
+  --bg-dark: #252a2e;
+  --bg-darkest: #181c1f;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Source Sans 3', sans-serif; color: #1a1a1a; background: var(--bg-white); }
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--primary);
+  padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+.nav-logo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem; font-weight: 700;
+  color: #fff; letter-spacing: 0.03em; text-transform: uppercase;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 26px; align-items: center; }
+.nav-links a {
+  font-size: 0.9rem; font-weight: 600;
+  color: rgba(255,255,255,0.82);
+  text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-cta {
+  background: var(--accent); color: #fff !important;
+  padding: 9px 22px; border-radius: 3px; transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--accent-dark) !important; }
+
+/* HERO */
+.hero {
+  background: var(--primary);
+  padding: 88px 40px 80px;
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.hero-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 420px; gap: 56px; align-items: center;
+}
+.hero-flag {
+  display: inline-block;
+  background: var(--accent); color: #fff;
+  font-family: 'Oswald', sans-serif; font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 700; line-height: 1.05;
+  color: #fff; text-transform: uppercase; letter-spacing: 0.02em;
+  margin-bottom: 22px;
+}
+.hero h1 .highlight { color: var(--accent); }
+.hero-sub {
+  font-size: 1.1rem; line-height: 1.66;
+  color: rgba(255,255,255,0.72); margin-bottom: 34px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
+.btn-primary {
+  background: var(--accent); color: #fff;
+  padding: 14px 32px; border-radius: 3px;
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-primary:hover { background: var(--accent-dark); }
+.btn-outline {
+  background: transparent; color: rgba(255,255,255,0.9);
+  padding: 14px 32px; border-radius: 3px; border: 2px solid rgba(255,255,255,0.3);
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 0.2s;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.7); }
+.hero-badges { display: flex; gap: 20px; flex-wrap: wrap; }
+.hero-badge {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 0.85rem; color: rgba(255,255,255,0.65); font-weight: 500;
+}
+.hero-badge svg { width: 14px; height: 14px; color: var(--accent); flex-shrink: 0; }
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 8px; padding: 32px 28px;
+}
+.hero-card-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.09em; color: var(--accent); margin-bottom: 18px;
+}
+.size-rows { display: flex; flex-direction: column; gap: 10px; }
+.size-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; border-radius: 6px;
+  background: rgba(255,255,255,0.06);
+  border-left: 3px solid var(--accent);
+}
+.size-row-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem; font-weight: 700; color: #fff;
+}
+.size-row-use { font-size: 0.82rem; color: rgba(255,255,255,0.58); }
+.hero-card-note {
+  margin-top: 16px; font-size: 0.82rem;
+  color: rgba(255,255,255,0.55); text-align: center;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-flag    { animation: heroFadeUp 0.5s ease both; animation-delay: 0.05s; }
+.hero h1      { animation: heroFadeUp 0.5s ease both; animation-delay: 0.15s; }
+.hero-sub     { animation: heroFadeUp 0.5s ease both; animation-delay: 0.25s; }
+.hero-actions { animation: heroFadeUp 0.5s ease both; animation-delay: 0.33s; }
+.hero-badges  { animation: heroFadeUp 0.5s ease both; animation-delay: 0.4s; }
+.hero-card    { animation: heroFadeUp 0.6s ease both; animation-delay: 0.2s; }
+
+/* STATS BAR */
+.stats-bar {
+  background: var(--primary-darkest);
+  padding: 36px 40px;
+  border-left: none; border-right: none;
+}
+.stats-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; text-align: center;
+}
+.stat-item {
+  padding: 18px 14px;
+  border-bottom: 3px solid var(--accent);
+}
+.stat-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.4rem; font-weight: 700; color: #fff; line-height: 1;
+}
+.stat-num span { color: var(--accent); }
+.stat-label {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.07em;
+  text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 7px;
+}
+
+/* SERVICES */
+.services { background: var(--bg-off); padding: 88px 40px; }
+.section-header { max-width: 1140px; margin: 0 auto 52px; }
+.section-eyebrow {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.02em; color: #1a1a1a; line-height: 1.15;
+}
+.section-sub { font-size: 1.05rem; color: #555; margin-top: 12px; max-width: 540px; }
+.services-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
+}
+.svc-card {
+  background: var(--bg-white);
+  border-radius: 6px; padding: 28px 24px;
+  border: 1px solid #e8e4e0;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.svc-card:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(50,55,60,0.1); }
+.svc-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.svc-icon {
+  width: 46px; height: 46px; border-radius: 6px; flex-shrink: 0;
+  background: rgba(255,105,0,0.1);
+  display: flex; align-items: center; justify-content: center;
+}
+.svc-icon svg { width: 22px; height: 22px; color: var(--accent); }
+.svc-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.05rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a;
+}
+.svc-card p { font-size: 0.9rem; line-height: 1.62; color: #555; }
+.svc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.svc-tag {
+  font-size: 0.75rem; font-weight: 600; padding: 3px 9px; border-radius: 3px;
+  background: rgba(255,105,0,0.08); color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+
+/* WHY */
+.why { background: var(--bg-dark); padding: 88px 40px; }
+.why-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.why-left .section-title { color: #fff; }
+.why-left .section-sub { color: rgba(255,255,255,0.65); }
+.why-grid {
+  margin-top: 36px;
+  display: grid; grid-template-columns: repeat(2,1fr); gap: 16px;
+}
+.why-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px; padding: 22px 18px;
+}
+.why-card-icon {
+  width: 40px; height: 40px; border-radius: 8px;
+  background: rgba(255,105,0,0.15);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+}
+.why-card-icon svg { width: 20px; height: 20px; color: var(--accent); }
+.why-card h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.95rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #fff; margin-bottom: 6px;
+}
+.why-card p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.55; }
+.why-right {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 8px; padding: 36px 30px;
+}
+.why-right h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--accent); margin-bottom: 20px;
+}
+.service-list { display: flex; flex-direction: column; gap: 9px; }
+.svc-line {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border-radius: 5px;
+  background: rgba(255,255,255,0.04);
+  font-size: 0.9rem; color: rgba(255,255,255,0.78); font-weight: 500;
+}
+.svc-line svg { width: 13px; height: 13px; color: var(--accent); flex-shrink: 0; }
+
+/* HOW */
+.how { background: var(--bg-darkest); padding: 88px 40px; }
+.how .section-title { color: #fff; }
+.how .section-sub { color: rgba(255,255,255,0.62); }
+.how-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 2px;
+}
+.how-card {
+  background: rgba(255,255,255,0.04);
+  padding: 36px 28px;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.how-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem; font-weight: 700;
+  color: var(--accent); opacity: 0.4; line-height: 1; margin-bottom: 16px;
+}
+.how-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #fff; margin-bottom: 10px;
+}
+.how-card p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+/* REVIEWS */
+.reviews { background: var(--bg-off); padding: 88px 40px; }
+.reviews-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 22px;
+}
+.review-card {
+  background: var(--bg-white);
+  padding: 28px 24px;
+  border-radius: 0;
+  border-top: 3px solid var(--accent);
+  border-left: 1px solid #e0dcd8;
+  border-right: 1px solid #e0dcd8;
+  border-bottom: 1px solid #e0dcd8;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.review-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(50,55,60,0.1); }
+.review-stars { color: var(--accent); font-size: 1.05rem; margin-bottom: 14px; }
+.review-text { font-size: 0.93rem; line-height: 1.65; color: #444; margin-bottom: 18px; font-style: italic; }
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar {
+  width: 36px; height: 36px; border-radius: 0;
+  background: var(--primary); display: flex; align-items: center; justify-content: center;
+  font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 700; color: #fff;
+}
+.reviewer-info strong { display: block; font-size: 0.88rem; font-weight: 600; color: #1a1a1a; }
+.reviewer-info span { font-size: 0.78rem; color: #888; }
+
+/* AREAS */
+.areas { background: var(--primary-dark); padding: 68px 40px; }
+.areas .section-title { color: #fff; }
+.areas-list {
+  max-width: 1140px; margin: 34px auto 0;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 12px;
+}
+.area-pill {
+  background: rgba(255,105,0,0.1);
+  border: 1px solid rgba(255,105,0,0.2);
+  border-radius: 4px; padding: 11px 16px;
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.88rem; color: rgba(255,255,255,0.82); font-weight: 500;
+}
+.area-pill svg { width: 13px; height: 13px; color: var(--accent); flex-shrink: 0; }
+
+/* CONTACT */
+.contact { background: var(--bg-white); padding: 88px 40px; }
+.contact-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+}
+.contact-info .section-title { color: #1a1a1a; }
+.contact-info .section-sub { color: #555; }
+.contact-channels { margin-top: 30px; display: flex; flex-direction: column; gap: 14px; }
+.channel {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px; border-radius: 6px;
+  border: 1px solid #e8e4e0; background: var(--bg-off);
+}
+.channel-icon {
+  width: 42px; height: 42px; border-radius: 6px;
+  background: rgba(50,55,60,0.08);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.channel-icon svg { width: 20px; height: 20px; color: var(--primary); }
+.channel-text strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #888; font-weight: 600; margin-bottom: 2px; }
+.channel-text a { font-size: 1rem; font-weight: 600; color: var(--primary); }
+.contact-form {
+  background: var(--bg-off); border-radius: 6px; padding: 34px 30px;
+  border: 1px solid #e8e4e0;
+}
+.form-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a; margin-bottom: 22px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+.form-group label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #555; }
+.form-group input, .form-group select, .form-group textarea {
+  padding: 11px 14px; border: 1px solid #d8d4d0; border-radius: 4px;
+  font-size: 0.93rem; font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg-white); color: #1a1a1a; transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+.form-group textarea { resize: vertical; min-height: 88px; }
+.form-submit {
+  width: 100%; padding: 13px;
+  background: var(--accent); color: #fff; border: none; border-radius: 4px;
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: background 0.2s;
+}
+.form-submit:hover { background: var(--accent-dark); }
+
+/* CTA BAND */
+.cta-band {
+  background: var(--primary);
+  padding: 72px 40px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-band::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.cta-band h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.03em; color: #fff; margin-bottom: 14px;
+}
+.cta-band h2 em { color: var(--accent); font-style: normal; }
+.cta-band p { font-size: 1.05rem; color: rgba(255,255,255,0.72); max-width: 480px; margin: 0 auto 28px; }
+
+/* FOOTER */
+.footer { background: var(--bg-darkest); padding: 52px 40px 28px; }
+.footer-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+  padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-logo {
+  font-family: 'Oswald', sans-serif; font-size: 1.35rem; font-weight: 700;
+  color: #fff; text-transform: uppercase; letter-spacing: 0.03em;
+}
+.footer-logo span { color: var(--accent); }
+.footer-brand p { font-size: 0.88rem; line-height: 1.65; color: rgba(255,255,255,0.5); margin-top: 12px; max-width: 280px; }
+.footer-col h4 {
+  font-family: 'Oswald', sans-serif; font-size: 0.82rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em; color: #fff; margin-bottom: 14px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-col ul li a { font-size: 0.86rem; color: rgba(255,255,255,0.5); transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--accent); }
+.footer-bottom {
+  max-width: 1140px; margin: 22px auto 0;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.8rem; color: rgba(255,255,255,0.35);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.5s ease forwards; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); }
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .why-inner { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: repeat(2,1fr); }
+  .reviews-grid { grid-template-columns: repeat(2,1fr); }
+  .areas-list { grid-template-columns: repeat(2,1fr); }
+  .contact-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 56px 20px 48px; }
+  .stats-inner { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-list { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">Big Up <span>Dumpsters</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:2544525272" class="nav-cta">(254) 452-5272</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-flag">Killeen's #1 Roll-Off Rental</div>
+      <h1>Big Dumpsters.<br><span class="highlight">Bigger Service.</span></h1>
+      <p class="hero-sub">Roll-off dumpster rental and full-service junk removal for Killeen homes and commercial projects. We show up on time, every time.</p>
+      <div class="hero-actions">
+        <a href="tel:2544525272" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Book a Dumpster
+        </a>
+        <a href="#contact" class="btn-outline">Get a Quote</a>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Same-Day Available</div>
+        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Flat-Rate Pricing</div>
+        <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Licensed &amp; Insured</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-label">Available Dumpster Sizes</div>
+      <div class="size-rows">
+        <div class="size-row">
+          <div class="size-row-name">10 Yard</div>
+          <div class="size-row-use">Small cleanouts &amp; projects</div>
+        </div>
+        <div class="size-row">
+          <div class="size-row-name">15 Yard</div>
+          <div class="size-row-use">Room renovations &amp; roofing</div>
+        </div>
+        <div class="size-row">
+          <div class="size-row-name">20 Yard</div>
+          <div class="size-row-use">Full-home cleanouts &amp; demo</div>
+        </div>
+        <div class="size-row">
+          <div class="size-row-name">30 Yard</div>
+          <div class="size-row-use">Commercial &amp; large projects</div>
+        </div>
+      </div>
+      <div class="hero-card-note">Not sure what size? Call us — we'll help you choose.</div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num" data-target="1200"><span>0</span></div>
+      <div class="stat-label">Dumpsters Delivered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="4"><span>0</span></div>
+      <div class="stat-label">Sizes Available</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="24"><span>0</span></div>
+      <div class="stat-label">HR Delivery Option</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="100"><span>0</span></div>
+      <div class="stat-label">% Local &amp; Veteran-Friendly</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-eyebrow">Our Services</div>
+    <h2 class="section-title">Waste Removal for Every Job</h2>
+    <p class="section-sub">Whether you need a dumpster dropped off or a full crew to haul things away, Big Up Dumpsters has you covered.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card card">
+      <div class="svc-header">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z"/></svg></div>
+        <h3>Roll-Off Dumpster Rental</h3>
+      </div>
+      <p>10 to 30-yard roll-off containers delivered to your Killeen property. Flexible rental periods and same-day delivery when available.</p>
+      <div class="svc-tags"><span class="svc-tag">10–30 YD</span><span class="svc-tag">Flexible Rental</span></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-header">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+        <h3>Residential Junk Removal</h3>
+      </div>
+      <p>We load and haul everything from garage cleanouts to whole-home junk removal. No heavy lifting required from you.</p>
+      <div class="svc-tags"><span class="svc-tag">Same-Day</span><span class="svc-tag">Full Crew</span></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-header">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3>Construction &amp; Demo Debris</h3>
+      </div>
+      <p>Drywall, lumber, concrete rubble, roofing materials, and demo waste removed and properly disposed of after your renovation.</p>
+      <div class="svc-tags"><span class="svc-tag">Contractors Welcome</span></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-header">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+        <h3>Appliance &amp; Furniture Haul-Off</h3>
+      </div>
+      <p>Old refrigerators, washing machines, sofas, and mattresses removed quickly. We handle the logistics so you don't have to.</p>
+      <div class="svc-tags"><span class="svc-tag">Eco Disposal</span></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-header">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg></div>
+        <h3>Commercial Waste Removal</h3>
+      </div>
+      <p>Business cleanouts, office relocations, and commercial construction cleanup with containers and crew scaled to your project.</p>
+      <div class="svc-tags"><span class="svc-tag">Volume Pricing</span></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-header">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg></div>
+        <h3>Property Cleanouts</h3>
+      </div>
+      <p>Estate cleanouts, foreclosure clearing, and rental unit turnovers done fast and thoroughly with full crew service.</p>
+      <div class="svc-tags"><span class="svc-tag">Fast Turnaround</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-left">
+      <div class="section-eyebrow">The Big Up Advantage</div>
+      <h2 class="section-title">Why Killeen Chooses Big Up</h2>
+      <p class="section-sub">We built this business to serve Fort Cavazos families and Central Texas contractors with the reliability and respect they deserve.</p>
+      <div class="why-grid">
+        <div class="why-card card">
+          <div class="why-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h4>On-Time Delivery</h4>
+          <p>We show up in your delivery window — no runaround, no vague ETAs.</p>
+        </div>
+        <div class="why-card card">
+          <div class="why-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <h4>Flat-Rate Pricing</h4>
+          <p>One price, no surprises. What we quote is what you pay.</p>
+        </div>
+        <div class="why-card card">
+          <div class="why-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h4>Licensed &amp; Insured</h4>
+          <p>Full coverage on every job. Your property is always protected.</p>
+        </div>
+        <div class="why-card card">
+          <div class="why-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg></div>
+          <h4>Veteran-Friendly</h4>
+          <p>Proudly serving Fort Cavazos families and active duty military with respect.</p>
+        </div>
+      </div>
+    </div>
+    <div class="why-right">
+      <h3>Services at a Glance</h3>
+      <div class="service-list">
+        <div class="svc-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Roll-off dumpster rental</div>
+        <div class="svc-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Residential junk removal</div>
+        <div class="svc-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Construction &amp; demo debris</div>
+        <div class="svc-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Appliance &amp; furniture removal</div>
+        <div class="svc-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Commercial cleanouts</div>
+        <div class="svc-line"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Estate &amp; property cleanouts</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="section-header">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-title">Simple Booking, Fast Results</h2>
+    <p class="section-sub">Getting a dumpster from Big Up is straightforward. Here's what to expect.</p>
+  </div>
+  <div class="how-grid">
+    <div class="how-card card">
+      <div class="how-num">01</div>
+      <h3>Call &amp; Book</h3>
+      <p>Call (254) 452-5272 or fill out our online form. Tell us the size you need and when, and we'll confirm your booking fast — often same day.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-num">02</div>
+      <h3>We Deliver</h3>
+      <p>Your roll-off dumpster arrives in your scheduled window. We'll position it exactly where you need it and make sure it's ready to fill.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-num">03</div>
+      <h3>Fill &amp; We Pick Up</h3>
+      <p>Fill it on your timeline. When you're done, call for pickup and we'll haul it away. Simple, clean, and taken care of.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="section-header">
+    <div class="section-eyebrow">Reviews</div>
+    <h2 class="section-title">What Killeen Customers Say</h2>
+    <p class="section-sub">Hear from neighbors and contractors who've used Big Up Dumpsters across Killeen and Bell County.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Ordered a 20-yard dumpster for a whole-house cleanout before moving off post. Delivered early, pickup was on time, and the price beat every quote I got. Big Up is the real deal."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">JB</div>
+        <div class="reviewer-info"><strong>James B.</strong><span>Killeen, TX</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"We use Big Up on every roofing job in Killeen. Always professional, always on time. The flat pricing makes it easy to plan our jobs and bids. Highly recommended for contractors."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">TC</div>
+        <div class="reviewer-info"><strong>Tony C.</strong><span>Roofing Contractor, Temple</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Needed a dumpster fast for a basement cleanout. Called at 8am and they had it there by noon. Very responsive, reasonably priced, and the driver was friendly and careful with the driveway."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">LP</div>
+        <div class="reviewer-info"><strong>Lisa P.</strong><span>Harker Heights, TX</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="section-header">
+    <div class="section-eyebrow">Coverage</div>
+    <h2 class="section-title">Serving Killeen &amp; Central Texas</h2>
+  </div>
+  <div class="areas-list">
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Killeen</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Temple</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Harker Heights</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Copperas Cove</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Belton</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Nolanville</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Lampasas</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Georgetown</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-eyebrow">Book Today</div>
+      <h2 class="section-title">Get Your Dumpster Delivered</h2>
+      <p class="section-sub">Ready to get started? Call us or fill out the form for a fast, free quote on any dumpster size or junk removal service.</p>
+      <div class="contact-channels">
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="channel-text"><strong>Phone</strong><a href="tel:2544525272">(254) 452-5272</a></div>
+        </div>
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="channel-text"><strong>Location</strong><a href="#">Killeen, TX</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Request a Free Quote</div>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="(254) 000-0000"></div>
+      <div class="form-group"><label>Service</label>
+        <select>
+          <option>Dumpster Rental</option>
+          <option>Junk Removal</option>
+          <option>Construction Debris</option>
+          <option>Appliance Removal</option>
+          <option>Property Cleanout</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Project details, preferred dates, dumpster size needed..."></textarea></div>
+      <button class="form-submit">Get My Free Quote</button>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <h2>Ready for a <em>Big Dumpster?</em></h2>
+  <p>Same-day delivery available across Killeen and Central Texas. Call Big Up Dumpsters now and we'll get you set up fast.</p>
+  <a href="tel:2544525272" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    (254) 452-5272
+  </a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Big Up <span>Dumpsters</span></div>
+      <p>Roll-off dumpster rental and junk removal serving Killeen, TX and Central Texas with reliability, fair pricing, and veteran-friendly service.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Dumpster Rental</a></li>
+        <li><a href="#">Junk Removal</a></li>
+        <li><a href="#">Construction Debris</a></li>
+        <li><a href="#">Appliance Removal</a></li>
+        <li><a href="#">Property Cleanouts</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Areas</h4>
+      <ul>
+        <li><a href="#">Killeen</a></li>
+        <li><a href="#">Temple</a></li>
+        <li><a href="#">Harker Heights</a></li>
+        <li><a href="#">Copperas Cove</a></li>
+        <li><a href="#">Belton</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:2544525272">(254) 452-5272</a></li>
+        <li><a href="#">Killeen, TX</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Big Up Dumpsters. All rights reserved.</span>
+    <span>Serving Killeen &amp; Central Texas</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var stats = document.querySelectorAll('[data-target]');
+  var counted = false;
+  function runCounters(){
+    if(counted) return; counted = true;
+    stats.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-target'),10);
+      var current = 0;
+      var span = el.querySelector('span') || el;
+      var timer = setInterval(function(){
+        current += Math.ceil(target/55);
+        if(current >= target){ current = target; clearInterval(timer); }
+        span.textContent = current.toLocaleString();
+      }, 28);
+    });
+  }
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.card').forEach(function(el){ observer.observe(el); });
+  var sb = document.querySelector('.stats-bar');
+  if(sb){
+    var so = new IntersectionObserver(function(e){ if(e[0].isIntersecting) runCounters(); },{threshold:0.3});
+    so.observe(sb);
+  }
+})();
+</script>
+</body>
+</html>

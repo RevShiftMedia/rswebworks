@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FILL-N-GO Waste | Dumpster Rental &amp; Junk Removal — Carrollton, TX</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  --primary: #1a1a1a;
+  --primary-dark: #0d0d0d;
+  --accent: #1F5CEA;
+  --accent-dark: #1547ba;
+  --bg: #ffffff;
+  --bg-off: #f4f6fb;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #111827;
+  --grey-text: #6b7280;
+  --border: #e2e8f5;
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Source Sans 3', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.15);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(31,92,234,0.4); transition: all 0.15s ease; text-decoration: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(31,92,234,0.5); }
+.btn-primary:active { transform: scale(0.97); }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 600;
+  padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.15s ease; text-decoration: none;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; } }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1).visible { animation-delay: 0.1s; }
+.card:nth-child(2).visible { animation-delay: 0.2s; }
+.card:nth-child(3).visible { animation-delay: 0.3s; }
+.card:nth-child(4).visible { animation-delay: 0.4s; }
+.card:nth-child(5).visible { animation-delay: 0.5s; }
+.card:nth-child(6).visible { animation-delay: 0.6s; }
+
+header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--primary); box-shadow: 0 2px 12px rgba(0,0,0,0.4); padding: 0 24px;
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; height: 66px;
+}
+.header-brand { display: flex; align-items: center; gap: 12px; }
+.header-logo {
+  width: 36px; height: 36px; background: var(--accent); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.header-name { font-family: var(--font-display); font-weight: 700; font-size: 19px; color: white; letter-spacing: 0.04em; }
+.header-tagline { font-family: var(--font-body); font-size: 12px; color: var(--t2); margin-top: 1px; }
+.header-phone {
+  display: flex; align-items: center; gap: 7px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-weight: 700; font-size: 14px;
+  padding: 9px 18px; border-radius: 7px; text-decoration: none;
+  box-shadow: 0 2px 10px rgba(31,92,234,0.4);
+}
+
+.hero {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 60%, #1e2a40 100%);
+  padding: 80px 0 70px;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-layout {
+  display: grid; grid-template-columns: 1fr 400px; gap: 48px; align-items: center;
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(31,92,234,0.2); border: 1px solid rgba(31,92,234,0.4);
+  color: #6ea3ff; font-family: var(--font-display); font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 6px 14px; border-radius: 20px; margin-bottom: 18px;
+}
+.hero-headline {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(42px, 6vw, 64px); line-height: 1.05;
+  color: white; margin-bottom: 18px; letter-spacing: -0.02em;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub { font-family: var(--font-body); font-size: 18px; color: var(--t2); line-height: 1.6; margin-bottom: 30px; max-width: 480px; }
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+.hero-trust {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  font-family: var(--font-body); font-size: 13px; color: var(--t2);
+}
+.hero-trust-stars { display: flex; gap: 3px; color: #fbbf24; }
+.hero-trust-sep { color: var(--t3); }
+
+.hero-card {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4); backdrop-filter: blur(12px);
+  border-radius: 16px; padding: 28px 30px;
+}
+.hero-card-title {
+  font-family: var(--font-display); font-size: 13px; font-weight: 600;
+  color: #6ea3ff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.08em;
+}
+.hero-prop { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+.hero-prop-check { color: var(--accent); flex-shrink: 0; margin-top: 3px; }
+.hero-prop-text h4 { font-family: var(--font-display); font-size: 15px; color: white; font-weight: 600; }
+.hero-prop-text p { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+.hero-card-phone {
+  margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1);
+  font-family: var(--font-display); font-size: 22px; font-weight: 700;
+  color: var(--accent); display: flex; align-items: center; gap: 8px;
+}
+@media (max-width: 900px) { .hero-layout { grid-template-columns: 1fr; } .hero-card { display: none; } }
+
+.stats-bar { background: var(--primary-dark); padding: 28px 0; border-bottom: 3px solid var(--accent); }
+.stats-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.stat-item { text-align: center; padding: 10px 0; border-right: 1px solid rgba(255,255,255,0.08); }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: var(--font-display); font-size: clamp(32px,4vw,48px); font-weight: 700; color: var(--accent); line-height: 1; }
+.stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); margin-top: 4px; }
+@media (max-width: 600px) { .stats-inner { grid-template-columns: repeat(2,1fr); } .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 16px 0; } }
+
+/* SERVICES — pill badge on card */
+.services { background: var(--bg); }
+.section-label { font-family: var(--font-display); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 10px; }
+.section-title { font-family: var(--font-display); font-size: 36px; font-weight: 700; color: var(--dark-text); margin-bottom: 12px; }
+.section-sub { font-family: var(--font-body); color: var(--grey-text); font-size: 16px; margin-bottom: 48px; max-width: 520px; }
+
+.service-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px 24px;
+  box-shadow: var(--shadow); transition: all 0.25s ease;
+}
+.service-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(31,92,234,0.15); }
+.svc-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(31,92,234,0.08); border: 1px solid rgba(31,92,234,0.2);
+  border-radius: 20px; padding: 5px 12px; margin-bottom: 16px;
+}
+.svc-pill-icon { color: var(--accent); display: flex; align-items: center; }
+.svc-pill-label { font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--accent); }
+.svc-name { font-family: var(--font-display); font-size: 18px; color: var(--dark-text); margin-bottom: 10px; font-weight: 600; }
+.svc-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 14px; }
+.svc-link { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; }
+
+.why-choose { background: var(--primary); position: relative; overflow: hidden; }
+.why-choose::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.10; pointer-events: none; z-index: 0;
+}
+.why-choose > * { position: relative; z-index: 1; }
+.why-choose .section-title { color: white; }
+.why-choose .section-sub { color: var(--t2); }
+.why-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-bottom: 44px; }
+.why-stat { background: rgba(31,92,234,0.1); border: 1px solid rgba(31,92,234,0.2); border-radius: var(--radius); padding: 22px; text-align: center; }
+.why-stat-num { font-family: var(--font-display); font-size: 30px; font-weight: 700; color: var(--accent); }
+.why-stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); margin-top: 4px; }
+.why-diff-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+.why-diff {
+  display: flex; align-items: flex-start; gap: 14px;
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 20px;
+}
+.why-diff-icon { width: 34px; height: 34px; background: var(--accent); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.why-diff h4 { font-family: var(--font-display); font-size: 15px; color: white; font-weight: 600; margin-bottom: 4px; }
+.why-diff p { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+@media (max-width: 600px) { .why-stats { grid-template-columns: repeat(2,1fr); } .why-diff-grid { grid-template-columns: 1fr; } }
+
+.how-it-works { background: var(--primary-dark); }
+.how-it-works .section-title { color: white; }
+.how-it-works .section-sub { color: var(--t2); }
+.steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; position: relative; }
+.steps::before {
+  content: ''; position: absolute; top: 36px;
+  left: calc(16.66% + 32px); right: calc(16.66% + 32px);
+  height: 1px; border-top: 2px dashed rgba(31,92,234,0.4);
+}
+.step { text-align: center; }
+.step-num {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 28px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 16px; position: relative; z-index: 1;
+}
+.step-icon { color: white; margin: 0 auto 12px; display: block; width: 36px; height: 36px; }
+.step h4 { font-family: var(--font-display); font-size: 18px; color: white; margin-bottom: 8px; }
+.step p { font-family: var(--font-body); font-size: 14px; color: var(--t2); }
+@media (max-width: 700px) { .steps { grid-template-columns: 1fr; } .steps::before { display: none; } }
+
+/* REVIEWS — dark treatment */
+.reviews { background: var(--bg-off); }
+.reviews .section-title { color: var(--dark-text); }
+.reviews-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 16px; }
+.google-badge { display: flex; align-items: center; gap: 10px; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; box-shadow: var(--shadow); }
+.google-badge-rating { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--dark-text); }
+.google-badge-count { font-size: 12px; color: var(--grey-text); }
+.review-stars { display: flex; gap: 2px; color: #fbbf24; margin-bottom: 14px; }
+
+.review-card {
+  background: var(--primary); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius); padding: 28px;
+  box-shadow: var(--shadow-lg); transition: all 0.25s ease;
+}
+.review-card:hover { border-color: rgba(31,92,234,0.4); transform: translateY(-3px); }
+.review-text { font-family: var(--font-body); font-style: italic; font-size: 15px; line-height: 1.7; color: var(--t2); margin-bottom: 16px; }
+.review-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 16px 0; }
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(31,92,234,0.3); color: #6ea3ff;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.reviewer-name { font-family: var(--font-display); font-size: 15px; font-weight: 600; color: white; }
+.reviewer-detail { font-family: var(--font-body); font-size: 12px; color: var(--t3); }
+
+.service-areas { background: var(--primary); }
+.service-areas .section-title { color: white; }
+.areas-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.areas-body { font-family: var(--font-body); font-size: 16px; color: var(--t2); line-height: 1.7; margin-bottom: 28px; }
+.areas-card { background: var(--primary-dark); border: 1px solid rgba(31,92,234,0.2); border-radius: var(--radius); padding: 28px; }
+.areas-card-title { font-family: var(--font-display); font-size: 14px; font-weight: 600; color: var(--accent); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.06em; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--font-body); font-size: 13px; color: var(--t2); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); padding: 6px 14px; border-radius: 20px; transition: all 0.2s ease; cursor: default; }
+.chip:hover { background: var(--accent); color: white; border-color: var(--accent); }
+@media (max-width: 700px) { .areas-layout { grid-template-columns: 1fr; } }
+
+.contact { background: white; }
+.contact-layout { display: grid; grid-template-columns: 1fr 360px; gap: 48px; align-items: start; }
+.contact .section-title { color: var(--dark-text); }
+.form-group { margin-bottom: 16px; }
+.form-label { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; display: block; }
+input, select, textarea {
+  width: 100%; background: var(--bg-off); border: 1.5px solid var(--border);
+  border-radius: 8px; padding: 12px 14px;
+  font-family: var(--font-body); font-size: 14px; color: var(--dark-text);
+  transition: border-color 0.2s; outline: none;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(31,92,234,0.1); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.btn-submit {
+  width: 100%; background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  padding: 15px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(31,92,234,0.4); transition: all 0.15s ease; margin-top: 4px;
+}
+.btn-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(31,92,234,0.5); }
+.contact-info-card { background: var(--primary); border-radius: var(--radius); padding: 30px; border-left: 4px solid var(--accent); }
+.contact-info-card h3 { font-family: var(--font-display); font-size: 20px; color: white; margin-bottom: 20px; }
+.cinfo-row { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; }
+.cinfo-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.cinfo-text h4 { font-family: var(--font-display); font-size: 13px; color: #6ea3ff; margin-bottom: 2px; }
+.cinfo-text p { font-family: var(--font-body); font-size: 14px; color: var(--t2); }
+@media (max-width: 800px) { .contact-layout { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
+
+.cta-band {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent)); padding: 80px 0; text-align: center;
+}
+.cta-band::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-band h2 { font-family: var(--font-display); font-size: clamp(28px,4vw,42px); color: white; margin-bottom: 12px; font-weight: 700; }
+.cta-band p { font-family: var(--font-body); font-size: 16px; color: rgba(255,255,255,0.8); margin-bottom: 28px; }
+.cta-band-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: white; color: var(--accent);
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  padding: 15px 32px; border-radius: 8px; text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: all 0.15s ease;
+}
+.cta-band-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.3); }
+
+footer { background: var(--primary-dark); padding: 60px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 36px; margin-bottom: 44px; }
+.footer-brand-name { font-family: var(--font-display); font-size: 20px; color: white; font-weight: 700; margin-bottom: 10px; letter-spacing: 0.04em; }
+.footer-brand-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.7; margin-bottom: 16px; }
+.footer-col h4 { font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 8px; }
+.footer-col ul li a { font-family: var(--font-body); font-size: 14px; color: var(--t2); text-decoration: none; transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding: 18px 0; text-align: center; font-family: var(--font-body); font-size: 13px; color: var(--t3); }
+@media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-brand">
+      <div class="header-logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </div>
+      <div>
+        <div class="header-name">FILL-N-GO Waste</div>
+        <div class="header-tagline">Carrollton's Reliable Waste &amp; Dumpster Service</div>
+      </div>
+    </div>
+    <a href="tel:8333455646" class="header-phone">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (833) 345-5646
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-layout">
+    <div>
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        4.6 Stars &bull; Rated Best in Carrollton
+      </div>
+      <h1 class="hero-headline">Carrollton's Go-To <span>Waste</span> Removal</h1>
+      <p class="hero-sub">Fill it and we go. Roll-off dumpsters, same-day junk pickup, and full-service cleanouts for the DFW north corridor. Simple. Reliable. Done right.</p>
+      <div class="hero-ctas">
+        <a href="tel:8333455646" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (833) 345-5646
+        </a>
+        <a href="#contact" class="btn-ghost">Get a Free Quote</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <span>4.6 Stars &bull; 10 Reviews</span>
+        <span class="hero-trust-sep">|</span>
+        <span>Licensed &amp; Insured</span>
+        <span class="hero-trust-sep">|</span>
+        <span>DFW North Corridor</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">What Sets Us Apart</div>
+      <div class="hero-prop">
+        <div class="hero-prop-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="hero-prop-text"><h4>Same-Day Pickup</h4><p>Call by 10 AM and we're there before evening</p></div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="hero-prop-text"><h4>Upfront Flat Rates</h4><p>No surprise charges — your quote is final</p></div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="hero-prop-text"><h4>4.6-Star Rated</h4><p>Carrollton's top-rated waste removal service</p></div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="hero-prop-text"><h4>Eco-Responsible Disposal</h4><p>We recycle and donate before anything hits landfill</p></div>
+      </div>
+      <div class="hero-card-phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (833) 345-5646
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num" data-target="800" data-suffix="+">0</div><div class="stat-label">Jobs Completed</div></div>
+    <div class="stat-item"><div class="stat-num" data-target="4" data-suffix=".6★">0</div><div class="stat-label">Google Rating</div></div>
+    <div class="stat-item"><div class="stat-num" data-target="24" data-suffix=" Hr">0</div><div class="stat-label">Response Time</div></div>
+    <div class="stat-item"><div class="stat-num" data-target="100" data-suffix="%">0</div><div class="stat-label">No-Surprise Pricing</div></div>
+  </div>
+</div>
+
+<section class="services">
+  <div class="container">
+    <div class="section-label">Our Services</div>
+    <h2 class="section-title">Simple Waste Solutions for Carrollton</h2>
+    <p class="section-sub">From a single couch to a full estate — we make waste removal effortless for homeowners and contractors across the DFW north corridor.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="svc-pill">
+          <div class="svc-pill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <span class="svc-pill-label">Containers</span>
+        </div>
+        <div class="svc-name">Roll-Off Dumpster Rental</div>
+        <p class="svc-desc">10 to 30-yard containers dropped at your home or job site. Keep it as long as you need — flat rate, no hidden overages. We handle pickup the moment you're done.</p>
+        <a href="#contact" class="svc-link">Reserve a container &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-pill">
+          <div class="svc-pill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3z"/></svg></div>
+          <span class="svc-pill-label">Full Service</span>
+        </div>
+        <div class="svc-name">Junk Removal Crew</div>
+        <p class="svc-desc">Our two-man team shows up, loads everything, sweeps behind themselves, and disappears. No dumpster needed. Perfect for attic cleanouts, old furniture, or quick spring cleans.</p>
+        <a href="#contact" class="svc-link">Book a crew today &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-pill">
+          <div class="svc-pill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+          <span class="svc-pill-label">Cleanouts</span>
+        </div>
+        <div class="svc-name">Property Cleanouts</div>
+        <p class="svc-desc">Moving out, clearing an estate, or prepping a rental property? We handle the entire cleanout in one trip — furniture, appliances, boxes, miscellaneous debris.</p>
+        <a href="#contact" class="svc-link">Schedule a cleanout &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-pill">
+          <div class="svc-pill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <span class="svc-pill-label">Contractors</span>
+        </div>
+        <div class="svc-name">Construction Cleanup</div>
+        <p class="svc-desc">Drywall, concrete block, lumber, tile, and renovation debris removed from active job sites. We work around your crew's schedule — daily or weekly pickup options.</p>
+        <a href="#contact" class="svc-link">Get contractor rates &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-pill">
+          <div class="svc-pill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/></svg></div>
+          <span class="svc-pill-label">Outdoors</span>
+        </div>
+        <div class="svc-name">Yard &amp; Landscaping Debris</div>
+        <p class="svc-desc">Tree trimmings, dead shrubs, old fencing, concrete stepping stones — we haul everything that's piling up in the backyard. Clean yard same day you call.</p>
+        <a href="#contact" class="svc-link">Book yard pickup &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-pill">
+          <div class="svc-pill-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+          <span class="svc-pill-label">Heavy Items</span>
+        </div>
+        <div class="svc-name">Appliance &amp; Furniture Disposal</div>
+        <p class="svc-desc">Washers, dryers, refrigerators, sectional sofas, and mattresses — the heavy stuff curbside pickup refuses. We come inside, carry it out, and eco-dispose it properly.</p>
+        <a href="#contact" class="svc-link">Schedule pickup &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-choose">
+  <div class="container">
+    <div class="section-label" style="color:#6ea3ff">Why FILL-N-GO</div>
+    <h2 class="section-title">Carrollton Trusts Us for One Simple Reason</h2>
+    <p class="section-sub">We show up when we say, charge what we quote, and leave the job site clean. No games. No surprises.</p>
+    <div class="why-stats">
+      <div class="why-stat"><div class="why-stat-num">4.6</div><div class="why-stat-label">Star Rating</div></div>
+      <div class="why-stat"><div class="why-stat-num">Same</div><div class="why-stat-label">Day Availability</div></div>
+      <div class="why-stat"><div class="why-stat-num">$0</div><div class="why-stat-label">Hidden Fees</div></div>
+      <div class="why-stat"><div class="why-stat-num">1-Call</div><div class="why-stat-label">Full Solution</div></div>
+    </div>
+    <div class="why-diff-grid">
+      <div class="why-diff card">
+        <div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><h4>Quote Locks In at Booking</h4><p>No adjustments on arrival. The price you're quoted is what you pay — full stop.</p></div>
+      </div>
+      <div class="why-diff card">
+        <div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><h4>Same-Day &amp; Next-Day Slots</h4><p>Most Carrollton and Addison bookings get serviced within 24 hours — often the same afternoon.</p></div>
+      </div>
+      <div class="why-diff card">
+        <div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><h4>Eco-Responsible Process</h4><p>We donate usable furniture to local nonprofits and recycle metals before anything reaches the landfill.</p></div>
+      </div>
+      <div class="why-diff card">
+        <div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><h4>Licensed, Bonded, &amp; Insured</h4><p>Your property is protected from start to finish — we carry full liability on every job.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-it-works">
+  <div class="container">
+    <div class="section-label" style="color:#6ea3ff">The Process</div>
+    <h2 class="section-title">Waste Gone in 3 Simple Steps</h2>
+    <p class="section-sub" style="margin-bottom:52px">Fill it. We go. That's the whole idea.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <h4>Call or Book Online</h4>
+        <p>Describe what you've got — we give you a locked-in flat-rate quote. No site visit required.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <h4>We Arrive On Time</h4>
+        <p>Our crew or container shows up during your scheduled window — no 4-hour guessing games.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <h4>It's Gone. Done.</h4>
+        <p>Everything gets loaded, the area gets swept, and we haul it away — job complete, property clean.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div>
+        <div class="section-label">Customer Reviews</div>
+        <h2 class="section-title">What Carrollton Customers Say</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div><div class="google-badge-rating">4.6 ★</div><div class="google-badge-count">10 Reviews</div></div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.4; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">Rented a 15-yard roll-off for my Carrollton kitchen renovation. Booking was easy, the driver showed up within the two-hour window, and the container was exactly where I needed it. No damage to the driveway. Called for pickup when I was done and it was gone the next morning.</p>
+        <hr class="review-divider">
+        <div class="reviewer">
+          <div class="reviewer-avatar">TN</div>
+          <div><div class="reviewer-name">Tom N.</div><div class="reviewer-detail">Carrollton, TX &bull; Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.4; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">Used Fill-N-Go to clear out my sister's apartment in Addison when she moved cross-country. Booked them Monday, two guys showed up Tuesday at 9 AM, had the whole one-bedroom emptied in 90 minutes. Fair price, great attitude. The name is exactly right — fill it and they go.</p>
+        <hr class="review-divider">
+        <div class="reviewer">
+          <div class="reviewer-avatar">AP</div>
+          <div><div class="reviewer-name">Amanda P.</div><div class="reviewer-detail">Addison, TX &bull; Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.4; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">I manage properties in Carrollton and Farmers Branch and have used several junk removal companies over the years. FILL-N-GO is the most consistent — they come when they say, price is right, and the guys are professional. I've booked them for four different unit cleanouts now. Solid operation.</p>
+        <hr class="review-divider">
+        <div class="reviewer">
+          <div class="reviewer-avatar">KM</div>
+          <div><div class="reviewer-name">Kevin M.</div><div class="reviewer-detail">Farmers Branch, TX &bull; Google Review</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-areas">
+  <div class="container">
+    <div class="areas-layout">
+      <div>
+        <div class="section-label" style="color:#6ea3ff">Coverage</div>
+        <h2 class="section-title">Serving the DFW North Corridor</h2>
+        <p class="areas-body">Based in Carrollton, we cover the entire northern DFW metro — Addison, Farmers Branch, Coppell, Irving, and beyond. Residential pickups, commercial containers, and contractor accounts — all welcome.</p>
+        <a href="tel:8333455646" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (833) 345-5646
+        </a>
+      </div>
+      <div>
+        <div class="areas-card">
+          <div class="areas-card-title">Service Area</div>
+          <div class="chips">
+            <span class="chip">Carrollton</span>
+            <span class="chip">Addison</span>
+            <span class="chip">Farmers Branch</span>
+            <span class="chip">Coppell</span>
+            <span class="chip">Irving</span>
+            <span class="chip">Lewisville</span>
+            <span class="chip">The Colony</span>
+            <span class="chip">Plano</span>
+            <span class="chip">Richardson</span>
+            <span class="chip">Grand Prairie</span>
+            <span class="chip">Allen</span>
+            <span class="chip">Grapevine</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div>
+        <div class="section-label">Get a Quote</div>
+        <h2 class="section-title">Ready to Clear It Out?</h2>
+        <p style="font-family:var(--font-body);color:var(--grey-text);margin-bottom:28px;font-size:15px;">Tell us what you need gone and we'll give you a locked-in flat-rate quote. No site visit, no obligation.</p>
+        <form>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Name</label><input type="text" placeholder="Amanda"></div>
+            <div class="form-group"><label class="form-label">Phone</label><input type="tel" placeholder="(833) 555-0100"></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Service Type</label>
+            <select>
+              <option value="">What do you need?</option>
+              <option>Roll-Off Dumpster Rental</option>
+              <option>Full-Service Junk Removal</option>
+              <option>Property / Estate Cleanout</option>
+              <option>Construction Cleanup</option>
+              <option>Yard / Landscaping Debris</option>
+              <option>Appliance or Furniture Disposal</option>
+              <option>Not Sure — Help Me Choose</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label">City / Zip Code</label><input type="text" placeholder="Carrollton, TX 75006"></div>
+          <div class="form-group">
+            <label class="form-label">Additional Details</label>
+            <textarea rows="3" placeholder="Describe what needs to be removed — helps us give you a more accurate quote"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Get My Free Quote</button>
+        </form>
+      </div>
+      <div>
+        <div class="contact-info-card">
+          <h3>Contact FILL-N-GO</h3>
+          <div class="cinfo-row">
+            <div class="cinfo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div class="cinfo-text"><h4>Phone</h4><p>(833) 345-5646</p></div>
+          </div>
+          <div class="cinfo-row">
+            <div class="cinfo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="cinfo-text"><h4>Location</h4><p>Carrollton, TX<br>Serving DFW North Metro</p></div>
+          </div>
+          <div class="cinfo-row">
+            <div class="cinfo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="cinfo-text"><h4>Hours</h4><p>Mon–Sat: 7:00 AM – 6:00 PM<br>Sun: 9:00 AM – 3:00 PM</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Fill It Up — We'll Handle the Rest</h2>
+    <p>Same-day pickup available. Flat-rate pricing. Carrollton's most reliable waste removal crew.</p>
+    <a href="tel:8333455646" class="cta-band-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (833) 345-5646
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">FILL-N-GO Waste</div>
+        <p class="footer-brand-desc">Carrollton's go-to dumpster rental and junk removal service. Same-day availability. Flat-rate pricing. No surprises. Serving the DFW north corridor.</p>
+        <div style="display:flex;align-items:center;gap:6px;color:var(--accent);font-family:var(--font-display);font-size:16px;font-weight:600;margin-top:12px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (833) 345-5646
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Roll-Off Dumpsters</a></li>
+          <li><a href="#">Junk Removal</a></li>
+          <li><a href="#">Property Cleanouts</a></li>
+          <li><a href="#">Construction Cleanup</a></li>
+          <li><a href="#">Appliance Disposal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Area</h4>
+        <ul>
+          <li><a href="#">Carrollton</a></li>
+          <li><a href="#">Addison</a></li>
+          <li><a href="#">Farmers Branch</a></li>
+          <li><a href="#">Coppell</a></li>
+          <li><a href="#">Irving</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:8333455646">(833) 345-5646</a></li>
+          <li><a href="#">Carrollton, TX 75006</a></li>
+          <li><a href="#">Mon–Sat 7AM–6PM</a></li>
+          <li><a href="#">Sun 9AM–3PM</a></li>
+          <li><a href="#">Licensed &amp; Insured</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      &copy; 2025 FILL-N-GO Waste &bull; Carrollton, TX &bull; Licensed &amp; Insured &bull; All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+<script>
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-num[data-target]').forEach(el => statObs.observe(el));
+
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); cardObs.unobserve(e.target); } });
+}, { threshold: 0.2 });
+document.querySelectorAll('.card').forEach(c => cardObs.observe(c));
+
+window.addEventListener('scroll', () => {
+  document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+</script>
+</body>
+</html>

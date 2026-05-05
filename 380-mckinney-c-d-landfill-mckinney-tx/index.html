@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>380 McKinney C&amp;D Landfill | Construction Waste Disposal in McKinney, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #2d3940;
+  --primary-dark: #222c32;
+  --primary-darkest: #161e22;
+  --accent: #2ea3f2;
+  --accent-dark: #1a8cd8;
+  --text-light: #e8f0f5;
+  --text-muted: #8fa8b8;
+  --bg-white: #ffffff;
+  --bg-off: #f4f7f9;
+  --bg-dark: #222c32;
+  --bg-darkest: #161e22;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Source Sans 3', sans-serif; color: #1a1a1a; background: var(--bg-white); }
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--primary);
+  padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.4);
+}
+.nav-logo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.35rem; font-weight: 700;
+  color: #fff; letter-spacing: 0.03em; text-transform: uppercase;
+  display: flex; flex-direction: column; line-height: 1.1;
+}
+.nav-logo-sub { font-size: 0.7rem; font-weight: 400; color: var(--accent); letter-spacing: 0.1em; }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9rem; font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-cta {
+  background: var(--accent); color: #fff !important;
+  padding: 9px 22px; border-radius: 4px;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--accent-dark) !important; }
+
+/* HERO */
+.hero {
+  background: var(--primary);
+  padding: 90px 40px 80px;
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none; opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.hero-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 400px; gap: 56px; align-items: center;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(46,163,242,0.12); border: 1px solid rgba(46,163,242,0.3);
+  color: var(--accent); padding: 5px 13px; border-radius: 4px;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 700; line-height: 1.1;
+  color: #fff; text-transform: uppercase; letter-spacing: 0.02em;
+  margin-bottom: 20px;
+}
+.hero h1 .accent-line {
+  display: block; color: var(--accent);
+}
+.hero-sub {
+  font-size: 1.1rem; line-height: 1.65;
+  color: rgba(255,255,255,0.72); margin-bottom: 32px; max-width: 500px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+.btn-primary {
+  background: var(--accent); color: #fff;
+  padding: 13px 28px; border-radius: 4px;
+  font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-primary:hover { background: var(--accent-dark); }
+.btn-outline {
+  background: transparent; color: rgba(255,255,255,0.9);
+  padding: 13px 28px; border-radius: 4px; border: 2px solid rgba(255,255,255,0.35);
+  font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  transition: border-color 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.75); }
+.hero-trust {
+  display: flex; gap: 24px; flex-wrap: wrap;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.85rem; color: rgba(255,255,255,0.65); font-weight: 500;
+}
+.trust-item svg { width: 15px; height: 15px; color: var(--accent); flex-shrink: 0; }
+.hero-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px; padding: 36px 30px;
+}
+.hero-card-header {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--accent); margin-bottom: 22px;
+  padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.material-list { display: flex; flex-direction: column; gap: 10px; }
+.material-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border-radius: 6px;
+  background: rgba(255,255,255,0.05);
+  font-size: 0.9rem; color: rgba(255,255,255,0.8); font-weight: 500;
+}
+.material-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent); flex-shrink: 0;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-tag    { animation: heroFadeUp 0.5s ease both; animation-delay: 0.05s; }
+.hero h1     { animation: heroFadeUp 0.5s ease both; animation-delay: 0.15s; }
+.hero-sub    { animation: heroFadeUp 0.5s ease both; animation-delay: 0.25s; }
+.hero-actions{ animation: heroFadeUp 0.5s ease both; animation-delay: 0.33s; }
+.hero-trust  { animation: heroFadeUp 0.5s ease both; animation-delay: 0.4s; }
+.hero-card   { animation: heroFadeUp 0.6s ease both; animation-delay: 0.2s; }
+
+/* STATS BAR */
+.stats-bar {
+  background: var(--primary-darkest);
+  padding: 32px 40px;
+}
+.stats-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 20px;
+  text-align: center;
+}
+.stat-item {
+  padding: 20px 16px;
+  border: 1px solid rgba(46,163,242,0.2);
+  border-radius: 8px;
+  background: rgba(46,163,242,0.05);
+}
+.stat-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.2rem; font-weight: 700; color: var(--accent); line-height: 1;
+}
+.stat-label {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.07em;
+  text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 7px;
+}
+
+/* SERVICES */
+.services {
+  background: var(--bg-off);
+  padding: 88px 40px;
+}
+.section-header {
+  max-width: 1140px; margin: 0 auto 52px;
+}
+.section-eyebrow {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.02em; color: #1a1a1a; line-height: 1.15;
+}
+.section-sub {
+  font-size: 1.05rem; color: #555; margin-top: 12px; max-width: 540px;
+}
+.services-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 26px;
+}
+.svc-card {
+  background: var(--bg-white);
+  border-radius: 8px; padding: 30px 26px;
+  border: 1px solid #dde5ec;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.svc-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(45,57,64,0.12); }
+.svc-icon-wrap {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: rgba(46,163,242,0.1);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.svc-icon-wrap svg { width: 26px; height: 26px; color: var(--accent); }
+.svc-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a; margin-bottom: 10px;
+}
+.svc-card p { font-size: 0.92rem; line-height: 1.62; color: #555; }
+
+/* WHY */
+.why {
+  background: var(--bg-dark);
+  padding: 88px 40px;
+}
+.why-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+}
+.why-left .section-title { color: #fff; }
+.why-left .section-sub { color: rgba(255,255,255,0.65); }
+.why-grid {
+  margin-top: 36px;
+  display: grid; grid-template-columns: repeat(2,1fr); gap: 16px;
+}
+.why-block {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-top: 3px solid var(--accent);
+  border-radius: 8px; padding: 22px 18px;
+}
+.why-block-icon { color: var(--accent); margin-bottom: 12px; }
+.why-block-icon svg { width: 22px; height: 22px; }
+.why-block h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.95rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #fff; margin-bottom: 6px;
+}
+.why-block p { font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.55; }
+.why-right {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 10px; padding: 36px 30px;
+}
+.why-right h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--accent); margin-bottom: 20px;
+}
+.materials-accepted { display: flex; flex-direction: column; gap: 10px; }
+.mat-row {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px; border-radius: 6px;
+  background: rgba(255,255,255,0.04);
+  font-size: 0.9rem; color: rgba(255,255,255,0.8);
+}
+.mat-row svg { width: 16px; height: 16px; color: var(--accent); flex-shrink: 0; }
+
+/* HOW IT WORKS */
+.how {
+  background: var(--bg-darkest);
+  padding: 88px 40px;
+}
+.how .section-title { color: #fff; }
+.how .section-sub { color: rgba(255,255,255,0.62); }
+.how-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 26px;
+}
+.how-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px; padding: 34px 26px;
+}
+.how-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.8rem; font-weight: 700;
+  color: var(--accent); opacity: 0.3; line-height: 1;
+  margin-bottom: 14px;
+}
+.how-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.15rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #fff; margin-bottom: 10px;
+}
+.how-card p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+/* REVIEWS */
+.reviews {
+  background: var(--bg-off);
+  padding: 88px 40px;
+}
+.reviews-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 22px;
+}
+.review-card {
+  background: var(--primary);
+  border-radius: 8px; padding: 28px 24px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.review-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(45,57,64,0.2); }
+.review-stars { color: var(--accent); font-size: 1rem; margin-bottom: 14px; letter-spacing: 2px; }
+.review-text { font-size: 0.92rem; line-height: 1.65; color: rgba(255,255,255,0.78); margin-bottom: 18px; font-style: italic; }
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--accent); display: flex; align-items: center; justify-content: center;
+  font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 700; color: #fff;
+}
+.reviewer-info strong { display: block; font-size: 0.88rem; font-weight: 600; color: #fff; }
+.reviewer-info span { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
+
+/* AREAS */
+.areas {
+  background: var(--primary-dark);
+  padding: 72px 40px;
+}
+.areas .section-title { color: #fff; }
+.areas-list {
+  max-width: 1140px; margin: 36px auto 0;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 12px;
+}
+.area-pill {
+  background: rgba(46,163,242,0.08);
+  border: 1px solid rgba(46,163,242,0.2);
+  border-radius: 6px; padding: 12px 16px;
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.88rem; color: rgba(255,255,255,0.8); font-weight: 500;
+}
+.area-pill svg { width: 13px; height: 13px; color: var(--accent); flex-shrink: 0; }
+
+/* CONTACT */
+.contact {
+  background: var(--bg-white);
+  padding: 88px 40px;
+}
+.contact-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+}
+.contact-info .section-title { color: #1a1a1a; }
+.contact-info .section-sub { color: #555; }
+.contact-channels { margin-top: 30px; display: flex; flex-direction: column; gap: 14px; }
+.channel {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px; border-radius: 8px;
+  border: 1px solid #dde5ec; background: var(--bg-off);
+}
+.channel-icon {
+  width: 42px; height: 42px; border-radius: 8px;
+  background: rgba(46,163,242,0.1);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.channel-icon svg { width: 20px; height: 20px; color: var(--accent); }
+.channel-text strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #888; font-weight: 600; margin-bottom: 2px; }
+.channel-text a { font-size: 1rem; font-weight: 600; color: var(--primary); }
+.contact-form {
+  background: var(--bg-off); border-radius: 12px; padding: 34px 30px;
+  border: 1px solid #dde5ec;
+}
+.form-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a; margin-bottom: 22px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+.form-group label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #555; }
+.form-group input, .form-group select, .form-group textarea {
+  padding: 11px 14px; border: 1px solid #ccd4da; border-radius: 5px;
+  font-size: 0.93rem; font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg-white); color: #1a1a1a; transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none; border-color: var(--accent);
+}
+.form-group textarea { resize: vertical; min-height: 88px; }
+.form-submit {
+  width: 100%; padding: 13px;
+  background: var(--accent); color: #fff; border: none; border-radius: 5px;
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer;
+  transition: background 0.2s;
+}
+.form-submit:hover { background: var(--accent-dark); }
+
+/* CTA BAND */
+.cta-band {
+  background: var(--primary);
+  padding: 70px 40px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-band::after {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none; opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.cta-band h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.03em; color: #fff; margin-bottom: 14px;
+}
+.cta-band h2 em { color: var(--accent); font-style: normal; }
+.cta-band p {
+  font-size: 1.05rem; color: rgba(255,255,255,0.72);
+  max-width: 500px; margin: 0 auto 28px;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--bg-darkest);
+  padding: 52px 40px 28px;
+}
+.footer-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-brand .nav-logo { color: #fff; font-family: 'Oswald', sans-serif; font-size: 1.3rem; font-weight: 700; text-transform: uppercase; }
+.footer-brand p { font-size: 0.88rem; line-height: 1.65; color: rgba(255,255,255,0.55); margin-top: 12px; max-width: 280px; }
+.footer-col h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: #fff; margin-bottom: 14px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-col ul li a { font-size: 0.86rem; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--accent); }
+.footer-bottom {
+  max-width: 1140px; margin: 22px auto 0;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.8rem; color: rgba(255,255,255,0.35);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.5s ease forwards; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); }
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .why-inner { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: repeat(2,1fr); }
+  .reviews-grid { grid-template-columns: repeat(2,1fr); }
+  .areas-list { grid-template-columns: repeat(2,1fr); }
+  .contact-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 56px 20px 48px; }
+  .stats-inner { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-list { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">
+    380 McKinney C&amp;D Landfill
+    <span class="nav-logo-sub">McKinney, TX</span>
+  </div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:4695911380" class="nav-cta">(469) 591-1380</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-tag">McKinney's Construction Disposal Experts</div>
+      <h1>Construction Waste?
+        <span class="accent-line">Handled.</span>
+      </h1>
+      <p class="hero-sub">McKinney's trusted C&amp;D landfill for contractors, builders, and homeowners. Safe, legal, and cost-effective disposal of construction and demolition debris.</p>
+      <div class="hero-actions">
+        <a href="tel:4695911380" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          (469) 591-1380
+        </a>
+        <a href="#contact" class="btn-outline">Get a Disposal Quote</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>TCEQ Permitted</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Commercial Accounts</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Open 6 Days a Week</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-header">Accepted Materials</div>
+      <div class="material-list">
+        <div class="material-item"><div class="material-dot"></div>Concrete &amp; Masonry</div>
+        <div class="material-item"><div class="material-dot"></div>Lumber &amp; Wood Waste</div>
+        <div class="material-item"><div class="material-dot"></div>Drywall &amp; Plaster</div>
+        <div class="material-item"><div class="material-dot"></div>Roofing Materials</div>
+        <div class="material-item"><div class="material-dot"></div>Metal Scraps</div>
+        <div class="material-item"><div class="material-dot"></div>Dirt &amp; Clean Fill</div>
+        <div class="material-item"><div class="material-dot"></div>Demolition Debris</div>
+        <div class="material-item"><div class="material-dot"></div>Asphalt &amp; Pavement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num" data-target="20">0</div>
+      <div class="stat-label">Years in Operation</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="500">0</div>
+      <div class="stat-label">Contractor Accounts</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="6">0</div>
+      <div class="stat-label">Days Open Weekly</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="15">0</div>
+      <div class="stat-label">Material Types Accepted</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-eyebrow">Disposal Services</div>
+    <h2 class="section-title">Complete C&amp;D Disposal Solutions</h2>
+    <p class="section-sub">From single loads to commercial volume accounts — we handle construction waste at every scale.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card card">
+      <div class="svc-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+      </div>
+      <h3>Residential Drop-Off</h3>
+      <p>Homeowners can drop off renovation debris, roofing materials, and demolition waste by the load. Quick, affordable, and hassle-free.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </div>
+      <h3>Commercial Hauling Accounts</h3>
+      <p>Set up a commercial account for recurring disposal needs. Volume pricing available for contractors, builders, and demolition companies.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <h3>Concrete &amp; Masonry Recycling</h3>
+      <p>We accept concrete, brick, block, and masonry debris and process it for recycled aggregate — keeping it out of general landfills.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>Clean Fill Acceptance</h3>
+      <p>Dirt, clay, and clean soil accepted for fill purposes. Ideal for excavation contractors who need to offload cleanly certified material.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z"/></svg>
+      </div>
+      <h3>Dumpster &amp; Roll-Off Unload</h3>
+      <p>Bring your roll-off dumpster loads directly to our facility. Fast unload service with crew assistance available for large loads.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+      </div>
+      <h3>Asphalt &amp; Pavement Disposal</h3>
+      <p>Shingles, tar paper, asphalt pavement, and paving materials accepted. We process and divert materials from landfill where possible.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-left">
+      <div class="section-eyebrow">Why Choose 380</div>
+      <h2 class="section-title">The Smart Choice for C&amp;D Disposal</h2>
+      <p class="section-sub">Contractors and homeowners across McKinney and Collin County trust us for reliable, permitted, and affordable construction waste disposal.</p>
+      <div class="why-grid">
+        <div class="why-block card">
+          <div class="why-block-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <h4>TCEQ Permitted</h4>
+          <p>Fully permitted C&amp;D facility operating in compliance with all Texas environmental regulations.</p>
+        </div>
+        <div class="why-block card">
+          <div class="why-block-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <h4>Competitive Pricing</h4>
+          <p>Affordable by-the-load rates for residents and volume pricing for commercial accounts.</p>
+        </div>
+        <div class="why-block card">
+          <div class="why-block-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h4>Convenient Hours</h4>
+          <p>Open 6 days a week so you can drop off on your schedule — including Saturdays.</p>
+        </div>
+        <div class="why-block card">
+          <div class="why-block-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h4>McKinney Convenient</h4>
+          <p>Centrally located in McKinney for easy access from throughout Collin County.</p>
+        </div>
+      </div>
+    </div>
+    <div class="why-right">
+      <h3>Accepted Material Types</h3>
+      <div class="materials-accepted">
+        <div class="mat-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Concrete, brick, block</div>
+        <div class="mat-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Lumber and wood waste</div>
+        <div class="mat-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Drywall and plaster</div>
+        <div class="mat-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Roofing shingles</div>
+        <div class="mat-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Metal scraps</div>
+        <div class="mat-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Clean fill dirt and soil</div>
+        <div class="mat-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Asphalt and pavement</div>
+        <div class="mat-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>General C&amp;D debris</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="section-header">
+    <div class="section-eyebrow">The Process</div>
+    <h2 class="section-title">Simple Drop-Off in 3 Steps</h2>
+    <p class="section-sub">Disposing of construction waste at 380 McKinney C&amp;D is fast and straightforward.</p>
+  </div>
+  <div class="how-grid">
+    <div class="how-card card">
+      <div class="how-num">01</div>
+      <h3>Call or Drive In</h3>
+      <p>Call ahead to confirm your material is accepted and get a quote, or simply drive in during operating hours. No appointment required for most drop-offs.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-num">02</div>
+      <h3>Weigh In at the Scale</h3>
+      <p>Pull onto our certified scales for a pre-disposal weigh-in. Our team will direct you to the correct disposal area for your material type.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-num">03</div>
+      <h3>Unload &amp; You're Done</h3>
+      <p>Unload in the designated zone, weigh out, and pay at the gate. Quick, clean, and done. Billing accounts available for regular haulers.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="section-header">
+    <div class="section-eyebrow">Customer Reviews</div>
+    <h2 class="section-title">Trusted by McKinney Contractors</h2>
+    <p class="section-sub">Hear from builders and homeowners who rely on 380 McKinney C&amp;D for their disposal needs.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"My go-to for all demolition debris. The staff is always professional and the process is fast. Weighing in and out takes maybe 10 minutes. Best disposal facility in Collin County."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">JH</div>
+        <div class="reviewer-info"><strong>Jason H.</strong><span>General Contractor, McKinney</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Renovated two houses this year and used 380 C&amp;D for all the drywall and concrete. Pricing is fair and it's way easier than trying to fit it all in a bin. Highly recommend."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">TM</div>
+        <div class="reviewer-info"><strong>Teresa M.</strong><span>Homeowner, Allen, TX</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"We run a roofing crew and use them every week. They set us up with a commercial account and the billing is seamless. Convenient hours make it easy to drop loads on any day."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">CR</div>
+        <div class="reviewer-info"><strong>Carlos R.</strong><span>Roofing Company, Frisco</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="section-header">
+    <div class="section-eyebrow">Coverage</div>
+    <h2 class="section-title">Serving Contractors Across Collin County</h2>
+  </div>
+  <div class="areas-list">
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>McKinney</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Allen</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Frisco</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Plano</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Prosper</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Celina</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Wylie</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Sachse</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-eyebrow">Contact Us</div>
+      <h2 class="section-title">Ready to Dispose?</h2>
+      <p class="section-sub">Call us or submit the form for pricing on your material type. Commercial account inquiries welcome.</p>
+      <div class="contact-channels">
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="channel-text"><strong>Phone</strong><a href="tel:4695911380">(469) 591-1380</a></div>
+        </div>
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="channel-text"><strong>Location</strong><a href="#">McKinney, TX</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Request Pricing</div>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="(469) 000-0000"></div>
+      <div class="form-group"><label>Account Type</label>
+        <select>
+          <option>Residential / Homeowner</option>
+          <option>Contractor / Commercial</option>
+          <option>Demolition Company</option>
+          <option>Roofing Contractor</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Material Type</label><input type="text" placeholder="e.g., concrete, roofing shingles, lumber"></div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Estimated load size, any special requirements..."></textarea></div>
+      <button class="form-submit">Get Pricing</button>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <h2>Ready to Drop Off Your <em>C&amp;D Debris?</em></h2>
+  <p>Call 380 McKinney C&amp;D Landfill for current rates and hours. Commercial accounts welcome.</p>
+  <a href="tel:4695911380" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    (469) 591-1380
+  </a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo">380 McKinney C&amp;D Landfill</div>
+      <p>Permitted construction and demolition debris disposal serving McKinney, TX and Collin County contractors and homeowners.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Residential Drop-Off</a></li>
+        <li><a href="#">Commercial Accounts</a></li>
+        <li><a href="#">Concrete Recycling</a></li>
+        <li><a href="#">Clean Fill</a></li>
+        <li><a href="#">Asphalt Disposal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Areas</h4>
+      <ul>
+        <li><a href="#">McKinney</a></li>
+        <li><a href="#">Allen</a></li>
+        <li><a href="#">Frisco</a></li>
+        <li><a href="#">Plano</a></li>
+        <li><a href="#">Prosper</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:4695911380">(469) 591-1380</a></li>
+        <li><a href="#">McKinney, TX</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 380 McKinney C&amp;D Landfill. All rights reserved.</span>
+    <span>Serving Collin County, TX</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var stats = document.querySelectorAll('[data-target]');
+  var counted = false;
+  function runCounters(){
+    if(counted) return; counted = true;
+    stats.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-target'),10);
+      var current = 0;
+      var timer = setInterval(function(){
+        current += Math.ceil(target/55);
+        if(current >= target){ current = target; clearInterval(timer); }
+        el.textContent = current.toLocaleString();
+      }, 28);
+    });
+  }
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.card').forEach(function(el){ observer.observe(el); });
+  var statsBar = document.querySelector('.stats-bar');
+  if(statsBar){
+    var so = new IntersectionObserver(function(entries){ if(entries[0].isIntersecting) runCounters(); },{threshold:0.3});
+    so.observe(statsBar);
+  }
+})();
+</script>
+</body>
+</html>

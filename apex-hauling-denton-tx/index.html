@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Hauling | Same-Day Junk Removal in Denton, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1e3d0f;
+  --primary-dark: #162d0b;
+  --primary-darkest: #0e1e07;
+  --accent: #e85d04;
+  --accent-dark: #c44d03;
+  --text-light: #f0f4ee;
+  --text-muted: #a8b8a0;
+  --bg-white: #ffffff;
+  --bg-off: #f7f9f5;
+  --bg-dark: #162d0b;
+  --bg-darkest: #0e1e07;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Source Sans 3', sans-serif; color: #1a1a1a; background: var(--bg-white); }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+
+/* NAV */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--primary);
+  padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+.nav-logo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.45rem; font-weight: 700;
+  color: #fff; letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.95rem; font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-transform: uppercase; letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-cta {
+  background: var(--accent); color: #fff !important;
+  padding: 9px 22px; border-radius: 4px;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--accent-dark) !important; }
+
+/* HERO */
+.hero {
+  background: var(--primary);
+  padding: 88px 40px 80px;
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.hero-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(232,93,4,0.15); border: 1px solid rgba(232,93,4,0.35);
+  color: var(--accent); padding: 6px 14px; border-radius: 20px;
+  font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.hero-badge svg { width: 14px; height: 14px; flex-shrink: 0; }
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 700; line-height: 1.1;
+  color: #fff; text-transform: uppercase; letter-spacing: 0.02em;
+  margin-bottom: 22px;
+}
+.hero h1 em { color: var(--accent); font-style: normal; }
+.hero-sub {
+  font-size: 1.15rem; line-height: 1.65;
+  color: rgba(255,255,255,0.78); margin-bottom: 34px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--accent); color: #fff;
+  padding: 14px 30px; border-radius: 4px;
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-primary:hover { background: var(--accent-dark); }
+.btn-outline {
+  background: transparent; color: #fff;
+  padding: 14px 30px; border-radius: 4px; border: 2px solid rgba(255,255,255,0.4);
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  transition: border-color 0.2s, color 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-outline:hover { border-color: #fff; color: #fff; }
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 36px 32px;
+}
+.hero-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--accent); margin-bottom: 20px;
+}
+.hero-feature {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.hero-feature:last-child { border-bottom: none; padding-bottom: 0; }
+.hero-feature-icon {
+  width: 38px; height: 38px; border-radius: 8px;
+  background: rgba(232,93,4,0.18);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.hero-feature-icon svg { width: 20px; height: 20px; color: var(--accent); }
+.hero-feature-text strong {
+  display: block; color: #fff;
+  font-family: 'Oswald', sans-serif; font-size: 0.95rem;
+  font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em;
+  margin-bottom: 3px;
+}
+.hero-feature-text span {
+  font-size: 0.88rem; color: rgba(255,255,255,0.65);
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-badge  { animation: heroFadeUp 0.5s ease both; animation-delay: 0.05s; }
+.hero h1     { animation: heroFadeUp 0.5s ease both; animation-delay: 0.15s; }
+.hero-sub    { animation: heroFadeUp 0.5s ease both; animation-delay: 0.25s; }
+.hero-actions{ animation: heroFadeUp 0.5s ease both; animation-delay: 0.35s; }
+.hero-card   { animation: heroFadeUp 0.6s ease both; animation-delay: 0.2s; }
+
+/* STATS BAR */
+.stats-bar {
+  background: var(--primary-dark);
+  padding: 36px 40px;
+  border-top: 3px solid var(--accent);
+}
+.stats-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 24px;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.4rem; font-weight: 700; color: var(--accent);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.82rem; font-weight: 600; letter-spacing: 0.07em;
+  text-transform: uppercase; color: rgba(255,255,255,0.65); margin-top: 6px;
+}
+
+/* SERVICES */
+.services {
+  background: var(--bg-off);
+  padding: 88px 40px;
+}
+.section-header {
+  max-width: 1140px; margin: 0 auto 52px;
+}
+.section-eyebrow {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.02em; color: #1a1a1a; line-height: 1.15;
+}
+.section-sub {
+  font-size: 1.05rem; color: #555; margin-top: 12px; max-width: 560px;
+}
+.services-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 28px;
+}
+.svc-card {
+  background: var(--bg-white);
+  border-radius: 10px; padding: 32px 28px 28px;
+  border: 1px solid #e4e8e2;
+  position: relative; overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.svc-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(30,61,15,0.12); }
+.svc-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5rem; font-weight: 700;
+  color: var(--accent); opacity: 0.12;
+  position: absolute; top: 12px; right: 16px;
+  line-height: 1;
+}
+.svc-icon {
+  width: 52px; height: 52px; border-radius: 10px;
+  background: rgba(30,61,15,0.08);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.svc-icon svg { width: 26px; height: 26px; color: var(--primary); }
+.svc-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.15rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a; margin-bottom: 10px;
+}
+.svc-card p { font-size: 0.93rem; line-height: 1.6; color: #555; }
+
+/* WHY */
+.why {
+  background: var(--bg-dark);
+  padding: 88px 40px;
+}
+.why-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+}
+.why-left .section-eyebrow { color: var(--accent); }
+.why-left .section-title { color: #fff; }
+.why-left .section-sub { color: rgba(255,255,255,0.7); }
+.why-list { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 18px; }
+.why-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 18px; border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.why-check {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(232,93,4,0.2);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.why-check svg { width: 14px; height: 14px; color: var(--accent); }
+.why-item-text strong {
+  display: block; color: #fff;
+  font-family: 'Oswald', sans-serif; font-size: 0.95rem;
+  font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em;
+  margin-bottom: 3px;
+}
+.why-item-text span { font-size: 0.88rem; color: rgba(255,255,255,0.6); }
+.why-right {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px; padding: 40px 36px;
+}
+.why-right-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem; font-weight: 700;
+  color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+.coverage-grid {
+  display: grid; grid-template-columns: repeat(2,1fr); gap: 10px;
+}
+.coverage-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.9rem; color: rgba(255,255,255,0.8);
+  padding: 8px 12px; border-radius: 6px;
+  background: rgba(255,255,255,0.04);
+}
+.coverage-item svg { width: 12px; height: 12px; color: var(--accent); flex-shrink: 0; }
+
+/* HOW IT WORKS */
+.how {
+  background: var(--bg-darkest);
+  padding: 88px 40px;
+}
+.how .section-eyebrow { color: var(--accent); }
+.how .section-title { color: #fff; }
+.how .section-sub { color: rgba(255,255,255,0.65); }
+.how-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 28px;
+}
+.how-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px; padding: 36px 28px;
+  position: relative;
+}
+.how-step {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent);
+  background: rgba(232,93,4,0.15); border-radius: 20px;
+  display: inline-block; padding: 4px 12px; margin-bottom: 20px;
+}
+.how-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #fff; margin-bottom: 12px;
+}
+.how-card p { font-size: 0.92rem; color: rgba(255,255,255,0.62); line-height: 1.65; }
+
+/* REVIEWS */
+.reviews {
+  background: var(--bg-off);
+  padding: 88px 40px;
+}
+.reviews-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
+}
+.review-card {
+  background: var(--bg-white);
+  border-radius: 8px; padding: 28px 26px;
+  border: 1px solid #e4e8e2;
+  border-bottom: 3px solid var(--accent);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.review-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(30,61,15,0.1); }
+.review-stars { color: var(--accent); font-size: 1.1rem; margin-bottom: 14px; }
+.review-text { font-size: 0.94rem; line-height: 1.65; color: #444; margin-bottom: 18px; font-style: italic; }
+.reviewer {
+  display: flex; align-items: center; gap: 12px;
+}
+.reviewer-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--primary); display: flex; align-items: center; justify-content: center;
+  font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 700; color: #fff;
+}
+.reviewer-info strong { display: block; font-size: 0.9rem; font-weight: 600; color: #1a1a1a; }
+.reviewer-info span { font-size: 0.8rem; color: #888; }
+
+/* SERVICE AREAS */
+.areas {
+  background: var(--primary-dark);
+  padding: 72px 40px;
+}
+.areas .section-eyebrow { color: var(--accent); }
+.areas .section-title { color: #fff; }
+.areas-list {
+  max-width: 1140px; margin: 36px auto 0;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 12px;
+}
+.area-pill {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px; padding: 12px 16px;
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.9rem; color: rgba(255,255,255,0.85);
+  font-weight: 500;
+}
+.area-pill svg { width: 14px; height: 14px; color: var(--accent); flex-shrink: 0; }
+
+/* CONTACT */
+.contact {
+  background: var(--bg-white);
+  padding: 88px 40px;
+}
+.contact-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+}
+.contact-info .section-title { color: #1a1a1a; }
+.contact-info .section-sub { color: #555; }
+.contact-channels { margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+.channel {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 18px; border-radius: 8px;
+  border: 1px solid #e0e0e0; background: var(--bg-off);
+}
+.channel-icon {
+  width: 44px; height: 44px; border-radius: 8px;
+  background: rgba(30,61,15,0.08);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.channel-icon svg { width: 22px; height: 22px; color: var(--primary); }
+.channel-text strong { display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; color: #888; font-weight: 600; margin-bottom: 2px; }
+.channel-text a { font-size: 1.05rem; font-weight: 600; color: var(--primary); }
+.contact-form {
+  background: var(--bg-off); border-radius: 12px; padding: 36px 32px;
+  border: 1px solid #e0e0e0;
+}
+.form-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a; margin-bottom: 24px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.form-group label { font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #555; }
+.form-group input, .form-group select, .form-group textarea {
+  padding: 11px 14px; border: 1px solid #d0d0d0; border-radius: 6px;
+  font-size: 0.95rem; font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg-white); color: #1a1a1a;
+  transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none; border-color: var(--primary);
+}
+.form-group textarea { resize: vertical; min-height: 90px; }
+.form-submit {
+  width: 100%; padding: 14px;
+  background: var(--accent); color: #fff; border: none; border-radius: 6px;
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer;
+  transition: background 0.2s;
+}
+.form-submit:hover { background: var(--accent-dark); }
+
+/* CTA BAND */
+.cta-band {
+  background: var(--primary);
+  padding: 72px 40px;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-band::after {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none; opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.cta-band h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.03em; color: #fff; margin-bottom: 16px;
+}
+.cta-band h2 em { color: var(--accent); font-style: normal; }
+.cta-band p {
+  font-size: 1.1rem; color: rgba(255,255,255,0.75);
+  max-width: 520px; margin: 0 auto 32px;
+}
+.cta-band .btn-primary { margin: 0 auto; }
+
+/* FOOTER */
+.footer {
+  background: var(--bg-darkest);
+  padding: 56px 40px 32px;
+  color: rgba(255,255,255,0.65);
+}
+.footer-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-brand p { font-size: 0.9rem; line-height: 1.65; margin-top: 14px; max-width: 280px; }
+.footer-col h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; color: #fff; margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col ul li a { font-size: 0.88rem; color: rgba(255,255,255,0.6); transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--accent); }
+.footer-bottom {
+  max-width: 1140px; margin: 24px auto 0;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.82rem; color: rgba(255,255,255,0.4);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.5s ease forwards; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); }
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .why-inner { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: repeat(2,1fr); }
+  .reviews-grid { grid-template-columns: repeat(2,1fr); }
+  .areas-list { grid-template-columns: repeat(2,1fr); }
+  .contact-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 60px 20px 52px; }
+  .hero h1 { font-size: 2rem; }
+  .stats-inner { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-list { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">Apex <span>Hauling</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:9402845555" class="nav-cta">(940) 284-5555</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Same-Day Service Available
+      </div>
+      <h1>Same-Day Hauling<br>in <em>Denton, TX</em></h1>
+      <p class="hero-sub">Full-service junk removal and hauling for homes and businesses across Denton. We load, haul, and dispose — you just point and relax.</p>
+      <div class="hero-actions">
+        <a href="tel:9402845555" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="#contact" class="btn-outline">Free Estimate</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Why Choose Apex</div>
+      <div class="hero-feature">
+        <div class="hero-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="hero-feature-text">
+          <strong>Same-Day Availability</strong>
+          <span>Book by noon, hauled by evening in most cases</span>
+        </div>
+      </div>
+      <div class="hero-feature">
+        <div class="hero-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="hero-feature-text">
+          <strong>Fully Licensed &amp; Insured</strong>
+          <span>Your property protected on every job</span>
+        </div>
+      </div>
+      <div class="hero-feature">
+        <div class="hero-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div class="hero-feature-text">
+          <strong>Upfront Flat Pricing</strong>
+          <span>No hidden fees — know your cost before we start</span>
+        </div>
+      </div>
+      <div class="hero-feature">
+        <div class="hero-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="♻"/><path d="M2.5 2v6h6M2.66 15.57a10 10 0 1 0 .57-8.38"/></svg>
+        </div>
+        <div class="hero-feature-text">
+          <strong>Eco-Friendly Disposal</strong>
+          <span>We donate and recycle whenever possible</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num" data-target="2400">0</div>
+      <div class="stat-label">Jobs Completed</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="98">0</div>
+      <div class="stat-label">% Customer Satisfaction</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="12">0</div>
+      <div class="stat-label">Cities Served</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="4">0</div>
+      <div class="stat-label">Hour Response Time</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-eyebrow">What We Remove</div>
+    <h2 class="section-title">Full-Service Hauling Solutions</h2>
+    <p class="section-sub">No load too large, no item too heavy. We tackle it all so you don't have to.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card card">
+      <div class="svc-num">01</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <h3>Residential Junk Removal</h3>
+      <p>Attic, basement, garage, and whole-house cleanouts. We remove old furniture, appliances, electronics, and general clutter fast.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-num">02</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <h3>Commercial Cleanouts</h3>
+      <p>Office moves, retail transitions, and warehouse cleanouts handled efficiently with minimal disruption to your operations.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-num">03</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+      </div>
+      <h3>Appliance Removal</h3>
+      <p>Refrigerators, washers, dryers, stoves, and water heaters removed and responsibly disposed of or recycled.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-num">04</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      </div>
+      <h3>Furniture Hauling</h3>
+      <p>Sofas, mattresses, desks, and bedroom sets. We handle heavy furniture with care and clear it from any room in your home.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-num">05</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <h3>Construction Debris</h3>
+      <p>Drywall, lumber, tile, roofing materials, and general construction waste removed from your project site quickly.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-num">06</div>
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg>
+      </div>
+      <h3>Estate &amp; Foreclosure Cleanouts</h3>
+      <p>Full property cleanouts for estates, rentals, and foreclosures. We work quickly and respectfully to get properties ready for market.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-left">
+      <div class="section-eyebrow">Why Choose Us</div>
+      <h2 class="section-title">Denton's Go-To Hauling Team</h2>
+      <p class="section-sub">We've been serving Denton and the surrounding area with reliable, professional hauling services you can count on.</p>
+      <ul class="why-list">
+        <li class="why-item card">
+          <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="why-item-text"><strong>No Heavy Lifting Required</strong><span>We do all the loading and hauling — you don't lift a finger</span></div>
+        </li>
+        <li class="why-item card">
+          <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="why-item-text"><strong>Transparent Pricing</strong><span>Flat-rate quotes based on volume, no surprise charges</span></div>
+        </li>
+        <li class="why-item card">
+          <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="why-item-text"><strong>Eco-Responsible Hauling</strong><span>We sort for donation and recycling before landfill disposal</span></div>
+        </li>
+        <li class="why-item card">
+          <div class="why-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="why-item-text"><strong>Professional &amp; Courteous Crew</strong><span>Background-checked, uniformed team members on every job</span></div>
+        </li>
+      </ul>
+    </div>
+    <div class="why-right">
+      <div class="why-right-title">Service Coverage Areas</div>
+      <div class="coverage-grid">
+        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Denton</div>
+        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Corinth</div>
+        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Flower Mound</div>
+        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Lewisville</div>
+        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Little Elm</div>
+        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Highland Village</div>
+        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>The Colony</div>
+        <div class="coverage-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Frisco</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="section-header">
+    <div class="section-eyebrow">The Process</div>
+    <h2 class="section-title">3 Simple Steps to a Clutter-Free Space</h2>
+    <p class="section-sub">Booking and completing your junk removal job has never been easier.</p>
+  </div>
+  <div class="how-grid">
+    <div class="how-card card">
+      <div class="how-step">Step 01</div>
+      <h3>Call or Book Online</h3>
+      <p>Reach us by phone at (940) 284-5555 or fill out our online form. We'll confirm your appointment and give you an upfront price estimate.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-step">Step 02</div>
+      <h3>We Show Up &amp; Quote</h3>
+      <p>Our crew arrives in your 2-hour window and gives you a firm on-site quote. No obligation to proceed — but most customers say yes right away.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-step">Step 03</div>
+      <h3>We Load &amp; You Relax</h3>
+      <p>Say the word and we clear everything out. We sweep up after ourselves and leave your space completely clean. Job done.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="section-header">
+    <div class="section-eyebrow">Customer Reviews</div>
+    <h2 class="section-title">What Denton Residents Are Saying</h2>
+    <p class="section-sub">Real feedback from real customers across Denton and surrounding communities.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Called in the morning, had the whole garage cleared out by 3pm. Apex Hauling is incredibly fast and professional. The crew was respectful and careful with my property."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">MR</div>
+        <div class="reviewer-info"><strong>Marcus R.</strong><span>Denton, TX</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"We needed a full cleanout before listing our house. Apex showed up on time, worked through everything in one shot, and the price was fair. Highly recommend."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">LT</div>
+        <div class="reviewer-info"><strong>Linda T.</strong><span>Corinth, TX</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Used them for a commercial office cleanout in Denton. Three truckloads out in about four hours. Affordable and efficient. Will use again on our next move."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">DK</div>
+        <div class="reviewer-info"><strong>Derek K.</strong><span>Flower Mound, TX</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="section-header">
+    <div class="section-eyebrow">Coverage</div>
+    <h2 class="section-title">Serving Denton &amp; Surrounding Cities</h2>
+  </div>
+  <div class="areas-list">
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Denton</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Corinth</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Flower Mound</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Lewisville</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Little Elm</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Highland Village</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>The Colony</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Frisco</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-eyebrow">Get a Free Quote</div>
+      <h2 class="section-title">Ready to Haul It Away?</h2>
+      <p class="section-sub">Contact us for a free, no-obligation quote. Same-day service available in most cases.</p>
+      <div class="contact-channels">
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="channel-text"><strong>Phone</strong><a href="tel:9402845555">(940) 284-5555</a></div>
+        </div>
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="channel-text"><strong>Location</strong><a href="#">Denton, TX</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Request a Free Quote</div>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="(940) 000-0000"></div>
+      <div class="form-group"><label>Service Needed</label>
+        <select>
+          <option>Residential Junk Removal</option>
+          <option>Commercial Cleanout</option>
+          <option>Appliance Removal</option>
+          <option>Furniture Hauling</option>
+          <option>Construction Debris</option>
+          <option>Estate Cleanout</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Tell us what you need hauled away..."></textarea></div>
+      <button class="form-submit">Get My Free Quote</button>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <h2>Need It Gone <em>Today?</em></h2>
+  <p>Same-day service available across Denton and surrounding areas. Call now and we'll get a crew out fast.</p>
+  <a href="tel:9402845555" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    (940) 284-5555
+  </a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo">Apex <span style="color:var(--accent)">Hauling</span></div>
+      <p>Professional junk removal and hauling services serving Denton, TX and surrounding communities. Fast, affordable, and eco-friendly disposal.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Junk Removal</a></li>
+        <li><a href="#">Commercial Cleanouts</a></li>
+        <li><a href="#">Appliance Removal</a></li>
+        <li><a href="#">Furniture Hauling</a></li>
+        <li><a href="#">Construction Debris</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Areas</h4>
+      <ul>
+        <li><a href="#">Denton</a></li>
+        <li><a href="#">Corinth</a></li>
+        <li><a href="#">Flower Mound</a></li>
+        <li><a href="#">Lewisville</a></li>
+        <li><a href="#">The Colony</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:9402845555">(940) 284-5555</a></li>
+        <li><a href="#">Denton, TX</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Apex Hauling. All rights reserved.</span>
+    <span>Serving Denton, TX &amp; Surrounding Areas</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Stat counters
+  var stats = document.querySelectorAll('[data-target]');
+  var counted = false;
+  function runCounters(){
+    if(counted) return;
+    counted = true;
+    stats.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-target'),10);
+      var duration = 1600;
+      var step = Math.ceil(duration / target);
+      var current = 0;
+      var timer = setInterval(function(){
+        current += Math.ceil(target/60);
+        if(current >= target){ current = target; clearInterval(timer); }
+        el.textContent = current.toLocaleString();
+      }, step);
+    });
+  }
+  // Intersection observer for cards
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.card').forEach(function(el){ observer.observe(el); });
+  // Stats trigger
+  var statsBar = document.querySelector('.stats-bar');
+  var statsObserver = new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting) runCounters();
+  }, {threshold: 0.3});
+  if(statsBar) statsObserver.observe(statsBar);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rip n' Drop | Dumpster Rental &amp; Junk Removal in Frisco, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #8b0000;
+  --primary-dark: #6d0000;
+  --primary-darkest: #4a0000;
+  --accent: #f97316;
+  --accent-dark: #ea6c09;
+  --text-light: #fef2ee;
+  --text-muted: #c8a090;
+  --bg-white: #ffffff;
+  --bg-off: #fdf7f5;
+  --bg-dark: #6d0000;
+  --bg-darkest: #4a0000;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Source Sans 3', sans-serif; color: #1a1a1a; background: var(--bg-white); }
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--primary);
+  padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.4);
+}
+.nav-logo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem; font-weight: 700;
+  color: #fff; letter-spacing: 0.02em; text-transform: uppercase;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 26px; align-items: center; }
+.nav-links a {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9rem; font-weight: 600;
+  color: rgba(255,255,255,0.82);
+  text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-cta {
+  background: var(--accent); color: #fff !important;
+  padding: 9px 22px; border-radius: 4px; transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--accent-dark) !important; }
+
+/* HERO */
+.hero {
+  background: var(--primary);
+  padding: 88px 40px 76px;
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.hero-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 400px; gap: 56px; align-items: center;
+}
+.hero-kicker {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(249,115,22,0.15); border: 1px solid rgba(249,115,22,0.35);
+  color: var(--accent); padding: 5px 14px; border-radius: 3px;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 700; line-height: 1.05;
+  color: #fff; text-transform: uppercase; letter-spacing: 0.02em;
+  margin-bottom: 22px;
+}
+.hero h1 .line2 { color: var(--accent); }
+.hero-sub {
+  font-size: 1.1rem; line-height: 1.66;
+  color: rgba(255,255,255,0.73); margin-bottom: 34px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--accent); color: #fff;
+  padding: 14px 32px; border-radius: 3px;
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-primary:hover { background: var(--accent-dark); }
+.btn-outline {
+  background: transparent; color: #fff;
+  padding: 14px 32px; border-radius: 3px; border: 2px solid rgba(255,255,255,0.35);
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 0.2s;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.7); }
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px; padding: 34px 28px;
+}
+.hero-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.07em; color: var(--accent); margin-bottom: 20px;
+}
+.size-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.size-item {
+  background: rgba(255,255,255,0.07);
+  border-radius: 8px; padding: 16px 14px; text-align: center;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.size-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4rem; font-weight: 700; color: var(--accent); line-height: 1;
+}
+.size-desc { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin-top: 5px; }
+.hero-card-note {
+  margin-top: 18px; font-size: 0.85rem;
+  color: rgba(255,255,255,0.6); text-align: center; line-height: 1.5;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-kicker  { animation: heroFadeUp 0.5s ease both; animation-delay: 0.05s; }
+.hero h1      { animation: heroFadeUp 0.5s ease both; animation-delay: 0.15s; }
+.hero-sub     { animation: heroFadeUp 0.5s ease both; animation-delay: 0.25s; }
+.hero-actions { animation: heroFadeUp 0.5s ease both; animation-delay: 0.33s; }
+.hero-card    { animation: heroFadeUp 0.6s ease both; animation-delay: 0.2s; }
+
+/* STATS */
+.stats-bar {
+  background: var(--primary-darkest);
+  padding: 38px 40px;
+  border-bottom: 3px solid var(--accent);
+}
+.stats-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; text-align: center;
+}
+.stat-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem; font-weight: 700; color: var(--accent); line-height: 1;
+}
+.stat-label {
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.07em;
+  text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 7px;
+}
+
+/* SERVICES */
+.services {
+  background: var(--bg-off);
+  padding: 88px 40px;
+}
+.section-header { max-width: 1140px; margin: 0 auto 52px; }
+.section-eyebrow {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.02em; color: #1a1a1a; line-height: 1.15;
+}
+.section-sub { font-size: 1.05rem; color: #555; margin-top: 12px; max-width: 540px; }
+.services-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
+}
+.svc-card {
+  background: var(--bg-white);
+  border-radius: 8px;
+  display: flex; align-items: flex-start; gap: 18px;
+  padding: 26px 24px;
+  border: 1px solid #f0e8e4;
+  border-left: 4px solid transparent;
+  transition: border-left-color 0.2s, transform 0.25s, box-shadow 0.25s;
+}
+.svc-card:hover {
+  border-left-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(139,0,0,0.1);
+}
+.svc-icon {
+  width: 46px; height: 46px; border-radius: 8px; flex-shrink: 0;
+  background: rgba(139,0,0,0.08);
+  display: flex; align-items: center; justify-content: center;
+}
+.svc-icon svg { width: 22px; height: 22px; color: var(--primary); }
+.svc-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.05rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a; margin-bottom: 7px;
+}
+.svc-card p { font-size: 0.9rem; line-height: 1.6; color: #555; }
+
+/* WHY */
+.why {
+  background: var(--bg-dark);
+  padding: 88px 40px;
+}
+.why-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.why-left .section-title { color: #fff; }
+.why-left .section-sub { color: rgba(255,255,255,0.68); }
+.why-list { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 16px; }
+.why-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 18px 20px; border-radius: 6px;
+  background: rgba(255,255,255,0.06);
+  border-left: 3px solid var(--accent);
+}
+.why-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.why-icon svg { width: 18px; height: 18px; }
+.why-item-text strong {
+  display: block; color: #fff;
+  font-family: 'Oswald', sans-serif; font-size: 0.95rem;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+.why-item-text span { font-size: 0.88rem; color: rgba(255,255,255,0.62); }
+.why-right {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px; padding: 38px 32px; text-align: center;
+}
+.why-phone-label {
+  font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.55); font-weight: 600; margin-bottom: 10px;
+}
+.why-phone-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 16px;
+}
+.why-phone-num a { color: inherit; }
+.why-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0; }
+.quick-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.qs-item { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 16px 12px; }
+.qs-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.6rem; font-weight: 700; color: var(--accent); line-height: 1;
+}
+.qs-label { font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
+
+/* HOW */
+.how {
+  background: var(--bg-darkest);
+  padding: 88px 40px;
+}
+.how .section-title { color: #fff; }
+.how .section-sub { color: rgba(255,255,255,0.62); }
+.how-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 26px;
+}
+.how-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px; padding: 34px 26px;
+}
+.how-badge {
+  display: inline-block;
+  background: var(--accent); color: #fff;
+  font-family: 'Oswald', sans-serif; font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 4px 11px; border-radius: 3px;
+  margin-bottom: 18px;
+}
+.how-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.15rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #fff; margin-bottom: 10px;
+}
+.how-card p { font-size: 0.9rem; color: rgba(255,255,255,0.62); line-height: 1.65; }
+
+/* REVIEWS */
+.reviews {
+  background: var(--bg-off);
+  padding: 88px 40px;
+}
+.reviews-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 22px;
+}
+.review-card {
+  background: var(--bg-white);
+  border-radius: 8px; padding: 28px 24px;
+  border-left: 4px solid var(--primary);
+  border-top: 1px solid #f0e0e0;
+  border-right: 1px solid #f0e0e0;
+  border-bottom: 1px solid #f0e0e0;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.review-card:hover { transform: translateY(-4px); box-shadow: 0 10px 26px rgba(139,0,0,0.08); }
+.review-stars { color: var(--accent); font-size: 1.05rem; margin-bottom: 14px; }
+.review-text { font-size: 0.93rem; line-height: 1.65; color: #444; margin-bottom: 18px; font-style: italic; }
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--primary); display: flex; align-items: center; justify-content: center;
+  font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 700; color: #fff;
+}
+.reviewer-info strong { display: block; font-size: 0.88rem; font-weight: 600; color: #1a1a1a; }
+.reviewer-info span { font-size: 0.78rem; color: #888; }
+
+/* AREAS */
+.areas {
+  background: var(--primary-dark);
+  padding: 68px 40px;
+}
+.areas .section-title { color: #fff; }
+.areas-list {
+  max-width: 1140px; margin: 34px auto 0;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 12px;
+}
+.area-pill {
+  background: rgba(249,115,22,0.1);
+  border: 1px solid rgba(249,115,22,0.25);
+  border-radius: 5px; padding: 11px 16px;
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.88rem; color: rgba(255,255,255,0.82); font-weight: 500;
+}
+.area-pill svg { width: 13px; height: 13px; color: var(--accent); flex-shrink: 0; }
+
+/* CONTACT */
+.contact {
+  background: var(--bg-white);
+  padding: 88px 40px;
+}
+.contact-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+}
+.contact-info .section-title { color: #1a1a1a; }
+.contact-info .section-sub { color: #555; }
+.contact-channels { margin-top: 30px; display: flex; flex-direction: column; gap: 14px; }
+.channel {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px; border-radius: 6px;
+  border: 1px solid #ede0dc; background: var(--bg-off);
+}
+.channel-icon {
+  width: 42px; height: 42px; border-radius: 7px;
+  background: rgba(139,0,0,0.08);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.channel-icon svg { width: 20px; height: 20px; color: var(--primary); }
+.channel-text strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #888; font-weight: 600; margin-bottom: 2px; }
+.channel-text a { font-size: 1rem; font-weight: 600; color: var(--primary); }
+.contact-form {
+  background: var(--bg-off); border-radius: 10px; padding: 34px 30px;
+  border: 1px solid #ede0dc;
+}
+.form-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a; margin-bottom: 22px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+.form-group label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #555; }
+.form-group input, .form-group select, .form-group textarea {
+  padding: 11px 14px; border: 1px solid #ddd4d0; border-radius: 5px;
+  font-size: 0.93rem; font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg-white); color: #1a1a1a; transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
+.form-group textarea { resize: vertical; min-height: 88px; }
+.form-submit {
+  width: 100%; padding: 13px;
+  background: var(--accent); color: #fff; border: none; border-radius: 5px;
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: background 0.2s;
+}
+.form-submit:hover { background: var(--accent-dark); }
+
+/* CTA BAND */
+.cta-band {
+  background: var(--primary);
+  padding: 72px 40px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-band::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.cta-band h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.03em; color: #fff; margin-bottom: 14px;
+}
+.cta-band h2 em { color: var(--accent); font-style: normal; }
+.cta-band p { font-size: 1.05rem; color: rgba(255,255,255,0.72); max-width: 480px; margin: 0 auto 28px; }
+
+/* FOOTER */
+.footer { background: var(--bg-darkest); padding: 52px 40px 28px; }
+.footer-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+  padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-logo {
+  font-family: 'Oswald', sans-serif; font-size: 1.4rem; font-weight: 700;
+  color: #fff; text-transform: uppercase;
+}
+.footer-logo span { color: var(--accent); }
+.footer-brand p { font-size: 0.88rem; line-height: 1.65; color: rgba(255,255,255,0.52); margin-top: 12px; max-width: 280px; }
+.footer-col h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: #fff; margin-bottom: 14px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-col ul li a { font-size: 0.86rem; color: rgba(255,255,255,0.52); transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--accent); }
+.footer-bottom {
+  max-width: 1140px; margin: 22px auto 0;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.8rem; color: rgba(255,255,255,0.35);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.5s ease forwards; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); }
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .why-inner { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: repeat(2,1fr); }
+  .reviews-grid { grid-template-columns: repeat(2,1fr); }
+  .areas-list { grid-template-columns: repeat(2,1fr); }
+  .contact-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 56px 20px 48px; }
+  .stats-inner { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-list { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">Rip n' <span>Drop</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:2142416937" class="nav-cta">(214) 241-6937</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-kicker">Frisco's Dumpster Rental Pros</div>
+      <h1>Drop It.<br><span class="line2">We'll Handle It.</span></h1>
+      <p class="hero-sub">Dumpster rental and full-service junk removal for Frisco homes and job sites. Flexible sizes, fast delivery, and hassle-free pickup when you're done.</p>
+      <div class="hero-actions">
+        <a href="tel:2142416937" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Book a Dumpster
+        </a>
+        <a href="#contact" class="btn-outline">Free Quote</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Dumpster Sizes Available</div>
+      <div class="size-grid">
+        <div class="size-item">
+          <div class="size-label">10 yd</div>
+          <div class="size-desc">Small renovations &amp; cleanouts</div>
+        </div>
+        <div class="size-item">
+          <div class="size-label">15 yd</div>
+          <div class="size-desc">Medium projects &amp; roofing</div>
+        </div>
+        <div class="size-item">
+          <div class="size-label">20 yd</div>
+          <div class="size-desc">Large remodels &amp; demo</div>
+        </div>
+        <div class="size-item">
+          <div class="size-label">30 yd</div>
+          <div class="size-desc">Commercial &amp; new construction</div>
+        </div>
+      </div>
+      <div class="hero-card-note">Flexible rental periods available. Call for same-day delivery.</div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num" data-target="1500">0</div>
+      <div class="stat-label">Dumpsters Delivered</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="24">0</div>
+      <div class="stat-label">Hour Drop-Off</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="4">0</div>
+      <div class="stat-label">Container Sizes</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="100">0</div>
+      <div class="stat-label">% Local &amp; Family-Owned</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-eyebrow">What We Do</div>
+    <h2 class="section-title">Junk Removal &amp; Dumpster Solutions</h2>
+    <p class="section-sub">Full-service waste removal for every project type in Frisco and surrounding cities.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z"/></svg></div>
+      <div><h3>Dumpster Rental</h3><p>10 to 30-yard dumpsters delivered to your door. Flexible rental periods and competitive flat-rate pricing.</p></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+      <div><h3>Residential Junk Removal</h3><p>We do the heavy lifting. Point to what you want gone and we'll load, haul, and dispose — no dumpster needed.</p></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg></div>
+      <div><h3>Commercial Cleanouts</h3><p>Office moves, retail renovations, and commercial construction cleanup with prompt delivery and pickup scheduling.</p></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <div><h3>Construction Debris Removal</h3><p>Drywall, lumber, roofing materials, and demolition debris — load it in the dumpster or let us haul it directly.</p></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+      <div><h3>Furniture &amp; Appliance Pickup</h3><p>Old sofas, mattresses, refrigerators, and washing machines hauled away responsibly. Donation drop-off when possible.</p></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg></div>
+      <div><h3>Estate &amp; Property Cleanouts</h3><p>Complete property clearing for estates, foreclosures, and rental unit turnovers — quick turnaround for time-sensitive projects.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-left">
+      <div class="section-eyebrow">Why Rip n' Drop</div>
+      <h2 class="section-title">Frisco's Reliable Hauling Choice</h2>
+      <p class="section-sub">We're a local, family-owned business that treats your property with respect and gets the job done right the first time.</p>
+      <ul class="why-list">
+        <li class="why-item card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="why-item-text"><strong>Same-Day &amp; Next-Day Delivery</strong><span>Need a dumpster fast? We deliver on your schedule across Frisco</span></div>
+        </li>
+        <li class="why-item card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <div class="why-item-text"><strong>Flat-Rate Pricing</strong><span>Know your cost upfront — no fuel surcharges or weight surprises</span></div>
+        </li>
+        <li class="why-item card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <div class="why-item-text"><strong>Fully Licensed &amp; Insured</strong><span>Every job is covered — your driveway and property are protected</span></div>
+        </li>
+        <li class="why-item card">
+          <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <div class="why-item-text"><strong>Local Frisco Team</strong><span>We live here too — your neighbors who know the area and care about community</span></div>
+        </li>
+      </ul>
+    </div>
+    <div class="why-right">
+      <div class="why-phone-label">Call to Book Today</div>
+      <div class="why-phone-num"><a href="tel:2142416937">(214) 241-6937</a></div>
+      <hr class="why-divider">
+      <div class="quick-stats">
+        <div class="qs-item">
+          <div class="qs-num">24hr</div>
+          <div class="qs-label">Delivery Available</div>
+        </div>
+        <div class="qs-item">
+          <div class="qs-num">4</div>
+          <div class="qs-label">Dumpster Sizes</div>
+        </div>
+        <div class="qs-item">
+          <div class="qs-num">$0</div>
+          <div class="qs-label">Hidden Fees</div>
+        </div>
+        <div class="qs-item">
+          <div class="qs-num">100%</div>
+          <div class="qs-label">Local &amp; Family-Owned</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="section-header">
+    <div class="section-eyebrow">The Process</div>
+    <h2 class="section-title">Dumpster Rental in 3 Easy Steps</h2>
+    <p class="section-sub">From booking to pickup, we make waste removal completely painless.</p>
+  </div>
+  <div class="how-grid">
+    <div class="how-card card">
+      <div class="how-badge">Step 01</div>
+      <h3>Book Your Dumpster</h3>
+      <p>Call (214) 241-6937 or fill out our form. Tell us your project type, estimated volume, and delivery date. We'll confirm same-day.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-badge">Step 02</div>
+      <h3>We Deliver &amp; You Fill</h3>
+      <p>We drop the dumpster at your location. Fill it at your own pace over your rental period — no need to rush. We'll place it carefully to protect your driveway.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-badge">Step 03</div>
+      <h3>Call for Pickup</h3>
+      <p>When you're done, just call us. We'll pick up the dumpster and haul everything away. No heavy lifting, no hauling trips — it's that simple.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="section-header">
+    <div class="section-eyebrow">Customer Reviews</div>
+    <h2 class="section-title">What Frisco Customers Are Saying</h2>
+    <p class="section-sub">Real reviews from real customers across Frisco and North Dallas.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Used Rip n' Drop for a full bathroom remodel. Ordered a 15-yard dumpster and it was delivered the next morning. Pickup was equally smooth. Prices were better than the national chains."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">AS</div>
+        <div class="reviewer-info"><strong>Aaron S.</strong><span>Frisco, TX</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"We're a contractor and use them regularly. Always on time, competitively priced, and the team is professional. Having a local contact who picks up the phone is worth everything."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">BF</div>
+        <div class="reviewer-info"><strong>Brian F.</strong><span>General Contractor, Plano</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Cleared out my entire garage and backyard. Booked the junk removal service and they had two guys there within a few hours. Everything was gone fast and they swept up after themselves."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">ML</div>
+        <div class="reviewer-info"><strong>Maria L.</strong><span>McKinney, TX</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="section-header">
+    <div class="section-eyebrow">Service Area</div>
+    <h2 class="section-title">Serving Frisco &amp; North Dallas</h2>
+  </div>
+  <div class="areas-list">
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Frisco</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Plano</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>McKinney</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Allen</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Prosper</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Celina</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>The Colony</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Little Elm</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-eyebrow">Get Started</div>
+      <h2 class="section-title">Book Your Dumpster Today</h2>
+      <p class="section-sub">Call us for same-day service or fill out the form for a free quote on any dumpster size or junk removal job.</p>
+      <div class="contact-channels">
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="channel-text"><strong>Phone</strong><a href="tel:2142416937">(214) 241-6937</a></div>
+        </div>
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="channel-text"><strong>Location</strong><a href="#">Frisco, TX</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Request a Free Quote</div>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="(214) 000-0000"></div>
+      <div class="form-group"><label>Service Type</label>
+        <select>
+          <option>Dumpster Rental</option>
+          <option>Junk Removal</option>
+          <option>Commercial Cleanout</option>
+          <option>Construction Debris</option>
+          <option>Estate Cleanout</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Project details, dumpster size needed, preferred dates..."></textarea></div>
+      <button class="form-submit">Get My Free Quote</button>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <h2>Need a Dumpster <em>Delivered Fast?</em></h2>
+  <p>Same-day and next-day delivery available across Frisco and North Dallas. Call now to lock in your date.</p>
+  <a href="tel:2142416937" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    (214) 241-6937
+  </a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Rip n' <span>Drop</span></div>
+      <p>Dumpster rental and junk removal serving Frisco, TX and surrounding North Dallas communities. Fast delivery, fair prices, local crew.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Dumpster Rental</a></li>
+        <li><a href="#">Junk Removal</a></li>
+        <li><a href="#">Commercial Cleanouts</a></li>
+        <li><a href="#">Construction Debris</a></li>
+        <li><a href="#">Estate Cleanouts</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Areas</h4>
+      <ul>
+        <li><a href="#">Frisco</a></li>
+        <li><a href="#">Plano</a></li>
+        <li><a href="#">McKinney</a></li>
+        <li><a href="#">Allen</a></li>
+        <li><a href="#">Prosper</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:2142416937">(214) 241-6937</a></li>
+        <li><a href="#">Frisco, TX</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Rip n' Drop. All rights reserved.</span>
+    <span>Serving Frisco &amp; North Dallas, TX</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var stats = document.querySelectorAll('[data-target]');
+  var counted = false;
+  function runCounters(){
+    if(counted) return; counted = true;
+    stats.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-target'),10);
+      var current = 0;
+      var timer = setInterval(function(){
+        current += Math.ceil(target/55);
+        if(current >= target){ current = target; clearInterval(timer); }
+        el.textContent = current.toLocaleString();
+      }, 28);
+    });
+  }
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.card').forEach(function(el){ observer.observe(el); });
+  var sb = document.querySelector('.stats-bar');
+  if(sb){
+    var so = new IntersectionObserver(function(e){ if(e[0].isIntersecting) runCounters(); },{threshold:0.3});
+    so.observe(sb);
+  }
+})();
+</script>
+</body>
+</html>

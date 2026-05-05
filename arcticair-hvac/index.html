@@ -5,174 +5,181 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ArcticAir Heating &amp; Cooling — Las Vegas HVAC Experts</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --primary:#060f1c;
-  --primary-mid:#091420;
-  --dark:#030810;
-  --accent:#0ea5e9;
+  --bg:#f8fafd;
+  --bg2:#ffffff;
+  --bg3:#eef5fb;
+  --navy:#0b1929;
+  --navy-mid:#1a3248;
+  --text:#0b1929;
+  --muted:#5a7a96;
+  --dim:#9ab4c8;
+  --accent:#0284c7;
   --accent-light:#38bdf8;
-  --accent-glow:rgba(14,165,233,0.28);
-  --text:#eef5ff;
-  --muted:#7a91b0;
-  --dim:#3d5166;
+  --accent-pale:#e0f2fe;
+  --accent-glow:rgba(2,132,199,0.18);
+  --border:#dde8f0;
+  --border-dark:#b8cfdf;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Open Sans',sans-serif;background:var(--primary);color:var(--text);overflow-x:hidden}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
 
 /* HEADER */
-header{position:sticky;top:0;z-index:100;background:var(--accent);padding:0 5vw;height:64px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 20px rgba(14,165,233,0.45)}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
-.logo svg{width:28px;height:28px;flex-shrink:0}
-.logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:1px;color:#fff;line-height:1}
-nav{display:flex;align-items:center;gap:28px}
-nav a{font-size:0.85rem;font-weight:600;color:#fff;text-decoration:none;letter-spacing:0.5px;transition:opacity .2s}
-nav a:hover{opacity:0.7}
-.phone-pill{background:rgba(255,255,255,0.2);color:#fff;padding:8px 18px;border-radius:50px;font-weight:700;font-size:0.9rem;text-decoration:none;letter-spacing:0.3px;white-space:nowrap;border:1.5px solid rgba(255,255,255,0.4);transition:background .2s,transform .2s}
-.phone-pill:hover{background:rgba(255,255,255,0.3);transform:scale(1.04)}
+header{position:sticky;top:0;z-index:100;background:#fff;padding:0 5vw;height:68px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);box-shadow:0 1px 20px rgba(11,25,41,0.06)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:36px;height:36px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-icon svg{width:20px;height:20px;color:#fff}
+.logo-name{font-size:1.15rem;font-weight:700;color:var(--navy);line-height:1}
+.logo-tagline{font-size:0.7rem;font-weight:500;color:var(--muted);letter-spacing:0.5px;margin-top:2px}
+nav{display:flex;align-items:center;gap:32px}
+nav a{font-size:0.9rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s}
+nav a:hover{color:var(--navy)}
+.header-cta{background:var(--accent);color:#fff;padding:10px 22px;border-radius:8px;font-weight:600;font-size:0.88rem;text-decoration:none;white-space:nowrap;transition:background .2s,transform .2s}
+.header-cta:hover{background:#0369a1;transform:translateY(-1px)}
 
 /* HERO */
-.hero{min-height:90vh;background:linear-gradient(135deg,var(--dark) 0%,var(--primary) 55%,#061828 100%);position:relative;display:flex;align-items:center;padding:80px 5vw 60px;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(14,165,233,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(14,165,233,0.05) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
-.hero::after{content:'';position:absolute;right:-8%;top:-5%;width:640px;height:640px;background:radial-gradient(circle,var(--accent-glow) 0%,transparent 65%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:60fr 40fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:1}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(14,165,233,0.15);border:1px solid rgba(14,165,233,0.35);color:var(--accent-light);padding:7px 16px;border-radius:50px;font-size:0.78rem;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:20px;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
-.hero-badge.v{opacity:1;transform:translateY(0)}
-.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,5vw,4.4rem);line-height:1.05;letter-spacing:1px;color:var(--text);margin-bottom:20px;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
-.hero h1.v{opacity:1;transform:translateY(0)}
+.hero{background:linear-gradient(155deg,#f0f7ff 0%,#e8f4fd 40%,#f5f9fd 100%);padding:80px 5vw 60px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:-5%;top:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(2,132,199,0.1) 0%,transparent 65%);pointer-events:none}
+.hero::after{content:'';position:absolute;left:-8%;bottom:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(56,189,248,0.08) 0%,transparent 65%);pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent-pale);border:1px solid rgba(2,132,199,0.25);color:var(--accent);padding:7px 16px;border-radius:50px;font-size:0.78rem;font-weight:600;letter-spacing:0.6px;text-transform:uppercase;margin-bottom:20px}
+.hero h1{font-size:clamp(2.4rem,4.5vw,3.8rem);font-weight:800;line-height:1.08;color:var(--navy);margin-bottom:20px;letter-spacing:-0.03em}
 .hero h1 span{color:var(--accent)}
-.hero-sub{font-size:1.05rem;color:var(--muted);line-height:1.7;max-width:520px;margin-bottom:32px;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
-.hero-sub.v{opacity:1;transform:translateY(0)}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
-.hero-ctas.v{opacity:1;transform:translateY(0)}
-.btn-primary{background:var(--accent);color:#fff;padding:14px 28px;border-radius:8px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;box-shadow:0 0 0 rgba(14,165,233,0)}
-.btn-primary:hover{background:var(--accent-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(14,165,233,0.4)}
-.btn-secondary{background:transparent;color:var(--text);padding:14px 28px;border-radius:8px;font-weight:600;font-size:0.95rem;text-decoration:none;border:1.5px solid var(--dim);transition:border-color .2s,color .2s,transform .2s}
+.hero-sub{font-size:1.05rem;color:var(--muted);line-height:1.75;max-width:500px;margin-bottom:32px;font-weight:400}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.btn-primary{background:var(--accent);color:#fff;padding:14px 28px;border-radius:10px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(2,132,199,0.3)}
+.btn-primary:hover{background:#0369a1;transform:translateY(-2px);box-shadow:0 8px 30px rgba(2,132,199,0.4)}
+.btn-secondary{background:#fff;color:var(--navy);padding:14px 28px;border-radius:10px;font-weight:600;font-size:0.95rem;text-decoration:none;border:1.5px solid var(--border-dark);transition:border-color .2s,transform .2s}
 .btn-secondary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
-.trust-pills{display:flex;flex-wrap:wrap;gap:10px;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
-.trust-pills.v{opacity:1;transform:translateY(0)}
-.trust-pill{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);padding:7px 14px;border-radius:50px;font-size:0.78rem;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:6px}
+.trust-pills{display:flex;flex-wrap:wrap;gap:10px}
+.trust-pill{background:#fff;border:1px solid var(--border);padding:7px 14px;border-radius:50px;font-size:0.78rem;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:6px;box-shadow:0 1px 4px rgba(11,25,41,0.06)}
 .trust-pill svg{width:14px;height:14px;color:var(--accent);flex-shrink:0}
 
-/* GLASS CARD */
-.hero-card{background:rgba(14,165,233,0.07);border:1px solid rgba(14,165,233,0.22);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:20px;padding:36px;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
-.hero-card.v{opacity:1;transform:translateY(0)}
-.card-badge{background:var(--accent);color:#fff;display:inline-block;padding:4px 12px;border-radius:4px;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
-.hero-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:1px;color:var(--text);margin-bottom:6px}
-.hero-card p{font-size:0.85rem;color:var(--muted);margin-bottom:24px}
-.check-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
-.check-list li{display:flex;align-items:center;gap:12px;font-size:0.9rem;color:var(--text)}
-.check-list li svg{width:18px;height:18px;flex-shrink:0;color:var(--accent)}
-.card-cta{display:block;background:var(--accent);color:#fff;text-align:center;padding:14px;border-radius:8px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background .2s,transform .2s}
-.card-cta:hover{background:var(--accent-light);transform:translateY(-2px)}
+/* HERO RIGHT - CARD */
+.hero-card{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:32px;box-shadow:0 16px 60px rgba(11,25,41,0.1)}
+.card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.card-badge{background:var(--accent-pale);color:var(--accent);padding:5px 12px;border-radius:6px;font-size:0.72rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase}
+.card-live{display:flex;align-items:center;gap:5px;font-size:0.75rem;color:#22c55e;font-weight:600}
+.card-live-dot{width:7px;height:7px;background:#22c55e;border-radius:50%;animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-card h3{font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.hero-card p{font-size:0.85rem;color:var(--muted);margin-bottom:22px}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:26px}
+.check-list li{display:flex;align-items:center;gap:12px;font-size:0.9rem;color:var(--text);font-weight:500}
+.check-list li .check{width:20px;height:20px;background:var(--accent-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.check-list li .check svg{width:11px;height:11px;color:var(--accent)}
+.card-cta{display:block;background:var(--accent);color:#fff;text-align:center;padding:14px;border-radius:10px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background .2s,transform .2s;box-shadow:0 4px 16px rgba(2,132,199,0.3)}
+.card-cta:hover{background:#0369a1;transform:translateY(-2px)}
 
-/* STATS BAR */
-.stats-bar{background:var(--accent);padding:32px 5vw}
+/* STATS */
+.stats-bar{background:var(--navy);padding:40px 5vw}
 .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;margin:0 auto}
 .stat-item{text-align:center}
-.stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:#fff;letter-spacing:1px;line-height:1}
-.stat-label{font-size:0.8rem;font-weight:600;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:0.6px;margin-top:4px}
+.stat-num{font-size:2.4rem;font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1}
+.stat-num span{color:var(--accent-light)}
+.stat-label{font-size:0.78rem;font-weight:500;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.6px;margin-top:5px}
 
 /* SECTIONS */
 section{padding:80px 5vw}
-.section-label{font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
-.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);letter-spacing:1px;color:var(--text);margin-bottom:16px}
-.section-sub{font-size:1rem;color:var(--muted);max-width:560px;line-height:1.7;margin-bottom:48px}
+.section-label{font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.section-title{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;color:var(--navy);margin-bottom:14px;letter-spacing:-0.02em;line-height:1.15}
+.section-title span{color:var(--accent)}
+.section-sub{font-size:1rem;color:var(--muted);max-width:540px;line-height:1.75;margin-bottom:48px;font-weight:400}
 
 /* SERVICES */
-.services{background:var(--primary-mid)}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto}
-.service-card{background:var(--primary);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:32px 28px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
-.service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transition:transform .3s;transform-origin:left}
-.service-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.3)}
-.service-card:hover::after{transform:scaleX(1)}
-.service-icon{width:50px;height:50px;background:rgba(14,165,233,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-.service-icon svg{width:26px;height:26px;color:var(--accent)}
-.service-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.8px;color:var(--text);margin-bottom:10px}
-.service-card p{font-size:0.88rem;color:var(--muted);line-height:1.6}
+.services{background:var(--bg2)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1200px;margin:0 auto}
+.service-card{background:var(--bg);border:1.5px solid var(--border);border-radius:16px;padding:28px 24px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(2,132,199,0.12);border-color:rgba(2,132,199,0.35)}
+.service-icon{width:48px;height:48px;background:var(--accent-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.service-icon svg{width:24px;height:24px;color:var(--accent)}
+.service-card h3{font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.service-card p{font-size:0.87rem;color:var(--muted);line-height:1.65}
 
 /* WHY US */
-.why-us{background:var(--dark)}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto}
-.why-features{display:flex;flex-direction:column;gap:32px}
-.why-feature{display:flex;gap:20px;align-items:flex-start}
-.why-num{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--accent);line-height:1;min-width:44px}
-.why-feature h4{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.5px;color:var(--text);margin-bottom:6px}
-.why-feature p{font-size:0.88rem;color:var(--muted);line-height:1.6}
+.why-us{background:var(--bg3)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1100px;margin:0 auto}
+.why-features{display:flex;flex-direction:column;gap:28px}
+.why-feature{display:flex;gap:18px;align-items:flex-start}
+.why-icon{width:44px;height:44px;background:#fff;border:1.5px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(11,25,41,0.06)}
+.why-icon svg{width:20px;height:20px;color:var(--accent)}
+.why-feature h4{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:5px}
+.why-feature p{font-size:0.87rem;color:var(--muted);line-height:1.65}
 .why-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.why-stat{background:var(--primary);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:28px 20px;text-align:center}
-.why-stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--accent);letter-spacing:1px}
-.why-stat-label{font-size:0.78rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-top:4px}
+.why-stat{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:26px 20px;text-align:center;box-shadow:0 2px 12px rgba(11,25,41,0.05)}
+.why-stat-num{font-size:2rem;font-weight:800;color:var(--accent);letter-spacing:-0.03em}
+.why-stat-label{font-size:0.75rem;color:var(--muted);font-weight:500;text-transform:uppercase;letter-spacing:0.5px;margin-top:5px}
 
 /* PROCESS */
-.process{background:var(--primary-mid)}
+.process{background:var(--bg2)}
 .process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:900px;margin:0 auto;position:relative}
-.process-steps::before{content:'';position:absolute;top:32px;left:16.67%;right:16.67%;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-light),var(--accent));z-index:0}
+.process-steps::before{content:'';position:absolute;top:28px;left:calc(16.67% + 28px);right:calc(16.67% + 28px);height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-light),var(--accent));z-index:0;opacity:.35}
 .process-step{text-align:center;padding:20px;position:relative;z-index:1}
-.step-circle{width:64px;height:64px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#fff;box-shadow:0 0 0 8px var(--primary-mid)}
-.process-step h4{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:0.5px;color:var(--text);margin-bottom:8px}
-.process-step p{font-size:0.85rem;color:var(--muted);line-height:1.6;max-width:200px;margin:0 auto}
+.step-circle{width:56px;height:56px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:1.3rem;font-weight:800;color:#fff;box-shadow:0 0 0 8px var(--bg2),0 0 0 9px var(--border)}
+.process-step h4{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.process-step p{font-size:0.85rem;color:var(--muted);line-height:1.65;max-width:200px;margin:0 auto}
 
 /* REVIEWS */
-.reviews{background:var(--dark)}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto}
-.review-card{background:var(--primary);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:32px;position:relative}
-.review-quote{margin-bottom:16px}
-.review-quote svg{width:36px;height:36px;fill:rgba(14,165,233,0.25)}
-.stars{color:var(--accent);font-size:1rem;letter-spacing:2px;margin-bottom:14px}
-.review-text{font-size:0.9rem;color:var(--muted);line-height:1.7;margin-bottom:20px}
-.reviewer-name{font-weight:700;color:var(--text);font-size:0.9rem}
-.reviewer-area{font-size:0.8rem;color:var(--dim);margin-top:2px}
+.reviews{background:var(--bg3)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:0 auto}
+.review-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:28px;box-shadow:0 2px 12px rgba(11,25,41,0.05)}
+.stars{color:#f59e0b;font-size:0.95rem;letter-spacing:2px;margin-bottom:12px}
+.review-text{font-size:0.88rem;color:var(--muted);line-height:1.7;margin-bottom:18px}
+.reviewer-name{font-weight:700;color:var(--navy);font-size:0.9rem}
+.reviewer-area{font-size:0.78rem;color:var(--dim);margin-top:2px}
 
 /* SERVICE AREAS */
-.areas{background:var(--primary-mid)}
-.areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto}
-.areas-list{display:flex;flex-direction:column;gap:10px;margin-top:16px}
-.area-item{display:flex;align-items:center;gap:12px;font-size:0.95rem;color:var(--text)}
-.area-dot{width:10px;height:10px;background:var(--accent);border-radius:50%;flex-shrink:0;box-shadow:0 0 8px var(--accent-glow)}
-.map-visual{display:flex;align-items:center;justify-content:center;height:280px;position:relative}
+.areas{background:var(--bg2)}
+.areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1100px;margin:0 auto}
+.areas-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.area-item{display:flex;align-items:center;gap:10px;font-size:0.9rem;color:var(--text);font-weight:500}
+.area-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.map-visual{background:var(--bg3);border:1.5px solid var(--border);border-radius:20px;display:flex;align-items:center;justify-content:center;height:280px;position:relative;overflow:hidden}
 .map-ring{position:absolute;border-radius:50%;border:2px solid;animation:pulse-ring 3s ease-out infinite}
-.map-ring:nth-child(1){width:60px;height:60px;border-color:var(--accent);animation-delay:0s}
-.map-ring:nth-child(2){width:120px;height:120px;border-color:rgba(14,165,233,0.6);animation-delay:.6s}
-.map-ring:nth-child(3){width:190px;height:190px;border-color:rgba(14,165,233,0.35);animation-delay:1.2s}
-.map-ring:nth-child(4){width:260px;height:260px;border-color:rgba(14,165,233,0.15);animation-delay:1.8s}
-.map-center{width:16px;height:16px;background:var(--accent);border-radius:50%;position:absolute;box-shadow:0 0 20px var(--accent)}
-@keyframes pulse-ring{0%{transform:scale(.95);opacity:1}100%{transform:scale(1.08);opacity:0}}
+.map-ring:nth-child(1){width:50px;height:50px;border-color:var(--accent);animation-delay:0s}
+.map-ring:nth-child(2){width:110px;height:110px;border-color:rgba(2,132,199,0.5);animation-delay:.6s}
+.map-ring:nth-child(3){width:180px;height:180px;border-color:rgba(2,132,199,0.25);animation-delay:1.2s}
+.map-ring:nth-child(4){width:250px;height:250px;border-color:rgba(2,132,199,0.1);animation-delay:1.8s}
+.map-center{width:14px;height:14px;background:var(--accent);border-radius:50%;position:absolute;box-shadow:0 0 0 4px rgba(2,132,199,0.2)}
+@keyframes pulse-ring{0%{transform:scale(.95);opacity:1}100%{transform:scale(1.1);opacity:0}}
 
 /* CONTACT */
-.contact{background:var(--dark)}
+.contact{background:var(--bg3)}
 .contact-grid{display:grid;grid-template-columns:3fr 2fr;gap:60px;max-width:1100px;margin:0 auto}
+.contact-form-wrap{background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:40px;box-shadow:0 4px 24px rgba(11,25,41,0.06)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form-group{margin-bottom:16px}
-.form-group label{display:block;font-size:0.8rem;font-weight:600;color:var(--muted);margin-bottom:6px;letter-spacing:0.4px;text-transform:uppercase}
-.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:8px;padding:12px 14px;color:var(--text);font-family:'Open Sans',sans-serif;font-size:0.9rem;outline:none;transition:border-color .2s}
+.form-group label{display:block;font-size:0.78rem;font-weight:600;color:var(--muted);margin-bottom:6px;letter-spacing:0.4px;text-transform:uppercase}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--bg);border:1.5px solid var(--border);border-radius:8px;padding:12px 14px;color:var(--text);font-family:'Outfit',sans-serif;font-size:0.9rem;outline:none;transition:border-color .2s;font-weight:400}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent)}
-.form-group select option{background:var(--primary)}
 .form-group textarea{resize:vertical;min-height:110px}
-.btn-submit{width:100%;background:var(--accent);color:#fff;border:none;padding:14px;border-radius:8px;font-weight:700;font-size:1rem;cursor:pointer;transition:background .2s,transform .2s;margin-top:4px}
-.btn-submit:hover{background:var(--accent-light);transform:translateY(-2px)}
-.contact-info{padding-top:16px}
-.contact-info h3{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.8px;color:var(--text);margin-bottom:24px}
+.btn-submit{width:100%;background:var(--accent);color:#fff;border:none;padding:14px;border-radius:10px;font-weight:700;font-size:1rem;cursor:pointer;transition:background .2s,transform .2s;font-family:'Outfit',sans-serif}
+.btn-submit:hover{background:#0369a1;transform:translateY(-2px)}
+.contact-info{padding-top:8px}
+.contact-info h3{font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:24px}
 .contact-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
-.contact-icon{width:38px;height:38px;background:rgba(14,165,233,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-icon{width:40px;height:40px;background:var(--accent-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .contact-icon svg{width:18px;height:18px;color:var(--accent)}
-.contact-label{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--dim);margin-bottom:4px}
-.contact-value{font-size:0.95rem;color:var(--text);font-weight:600}
+.contact-label{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--dim);margin-bottom:4px}
+.contact-value{font-size:0.95rem;color:var(--navy);font-weight:600}
 
 /* CTA BAND */
-.cta-band{background:linear-gradient(135deg,var(--accent) 0%,#0284c7 100%);padding:72px 5vw;text-align:center}
-.cta-band h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:1px;color:#fff;margin-bottom:12px}
-.cta-band p{font-size:1rem;color:rgba(255,255,255,0.8);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto}
-.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.cta-btn-dark{background:#fff;color:var(--accent);padding:14px 28px;border-radius:8px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:transform .2s,box-shadow .2s}
-.cta-btn-dark:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.2)}
-.cta-btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.6);padding:12px 28px;border-radius:8px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background .2s,border-color .2s,transform .2s}
-.cta-btn-outline:hover{background:rgba(255,255,255,0.15);border-color:#fff;transform:translateY(-2px)}
+.cta-band{background:var(--navy);padding:80px 5vw;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(2,132,199,0.15) 0%,transparent 65%);pointer-events:none}
+.cta-band h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;margin-bottom:14px;letter-spacing:-0.02em;position:relative}
+.cta-band h2 span{color:var(--accent-light)}
+.cta-band p{font-size:1rem;color:rgba(255,255,255,0.55);margin-bottom:36px;max-width:480px;margin-left:auto;margin-right:auto;position:relative}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.cta-btn-light{background:#fff;color:var(--navy);padding:14px 32px;border-radius:10px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.cta-btn-light:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,0.3)}
+.cta-btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.3);padding:12px 32px;border-radius:10px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:background .2s,border-color .2s,transform .2s}
+.cta-btn-outline:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.6);transform:translateY(-2px)}
 
 /* FOOTER */
-footer{background:var(--dark);padding:40px 5vw;border-top:1px solid rgba(255,255,255,0.05)}
+footer{background:#fff;padding:36px 5vw;border-top:1px solid var(--border)}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;max-width:1200px;margin:0 auto}
 .footer-nav{display:flex;gap:24px}
 .footer-nav a{font-size:0.85rem;color:var(--dim);text-decoration:none;transition:color .2s}
@@ -180,19 +187,18 @@ footer{background:var(--dark);padding:40px 5vw;border-top:1px solid rgba(255,255
 .footer-copy{font-size:0.8rem;color:var(--dim)}
 
 /* SCROLL REVEAL */
-.rev{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.rev{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
 .rev.v{opacity:1;transform:translateY(0)}
 
 /* RESPONSIVE */
 @media(max-width:900px){
   nav{display:none}
-  .hero-grid{grid-template-columns:1fr;gap:36px}
-  .hero-card{max-width:480px}
+  .hero-inner{grid-template-columns:1fr;gap:36px}
   .services-grid{grid-template-columns:1fr 1fr}
   .why-grid{grid-template-columns:1fr;gap:40px}
   .reviews-grid{grid-template-columns:1fr 1fr}
   .areas-grid{grid-template-columns:1fr;gap:40px}
-  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .contact-grid{grid-template-columns:1fr}
   .stats-inner{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:600px){
@@ -201,8 +207,10 @@ footer{background:var(--dark);padding:40px 5vw;border-top:1px solid rgba(255,255
   .process-steps::before{display:none}
   .reviews-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
-  .why-stats{grid-template-columns:1fr 1fr}
   .footer-inner{flex-direction:column;align-items:flex-start}
+  .areas-list{grid-template-columns:1fr}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas .btn-secondary{text-align:center}
 }
 </style>
 </head>
@@ -210,12 +218,17 @@ footer{background:var(--dark);padding:40px 5vw;border-top:1px solid rgba(255,255
 
 <header>
   <a href="#" class="logo">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/>
-      <path d="M12 6v2M12 16v2M6 12H4M20 12h-2M7.76 7.76l-1.42-1.42M17.66 17.66l-1.42-1.42M7.76 16.24l-1.42 1.42M17.66 6.34l-1.42 1.42"/>
-      <circle cx="12" cy="12" r="3"/>
-    </svg>
-    <span class="logo-text">ArcticAir</span>
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2a10 10 0 1 0 10 10"/>
+        <path d="M12 6v6l4 2"/>
+        <path d="M22 2l-3 3m0 0l-3-3m3 3V2"/>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-name">ArcticAir</div>
+      <div class="logo-tagline">Heating &amp; Cooling</div>
+    </div>
   </a>
   <nav>
     <a href="#services">Services</a>
@@ -223,65 +236,79 @@ footer{background:var(--dark);padding:40px 5vw;border-top:1px solid rgba(255,255
     <a href="#areas">Areas</a>
     <a href="#contact">Contact</a>
   </nav>
-  <a href="tel:+17025550184" class="phone-pill">(702) 555-0184</a>
+  <a href="tel:+17025550198" class="header-cta">(702) 555-0198</a>
 </header>
 
 <section class="hero">
-  <div class="hero-grid">
-    <div class="hero-left">
-      <div class="hero-badge" id="hb1">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        Las Vegas Valley's Trusted HVAC Experts
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        Licensed &amp; Certified — Las Vegas, NV
       </div>
-      <h1 id="hb2">Las Vegas HVAC — <span>Fast, Cold,</span> Reliable</h1>
-      <p class="hero-sub" id="hb3">When your AC dies in 115° heat, you need someone there today — not tomorrow. ArcticAir responds fast and fixes it right, the first time.</p>
-      <div class="hero-ctas" id="hb4">
-        <a href="#contact" class="btn-primary">Get a Free Quote</a>
-        <a href="tel:+17025550184" class="btn-secondary">Call Now</a>
+      <h1>Las Vegas's Most<br>Trusted <span>HVAC</span><br>Team</h1>
+      <p class="hero-sub">Same-day installs, repairs, and tune-ups for homes and businesses across the Las Vegas Valley. We keep you cool when it hits 115°.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Get a Free Estimate</a>
+        <a href="tel:+17025550198" class="btn-secondary">Call Now</a>
       </div>
-      <div class="trust-pills" id="hb5">
+      <div class="trust-pills">
         <div class="trust-pill">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          4.9&#9733; Rating
+          4.9&#9733; on Google
         </div>
         <div class="trust-pill">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          18+ Years
-        </div>
-        <div class="trust-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           Same-Day Service
         </div>
         <div class="trust-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.09 12 19.79 19.79 0 011 3.18a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91"/></svg>
-          Emergency 24/7
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          20+ Years Experience
+        </div>
+        <div class="trust-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Parts &amp; Labor Warranty
         </div>
       </div>
     </div>
     <div>
-      <div class="hero-card" id="hb6">
-        <div class="card-badge">AC Emergency?</div>
-        <h3>We're On The Way</h3>
-        <p>Same-day dispatch available — Las Vegas &amp; surrounding areas</p>
+      <div class="hero-card rev">
+        <div class="card-header">
+          <div class="card-badge">Same-Day Available</div>
+          <div class="card-live">
+            <div class="card-live-dot"></div>
+            Booking Now
+          </div>
+        </div>
+        <h3>Schedule a Visit</h3>
+        <p>Available today — Las Vegas &amp; Henderson</p>
         <ul class="check-list">
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Same-day dispatch
+            <div class="check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Free in-home estimates
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Evening &amp; weekend available
+            <div class="check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            Upfront flat-rate pricing
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            All brands serviced
+            <div class="check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            No surprise charges
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            1-year parts warranty
+            <div class="check">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            2-year workmanship warranty
           </li>
         </ul>
-        <a href="tel:+17025550184" class="card-cta">Call (702) 555-0184 Now</a>
+        <a href="tel:+17025550198" class="card-cta">Call (702) 555-0198</a>
       </div>
     </div>
   </div>
@@ -290,20 +317,20 @@ footer{background:var(--dark);padding:40px 5vw;border-top:1px solid rgba(255,255
 <div class="stats-bar">
   <div class="stats-inner">
     <div class="stat-item rev">
-      <div class="stat-num"><span data-target="18">0</span>+</div>
-      <div class="stat-label">Years in Business</div>
+      <div class="stat-num"><span data-target="20">0</span>+</div>
+      <div class="stat-label">Years Serving LV</div>
     </div>
     <div class="stat-item rev">
-      <div class="stat-num"><span data-target="3500">0</span>+</div>
-      <div class="stat-label">Systems Serviced</div>
+      <div class="stat-num"><span data-target="8000">0</span>+</div>
+      <div class="stat-label">Jobs Completed</div>
     </div>
     <div class="stat-item rev">
-      <div class="stat-num"><span data-target="49" data-decimal="1">0</span>&#9733;</div>
+      <div class="stat-num"><span data-target="49" data-decimal="1">0</span><span>&#9733;</span></div>
       <div class="stat-label">Average Rating</div>
     </div>
     <div class="stat-item rev">
-      <div class="stat-num">Same-Day</div>
-      <div class="stat-label">Response Available</div>
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">Emergency Service</div>
     </div>
   </div>
 </div>
@@ -311,265 +338,247 @@ footer{background:var(--dark);padding:40px 5vw;border-top:1px solid rgba(255,255
 <section class="services" id="services">
   <div style="max-width:1200px;margin:0 auto">
     <div class="section-label rev">What We Do</div>
-    <h2 class="section-title rev">HVAC Services Built<br>for Desert Heat</h2>
-    <p class="section-sub rev">Las Vegas summers are brutal. ArcticAir has the experience, the parts, and the trained technicians to keep your home cool no matter what the thermostat says outside.</p>
+    <h2 class="section-title rev">Every HVAC Service<br><span>Under One Roof</span></h2>
+    <p class="section-sub rev">From emergency repairs to full system replacements, our certified technicians handle it all — fast, clean, and backed by a warranty.</p>
     <div class="services-grid">
-
       <div class="service-card rev">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v-1.5c.83 0 1.5.67 1.5 1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10v1.5C10 7.33 9.33 8 8.5 8S7 7.33 7 6.5 7.67 5 8.5 5z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
         </div>
-        <h3>AC Repair</h3>
-        <p>Warm air, strange noises, or a system that won't turn on — we diagnose and repair all central air conditioning issues. Most repairs completed same day.</p>
+        <h3>AC Repair &amp; Replacement</h3>
+        <p>System blowing warm air? We diagnose and fix all major brands same day. If it's time for a new unit, we offer transparent quotes with zero pressure.</p>
       </div>
-
       <div class="service-card rev">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22a8 8 0 0 1-8-8c0-4.03 2.62-7.46 6.25-8.68A2.5 2.5 0 0 1 13 2.94V6l3 3-3 3v2.92A6 6 0 0 0 12 22z"/><path d="M20 14a8 8 0 0 1-4 6.93V18l-2-2 2-2V8.08A8 8 0 0 1 20 14z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 10 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
         </div>
-        <h3>Heating Repair</h3>
-        <p>Vegas winters get cold at night. We repair gas furnaces, heat pumps, and electric heating systems to keep your home comfortable year-round.</p>
+        <h3>Heating System Service</h3>
+        <p>Furnace, heat pump, or mini-split — we service and repair all heating systems. Desert nights can get cold, and we make sure you're covered year-round.</p>
       </div>
-
       <div class="service-card rev">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         <h3>New System Installation</h3>
-        <p>From system sizing to final startup, we install high-efficiency AC and heating systems from leading brands — with financing options available.</p>
+        <p>Building or remodeling? We size, source, and install complete HVAC systems for homes and light commercial spaces. Proper load calculations, no guesswork.</p>
       </div>
-
       <div class="service-card rev">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h18v18H3z"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
         </div>
-        <h3>Duct Cleaning &amp; Sealing</h3>
-        <p>Leaky or dirty ductwork can increase your energy bills by up to 30%. We clean, seal, and re-insulate ducts so your system runs at full efficiency.</p>
+        <h3>Preventive Maintenance</h3>
+        <p>Annual tune-ups extend system life and catch small problems before they become expensive ones. Our maintenance plans keep you covered all year long.</p>
       </div>
-
       <div class="service-card rev">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
         </div>
-        <h3>AC Tune-Up &amp; Maintenance</h3>
-        <p>Annual tune-ups extend system life and prevent expensive breakdowns. Our 21-point inspection covers everything before the summer heat arrives.</p>
+        <h3>Ductwork &amp; Air Quality</h3>
+        <p>Leaky ducts waste energy and spread dust. We seal, repair, and replace ductwork — plus install air purifiers and UV systems for cleaner indoor air.</p>
       </div>
-
       <div class="service-card rev">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.09 12 19.79 19.79 0 011 3.18a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006.99 7l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
         </div>
-        <h3>Emergency HVAC Service</h3>
-        <p>AC out in 110° heat? We prioritize true emergencies. Our 24/7 dispatch gets a technician to your door fast — nights, weekends, and holidays.</p>
+        <h3>Commercial HVAC</h3>
+        <p>From restaurants to office buildings, we handle commercial installs and service contracts across the Las Vegas Valley. Minimal downtime, licensed and insured.</p>
       </div>
-
     </div>
   </div>
 </section>
 
-<section class="why-us">
+<section class="why-us" id="about">
   <div class="why-grid">
     <div>
       <div class="section-label rev">Why ArcticAir</div>
-      <h2 class="section-title rev">The ArcticAir<br>Advantage</h2>
+      <h2 class="section-title rev">We Show Up.<br><span>We Fix It.</span><br>We Stand Behind It.</h2>
+      <p class="section-sub rev">In a market flooded with HVAC companies, we've built our reputation one honest job at a time — 20 years and counting.</p>
       <div class="why-features">
         <div class="why-feature rev">
-          <div class="why-num">01</div>
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
           <div>
-            <h4>All Brands Serviced</h4>
-            <p>Carrier, Trane, Lennox, Goodman, Rheem — it doesn't matter who made it. Our technicians are trained and certified on every major brand.</p>
+            <h4>Certified Technicians Only</h4>
+            <p>Every tech on our team is NATE-certified and background-checked. No day-laborers, no surprises — just qualified professionals.</p>
           </div>
         </div>
         <div class="why-feature rev">
-          <div class="why-num">02</div>
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
           <div>
-            <h4>Energy Efficiency Focus</h4>
-            <p>We don't just fix what's broken — we optimize your system to run more efficiently and help lower your monthly utility bills year-round.</p>
+            <h4>Same-Day Response Guarantee</h4>
+            <p>Call before noon and we'll be there same day. For emergencies, we dispatch 24/7 — because AC doesn't break on a schedule.</p>
           </div>
         </div>
         <div class="why-feature rev">
-          <div class="why-num">03</div>
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
           <div>
-            <h4>Financing Available</h4>
-            <p>New systems starting at $0 down with 0% financing options. Don't let cost delay getting your home back to a comfortable temperature.</p>
+            <h4>Flat-Rate Pricing, Always</h4>
+            <p>You'll know the full cost before we start. No hourly billing, no hidden fees after the job — the price we quote is the price you pay.</p>
           </div>
         </div>
       </div>
     </div>
     <div class="why-stats rev">
       <div class="why-stat">
-        <div class="why-stat-num">18+</div>
-        <div class="why-stat-label">Years in LV</div>
+        <div class="why-stat-num">20+</div>
+        <div class="why-stat-label">Years in Business</div>
       </div>
       <div class="why-stat">
-        <div class="why-stat-num">3.5K+</div>
-        <div class="why-stat-label">Systems Fixed</div>
+        <div class="why-stat-num">8,000+</div>
+        <div class="why-stat-label">Jobs Completed</div>
       </div>
       <div class="why-stat">
-        <div class="why-stat-num">4.9&#9733;</div>
-        <div class="why-stat-label">Avg. Rating</div>
+        <div class="why-stat-num">4.9★</div>
+        <div class="why-stat-label">Google Rating</div>
       </div>
       <div class="why-stat">
-        <div class="why-stat-num">24/7</div>
-        <div class="why-stat-label">Emergency Line</div>
+        <div class="why-stat-num">2hr</div>
+        <div class="why-stat-label">Avg. Response Time</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="process">
-  <div style="max-width:1200px;margin:0 auto;text-align:center">
+<section class="process" id="process">
+  <div style="max-width:900px;margin:0 auto;text-align:center">
     <div class="section-label rev">How It Works</div>
-    <h2 class="section-title rev" style="margin-bottom:56px">From Call to Cool<br>in Three Simple Steps</h2>
-    <div class="process-steps">
-      <div class="process-step rev">
-        <div class="step-circle">1</div>
-        <h4>Call or Book Online</h4>
-        <p>Contact us by phone or our online form. We'll schedule same-day service or a time that fits your schedule.</p>
-      </div>
-      <div class="process-step rev">
-        <div class="step-circle">2</div>
-        <h4>Technician Arrives Same Day</h4>
-        <p>Your tech arrives on time in a fully stocked truck, diagnoses the issue, and gives you a clear upfront price.</p>
-      </div>
-      <div class="process-step rev">
-        <div class="step-circle">3</div>
-        <h4>Fully Repaired &amp; Tested</h4>
-        <p>We complete the repair, test the system through a full cycle, and make sure your home is cooling before we leave.</p>
-      </div>
+    <h2 class="section-title rev" style="max-width:500px;margin:0 auto 14px">Three Steps.<br><span>That's It.</span></h2>
+    <p class="section-sub rev" style="margin:0 auto 48px">No runaround, no upsell pressure. Just a fast, clean process from first call to finished job.</p>
+  </div>
+  <div class="process-steps">
+    <div class="process-step rev">
+      <div class="step-circle">1</div>
+      <h4>Call or Book Online</h4>
+      <p>Reach us by phone or use our quick form. We'll confirm a same-day or next-day window that works for you.</p>
+    </div>
+    <div class="process-step rev">
+      <div class="step-circle">2</div>
+      <h4>We Diagnose &amp; Quote</h4>
+      <p>Our tech arrives on time, identifies the issue, and gives you a flat-rate price — before touching anything.</p>
+    </div>
+    <div class="process-step rev">
+      <div class="step-circle">3</div>
+      <h4>Fixed. Guaranteed.</h4>
+      <p>We complete the work and back it with a 2-year warranty on parts and labor. You only pay what was quoted.</p>
     </div>
   </div>
 </section>
 
 <section class="reviews" id="reviews">
-  <div style="max-width:1200px;margin:0 auto">
-    <div class="section-label rev">Customer Reviews</div>
-    <h2 class="section-title rev">Las Vegas Trusts<br>ArcticAir</h2>
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="section-label rev">Reviews</div>
+    <h2 class="section-title rev">What Our Customers Say</h2>
+    <p class="section-sub rev">Over 400 five-star reviews across Google and Yelp. Here are a few that say it better than we could.</p>
     <div class="reviews-grid">
-
       <div class="review-card rev">
-        <div class="review-quote">
-          <svg viewBox="0 0 45 35" xmlns="http://www.w3.org/2000/svg"><path d="M0 22V13.2C0 9.467 1.067 6.333 3.2 3.8 5.333 1.267 8.4 0 12.4 0l1.6 3.2C11.2 3.733 9.2 4.8 7.8 6.4 6.4 8 5.7 9.867 5.6 12h6.8V22H0zm23 0V13.2c0-3.733 1.067-6.867 3.2-9.4C28.333 1.267 31.4 0 35.4 0L37 3.2c-2.8.533-4.8 1.6-6.2 3.2-1.4 1.6-2.1 3.467-2.2 5.6h6.8V22H23z" fill="currentColor"/></svg>
-        </div>
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">It was 112 degrees and our AC went out on a Friday afternoon. ArcticAir had a tech at our door in Henderson within two hours. He found a failed capacitor, had the part on his truck, and had us back to cool air in 45 minutes. Fair price and excellent communication throughout. These guys are the best in the valley.</p>
-        <div class="reviewer-name">Amanda K.</div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"Our AC went out on a Friday at 4pm in July. ArcticAir had someone at our door by 7pm and it was fixed by 9. Never felt so relieved. Will never call anyone else."</p>
+        <div class="reviewer-name">Marcus T.</div>
         <div class="reviewer-area">Henderson, NV</div>
       </div>
-
       <div class="review-card rev">
-        <div class="review-quote">
-          <svg viewBox="0 0 45 35" xmlns="http://www.w3.org/2000/svg"><path d="M0 22V13.2C0 9.467 1.067 6.333 3.2 3.8 5.333 1.267 8.4 0 12.4 0l1.6 3.2C11.2 3.733 9.2 4.8 7.8 6.4 6.4 8 5.7 9.867 5.6 12h6.8V22H0zm23 0V13.2c0-3.733 1.067-6.867 3.2-9.4C28.333 1.267 31.4 0 35.4 0L37 3.2c-2.8.533-4.8 1.6-6.2 3.2-1.4 1.6-2.1 3.467-2.2 5.6h6.8V22H23z" fill="currentColor"/></svg>
-        </div>
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">Got a full system replacement done by ArcticAir for our Summerlin home. From the initial quote to the final install, everything was professional. They explained the financing options clearly, the install crew was clean and efficient, and the new Lennox system has cut my electric bill by over $90 a month. Highly recommend.</p>
-        <div class="reviewer-name">Robert M.</div>
-        <div class="reviewer-area">Summerlin, Las Vegas</div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"The tech explained everything clearly, didn't try to upsell me on parts I didn't need, and the price matched the quote exactly. That's all I ask for and they delivered."</p>
+        <div class="reviewer-name">Daniela R.</div>
+        <div class="reviewer-area">Summerlin, NV</div>
       </div>
-
       <div class="review-card rev">
-        <div class="review-quote">
-          <svg viewBox="0 0 45 35" xmlns="http://www.w3.org/2000/svg"><path d="M0 22V13.2C0 9.467 1.067 6.333 3.2 3.8 5.333 1.267 8.4 0 12.4 0l1.6 3.2C11.2 3.733 9.2 4.8 7.8 6.4 6.4 8 5.7 9.867 5.6 12h6.8V22H0zm23 0V13.2c0-3.733 1.067-6.867 3.2-9.4C28.333 1.267 31.4 0 35.4 0L37 3.2c-2.8.533-4.8 1.6-6.2 3.2-1.4 1.6-2.1 3.467-2.2 5.6h6.8V22H23z" fill="currentColor"/></svg>
-        </div>
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">Called for a tune-up before summer hit this year. The technician found a refrigerant leak that would have killed my system in July when I needed it most. Fixed on the spot for a fair charge. I've been using ArcticAir for four years now out of North Las Vegas and they have never disappointed. Honest and thorough every time.</p>
-        <div class="reviewer-name">James W.</div>
+        <div class="stars">★★★★★</div>
+        <p class="review-text">"I've used three HVAC companies over the years and ArcticAir is the only one I'd recommend. Fast, professional, and honest. My new system is running great two years later."</p>
+        <div class="reviewer-name">Greg &amp; Lisa W.</div>
         <div class="reviewer-area">North Las Vegas, NV</div>
       </div>
-
     </div>
   </div>
 </section>
 
 <section class="areas" id="areas">
-  <div class="areas-grid">
+  <div class="areas-grid" style="max-width:1100px;margin:0 auto">
     <div>
-      <div class="section-label rev">Service Territory</div>
-      <h2 class="section-title rev">Serving the Entire<br>Las Vegas Valley</h2>
-      <p class="section-sub rev" style="margin-bottom:20px">Whether you're in Henderson, Summerlin, or North Las Vegas, ArcticAir dispatches same-day technicians across the entire valley.</p>
-      <div class="areas-list">
-        <div class="area-item rev"><div class="area-dot"></div> Las Vegas</div>
-        <div class="area-item rev"><div class="area-dot"></div> Henderson</div>
-        <div class="area-item rev"><div class="area-dot"></div> North Las Vegas</div>
-        <div class="area-item rev"><div class="area-dot"></div> Summerlin</div>
-        <div class="area-item rev"><div class="area-dot"></div> Boulder City</div>
-        <div class="area-item rev"><div class="area-dot"></div> Enterprise</div>
-        <div class="area-item rev"><div class="area-dot"></div> Spring Valley</div>
-        <div class="area-item rev"><div class="area-dot"></div> Paradise</div>
+      <div class="section-label rev">Service Area</div>
+      <h2 class="section-title rev">Serving the<br>Entire <span>Las Vegas Valley</span></h2>
+      <p class="section-sub rev" style="margin-bottom:20px">We cover Las Vegas and all surrounding communities. If you're within the valley, we can be there same day.</p>
+      <div class="areas-list rev">
+        <div class="area-item"><div class="area-dot"></div> Las Vegas</div>
+        <div class="area-item"><div class="area-dot"></div> Henderson</div>
+        <div class="area-item"><div class="area-dot"></div> Summerlin</div>
+        <div class="area-item"><div class="area-dot"></div> North Las Vegas</div>
+        <div class="area-item"><div class="area-dot"></div> Boulder City</div>
+        <div class="area-item"><div class="area-dot"></div> Enterprise</div>
+        <div class="area-item"><div class="area-dot"></div> Spring Valley</div>
+        <div class="area-item"><div class="area-dot"></div> Whitney</div>
       </div>
     </div>
-    <div>
-      <div class="map-visual rev">
-        <div class="map-ring"></div>
-        <div class="map-ring"></div>
-        <div class="map-ring"></div>
-        <div class="map-ring"></div>
-        <div class="map-center"></div>
-      </div>
+    <div class="map-visual rev">
+      <div class="map-ring"></div>
+      <div class="map-ring"></div>
+      <div class="map-ring"></div>
+      <div class="map-ring"></div>
+      <div class="map-center"></div>
     </div>
   </div>
 </section>
 
 <section class="contact" id="contact">
-  <div style="max-width:1200px;margin:0 auto">
-    <div class="section-label rev">Get In Touch</div>
-    <h2 class="section-title rev">Request a Free Quote</h2>
-  </div>
-  <div class="contact-grid">
-    <form onsubmit="return false;" class="rev">
-      <div class="form-row">
-        <div class="form-group">
-          <label>First Name</label>
-          <input type="text" placeholder="John">
+  <div class="contact-grid" style="max-width:1100px;margin:0 auto">
+    <div class="contact-form-wrap rev">
+      <div class="section-label" style="margin-bottom:10px">Get a Free Estimate</div>
+      <h2 class="section-title" style="font-size:1.8rem;margin-bottom:6px">Tell Us About Your System</h2>
+      <p style="font-size:0.88rem;color:var(--muted);margin-bottom:24px">We'll get back to you within the hour during business hours.</p>
+      <form onsubmit="return false">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Smith">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="(702) 555-0000">
+          </div>
         </div>
         <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" placeholder="Smith">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Phone</label>
-          <input type="tel" placeholder="(702) 555-0100">
+          <label>Email Address</label>
+          <input type="email" placeholder="john@example.com">
         </div>
         <div class="form-group">
-          <label>Email</label>
-          <input type="email" placeholder="john@email.com">
+          <label>Service Needed</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>AC Repair</option>
+            <option>AC Replacement</option>
+            <option>Heating Repair</option>
+            <option>New System Install</option>
+            <option>Maintenance / Tune-up</option>
+            <option>Emergency Service</option>
+            <option>Other</option>
+          </select>
         </div>
-      </div>
-      <div class="form-group">
-        <label>Service Needed</label>
-        <select>
-          <option value="">Select a service...</option>
-          <option>AC Repair</option>
-          <option>Heating Repair</option>
-          <option>New System Installation</option>
-          <option>Duct Cleaning &amp; Sealing</option>
-          <option>AC Tune-Up &amp; Maintenance</option>
-          <option>Emergency HVAC Service</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Describe what's happening with your HVAC system — the more detail, the better prepared we'll be."></textarea>
-      </div>
-      <button type="submit" class="btn-submit">Send My Free Quote Request</button>
-    </form>
+        <div class="form-group">
+          <label>Tell Us More (optional)</label>
+          <textarea placeholder="Describe the issue, system age, anything helpful..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Request My Free Estimate</button>
+      </form>
+    </div>
     <div class="contact-info rev">
-      <h3>Contact ArcticAir</h3>
+      <h3>Reach Us Directly</h3>
       <div class="contact-item">
         <div class="contact-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.09 12 19.79 19.79 0 011 3.18a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91"/></svg>
         </div>
         <div>
           <div class="contact-label">Phone</div>
-          <div class="contact-value">(702) 555-0184</div>
+          <div class="contact-value">(702) 555-0198</div>
         </div>
       </div>
       <div class="contact-item">
         <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
         </div>
         <div>
           <div class="contact-label">Email</div>
@@ -581,17 +590,19 @@ footer{background:var(--dark);padding:40px 5vw;border-top:1px solid rgba(255,255
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
         <div>
-          <div class="contact-label">Business Hours</div>
-          <div class="contact-value">Mon–Sat: 7am – 8pm<br>Emergency: 24/7</div>
+          <div class="contact-label">Hours</div>
+          <div class="contact-value">Mon–Sat 7am–8pm</div>
+          <div style="font-size:0.8rem;color:var(--muted);margin-top:2px">Emergency service 24/7</div>
         </div>
       </div>
       <div class="contact-item">
         <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <div>
-          <div class="contact-label">Service Area</div>
-          <div class="contact-value">Las Vegas Valley &amp; Surrounding Communities</div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">Las Vegas, NV 89101</div>
+          <div style="font-size:0.8rem;color:var(--muted);margin-top:2px">Serving the entire valley</div>
         </div>
       </div>
     </div>
@@ -599,76 +610,64 @@ footer{background:var(--dark);padding:40px 5vw;border-top:1px solid rgba(255,255
 </section>
 
 <div class="cta-band">
-  <h2>AC Down? Don't Sweat It. We're On The Way.</h2>
-  <p>Same-day service available across Las Vegas. We answer the phone and show up when it matters most.</p>
+  <h2>AC Out? Don't Wait.<br>We're <span>Ready Right Now.</span></h2>
+  <p>Same-day service available. Call now and we'll have a tech at your door today.</p>
   <div class="cta-btns">
-    <a href="tel:+17025550184" class="cta-btn-dark">Call (702) 555-0184</a>
-    <a href="#contact" class="cta-btn-outline">Book Online</a>
+    <a href="tel:+17025550198" class="cta-btn-light">Call (702) 555-0198</a>
+    <a href="#contact" class="cta-btn-outline">Get a Free Estimate</a>
   </div>
 </div>
 
 <footer>
   <div class="footer-inner">
-    <a href="#" class="logo">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px">
-        <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/>
-        <path d="M12 6v2M12 16v2M6 12H4M20 12h-2M7.76 7.76l-1.42-1.42M17.66 17.66l-1.42-1.42M7.76 16.24l-1.42 1.42M17.66 6.34l-1.42 1.42"/>
-        <circle cx="12" cy="12" r="3"/>
-      </svg>
-      <span style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:1px;color:var(--muted)">ArcticAir Heating &amp; Cooling</span>
-    </a>
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="logo-icon" style="width:28px;height:28px;border-radius:6px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <span style="font-size:0.9rem;font-weight:700;color:var(--navy)">ArcticAir Heating &amp; Cooling</span>
+    </div>
     <nav class="footer-nav">
       <a href="#services">Services</a>
       <a href="#reviews">Reviews</a>
       <a href="#areas">Areas</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="footer-copy">&copy; 2026 ArcticAir Heating &amp; Cooling &mdash; Las Vegas, NV. All rights reserved.</div>
+    <p class="footer-copy">© 2025 ArcticAir HVAC. Las Vegas, NV. All rights reserved.</p>
   </div>
 </footer>
 
 <script>
-// Hero stagger
-const heroEls=[['hb1',0],['hb2',100],['hb3',200],['hb4',300],['hb5',400],['hb6',250]];
-heroEls.forEach(([id,delay])=>{
-  setTimeout(()=>{
-    const el=document.getElementById(id);
-    if(el)el.classList.add('v');
-  },delay+120);
-});
-
 // Scroll reveal
-const revObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');revObs.unobserve(e.target);}});
-},{threshold:0.1});
-document.querySelectorAll('.rev').forEach(el=>revObs.observe(el));
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');obs.unobserve(e.target)}});
+},{threshold:.1});
+document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
 
-// Stat counters
-function easeOut(t){return 1-Math.pow(1-t,3)}
-function animateCounter(el,target,duration,isDecimal){
-  const start=performance.now();
-  function frame(now){
-    const elapsed=now-start;
-    const progress=Math.min(elapsed/duration,1);
-    const val=target*easeOut(progress);
-    el.textContent=isDecimal?(val).toFixed(1):Math.floor(val).toLocaleString();
-    if(progress<1)requestAnimationFrame(frame);
-    else el.textContent=isDecimal?target.toFixed(1):target.toLocaleString();
-  }
-  requestAnimationFrame(frame);
+// Hero card immediate reveal
+document.querySelector('.hero-card').classList.add('v');
+
+// Count-up
+function countUp(el){
+  const target=+el.dataset.target;
+  const decimal=el.dataset.decimal?+el.dataset.decimal:0;
+  const duration=1600;
+  const step=target/(duration/16);
+  let current=0;
+  const timer=setInterval(()=>{
+    current=Math.min(current+step,target);
+    el.textContent=decimal?current.toFixed(decimal):Math.floor(current).toLocaleString();
+    if(current>=target)clearInterval(timer);
+  },16);
 }
-const counterObs=new IntersectionObserver(entries=>{
+const countObs=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
-      const el=e.target;
-      const target=parseFloat(el.dataset.target);
-      const isDecimal=el.dataset.decimal==='1';
-      animateCounter(el,target,1600,isDecimal);
-      counterObs.unobserve(el);
+      e.target.querySelectorAll('[data-target]').forEach(countUp);
+      countObs.unobserve(e.target);
     }
   });
-},{threshold:0.3});
-document.querySelectorAll('[data-target]').forEach(el=>counterObs.observe(el));
+},{threshold:.3});
+document.querySelectorAll('.stats-bar').forEach(el=>countObs.observe(el));
 </script>
 </body>
 </html>

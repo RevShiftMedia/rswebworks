@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WM Greenshadow Landfill | Waste Disposal in Pasadena, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #007a33;
+  --primary-dark: #005c26;
+  --primary-darkest: #003d19;
+  --accent: #f97316;
+  --accent-dark: #ea6c09;
+  --text-light: #edf7f1;
+  --text-muted: #7ab594;
+  --bg-white: #ffffff;
+  --bg-off: #f4faf6;
+  --bg-dark: #005c26;
+  --bg-darkest: #003d19;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Source Sans 3', sans-serif; color: #1a1a1a; background: var(--bg-white); }
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--primary);
+  padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+.nav-logo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.35rem; font-weight: 700;
+  color: #fff; letter-spacing: 0.03em; text-transform: uppercase;
+  display: flex; flex-direction: column; line-height: 1.1;
+}
+.nav-logo-sub { font-size: 0.65rem; font-weight: 400; color: rgba(255,255,255,0.7); letter-spacing: 0.08em; }
+.nav-links { display: flex; gap: 26px; align-items: center; }
+.nav-links a {
+  font-size: 0.9rem; font-weight: 600;
+  color: rgba(255,255,255,0.82);
+  text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-cta {
+  background: var(--accent); color: #fff !important;
+  padding: 9px 22px; border-radius: 4px; transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--accent-dark) !important; }
+
+/* HERO */
+.hero {
+  background: var(--primary);
+  padding: 90px 40px 80px;
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.hero-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 400px; gap: 56px; align-items: center;
+}
+.hero-pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(249,115,22,0.15); border: 1px solid rgba(249,115,22,0.3);
+  color: var(--accent); padding: 5px 14px; border-radius: 20px;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 700; line-height: 1.1;
+  color: #fff; text-transform: uppercase; letter-spacing: 0.02em;
+  margin-bottom: 20px;
+}
+.hero h1 .accent { color: var(--accent); }
+.hero-sub {
+  font-size: 1.1rem; line-height: 1.66;
+  color: rgba(255,255,255,0.72); margin-bottom: 34px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
+.btn-primary {
+  background: var(--accent); color: #fff;
+  padding: 13px 28px; border-radius: 4px;
+  font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-primary:hover { background: var(--accent-dark); }
+.btn-outline {
+  background: transparent; color: rgba(255,255,255,0.9);
+  padding: 13px 28px; border-radius: 4px; border: 2px solid rgba(255,255,255,0.3);
+  font-family: 'Oswald', sans-serif; font-size: 0.95rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 0.2s;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.65); }
+.hero-trust { display: flex; gap: 20px; flex-wrap: wrap; }
+.trust-badge {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 0.83rem; color: rgba(255,255,255,0.65); font-weight: 500;
+}
+.trust-badge svg { width: 14px; height: 14px; color: var(--accent); flex-shrink: 0; }
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 10px; padding: 32px 28px;
+}
+.hero-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--accent); margin-bottom: 18px;
+}
+.accept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.accept-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 9px 12px; border-radius: 5px;
+  background: rgba(255,255,255,0.06);
+  font-size: 0.83rem; color: rgba(255,255,255,0.8); font-weight: 500;
+}
+.accept-item svg { width: 12px; height: 12px; color: var(--accent); flex-shrink: 0; }
+.hero-card-footer {
+  margin-top: 16px; padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.82rem; color: rgba(255,255,255,0.55); text-align: center;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-pill    { animation: heroFadeUp 0.5s ease both; animation-delay: 0.05s; }
+.hero h1      { animation: heroFadeUp 0.5s ease both; animation-delay: 0.15s; }
+.hero-sub     { animation: heroFadeUp 0.5s ease both; animation-delay: 0.25s; }
+.hero-actions { animation: heroFadeUp 0.5s ease both; animation-delay: 0.33s; }
+.hero-trust   { animation: heroFadeUp 0.5s ease both; animation-delay: 0.4s; }
+.hero-card    { animation: heroFadeUp 0.6s ease both; animation-delay: 0.2s; }
+
+/* STATS BAR */
+.stats-bar {
+  background: var(--primary-darkest);
+  padding: 34px 40px;
+}
+.stats-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; text-align: center;
+  border-bottom: 2px solid rgba(249,115,22,0.4);
+  padding-bottom: 34px;
+}
+.stat-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.3rem; font-weight: 700; color: var(--accent); line-height: 1;
+}
+.stat-label {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.07em;
+  text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 6px;
+}
+
+/* SERVICES */
+.services { background: var(--bg-off); padding: 88px 40px; }
+.section-header { max-width: 1140px; margin: 0 auto 52px; }
+.section-eyebrow {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.02em; color: #1a1a1a; line-height: 1.15;
+}
+.section-sub { font-size: 1.05rem; color: #555; margin-top: 12px; max-width: 540px; }
+.services-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
+}
+.svc-card {
+  background: var(--bg-white);
+  border-radius: 8px; padding: 28px 24px;
+  border: 1px solid #d4e8da;
+  display: flex; align-items: flex-start; gap: 16px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.svc-card:hover { transform: translateY(-5px); box-shadow: 0 12px 28px rgba(0,122,51,0.1); }
+.svc-icon {
+  width: 48px; height: 48px; border-radius: 8px; flex-shrink: 0;
+  background: rgba(0,122,51,0.08);
+  display: flex; align-items: center; justify-content: center;
+}
+.svc-icon svg { width: 24px; height: 24px; color: var(--primary); }
+.svc-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.05rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a; margin-bottom: 8px;
+}
+.svc-card p { font-size: 0.89rem; line-height: 1.62; color: #555; }
+
+/* WHY */
+.why { background: var(--bg-dark); padding: 88px 40px; }
+.why-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+}
+.why-left .section-title { color: #fff; }
+.why-left .section-sub { color: rgba(255,255,255,0.68); }
+.why-list { list-style: none; margin-top: 34px; display: flex; flex-direction: column; gap: 16px; }
+.why-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 20px; border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.why-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--accent); flex-shrink: 0; margin-top: 6px;
+}
+.why-item-text strong {
+  display: block; color: #fff;
+  font-family: 'Oswald', sans-serif; font-size: 0.95rem;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px;
+}
+.why-item-text span { font-size: 0.87rem; color: rgba(255,255,255,0.62); }
+.why-right {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px; padding: 36px 30px;
+}
+.why-right h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.05rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--accent); margin-bottom: 18px;
+}
+.hours-list { display: flex; flex-direction: column; gap: 9px; }
+.hours-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 9px 14px; border-radius: 5px;
+  background: rgba(255,255,255,0.04);
+  font-size: 0.88rem;
+}
+.hours-row span:first-child { color: rgba(255,255,255,0.7); font-weight: 500; }
+.hours-row span:last-child { color: #fff; font-weight: 600; }
+.hours-note {
+  margin-top: 16px; font-size: 0.82rem; color: rgba(255,255,255,0.5); line-height: 1.5;
+}
+
+/* HOW */
+.how { background: var(--bg-darkest); padding: 88px 40px; }
+.how .section-title { color: #fff; }
+.how .section-sub { color: rgba(255,255,255,0.62); }
+.how-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 26px;
+}
+.how-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px; padding: 34px 26px;
+}
+.how-icon {
+  width: 48px; height: 48px; border-radius: 10px;
+  background: rgba(249,115,22,0.15);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+}
+.how-icon svg { width: 24px; height: 24px; color: var(--accent); }
+.how-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.15rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #fff; margin-bottom: 10px;
+}
+.how-card p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+/* REVIEWS */
+.reviews { background: var(--bg-off); padding: 88px 40px; }
+.reviews-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 22px;
+}
+.review-card {
+  background: var(--bg-white);
+  border-radius: 8px; padding: 28px 24px;
+  border: 1px solid #d4e8da;
+  border-bottom: 3px solid var(--primary);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.review-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(0,122,51,0.1); }
+.review-rating {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+}
+.review-stars { color: var(--accent); font-size: 1rem; }
+.review-score {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem; font-weight: 700; color: var(--primary);
+}
+.review-text { font-size: 0.93rem; line-height: 1.65; color: #444; margin-bottom: 18px; font-style: italic; }
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--primary); display: flex; align-items: center; justify-content: center;
+  font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 700; color: #fff;
+}
+.reviewer-info strong { display: block; font-size: 0.88rem; font-weight: 600; color: #1a1a1a; }
+.reviewer-info span { font-size: 0.78rem; color: #888; }
+
+/* AREAS */
+.areas { background: var(--primary-dark); padding: 68px 40px; }
+.areas .section-title { color: #fff; }
+.areas-list {
+  max-width: 1140px; margin: 34px auto 0;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 12px;
+}
+.area-pill {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px; padding: 11px 16px;
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.88rem; color: rgba(255,255,255,0.82); font-weight: 500;
+}
+.area-pill svg { width: 13px; height: 13px; color: var(--accent); flex-shrink: 0; }
+
+/* CONTACT */
+.contact { background: var(--bg-white); padding: 88px 40px; }
+.contact-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+}
+.contact-info .section-title { color: #1a1a1a; }
+.contact-info .section-sub { color: #555; }
+.contact-channels { margin-top: 30px; display: flex; flex-direction: column; gap: 14px; }
+.channel {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px; border-radius: 8px;
+  border: 1px solid #d4e8da; background: var(--bg-off);
+}
+.channel-icon {
+  width: 42px; height: 42px; border-radius: 8px;
+  background: rgba(0,122,51,0.08);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.channel-icon svg { width: 20px; height: 20px; color: var(--primary); }
+.channel-text strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #888; font-weight: 600; margin-bottom: 2px; }
+.channel-text a { font-size: 1rem; font-weight: 600; color: var(--primary); }
+.contact-form {
+  background: var(--bg-off); border-radius: 10px; padding: 34px 30px;
+  border: 1px solid #d4e8da;
+}
+.form-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a; margin-bottom: 22px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+.form-group label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #555; }
+.form-group input, .form-group select, .form-group textarea {
+  padding: 11px 14px; border: 1px solid #c8ddd0; border-radius: 5px;
+  font-size: 0.93rem; font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg-white); color: #1a1a1a; transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
+.form-group textarea { resize: vertical; min-height: 88px; }
+.form-submit {
+  width: 100%; padding: 13px;
+  background: var(--primary); color: #fff; border: none; border-radius: 5px;
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: background 0.2s;
+}
+.form-submit:hover { background: var(--primary-dark); }
+
+/* CTA BAND */
+.cta-band {
+  background: var(--primary);
+  padding: 72px 40px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-band::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.cta-band h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.9rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.03em; color: #fff; margin-bottom: 14px;
+}
+.cta-band h2 em { color: var(--accent); font-style: normal; }
+.cta-band p { font-size: 1.05rem; color: rgba(255,255,255,0.72); max-width: 480px; margin: 0 auto 28px; }
+
+/* FOOTER */
+.footer { background: var(--bg-darkest); padding: 52px 40px 28px; }
+.footer-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+  padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-logo {
+  font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 700;
+  color: #fff; text-transform: uppercase; letter-spacing: 0.03em;
+}
+.footer-brand p { font-size: 0.88rem; line-height: 1.65; color: rgba(255,255,255,0.5); margin-top: 12px; max-width: 280px; }
+.footer-col h4 {
+  font-family: 'Oswald', sans-serif; font-size: 0.82rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em; color: #fff; margin-bottom: 14px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-col ul li a { font-size: 0.86rem; color: rgba(255,255,255,0.5); transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--accent); }
+.footer-bottom {
+  max-width: 1140px; margin: 22px auto 0;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.8rem; color: rgba(255,255,255,0.35);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.5s ease forwards; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); }
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .why-inner { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: repeat(2,1fr); }
+  .reviews-grid { grid-template-columns: repeat(2,1fr); }
+  .areas-list { grid-template-columns: repeat(2,1fr); }
+  .contact-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 56px 20px 48px; }
+  .stats-inner { grid-template-columns: 1fr; border-bottom: none; padding-bottom: 0; }
+  .services-grid { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-list { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">
+    WM Greenshadow Landfill
+    <span class="nav-logo-sub">Pasadena, TX</span>
+  </div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:2815426433" class="nav-cta">(281) 542-6433</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-pill">Pasadena's Trusted Waste Facility</div>
+      <h1>Responsible Waste.<br><span class="accent">Reliable Service.</span></h1>
+      <p class="hero-sub">Serving Pasadena and Southeast Houston with professional waste collection, landfill disposal, and recycling solutions for homes and businesses.</p>
+      <div class="hero-actions">
+        <a href="tel:2815426433" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          (281) 542-6433
+        </a>
+        <a href="#contact" class="btn-outline">Request Service</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Permitted &amp; Compliant</div>
+        <div class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Residential &amp; Commercial</div>
+        <div class="trust-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Sustainable Disposal</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Accepted Waste Types</div>
+      <div class="accept-grid">
+        <div class="accept-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Municipal Solid Waste</div>
+        <div class="accept-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Construction Debris</div>
+        <div class="accept-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Yard &amp; Green Waste</div>
+        <div class="accept-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Industrial Waste</div>
+        <div class="accept-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Recyclables</div>
+        <div class="accept-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Bulk Items</div>
+        <div class="accept-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Roll-Off Loads</div>
+        <div class="accept-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Special Waste</div>
+      </div>
+      <div class="hero-card-footer">Call for material-specific pricing and requirements</div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num" data-target="30">0</div>
+      <div class="stat-label">Years of Operation</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="5000">0</div>
+      <div class="stat-label">Commercial Accounts</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="6">0</div>
+      <div class="stat-label">Days a Week Open</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="100">0</div>
+      <div class="stat-label">% Permitted Facility</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-eyebrow">Our Services</div>
+    <h2 class="section-title">Comprehensive Waste Solutions</h2>
+    <p class="section-sub">From residential curbside to industrial volumes — our Pasadena facility handles it all responsibly.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+      <div><h3>Residential Collection</h3><p>Dependable curbside pickup for homes across Pasadena and Southeast Houston. Consistent schedules you can count on.</p></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg></div>
+      <div><h3>Commercial Waste Service</h3><p>Container service for businesses of all sizes. Scheduled pickup, dumpster placement, and billing accounts for volume customers.</p></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z"/></svg></div>
+      <div><h3>Roll-Off Container Rental</h3><p>10 to 40-yard roll-off dumpsters for construction, renovation, and commercial cleanup projects delivered to your site.</p></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg></div>
+      <div><h3>Recycling Programs</h3><p>Single-stream recycling pickup for residential and commercial customers. We divert recyclables from landfill at scale.</p></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <div><h3>Construction &amp; Demolition</h3><p>C&amp;D waste disposal for contractors and demolition crews. Permitted acceptance of concrete, lumber, drywall, and mixed debris.</p></div>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div><h3>Special &amp; Industrial Waste</h3><p>Permitted acceptance of special waste streams including industrial byproducts and non-hazardous processed materials.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-left">
+      <div class="section-eyebrow">Why WM Greenshadow</div>
+      <h2 class="section-title">Southeast Houston's Waste Authority</h2>
+      <p class="section-sub">Decades of experience serving Pasadena and the surrounding industrial corridor with safe, compliant, and efficient waste management.</p>
+      <ul class="why-list">
+        <li class="why-item card">
+          <div class="why-dot"></div>
+          <div class="why-item-text"><strong>Fully Permitted Facility</strong><span>Operating in full compliance with TCEQ and EPA regulations</span></div>
+        </li>
+        <li class="why-item card">
+          <div class="why-dot"></div>
+          <div class="why-item-text"><strong>Decades of Experience</strong><span>30+ years serving Southeast Houston's waste management needs</span></div>
+        </li>
+        <li class="why-item card">
+          <div class="why-dot"></div>
+          <div class="why-item-text"><strong>Sustainability Commitment</strong><span>Diversion programs that maximize recycling and reduce landfill impact</span></div>
+        </li>
+        <li class="why-item card">
+          <div class="why-dot"></div>
+          <div class="why-item-text"><strong>Industrial Corridor Expertise</strong><span>Deep experience serving Pasadena's industrial and petrochemical sector</span></div>
+        </li>
+      </ul>
+    </div>
+    <div class="why-right">
+      <h3>Facility Hours</h3>
+      <div class="hours-list">
+        <div class="hours-row"><span>Monday – Friday</span><span>7:00 AM – 5:00 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span>7:00 AM – 3:00 PM</span></div>
+        <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+      </div>
+      <div class="hours-note">Hours subject to change on holidays. Call ahead to confirm before making a haul.</div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="section-header">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-title">Getting Started Is Simple</h2>
+    <p class="section-sub">Whether you're setting up residential service or a commercial account, the process is straightforward.</p>
+  </div>
+  <div class="how-grid">
+    <div class="how-card card">
+      <div class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+      <h3>Call to Set Up Service</h3>
+      <p>Contact our Pasadena facility at (281) 542-6433. Tell us what you need — residential, commercial, roll-off, or drop-off — and we'll guide you through the options.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+      <h3>Get Your Service Plan</h3>
+      <p>We'll confirm pricing, schedules, and any material requirements. Commercial customers get dedicated account setup with volume billing options.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <h3>Service Begins</h3>
+      <p>Sit back while we handle your waste reliably and on schedule. Residential pickup, roll-off delivery, or facility drop-off — we make waste simple.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="section-header">
+    <div class="section-eyebrow">Reviews</div>
+    <h2 class="section-title">Trusted Across Southeast Houston</h2>
+    <p class="section-sub">Customers across Pasadena and the industrial corridor count on WM Greenshadow for reliable, compliant waste service.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card card">
+      <div class="review-rating">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <span class="review-score">5.0</span>
+      </div>
+      <p class="review-text">"We've used the Greenshadow facility for our construction projects for years. Always compliant, always professional. The staff is knowledgeable about what materials they can accept."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">PM</div>
+        <div class="reviewer-info"><strong>Paul M.</strong><span>General Contractor, Pasadena</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-rating">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <span class="review-score">5.0</span>
+      </div>
+      <p class="review-text">"Switched our facility's waste contract here two years ago. Reliable pickup, great reporting for compliance documentation, and the account management team is responsive and helpful."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">EG</div>
+        <div class="reviewer-info"><strong>Elena G.</strong><span>Facility Manager, Houston</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-rating">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <span class="review-score">5.0</span>
+      </div>
+      <p class="review-text">"Used their roll-off service for a large renovation. The container was delivered on schedule and pickup was fast once we called. The whole process was smooth and easy to manage."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">DB</div>
+        <div class="reviewer-info"><strong>Daniel B.</strong><span>Property Owner, La Porte</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="section-header">
+    <div class="section-eyebrow">Coverage</div>
+    <h2 class="section-title">Serving Southeast Houston</h2>
+  </div>
+  <div class="areas-list">
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Pasadena</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>La Porte</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Deer Park</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Baytown</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>South Houston</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Galena Park</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Channelview</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Southeast Houston</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-eyebrow">Contact Us</div>
+      <h2 class="section-title">Set Up Your Service Today</h2>
+      <p class="section-sub">Reach our Pasadena facility to start residential service, set up a commercial account, or get pricing on roll-off rentals.</p>
+      <div class="contact-channels">
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="channel-text"><strong>Phone</strong><a href="tel:2815426433">(281) 542-6433</a></div>
+        </div>
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="channel-text"><strong>Location</strong><a href="#">Pasadena, TX</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Request Service Information</div>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="(281) 000-0000"></div>
+      <div class="form-group"><label>Service Type</label>
+        <select>
+          <option>Residential Collection</option>
+          <option>Commercial Waste Service</option>
+          <option>Roll-Off Container Rental</option>
+          <option>Recycling Programs</option>
+          <option>Construction &amp; Demo Disposal</option>
+          <option>Industrial Waste</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Service address, volume estimates, any special requirements..."></textarea></div>
+      <button class="form-submit">Request Information</button>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <h2>Start Your <em>Waste Service</em> Today</h2>
+  <p>Call WM Greenshadow Landfill in Pasadena to set up service or get a quote on roll-off rentals and commercial accounts.</p>
+  <a href="tel:2815426433" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    (281) 542-6433
+  </a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">WM Greenshadow Landfill</div>
+      <p>Permitted waste disposal and recycling facility serving Pasadena and Southeast Houston with responsible, compliant waste management solutions.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Residential Collection</a></li>
+        <li><a href="#">Commercial Waste</a></li>
+        <li><a href="#">Roll-Off Rentals</a></li>
+        <li><a href="#">Recycling Programs</a></li>
+        <li><a href="#">C&amp;D Disposal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Areas</h4>
+      <ul>
+        <li><a href="#">Pasadena</a></li>
+        <li><a href="#">La Porte</a></li>
+        <li><a href="#">Deer Park</a></li>
+        <li><a href="#">Baytown</a></li>
+        <li><a href="#">South Houston</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:2815426433">(281) 542-6433</a></li>
+        <li><a href="#">Pasadena, TX</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 WM Greenshadow Landfill. All rights reserved.</span>
+    <span>Serving Southeast Houston, TX</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var stats = document.querySelectorAll('[data-target]');
+  var counted = false;
+  function runCounters(){
+    if(counted) return; counted = true;
+    stats.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-target'),10);
+      var current = 0;
+      var timer = setInterval(function(){
+        current += Math.ceil(target/55);
+        if(current >= target){ current = target; clearInterval(timer); }
+        el.textContent = current.toLocaleString();
+      }, 28);
+    });
+  }
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.card').forEach(function(el){ observer.observe(el); });
+  var sb = document.querySelector('.stats-bar');
+  if(sb){
+    var so = new IntersectionObserver(function(e){ if(e[0].isIntersecting) runCounters(); },{threshold:0.3});
+    so.observe(sb);
+  }
+})();
+</script>
+</body>
+</html>

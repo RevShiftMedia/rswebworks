@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dallas Strong Industrial &amp; Asset Recovery | Carrollton, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1c1c1c;
+  --primary-dark: #111111;
+  --primary-darkest: #080808;
+  --accent: #ff390d;
+  --accent-dark: #e02e00;
+  --text-light: #f5f0ee;
+  --text-muted: #9a8880;
+  --bg-white: #ffffff;
+  --bg-off: #f9f7f6;
+  --bg-dark: #111111;
+  --bg-darkest: #080808;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Source Sans 3', sans-serif; color: #1a1a1a; background: var(--bg-white); }
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--primary);
+  padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+  border-bottom: 3px solid var(--accent);
+  box-shadow: 0 2px 14px rgba(0,0,0,0.5);
+}
+.nav-logo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem; font-weight: 700;
+  color: #fff; letter-spacing: 0.03em; text-transform: uppercase;
+  display: flex; flex-direction: column; line-height: 1.15;
+}
+.nav-logo-sub { font-size: 0.65rem; font-weight: 400; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; }
+.nav-links { display: flex; gap: 26px; align-items: center; }
+.nav-links a {
+  font-size: 0.9rem; font-weight: 600;
+  color: rgba(255,255,255,0.78);
+  text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-cta {
+  background: var(--accent); color: #fff !important;
+  padding: 9px 22px; border-radius: 3px; transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--accent-dark) !important; }
+
+/* HERO */
+.hero {
+  background: var(--primary);
+  padding: 88px 40px 78px;
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.hero-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 400px; gap: 56px; align-items: center;
+}
+.hero-label {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif; font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+  border-left: 3px solid var(--accent); padding-left: 10px;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.3rem, 4.5vw, 3.7rem);
+  font-weight: 700; line-height: 1.07;
+  color: #fff; text-transform: uppercase; letter-spacing: 0.02em;
+  margin-bottom: 22px;
+}
+.hero h1 em { color: var(--accent); font-style: normal; display: block; }
+.hero-sub {
+  font-size: 1.1rem; line-height: 1.66;
+  color: rgba(255,255,255,0.68); margin-bottom: 34px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
+.btn-primary {
+  background: var(--accent); color: #fff;
+  padding: 14px 30px; border-radius: 3px;
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-primary:hover { background: var(--accent-dark); }
+.btn-outline {
+  background: transparent; color: rgba(255,255,255,0.85);
+  padding: 14px 30px; border-radius: 3px; border: 2px solid rgba(255,255,255,0.28);
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 0.2s;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.65); }
+.hero-specs { display: flex; gap: 24px; flex-wrap: wrap; }
+.spec-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.83rem; color: rgba(255,255,255,0.6); font-weight: 500;
+}
+.spec-item svg { width: 13px; height: 13px; color: var(--accent); flex-shrink: 0; }
+.hero-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-top: 3px solid var(--accent);
+  border-radius: 4px; padding: 30px 26px;
+}
+.hero-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.82rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--accent); margin-bottom: 18px;
+}
+.asset-types { display: flex; flex-direction: column; gap: 8px; }
+.asset-type {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px; border-radius: 3px;
+  background: rgba(255,255,255,0.05);
+  border-left: 2px solid rgba(255,57,13,0.4);
+}
+.asset-type-name { font-size: 0.88rem; color: rgba(255,255,255,0.82); font-weight: 500; }
+.asset-type-tag {
+  font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 2px;
+  background: rgba(255,57,13,0.15); color: var(--accent);
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-label   { animation: heroFadeUp 0.5s ease both; animation-delay: 0.05s; }
+.hero h1      { animation: heroFadeUp 0.5s ease both; animation-delay: 0.15s; }
+.hero-sub     { animation: heroFadeUp 0.5s ease both; animation-delay: 0.25s; }
+.hero-actions { animation: heroFadeUp 0.5s ease both; animation-delay: 0.33s; }
+.hero-specs   { animation: heroFadeUp 0.5s ease both; animation-delay: 0.4s; }
+.hero-card    { animation: heroFadeUp 0.6s ease both; animation-delay: 0.2s; }
+
+/* STATS BAR */
+.stats-bar {
+  background: var(--primary-dark);
+  padding: 34px 40px;
+}
+.stats-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; text-align: center;
+}
+.stat-block { padding: 16px; }
+.stat-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.4rem; font-weight: 700; color: var(--accent); line-height: 1;
+}
+.stat-label {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.07em;
+  text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 6px;
+}
+
+/* SERVICES */
+.services { background: var(--bg-off); padding: 88px 40px; }
+.section-header { max-width: 1140px; margin: 0 auto 52px; }
+.section-eyebrow {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.02em; color: #1a1a1a; line-height: 1.15;
+}
+.section-sub { font-size: 1.05rem; color: #555; margin-top: 12px; max-width: 540px; }
+.services-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 22px;
+}
+.svc-card {
+  background: var(--bg-white);
+  border-radius: 4px; padding: 28px 24px;
+  border: 1px solid #e8e0dc;
+  border-top: 3px solid var(--accent);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.svc-card:hover { transform: translateY(-4px); box-shadow: 0 10px 26px rgba(28,28,28,0.1); }
+.svc-icon {
+  width: 48px; height: 48px; border-radius: 4px;
+  background: rgba(255,57,13,0.08);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+}
+.svc-icon svg { width: 22px; height: 22px; color: var(--accent); }
+.svc-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.05rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a; margin-bottom: 8px;
+}
+.svc-card p { font-size: 0.9rem; line-height: 1.62; color: #555; }
+
+/* WHY */
+.why { background: var(--bg-dark); padding: 88px 40px; }
+.why-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+}
+.why-left .section-title { color: #fff; }
+.why-left .section-sub { color: rgba(255,255,255,0.65); }
+.why-strips { margin-top: 34px; display: flex; flex-direction: column; gap: 12px; }
+.why-strip {
+  display: flex; align-items: center; gap: 16px;
+  padding: 16px 20px; border-radius: 3px;
+  background: rgba(255,255,255,0.05);
+  border-left: 3px solid var(--accent);
+}
+.why-strip-icon {
+  width: 36px; height: 36px; border-radius: 3px;
+  background: rgba(255,57,13,0.12);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.why-strip-icon svg { width: 18px; height: 18px; color: var(--accent); }
+.why-strip-text strong {
+  display: block; color: #fff;
+  font-family: 'Oswald', sans-serif; font-size: 0.95rem;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 3px;
+}
+.why-strip-text span { font-size: 0.86rem; color: rgba(255,255,255,0.58); }
+.why-right {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px; padding: 36px 30px;
+}
+.why-right h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.05rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--accent); margin-bottom: 18px;
+}
+.industry-list { display: flex; flex-direction: column; gap: 9px; }
+.ind-row {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border-radius: 3px;
+  background: rgba(255,255,255,0.04);
+  font-size: 0.9rem; color: rgba(255,255,255,0.78); font-weight: 500;
+}
+.ind-row svg { width: 13px; height: 13px; color: var(--accent); flex-shrink: 0; }
+
+/* HOW */
+.how { background: var(--bg-darkest); padding: 88px 40px; }
+.how .section-title { color: #fff; }
+.how .section-sub { color: rgba(255,255,255,0.6); }
+.how-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
+}
+.how-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 4px; padding: 34px 26px;
+}
+.how-step-tag {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif; font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: #fff; background: var(--accent); padding: 3px 10px; border-radius: 2px;
+  margin-bottom: 16px;
+}
+.how-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.15rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #fff; margin-bottom: 10px;
+}
+.how-card p { font-size: 0.9rem; color: rgba(255,255,255,0.58); line-height: 1.65; }
+
+/* REVIEWS */
+.reviews { background: var(--bg-off); padding: 88px 40px; }
+.reviews-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 22px;
+}
+.review-card {
+  background: var(--primary);
+  border-radius: 4px; padding: 28px 24px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.review-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(28,28,28,0.2); }
+.review-stars { color: var(--accent); font-size: 1rem; margin-bottom: 14px; }
+.review-text { font-size: 0.92rem; line-height: 1.65; color: rgba(255,255,255,0.75); margin-bottom: 18px; font-style: italic; }
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar {
+  width: 36px; height: 36px; border-radius: 3px;
+  background: var(--accent); display: flex; align-items: center; justify-content: center;
+  font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 700; color: #fff;
+}
+.reviewer-info strong { display: block; font-size: 0.88rem; font-weight: 600; color: #fff; }
+.reviewer-info span { font-size: 0.78rem; color: rgba(255,255,255,0.48); }
+
+/* AREAS */
+.areas { background: var(--primary-dark); padding: 68px 40px; }
+.areas .section-title { color: #fff; }
+.areas-list {
+  max-width: 1140px; margin: 34px auto 0;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 12px;
+}
+.area-pill {
+  background: rgba(255,57,13,0.08);
+  border: 1px solid rgba(255,57,13,0.2);
+  border-radius: 3px; padding: 11px 16px;
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.88rem; color: rgba(255,255,255,0.82); font-weight: 500;
+}
+.area-pill svg { width: 13px; height: 13px; color: var(--accent); flex-shrink: 0; }
+
+/* CONTACT */
+.contact { background: var(--bg-white); padding: 88px 40px; }
+.contact-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+}
+.contact-info .section-title { color: #1a1a1a; }
+.contact-info .section-sub { color: #555; }
+.contact-channels { margin-top: 30px; display: flex; flex-direction: column; gap: 14px; }
+.channel {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px; border-radius: 4px;
+  border: 1px solid #e0d8d4; background: var(--bg-off);
+}
+.channel-icon {
+  width: 42px; height: 42px; border-radius: 4px;
+  background: rgba(255,57,13,0.08);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.channel-icon svg { width: 20px; height: 20px; color: var(--accent); }
+.channel-text strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #888; font-weight: 600; margin-bottom: 2px; }
+.channel-text a { font-size: 1rem; font-weight: 600; color: var(--primary); }
+.contact-form {
+  background: var(--bg-off); border-radius: 4px; padding: 34px 30px;
+  border: 1px solid #e0d8d4;
+}
+.form-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a; margin-bottom: 22px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+.form-group label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #555; }
+.form-group input, .form-group select, .form-group textarea {
+  padding: 11px 14px; border: 1px solid #d0c8c4; border-radius: 3px;
+  font-size: 0.93rem; font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg-white); color: #1a1a1a; transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); }
+.form-group textarea { resize: vertical; min-height: 88px; }
+.form-submit {
+  width: 100%; padding: 13px;
+  background: var(--accent); color: #fff; border: none; border-radius: 3px;
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: background 0.2s;
+}
+.form-submit:hover { background: var(--accent-dark); }
+
+/* CTA BAND */
+.cta-band {
+  background: var(--primary);
+  padding: 72px 40px; text-align: center;
+  position: relative; overflow: hidden;
+  border-top: 3px solid var(--accent);
+}
+.cta-band::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.cta-band h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.03em; color: #fff; margin-bottom: 14px;
+}
+.cta-band h2 em { color: var(--accent); font-style: normal; }
+.cta-band p { font-size: 1.05rem; color: rgba(255,255,255,0.68); max-width: 480px; margin: 0 auto 28px; }
+
+/* FOOTER */
+.footer { background: var(--bg-darkest); padding: 52px 40px 28px; }
+.footer-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+  padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.footer-logo {
+  font-family: 'Oswald', sans-serif; font-size: 1.1rem; font-weight: 700;
+  color: #fff; text-transform: uppercase; letter-spacing: 0.03em; line-height: 1.25;
+}
+.footer-logo span { color: var(--accent); }
+.footer-brand p { font-size: 0.87rem; line-height: 1.65; color: rgba(255,255,255,0.48); margin-top: 12px; max-width: 280px; }
+.footer-col h4 {
+  font-family: 'Oswald', sans-serif; font-size: 0.82rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em; color: #fff; margin-bottom: 14px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-col ul li a { font-size: 0.86rem; color: rgba(255,255,255,0.48); transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--accent); }
+.footer-bottom {
+  max-width: 1140px; margin: 22px auto 0;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.8rem; color: rgba(255,255,255,0.3);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.5s ease forwards; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); }
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .why-inner { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: repeat(2,1fr); }
+  .reviews-grid { grid-template-columns: repeat(2,1fr); }
+  .areas-list { grid-template-columns: repeat(2,1fr); }
+  .contact-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 56px 20px 48px; }
+  .stats-inner { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-list { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">
+    Dallas Strong Industrial
+    <span class="nav-logo-sub">Asset Recovery &bull; Carrollton, TX</span>
+  </div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:4698502810" class="nav-cta">(469) 850-2810</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-label">Dallas / Fort Worth Industrial Hauling</div>
+      <h1>Industrial Removal,<br><em>No Job Too Heavy</em></h1>
+      <p class="hero-sub">Full-service industrial junk removal and asset recovery for commercial, manufacturing, and construction sites across Carrollton and North Dallas.</p>
+      <div class="hero-actions">
+        <a href="tel:4698502810" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          (469) 850-2810
+        </a>
+        <a href="#contact" class="btn-outline">Request a Quote</a>
+      </div>
+      <div class="hero-specs">
+        <div class="spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Industrial-Scale Equipment</div>
+        <div class="spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Asset Value Recovery</div>
+        <div class="spec-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Licensed &amp; Bonded</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Asset Types We Handle</div>
+      <div class="asset-types">
+        <div class="asset-type"><span class="asset-type-name">Machinery &amp; Equipment</span><span class="asset-type-tag">Recover</span></div>
+        <div class="asset-type"><span class="asset-type-name">Metal Scrap &amp; Materials</span><span class="asset-type-tag">Recycle</span></div>
+        <div class="asset-type"><span class="asset-type-name">Office &amp; Warehouse Contents</span><span class="asset-type-tag">Remove</span></div>
+        <div class="asset-type"><span class="asset-type-name">Construction Debris</span><span class="asset-type-tag">Haul</span></div>
+        <div class="asset-type"><span class="asset-type-name">Industrial Waste</span><span class="asset-type-tag">Dispose</span></div>
+        <div class="asset-type"><span class="asset-type-name">IT &amp; Electronics</span><span class="asset-type-tag">Recover</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-block">
+      <div class="stat-num" data-target="500">0</div>
+      <div class="stat-label">Industrial Projects</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num" data-target="15">0</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num" data-target="20">0</div>
+      <div class="stat-label">Ton Capacity</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num" data-target="100">0</div>
+      <div class="stat-label">% Bonded &amp; Insured</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-eyebrow">What We Do</div>
+    <h2 class="section-title">Industrial &amp; Commercial Removal Services</h2>
+    <p class="section-sub">We handle the heavy stuff that other haulers won't touch — industrial-scale removal with full asset recovery capability.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg></div>
+      <h3>Industrial Equipment Removal</h3>
+      <p>Heavy machinery, manufacturing equipment, and plant fixtures removed safely and efficiently with the right equipment for the job.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg></div>
+      <h3>Asset Recovery &amp; Resale</h3>
+      <p>We assess, recover, and resell or scrap usable assets — recovering value from equipment and materials that still have worth.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+      <h3>Warehouse &amp; Facility Cleanouts</h3>
+      <p>Complete warehouse clearances including racking, shelving, pallets, and all facility contents — fast and professional.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h3>Metal Scrap &amp; Recycling</h3>
+      <p>Ferrous and non-ferrous metal scrap removed and recycled. We handle steel, aluminum, copper, and mixed metal loads at any scale.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <h3>Construction Site Cleanup</h3>
+      <p>Post-construction and demolition debris removal for commercial job sites — concrete, steel, lumber, and mixed C&amp;D waste.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg></div>
+      <h3>IT &amp; Electronics Disposal</h3>
+      <p>Secure removal and certified disposal of IT equipment, servers, electronics, and data-bearing hardware from commercial facilities.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-left">
+      <div class="section-eyebrow">Why Dallas Strong</div>
+      <h2 class="section-title">The Industrial Hauling Specialists</h2>
+      <p class="section-sub">We're not a residential junk crew — we're built for industrial and commercial scale with the equipment, crew, and expertise to match.</p>
+      <div class="why-strips">
+        <div class="why-strip card">
+          <div class="why-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div class="why-strip-text"><strong>Heavy-Duty Equipment</strong><span>Forklifts, cranes, and heavy trucks for industrial-scale removal</span></div>
+        </div>
+        <div class="why-strip card">
+          <div class="why-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <div class="why-strip-text"><strong>Asset Value Maximized</strong><span>We recover and resell assets before scrapping — you get more value</span></div>
+        </div>
+        <div class="why-strip card">
+          <div class="why-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="why-strip-text"><strong>Fully Licensed &amp; Bonded</strong><span>Commercial-grade coverage for facilities and manufacturing clients</span></div>
+        </div>
+        <div class="why-strip card">
+          <div class="why-strip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="why-strip-text"><strong>Flexible Scheduling</strong><span>We work around your production schedule — nights and weekends available</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="why-right">
+      <h3>Industries We Serve</h3>
+      <div class="industry-list">
+        <div class="ind-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Manufacturing &amp; Production</div>
+        <div class="ind-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Warehousing &amp; Distribution</div>
+        <div class="ind-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Commercial Construction</div>
+        <div class="ind-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Retail &amp; Office Facilities</div>
+        <div class="ind-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Data Centers &amp; IT Facilities</div>
+        <div class="ind-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Demolition &amp; Site Prep</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="section-header">
+    <div class="section-eyebrow">The Process</div>
+    <h2 class="section-title">How Industrial Removal Works</h2>
+    <p class="section-sub">We handle complex industrial jobs with a structured process that keeps your operation running and maximizes asset recovery.</p>
+  </div>
+  <div class="how-grid">
+    <div class="how-card card">
+      <div class="how-step-tag">Step 01</div>
+      <h3>Site Assessment</h3>
+      <p>We conduct an on-site evaluation to catalog assets, assess removal complexity, and identify recovery opportunities. You get a transparent, detailed quote.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-step-tag">Step 02</div>
+      <h3>Asset Recovery First</h3>
+      <p>Before anything is scrapped or disposed of, we separate and recover items with resale value — maximizing the return on your decommissioned assets.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-step-tag">Step 03</div>
+      <h3>Full Site Clearance</h3>
+      <p>Our heavy crew clears the remaining waste using industrial equipment. We leave your facility broom-clean and ready for its next use.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="section-header">
+    <div class="section-eyebrow">Reviews</div>
+    <h2 class="section-title">Trusted by DFW Industrial Clients</h2>
+    <p class="section-sub">Commercial and industrial clients across Carrollton, Addison, and the North Dallas corridor count on Dallas Strong.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"We decommissioned an entire production line and Dallas Strong handled everything — from equipment recovery to scrap haul-out. Professional, efficient, and they got us real value back on the assets."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">MH</div>
+        <div class="reviewer-info"><strong>Mark H.</strong><span>Operations Director, Carrollton</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Used Dallas Strong for a full warehouse cleanout. They worked overnight to keep our operations running and had 80,000 sq ft cleared in 3 days. Couldn't recommend them more highly."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">SK</div>
+        <div class="reviewer-info"><strong>Sarah K.</strong><span>Facility Manager, Addison</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"The IT decommissioning service was exactly what we needed — certified data destruction, asset recovery, and full disposal documentation. Handled everything professionally and on schedule."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">RN</div>
+        <div class="reviewer-info"><strong>Rachel N.</strong><span>IT Director, Irving</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="section-header">
+    <div class="section-eyebrow">Coverage</div>
+    <h2 class="section-title">Serving the DFW Industrial Corridor</h2>
+  </div>
+  <div class="areas-list">
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Carrollton</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Addison</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Irving</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Dallas</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Farmers Branch</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Lewisville</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Richardson</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Plano</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-eyebrow">Get a Quote</div>
+      <h2 class="section-title">Ready to Clear Your Facility?</h2>
+      <p class="section-sub">Contact Dallas Strong for industrial removal, asset recovery, or commercial cleanout projects across the DFW Metroplex.</p>
+      <div class="contact-channels">
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="channel-text"><strong>Phone</strong><a href="tel:4698502810">(469) 850-2810</a></div>
+        </div>
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="channel-text"><strong>Location</strong><a href="#">Carrollton, TX</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Request a Quote</div>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="form-group"><label>Company</label><input type="text" placeholder="Your company name"></div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="(469) 000-0000"></div>
+      <div class="form-group"><label>Project Type</label>
+        <select>
+          <option>Industrial Equipment Removal</option>
+          <option>Asset Recovery</option>
+          <option>Warehouse Cleanout</option>
+          <option>Metal Scrap &amp; Recycling</option>
+          <option>Construction Site Cleanup</option>
+          <option>IT / Electronics Disposal</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Project scope, location, timeline..."></textarea></div>
+      <button class="form-submit">Request Industrial Quote</button>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <h2>Heavy Load? <em>We've Got It.</em></h2>
+  <p>Dallas Strong handles industrial and commercial removal projects across DFW that other haulers walk away from. Call for a site assessment.</p>
+  <a href="tel:4698502810" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    (469) 850-2810
+  </a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Dallas Strong<br><span>Industrial &amp; Asset Recovery</span></div>
+      <p>Industrial equipment removal, asset recovery, and commercial facility cleanouts serving Carrollton and the DFW Metroplex.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Equipment Removal</a></li>
+        <li><a href="#">Asset Recovery</a></li>
+        <li><a href="#">Warehouse Cleanouts</a></li>
+        <li><a href="#">Metal Recycling</a></li>
+        <li><a href="#">IT Disposal</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Areas</h4>
+      <ul>
+        <li><a href="#">Carrollton</a></li>
+        <li><a href="#">Addison</a></li>
+        <li><a href="#">Irving</a></li>
+        <li><a href="#">Dallas</a></li>
+        <li><a href="#">Lewisville</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:4698502810">(469) 850-2810</a></li>
+        <li><a href="#">Carrollton, TX</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Dallas Strong Industrial &amp; Asset Recovery. All rights reserved.</span>
+    <span>Serving DFW, TX</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var stats = document.querySelectorAll('[data-target]');
+  var counted = false;
+  function runCounters(){
+    if(counted) return; counted = true;
+    stats.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-target'),10);
+      var current = 0;
+      var timer = setInterval(function(){
+        current += Math.ceil(target/55);
+        if(current >= target){ current = target; clearInterval(timer); }
+        el.textContent = current.toLocaleString();
+      }, 28);
+    });
+  }
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.card').forEach(function(el){ observer.observe(el); });
+  var sb = document.querySelector('.stats-bar');
+  if(sb){
+    var so = new IntersectionObserver(function(e){ if(e[0].isIntersecting) runCounters(); },{threshold:0.3});
+    so.observe(sb);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbie's Bins LLC | Dumpster Rental in Killeen, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #4a0080;
+  --primary-dark: #38005f;
+  --primary-darkest: #240040;
+  --accent: #f59e0b;
+  --accent-dark: #d97706;
+  --text-light: #f5eeff;
+  --text-muted: #b090cc;
+  --bg-white: #ffffff;
+  --bg-off: #faf7ff;
+  --bg-dark: #38005f;
+  --bg-darkest: #240040;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Source Sans 3', sans-serif; color: #1a1a1a; background: var(--bg-white); }
+a { text-decoration: none; color: inherit; }
+
+/* NAV */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--primary);
+  padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.4);
+}
+.nav-logo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.45rem; font-weight: 700;
+  color: #fff; letter-spacing: 0.03em; text-transform: uppercase;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 26px; align-items: center; }
+.nav-links a {
+  font-size: 0.9rem; font-weight: 600;
+  color: rgba(255,255,255,0.82);
+  text-transform: uppercase; letter-spacing: 0.05em; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-cta {
+  background: var(--accent); color: #1a1a1a !important;
+  padding: 9px 22px; border-radius: 4px;
+  font-weight: 700 !important;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--accent-dark) !important; }
+
+/* HERO */
+.hero {
+  background: var(--primary);
+  padding: 88px 40px 80px;
+  position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.hero-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 400px; gap: 56px; align-items: center;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.35);
+  color: var(--accent); padding: 5px 14px; border-radius: 20px;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.7rem);
+  font-weight: 700; line-height: 1.08;
+  color: #fff; text-transform: uppercase; letter-spacing: 0.02em;
+  margin-bottom: 22px;
+}
+.hero h1 em { color: var(--accent); font-style: normal; display: block; }
+.hero-sub {
+  font-size: 1.1rem; line-height: 1.66;
+  color: rgba(255,255,255,0.73); margin-bottom: 34px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--accent); color: #1a1a1a;
+  padding: 14px 30px; border-radius: 4px;
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  transition: background 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-primary:hover { background: var(--accent-dark); }
+.btn-outline {
+  background: transparent; color: #fff;
+  padding: 14px 30px; border-radius: 4px; border: 2px solid rgba(255,255,255,0.35);
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; transition: border-color 0.2s;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,0.7); }
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px; padding: 34px 28px;
+}
+.hero-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--accent);
+  margin-bottom: 20px; padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.benefit-list { display: flex; flex-direction: column; gap: 12px; }
+.benefit-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px; border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+}
+.benefit-check {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(245,158,11,0.2);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.benefit-check svg { width: 13px; height: 13px; color: var(--accent); }
+.benefit-item span { font-size: 0.9rem; color: rgba(255,255,255,0.82); font-weight: 500; }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow { animation: heroFadeUp 0.5s ease both; animation-delay: 0.05s; }
+.hero h1      { animation: heroFadeUp 0.5s ease both; animation-delay: 0.15s; }
+.hero-sub     { animation: heroFadeUp 0.5s ease both; animation-delay: 0.25s; }
+.hero-actions { animation: heroFadeUp 0.5s ease both; animation-delay: 0.33s; }
+.hero-card    { animation: heroFadeUp 0.6s ease both; animation-delay: 0.2s; }
+
+/* STATS BAR */
+.stats-bar {
+  background: var(--primary-darkest);
+  padding: 34px 40px;
+  border-top: 4px solid var(--accent);
+}
+.stats-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; text-align: center;
+}
+.stat-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.3rem; font-weight: 700; color: var(--accent); line-height: 1;
+}
+.stat-label {
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.07em;
+  text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 6px;
+}
+
+/* SERVICES */
+.services { background: var(--bg-off); padding: 88px 40px; }
+.section-header { max-width: 1140px; margin: 0 auto 52px; }
+.section-eyebrow {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+}
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.02em; color: #1a1a1a; line-height: 1.15;
+}
+.section-sub { font-size: 1.05rem; color: #555; margin-top: 12px; max-width: 540px; }
+.services-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 26px;
+}
+.svc-card {
+  background: var(--bg-white);
+  border-radius: 10px; padding: 30px 26px;
+  border: 1px solid #e8dff5;
+  border-top: 4px solid var(--accent);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.svc-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(74,0,128,0.1); }
+.svc-icon {
+  width: 50px; height: 50px; border-radius: 10px;
+  background: rgba(74,0,128,0.08);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+}
+.svc-icon svg { width: 24px; height: 24px; color: var(--primary); }
+.svc-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a; margin-bottom: 10px;
+}
+.svc-card p { font-size: 0.91rem; line-height: 1.62; color: #555; }
+
+/* WHY */
+.why { background: var(--bg-dark); padding: 88px 40px; }
+.why-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+}
+.why-left .section-title { color: #fff; }
+.why-left .section-sub { color: rgba(255,255,255,0.68); }
+.why-list { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
+.why-item {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 18px 20px; border-radius: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.why-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem; font-weight: 700; color: var(--accent);
+  line-height: 1; flex-shrink: 0; min-width: 28px;
+}
+.why-item-text strong {
+  display: block; color: #fff;
+  font-family: 'Oswald', sans-serif; font-size: 0.95rem;
+  font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+.why-item-text span { font-size: 0.87rem; color: rgba(255,255,255,0.62); }
+.why-right {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px; padding: 38px 32px;
+}
+.why-right h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--accent); margin-bottom: 20px;
+}
+.coverage-list { display: flex; flex-direction: column; gap: 9px; }
+.cov-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 14px; border-radius: 6px;
+  background: rgba(255,255,255,0.04);
+  font-size: 0.9rem; color: rgba(255,255,255,0.8);
+}
+.cov-item svg { width: 14px; height: 14px; color: var(--accent); flex-shrink: 0; }
+
+/* HOW */
+.how { background: var(--bg-darkest); padding: 88px 40px; }
+.how .section-title { color: #fff; }
+.how .section-sub { color: rgba(255,255,255,0.62); }
+.how-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 26px;
+}
+.how-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px; padding: 34px 26px;
+}
+.how-icon-wrap {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: rgba(245,158,11,0.15);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 18px;
+}
+.how-icon-wrap svg { width: 24px; height: 24px; color: var(--accent); }
+.how-card h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.15rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #fff; margin-bottom: 10px;
+}
+.how-card p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+/* REVIEWS */
+.reviews { background: var(--bg-off); padding: 88px 40px; }
+.reviews-grid {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 22px;
+}
+.review-card {
+  background: var(--bg-white);
+  border-radius: 8px; padding: 28px 24px;
+  border-top: 3px solid var(--primary);
+  border-left: 1px solid #e8dff5;
+  border-right: 1px solid #e8dff5;
+  border-bottom: 1px solid #e8dff5;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.review-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(74,0,128,0.08); }
+.review-stars { color: var(--accent); font-size: 1.05rem; margin-bottom: 14px; }
+.review-text { font-size: 0.93rem; line-height: 1.65; color: #444; margin-bottom: 18px; font-style: italic; }
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--primary); display: flex; align-items: center; justify-content: center;
+  font-family: 'Oswald', sans-serif; font-size: 0.85rem; font-weight: 700; color: #fff;
+}
+.reviewer-info strong { display: block; font-size: 0.88rem; font-weight: 600; color: #1a1a1a; }
+.reviewer-info span { font-size: 0.78rem; color: #888; }
+
+/* AREAS */
+.areas { background: var(--primary-dark); padding: 68px 40px; }
+.areas .section-title { color: #fff; }
+.areas-list {
+  max-width: 1140px; margin: 34px auto 0;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 12px;
+}
+.area-pill {
+  background: rgba(245,158,11,0.1);
+  border: 1px solid rgba(245,158,11,0.25);
+  border-radius: 6px; padding: 11px 16px;
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.88rem; color: rgba(255,255,255,0.82); font-weight: 500;
+}
+.area-pill svg { width: 13px; height: 13px; color: var(--accent); flex-shrink: 0; }
+
+/* CONTACT */
+.contact { background: var(--bg-white); padding: 88px 40px; }
+.contact-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;
+}
+.contact-info .section-title { color: #1a1a1a; }
+.contact-info .section-sub { color: #555; }
+.contact-channels { margin-top: 30px; display: flex; flex-direction: column; gap: 14px; }
+.channel {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px; border-radius: 8px;
+  border: 1px solid #e8dff5; background: var(--bg-off);
+}
+.channel-icon {
+  width: 42px; height: 42px; border-radius: 8px;
+  background: rgba(74,0,128,0.08);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.channel-icon svg { width: 20px; height: 20px; color: var(--primary); }
+.channel-text strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #888; font-weight: 600; margin-bottom: 2px; }
+.channel-text a { font-size: 1rem; font-weight: 600; color: var(--primary); }
+.contact-form {
+  background: var(--bg-off); border-radius: 12px; padding: 34px 30px;
+  border: 1px solid #e8dff5;
+}
+.form-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #1a1a1a; margin-bottom: 22px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+.form-group label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: #555; }
+.form-group input, .form-group select, .form-group textarea {
+  padding: 11px 14px; border: 1px solid #d8cce8; border-radius: 5px;
+  font-size: 0.93rem; font-family: 'Source Sans 3', sans-serif;
+  background: var(--bg-white); color: #1a1a1a; transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary); }
+.form-group textarea { resize: vertical; min-height: 88px; }
+.form-submit {
+  width: 100%; padding: 13px;
+  background: var(--accent); color: #1a1a1a; border: none; border-radius: 5px;
+  font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: background 0.2s;
+}
+.form-submit:hover { background: var(--accent-dark); }
+
+/* CTA BAND */
+.cta-band {
+  background: var(--primary);
+  padding: 72px 40px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-band::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.cta-band h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.03em; color: #fff; margin-bottom: 14px;
+}
+.cta-band h2 em { color: var(--accent); font-style: normal; }
+.cta-band p { font-size: 1.05rem; color: rgba(255,255,255,0.72); max-width: 480px; margin: 0 auto 28px; }
+
+/* FOOTER */
+.footer { background: var(--bg-darkest); padding: 52px 40px 28px; }
+.footer-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
+  padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-logo {
+  font-family: 'Oswald', sans-serif; font-size: 1.3rem; font-weight: 700;
+  color: #fff; text-transform: uppercase;
+}
+.footer-logo span { color: var(--accent); }
+.footer-brand p { font-size: 0.88rem; line-height: 1.65; color: rgba(255,255,255,0.52); margin-top: 12px; max-width: 280px; }
+.footer-col h4 {
+  font-family: 'Oswald', sans-serif; font-size: 0.82rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em; color: #fff; margin-bottom: 14px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-col ul li a { font-size: 0.86rem; color: rgba(255,255,255,0.52); transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--accent); }
+.footer-bottom {
+  max-width: 1140px; margin: 22px auto 0;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.8rem; color: rgba(255,255,255,0.35);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.5s ease forwards; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); }
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .why-inner { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: repeat(2,1fr); }
+  .reviews-grid { grid-template-columns: repeat(2,1fr); }
+  .areas-list { grid-template-columns: repeat(2,1fr); }
+  .contact-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .hero { padding: 56px 20px 48px; }
+  .stats-inner { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .how-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-list { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">Barbie's <span>Bins</span></div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#how">How It Works</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:2543341533" class="nav-cta">(254) 334-1533</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Killeen's Local Dumpster Rental</div>
+      <h1>Your Neighborhood <em>Bin Pros</em></h1>
+      <p class="hero-sub">Affordable dumpster rentals and junk removal for homes and businesses across Killeen. Family-owned, community-first, and ready to haul whenever you need us.</p>
+      <div class="hero-actions">
+        <a href="tel:2543341533" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="#contact" class="btn-outline">Free Estimate</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Why Customers Choose Us</div>
+      <div class="benefit-list">
+        <div class="benefit-item">
+          <div class="benefit-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Woman-owned &amp; locally operated</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Fast delivery — often same or next day</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Transparent flat-rate pricing</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Multiple dumpster sizes available</span>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span>Serving Fort Cavazos &amp; surrounding communities</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num" data-target="800">0</div>
+      <div class="stat-label">Happy Customers</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="24">0</div>
+      <div class="stat-label">Hour Delivery</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="5">0</div>
+      <div class="stat-label">Star Rating</div>
+    </div>
+    <div>
+      <div class="stat-num" data-target="10">0</div>
+      <div class="stat-label">Cities Served</div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-eyebrow">What We Offer</div>
+    <h2 class="section-title">Dumpster &amp; Junk Removal Services</h2>
+    <p class="section-sub">Simple, affordable solutions for every home and business waste removal need in Killeen.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card card">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="12" x2="2" y2="12"/><path d="M5.45 5.11L2 12v6a2 2 0 002 2h16a2 2 0 002-2v-6l-3.45-6.89A2 2 0 0016.76 4H7.24a2 2 0 00-1.79 1.11z"/></svg>
+      </div>
+      <h3>Dumpster Rental</h3>
+      <p>Roll-off dumpsters delivered to your Killeen home or job site. Multiple sizes available for projects of all scales. Flexible rental periods.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+      </div>
+      <h3>Residential Junk Removal</h3>
+      <p>Garage cleanouts, attic purges, old furniture, and general household junk removed fast. We load and haul — you don't lift a thing.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+      </div>
+      <h3>Appliance &amp; Furniture Removal</h3>
+      <p>Old refrigerators, washers, dryers, sofas, and mattresses removed and responsibly disposed of or donated when usable.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <h3>Construction Debris</h3>
+      <p>Remodeling waste, roofing shingles, drywall, lumber, and demo debris. Toss it in the dumpster or let us haul it directly.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg>
+      </div>
+      <h3>Commercial Cleanouts</h3>
+      <p>Office moves, retail renovations, and light commercial waste removal scheduled around your business hours.</p>
+    </div>
+    <div class="svc-card card">
+      <div class="svc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a1 1 0 011-1h4a1 1 0 011 1v2"/></svg>
+      </div>
+      <h3>Estate &amp; Move-Out Cleanouts</h3>
+      <p>Complete property cleanouts for estates, relocations, and rental turnovers. Fast turnaround for listings and property managers.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-left">
+      <div class="section-eyebrow">Why Barbie's Bins</div>
+      <h2 class="section-title">Killeen's Community-First Hauler</h2>
+      <p class="section-sub">We treat every customer like a neighbor because most of the time, you are. Here's what sets Barbie's Bins apart.</p>
+      <ul class="why-list">
+        <li class="why-item card">
+          <div class="why-num">01</div>
+          <div class="why-item-text"><strong>Woman-Owned Business</strong><span>Proudly woman-owned and community-focused in Killeen, TX</span></div>
+        </li>
+        <li class="why-item card">
+          <div class="why-num">02</div>
+          <div class="why-item-text"><strong>Upfront Pricing</strong><span>No hidden fees — your quote is your final price, every time</span></div>
+        </li>
+        <li class="why-item card">
+          <div class="why-num">03</div>
+          <div class="why-item-text"><strong>Fast &amp; Flexible Scheduling</strong><span>Same-day and next-day options — we work around your schedule</span></div>
+        </li>
+        <li class="why-item card">
+          <div class="why-num">04</div>
+          <div class="why-item-text"><strong>Responsible Disposal</strong><span>We donate and recycle whenever possible before going to landfill</span></div>
+        </li>
+      </ul>
+    </div>
+    <div class="why-right">
+      <h3>Areas We Cover</h3>
+      <div class="coverage-list">
+        <div class="cov-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Killeen</div>
+        <div class="cov-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Temple</div>
+        <div class="cov-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Copperas Cove</div>
+        <div class="cov-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Harker Heights</div>
+        <div class="cov-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Belton</div>
+        <div class="cov-item"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>Nolanville</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="section-header">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-title">Get Your Bin in 3 Simple Steps</h2>
+    <p class="section-sub">Booking your dumpster or junk removal with Barbie's Bins is fast and easy.</p>
+  </div>
+  <div class="how-grid">
+    <div class="how-card card">
+      <div class="how-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      </div>
+      <h3>Call or Book Online</h3>
+      <p>Reach Barbie's Bins at (254) 334-1533 or fill out our quote form. We'll confirm your size, date, and pricing right away.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </div>
+      <h3>We Deliver Your Bin</h3>
+      <p>Your dumpster arrives on time, placed exactly where you need it. We protect your driveway and position the bin for maximum convenience.</p>
+    </div>
+    <div class="how-card card">
+      <div class="how-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3>Fill, Call, Done</h3>
+      <p>Fill up your bin at your own pace. When you're ready, give us a call and we'll pick it up and haul everything away. That's it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="section-header">
+    <div class="section-eyebrow">Reviews</div>
+    <h2 class="section-title">Killeen Loves Barbie's Bins</h2>
+    <p class="section-sub">See what your neighbors are saying about our service across Killeen and Bell County.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Barbie's Bins is the best! I called in the morning and had a dumpster in my driveway by early afternoon. Fair pricing and the owner was so friendly and helpful. Will use every time."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">SJ</div>
+        <div class="reviewer-info"><strong>Sandra J.</strong><span>Killeen, TX</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Used them for a full garage cleanout before a PCS move. They were on time, professional, and the price was way better than I expected. Supporting local was a bonus. Highly recommend."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">KM</div>
+        <div class="reviewer-info"><strong>Keisha M.</strong><span>Harker Heights, TX</span></div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="review-text">"Our contractor rented two bins from Barbie's Bins for our home addition project. Always on time for pickup and delivery, and the team communicated throughout. Great local business."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">RT</div>
+        <div class="reviewer-info"><strong>Robert T.</strong><span>Copperas Cove, TX</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="section-header">
+    <div class="section-eyebrow">Service Coverage</div>
+    <h2 class="section-title">Serving Killeen &amp; Bell County</h2>
+  </div>
+  <div class="areas-list">
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Killeen</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Temple</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Harker Heights</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Copperas Cove</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Belton</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Nolanville</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Lampasas</div>
+    <div class="area-pill card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Waco Area</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-eyebrow">Get a Quote</div>
+      <h2 class="section-title">Ready to Rent a Bin?</h2>
+      <p class="section-sub">Contact Barbie's Bins for a free, no-obligation quote. Same-day delivery available in most cases across Killeen.</p>
+      <div class="contact-channels">
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="channel-text"><strong>Phone</strong><a href="tel:2543341533">(254) 334-1533</a></div>
+        </div>
+        <div class="channel">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="channel-text"><strong>Location</strong><a href="#">Killeen, TX</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Request a Free Quote</div>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" placeholder="Jane"></div>
+        <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+      </div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="(254) 000-0000"></div>
+      <div class="form-group"><label>Service Needed</label>
+        <select>
+          <option>Dumpster Rental</option>
+          <option>Junk Removal</option>
+          <option>Appliance / Furniture Removal</option>
+          <option>Construction Debris</option>
+          <option>Estate / Move-Out Cleanout</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Tell us about your project or what needs to be removed..."></textarea></div>
+      <button class="form-submit">Get My Free Quote</button>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <h2>Need a Bin <em>Today?</em></h2>
+  <p>Barbie's Bins offers same-day and next-day delivery across Killeen and Bell County. Give us a call now.</p>
+  <a href="tel:2543341533" class="btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.42 2 2 0 013.62 1.25h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 8.91a16 16 0 006 6l1.02-1.08a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    (254) 334-1533
+  </a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Barbie's <span>Bins</span></div>
+      <p>Woman-owned dumpster rental and junk removal serving Killeen, TX and Bell County communities with pride and professionalism.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Dumpster Rental</a></li>
+        <li><a href="#">Junk Removal</a></li>
+        <li><a href="#">Appliance Removal</a></li>
+        <li><a href="#">Construction Debris</a></li>
+        <li><a href="#">Estate Cleanouts</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Areas</h4>
+      <ul>
+        <li><a href="#">Killeen</a></li>
+        <li><a href="#">Temple</a></li>
+        <li><a href="#">Harker Heights</a></li>
+        <li><a href="#">Copperas Cove</a></li>
+        <li><a href="#">Belton</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:2543341533">(254) 334-1533</a></li>
+        <li><a href="#">Killeen, TX</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Barbie's Bins LLC. All rights reserved.</span>
+    <span>Serving Killeen &amp; Bell County, TX</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var stats = document.querySelectorAll('[data-target]');
+  var counted = false;
+  function runCounters(){
+    if(counted) return; counted = true;
+    stats.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-target'),10);
+      var current = 0;
+      var timer = setInterval(function(){
+        current += Math.ceil(target/55);
+        if(current >= target){ current = target; clearInterval(timer); }
+        el.textContent = current.toLocaleString();
+      }, 28);
+    });
+  }
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.card').forEach(function(el){ observer.observe(el); });
+  var sb = document.querySelector('.stats-bar');
+  if(sb){
+    var so = new IntersectionObserver(function(e){ if(e[0].isIntersecting) runCounters(); },{threshold:0.3});
+    so.observe(sb);
+  }
+})();
+</script>
+</body>
+</html>

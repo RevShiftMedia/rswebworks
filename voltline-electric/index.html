@@ -3,668 +3,963 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Voltline Electric — Mesa, AZ Licensed Electricians</title>
+<title>Voltline Electric — Licensed Electricians in Mesa, AZ</title>
+<meta name="description" content="Voltline Electric — Mesa, AZ's trusted licensed electricians. Panel upgrades, EV charger installs, emergency electrical, and more. Serving the Phoenix metro area.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap');
-
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --primary:#0e0e10;
-  --primary-mid:#141416;
-  --dark:#080809;
-  --accent:#eab308;
-  --accent-light:#fde047;
-  --accent-glow:rgba(234,179,8,0.28);
-  --text:#f5f5f8;
-  --muted:#8a8a9a;
-  --dim:#46464e;
+  --bg:       #08080a;
+  --bg-mid:   #0e0e11;
+  --bg-card:  #101013;
+  --accent:   #eab308;
+  --accent-lt:#facc15;
+  --accent-glow:rgba(234,179,8,0.25);
+  --text:     #f4f4f6;
+  --muted:    #8888a0;
+  --dim:      #45455a;
+  --border:   rgba(255,255,255,0.08);
+  --card-bg:  rgba(255,255,255,0.04);
 }
 html{scroll-behavior:smooth}
-body{font-family:'Open Sans',sans-serif;background:var(--primary);color:var(--text);overflow-x:hidden}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
 
-/* HEADER */
-header{position:sticky;top:0;z-index:100;background:var(--accent);padding:0 5vw;height:64px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 20px rgba(234,179,8,0.4)}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#0e0e10}
-.logo svg{width:28px;height:28px;flex-shrink:0}
-.logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:1px;color:#0e0e10;line-height:1}
-nav{display:flex;align-items:center;gap:28px}
-nav a{font-size:0.85rem;font-weight:600;color:#0e0e10;text-decoration:none;letter-spacing:0.5px;transition:opacity .2s}
-nav a:hover{opacity:0.6}
-.phone-pill{background:#0e0e10;color:#0e0e10;background:var(--accent-light);color:#0e0e10;padding:8px 18px;border-radius:50px;font-weight:700;font-size:0.9rem;text-decoration:none;letter-spacing:0.3px;white-space:nowrap;border:2px solid #0e0e10;transition:transform .2s,background .2s}
-.phone-pill:hover{background:#fff;transform:scale(1.04)}
+/* ─── SCROLL REVEAL ─── */
+.rev{opacity:0;transform:translateY(28px);transition:opacity .55s ease,transform .55s ease}
+.rev.v{opacity:1;transform:none}
 
-/* HERO */
-.hero{min-height:90vh;background:linear-gradient(135deg,var(--dark) 0%,var(--primary) 60%,#111113 100%);position:relative;display:flex;align-items:center;padding:80px 5vw 60px;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(234,179,8,0.04) 39px,rgba(234,179,8,0.04) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(234,179,8,0.04) 39px,rgba(234,179,8,0.04) 40px);pointer-events:none}
-.hero::after{content:'';position:absolute;right:-8%;top:-10%;width:600px;height:600px;background:radial-gradient(circle,var(--accent-glow) 0%,transparent 65%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:60fr 40fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:1}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(234,179,8,0.14);border:1px solid rgba(234,179,8,0.35);color:var(--accent-light);padding:7px 16px;border-radius:50px;font-size:0.78rem;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:20px;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
-.hero-badge.v{opacity:1;transform:translateY(0)}
-.hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,5vw,4.4rem);line-height:1.05;letter-spacing:1px;color:var(--text);margin-bottom:20px;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
-.hero h1.v{opacity:1;transform:translateY(0)}
-.hero h1 span{color:var(--accent)}
-.hero-sub{font-size:1.05rem;color:var(--muted);line-height:1.7;max-width:520px;margin-bottom:32px;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
-.hero-sub.v{opacity:1;transform:translateY(0)}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
-.hero-ctas.v{opacity:1;transform:translateY(0)}
-.btn-primary{background:var(--accent);color:#0e0e10;padding:14px 28px;border-radius:8px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s}
-.btn-primary:hover{background:var(--accent-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(234,179,8,0.4)}
-.btn-secondary{background:transparent;color:var(--text);padding:14px 28px;border-radius:8px;font-weight:600;font-size:0.95rem;text-decoration:none;border:1.5px solid var(--dim);transition:border-color .2s,color .2s,transform .2s}
-.btn-secondary:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
-.trust-pills{display:flex;flex-wrap:wrap;gap:10px;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
-.trust-pills.v{opacity:1;transform:translateY(0)}
-.trust-pill{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);padding:7px 14px;border-radius:50px;font-size:0.78rem;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:6px}
-.trust-pill svg{width:14px;height:14px;color:var(--accent);flex-shrink:0}
+/* ─── UTILS ─── */
+a{color:inherit;text-decoration:none}
+.container{max-width:1160px;margin:0 auto;padding:0 24px}
+.section-label{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.section-title{font-size:clamp(1.75rem,3.5vw,2.6rem);font-weight:700;line-height:1.15;color:var(--text)}
+.section-sub{font-size:1rem;color:var(--muted);max-width:580px;margin-top:10px;line-height:1.7}
 
-/* GLASS CARD */
-.hero-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:20px;padding:36px;opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s ease}
-.hero-card.v{opacity:1;transform:translateY(0)}
-.card-badge{background:var(--accent);color:#0e0e10;display:inline-block;padding:4px 12px;border-radius:4px;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
-.hero-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:1px;color:var(--text);margin-bottom:6px}
-.hero-card p{font-size:0.85rem;color:var(--muted);margin-bottom:24px}
-.check-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
-.check-list li{display:flex;align-items:center;gap:12px;font-size:0.9rem;color:var(--text)}
-.check-list li svg{width:18px;height:18px;flex-shrink:0;color:var(--accent)}
-.card-cta{display:block;background:var(--accent);color:#0e0e10;text-align:center;padding:14px;border-radius:8px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background .2s,transform .2s}
-.card-cta:hover{background:var(--accent-light);transform:translateY(-2px)}
-
-/* STATS BAR */
-.stats-bar{background:var(--accent);padding:32px 5vw}
-.stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1100px;margin:0 auto}
-.stat-item{text-align:center}
-.stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.6rem;color:#0e0e10;letter-spacing:1px;line-height:1}
-.stat-label{font-size:0.8rem;font-weight:600;color:rgba(14,14,16,0.65);text-transform:uppercase;letter-spacing:0.6px;margin-top:4px}
-
-/* SECTIONS */
-section{padding:80px 5vw}
-.section-label{font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
-.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);letter-spacing:1px;color:var(--text);margin-bottom:16px}
-.section-sub{font-size:1rem;color:var(--muted);max-width:560px;line-height:1.7;margin-bottom:48px}
-
-/* SERVICES */
-.services{background:var(--primary-mid)}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1200px;margin:0 auto}
-.service-card{background:var(--primary);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:32px 28px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
-.service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transition:transform .3s;transform-origin:left}
-.service-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,0.4)}
-.service-card:hover::after{transform:scaleX(1)}
-.service-icon{width:50px;height:50px;background:rgba(234,179,8,0.14);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-.service-icon svg{width:26px;height:26px;color:var(--accent)}
-.service-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.8px;color:var(--text);margin-bottom:10px}
-.service-card p{font-size:0.88rem;color:var(--muted);line-height:1.6}
-
-/* WHY US */
-.why-us{background:var(--dark)}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto}
-.why-features{display:flex;flex-direction:column;gap:32px}
-.why-feature{display:flex;gap:20px;align-items:flex-start}
-.why-num{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--accent);line-height:1;min-width:44px}
-.why-feature h4{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.5px;color:var(--text);margin-bottom:6px}
-.why-feature p{font-size:0.88rem;color:var(--muted);line-height:1.6}
-.why-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.why-stat{background:var(--primary);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:28px 20px;text-align:center}
-.why-stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--accent);letter-spacing:1px}
-.why-stat-label{font-size:0.78rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-top:4px}
-
-/* PROCESS */
-.process{background:var(--primary-mid)}
-.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;max-width:900px;margin:0 auto;position:relative}
-.process-steps::before{content:'';position:absolute;top:32px;left:16.67%;right:16.67%;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-light),var(--accent));z-index:0}
-.process-step{text-align:center;padding:20px;position:relative;z-index:1}
-.step-circle{width:64px;height:64px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#0e0e10;box-shadow:0 0 0 8px var(--primary-mid)}
-.process-step h4{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:0.5px;color:var(--text);margin-bottom:8px}
-.process-step p{font-size:0.85rem;color:var(--muted);line-height:1.6;max-width:200px;margin:0 auto}
-
-/* REVIEWS */
-.reviews{background:var(--dark)}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto}
-.review-card{background:var(--primary);border:1px solid rgba(255,255,255,0.07);border-radius:16px;padding:32px;position:relative}
-.review-quote{margin-bottom:16px}
-.review-quote svg{width:36px;height:36px;fill:rgba(234,179,8,0.22)}
-.stars{color:var(--accent);font-size:1rem;letter-spacing:2px;margin-bottom:14px}
-.review-text{font-size:0.9rem;color:var(--muted);line-height:1.7;margin-bottom:20px}
-.reviewer-name{font-weight:700;color:var(--text);font-size:0.9rem}
-.reviewer-area{font-size:0.8rem;color:var(--dim);margin-top:2px}
-
-/* SERVICE AREAS */
-.areas{background:var(--primary-mid)}
-.areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto}
-.areas-list{display:flex;flex-direction:column;gap:10px;margin-top:16px}
-.area-item{display:flex;align-items:center;gap:12px;font-size:0.95rem;color:var(--text)}
-.area-dot{width:10px;height:10px;background:var(--accent);border-radius:50%;flex-shrink:0;box-shadow:0 0 8px var(--accent-glow)}
-.map-visual{display:flex;align-items:center;justify-content:center;height:280px;position:relative}
-.map-ring{position:absolute;border-radius:50%;border:2px solid;animation:pulse-ring 3s ease-out infinite}
-.map-ring:nth-child(1){width:60px;height:60px;border-color:var(--accent);animation-delay:0s}
-.map-ring:nth-child(2){width:120px;height:120px;border-color:rgba(234,179,8,0.6);animation-delay:.6s}
-.map-ring:nth-child(3){width:190px;height:190px;border-color:rgba(234,179,8,0.35);animation-delay:1.2s}
-.map-ring:nth-child(4){width:260px;height:260px;border-color:rgba(234,179,8,0.15);animation-delay:1.8s}
-.map-center{width:16px;height:16px;background:var(--accent);border-radius:50%;position:absolute;box-shadow:0 0 20px var(--accent)}
-@keyframes pulse-ring{0%{transform:scale(.95);opacity:1}100%{transform:scale(1.08);opacity:0}}
-
-/* CONTACT */
-.contact{background:var(--dark)}
-.contact-grid{display:grid;grid-template-columns:3fr 2fr;gap:60px;max-width:1100px;margin:0 auto}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form-group{margin-bottom:16px}
-.form-group label{display:block;font-size:0.8rem;font-weight:600;color:var(--muted);margin-bottom:6px;letter-spacing:0.4px;text-transform:uppercase}
-.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:12px 14px;color:var(--text);font-family:'Open Sans',sans-serif;font-size:0.9rem;outline:none;transition:border-color .2s}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent)}
-.form-group select option{background:var(--primary)}
-.form-group textarea{resize:vertical;min-height:110px}
-.btn-submit{width:100%;background:var(--accent);color:#0e0e10;border:none;padding:14px;border-radius:8px;font-weight:700;font-size:1rem;cursor:pointer;transition:background .2s,transform .2s;margin-top:4px}
-.btn-submit:hover{background:var(--accent-light);transform:translateY(-2px)}
-.contact-info{padding-top:16px}
-.contact-info h3{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:0.8px;color:var(--text);margin-bottom:24px}
-.contact-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
-.contact-icon{width:38px;height:38px;background:rgba(234,179,8,0.14);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.contact-icon svg{width:18px;height:18px;color:var(--accent)}
-.contact-label{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:var(--dim);margin-bottom:4px}
-.contact-value{font-size:0.95rem;color:var(--text);font-weight:600}
-
-/* CTA BAND */
-.cta-band{background:linear-gradient(135deg,var(--accent) 0%,#ca8a04 100%);padding:72px 5vw;text-align:center}
-.cta-band h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:1px;color:#0e0e10;margin-bottom:12px}
-.cta-band p{font-size:1rem;color:rgba(14,14,16,0.72);margin-bottom:32px;max-width:480px;margin-left:auto;margin-right:auto}
-.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.cta-btn-dark{background:#0e0e10;color:var(--accent);padding:14px 28px;border-radius:8px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:transform .2s,box-shadow .2s}
-.cta-btn-dark:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(14,14,16,0.35)}
-.cta-btn-outline{background:transparent;color:#0e0e10;border:2px solid #0e0e10;padding:12px 28px;border-radius:8px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:background .2s,color .2s,transform .2s}
-.cta-btn-outline:hover{background:#0e0e10;color:var(--accent);transform:translateY(-2px)}
-
-/* FOOTER */
-footer{background:var(--dark);padding:40px 5vw;border-top:1px solid rgba(255,255,255,0.06)}
-.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;max-width:1200px;margin:0 auto}
-.footer-nav{display:flex;gap:24px}
-.footer-nav a{font-size:0.85rem;color:var(--dim);text-decoration:none;transition:color .2s}
-.footer-nav a:hover{color:var(--accent)}
-.footer-copy{font-size:0.8rem;color:var(--dim)}
-
-/* SCROLL REVEAL */
-.rev{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
-.rev.v{opacity:1;transform:translateY(0)}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  nav{display:none}
-  .hero-grid{grid-template-columns:1fr;gap:36px}
-  .hero-card{max-width:480px}
-  .services-grid{grid-template-columns:1fr 1fr}
-  .why-grid{grid-template-columns:1fr;gap:40px}
-  .reviews-grid{grid-template-columns:1fr 1fr}
-  .areas-grid{grid-template-columns:1fr;gap:40px}
-  .contact-grid{grid-template-columns:1fr;gap:40px}
-  .stats-inner{grid-template-columns:repeat(2,1fr)}
+/* ─── HEADER ─── */
+header{
+  position:sticky;top:0;z-index:200;
+  background:var(--bg);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  height:64px;padding:0 5vw;
+  display:flex;align-items:center;justify-content:space-between;
 }
-@media(max-width:600px){
-  .services-grid{grid-template-columns:1fr}
-  .process-steps{grid-template-columns:1fr}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{width:26px;height:26px;flex-shrink:0}
+.logo-text{font-size:1.15rem;font-weight:700;color:var(--text);letter-spacing:-.01em}
+nav{display:flex;align-items:center;gap:28px}
+nav a{font-size:.875rem;font-weight:500;color:var(--muted);transition:color .2s}
+nav a:hover{color:var(--text)}
+.header-cta{
+  background:var(--accent);color:#08080a;
+  font-size:.875rem;font-weight:700;
+  padding:8px 18px;border-radius:4px;
+  white-space:nowrap;transition:background .2s;
+}
+.header-cta:hover{background:var(--accent-lt)}
+.nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--text)}
+
+/* ─── HERO ─── */
+.hero{
+  background:var(--bg);
+  position:relative;
+  overflow:hidden;
+  padding:100px 5vw 90px;
+}
+.hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    135deg,
+    rgba(234,179,8,0.03) 0px, rgba(234,179,8,0.03) 1px,
+    transparent 1px, transparent 24px
+  );
+  pointer-events:none;
+}
+.hero::after{
+  content:'';
+  position:absolute;
+  top:-120px;right:-120px;
+  width:520px;height:520px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(234,179,8,0.13) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-inner{
+  position:relative;z-index:1;
+  max-width:1160px;margin:0 auto;
+  display:grid;
+  grid-template-columns:55fr 45fr;
+  gap:56px;align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(234,179,8,0.1);border:1px solid rgba(234,179,8,0.3);
+  color:var(--accent);font-size:.75rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;padding:6px 14px;border-radius:4px;
+  margin-bottom:24px;
+}
+.hero-badge::before{content:'⚡';font-size:.85rem}
+.hero h1{
+  font-size:clamp(2.6rem,6vw,4.4rem);font-weight:700;
+  line-height:1.05;color:var(--text);
+  margin-bottom:20px;letter-spacing:-.02em;
+}
+.hero h1 span{color:var(--accent)}
+.hero-sub{font-size:1.05rem;color:var(--muted);max-width:440px;line-height:1.7;margin-bottom:34px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:42px}
+.btn-primary{
+  background:var(--accent);color:#08080a;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:.95rem;font-weight:700;
+  padding:13px 26px;border-radius:6px;border:none;cursor:pointer;
+  transition:background .2s,transform .15s;display:inline-block;
+}
+.btn-primary:hover{background:var(--accent-lt);transform:translateY(-1px)}
+.btn-ghost{
+  background:transparent;color:var(--text);
+  font-family:'Space Grotesk',sans-serif;
+  font-size:.95rem;font-weight:600;
+  padding:13px 26px;border-radius:6px;
+  border:1px solid rgba(255,255,255,0.18);cursor:pointer;
+  transition:border-color .2s,background .2s;display:inline-block;
+}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.hero-pills{display:flex;gap:10px;flex-wrap:wrap}
+.hero-pill{
+  background:#fff;color:#08080a;
+  font-size:.78rem;font-weight:700;
+  padding:6px 14px;border-radius:4px;white-space:nowrap;
+}
+.hero-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:4px;padding:36px 32px;
+}
+.hero-card-title{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:22px}
+.hero-checklist{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:30px}
+.hero-checklist li{
+  display:flex;align-items:center;gap:12px;
+  font-size:.925rem;font-weight:500;color:var(--text);
+}
+.hero-checklist li::before{
+  content:'';flex-shrink:0;
+  width:18px;height:18px;
+  background:rgba(234,179,8,0.15);border:1px solid rgba(234,179,8,0.4);
+  border-radius:2px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M2 7l3.5 3.5L12 4' stroke='%23eab308' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size:12px;background-position:center;background-repeat:no-repeat;
+}
+
+/* ─── STATS BAR ─── */
+.stats-bar{background:var(--accent);padding:22px 5vw}
+.stats-bar-inner{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:8px;
+}
+.stat-item{text-align:center;padding:10px}
+.stat-num{font-size:1.9rem;font-weight:700;color:#08080a;line-height:1}
+.stat-label{font-size:.78rem;font-weight:600;color:rgba(8,8,10,0.65);text-transform:uppercase;letter-spacing:.08em;margin-top:4px}
+
+/* ─── SERVICES ─── */
+.services{background:var(--bg-mid);padding:90px 5vw}
+.services-header{text-align:center;margin-bottom:54px}
+.services-grid{
+  max-width:1160px;margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.service-card{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:4px;padding:30px 26px;
+  transition:border-color .25s,transform .2s;
+}
+.service-card:hover{border-color:rgba(234,179,8,0.35);transform:translateY(-3px)}
+.service-icon{
+  width:44px;height:44px;background:rgba(234,179,8,0.12);
+  border:1px solid rgba(234,179,8,0.25);border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;
+}
+.service-icon svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.service-card h3{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:8px}
+.service-card p{font-size:.875rem;color:var(--muted);line-height:1.65}
+
+/* ─── WHY US ─── */
+.whyus{background:var(--bg);padding:90px 5vw}
+.whyus-inner{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:60px;align-items:start;
+}
+.whyus-features{display:flex;flex-direction:column;gap:32px}
+.feature-item{display:flex;gap:20px;align-items:flex-start}
+.feature-num{
+  flex-shrink:0;width:36px;height:36px;
+  background:var(--accent);color:#08080a;
+  border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.85rem;font-weight:700;
+}
+.feature-item h4{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:6px}
+.feature-item p{font-size:.875rem;color:var(--muted);line-height:1.65}
+.whyus-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.wstat-box{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:4px;padding:24px 20px;
+}
+.wstat-box .num{font-size:1.75rem;font-weight:700;color:var(--accent);line-height:1}
+.wstat-box .lbl{font-size:.78rem;font-weight:500;color:var(--muted);margin-top:6px;line-height:1.4}
+
+/* ─── PROCESS ─── */
+.process{background:var(--bg-mid);padding:90px 5vw}
+.process-header{text-align:center;margin-bottom:54px}
+.process-steps{
+  max-width:900px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:28px;position:relative;
+}
+.process-steps::before{
+  content:'';
+  position:absolute;top:22px;left:calc(16.66% + 22px);right:calc(16.66% + 22px);
+  height:2px;background:linear-gradient(90deg,var(--accent),rgba(234,179,8,0.3));
+}
+.step-card{text-align:center;padding:0 10px}
+.step-circle{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--accent);color:#08080a;
+  font-size:1rem;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;position:relative;z-index:1;
+}
+.step-card h4{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:8px}
+.step-card p{font-size:.875rem;color:var(--muted);line-height:1.65}
+
+/* ─── REVIEWS ─── */
+.reviews{background:var(--bg);padding:90px 5vw}
+.reviews-header{text-align:center;margin-bottom:54px}
+.reviews-grid{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.review-card{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:4px;padding:28px 24px;
+}
+.review-stars{color:var(--accent);font-size:1rem;letter-spacing:2px;margin-bottom:14px}
+.review-text{font-size:.9rem;color:var(--muted);line-height:1.7;margin-bottom:20px}
+.reviewer{display:flex;align-items:center;gap:12px}
+.reviewer-avatar{
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(234,179,8,0.15);border:1px solid rgba(234,179,8,0.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.8rem;font-weight:700;color:var(--accent);flex-shrink:0;
+}
+.reviewer-name{font-size:.875rem;font-weight:600;color:var(--text)}
+.reviewer-loc{font-size:.78rem;color:var(--dim)}
+
+/* ─── SERVICE AREAS ─── */
+.areas{background:var(--bg-mid);padding:90px 5vw}
+.areas-inner{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:60px;align-items:center;
+}
+.areas-list{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:12px;margin-top:28px;
+}
+.area-item{
+  display:flex;align-items:center;gap:10px;
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:4px;padding:12px 16px;
+  font-size:.9rem;font-weight:600;color:var(--text);
+  transition:border-color .2s;
+}
+.area-item:hover{border-color:rgba(234,179,8,0.4);color:var(--accent-lt)}
+.area-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.areas-visual{display:flex;justify-content:center;align-items:center}
+.pulse-rings{position:relative;width:220px;height:220px}
+.pulse-center{
+  position:absolute;inset:50%;transform:translate(-50%,-50%);
+  width:60px;height:60px;border-radius:50%;
+  background:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  z-index:3;
+}
+.pulse-center svg{width:28px;height:28px;fill:#08080a}
+.pulse-ring{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  border-radius:50%;border:2px solid var(--accent);
+  animation:pulse-out 3s ease-out infinite;
+}
+.pulse-ring:nth-child(2){width:90px;height:90px;animation-delay:0s}
+.pulse-ring:nth-child(3){width:140px;height:140px;animation-delay:.8s}
+.pulse-ring:nth-child(4){width:190px;height:190px;animation-delay:1.6s}
+@keyframes pulse-out{
+  0%{opacity:.7;transform:translate(-50%,-50%) scale(0.8)}
+  100%{opacity:0;transform:translate(-50%,-50%) scale(1)}
+}
+.areas-label{text-align:center;margin-top:14px;font-size:.8rem;color:var(--muted);font-weight:500}
+
+/* ─── CONTACT ─── */
+.contact{background:var(--bg);padding:90px 5vw}
+.contact-inner{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1.3fr;
+  gap:60px;align-items:start;
+}
+.contact-info{padding-top:8px}
+.contact-info .section-title{margin-bottom:14px}
+.contact-info .section-sub{margin-bottom:32px}
+.contact-detail{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.contact-icon{
+  width:40px;height:40px;background:rgba(234,179,8,0.1);
+  border:1px solid rgba(234,179,8,0.25);border-radius:4px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.contact-icon svg{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.contact-detail-text{font-size:.9rem;color:var(--text);font-weight:500}
+.contact-detail-sub{font-size:.8rem;color:var(--muted)}
+.form-card{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:4px;padding:36px 32px;
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:.8rem;font-weight:600;color:var(--muted);margin-bottom:7px;text-transform:uppercase;letter-spacing:.06em}
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.09);
+  border-radius:4px;
+  color:var(--text);
+  font-family:'Space Grotesk',sans-serif;
+  font-size:.9rem;
+  padding:11px 14px;
+  outline:none;
+  transition:border-color .2s;
+  appearance:none;
+}
+.form-group select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238888a0' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+.form-group select option{background:#101013}
+.form-group textarea{height:100px;resize:vertical}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{border-color:rgba(234,179,8,0.5)}
+.form-group input::placeholder,
+.form-group textarea::placeholder{color:var(--dim)}
+.btn-form{
+  width:100%;
+  background:var(--accent);color:#08080a;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:.95rem;font-weight:700;
+  padding:14px;border-radius:6px;border:none;cursor:pointer;
+  transition:background .2s;
+}
+.btn-form:hover{background:var(--accent-lt)}
+.form-note{font-size:.75rem;color:var(--dim);text-align:center;margin-top:10px}
+
+/* ─── CTA BAND ─── */
+.cta-band{background:var(--accent);padding:72px 5vw;text-align:center}
+.cta-band h2{
+  font-size:clamp(2rem,4.5vw,3rem);font-weight:700;
+  color:#08080a;line-height:1.15;margin-bottom:28px;
+}
+.cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-dark{
+  background:#08080a;color:var(--text);
+  font-family:'Space Grotesk',sans-serif;
+  font-size:.95rem;font-weight:700;
+  padding:13px 28px;border-radius:6px;border:none;cursor:pointer;
+  transition:background .2s;display:inline-block;
+}
+.btn-dark:hover{background:#1a1a1f}
+.btn-dark-ghost{
+  background:transparent;color:#08080a;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:.95rem;font-weight:700;
+  padding:13px 28px;border-radius:6px;
+  border:2px solid rgba(8,8,10,0.35);cursor:pointer;
+  transition:border-color .2s,background .2s;display:inline-block;
+}
+.btn-dark-ghost:hover{border-color:#08080a;background:rgba(8,8,10,0.06)}
+
+/* ─── FOOTER ─── */
+footer{background:var(--bg);border-top:1px solid rgba(255,255,255,0.06);padding:52px 5vw 32px}
+.footer-inner{max-width:1160px;margin:0 auto}
+.footer-top{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:40px;margin-bottom:44px;
+}
+.footer-brand .logo-text{font-size:1.05rem}
+.footer-brand p{font-size:.85rem;color:var(--muted);margin-top:12px;max-width:240px;line-height:1.65}
+.footer-col h5{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul li a{font-size:.875rem;color:var(--muted);transition:color .2s}
+.footer-col ul li a:hover{color:var(--text)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.06);
+  padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:12px;
+}
+.footer-copy{font-size:.8rem;color:var(--dim)}
+.footer-legal{display:flex;gap:20px}
+.footer-legal a{font-size:.8rem;color:var(--dim);transition:color .2s}
+.footer-legal a:hover{color:var(--muted)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .whyus-inner{grid-template-columns:1fr;gap:44px}
+  .reviews-grid{grid-template-columns:1fr 1fr}
+  .areas-inner{grid-template-columns:1fr;gap:40px}
+  .contact-inner{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px}
+  .stats-bar-inner{grid-template-columns:repeat(2,1fr)}
+  .process-steps{grid-template-columns:1fr;gap:36px}
   .process-steps::before{display:none}
+}
+@media(max-width:640px){
+  nav{display:none}
+  .nav-mobile-toggle{display:block}
+  .services-grid{grid-template-columns:1fr}
   .reviews-grid{grid-template-columns:1fr}
+  .areas-list{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
-  .why-stats{grid-template-columns:1fr 1fr}
-  .footer-inner{flex-direction:column;align-items:flex-start}
+  .whyus-stats{grid-template-columns:1fr 1fr}
+  .stats-bar-inner{grid-template-columns:repeat(2,1fr)}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .hero-btns{flex-direction:column;max-width:280px}
+  .btn-primary,.btn-ghost{text-align:center}
 }
 </style>
 </head>
 <body>
 
+<!-- ─── HEADER ─── -->
 <header>
-  <a href="#" class="logo">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  <a class="logo" href="#">
+    <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="15,2 6,14 13,14 11,24 20,12 13,12" fill="#eab308"/>
     </svg>
     <span class="logo-text">Voltline Electric</span>
   </a>
   <nav>
     <a href="#services">Services</a>
+    <a href="#about">Why Us</a>
+    <a href="#process">Process</a>
     <a href="#reviews">Reviews</a>
-    <a href="#areas">Areas</a>
     <a href="#contact">Contact</a>
   </nav>
-  <a href="tel:+14805550293" class="phone-pill">(480) 555-0293</a>
+  <a href="tel:4805550182" class="header-cta">(480) 555-0182</a>
+  <button class="nav-mobile-toggle" aria-label="Menu">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect y="4" width="22" height="2" rx="1" fill="currentColor"/><rect y="10" width="22" height="2" rx="1" fill="currentColor"/><rect y="16" width="22" height="2" rx="1" fill="currentColor"/></svg>
+  </button>
 </header>
 
+<!-- ─── HERO ─── -->
 <section class="hero">
-  <div class="hero-grid">
+  <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-badge" id="hb1">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        Licensed Electricians — Mesa, AZ
-      </div>
-      <h1 id="hb2">Mesa's <span>Licensed</span> Electrical Experts</h1>
-      <p class="hero-sub" id="hb3">Panel upgrades, wiring, EV charging — Voltline delivers fast, safe electrical work backed by a satisfaction guarantee and full code compliance.</p>
-      <div class="hero-ctas" id="hb4">
+      <div class="hero-badge rev" id="hb">Licensed Electricians — Mesa, AZ</div>
+      <h1 class="rev" id="hh">Fast. Safe.<br><span>Always On.</span></h1>
+      <p class="hero-sub rev" id="hs">Serving Mesa, Chandler, Gilbert, and the greater Phoenix metro area. We handle residential and commercial electrical—from panel upgrades to EV charger installs—with same-day availability and zero shortcuts.</p>
+      <div class="hero-btns rev" id="hb2">
         <a href="#contact" class="btn-primary">Get a Free Estimate</a>
-        <a href="tel:+14805550293" class="btn-secondary">Call Now</a>
+        <a href="tel:4805550182" class="btn-ghost">Call (480) 555-0182</a>
       </div>
-      <div class="trust-pills" id="hb5">
-        <div class="trust-pill">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          4.9&#9733; Rating
-        </div>
-        <div class="trust-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          12+ Years
-        </div>
-        <div class="trust-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          Licensed &amp; Insured
-        </div>
-        <div class="trust-pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          Same-Day Service
-        </div>
+      <div class="hero-pills rev" id="hp">
+        <span class="hero-pill">⭐ 4.8 Rating</span>
+        <span class="hero-pill">15+ Years</span>
+        <span class="hero-pill">24/7 Emergency</span>
+        <span class="hero-pill">Fully Insured</span>
       </div>
     </div>
-    <div>
-      <div class="hero-card" id="hb6">
-        <div class="card-badge">No Obligation</div>
-        <h3>Free Estimate</h3>
-        <p>Available now — Mesa, AZ &amp; surrounding communities</p>
-        <ul class="check-list">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Same-day visits available
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Upfront pricing
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Code-compliant work
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Satisfaction guaranteed
-          </li>
+    <div class="hero-right rev" id="hc">
+      <div class="hero-card">
+        <div class="hero-card-title">What we do best</div>
+        <ul class="hero-checklist">
+          <li>Panel upgrades &amp; service changes</li>
+          <li>EV charger installation (Level 2)</li>
+          <li>Emergency same-day service</li>
+          <li>100% code-compliant work</li>
+          <li>Whole-home rewiring</li>
+          <li>Commercial build-outs &amp; retrofits</li>
         </ul>
-        <a href="tel:+14805550293" class="card-cta">Call (480) 555-0293 Now</a>
+        <a href="#contact" class="btn-primary" style="width:100%;display:block;text-align:center">Schedule Your Job</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ─── STATS BAR ─── -->
 <div class="stats-bar">
-  <div class="stats-inner">
-    <div class="stat-item rev">
-      <div class="stat-num"><span data-target="12">0</span>+</div>
+  <div class="stats-bar-inner">
+    <div class="stat-item">
+      <div class="stat-num" data-target="15" data-suffix="+">0</div>
       <div class="stat-label">Years in Business</div>
     </div>
-    <div class="stat-item rev">
-      <div class="stat-num"><span data-target="2800">0</span>+</div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="5000" data-suffix="+">0</div>
       <div class="stat-label">Jobs Completed</div>
     </div>
-    <div class="stat-item rev">
-      <div class="stat-num"><span data-target="49" data-decimal="1">0</span>&#9733;</div>
-      <div class="stat-label">Average Rating</div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="4.8" data-suffix="★" data-decimal="1">0</div>
+      <div class="stat-label">Google Rating</div>
     </div>
-    <div class="stat-item rev">
-      <div class="stat-num">Same-Day</div>
-      <div class="stat-label">Service Available</div>
+    <div class="stat-item">
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">Emergency Service</div>
     </div>
   </div>
 </div>
 
+<!-- ─── SERVICES ─── -->
 <section class="services" id="services">
-  <div style="max-width:1200px;margin:0 auto">
-    <div class="section-label rev">What We Do</div>
-    <h2 class="section-title rev">Electrical Services<br>Done Safe &amp; Right</h2>
-    <p class="section-sub rev">From small repairs to complete panel upgrades and EV charging installation, Voltline handles every residential electrical job in the Mesa area with licensed, insured technicians.</p>
+  <div class="container">
+    <div class="services-header rev">
+      <div class="section-label">What We Do</div>
+      <div class="section-title">Electrical services for<br>homes &amp; businesses</div>
+      <p class="section-sub" style="margin:10px auto 0">Every job backed by licensed electricians, clean permit pulls, and a workmanship guarantee. No subcontractors, no surprises.</p>
+    </div>
     <div class="services-grid">
 
       <div class="service-card rev">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 2v20M17 2v20M2 7h5M2 12h5M2 17h5M17 7h5M17 12h5M17 17h5"/></svg>
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="3" x2="8" y2="21"/><line x1="12" y1="9" x2="12" y2="12"/><line x1="12" y1="15" x2="12" y2="15"/></svg>
         </div>
-        <h3>Panel Upgrades &amp; Replacements</h3>
-        <p>Old 100A panel holding you back? We upgrade to 200A or 400A service to support modern appliances, EV chargers, and home additions — fully permitted and inspected.</p>
+        <h3>Panel Upgrades</h3>
+        <p>Outdated 100A panel holding you back? We upgrade to 200A or 400A service—ready for EVs, solar, and modern loads. Full permit pulled.</p>
       </div>
 
       <div class="service-card rev">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12" y2="18" stroke-width="3"/><path d="M9 7h6M9 11h4"/></svg>
         </div>
-        <h3>Wiring &amp; Rewiring</h3>
-        <p>Knob-and-tube, aluminum wiring, or aging circuits that trip breakers constantly — we rewire safely and to current code, protecting your home and your insurance coverage.</p>
+        <h3>EV Charger Installation</h3>
+        <p>Level 2 home charging station installation for Tesla, Ford, Rivian, and all EVs. We handle the dedicated 240V circuit and mounting—start to finish.</p>
       </div>
 
       <div class="service-card rev">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M3 12h18M12 3l9 9-9 9-9-9 9-9z"/></svg>
         </div>
-        <h3>Outlets &amp; Switches</h3>
-        <p>Dead outlets, GFCI issues, adding USB receptacles, or upgrading to smart switches — we handle all outlet and switch work quickly and cleanly.</p>
+        <h3>Whole-Home Rewiring</h3>
+        <p>Knob-and-tube, aluminum wiring, or old cloth-wrapped cables? We rewire completely—bringing older homes up to NEC code and modern safety standards.</p>
       </div>
 
       <div class="service-card rev">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11a2 2 0 012 2v3M13 21v-6a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2h-6a2 2 0 01-2-2z"/><path d="M18 11v6M15 14h6"/></svg>
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/><line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/></svg>
         </div>
-        <h3>EV Charging Installation</h3>
-        <p>Tesla, Rivian, or any other EV — we install Level 2 EVSE chargers with the dedicated 240V circuit your vehicle needs for overnight charging at home.</p>
+        <h3>Lighting &amp; Fixtures</h3>
+        <p>Recessed cans, LED retrofits, ceiling fans, under-cabinet lighting, and landscape lighting. We handle design-to-install so the results actually look good.</p>
       </div>
 
       <div class="service-card rev">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-        </div>
-        <h3>Lighting Installation</h3>
-        <p>Recessed lighting, ceiling fans, outdoor security lights, landscape lighting — Voltline handles design and installation to transform any space in your home.</p>
-      </div>
-
-      <div class="service-card rev">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>
         </div>
         <h3>Emergency Electrical</h3>
-        <p>Sparking outlets, burning smell, tripped main breaker — electrical emergencies can't wait. We dispatch fast to diagnose and secure your home safely.</p>
+        <p>Power out, breaker tripping, burning smell, or sparking outlet? We're available 24/7 for same-day emergency response across the Mesa area.</p>
+      </div>
+
+      <div class="service-card rev">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <h3>Commercial Electrical</h3>
+        <p>Tenant build-outs, parking lot lighting, three-phase service, data center circuits—we're equipped for commercial and light industrial work of any scale.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<section class="why-us">
-  <div class="why-grid">
+<!-- ─── WHY US ─── -->
+<section class="whyus" id="about">
+  <div class="whyus-inner">
     <div>
       <div class="section-label rev">Why Voltline</div>
-      <h2 class="section-title rev">Built on Safety,<br>Trust &amp; Results</h2>
-      <div class="why-features">
-        <div class="why-feature rev">
-          <div class="why-num">01</div>
+      <div class="section-title rev">Built different.<br>Wired to last.</div>
+      <p class="section-sub rev">We're not a national franchise or a bait-and-switch operation. We're a Mesa-based crew with deep roots in the community and a reputation we protect on every single job.</p>
+      <div class="whyus-features" style="margin-top:36px">
+        <div class="feature-item rev">
+          <div class="feature-num">01</div>
           <div>
-            <h4>Code-Compliant Always</h4>
-            <p>Every job we perform meets Arizona electrical code. We pull permits when required and never cut corners that could put your home or family at risk.</p>
+            <h4>No Surprise Pricing</h4>
+            <p>You get a written estimate before any work begins. The price you're quoted is the price you pay—period. No add-ons discovered mid-job.</p>
           </div>
         </div>
-        <div class="why-feature rev">
-          <div class="why-num">02</div>
+        <div class="feature-item rev">
+          <div class="feature-num">02</div>
           <div>
-            <h4>Upfront Pricing</h4>
-            <p>You get a clear, itemized quote before we start any work. No hourly mystery billing — the price you approve is the price you pay.</p>
+            <h4>Licensed &amp; Insured</h4>
+            <p>Every Voltline technician holds an Arizona State Electrical License. We carry full liability and workers' comp coverage on every job site.</p>
           </div>
         </div>
-        <div class="why-feature rev">
-          <div class="why-num">03</div>
+        <div class="feature-item rev">
+          <div class="feature-num">03</div>
           <div>
-            <h4>Licensed &amp; Bonded</h4>
-            <p>Voltline is fully licensed by the Arizona Registrar of Contractors and carries full liability and worker's compensation insurance on every job.</p>
+            <h4>Clean, Code-Compliant Work</h4>
+            <p>We pull permits when required, pass inspections on the first visit, and leave your home cleaner than we found it. That's the Voltline standard.</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="why-stats rev">
-      <div class="why-stat">
-        <div class="why-stat-num">12+</div>
-        <div class="why-stat-label">Years in Mesa</div>
+    <div class="whyus-stats rev">
+      <div class="wstat-box">
+        <div class="num">15+</div>
+        <div class="lbl">Years serving the Mesa &amp; Phoenix metro</div>
       </div>
-      <div class="why-stat">
-        <div class="why-stat-num">2.8K+</div>
-        <div class="why-stat-label">Jobs Done</div>
+      <div class="wstat-box">
+        <div class="num">5K+</div>
+        <div class="lbl">Residential &amp; commercial jobs completed</div>
       </div>
-      <div class="why-stat">
-        <div class="why-stat-num">4.9&#9733;</div>
-        <div class="why-stat-label">Avg. Rating</div>
+      <div class="wstat-box">
+        <div class="num">4.8★</div>
+        <div class="lbl">Average Google rating across 300+ reviews</div>
       </div>
-      <div class="why-stat">
-        <div class="why-stat-num">AZ Lic.</div>
-        <div class="why-stat-label">Licensed &amp; Bonded</div>
+      <div class="wstat-box">
+        <div class="num">24/7</div>
+        <div class="lbl">Emergency response — nights, weekends, holidays</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="process">
-  <div style="max-width:1200px;margin:0 auto;text-align:center">
-    <div class="section-label rev">How It Works</div>
-    <h2 class="section-title rev" style="margin-bottom:56px">Safe, Inspected Work<br>in Three Steps</h2>
+<!-- ─── PROCESS ─── -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="process-header rev">
+      <div class="section-label">How It Works</div>
+      <div class="section-title">From call to complete<br>in three steps</div>
+    </div>
     <div class="process-steps">
-      <div class="process-step rev">
+      <div class="step-card rev">
         <div class="step-circle">1</div>
-        <h4>Request a Quote</h4>
-        <p>Call or use our online form. We'll schedule a same-day or next-day visit to assess your electrical needs at no charge.</p>
+        <h4>Call or Request Online</h4>
+        <p>Reach out by phone or submit the contact form. We respond within the hour during business hours—faster for emergencies.</p>
       </div>
-      <div class="process-step rev">
+      <div class="step-card rev">
         <div class="step-circle">2</div>
-        <h4>Licensed Tech Arrives</h4>
-        <p>A licensed Voltline electrician arrives on time, reviews your job, and provides a firm upfront quote before any work begins.</p>
+        <h4>Free On-Site Estimate</h4>
+        <p>A licensed electrician visits your property, assesses the work, and hands you a clear written quote with no pressure to commit.</p>
       </div>
-      <div class="process-step rev">
+      <div class="step-card rev">
         <div class="step-circle">3</div>
-        <h4>Safe, Inspected Work</h4>
-        <p>We complete the job to code, clean up thoroughly, and provide documentation of all work performed — including permits where required.</p>
+        <h4>Permitted, Clean Work</h4>
+        <p>We schedule the job, pull any required permits, complete the work to code, and leave your property spotless. Inspection-ready guaranteed.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ─── REVIEWS ─── -->
 <section class="reviews" id="reviews">
-  <div style="max-width:1200px;margin:0 auto">
-    <div class="section-label rev">Customer Reviews</div>
-    <h2 class="section-title rev">Mesa Trusts<br>Voltline Electric</h2>
+  <div class="container">
+    <div class="reviews-header rev">
+      <div class="section-label">What Clients Say</div>
+      <div class="section-title">Real reviews from<br>Mesa area homeowners</div>
+    </div>
     <div class="reviews-grid">
 
       <div class="review-card rev">
-        <div class="review-quote">
-          <svg viewBox="0 0 45 35" xmlns="http://www.w3.org/2000/svg"><path d="M0 22V13.2C0 9.467 1.067 6.333 3.2 3.8 5.333 1.267 8.4 0 12.4 0l1.6 3.2C11.2 3.733 9.2 4.8 7.8 6.4 6.4 8 5.7 9.867 5.6 12h6.8V22H0zm23 0V13.2c0-3.733 1.067-6.867 3.2-9.4C28.333 1.267 31.4 0 35.4 0L37 3.2c-2.8.533-4.8 1.6-6.2 3.2-1.4 1.6-2.1 3.467-2.2 5.6h6.8V22H23z" fill="currentColor"/></svg>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Voltline came out the same day I called—replaced a corroded panel in my garage and had everything permitted and inspected by Friday. Straightforward pricing, zero upsells. Best electrician experience I've had in 12 years as a homeowner."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">JM</div>
+          <div>
+            <div class="reviewer-name">Jason M.</div>
+            <div class="reviewer-loc">Mesa, AZ · Homeowner</div>
+          </div>
         </div>
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">Had Voltline upgrade my 1980s panel to 200A and install a Level 2 EV charger for my new Tesla. The quote was clear and fair, they pulled all the permits, and the inspector passed everything on the first visit. These are real professionals — not handymen pretending to do electrical work. Will be calling them for everything going forward.</p>
-        <div class="reviewer-name">Brian C.</div>
-        <div class="reviewer-area">Mesa, AZ</div>
       </div>
 
       <div class="review-card rev">
-        <div class="review-quote">
-          <svg viewBox="0 0 45 35" xmlns="http://www.w3.org/2000/svg"><path d="M0 22V13.2C0 9.467 1.067 6.333 3.2 3.8 5.333 1.267 8.4 0 12.4 0l1.6 3.2C11.2 3.733 9.2 4.8 7.8 6.4 6.4 8 5.7 9.867 5.6 12h6.8V22H0zm23 0V13.2c0-3.733 1.067-6.867 3.2-9.4C28.333 1.267 31.4 0 35.4 0L37 3.2c-2.8.533-4.8 1.6-6.2 3.2-1.4 1.6-2.1 3.467-2.2 5.6h6.8V22H23z" fill="currentColor"/></svg>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Had them install a Level 2 EV charger for my new Tesla. They ran the dedicated 240V circuit from the panel, mounted the charger in the perfect spot, and the whole job took under four hours. Price was exactly what was quoted. Very happy."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SR</div>
+          <div>
+            <div class="reviewer-name">Sarah R.</div>
+            <div class="reviewer-loc">Chandler, AZ · Tesla Owner</div>
+          </div>
         </div>
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">Called Voltline after I kept smelling something burning near an outlet in my kitchen. They came out the same day, found a wire connection that was arcing behind the wall, and had it repaired safely within a couple of hours. The technician explained exactly what was happening and what had caused it. Friendly, clean, and thorough — highly recommend to anyone in Tempe.</p>
-        <div class="reviewer-name">Sarah N.</div>
-        <div class="reviewer-area">Tempe, AZ</div>
       </div>
 
       <div class="review-card rev">
-        <div class="review-quote">
-          <svg viewBox="0 0 45 35" xmlns="http://www.w3.org/2000/svg"><path d="M0 22V13.2C0 9.467 1.067 6.333 3.2 3.8 5.333 1.267 8.4 0 12.4 0l1.6 3.2C11.2 3.733 9.2 4.8 7.8 6.4 6.4 8 5.7 9.867 5.6 12h6.8V22H0zm23 0V13.2c0-3.733 1.067-6.867 3.2-9.4C28.333 1.267 31.4 0 35.4 0L37 3.2c-2.8.533-4.8 1.6-6.2 3.2-1.4 1.6-2.1 3.467-2.2 5.6h6.8V22H23z" fill="currentColor"/></svg>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"We smelled something burning from an outlet at 10 PM on a Sunday. Voltline answered immediately and had a tech at our house within 45 minutes. Turned out to be a backstabbed outlet that could have started a fire. Professional, fast, and reasonably priced even for after-hours."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">DT</div>
+          <div>
+            <div class="reviewer-name">David T.</div>
+            <div class="reviewer-loc">Gilbert, AZ · Emergency Call</div>
+          </div>
         </div>
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">Got a complete recessed lighting install done in my Gilbert home — 22 cans across three rooms. Voltline's team was in and out in one day, patched all their own drywall cutouts, and the finish work looked perfect. Every light is on a proper dimmer circuit and the whole job was under budget. These guys care about doing it right.</p>
-        <div class="reviewer-name">David P.</div>
-        <div class="reviewer-area">Gilbert, AZ</div>
       </div>
 
     </div>
   </div>
 </section>
 
+<!-- ─── SERVICE AREAS ─── -->
 <section class="areas" id="areas">
-  <div class="areas-grid">
+  <div class="areas-inner">
     <div>
-      <div class="section-label rev">Service Territory</div>
-      <h2 class="section-title rev">Serving Mesa &amp;<br>the East Valley</h2>
-      <p class="section-sub rev" style="margin-bottom:20px">Voltline serves Mesa and the surrounding East Valley communities with the same licensed technicians, same-day availability, and upfront pricing.</p>
-      <div class="areas-list">
-        <div class="area-item rev"><div class="area-dot"></div> Mesa</div>
-        <div class="area-item rev"><div class="area-dot"></div> Tempe</div>
-        <div class="area-item rev"><div class="area-dot"></div> Gilbert</div>
-        <div class="area-item rev"><div class="area-dot"></div> Chandler</div>
-        <div class="area-item rev"><div class="area-dot"></div> Scottsdale</div>
-        <div class="area-item rev"><div class="area-dot"></div> Apache Junction</div>
-        <div class="area-item rev"><div class="area-dot"></div> Queen Creek</div>
-        <div class="area-item rev"><div class="area-dot"></div> Maricopa</div>
+      <div class="section-label rev">Coverage</div>
+      <div class="section-title rev">Based in Mesa,<br>serving the whole valley</div>
+      <p class="section-sub rev">We serve residential and commercial customers across the East Valley and greater Phoenix metro area. Same-day service available for most jobs.</p>
+      <div class="areas-list rev">
+        <div class="area-item"><span class="area-dot"></span>Mesa</div>
+        <div class="area-item"><span class="area-dot"></span>Chandler</div>
+        <div class="area-item"><span class="area-dot"></span>Gilbert</div>
+        <div class="area-item"><span class="area-dot"></span>Tempe</div>
+        <div class="area-item"><span class="area-dot"></span>Phoenix</div>
+        <div class="area-item"><span class="area-dot"></span>Scottsdale</div>
+        <div class="area-item"><span class="area-dot"></span>Ahwatukee</div>
+        <div class="area-item"><span class="area-dot"></span>Queen Creek</div>
       </div>
     </div>
-    <div>
-      <div class="map-visual rev">
-        <div class="map-ring"></div>
-        <div class="map-ring"></div>
-        <div class="map-ring"></div>
-        <div class="map-ring"></div>
-        <div class="map-center"></div>
+    <div class="areas-visual rev">
+      <div>
+        <div class="pulse-rings">
+          <div class="pulse-ring"></div>
+          <div class="pulse-ring"></div>
+          <div class="pulse-ring"></div>
+          <div class="pulse-center">
+            <svg viewBox="0 0 24 24" fill="#08080a"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>
+          </div>
+        </div>
+        <div class="areas-label">Mesa, AZ &amp; surrounding areas</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ─── CONTACT ─── -->
 <section class="contact" id="contact">
-  <div style="max-width:1200px;margin:0 auto">
-    <div class="section-label rev">Get In Touch</div>
-    <h2 class="section-title rev">Request a Free Estimate</h2>
-  </div>
-  <div class="contact-grid">
-    <form onsubmit="return false;" class="rev">
-      <div class="form-row">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-label rev">Get in Touch</div>
+      <div class="section-title rev">Request a free<br>estimate today</div>
+      <p class="section-sub rev">Fill out the form and we'll follow up within the hour. Prefer to talk? Call us directly—we always answer.</p>
+      <div style="margin-top:32px">
+        <div class="contact-detail rev">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.9 10.8a19.79 19.79 0 01-3.07-8.64A2 2 0 012.81 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.78a16 16 0 006.29 6.29l1.14-1.14a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-detail-text">(480) 555-0182</div>
+            <div class="contact-detail-sub">Available 24/7 for emergencies</div>
+          </div>
+        </div>
+        <div class="contact-detail rev">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-detail-text">info@voltlineelectric.com</div>
+            <div class="contact-detail-sub">Typically replies within one hour</div>
+          </div>
+        </div>
+        <div class="contact-detail rev">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-detail-text">Mesa, AZ (East Valley HQ)</div>
+            <div class="contact-detail-sub">Serving Mesa, Chandler, Gilbert &amp; more</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-card rev">
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="John Smith">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="(480) 000-0000">
+          </div>
+        </div>
         <div class="form-group">
-          <label>First Name</label>
-          <input type="text" placeholder="John">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@example.com">
         </div>
         <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" placeholder="Smith">
+          <label>Service Needed</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Panel Upgrade / Service Change</option>
+            <option>EV Charger Installation</option>
+            <option>Whole-Home Rewiring</option>
+            <option>Lighting &amp; Fixtures</option>
+            <option>Emergency Electrical</option>
+            <option>Commercial Electrical</option>
+            <option>Other / Not Sure</option>
+          </select>
         </div>
-      </div>
-      <div class="form-row">
         <div class="form-group">
-          <label>Phone</label>
-          <input type="tel" placeholder="(480) 555-0100">
+          <label>Message</label>
+          <textarea placeholder="Briefly describe the work needed, your address, and the best time to reach you..."></textarea>
         </div>
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" placeholder="john@email.com">
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Service Needed</label>
-        <select>
-          <option value="">Select a service...</option>
-          <option>Panel Upgrade or Replacement</option>
-          <option>Wiring &amp; Rewiring</option>
-          <option>Outlets &amp; Switches</option>
-          <option>EV Charging Installation</option>
-          <option>Lighting Installation</option>
-          <option>Emergency Electrical</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Describe the electrical issue or project — the more detail, the more accurate your estimate will be."></textarea>
-      </div>
-      <button type="submit" class="btn-submit">Send My Free Estimate Request</button>
-    </form>
-    <div class="contact-info rev">
-      <h3>Contact Voltline</h3>
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.09 12 19.79 19.79 0 011 3.18a2 2 0 012-2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91"/></svg>
-        </div>
-        <div>
-          <div class="contact-label">Phone</div>
-          <div class="contact-value">(480) 555-0293</div>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <div>
-          <div class="contact-label">Email</div>
-          <div class="contact-value">service@voltlineelectric.com</div>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div>
-          <div class="contact-label">Business Hours</div>
-          <div class="contact-value">Mon–Sat: 7am – 7pm<br>Emergency: Available 24/7</div>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        </div>
-        <div>
-          <div class="contact-label">Service Area</div>
-          <div class="contact-value">Mesa, East Valley &amp; Surrounding Communities</div>
-        </div>
-      </div>
+        <button type="submit" class="btn-form">Send Request — It's Free</button>
+        <p class="form-note">No spam. No pressure. We'll reach out within one hour.</p>
+      </form>
     </div>
   </div>
 </section>
 
-<div class="cta-band">
-  <h2>Electrical Problem? Don't Risk It. Call Now.</h2>
-  <p>Electrical issues get dangerous fast. Voltline responds same-day across Mesa and the East Valley with licensed, insured electricians.</p>
+<!-- ─── CTA BAND ─── -->
+<section class="cta-band">
+  <h2>Electrical Problem?<br>We're On It.</h2>
   <div class="cta-btns">
-    <a href="tel:+14805550293" class="cta-btn-dark">Call (480) 555-0293</a>
-    <a href="#contact" class="cta-btn-outline">Book Online</a>
+    <a href="tel:4805550182" class="btn-dark">Call (480) 555-0182</a>
+    <a href="#contact" class="btn-dark-ghost">Request Online</a>
   </div>
-</div>
+</section>
 
+<!-- ─── FOOTER ─── -->
 <footer>
   <div class="footer-inner">
-    <a href="#" class="logo" style="color:var(--muted)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px">
-        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-      </svg>
-      <span style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:1px;color:var(--muted)">Voltline Electric</span>
-    </a>
-    <nav class="footer-nav">
-      <a href="#services">Services</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#areas">Areas</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="footer-copy">&copy; 2026 Voltline Electric &mdash; Mesa, AZ. All rights reserved.</div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href="#">
+          <svg viewBox="0 0 26 26" fill="none" width="22" height="22">
+            <polygon points="15,2 6,14 13,14 11,24 20,12 13,12" fill="#eab308"/>
+          </svg>
+          <span class="logo-text">Voltline Electric</span>
+        </a>
+        <p>Licensed electricians serving Mesa and the Phoenix metro area since 2009. Quality work, honest pricing, every time.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Panel Upgrades</a></li>
+          <li><a href="#services">EV Charger Install</a></li>
+          <li><a href="#services">Whole-Home Rewiring</a></li>
+          <li><a href="#services">Lighting &amp; Fixtures</a></li>
+          <li><a href="#services">Emergency Electrical</a></li>
+          <li><a href="#services">Commercial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Areas</h5>
+        <ul>
+          <li><a href="#areas">Mesa</a></li>
+          <li><a href="#areas">Chandler</a></li>
+          <li><a href="#areas">Gilbert</a></li>
+          <li><a href="#areas">Tempe</a></li>
+          <li><a href="#areas">Phoenix</a></li>
+          <li><a href="#areas">Scottsdale</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:4805550182">(480) 555-0182</a></li>
+          <li><a href="mailto:info@voltlineelectric.com">info@voltlineelectric.com</a></li>
+          <li><a href="#contact">Free Estimate</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Voltline Electric LLC · Mesa, AZ · AZ ROC License #123456</span>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
   </div>
 </footer>
 
 <script>
-// Hero stagger
-const heroEls=[['hb1',0],['hb2',100],['hb3',200],['hb4',300],['hb5',400],['hb6',250]];
-heroEls.forEach(([id,delay])=>{
-  setTimeout(()=>{
-    const el=document.getElementById(id);
-    if(el)el.classList.add('v');
-  },delay+120);
+// ─── HERO STAGGER ───
+const heroIds = ['hb','hh','hs','hb2','hp','hc'];
+const heroDelays = [0, 150, 300, 450, 600, 200];
+heroIds.forEach((id, i) => {
+  const el = document.getElementById(id);
+  if (el) {
+    setTimeout(() => {
+      el.classList.add('v');
+    }, heroDelays[i]);
+  }
 });
 
-// Scroll reveal
-const revObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');revObs.unobserve(e.target);}});
-},{threshold:0.1});
-document.querySelectorAll('.rev').forEach(el=>revObs.observe(el));
+// ─── SCROLL REVEAL ───
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('v');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
 
-// Stat counters
-function easeOut(t){return 1-Math.pow(1-t,3)}
-function animateCounter(el,target,duration,isDecimal){
-  const start=performance.now();
-  function frame(now){
-    const elapsed=now-start;
-    const progress=Math.min(elapsed/duration,1);
-    const val=target*easeOut(progress);
-    el.textContent=isDecimal?(val).toFixed(1):Math.floor(val).toLocaleString();
-    if(progress<1)requestAnimationFrame(frame);
-    else el.textContent=isDecimal?target.toFixed(1):target.toLocaleString();
+document.querySelectorAll('.rev').forEach(el => {
+  // hero elements are handled above—skip if they already have .v
+  if (!el.closest('.hero')) {
+    observer.observe(el);
+  }
+});
+
+// ─── COUNT UP ───
+function countUp(el) {
+  const target = parseFloat(el.getAttribute('data-target'));
+  const suffix = el.getAttribute('data-suffix') || '';
+  const isDecimal = el.hasAttribute('data-decimal');
+  const decimals = isDecimal ? parseInt(el.getAttribute('data-decimal')) : 0;
+  const duration = 1400;
+  const start = performance.now();
+  function frame(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    const current = target * ease;
+    el.textContent = (decimals > 0 ? current.toFixed(decimals) : Math.floor(current).toLocaleString()) + suffix;
+    if (progress < 1) requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
 }
-const counterObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      const el=e.target;
-      const target=parseFloat(el.dataset.target);
-      const isDecimal=el.dataset.decimal==='1';
-      animateCounter(el,target,1600,isDecimal);
-      counterObs.unobserve(el);
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('[data-target]').forEach(el => countUp(el));
+      statsObserver.unobserve(entry.target);
     }
   });
-},{threshold:0.3});
-document.querySelectorAll('[data-target]').forEach(el=>counterObs.observe(el));
+}, { threshold: 0.5 });
+
+const statsBar = document.querySelector('.stats-bar');
+if (statsBar) statsObserver.observe(statsBar);
+
+// ─── FORM SUBMIT ───
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('.btn-form');
+  btn.textContent = 'Request Sent! We\'ll be in touch soon.';
+  btn.style.background = '#16a34a';
+  btn.disabled = true;
+});
 </script>
 </body>
 </html>
