@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jay's Lawn Service | Euless, TX – Professional Lawn Care & Maintenance</title>
+<meta name="description" content="Jay's Lawn Service in Euless, TX offers expert lawn mowing, edging, trimming, fertilization, weed control, and seasonal cleanup. Serving the DFW Metroplex since day one.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Lora:wght@400;500;600&display=swap');
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#0f240f;
+  --primary-dark:#071407;
+  --primary-mid:#1a3d1a;
+  --accent:#d97706;
+  --accent-light:#f59e0b;
+  --cream:#fefdf8;
+  --text:#1c1c1c;
+  --text-light:#4a5568;
+  --white:#ffffff;
+  --radius:10px;
+  --shadow:0 4px 24px rgba(0,0,0,0.12);
+}
+
+html{scroll-behavior:smooth}
+body{font-family:'Lora',Georgia,serif;color:var(--text);background:var(--white);line-height:1.7;overflow-x:hidden}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:rgba(7,20,7,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,0.08);padding:0 5%}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1200px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-leaf{width:38px;height:38px;background:var(--accent);border-radius:50% 10% 50% 10%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-leaf svg{width:20px;height:20px;fill:var(--white)}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-name{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1.1rem;color:var(--white);letter-spacing:0.01em}
+.logo-tag{font-family:'Lora',Georgia,serif;font-size:0.68rem;color:rgba(255,255,255,0.6);letter-spacing:0.06em;text-transform:uppercase}
+nav{display:flex;align-items:center;gap:28px}
+nav a{font-family:'Lora',Georgia,serif;color:rgba(255,255,255,0.78);text-decoration:none;font-size:0.88rem;transition:color 0.2s}
+nav a:hover{color:var(--accent-light)}
+.btn-nav{background:var(--accent);color:var(--white)!important;padding:9px 22px;border-radius:6px;font-weight:600;transition:background 0.2s!important}
+.btn-nav:hover{background:var(--accent-light)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.hamburger span{width:24px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s}
+
+/* HERO */
+.hero{min-height:92vh;background:linear-gradient(148deg,#020a02 0%,var(--primary-dark) 35%,var(--primary) 70%,#1e4d1e 100%);position:relative;display:flex;align-items:center;padding:80px 5% 60px;overflow:hidden}
+.hero-grain{position:absolute;inset:0;opacity:0.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:200px}
+.hero-leaves{position:absolute;right:-40px;bottom:-20px;width:420px;height:420px;opacity:0.06}
+.hero-leaves svg{width:100%;height:100%}
+.hero-inner{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:60% 40%;gap:48px;align-items:center;position:relative;z-index:1}
+.hero-content{display:flex;flex-direction:column;gap:22px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(217,119,6,0.18);border:1px solid rgba(217,119,6,0.35);border-radius:30px;padding:6px 16px;width:fit-content}
+.hero-badge span{font-family:'Lora',Georgia,serif;font-size:0.78rem;color:var(--accent-light);letter-spacing:0.05em;text-transform:uppercase;font-weight:600}
+.hero-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:800;color:var(--white);line-height:1.18;letter-spacing:-0.01em}
+.hero-title em{font-style:normal;color:var(--accent-light)}
+.hero-subtitle{font-family:'Lora',Georgia,serif;font-size:1.1rem;color:rgba(255,255,255,0.72);line-height:1.7;max-width:520px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{display:inline-block;background:var(--accent);color:var(--white);padding:15px 32px;border-radius:7px;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1rem;text-decoration:none;transition:background 0.2s,transform 0.15s;letter-spacing:0.01em}
+.btn-primary:hover{background:var(--accent-light);transform:translateY(-2px)}
+.btn-outline{display:inline-block;border:2px solid rgba(255,255,255,0.35);color:var(--white);padding:13px 28px;border-radius:7px;font-family:'Lora',Georgia,serif;font-size:0.95rem;text-decoration:none;transition:border-color 0.2s,background 0.2s}
+.btn-outline:hover{border-color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.06)}
+.hero-trust{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.hero-stars{color:#fbbf24;font-size:1.05rem;letter-spacing:1px}
+.hero-trust-text{font-family:'Lora',Georgia,serif;font-size:0.85rem;color:rgba(255,255,255,0.6)}
+.hero-card{background:rgba(255,255,255,0.10);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.16);border-radius:16px;padding:34px 28px;display:flex;flex-direction:column;gap:20px}
+.hero-card-title{font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;color:var(--white);font-weight:700}
+.hero-service-list{display:flex;flex-direction:column;gap:10px}
+.hero-service-item{display:flex;align-items:center;gap:10px;font-family:'Lora',Georgia,serif;font-size:0.9rem;color:rgba(255,255,255,0.82)}
+.hero-service-item::before{content:'';width:7px;height:7px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.hero-phone{display:flex;align-items:center;gap:10px;background:rgba(217,119,6,0.15);border:1px solid rgba(217,119,6,0.3);border-radius:8px;padding:12px 16px}
+.hero-phone-icon{font-size:1.1rem}
+.hero-phone a{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1.05rem;color:var(--accent-light);text-decoration:none}
+
+/* ANIMATIONS */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{animation:heroFadeUp 0.55s ease both;animation-delay:0.08s}
+.hero-title{animation:heroFadeUp 0.55s ease both;animation-delay:0.18s}
+.hero-subtitle{animation:heroFadeUp 0.55s ease both;animation-delay:0.28s}
+.hero-actions{animation:heroFadeUp 0.55s ease both;animation-delay:0.38s}
+.hero-trust{animation:heroFadeUp 0.55s ease both;animation-delay:0.46s}
+.hero-card{animation:heroFadeUp 0.6s ease both;animation-delay:0.54s}
+
+/* STATS */
+.stats{background:var(--primary-dark);padding:48px 5%}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.1)}
+.stat-item{background:var(--primary-dark);padding:32px 20px;text-align:center}
+.stat-number{font-family:'Playfair Display',Georgia,serif;font-size:2.4rem;font-weight:800;color:var(--accent-light);line-height:1;display:block}
+.stat-label{font-family:'Lora',Georgia,serif;font-size:0.82rem;color:rgba(255,255,255,0.56);margin-top:6px;text-transform:uppercase;letter-spacing:0.07em}
+
+/* SHARED */
+.section-label{font-family:'Lora',Georgia,serif;font-size:0.8rem;color:var(--accent);text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:10px;display:block}
+.section-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:var(--primary);line-height:1.2;margin-bottom:14px}
+.section-sub{font-family:'Lora',Georgia,serif;font-size:1.02rem;color:var(--text-light);max-width:540px;line-height:1.7}
+.section-header{text-align:center;margin-bottom:52px}
+.section-header .section-sub{margin:0 auto}
+
+/* SERVICES */
+.services{padding:88px 5%;background:var(--cream)}
+.services-inner{max-width:1200px;margin:0 auto}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.service-card{background:var(--white);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);border:1px solid rgba(0,0,0,0.06);transition:transform 0.25s,box-shadow 0.25s;opacity:0;transform:translateY(22px)}
+.service-card.visible{opacity:1;transform:none}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,0.14)}
+.service-card-header{display:flex;align-items:center;gap:14px;margin-bottom:13px}
+.service-card-icon{width:44px;height:44px;background:rgba(217,119,6,0.10);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.service-card h3{font-family:'Playfair Display',Georgia,serif;font-size:1.05rem;font-weight:700;color:var(--primary);line-height:1.25}
+.service-card p{font-family:'Lora',Georgia,serif;font-size:0.9rem;color:var(--text-light);line-height:1.65}
+
+/* WHY */
+.why{padding:88px 5%;background:var(--white)}
+.why-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.why-visual{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-mid) 100%);border-radius:16px;padding:48px 36px;position:relative;overflow:hidden}
+.why-visual-grain{position:absolute;inset:0;opacity:0.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E");background-size:150px}
+.why-highlight{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;color:var(--white);line-height:1.25;margin-bottom:20px;position:relative;z-index:1}
+.why-highlight em{font-style:normal;color:var(--accent-light)}
+.why-quote{font-family:'Lora',Georgia,serif;font-size:0.95rem;color:rgba(255,255,255,0.68);line-height:1.7;position:relative;z-index:1;margin-bottom:24px}
+.why-cert{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:6px;padding:8px 14px;position:relative;z-index:1}
+.why-cert span{font-family:'Lora',Georgia,serif;font-size:0.78rem;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.05em}
+.why-list{display:flex;flex-direction:column;gap:22px}
+.why-item{display:flex;gap:16px;align-items:flex-start}
+.why-icon{width:46px;height:46px;background:rgba(217,119,6,0.1);border:2px solid rgba(217,119,6,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;margin-top:2px}
+.why-item-text h4{font-family:'Playfair Display',Georgia,serif;font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:5px}
+.why-item-text p{font-family:'Lora',Georgia,serif;font-size:0.88rem;color:var(--text-light);line-height:1.6}
+
+/* HOW IT WORKS */
+.how{padding:88px 5%;background:var(--cream)}
+.how-inner{max-width:1200px;margin:0 auto}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative}
+.steps-grid::before{content:'';position:absolute;top:38px;left:16%;right:16%;height:2px;background:linear-gradient(90deg,var(--accent) 0%,var(--accent-light) 100%);z-index:0}
+.step-card{background:var(--white);border-radius:var(--radius);padding:32px 24px 26px;text-align:center;position:relative;z-index:1;box-shadow:var(--shadow);border:1px solid rgba(0,0,0,0.06)}
+.step-num{width:56px;height:56px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,serif;font-size:1.4rem;font-weight:800;color:var(--white);margin:0 auto 20px;box-shadow:0 4px 14px rgba(217,119,6,0.4)}
+.step-card h3{font-family:'Playfair Display',Georgia,serif;font-size:1.05rem;font-weight:700;color:var(--primary);margin-bottom:10px}
+.step-card p{font-family:'Lora',Georgia,serif;font-size:0.88rem;color:var(--text-light);line-height:1.65}
+
+/* REVIEWS */
+.reviews{padding:88px 5%;background:var(--white)}
+.reviews-inner{max-width:1200px;margin:0 auto}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--white);border:1px solid rgba(0,0,0,0.08);border-radius:var(--radius);padding:28px 24px;box-shadow:0 2px 14px rgba(0,0,0,0.07);opacity:0;transform:translateY(18px);transition:opacity 0.5s ease,transform 0.5s ease}
+.review-card.visible{opacity:1;transform:none}
+.review-stars{color:#f59e0b;font-size:1rem;margin-bottom:12px;letter-spacing:1px}
+.review-text{font-family:'Lora',Georgia,serif;font-size:0.9rem;color:var(--text-light);line-height:1.65;margin-bottom:16px;font-style:italic}
+.review-author{display:flex;align-items:center;gap:10px}
+.review-avatar{width:38px;height:38px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,serif;font-size:0.95rem;font-weight:700;color:var(--white)}
+.review-name{font-family:'Playfair Display',Georgia,serif;font-size:0.9rem;font-weight:700;color:var(--primary)}
+.review-source{font-family:'Lora',Georgia,serif;font-size:0.75rem;color:var(--text-light)}
+
+/* SERVICE AREAS */
+.areas{padding:88px 5%;background:var(--primary)}
+.areas-inner{max-width:1200px;margin:0 auto}
+.areas .section-title{color:var(--white)}
+.areas .section-label{color:var(--accent-light)}
+.areas .section-sub{color:rgba(255,255,255,0.65)}
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.area-pill{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.14);border-radius:8px;padding:14px 18px;display:flex;align-items:center;gap:10px}
+.area-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.area-pill span{font-family:'Lora',Georgia,serif;font-size:0.88rem;color:rgba(255,255,255,0.8)}
+
+/* CONTACT */
+.contact{padding:88px 5%;background:var(--cream)}
+.contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:28px}
+.contact-detail{display:flex;align-items:flex-start;gap:14px}
+.contact-icon{width:44px;height:44px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;margin-top:2px}
+.contact-detail h4{font-family:'Playfair Display',Georgia,serif;font-size:0.95rem;font-weight:700;color:var(--primary);margin-bottom:4px}
+.contact-detail p,.contact-detail a{font-family:'Lora',Georgia,serif;font-size:0.9rem;color:var(--text-light);text-decoration:none;line-height:1.5}
+.contact-detail a:hover{color:var(--accent)}
+.contact-form{display:flex;flex-direction:column;gap:16px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group label{font-family:'Lora',Georgia,serif;font-size:0.82rem;color:var(--text-light);font-weight:600;text-transform:uppercase;letter-spacing:0.05em}
+.form-group input,.form-group select,.form-group textarea{font-family:'Lora',Georgia,serif;font-size:0.92rem;color:var(--text);background:var(--white);border:1.5px solid rgba(0,0,0,0.14);border-radius:7px;padding:12px 14px;outline:none;transition:border-color 0.2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent)}
+.form-group textarea{resize:vertical;min-height:110px}
+.btn-form{background:var(--primary);color:var(--white);border:none;padding:15px 32px;border-radius:7px;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1rem;cursor:pointer;transition:background 0.2s;width:100%;letter-spacing:0.02em}
+.btn-form:hover{background:var(--primary-mid)}
+
+/* CTA BAND */
+.cta-band{padding:72px 5%;background:linear-gradient(120deg,var(--primary-dark) 0%,var(--primary) 60%,#1e4d1e 100%);position:relative;overflow:hidden}
+.cta-band-grain{position:absolute;inset:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E");background-size:150px}
+.cta-band-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;position:relative;z-index:1}
+.cta-band h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.5rem,2.8vw,2.1rem);font-weight:800;color:var(--white);line-height:1.25}
+.cta-band h2 em{font-style:normal;color:var(--accent-light)}
+.cta-band-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn-cta{display:inline-block;background:var(--accent);color:var(--white);padding:15px 34px;border-radius:7px;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1rem;text-decoration:none;transition:background 0.2s,transform 0.15s}
+.btn-cta:hover{background:var(--accent-light);transform:translateY(-2px)}
+.btn-cta-outline{display:inline-block;border:2px solid rgba(255,255,255,0.4);color:var(--white);padding:13px 28px;border-radius:7px;font-family:'Lora',Georgia,serif;font-size:0.93rem;text-decoration:none;transition:border-color 0.2s}
+.btn-cta-outline:hover{border-color:rgba(255,255,255,0.8)}
+
+/* FOOTER */
+footer{background:var(--primary-dark);padding:52px 5% 28px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand .logo-name{color:var(--white);font-size:1.2rem;font-family:'Playfair Display',Georgia,serif;font-weight:700}
+.footer-brand p{font-family:'Lora',Georgia,serif;font-size:0.87rem;color:rgba(255,255,255,0.5);margin-top:12px;line-height:1.65;max-width:280px}
+.footer-col h4{font-family:'Playfair Display',Georgia,serif;font-size:0.95rem;font-weight:700;color:var(--white);margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col ul li a{font-family:'Lora',Georgia,serif;font-size:0.85rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s}
+.footer-col ul li a:hover{color:var(--accent-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-family:'Lora',Georgia,serif;font-size:0.8rem;color:rgba(255,255,255,0.35)}
+
+/* TRANSITIONS */
+.service-card{transition:opacity 0.5s ease,transform 0.5s ease}
+.service-card:nth-child(2){transition-delay:0.08s}
+.service-card:nth-child(3){transition-delay:0.16s}
+.service-card:nth-child(4){transition-delay:0.24s}
+.service-card:nth-child(5){transition-delay:0.32s}
+.service-card:nth-child(6){transition-delay:0.40s}
+.review-card:nth-child(2){transition-delay:0.08s}
+.review-card:nth-child(3){transition-delay:0.16s}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{display:none}
+  .hamburger{display:flex}
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero-card{display:none}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .why-inner{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-grid::before{display:none}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .areas-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-inner{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .areas-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .cta-band-inner{flex-direction:column;text-align:center}
+  .footer-top{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-leaf">
+        <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 008 20C19 20 22 3 22 3c-1 2-8 2-8 8"/></svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Jay's Lawn Service</span>
+        <span class="logo-tag">Euless, TX &bull; DFW Metroplex</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact" class="btn-nav">Get a Quote</a>
+    </nav>
+    <div class="hamburger" onclick="this.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-leaves">
+    <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M200 350 C200 200 350 150 380 80 C310 120 250 180 200 350Z" fill="white"/>
+      <path d="M150 320 C180 200 100 120 50 60 C90 140 130 230 150 320Z" fill="white"/>
+      <path d="M250 300 C240 200 300 130 340 80 C290 130 250 220 250 300Z" fill="white"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><span>★ 4.9 Rating — 63 Reviews</span></div>
+      <h1 class="hero-title">Your Lawn Deserves <em>Expert Care</em> — Every Season</h1>
+      <p class="hero-subtitle">Jay's Lawn Service brings professional mowing, edging, trimming, fertilization, and seasonal cleanup to homeowners and businesses throughout Euless and the DFW Metroplex.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Request a Free Quote</a>
+        <a href="tel:8176629028" class="btn-outline">Call (817) 662-9028</a>
+      </div>
+      <div class="hero-trust">
+        <span class="hero-stars">★★★★★</span>
+        <span class="hero-trust-text">4.9 stars from 63 Google reviews</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Our Core Services</div>
+      <div class="hero-service-list">
+        <div class="hero-service-item">Lawn Mowing &amp; Edging</div>
+        <div class="hero-service-item">Trimming &amp; Blowing</div>
+        <div class="hero-service-item">Fertilization Programs</div>
+        <div class="hero-service-item">Weed Control &amp; Treatment</div>
+        <div class="hero-service-item">Seasonal Cleanup</div>
+        <div class="hero-service-item">Mulching &amp; Bed Maintenance</div>
+      </div>
+      <div class="hero-phone">
+        <span class="hero-phone-icon">📞</span>
+        <a href="tel:8176629028">(817) 662-9028</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-number" data-target="63" data-suffix="+">0</span>
+      <span class="stat-label">5-Star Reviews</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="4.9" data-suffix="★">0</span>
+      <span class="stat-label">Average Rating</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="500" data-suffix="+">0</span>
+      <span class="stat-label">Lawns Maintained</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="10" data-suffix="+ Yrs">0</span>
+      <span class="stat-label">DFW Experience</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="section-header">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title">Complete Lawn Care Solutions</h2>
+      <p class="section-sub">From weekly mowing to full-season maintenance programs — Jay's handles every aspect of your outdoor property.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card-header">
+          <div class="service-card-icon">🌿</div>
+          <h3>Lawn Mowing &amp; Edging</h3>
+        </div>
+        <p>Precision cuts with sharp blades, clean edging along driveways, walkways, and beds — leaving your property looking crisp every visit.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-header">
+          <div class="service-card-icon">✂️</div>
+          <h3>Trimming &amp; Blowing</h3>
+        </div>
+        <p>String trimming around obstacles and structures, followed by thorough blowing of clippings from all hard surfaces.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-header">
+          <div class="service-card-icon">🌱</div>
+          <h3>Fertilization Programs</h3>
+        </div>
+        <p>Seasonal fertilization plans tailored to North Texas soil conditions — promoting thick, healthy turf that resists drought and weeds.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-header">
+          <div class="service-card-icon">🌾</div>
+          <h3>Weed Control</h3>
+        </div>
+        <p>Pre-emergent and post-emergent weed treatments to keep invasive grasses and broadleaf weeds out of your lawn all year long.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-header">
+          <div class="service-card-icon">🍂</div>
+          <h3>Seasonal Cleanup</h3>
+        </div>
+        <p>Spring prep and fall leaf cleanup to keep your yard tidy through every season — removing debris and getting beds ready for new growth.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card-header">
+          <div class="service-card-icon">🪨</div>
+          <h3>Mulching &amp; Bed Care</h3>
+        </div>
+        <p>Fresh mulch installation, bed edging, and plant trimming to give your landscaping a polished, well-maintained appearance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-visual">
+      <div class="why-visual-grain"></div>
+      <div class="why-highlight">The <em>Jay's Difference</em>:<br>Reliable Crews You Can Count On</div>
+      <p class="why-quote">We show up on schedule, use professional equipment, and treat every yard as if it were our own. That commitment has earned us over 60 five-star reviews from DFW homeowners.</p>
+      <div class="why-cert"><span>✔ Licensed &amp; Insured</span></div>
+    </div>
+    <div>
+      <span class="section-label">Why Choose Jay's</span>
+      <h2 class="section-title">Quality You Can See. Service You Can Trust.</h2>
+      <div class="why-list">
+        <div class="why-item">
+          <div class="why-icon">📅</div>
+          <div class="why-item-text">
+            <h4>Consistent Scheduling</h4>
+            <p>We arrive on your set day, every time — no last-minute reschedules or no-shows that leave your lawn unkept.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🔧</div>
+          <div class="why-item-text">
+            <h4>Professional Equipment</h4>
+            <p>Commercial-grade mowers, edgers, and trimmers ensure a clean cut and uniform finish on every property.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">💬</div>
+          <div class="why-item-text">
+            <h4>Direct Communication</h4>
+            <p>Talk directly to Jay — no call centers or automated responses. Quick answers and personalized service for every client.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">💲</div>
+          <div class="why-item-text">
+            <h4>Transparent Pricing</h4>
+            <p>Flat-rate quotes with no hidden fees. You know exactly what you're paying before we ever start a job.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="how-inner">
+    <div class="section-header">
+      <span class="section-label">The Process</span>
+      <h2 class="section-title">Lawn Care in Three Simple Steps</h2>
+      <p class="section-sub">Getting started with Jay's Lawn Service is quick and straightforward — no long contracts required.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Request a Free Quote</h3>
+        <p>Fill out our short form or give us a call. We'll assess your property and provide a clear, competitive quote — no surprises.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Schedule Your Service</h3>
+        <p>Pick a recurring schedule that works for you — weekly, bi-weekly, or monthly. We lock in your day and stick to it.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Enjoy Your Perfect Lawn</h3>
+        <p>Come home to a freshly mowed, edged, and blown property every service day — no effort required on your end.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="section-header">
+      <span class="section-label">Customer Reviews</span>
+      <h2 class="section-title">What Euless Homeowners Are Saying</h2>
+      <p class="section-sub">4.9 stars from 63 Google reviews — see why neighbors across the DFW Metroplex trust Jay's for their lawn care.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Jay and his crew are fantastic. My lawn has never looked better — they're always on time and the results are consistently great. Highly recommend."</p>
+        <div class="review-author">
+          <div class="review-avatar">MR</div>
+          <div>
+            <div class="review-name">Marcus R.</div>
+            <div class="review-source">Google Review · Euless, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Super reliable service. They show up every week without fail, do a thorough job, and the price is very fair. Exactly what I was looking for."</p>
+        <div class="review-author">
+          <div class="review-avatar">SL</div>
+          <div>
+            <div class="review-name">Sandra L.</div>
+            <div class="review-source">Google Review · Grapevine, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Best lawn service we've had. They edge perfectly, clean up everything, and the yard looks professional every single time. Worth every penny."</p>
+        <div class="review-author">
+          <div class="review-avatar">TK</div>
+          <div>
+            <div class="review-name">Tyler K.</div>
+            <div class="review-source">Google Review · Hurst, TX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas" id="areas">
+  <div class="areas-inner">
+    <div class="section-header">
+      <span class="section-label">Service Areas</span>
+      <h2 class="section-title">Serving All of Northeast Tarrant County</h2>
+      <p class="section-sub">Jay's Lawn Service proudly serves Euless and surrounding DFW Metroplex communities.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-pill"><div class="area-dot"></div><span>Euless, TX</span></div>
+      <div class="area-pill"><div class="area-dot"></div><span>Bedford, TX</span></div>
+      <div class="area-pill"><div class="area-dot"></div><span>Hurst, TX</span></div>
+      <div class="area-pill"><div class="area-dot"></div><span>Grapevine, TX</span></div>
+      <div class="area-pill"><div class="area-dot"></div><span>Colleyville, TX</span></div>
+      <div class="area-pill"><div class="area-dot"></div><span>Southlake, TX</span></div>
+      <div class="area-pill"><div class="area-dot"></div><span>North Richland Hills, TX</span></div>
+      <div class="area-pill"><div class="area-dot"></div><span>Richland Hills, TX</span></div>
+      <div class="area-pill"><div class="area-dot"></div><span>Keller, TX</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <span class="section-label">Get in Touch</span>
+      <h2 class="section-title">Request Your Free Lawn Care Quote</h2>
+      <p class="section-sub" style="margin-bottom:32px">Ready for a consistently beautiful lawn? Contact us today for a free quote — no obligation, no long contracts.</p>
+      <div class="contact-info">
+        <div class="contact-detail">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:8176629028">(817) 662-9028</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Address</h4>
+            <p>1001 W Euless Blvd Suite 410-D<br>Euless, TX 76040</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h4>Service Hours</h4>
+            <p>Monday – Saturday: 7:00 AM – 6:00 PM<br>Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form" onsubmit="return false">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="John">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="john@example.com">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="(817) 555-0123">
+      </div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select>
+          <option value="">Select a service...</option>
+          <option>Lawn Mowing &amp; Edging</option>
+          <option>Fertilization Program</option>
+          <option>Weed Control</option>
+          <option>Seasonal Cleanup</option>
+          <option>Mulching &amp; Bed Care</option>
+          <option>Full Maintenance Package</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message / Property Details</label>
+        <textarea placeholder="Tell us about your lawn size, current condition, or any special requests..."></textarea>
+      </div>
+      <button type="submit" class="btn-form">Request My Free Quote →</button>
+    </form>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-band-grain"></div>
+  <div class="cta-band-inner">
+    <h2>Ready for a <em>Lawn You're Proud Of?</em><br>Let's Get Started Today.</h2>
+    <div class="cta-band-actions">
+      <a href="#contact" class="btn-cta">Get a Free Quote</a>
+      <a href="tel:8176629028" class="btn-cta-outline">Call (817) 662-9028</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-name">Jay's Lawn Service</div>
+        <p>Professional lawn care and maintenance for homeowners and businesses throughout Euless and the DFW Metroplex. Reliable, affordable, and consistently excellent.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Lawn Mowing</a></li>
+          <li><a href="#services">Fertilization</a></li>
+          <li><a href="#services">Weed Control</a></li>
+          <li><a href="#services">Seasonal Cleanup</a></li>
+          <li><a href="#services">Mulching</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:8176629028">(817) 662-9028</a></li>
+          <li><a href="#contact">Get a Quote</a></li>
+          <li><a href="#areas">Service Areas</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Jay's Lawn Service · Euless, TX · All rights reserved</span>
+      <span class="footer-copy">Serving Euless, Bedford, Hurst, Grapevine &amp; DFW</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Stat counter
+const statEls = document.querySelectorAll('[data-target]');
+const runCounter = (el) => {
+  const target = parseFloat(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const isDecimal = target % 1 !== 0;
+  const duration = 1600;
+  const start = performance.now();
+  const step = (now) => {
+    const elapsed = now - start;
+    const t = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - t, 3);
+    const val = isDecimal ? (ease * target).toFixed(1) : Math.round(ease * target);
+    el.textContent = val + suffix;
+    if (t < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+};
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { runCounter(e.target); statObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+statEls.forEach(el => statObs.observe(el));
+
+// Card fade-in
+const cards = document.querySelectorAll('.service-card, .review-card');
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); cardObs.unobserve(e.target); } });
+}, { threshold: 0.15 });
+cards.forEach(c => cardObs.observe(c));
+</script>
+</body>
+</html>
