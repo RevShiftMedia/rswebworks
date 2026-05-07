@@ -1,0 +1,2026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wise Tree Care | Certified Arborists | Bedford, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1a2e1a;
+  --primary-dark: #0c160c;
+  --primary-mid: #243524;
+  --accent: #22c55e;
+  --accent-dark: #16a34a;
+  --text-dark: #1a2e1a;
+  --text-light: #f0f4f0;
+  --text-muted: #6b7c6b;
+  --surface-light: #f5f7f3;
+  --surface-white: #ffffff;
+  --border-light: #dde4dd;
+  --gold: #d4a853;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Lora', Georgia, serif;
+  color: var(--text-dark);
+  background: var(--surface-white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── TYPOGRAPHY ── */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* ── HEADER ── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--primary);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.logo-tagline {
+  font-family: 'Lora', serif;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.header-nav a {
+  font-family: 'Lora', serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  transition: color 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.header-nav a:hover { color: var(--accent); }
+
+.header-cta {
+  background: var(--accent);
+  color: var(--primary-dark) !important;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  transition: background 0.2s, transform 0.15s !important;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.header-cta:hover { background: var(--accent-dark) !important; transform: translateY(-1px); }
+
+.header-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  background: var(--primary);
+  overflow: hidden;
+  padding: 100px 32px 90px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(34,197,94,0.1) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34,197,94,0.12);
+  border: 1px solid rgba(34,197,94,0.3);
+  color: var(--accent);
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-family: 'Lora', serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0s;
+}
+
+.hero-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 22px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.hero-headline em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-family: 'Lora', serif;
+  font-size: 1.08rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.7;
+  max-width: 520px;
+  margin-bottom: 36px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--primary-dark);
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+
+.btn-ghost {
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.btn-ghost:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); transform: translateY(-2px); }
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.65);
+}
+
+.trust-item svg { flex-shrink: 0; }
+
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 36px 32px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.hero-card-sub {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 24px;
+  font-family: 'Lora', serif;
+}
+
+.card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.card-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Lora', serif;
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.82);
+}
+
+.card-feature-icon {
+  width: 28px;
+  height: 28px;
+  background: rgba(34,197,94,0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.stars { color: #fbbf24; font-size: 1.05rem; letter-spacing: 1px; }
+
+.rating-text {
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.65);
+}
+
+.rating-text strong { color: #ffffff; }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── STATS BAR ── */
+.stats-bar {
+  background: var(--primary-dark);
+  padding: 44px 32px;
+  border-top: 1px solid rgba(34,197,94,0.15);
+}
+
+.stats-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 0 24px;
+  border-right: 1px solid rgba(255,255,255,0.07);
+}
+
+.stat-item:last-child { border-right: none; }
+
+.stat-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.stat-label {
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* ── SECTION UTILITIES ── */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Lora', serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.section-tag.light { color: var(--accent); }
+.section-tag.dark { color: var(--accent); }
+
+.section-tag::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+}
+
+.section-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  font-family: 'Lora', serif;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+.section-header { margin-bottom: 52px; }
+
+/* ── SERVICES ── */
+.services {
+  background: var(--surface-light);
+  padding: 96px 32px;
+}
+
+.services-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.services .section-headline { color: var(--text-dark); }
+.services .section-sub { color: var(--text-muted); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.service-card {
+  background: var(--surface-white);
+  border-radius: 14px;
+  padding: 36px 28px;
+  border: 1px solid var(--border-light);
+  transition: transform 0.25s, box-shadow 0.25s;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(26,46,26,0.12);
+}
+
+.service-icon {
+  width: 54px;
+  height: 54px;
+  background: rgba(34,197,94,0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  transition: background 0.2s;
+}
+
+.service-card:hover .service-icon { background: rgba(34,197,94,0.18); }
+
+.service-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.service-desc {
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── WHY CHOOSE US ── */
+.why {
+  background: var(--primary);
+  padding: 96px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.why::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(34,197,94,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.why-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why .section-headline { color: #ffffff; }
+.why .section-sub { color: rgba(255,255,255,0.65); }
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.benefit-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.benefit-check {
+  width: 32px;
+  height: 32px;
+  background: rgba(34,197,94,0.15);
+  border: 1px solid rgba(34,197,94,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.benefit-text strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.benefit-text span {
+  font-family: 'Lora', serif;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+}
+
+.why-visual {
+  position: relative;
+}
+
+.why-cert-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.cert-badge:last-child { border-bottom: none; padding-bottom: 0; }
+.cert-badge:first-child { padding-top: 0; }
+
+.cert-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(34,197,94,0.12);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cert-info strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
+.cert-info span {
+  font-family: 'Lora', serif;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ── HOW IT WORKS ── */
+.how {
+  background: var(--surface-white);
+  padding: 96px 32px;
+}
+
+.how-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.how .section-header { text-align: center; }
+.how .section-headline { color: var(--text-dark); }
+.how .section-sub { color: var(--text-muted); margin: 0 auto; }
+.how .section-tag { justify-content: center; }
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 52px;
+  position: relative;
+}
+
+.steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: calc(16.67% + 20px);
+  right: calc(16.67% + 20px);
+  height: 2px;
+  background: var(--border-light);
+  z-index: 0;
+}
+
+.step-card {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.step-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.step-num {
+  width: 72px;
+  height: 72px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  border: 4px solid var(--surface-white);
+  box-shadow: 0 0 0 2px var(--border-light);
+}
+
+.step-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.step-desc {
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── REVIEWS ── */
+.reviews {
+  background: var(--primary-dark);
+  padding: 96px 32px;
+}
+
+.reviews-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.reviews .section-headline { color: #ffffff; }
+.reviews .section-sub { color: rgba(255,255,255,0.6); }
+
+.reviews-rating-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 52px;
+  flex-wrap: wrap;
+}
+
+.rating-big {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.rating-details { display: flex; flex-direction: column; gap: 4px; }
+.rating-stars-row { color: #fbbf24; font-size: 1.2rem; letter-spacing: 2px; }
+.rating-count { font-family: 'Lora', serif; font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.review-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 14px;
+  padding: 32px 28px;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.review-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.review-quote-svg {
+  margin-bottom: 18px;
+}
+
+.review-stars { color: #fbbf24; font-size: 0.95rem; letter-spacing: 1px; margin-bottom: 14px; }
+
+.review-text {
+  font-family: 'Lora', serif;
+  font-size: 0.92rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(34,197,94,0.15);
+  border: 2px solid rgba(34,197,94,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.review-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+  line-height: 1.2;
+}
+
+.review-location {
+  font-family: 'Lora', serif;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ── SERVICE AREAS ── */
+.areas {
+  background: var(--surface-light);
+  padding: 96px 32px;
+}
+
+.areas-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.areas .section-headline { color: var(--text-dark); }
+.areas .section-sub { color: var(--text-muted); }
+
+.areas-cities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.city-chip {
+  background: var(--surface-white);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 11px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.city-chip:hover { border-color: var(--accent); background: rgba(34,197,94,0.04); }
+
+.city-chip svg { flex-shrink: 0; }
+
+.areas-map {
+  background: var(--primary);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.map-icon-wrap {
+  width: 72px;
+  height: 72px;
+  background: rgba(34,197,94,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.areas-map-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.areas-map-sub {
+  font-family: 'Lora', serif;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  max-width: 240px;
+  line-height: 1.6;
+}
+
+.areas-map-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--primary-dark);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.areas-map-cta:hover { background: var(--accent-dark); }
+
+/* ── CONTACT ── */
+.contact {
+  background: var(--primary-mid);
+  padding: 96px 32px;
+}
+
+.contact-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.contact .section-headline { color: #ffffff; }
+.contact .section-sub { color: rgba(255,255,255,0.6); }
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(34,197,94,0.12);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-item-text strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+}
+
+.contact-item-text a,
+.contact-item-text span {
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-item-text a:hover { color: var(--accent); }
+
+.contact-form {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 40px 36px;
+}
+
+.form-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.form-sub {
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 28px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Lora', serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-family: 'Lora', serif;
+  font-size: 0.92rem;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--accent); }
+
+.form-group textarea { resize: vertical; min-height: 100px; }
+
+.form-group select { cursor: pointer; color: rgba(255,255,255,0.7); }
+.form-group select option { background: var(--primary); color: #ffffff; }
+
+.form-submit {
+  width: 100%;
+  background: var(--accent);
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.form-submit:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+/* ── CTA BAND ── */
+.cta-band {
+  position: relative;
+  background: var(--primary-dark);
+  padding: 80px 32px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.cta-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(34,197,94,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-eyebrow {
+  font-family: 'Lora', serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.cta-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.cta-sub {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.65;
+  margin-bottom: 36px;
+}
+
+.cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: #090f09;
+  padding: 64px 32px 32px;
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  margin-bottom: 32px;
+}
+
+.footer-brand {}
+
+.footer-logo-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.footer-logo-tag {
+  font-family: 'Lora', serif;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.footer-about {
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.65;
+  max-width: 260px;
+  margin-bottom: 24px;
+}
+
+.footer-phone {
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer-col-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 18px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-family: 'Lora', serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--accent); }
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  font-family: 'Lora', serif;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal a {
+  font-family: 'Lora', serif;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-legal a:hover { color: rgba(255,255,255,0.6); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-card { max-width: 480px; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 0; }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.07); border-top: 1px solid rgba(255,255,255,0.07); }
+  .stat-item:nth-child(4) { border-right: none; border-top: 1px solid rgba(255,255,255,0.07); }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-inner { grid-template-columns: 1fr; gap: 48px; }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid::before { display: none; }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .areas-inner { grid-template-columns: 1fr; gap: 48px; }
+  .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+  .footer-top { grid-template-columns: repeat(2, 1fr); }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 70px 20px 60px; }
+  .hero-ctas { flex-direction: column; align-items: flex-start; }
+  .services-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-cities { grid-template-columns: repeat(2, 1fr); }
+  .cta-actions { flex-direction: column; align-items: stretch; }
+  .footer-top { grid-template-columns: 1fr; }
+  .header-nav { display: none; }
+  .header-inner { padding: 0 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0c160c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22V12"/><path d="M12 12C12 7 8 4 4 5c0 4 2.5 8 8 7"/><path d="M12 12C12 7 16 4 20 5c0 4-2.5 8-8 7"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Wise Tree Care</span>
+        <span class="logo-tagline">ISA Certified Arborists</span>
+      </div>
+    </a>
+    <nav>
+      <ul class="header-nav">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#areas">Service Areas</a></li>
+        <li><a href="tel:8173188733" class="header-phone">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (817) 318-8733
+        </a></li>
+        <li><a href="#contact" class="header-cta">Free Estimate</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        ISA Certified Arborists — Bedford, TX
+      </div>
+      <h1 class="hero-headline">
+        Expert Tree Care<br>You Can <em>Trust</em>
+      </h1>
+      <p class="hero-sub">Bedford's certified arborists delivering expert trimming, safe removal, and precision stump grinding. Protecting your property and the trees you love since 2004.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Get a Free Estimate
+        </a>
+        <a href="tel:8173188733" class="btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (817) 318-8733
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Fully Insured, $2M Liability
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          No Subcontractors
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          24/7 Emergency Response
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Why Bedford Chooses Us</div>
+      <div class="hero-card-sub">Trusted by 2,500+ DFW homeowners</div>
+      <div class="card-features">
+        <div class="card-feature">
+          <div class="card-feature-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          ISA Certified arborists on every job
+        </div>
+        <div class="card-feature">
+          <div class="card-feature-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Free detailed written estimates
+        </div>
+        <div class="card-feature">
+          <div class="card-feature-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Complete cleanup — we leave nothing
+        </div>
+        <div class="card-feature">
+          <div class="card-feature-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          10-year workmanship guarantee
+        </div>
+        <div class="card-feature">
+          <div class="card-feature-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Storm damage specialists on call
+        </div>
+      </div>
+      <div class="card-rating">
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:#ffffff;line-height:1;">4.9</div>
+          <div style="font-size:0.7rem;color:rgba(255,255,255,0.4);font-family:'Lora',serif;">out of 5</div>
+        </div>
+        <div class="rating-details">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="rating-text"><strong>176</strong> verified Google reviews</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-number" data-target="20" data-suffix="+">0</span>
+      <span class="stat-label">Years of Experience</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="2500" data-suffix="+">0</span>
+      <span class="stat-label">Trees Serviced</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="4.9" data-suffix="★" data-decimal="true">0</span>
+      <span class="stat-label">Average Google Rating</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="2" data-suffix="hr" data-prefix="&lt;">0</span>
+      <span class="stat-label">Emergency Response Time</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="section-header">
+      <div class="section-tag light">Our Services</div>
+      <h2 class="section-headline">Complete Tree Care, Done Right</h2>
+      <p class="section-sub">From routine maintenance to emergency removal, our ISA-certified team handles every aspect of your tree's health and safety with skill and care.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 3l6 6 6-6"/><path d="M12 9v12"/><path d="M8 16c0-2 1.5-4 4-4s4 2 4 4"/><path d="M4 12c0-1.5 1-3 4-3"/><path d="M20 12c0-1.5-1-3-4-3"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Tree Trimming &amp; Pruning</h3>
+        <p class="service-desc">ISA-certified pruning that improves tree structure, removes deadwood, and enhances the natural beauty of every species on your property.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 3H5l-2 6h2l1 12h12l1-12h2L19 3h-4"/><path d="M9 3c0 3-1 4-1 6s1 3 3 3 3-1 3-3-1-3-1-6"/><line x1="9" y1="3" x2="15" y2="3"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Tree Removal</h3>
+        <p class="service-desc">Safe, precise removal of dead, diseased, or hazardous trees using industry-leading rigging techniques. Full site cleanup included in every job.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="3" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="21"/><line x1="3" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="21" y2="12"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Stump Grinding</h3>
+        <p class="service-desc">Complete stump removal to 12 inches below grade. We grind, backfill, and rake the area clean — reclaiming your yard space entirely.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22V12"/><path d="M12 12C12 7 8 4 4 5c0 4 2.5 8 8 7"/><path d="M12 12C12 7 16 4 20 5c0 4-2.5 8-8 7"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Tree Planting</h3>
+        <p class="service-desc">Expert species selection matched to DFW's climate and soil. We plant, stake, and establish your new trees with proper technique for lasting health.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Emergency Tree Service</h3>
+        <p class="service-desc">24/7 response for storm-downed limbs, fallen trees, and hazardous situations. Our crews are dispatched within two hours across the DFW Metroplex.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Arborist Consulting</h3>
+        <p class="service-desc">Professional tree health assessments, disease and pest diagnosis, and long-term care planning from our ISA-certified arborists. Written reports provided.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div>
+      <div class="section-tag dark">Why Choose Wise Tree Care</div>
+      <h2 class="section-headline">The Standard Your Trees Deserve</h2>
+      <p class="section-sub">We don't hire day laborers or cut corners. Every crew member is trained in-house, and every job is overseen by a certified arborist who takes your trees personally.</p>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>ISA Certified Arborists on Every Job</strong>
+            <span>Not just on estimates — a certified arborist supervises every project from start to finish.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>No Subcontractors — Ever</strong>
+            <span>Your job is handled entirely by our trained crew. We never send strangers to your property.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>$2 Million Liability Coverage</strong>
+            <span>Fully insured so your home and landscape are protected. Always verify coverage before any tree work.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>10-Year Workmanship Guarantee</strong>
+            <span>We stand behind our work long after we've left your driveway. That's a promise, not a policy.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>Complete Cleanup Guaranteed</strong>
+            <span>We remove every branch, chip every log, and rake the site clean. You won't even know we were there.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual">
+      <div class="why-cert-box">
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="cert-info">
+            <strong>ISA Certified Arborist</strong>
+            <span>International Society of Arboriculture — highest industry credential</span>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="cert-info">
+            <strong>Fully Licensed &amp; Insured</strong>
+            <span>Texas Dept. of Agriculture licensed — $2M general liability + workers' comp</span>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="cert-info">
+            <strong>2,500+ Satisfied Customers</strong>
+            <span>Trusted by Bedford-area homeowners since 2004</span>
+          </div>
+        </div>
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="cert-info">
+            <strong>Same-Day Estimates</strong>
+            <span>Call before noon — we'll visit your property the same day, no obligation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="process">
+  <div class="how-inner">
+    <div class="section-header">
+      <div class="section-tag light">Our Process</div>
+      <h2 class="section-headline">Simple, Transparent, Worry-Free</h2>
+      <p class="section-sub">From your first call to final cleanup, we've made it easy to get expert tree care with no surprises — just results.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3 class="step-title">Schedule a Free Estimate</h3>
+        <p class="step-desc">Call us or submit the contact form. A certified arborist will visit your property — often same-day — to assess your trees and discuss the work.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3 class="step-title">Receive Your Written Quote</h3>
+        <p class="step-desc">We provide a clear, itemized written estimate with no hidden fees. We explain every step so you know exactly what we're doing and why.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3 class="step-title">Expert Work, Full Cleanup</h3>
+        <p class="step-desc">Our crew completes the job with precision and care. We remove all debris, haul away every branch and log, and leave your property spotless.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="section-header">
+      <div class="section-tag dark">Customer Reviews</div>
+      <h2 class="section-headline">What Bedford Homeowners Say</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.6);">Don't take our word for it. Here's what our neighbors across the DFW Metroplex have to say about their experience with Wise Tree Care.</p>
+      <div class="reviews-rating-bar" style="margin-top:24px;">
+        <div class="rating-big">4.9</div>
+        <div class="rating-details">
+          <div class="rating-stars-row">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="rating-count">Based on 176 Google reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="review-quote-svg">
+          <svg width="32" height="22" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V18.4C0 13.6 1.2 9.6 3.6 6.4 6 3.2 9.6 1.2 14.4 0.4L16 4.4C13.2 5.2 11.2 6.4 10 8 8.8 9.6 8.2 11.4 8.2 13.4H16V28H0ZM24 28V18.4C24 13.6 25.2 9.6 27.6 6.4 30 3.2 33.6 1.2 38.4 0.4L40 4.4C37.2 5.2 35.2 6.4 34 8 32.8 9.6 32.2 11.4 32.2 13.4H40V28H24Z" fill="rgba(34,197,94,0.25)"/>
+          </svg>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Wise Tree Care removed a massive live oak that was threatening our roof after last spring's storms. The crew was professional, meticulous, and the cleanup was absolutely immaculate. Couldn't believe how clean they left our yard.</p>
+        <div class="review-author">
+          <div class="review-avatar">MT</div>
+          <div>
+            <span class="review-name">Michael T.</span>
+            <span class="review-location">Bedford, TX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-quote-svg">
+          <svg width="32" height="22" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V18.4C0 13.6 1.2 9.6 3.6 6.4 6 3.2 9.6 1.2 14.4 0.4L16 4.4C13.2 5.2 11.2 6.4 10 8 8.8 9.6 8.2 11.4 8.2 13.4H16V28H0ZM24 28V18.4C24 13.6 25.2 9.6 27.6 6.4 30 3.2 33.6 1.2 38.4 0.4L40 4.4C37.2 5.2 35.2 6.4 34 8 32.8 9.6 32.2 11.4 32.2 13.4H40V28H24Z" fill="rgba(34,197,94,0.25)"/>
+          </svg>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Our trees have never looked this beautiful. The certified arborist spent time explaining what needed to be done and why — I felt like I was being educated, not just sold to. Respectful of the property, knowledgeable, and honest pricing.</p>
+        <div class="review-author">
+          <div class="review-avatar">JR</div>
+          <div>
+            <span class="review-name">Jennifer R.</span>
+            <span class="review-location">Colleyville, TX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-quote-svg">
+          <svg width="32" height="22" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V18.4C0 13.6 1.2 9.6 3.6 6.4 6 3.2 9.6 1.2 14.4 0.4L16 4.4C13.2 5.2 11.2 6.4 10 8 8.8 9.6 8.2 11.4 8.2 13.4H16V28H0ZM24 28V18.4C24 13.6 25.2 9.6 27.6 6.4 30 3.2 33.6 1.2 38.4 0.4L40 4.4C37.2 5.2 35.2 6.4 34 8 32.8 9.6 32.2 11.4 32.2 13.4H40V28H24Z" fill="rgba(34,197,94,0.25)"/>
+          </svg>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Called on a Saturday after a storm dropped a major limb onto our back fence. Two guys arrived within 90 minutes and had everything cleared in under two hours. Absolute lifesavers. This is the only tree company I'll ever call again.</p>
+        <div class="review-author">
+          <div class="review-avatar">DL</div>
+          <div>
+            <span class="review-name">David L.</span>
+            <span class="review-location">Euless, TX</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas" id="areas">
+  <div class="areas-inner">
+    <div>
+      <div class="section-tag light">Service Areas</div>
+      <h2 class="section-headline">Serving the DFW Metroplex</h2>
+      <p class="section-sub">Wise Tree Care serves Bedford and surrounding communities across Tarrant and Dallas counties. Call us — we likely come to you.</p>
+      <div class="areas-cities">
+        <div class="city-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Bedford
+        </div>
+        <div class="city-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Euless
+        </div>
+        <div class="city-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Hurst
+        </div>
+        <div class="city-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Colleyville
+        </div>
+        <div class="city-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Grapevine
+        </div>
+        <div class="city-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Keller
+        </div>
+        <div class="city-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Southlake
+        </div>
+        <div class="city-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Trophy Club
+        </div>
+        <div class="city-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Watauga
+        </div>
+        <div class="city-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          N. Richland Hills
+        </div>
+        <div class="city-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Richland Hills
+        </div>
+        <div class="city-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Haltom City
+        </div>
+      </div>
+    </div>
+    <div class="areas-map">
+      <div class="map-icon-wrap">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+      </div>
+      <div class="areas-map-title">DFW Metro Coverage</div>
+      <p class="areas-map-sub">Tarrant County, Dallas County, and surrounding communities within 30 miles of Bedford</p>
+      <a href="tel:8173188733" class="areas-map-cta">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Confirm Your Area
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="section-tag dark">Get In Touch</div>
+      <h2 class="section-headline">Request Your Free Estimate</h2>
+      <p class="section-sub">A certified arborist will visit your property, assess your trees, and provide a detailed written estimate — at no cost and no obligation.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>Phone</strong>
+            <a href="tel:8173188733">(817) 318-8733</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>Hours</strong>
+            <span>Mon–Sat 7am–6pm · Emergency 24/7</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>Location</strong>
+            <span>Bedford, TX · Serving all of DFW</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>Emergency Service</strong>
+            <span>Storm response available 24/7 · (817) 318-8733</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Get a Free Estimate</div>
+      <div class="form-sub">Typical response within 2 business hours</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="John">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="(817) 555-0000">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="john@email.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select>
+          <option value="">Select a service...</option>
+          <option>Tree Trimming &amp; Pruning</option>
+          <option>Tree Removal</option>
+          <option>Stump Grinding</option>
+          <option>Tree Planting</option>
+          <option>Emergency Tree Service</option>
+          <option>Arborist Consulting</option>
+          <option>Not sure — need assessment</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Tell Us About Your Trees</label>
+        <textarea placeholder="Describe the work needed, number of trees, any urgent concerns..."></textarea>
+      </div>
+      <button class="form-submit" type="submit">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Request Free Estimate
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Free Estimates · No Obligation</div>
+    <h2 class="cta-headline">Ready to Transform Your Trees?</h2>
+    <p class="cta-sub">Don't wait until a weak limb becomes a fallen tree. Call Wise Tree Care today and speak with a certified arborist who will give you an honest assessment and a fair price.</p>
+    <div class="cta-actions">
+      <a href="tel:8173188733" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call (817) 318-8733
+      </a>
+      <a href="#contact" class="btn-ghost">Schedule Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-name">Wise Tree Care</div>
+        <div class="footer-logo-tag">ISA Certified Arborists · Bedford, TX</div>
+        <p class="footer-about">Professional tree trimming, removal, stump grinding, and emergency services across the DFW Metroplex since 2004. ISA certified, fully insured.</p>
+        <a href="tel:8173188733" class="footer-phone">(817) 318-8733</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Tree Trimming</a></li>
+          <li><a href="#services">Tree Removal</a></li>
+          <li><a href="#services">Stump Grinding</a></li>
+          <li><a href="#services">Tree Planting</a></li>
+          <li><a href="#services">Emergency Service</a></li>
+          <li><a href="#services">Arborist Consulting</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#areas">Bedford</a></li>
+          <li><a href="#areas">Euless</a></li>
+          <li><a href="#areas">Hurst</a></li>
+          <li><a href="#areas">Colleyville</a></li>
+          <li><a href="#areas">Grapevine</a></li>
+          <li><a href="#areas">Keller &amp; Southlake</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#why">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#contact">Get an Estimate</a></li>
+          <li><a href="tel:8173188733">Emergency Line</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2024 Wise Tree Care. All rights reserved. Bedford, TX.</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Stat counter animation
+const stats = document.querySelectorAll('.stat-number[data-target]');
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const prefix = el.dataset.prefix || '';
+    const isDecimal = el.dataset.decimal === 'true';
+    const duration = 1800;
+    const startTime = performance.now();
+    function update(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const current = target * ease;
+      el.textContent = prefix + (isDecimal ? current.toFixed(1) : Math.floor(current).toLocaleString()) + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+    statObserver.unobserve(el);
+  });
+}, { threshold: 0.4 });
+stats.forEach(el => statObserver.observe(el));
+
+// Staggered fadeUp for cards
+const fadeEls = document.querySelectorAll('.service-card, .review-card, .step-card, .benefit-item');
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const siblings = Array.from(el.parentElement.children);
+    const idx = siblings.indexOf(el);
+    el.style.transitionDelay = (idx * 0.08) + 's';
+    el.classList.add('visible');
+    fadeObserver.unobserve(el);
+  });
+}, { threshold: 0.12 });
+fadeEls.forEach(el => fadeObserver.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>

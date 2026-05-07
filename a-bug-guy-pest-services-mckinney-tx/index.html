@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Bug Guy Pest Services — McKinney, TX | 5-Star Pest Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#1a0d2e;
+  --primary-dark:#0d0619;
+  --primary-mid:#241540;
+  --accent:#f97316;
+  --accent-dark:#ea6000;
+  --accent-light:#fb923c;
+  --text:#f2eefc;
+  --text-dim:rgba(242,238,252,0.65);
+  --text-dimmer:rgba(242,238,252,0.38);
+  --surface:rgba(255,255,255,0.04);
+  --surface-hover:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.08);
+  --radius:10px;
+  --radius-lg:16px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Nunito Sans',sans-serif;background:var(--primary-dark);color:var(--text);overflow-x:hidden;line-height:1.6}
+h1,h2,h3,h4,h5{font-family:'Barlow Condensed',sans-serif;line-height:1.1;font-weight:800;letter-spacing:0.01em}
+
+/* ── NAV ─────────────────────────────────── */
+nav{position:sticky;top:0;z-index:100;background:var(--primary);border-bottom:1px solid rgba(255,255,255,0.07);padding:0 32px}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;gap:24px}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-size:1.45rem;font-weight:900;color:var(--text);text-decoration:none;letter-spacing:0.04em;text-transform:uppercase}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--text-dim);text-decoration:none;font-size:0.9rem;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;transition:color 0.2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent);color:#fff;padding:9px 22px;border-radius:6px;font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background 0.2s}
+.nav-cta:hover{background:var(--accent-dark)}
+@media(max-width:900px){.nav-links{display:none}}
+
+/* ── HERO ────────────────────────────────── */
+.hero{min-height:92vh;background:var(--primary);position:relative;display:flex;align-items:center;overflow:hidden;padding:80px 32px}
+.hero-grain{position:absolute;inset:0;opacity:0.05;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
+.hero-glow{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,0.1) 0%,transparent 70%);bottom:-80px;right:80px;pointer-events:none}
+.hero-glow-2{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,0.06) 0%,transparent 70%);top:60px;left:-40px;pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:56px;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.3);color:var(--accent);padding:6px 14px;border-radius:30px;font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;opacity:0;animation:heroFadeUp 0.6s ease forwards}
+.hero-headline{font-size:clamp(3rem,6vw,5.4rem);font-weight:900;text-transform:uppercase;letter-spacing:-0.01em;color:var(--text);line-height:1.0;margin-top:18px;opacity:0;animation:heroFadeUp 0.6s ease 0.1s forwards}
+.hero-headline em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:1.12rem;color:var(--text-dim);max-width:510px;margin-top:18px;line-height:1.75;opacity:0;animation:heroFadeUp 0.6s ease 0.2s forwards}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;opacity:0;animation:heroFadeUp 0.6s ease 0.3s forwards}
+.btn-primary{background:var(--accent);color:#fff;padding:14px 30px;border-radius:8px;font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:background 0.2s,transform 0.15s}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-outline{border:2px solid rgba(242,238,252,0.28);color:var(--text);padding:14px 28px;border-radius:8px;font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:border-color 0.2s,color 0.2s,transform 0.15s}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.hero-trust{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:22px;opacity:0;animation:heroFadeUp 0.6s ease 0.4s forwards}
+.hero-trust-item{display:flex;align-items:center;gap:6px;font-size:0.82rem;color:var(--text-dim);font-weight:600}
+.hero-trust-dot{width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.hero-card{background:rgba(255,255,255,0.05);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:30px;opacity:0;animation:heroFadeUp 0.6s ease 0.5s forwards}
+.hero-card-tag{font-family:'Barlow Condensed',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-dimmer);margin-bottom:16px}
+.hero-stars{display:flex;gap:3px;margin-bottom:6px}
+.hero-star{color:var(--accent);font-size:1.2rem}
+.hero-rating-row{display:flex;align-items:baseline;gap:10px;margin-bottom:20px}
+.hero-rating-big{font-family:'Barlow Condensed',sans-serif;font-size:3rem;font-weight:900;color:var(--text)}
+.hero-rating-sub{font-size:0.88rem;color:var(--text-dim);font-weight:600}
+.hero-divider{height:1px;background:var(--border);margin:20px 0}
+.hero-local-badge{background:rgba(249,115,22,0.1);border:1px solid rgba(249,115,22,0.25);border-radius:8px;padding:14px 16px;margin-bottom:20px}
+.hero-local-badge-label{font-family:'Barlow Condensed',sans-serif;font-size:0.82rem;font-weight:700;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px}
+.hero-local-badge p{font-size:0.88rem;color:var(--text-dim);line-height:1.5}
+.hero-card-label{font-size:0.78rem;color:var(--text-dimmer);text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-top:14px}
+.hero-card-phone{font-family:'Barlow Condensed',sans-serif;font-size:1.65rem;font-weight:900;color:var(--text);text-decoration:none;display:block;margin-top:4px;letter-spacing:0.04em}
+.hero-card-phone:hover{color:var(--accent)}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-card{display:none}}
+
+/* ── STATS BAR ───────────────────────────── */
+.stats-bar{background:var(--primary-mid);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:36px 32px}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stat-item{text-align:center}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-size:2.8rem;font-weight:900;color:var(--accent);line-height:1}
+.stat-label{font-size:0.82rem;color:var(--text-dim);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-top:4px}
+@media(max-width:600px){.stats-inner{grid-template-columns:repeat(2,1fr)}}
+
+/* ── SECTIONS ────────────────────────────── */
+.section{padding:80px 32px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-tag{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.section-title{font-size:clamp(2rem,4vw,3rem);font-weight:900;text-transform:uppercase;margin-bottom:16px}
+.section-sub{font-size:1.05rem;color:var(--text-dim);max-width:580px;line-height:1.7}
+.section-header{margin-bottom:52px}
+
+/* ── SERVICES ────────────────────────────── */
+.services{background:var(--primary-dark)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;transition:background 0.2s,transform 0.2s;position:relative;overflow:hidden;opacity:0;transform:translateY(20px)}
+.service-card.visible{opacity:1;transform:translateY(0);transition:opacity 0.5s ease,transform 0.5s ease,background 0.2s}
+.service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease}
+.service-card:hover{background:var(--surface-hover);transform:translateY(-3px)}
+.service-card:hover::after{transform:scaleX(1)}
+.service-icon{width:48px;height:48px;background:rgba(249,115,22,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.service-icon svg{width:24px;height:24px;fill:var(--accent)}
+.service-card h3{font-size:1.3rem;font-weight:800;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.02em}
+.service-card p{font-size:0.9rem;color:var(--text-dim);line-height:1.65}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr}}
+
+/* ── WHY CHOOSE US ───────────────────────── */
+.why{background:var(--primary)}
+.why-layout{display:grid;grid-template-columns:1fr 360px;gap:64px;align-items:start}
+.why-features{display:flex;flex-direction:column;gap:26px;margin-top:8px}
+.why-feature{display:flex;gap:18px;align-items:flex-start;opacity:0;transform:translateY(20px)}
+.why-feature.visible{opacity:1;transform:translateY(0);transition:opacity 0.5s ease,transform 0.5s ease}
+.why-feature-icon{width:44px;height:44px;min-width:44px;background:rgba(249,115,22,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center}
+.why-feature-icon svg{width:22px;height:22px;fill:var(--accent)}
+.why-feature-body h3{font-size:1.15rem;font-weight:800;text-transform:uppercase;letter-spacing:0.03em;margin-bottom:5px}
+.why-feature-body p{font-size:0.9rem;color:var(--text-dim);line-height:1.65}
+.why-local-card{background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.18);border-radius:var(--radius-lg);overflow:hidden}
+.why-local-header{background:var(--accent);padding:18px 22px}
+.why-local-header h4{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:900;color:#fff;text-transform:uppercase;letter-spacing:0.05em}
+.why-local-header p{font-size:0.82rem;color:rgba(255,255,255,0.75);font-weight:600;margin-top:2px}
+.why-local-stats{padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.why-local-stat{text-align:center;padding:14px;background:rgba(255,255,255,0.04);border-radius:8px;border:1px solid var(--border)}
+.why-local-stat-num{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:900;color:var(--accent)}
+.why-local-stat-label{font-size:0.75rem;color:var(--text-dim);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-top:3px}
+.why-local-note{padding:16px 22px;border-top:1px solid var(--border)}
+.why-local-note p{font-size:0.85rem;color:var(--text-dim);line-height:1.6;font-weight:600}
+@media(max-width:900px){.why-layout{grid-template-columns:1fr}.why-local-card{max-width:420px}}
+
+/* ── HOW IT WORKS ────────────────────────── */
+.how{background:var(--primary-dark)}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step-card{text-align:center;padding:36px 22px 30px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);opacity:0;transform:translateY(20px)}
+.step-card.visible{opacity:1;transform:translateY(0);transition:opacity 0.5s ease,transform 0.5s ease}
+.step-num{font-family:'Barlow Condensed',sans-serif;font-size:2.8rem;font-weight:900;color:var(--accent);opacity:0.18;line-height:1;margin-bottom:14px}
+.step-icon{width:52px;height:52px;background:rgba(249,115,22,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.step-icon svg{width:24px;height:24px;fill:var(--accent)}
+.step-card h3{font-size:1.1rem;font-weight:800;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px}
+.step-card p{font-size:0.88rem;color:var(--text-dim);line-height:1.65}
+@media(max-width:900px){.steps-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.steps-grid{grid-template-columns:1fr}}
+
+/* ── REVIEWS ─────────────────────────────── */
+.reviews{background:var(--primary-mid)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:rgba(13,6,25,0.7);border:1px solid rgba(249,115,22,0.12);border-radius:var(--radius);padding:28px;opacity:0;transform:translateY(20px)}
+.review-card.visible{opacity:1;transform:translateY(0);transition:opacity 0.5s ease,transform 0.5s ease}
+.review-quote{width:36px;height:28px;margin-bottom:14px;opacity:0.45}
+.review-quote path{fill:var(--accent)}
+.review-text{font-size:0.92rem;color:var(--text-dim);line-height:1.7;margin-bottom:18px;font-style:italic}
+.review-stars{display:flex;gap:3px;margin-bottom:10px}
+.review-star{color:var(--accent);font-size:0.95rem}
+.review-author{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em}
+.review-meta{font-size:0.78rem;color:var(--text-dimmer);margin-top:2px}
+@media(max-width:900px){.reviews-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.reviews-grid{grid-template-columns:1fr}}
+
+/* ── AREAS ───────────────────────────────── */
+.areas{background:var(--primary-dark)}
+.areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.area-chip{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 18px;text-align:center;font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-dim);transition:background 0.2s,border-color 0.2s,color 0.2s;cursor:default}
+.area-chip:hover{background:var(--surface-hover);border-color:rgba(249,115,22,0.3);color:var(--text)}
+.area-chip.featured{border-color:rgba(249,115,22,0.45);color:var(--accent);background:rgba(249,115,22,0.07)}
+@media(max-width:600px){.areas-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ── CONTACT ─────────────────────────────── */
+.contact{background:var(--primary)}
+.contact-layout{display:grid;grid-template-columns:1fr 480px;gap:64px;align-items:start}
+.contact-info{margin-top:8px}
+.contact-info h3{font-size:1.5rem;font-weight:800;text-transform:uppercase;margin-bottom:16px}
+.contact-info p{font-size:0.95rem;color:var(--text-dim);line-height:1.7;margin-bottom:24px}
+.contact-detail{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+.contact-detail-icon{width:40px;height:40px;min-width:40px;background:rgba(249,115,22,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.contact-detail-icon svg{width:18px;height:18px;fill:var(--accent)}
+.contact-detail-label{font-size:0.78rem;color:var(--text-dimmer);text-transform:uppercase;letter-spacing:0.08em;font-weight:700}
+.contact-detail-val{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:800;color:var(--text);letter-spacing:0.02em}
+.form-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px}
+.form-title{font-size:1.5rem;font-weight:800;text-transform:uppercase;margin-bottom:24px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.form-group label{font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-dim)}
+.form-group input,.form-group select,.form-group textarea{background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;padding:11px 14px;color:var(--text);font-family:'Nunito Sans',sans-serif;font-size:0.95rem;outline:none;transition:border-color 0.2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:rgba(249,115,22,0.5)}
+.form-group select option{background:var(--primary);color:var(--text)}
+.form-group textarea{resize:vertical;min-height:90px}
+.form-submit{width:100%;background:var(--accent);color:#fff;border:none;padding:14px;border-radius:8px;font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:background 0.2s}
+.form-submit:hover{background:var(--accent-dark)}
+@media(max-width:900px){.contact-layout{grid-template-columns:1fr}.form-card{max-width:520px}}
+@media(max-width:600px){.form-row{grid-template-columns:1fr}}
+
+/* ── CTA BAND ────────────────────────────── */
+.cta-band{background:var(--primary-mid);position:relative;overflow:hidden;padding:72px 32px;text-align:center}
+.cta-grain{position:absolute;inset:0;opacity:0.045;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
+.cta-inner{max-width:660px;margin:0 auto;position:relative;z-index:1}
+.cta-band h2{font-size:clamp(2.2rem,4.5vw,3.2rem);font-weight:900;text-transform:uppercase;margin-bottom:14px}
+.cta-band h2 span{color:var(--accent)}
+.cta-band p{font-size:1.05rem;color:var(--text-dim);margin-bottom:32px;line-height:1.7}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* ── FOOTER ──────────────────────────────── */
+footer{background:var(--primary-dark);border-top:1px solid var(--border);padding:52px 32px 28px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand h3{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:900;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:10px}
+.footer-brand h3 span{color:var(--accent)}
+.footer-brand p{font-size:0.88rem;color:var(--text-dim);line-height:1.65;max-width:300px}
+.footer-col h4{font-family:'Barlow Condensed',sans-serif;font-size:0.82rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col li{font-size:0.88rem;color:var(--text-dim)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-bottom p{font-size:0.8rem;color:var(--text-dimmer)}
+@media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.footer-top{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">A <span>Bug</span> Guy</a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:9729743712" class="nav-cta">Call Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#f97316" opacity="0.3"/><circle cx="6" cy="6" r="3" fill="#f97316"/></svg>
+        Your Local McKinney Pest Expert
+      </div>
+      <h1 class="hero-headline">Your Neighbor.<br>Your <em>Bug Guy.</em><br>Your Solution.</h1>
+      <p class="hero-sub">Personal, local pest control that big companies can't match. A Bug Guy Pest Services delivers 5-star results with small-business care — we know McKinney, we know your pests, and we stand behind every treatment.</p>
+      <div class="hero-ctas">
+        <a href="tel:9729743712" class="btn-primary">Call (972) 974-3712</a>
+        <a href="#services" class="btn-outline">View Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item"><span class="hero-trust-dot"></span>Family-Owned &amp; Operated</div>
+        <div class="hero-trust-item"><span class="hero-trust-dot"></span>100% Satisfaction Guarantee</div>
+        <div class="hero-trust-item"><span class="hero-trust-dot"></span>Licensed &amp; Insured</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-tag">Customer Rating</div>
+      <div class="hero-stars">
+        <span class="hero-star">&#9733;</span>
+        <span class="hero-star">&#9733;</span>
+        <span class="hero-star">&#9733;</span>
+        <span class="hero-star">&#9733;</span>
+        <span class="hero-star">&#9733;</span>
+      </div>
+      <div class="hero-rating-row">
+        <span class="hero-rating-big">5.0</span>
+        <span class="hero-rating-sub">21 verified reviews</span>
+      </div>
+      <div class="hero-local-badge">
+        <div class="hero-local-badge-label">Family-Owned &amp; Local</div>
+        <p>No call centers. No strangers. Just your neighbor who happens to be McKinney's best bug guy — on time, every time.</p>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-card-label">Free Quote — Call Anytime</div>
+      <a href="tel:9729743712" class="hero-card-phone">(972) 974-3712</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">5.0&#9733;</div>
+      <div class="stat-label">Perfect Rating</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" data-target="21">0</div>
+      <div class="stat-label">Verified Reviews</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Satisfaction Guarantee</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">Local</div>
+      <div class="stat-label">McKinney Based</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">Services</span>
+      <h2 class="section-title">Pest Control Done Right</h2>
+      <p class="section-sub">From common household pests to specialized treatments, we handle every infestation with precision and care.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.69 2 6 4.69 6 8c0 2.97 2.04 5.44 4.78 6.12.32.08.66.13 1 .13s.68-.05 1-.13C15.96 13.44 18 10.97 18 8c0-3.31-2.69-6-6-6zm0 10.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 3.5 12 3.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zM12 16c-2.33 0-7 1.17-7 3.5V21h14v-1.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <h3>General Pest Control</h3>
+        <p>Year-round protection against ants, roaches, spiders, earwigs, silverfish, and other common household pests. Interior and exterior treatments included.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L2 12h3v8h6v-5h2v5h6v-8h3L12 3zm0 12.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+        </div>
+        <h3>Termite Control</h3>
+        <p>Protect your home's structure with targeted liquid treatments and bait monitoring systems. Thorough inspections identify all active colonies and entry points.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 10c-.83 0-1.5.67-1.5 1.5S5.67 13 6.5 13s1.5-.67 1.5-1.5S7.33 10 6.5 10zm11 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-4-6c.78 2.34 3.04 3 4 3s3.22-.66 4-3H8z"/></svg>
+        </div>
+        <h3>Rodent Control</h3>
+        <p>Complete mouse and rat elimination including structural exclusion to seal entry points. Bait stations, snap traps, and follow-up monitoring keep rodents out permanently.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-1 16H9v-2h2zm.53-5.83a1 1 0 0 0-.53.9V14h-2v-1a3 3 0 0 1 1.6-2.67A2 2 0 1 0 10 8.5H8a4 4 0 1 1 3.53 3.67z"/></svg>
+        </div>
+        <h3>Mosquito &amp; Tick Control</h3>
+        <p>Barrier sprays that dramatically reduce mosquito and tick populations in your yard. One-time event treatments and season-long protection programs available.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4.18L19 8.3V11c0 4.52-3.07 8.74-7 9.93-3.93-1.19-7-5.41-7-9.93V8.3l7-3.12z"/></svg>
+        </div>
+        <h3>Bed Bug Treatment</h3>
+        <p>Targeted heat and chemical protocols eliminate bed bugs at every life stage. Discreet, thorough, and backed by a re-treatment guarantee if any activity resurfaces.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
+        </div>
+        <h3>Fire Ant Control</h3>
+        <p>Fast-acting broadcast treatments and targeted mound drench applications. We protect yards, playgrounds, and common areas where fire ants pose real injury risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section why" id="why">
+  <div class="section-inner">
+    <div class="why-layout">
+      <div>
+        <div class="section-header">
+          <span class="section-tag">Why Choose Us</span>
+          <h2 class="section-title">Small Business. Big Results.</h2>
+          <p class="section-sub">When you call A Bug Guy, you get a real person — the same technician, every visit, who knows your home and your pest history.</p>
+        </div>
+        <div class="why-features">
+          <div class="why-feature">
+            <div class="why-feature-icon"><svg viewBox="0 0 24 24"><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3z"/></svg></div>
+            <div class="why-feature-body">
+              <h3>Personally Invested</h3>
+              <p>This is our business, our reputation, our community. Every job matters — we treat your home like our own because our name is on every treatment we do.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
+            <div class="why-feature-body">
+              <h3>100% Satisfaction Guarantee</h3>
+              <p>If your pest problem returns before your next scheduled visit, we come back at no cost. No questions, no fine print — just results you can count on.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+            <div class="why-feature-body">
+              <h3>Licensed &amp; Fully Insured</h3>
+              <p>State-licensed pest control operator with full liability and workers' comp coverage. We follow all Texas Department of Agriculture regulations on every job.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="why-feature-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+            <div class="why-feature-body">
+              <h3>You Can Actually Reach Us</h3>
+              <p>No phone trees, no ticket systems. Call or text and get a direct answer. We schedule around your calendar, not ours — evenings and weekends included.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-local-card">
+        <div class="why-local-header">
+          <h4>Perfectly Rated</h4>
+          <p>McKinney's highest-rated local pest service</p>
+        </div>
+        <div class="why-local-stats">
+          <div class="why-local-stat">
+            <div class="why-local-stat-num">5.0</div>
+            <div class="why-local-stat-label">Star Rating</div>
+          </div>
+          <div class="why-local-stat">
+            <div class="why-local-stat-num">21</div>
+            <div class="why-local-stat-label">Reviews</div>
+          </div>
+          <div class="why-local-stat">
+            <div class="why-local-stat-num">0</div>
+            <div class="why-local-stat-label">Complaints</div>
+          </div>
+          <div class="why-local-stat">
+            <div class="why-local-stat-num">100%</div>
+            <div class="why-local-stat-label">Recommend</div>
+          </div>
+        </div>
+        <div class="why-local-note">
+          <p>Every single review is 5 stars. That's not luck — that's what happens when a local business cares about every single customer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">Our Process</span>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Simple, personal, effective — pest control the way it should be.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+        <h3>Call or Text</h3>
+        <p>Reach us directly — no hold music, no automated system. Describe your pest issue and get straightforward answers right away.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg></div>
+        <h3>On-Site Inspection</h3>
+        <p>We inspect your property, identify the pest, find entry points and harborage areas, then explain exactly what we found — no upselling, just facts.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+        <h3>Targeted Treatment</h3>
+        <p>We apply the right product in the right places — nothing more, nothing less. Family-safe, EPA-registered formulas with minimal environmental impact.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24"><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 10l-8 7z"/></svg></div>
+        <h3>Guaranteed Follow-Up</h3>
+        <p>You get our direct number. If anything comes back, you call and we return — same person, no questions, no charge. That's our commitment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews" id="reviews">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">Customer Reviews</span>
+      <h2 class="section-title">Every Review. Five Stars.</h2>
+      <p class="section-sub">21 reviews, 21 five-star ratings — the results speak for themselves.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <svg class="review-quote" viewBox="0 0 36 28"><path d="M10.5 0C5.25 0 1.05 4.2 1.05 9.45c0 4.025 2.45 7.525 6.125 9.1L0 28h7.7l8.4-9.8V0H10.5zm19.25 0c-5.25 0-9.45 4.2-9.45 9.45 0 4.025 2.45 7.525 6.125 9.1L19.25 28H26.95l8.4-9.8V0H29.75z"/></svg>
+        <p class="review-text">Best pest control experience I've ever had. He showed up on time, explained everything before treating, and checked in a week later to make sure everything was resolved. Zero roaches since. Absolute professional.</p>
+        <div class="review-stars"><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span></div>
+        <div class="review-author">Marcus L.</div>
+        <div class="review-meta">McKinney, TX &mdash; Google Review</div>
+      </div>
+      <div class="review-card">
+        <svg class="review-quote" viewBox="0 0 36 28"><path d="M10.5 0C5.25 0 1.05 4.2 1.05 9.45c0 4.025 2.45 7.525 6.125 9.1L0 28h7.7l8.4-9.8V0H10.5zm19.25 0c-5.25 0-9.45 4.2-9.45 9.45 0 4.025 2.45 7.525 6.125 9.1L19.25 28H26.95l8.4-9.8V0H29.75z"/></svg>
+        <p class="review-text">I've used other pest companies before but nobody compares to A Bug Guy. Personal service, fair pricing, actually knowledgeable about what he's doing. He found a mouse entry point that two other companies missed.</p>
+        <div class="review-stars"><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span></div>
+        <div class="review-author">Sarah W.</div>
+        <div class="review-meta">McKinney, TX &mdash; Google Review</div>
+      </div>
+      <div class="review-card">
+        <svg class="review-quote" viewBox="0 0 36 28"><path d="M10.5 0C5.25 0 1.05 4.2 1.05 9.45c0 4.025 2.45 7.525 6.125 9.1L0 28h7.7l8.4-9.8V0H10.5zm19.25 0c-5.25 0-9.45 4.2-9.45 9.45 0 4.025 2.45 7.525 6.125 9.1L19.25 28H26.95l8.4-9.8V0H29.75z"/></svg>
+        <p class="review-text">Called about a wasp problem near my kids' play area. He came out the same day, treated the nest, and also found a couple of carpenter bee holes I didn't know about. Thorough, friendly, and reasonably priced.</p>
+        <div class="review-stars"><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span></div>
+        <div class="review-author">Rachel P.</div>
+        <div class="review-meta">Allen, TX &mdash; Google Review</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="section areas" id="areas">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-tag">Service Area</span>
+      <h2 class="section-title">Serving McKinney &amp; Surrounding Communities</h2>
+      <p class="section-sub">Locally based and locally focused — fast response times across the entire North Dallas area.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-chip featured">McKinney</div>
+      <div class="area-chip">Allen</div>
+      <div class="area-chip">Frisco</div>
+      <div class="area-chip">Prosper</div>
+      <div class="area-chip">Plano</div>
+      <div class="area-chip">Celina</div>
+      <div class="area-chip">Anna</div>
+      <div class="area-chip">Fairview</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-layout">
+      <div class="contact-info">
+        <span class="section-tag">Get Started</span>
+        <h3>Request a Free Quote</h3>
+        <p>Ready to take back your home from pests? Fill out the form or call directly — you'll speak with the technician himself, not a dispatcher. We respond within one hour.</p>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+          <div>
+            <div class="contact-detail-label">Phone / Text</div>
+            <div class="contact-detail-val">(972) 974-3712</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div>
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-val">admin@abugguy.net</div>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+          <div>
+            <div class="contact-detail-label">Location</div>
+            <div class="contact-detail-val">McKinney, TX 75071</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-card">
+        <h3 class="form-title">Get a Free Quote</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" placeholder="(972) 555-0100">
+          </div>
+          <div class="form-group">
+            <label>Zip Code</label>
+            <input type="text" placeholder="75071">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Pest Problem</label>
+          <select>
+            <option>General Pest Control</option>
+            <option>Termite Control</option>
+            <option>Rodent Control</option>
+            <option>Mosquito &amp; Tick Control</option>
+            <option>Bed Bug Treatment</option>
+            <option>Fire Ant Control</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tell Me More</label>
+          <textarea placeholder="What are you dealing with? When did you first notice it?"></textarea>
+        </div>
+        <button class="form-submit">Request Free Quote</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-grain"></div>
+  <div class="cta-inner">
+    <h2>Your Bug Problem. <span>My Guarantee.</span></h2>
+    <p>Call or text anytime and speak directly with your bug guy. Free quotes, same-day availability, and a 100% satisfaction guarantee — McKinney's most personal pest control service.</p>
+    <div class="cta-actions">
+      <a href="tel:9729743712" class="btn-primary">Call (972) 974-3712</a>
+      <a href="#contact" class="btn-outline">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>A <span>Bug</span> Guy</h3>
+        <p>McKinney's most personal pest control service. Family-owned, locally operated, and committed to a perfect 5-star experience every single time.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li>General Pest Control</li>
+          <li>Termite Control</li>
+          <li>Rodent Control</li>
+          <li>Mosquito &amp; Tick</li>
+          <li>Bed Bug Treatment</li>
+          <li>Fire Ant Control</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li>McKinney</li>
+          <li>Allen &amp; Frisco</li>
+          <li>Prosper &amp; Celina</li>
+          <li>Plano &amp; Anna</li>
+          <li>Fairview</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 A Bug Guy Pest Services. All rights reserved. Licensed Texas Pest Control Operator.</p>
+      <p>(972) 974-3712 &bull; McKinney, TX 75071</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const counters=document.querySelectorAll('.stat-num[data-target]');
+const easeOut=p=>1-Math.pow(1-p,3);
+const animateCounter=el=>{
+  const target=+el.dataset.target;
+  const dur=1800;const start=performance.now();
+  const tick=now=>{
+    const p=Math.min((now-start)/dur,1);
+    el.textContent=Math.round(easeOut(p)*target)+(target>10?'+':'');
+    if(p<1)requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+};
+const counterObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){animateCounter(e.target);counterObs.unobserve(e.target);}});
+},{threshold:0.5});
+counters.forEach(c=>counterObs.observe(c));
+
+const cards=document.querySelectorAll('.service-card,.review-card,.step-card,.why-feature');
+const cardObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const siblings=Array.from(e.target.parentElement.children).filter(c=>c.classList.contains(e.target.classList[0]));
+      const idx=siblings.indexOf(e.target);
+      e.target.style.transitionDelay=(idx*0.08)+'s';
+      e.target.classList.add('visible');
+      cardObs.unobserve(e.target);
+    }
+  });
+},{threshold:0.12});
+cards.forEach(c=>cardObs.observe(c));
+</script>
+</body>
+</html>

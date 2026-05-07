@@ -1,0 +1,1977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Texas Safe Pest Solutions | Pest Control | McKinney, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #0a2d50;
+  --primary-dark: #051825;
+  --primary-mid: #0e3a65;
+  --accent: #22c55e;
+  --accent-dark: #16a34a;
+  --accent-light: #4ade80;
+  --text-dark: #0d1f30;
+  --text-light: #e8f0f8;
+  --text-muted: #64748b;
+  --surface-light: #f4f7fb;
+  --surface-white: #ffffff;
+  --border-light: #dde4ed;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+  color: var(--text-dark);
+  background: var(--surface-white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Barlow Condensed', system-ui, sans-serif;
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+/* ── HEADER ── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--primary);
+  box-shadow: 0 2px 20px rgba(5,24,37,0.4);
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.logo-tag {
+  display: block;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.64rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  list-style: none;
+}
+
+.header-nav a {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.72);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.header-nav a:hover { color: #ffffff; }
+
+.header-cta {
+  background: var(--accent) !important;
+  color: var(--primary-dark) !important;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  transition: background 0.2s, transform 0.15s !important;
+  white-space: nowrap;
+}
+
+.header-cta:hover { background: var(--accent-dark) !important; transform: translateY(-1px); }
+
+.header-phone {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 0.93rem !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  background: var(--primary);
+  overflow: hidden;
+  padding: 96px 32px 88px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -80px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(34,197,94,0.1) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34,197,94,0.12);
+  border: 1px solid rgba(34,197,94,0.28);
+  color: var(--accent-light);
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0s;
+}
+
+.hero-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2.6rem, 4vw, 3.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.hero-headline em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  max-width: 510px;
+  margin-bottom: 34px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--primary-dark);
+  padding: 14px 28px;
+  border-radius: 7px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+
+.btn-ghost {
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 7px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1.5px solid rgba(255,255,255,0.28);
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.btn-ghost:hover { border-color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.05); transform: translateY(-2px); }
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+}
+
+.hero-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.11);
+  border-radius: 14px;
+  padding: 34px 30px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.card-green-bar {
+  background: rgba(34,197,94,0.12);
+  border: 1px solid rgba(34,197,94,0.2);
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.card-green-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(34,197,94,0.18);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-green-text {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--accent-light);
+  line-height: 1.3;
+}
+
+.card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+
+.card-pests {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.card-pest {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+}
+
+.pest-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.card-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 18px 0; }
+
+.card-rating-row { display: flex; align-items: center; gap: 12px; }
+.card-rating-num { font-family: 'Barlow Condensed', sans-serif; font-size: 2.2rem; font-weight: 800; color: #ffffff; line-height: 1; }
+.card-stars { color: #fbbf24; font-size: 0.95rem; letter-spacing: 1px; }
+.card-review-count { font-family: 'Nunito Sans', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── STATS BAR ── */
+.stats-bar {
+  background: var(--primary-dark);
+  padding: 40px 32px;
+  border-top: 1px solid rgba(34,197,94,0.1);
+}
+
+.stats-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-item {
+  text-align: center;
+  padding: 0 20px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+.stat-item:last-child { border-right: none; }
+
+.stat-number {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 8px;
+  display: block;
+  letter-spacing: 0.01em;
+}
+
+.stat-label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.42);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ── SECTION UTILITIES ── */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-tag.on-light { color: var(--accent-dark); }
+.section-tag.on-dark { color: var(--accent); }
+
+.section-tag::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+}
+
+.section-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2rem, 3.2vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.section-sub {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 580px;
+}
+
+.section-header { margin-bottom: 48px; }
+
+/* ── SERVICES ── */
+.services {
+  background: var(--surface-light);
+  padding: 90px 32px;
+}
+
+.services-inner { max-width: 1280px; margin: 0 auto; }
+.services .section-headline { color: var(--text-dark); }
+.services .section-sub { color: var(--text-muted); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--surface-white);
+  border-radius: 12px;
+  padding: 28px 24px;
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  transition: transform 0.22s, box-shadow 0.22s;
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.22s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(10,45,80,0.1);
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(34,197,94,0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.service-body {}
+
+.service-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 8px;
+}
+
+.service-desc {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── WHY ── */
+.why {
+  background: var(--primary);
+  padding: 90px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.why::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(34,197,94,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.why-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.why .section-headline { color: #ffffff; }
+.why .section-sub { color: rgba(255,255,255,0.58); }
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.benefit-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.benefit-check {
+  width: 30px;
+  height: 30px;
+  background: rgba(34,197,94,0.14);
+  border: 1px solid rgba(34,197,94,0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.benefit-text strong {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.benefit-text span {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.86rem;
+  color: rgba(255,255,255,0.48);
+  line-height: 1.5;
+}
+
+.why-safe-box {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.safe-box-header {
+  background: rgba(34,197,94,0.1);
+  border-bottom: 1px solid rgba(34,197,94,0.15);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.safe-box-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(34,197,94,0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.safe-box-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.safe-box-sub {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.safe-features {
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.safe-feat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.safe-feat-check {
+  width: 22px;
+  height: 22px;
+  background: rgba(34,197,94,0.14);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.safe-feat span {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.72);
+  font-weight: 600;
+}
+
+/* ── HOW ── */
+.how {
+  background: var(--surface-white);
+  padding: 90px 32px;
+}
+
+.how-inner { max-width: 1280px; margin: 0 auto; }
+.how .section-header { text-align: center; }
+.how .section-headline { color: var(--text-dark); }
+.how .section-sub { color: var(--text-muted); margin: 0 auto; }
+.how .section-tag { justify-content: center; }
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  margin-top: 52px;
+  position: relative;
+}
+
+.steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: calc(16.67% + 14px);
+  right: calc(16.67% + 14px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent) 0%, rgba(34,197,94,0.2) 100%);
+}
+
+.step-card {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.step-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.step-num {
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  border: 4px solid var(--surface-white);
+  box-shadow: 0 0 0 2px var(--border-light);
+}
+
+.step-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.step-desc {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── REVIEWS ── */
+.reviews {
+  background: var(--primary-mid);
+  padding: 90px 32px;
+}
+
+.reviews-inner { max-width: 1280px; margin: 0 auto; }
+.reviews .section-headline { color: #ffffff; }
+
+.reviews-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 44px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.rating-display { display: flex; align-items: center; gap: 14px; }
+.rating-big { font-family: 'Barlow Condensed', sans-serif; font-size: 3.2rem; font-weight: 800; color: #ffffff; line-height: 1; }
+.rating-detail { display: flex; flex-direction: column; gap: 4px; }
+.rating-stars { color: #fbbf24; font-size: 1.1rem; letter-spacing: 2px; }
+.rating-count { font-family: 'Nunito Sans', sans-serif; font-size: 0.8rem; color: rgba(255,255,255,0.4); }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.review-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 26px 22px;
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.review-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.review-quote-svg { margin-bottom: 14px; }
+.review-stars { color: #fbbf24; font-size: 0.88rem; letter-spacing: 1px; margin-bottom: 12px; }
+
+.review-text {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.review-author { display: flex; align-items: center; gap: 10px; }
+
+.review-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(34,197,94,0.14);
+  border: 1.5px solid rgba(34,197,94,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--accent-light);
+  flex-shrink: 0;
+}
+
+.review-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.review-location { font-family: 'Nunito Sans', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.35); }
+
+/* ── AREAS ── */
+.areas {
+  background: var(--surface-light);
+  padding: 90px 32px;
+}
+
+.areas-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.areas .section-headline { color: var(--text-dark); }
+.areas .section-sub { color: var(--text-muted); }
+
+.areas-cities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.city-chip {
+  background: var(--surface-white);
+  border: 1px solid var(--border-light);
+  border-radius: 7px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.city-chip:hover { border-color: var(--accent-dark); background: rgba(34,197,94,0.04); }
+
+.areas-visual {
+  background: var(--primary);
+  border-radius: 14px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  min-height: 300px;
+  justify-content: center;
+  text-align: center;
+}
+
+.map-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(34,197,94,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.areas-visual-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.areas-visual-sub {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  max-width: 220px;
+  line-height: 1.6;
+}
+
+.areas-visual-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--accent);
+  color: var(--primary-dark);
+  padding: 11px 22px;
+  border-radius: 7px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background 0.2s;
+}
+
+.areas-visual-cta:hover { background: var(--accent-dark); }
+
+/* ── CONTACT ── */
+.contact {
+  background: var(--primary);
+  padding: 90px 32px;
+}
+
+.contact-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.contact .section-headline { color: #ffffff; }
+.contact .section-sub { color: rgba(255,255,255,0.55); }
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.contact-item { display: flex; align-items: flex-start; gap: 14px; }
+
+.contact-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(34,197,94,0.12);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-item-text strong {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 3px;
+}
+
+.contact-item-text a, .contact-item-text span {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-item-text a:hover { color: var(--accent-light); }
+
+.contact-form {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 36px 32px;
+}
+
+.form-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.form-sub {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.38);
+  margin-bottom: 24px;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-group { margin-bottom: 16px; }
+
+.form-group label {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.42);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: 7px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 7px;
+  padding: 11px 14px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.92rem;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); }
+.form-group textarea { resize: vertical; min-height: 95px; }
+.form-group select { cursor: pointer; color: rgba(255,255,255,0.6); }
+.form-group select option { background: var(--primary); color: #ffffff; }
+
+.form-submit {
+  width: 100%;
+  background: var(--accent);
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 7px;
+  padding: 14px 24px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.form-submit:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+/* ── CTA BAND ── */
+.cta-band {
+  position: relative;
+  background: var(--primary-dark);
+  padding: 74px 32px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.cta-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(34,197,94,0.09) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.cta-inner { max-width: 680px; margin: 0 auto; position: relative; z-index: 1; }
+
+.cta-eyebrow {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.cta-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.9rem);
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.cta-sub {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.98rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+  margin-bottom: 32px;
+}
+
+.cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ── FOOTER ── */
+.footer { background: #030c13; padding: 58px 32px 28px; }
+.footer-inner { max-width: 1280px; margin: 0 auto; }
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 44px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 26px;
+}
+
+.footer-logo-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.footer-logo-tag {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.32);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.footer-about {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.38);
+  line-height: 1.65;
+  max-width: 260px;
+  margin-bottom: 18px;
+}
+
+.footer-phone {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+}
+
+.footer-col-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+
+.footer-links a {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.38);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--accent-light); }
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-copy { font-family: 'Nunito Sans', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.24); }
+.footer-legal { display: flex; gap: 18px; }
+.footer-legal a { font-family: 'Nunito Sans', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.24); text-decoration: none; transition: color 0.2s; }
+.footer-legal a:hover { color: rgba(255,255,255,0.55); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+  .hero-card { max-width: 460px; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.06); border-top: 1px solid rgba(255,255,255,0.06); }
+  .stat-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.06); border-right: none; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-inner { grid-template-columns: 1fr; gap: 44px; }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid::before { display: none; }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .areas-inner { grid-template-columns: 1fr; gap: 44px; }
+  .contact-inner { grid-template-columns: 1fr; gap: 44px; }
+  .footer-top { grid-template-columns: repeat(2, 1fr); }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 64px 20px 52px; }
+  .hero-ctas { flex-direction: column; align-items: flex-start; }
+  .services-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-cities { grid-template-columns: repeat(2, 1fr); }
+  .cta-actions { flex-direction: column; align-items: stretch; }
+  .footer-top { grid-template-columns: 1fr; }
+  .header-nav { display: none; }
+  .header-inner { padding: 0 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="logo-name">Texas Safe Pest</div>
+        <span class="logo-tag">McKinney, TX · Family-Safe Treatments</span>
+      </div>
+    </a>
+    <nav>
+      <ul class="header-nav">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#areas">Service Areas</a></li>
+        <li><a href="tel:9726725848" class="header-phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (972) 672-5848
+        </a></li>
+        <li><a href="#contact" class="header-cta">Free Inspection</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Family-Safe · Pet-Safe · McKinney, TX
+      </div>
+      <h1 class="hero-headline">
+        Pest Control<br>That's <em>Safe</em> for Your Family
+      </h1>
+      <p class="hero-sub">McKinney's trusted pest control specialists using EPA-registered, family-safe treatments. Proven results for termites, mosquitoes, rodents, and more — without compromising your family's health.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Free Inspection
+        </a>
+        <a href="tel:9726725848" class="btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (972) 672-5848
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          EPA-Registered Products Only
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          100% Satisfaction Guarantee
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Same-Day Service Available
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-green-bar">
+        <div class="card-green-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="card-green-text">Family-safe &amp; pet-friendly formulas — always</div>
+      </div>
+      <div class="card-title">Pests We Eliminate</div>
+      <div class="card-pests">
+        <div class="card-pest"><div class="pest-dot"></div>Termites</div>
+        <div class="card-pest"><div class="pest-dot"></div>Mosquitoes</div>
+        <div class="card-pest"><div class="pest-dot"></div>Cockroaches</div>
+        <div class="card-pest"><div class="pest-dot"></div>Rodents</div>
+        <div class="card-pest"><div class="pest-dot"></div>Ants &amp; Fire Ants</div>
+        <div class="card-pest"><div class="pest-dot"></div>Bed Bugs</div>
+        <div class="card-pest"><div class="pest-dot"></div>Spiders</div>
+        <div class="card-pest"><div class="pest-dot"></div>Wasps</div>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-rating-row">
+        <div class="card-rating-num">5.0</div>
+        <div>
+          <div class="card-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="card-review-count">235 verified Google reviews</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-number" data-target="5.0" data-suffix="★" data-decimal="true">0</span>
+      <span class="stat-label">Google Rating</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="235" data-suffix="+">0</span>
+      <span class="stat-label">5-Star Reviews</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="100" data-suffix="%">0</span>
+      <span class="stat-label">Satisfaction Guarantee</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="24" data-suffix="hr" data-prefix="&lt;">0</span>
+      <span class="stat-label">Response Time</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="section-header">
+      <div class="section-tag on-light">Our Services</div>
+      <h2 class="section-headline">Complete Pest Control Solutions</h2>
+      <p class="section-sub">From one-time treatments to year-round protection plans, our licensed technicians deliver results — using only EPA-registered, family and pet-safe products.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="service-body">
+          <h3 class="service-name">General Pest Control</h3>
+          <p class="service-desc">Comprehensive interior and exterior treatments for cockroaches, spiders, ants, silverfish, and common household pests. Monthly, bi-monthly, and quarterly plans available.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="service-body">
+          <h3 class="service-name">Termite Treatment</h3>
+          <p class="service-desc">State-of-the-art liquid barrier and bait station systems for subterranean termite elimination and long-term prevention. Backed by our renewable termite bond.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <div class="service-body">
+          <h3 class="service-name">Mosquito Control</h3>
+          <p class="service-desc">Seasonal barrier spray programs that reduce mosquito populations by up to 90%. Treatments target resting areas and breeding sites for lasting protection all season.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M7.5 7.5c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4c0 1-1 3-2 4.5L12 19.5 9.5 16C8.5 14.5 7.5 12.5 7.5 11V7.5z"/></svg>
+        </div>
+        <div class="service-body">
+          <h3 class="service-name">Rodent &amp; Wildlife Control</h3>
+          <p class="service-desc">Thorough inspection, exclusion sealing, and humane trapping for rats, mice, and nuisance wildlife. We identify entry points and prevent re-infestation at the source.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+        <div class="service-body">
+          <h3 class="service-name">Bed Bug Treatment</h3>
+          <p class="service-desc">Heat treatment and targeted chemical protocols for complete bed bug elimination. We inspect, treat, and follow up until your home is fully clear — guaranteed.</p>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <div class="service-body">
+          <h3 class="service-name">Fire Ant Control</h3>
+          <p class="service-desc">Broadcast bait and mound treatments using Texas A&amp;M-recommended methods. Effective fire ant control that protects your lawn, pets, and children all year long.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div>
+      <div class="section-tag on-dark">Why Texas Safe Pest</div>
+      <h2 class="section-headline">Effective. Safe. Guaranteed.</h2>
+      <p class="section-sub">We built this company on a simple belief: pest control shouldn't create a new problem. Every product we use is EPA-registered and safe for your family and pets.</p>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>EPA-Registered Products Only</strong>
+            <span>We never use products not approved by the EPA. Your family's safety is not a trade-off we're willing to make.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>Licensed &amp; Certified Technicians</strong>
+            <span>Every technician holds a Texas Department of Agriculture license and ongoing certification in Integrated Pest Management.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>100% Satisfaction Guarantee</strong>
+            <span>If pests return between scheduled services, we come back and re-treat at no additional charge. Period.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>Same-Day Emergency Service</strong>
+            <span>Dealing with a wasp nest, bed bug discovery, or rodent infestation? Call us before noon for same-day service in most cases.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>Locally Owned — McKinney Focused</strong>
+            <span>We know North Texas pests because we live here too. Our treatments are tailored to the specific species and seasons of Collin County.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="why-safe-box">
+        <div class="safe-box-header">
+          <div class="safe-box-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="safe-box-title">Our Safety Commitment</div>
+            <div class="safe-box-sub">What "safe" actually means to us</div>
+          </div>
+        </div>
+        <div class="safe-features">
+          <div class="safe-feat">
+            <div class="safe-feat-check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>Safe for children — re-entry in under 30 minutes</span>
+          </div>
+          <div class="safe-feat">
+            <div class="safe-feat-check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>Pet-safe formulations for dogs, cats, and birds</span>
+          </div>
+          <div class="safe-feat">
+            <div class="safe-feat-check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>EPA-registered products — no exceptions</span>
+          </div>
+          <div class="safe-feat">
+            <div class="safe-feat-check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>No residual odor — treatments are odorless when dry</span>
+          </div>
+          <div class="safe-feat">
+            <div class="safe-feat-check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>Written product safety data sheets provided on request</span>
+          </div>
+          <div class="safe-feat">
+            <div class="safe-feat-check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span>Texas A&amp;M IPM protocols followed on every job</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="process">
+  <div class="how-inner">
+    <div class="section-header">
+      <div class="section-tag on-light">Our Process</div>
+      <h2 class="section-headline">Pest-Free in Three Steps</h2>
+      <p class="section-sub">Our proven process gets you results quickly — from your first call to a pest-free home, it's clear, simple, and backed by our guarantee.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3 class="step-title">Free Inspection</h3>
+        <p class="step-desc">A licensed technician inspects your property, identifies pest species and entry points, and explains exactly what treatment is needed and why — at no charge.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3 class="step-title">Custom Treatment Plan</h3>
+        <p class="step-desc">We develop a targeted treatment plan using the right EPA-registered products for your specific pest problem, property type, and family's needs.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3 class="step-title">Guaranteed Results</h3>
+        <p class="step-desc">We treat, you see results. If pests return between services, we come back and re-treat free of charge — no arguments, no fine print.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="reviews-header-row">
+      <div>
+        <div class="section-tag on-dark">Customer Reviews</div>
+        <h2 class="section-headline">McKinney's Highest-Rated Pest Control</h2>
+      </div>
+      <div class="rating-display">
+        <div class="rating-big">5.0</div>
+        <div class="rating-detail">
+          <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="rating-count">235 Google reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="review-quote-svg">
+          <svg width="28" height="20" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V18.4C0 13.6 1.2 9.6 3.6 6.4 6 3.2 9.6 1.2 14.4 0.4L16 4.4C13.2 5.2 11.2 6.4 10 8 8.8 9.6 8.2 11.4 8.2 13.4H16V28H0ZM24 28V18.4C24 13.6 25.2 9.6 27.6 6.4 30 3.2 33.6 1.2 38.4 0.4L40 4.4C37.2 5.2 35.2 6.4 34 8 32.8 9.6 32.2 11.4 32.2 13.4H40V28H24Z" fill="rgba(34,197,94,0.2)"/>
+          </svg>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">We have three dogs and I was nervous about pest treatments. The technician was incredibly knowledgeable about pet safety and showed me the product data sheets before starting. The termites are gone and our dogs were back inside within the hour.</p>
+        <div class="review-author">
+          <div class="review-avatar">AL</div>
+          <div>
+            <span class="review-name">Amanda L.</span>
+            <span class="review-location">McKinney, TX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-quote-svg">
+          <svg width="28" height="20" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V18.4C0 13.6 1.2 9.6 3.6 6.4 6 3.2 9.6 1.2 14.4 0.4L16 4.4C13.2 5.2 11.2 6.4 10 8 8.8 9.6 8.2 11.4 8.2 13.4H16V28H0ZM24 28V18.4C24 13.6 25.2 9.6 27.6 6.4 30 3.2 33.6 1.2 38.4 0.4L40 4.4C37.2 5.2 35.2 6.4 34 8 32.8 9.6 32.2 11.4 32.2 13.4H40V28H24Z" fill="rgba(34,197,94,0.2)"/>
+          </svg>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">Called about fire ants in the backyard where my kids play. They came out same-day, treated the yard, and explained everything they used. Two weeks later — zero fire ants. This is the fourth pest company I've tried and the only one that actually works.</p>
+        <div class="review-author">
+          <div class="review-avatar">RP</div>
+          <div>
+            <span class="review-name">Ryan P.</span>
+            <span class="review-location">McKinney, TX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-quote-svg">
+          <svg width="28" height="20" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V18.4C0 13.6 1.2 9.6 3.6 6.4 6 3.2 9.6 1.2 14.4 0.4L16 4.4C13.2 5.2 11.2 6.4 10 8 8.8 9.6 8.2 11.4 8.2 13.4H16V28H0ZM24 28V18.4C24 13.6 25.2 9.6 27.6 6.4 30 3.2 33.6 1.2 38.4 0.4L40 4.4C37.2 5.2 35.2 6.4 34 8 32.8 9.6 32.2 11.4 32.2 13.4H40V28H24Z" fill="rgba(34,197,94,0.2)"/>
+          </svg>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">I'm on the quarterly maintenance plan and it's worth every penny. Not a single cockroach since I started with Texas Safe Pest a year and a half ago. When I had a mosquito issue mid-season, they came out within 24 hours at no extra charge.</p>
+        <div class="review-author">
+          <div class="review-avatar">KC</div>
+          <div>
+            <span class="review-name">Karen C.</span>
+            <span class="review-location">Frisco, TX</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas" id="areas">
+  <div class="areas-inner">
+    <div>
+      <div class="section-tag on-light">Service Areas</div>
+      <h2 class="section-headline">Serving North DFW</h2>
+      <p class="section-sub">Texas Safe Pest Solutions serves McKinney and communities throughout Collin County and northern Dallas County. Same-day service available in most areas.</p>
+      <div class="areas-cities">
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          McKinney
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Frisco
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Allen
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Plano
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Prosper
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Celina
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Anna
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Fairview
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Lucas
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Murphy
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Wylie
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Sachse
+        </div>
+      </div>
+    </div>
+    <div class="areas-visual">
+      <div class="map-icon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+      </div>
+      <div class="areas-visual-title">Collin County &amp; North DFW</div>
+      <p class="areas-visual-sub">McKinney-based, serving all of Collin County and surrounding areas</p>
+      <a href="tel:9726725848" class="areas-visual-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call (972) 672-5848
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="section-tag on-dark">Get Started</div>
+      <h2 class="section-headline">Schedule Your Free Inspection</h2>
+      <p class="section-sub">A licensed technician will inspect your property, identify the pest problem, and recommend the right treatment — at no charge and no obligation.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>Phone</strong>
+            <a href="tel:9726725848">(972) 672-5848</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>Hours</strong>
+            <span>Mon–Fri 7am–6pm · Sat 8am–2pm</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>Location</strong>
+            <span>McKinney, TX · Serving all of Collin County</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Free Pest Inspection</div>
+      <div class="form-sub">Respond within 2 business hours · Same-day often available</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Amanda">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Lee">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="(972) 555-0000">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="amanda@email.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Type of Pest</label>
+        <select>
+          <option value="">Select a pest type...</option>
+          <option>Termites</option>
+          <option>Cockroaches</option>
+          <option>Mosquitoes</option>
+          <option>Rodents</option>
+          <option>Bed Bugs</option>
+          <option>Fire Ants</option>
+          <option>Spiders / Wasps</option>
+          <option>General / Preventive</option>
+          <option>Not Sure — Need Inspection</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Additional Details</label>
+        <textarea placeholder="Where are you seeing pests? Any pets or children in the home?"></textarea>
+      </div>
+      <button class="form-submit" type="submit">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Schedule Free Inspection
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">Free Inspection · 100% Satisfaction Guarantee</div>
+    <h2 class="cta-headline">Your Family Deserves a Pest-Free Home</h2>
+    <p class="cta-sub">Don't share your home with unwanted guests. Call Texas Safe Pest Solutions today for a free inspection and discover why McKinney families trust us with their most important space.</p>
+    <div class="cta-actions">
+      <a href="tel:9726725848" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call (972) 672-5848
+      </a>
+      <a href="#contact" class="btn-ghost">Schedule Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-name">Texas Safe Pest Solutions</div>
+        <div class="footer-logo-tag">EPA-Registered · Family-Safe · McKinney, TX</div>
+        <p class="footer-about">Licensed, family-safe pest control for McKinney and Collin County. Termites, mosquitoes, rodents, and more — backed by a 100% satisfaction guarantee.</p>
+        <a href="tel:9726725848" class="footer-phone">(972) 672-5848</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">General Pest Control</a></li>
+          <li><a href="#services">Termite Treatment</a></li>
+          <li><a href="#services">Mosquito Control</a></li>
+          <li><a href="#services">Rodent Control</a></li>
+          <li><a href="#services">Bed Bug Treatment</a></li>
+          <li><a href="#services">Fire Ant Control</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#areas">McKinney</a></li>
+          <li><a href="#areas">Frisco</a></li>
+          <li><a href="#areas">Allen</a></li>
+          <li><a href="#areas">Plano</a></li>
+          <li><a href="#areas">Prosper</a></li>
+          <li><a href="#areas">Celina &amp; Anna</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#why">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#contact">Free Inspection</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2024 Texas Safe Pest Solutions. All rights reserved. McKinney, TX.</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const stats = document.querySelectorAll('.stat-number[data-target]');
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const prefix = el.dataset.prefix || '';
+    const isDecimal = el.dataset.decimal === 'true';
+    const duration = 1800;
+    const startTime = performance.now();
+    function update(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const current = target * ease;
+      el.textContent = prefix + (isDecimal ? current.toFixed(1) : Math.floor(current).toLocaleString()) + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+    statObserver.unobserve(el);
+  });
+}, { threshold: 0.4 });
+stats.forEach(el => statObserver.observe(el));
+
+const fadeEls = document.querySelectorAll('.service-card, .review-card, .step-card, .benefit-item');
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const siblings = Array.from(el.parentElement.children);
+    const idx = siblings.indexOf(el);
+    el.style.transitionDelay = (idx * 0.08) + 's';
+    el.classList.add('visible');
+    fadeObserver.unobserve(el);
+  });
+}, { threshold: 0.12 });
+fadeEls.forEach(el => fadeObserver.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>

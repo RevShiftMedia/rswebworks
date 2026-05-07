@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>City BioClean | Biohazard &amp; Crime Scene Cleanup | Hurst, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #151c24;
+  --primary-dark: #0a0f14;
+  --primary-mid: #1c2530;
+  --accent: #1a66b3;
+  --accent-dark: #1352a0;
+  --accent-light: #2d7fd4;
+  --text-dark: #151c24;
+  --text-light: #e8edf2;
+  --text-muted: #64748b;
+  --surface-light: #f4f6f9;
+  --surface-white: #ffffff;
+  --border-light: #dde2e8;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Manrope', system-ui, sans-serif;
+  color: var(--text-dark);
+  background: var(--surface-white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* ── HEADER ── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--primary);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06), 0 4px 24px rgba(0,0,0,0.3);
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.logo-tag {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.header-nav a {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.87rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.header-nav a:hover { color: #ffffff; }
+
+.header-cta {
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 700 !important;
+  font-size: 0.86rem !important;
+  transition: background 0.2s, transform 0.15s !important;
+  white-space: nowrap;
+}
+
+.header-cta:hover { background: var(--accent-dark) !important; transform: translateY(-1px); }
+
+.header-phone {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 0.92rem !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  background: var(--primary);
+  overflow: hidden;
+  padding: 96px 32px 88px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -120px;
+  right: -80px;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(26,102,179,0.12) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(26,102,179,0.12);
+  border: 1px solid rgba(26,102,179,0.3);
+  color: #5ba3e0;
+  padding: 7px 16px;
+  border-radius: 100px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0s;
+}
+
+.hero-headline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(2.3rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.hero-headline span { color: #5ba3e0; }
+
+.hero-sub {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 36px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.96rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+
+.btn-ghost {
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.96rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.btn-ghost:hover { border-color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.05); transform: translateY(-2px); }
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.55);
+}
+
+.hero-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 34px 30px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.card-urgent-bar {
+  background: rgba(26,102,179,0.15);
+  border: 1px solid rgba(26,102,179,0.25);
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.card-urgent-dot {
+  width: 8px;
+  height: 8px;
+  background: #5ba3e0;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.card-urgent-text {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #5ba3e0;
+}
+
+.card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.card-features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.card-feat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 500;
+}
+
+.card-feat-check {
+  width: 20px;
+  height: 20px;
+  background: rgba(26,102,179,0.18);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin: 20px 0;
+}
+
+.card-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-rating-num {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.card-rating-stars { color: #fbbf24; font-size: 0.9rem; letter-spacing: 1px; }
+.card-rating-label { font-family: 'Manrope', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── STATS BAR ── */
+.stats-bar {
+  background: var(--primary-dark);
+  padding: 40px 32px;
+  border-top: 1px solid rgba(26,102,179,0.12);
+}
+
+.stats-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-item {
+  text-align: center;
+  padding: 0 24px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+.stat-item:last-child { border-right: none; }
+
+.stat-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #5ba3e0;
+  line-height: 1;
+  margin-bottom: 8px;
+  display: block;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ── SECTION UTILITIES ── */
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.section-tag.on-light { color: var(--accent); }
+.section-tag.on-dark { color: #5ba3e0; }
+
+.section-tag::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.section-headline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.85rem, 2.8vw, 2.55rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.section-sub {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 580px;
+}
+
+.section-header { margin-bottom: 48px; }
+
+/* ── SERVICES ── */
+.services {
+  background: var(--surface-light);
+  padding: 92px 32px;
+}
+
+.services-inner { max-width: 1280px; margin: 0 auto; }
+
+.services .section-headline { color: var(--text-dark); }
+.services .section-sub { color: var(--text-muted); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--surface-white);
+  border-radius: 12px;
+  padding: 32px 26px;
+  border: 1px solid var(--border-light);
+  transition: transform 0.22s, box-shadow 0.22s;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.22s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(21,28,36,0.1);
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(26,102,179,0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.service-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.service-desc {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── WHY ── */
+.why {
+  background: var(--primary);
+  padding: 92px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.why::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(26,102,179,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.why-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.why .section-headline { color: #ffffff; }
+.why .section-sub { color: rgba(255,255,255,0.58); }
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.benefit-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.benefit-check {
+  width: 30px;
+  height: 30px;
+  background: rgba(26,102,179,0.15);
+  border: 1px solid rgba(26,102,179,0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.benefit-text strong {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+
+.benefit-text span {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.48);
+  line-height: 1.5;
+}
+
+.why-creds {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 36px 32px;
+}
+
+.cred-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.cred-item:last-child { border-bottom: none; padding-bottom: 0; }
+.cred-item:first-child { padding-top: 0; }
+
+.cred-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(26,102,179,0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cred-info strong {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.cred-info span {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.42);
+}
+
+/* ── HOW IT WORKS ── */
+.how {
+  background: var(--surface-white);
+  padding: 92px 32px;
+}
+
+.how-inner { max-width: 1280px; margin: 0 auto; }
+
+.how .section-header { text-align: center; }
+.how .section-headline { color: var(--text-dark); }
+.how .section-sub { color: var(--text-muted); margin: 0 auto; }
+.how .section-tag { justify-content: center; }
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  margin-top: 52px;
+  position: relative;
+}
+
+.steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: calc(16.67% + 16px);
+  right: calc(16.67% + 16px);
+  height: 1px;
+  background: var(--border-light);
+  z-index: 0;
+}
+
+.step-card {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.step-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.step-num {
+  width: 64px;
+  height: 64px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  border: 4px solid var(--surface-white);
+  box-shadow: 0 0 0 1px var(--border-light);
+}
+
+.step-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.step-desc {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── REVIEWS ── */
+.reviews {
+  background: var(--primary-mid);
+  padding: 92px 32px;
+}
+
+.reviews-inner { max-width: 1280px; margin: 0 auto; }
+
+.reviews .section-headline { color: #ffffff; }
+
+.reviews-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.rating-big {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.rating-stars-col { display: flex; flex-direction: column; gap: 4px; }
+.rating-stars-row { color: #fbbf24; font-size: 1.1rem; letter-spacing: 2px; }
+.rating-count { font-family: 'Manrope', sans-serif; font-size: 0.82rem; color: rgba(255,255,255,0.4); }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 28px 24px;
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.review-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.review-quote-svg { margin-bottom: 16px; }
+
+.review-stars { color: #fbbf24; font-size: 0.88rem; letter-spacing: 1px; margin-bottom: 12px; }
+
+.review-text {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.review-author { display: flex; align-items: center; gap: 10px; }
+
+.review-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(26,102,179,0.18);
+  border: 1.5px solid rgba(26,102,179,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #5ba3e0;
+  flex-shrink: 0;
+}
+
+.review-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+  line-height: 1.2;
+}
+
+.review-location {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ── AREAS ── */
+.areas {
+  background: var(--surface-light);
+  padding: 92px 32px;
+}
+
+.areas-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.areas .section-headline { color: var(--text-dark); }
+.areas .section-sub { color: var(--text-muted); }
+
+.areas-cities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.city-chip {
+  background: var(--surface-white);
+  border: 1px solid var(--border-light);
+  border-radius: 7px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.city-chip:hover { border-color: var(--accent); background: rgba(26,102,179,0.04); }
+
+.areas-visual {
+  background: var(--primary);
+  border-radius: 14px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 320px;
+  text-align: center;
+}
+
+.map-icon-circle {
+  width: 68px;
+  height: 68px;
+  background: rgba(26,102,179,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.areas-visual-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+.areas-visual-sub {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  max-width: 220px;
+  line-height: 1.6;
+}
+
+.areas-visual-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 11px 22px;
+  border-radius: 7px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.areas-visual-cta:hover { background: var(--accent-dark); }
+
+/* ── CONTACT ── */
+.contact {
+  background: var(--primary);
+  padding: 92px 32px;
+}
+
+.contact-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.contact .section-headline { color: #ffffff; }
+.contact .section-sub { color: rgba(255,255,255,0.55); }
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 34px;
+}
+
+.contact-item { display: flex; align-items: flex-start; gap: 14px; }
+
+.contact-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(26,102,179,0.12);
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-item-text strong {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 3px;
+}
+
+.contact-item-text a, .contact-item-text span {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-item-text a:hover { color: #5ba3e0; }
+
+.contact-form {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 36px 32px;
+}
+
+.form-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.form-sub {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.38);
+  margin-bottom: 26px;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.form-group { margin-bottom: 16px; }
+
+.form-group label {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 7px;
+  padding: 11px 14px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9rem;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); }
+.form-group textarea { resize: vertical; min-height: 95px; }
+.form-group select { cursor: pointer; color: rgba(255,255,255,0.6); }
+.form-group select option { background: var(--primary); color: #ffffff; }
+
+.form-submit {
+  width: 100%;
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  padding: 14px 24px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.96rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  letter-spacing: -0.01em;
+}
+
+.form-submit:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+.form-discrete-note {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.25);
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* ── CTA BAND ── */
+.cta-band {
+  position: relative;
+  background: var(--primary-dark);
+  padding: 76px 32px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.cta-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(26,102,179,0.1) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.cta-inner { max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+
+.cta-eyebrow {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #5ba3e0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.cta-headline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.cta-sub {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.98rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+  margin-bottom: 34px;
+}
+
+.cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ── FOOTER ── */
+.footer { background: #070b0e; padding: 60px 32px 30px; }
+
+.footer-inner { max-width: 1280px; margin: 0 auto; }
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 44px;
+  padding-bottom: 44px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 28px;
+}
+
+.footer-logo-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.footer-logo-tag {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.footer-about {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.38);
+  line-height: 1.65;
+  max-width: 260px;
+  margin-bottom: 20px;
+}
+
+.footer-phone {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #5ba3e0;
+  text-decoration: none;
+}
+
+.footer-col-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+
+.footer-links a {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.38);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: #5ba3e0; }
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-copy { font-family: 'Manrope', sans-serif; font-size: 0.77rem; color: rgba(255,255,255,0.25); }
+
+.footer-legal { display: flex; gap: 18px; }
+
+.footer-legal a {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.77rem;
+  color: rgba(255,255,255,0.25);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-legal a:hover { color: rgba(255,255,255,0.55); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+  .hero-card { max-width: 460px; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.06); border-top: 1px solid rgba(255,255,255,0.06); }
+  .stat-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.06); border-right: none; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-inner { grid-template-columns: 1fr; gap: 44px; }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid::before { display: none; }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .areas-inner { grid-template-columns: 1fr; gap: 44px; }
+  .contact-inner { grid-template-columns: 1fr; gap: 44px; }
+  .footer-top { grid-template-columns: repeat(2, 1fr); }
+  .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 68px 20px 56px; }
+  .hero-ctas { flex-direction: column; align-items: flex-start; }
+  .services-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-cities { grid-template-columns: repeat(2, 1fr); }
+  .cta-actions { flex-direction: column; align-items: stretch; }
+  .footer-top { grid-template-columns: 1fr; }
+  .header-nav { display: none; }
+  .header-inner { padding: 0 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div>
+        <div class="logo-name">City BioClean</div>
+        <span class="logo-tag">Certified Biohazard Remediation</span>
+      </div>
+    </a>
+    <nav>
+      <ul class="header-nav">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#areas">Service Areas</a></li>
+        <li><a href="tel:2143802509" class="header-phone">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (214) 380-2509
+        </a></li>
+        <li><a href="#contact" class="header-cta">Request Service</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        IICRC Certified · Hurst, TX · 24/7 Response
+      </div>
+      <h1 class="hero-headline">
+        Professional Cleanup.<br><span>Handled With Care.</span>
+      </h1>
+      <p class="hero-sub">When you face a situation that requires professional biohazard remediation, City BioClean responds with speed, discretion, and certified expertise — protecting your family, property, and peace of mind.</p>
+      <div class="hero-ctas">
+        <a href="tel:2143802509" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call 24/7: (214) 380-2509
+        </a>
+        <a href="#contact" class="btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          Request Service Online
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(91,163,224,0.8)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Discreet, Unmarked Vehicles
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(91,163,224,0.8)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Insurance Claim Assistance
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(91,163,224,0.8)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          OSHA &amp; EPA Compliant
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-urgent-bar">
+        <div class="card-urgent-dot"></div>
+        <div class="card-urgent-text">Available 24 hours, 7 days a week</div>
+      </div>
+      <div class="card-title">Why Families Trust City BioClean</div>
+      <div class="card-features">
+        <div class="card-feat">
+          <div class="card-feat-check">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          IICRC certified technicians
+        </div>
+        <div class="card-feat">
+          <div class="card-feat-check">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Fully licensed &amp; insured in Texas
+        </div>
+        <div class="card-feat">
+          <div class="card-feat-check">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Works directly with your insurance
+        </div>
+        <div class="card-feat">
+          <div class="card-feat-check">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Compliant biohazard disposal
+        </div>
+        <div class="card-feat">
+          <div class="card-feat-check">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          Compassionate, discreet service
+        </div>
+      </div>
+      <div class="card-divider"></div>
+      <div class="card-rating-row">
+        <div class="card-rating-num">5.0</div>
+        <div>
+          <div class="card-rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="card-rating-label">105 verified Google reviews</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-number" data-target="24" data-suffix="/7">0</span>
+      <span class="stat-label">Emergency Response</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="5.0" data-suffix="★" data-decimal="true">0</span>
+      <span class="stat-label">Google Rating</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="100" data-suffix="%">0</span>
+      <span class="stat-label">Insurance Accepted</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="60" data-suffix="min" data-prefix="&lt;">0</span>
+      <span class="stat-label">Dispatch Time</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="section-header">
+      <div class="section-tag on-light">Our Services</div>
+      <h2 class="section-headline">Certified Remediation Services</h2>
+      <p class="section-sub">Every service performed by trained, certified technicians following strict OSHA and EPA protocols. We restore your property to a safe, clean condition.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Crime Scene Cleanup</h3>
+        <p class="service-desc">Professional remediation and decontamination following criminal investigations. We coordinate with law enforcement and work discreetly to restore your property.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Biohazard Remediation</h3>
+        <p class="service-desc">Safe collection, containment, and compliant disposal of biohazardous materials per OSHA Bloodborne Pathogen Standards and EPA regulations.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Trauma &amp; Unattended Death</h3>
+        <p class="service-desc">Compassionate, thorough cleanup following traumatic events or unattended deaths. Complete decontamination and odor elimination with the utmost respect and discretion.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="3 9 12 2 21 9"/><path d="M9 22V12h6v10"/><path d="M3 9v13h18V9"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Hoarding Cleanup</h3>
+        <p class="service-desc">Respectful, systematic cleanout of hoarding situations. Our trained team works with families to safely sort, remove, and sanitize without judgment.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3h7v9H3z"/><path d="M14 3h7v5h-7z"/><path d="M14 12h7v9h-7z"/><path d="M3 16h7v5H3z"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Mold Remediation</h3>
+        <p class="service-desc">Professional assessment, containment, and removal of mold growth using EPA-approved methods. We restore indoor air quality and prevent future growth.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <h3 class="service-name">Vehicle Decontamination</h3>
+        <p class="service-desc">Professional decontamination of vehicles following accidents, unattended deaths, or biohazard exposure. OSHA-compliant disposal of all materials.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div>
+      <div class="section-tag on-dark">Why City BioClean</div>
+      <h2 class="section-headline">Certified, Discreet, Compassionate</h2>
+      <p class="section-sub">We understand that you're often calling us during one of the hardest moments of your life. Our team brings professional expertise and genuine compassion to every job.</p>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>IICRC Certified Technicians</strong>
+            <span>Institute of Inspection, Cleaning and Restoration Certification — the industry gold standard for remediation professionals.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>Discreet, Unmarked Vehicles</strong>
+            <span>We arrive and work privately. Our vehicles carry no identifying markings — your situation stays between us and you.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>Direct Insurance Billing</strong>
+            <span>We work directly with your insurance company and handle all the paperwork, minimizing your stress during a difficult time.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>OSHA &amp; EPA Compliant Disposal</strong>
+            <span>All biohazardous materials are containerized, transported, and disposed of in strict compliance with federal and state regulations.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-check">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="benefit-text">
+            <strong>60-Minute Response, 24/7</strong>
+            <span>Biohazard situations don't wait for business hours. Our on-call teams dispatch within 60 minutes, any time of day or night.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="why-creds">
+        <div class="cred-item">
+          <div class="cred-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="cred-info">
+            <strong>IICRC Certified</strong>
+            <span>Biohazard &amp; Crime Scene Remediation specialist certification</span>
+          </div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="cred-info">
+            <strong>Fully Licensed &amp; Insured</strong>
+            <span>Texas-licensed hazardous materials contractor · $2M liability coverage</span>
+          </div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <div class="cred-info">
+            <strong>Insurance Preferred Vendor</strong>
+            <span>Approved by major carriers — we bill them directly on your behalf</span>
+          </div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="cred-info">
+            <strong>24/7 Emergency Dispatch</strong>
+            <span>On-call teams ready 365 days a year — response within 60 minutes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="process">
+  <div class="how-inner">
+    <div class="section-header">
+      <div class="section-tag on-light">Our Process</div>
+      <h2 class="section-headline">What to Expect When You Call</h2>
+      <p class="section-sub">We make the process as simple and stress-free as possible. From your first call, we guide you through every step with clarity and compassion.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3 class="step-title">Call or Contact Us</h3>
+        <p class="step-desc">Reach our 24/7 dispatch line. A certified specialist answers your call, listens to your situation, and begins the response process immediately — no automated systems.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3 class="step-title">On-Site Assessment</h3>
+        <p class="step-desc">Our crew arrives in discreet, unmarked vehicles. We assess the scope of work, explain the process in plain terms, and coordinate with your insurance carrier before we begin.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3 class="step-title">Certified Cleanup &amp; Clearance</h3>
+        <p class="step-desc">We complete all remediation to EPA and OSHA standards, conduct air quality testing, and provide you with a signed clearance certificate when the job is complete.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="section-header">
+      <div class="section-tag on-dark">Client Testimonials</div>
+      <h2 class="section-headline">5-Star Reviews from DFW Families</h2>
+      <div class="reviews-meta">
+        <div class="rating-big">5.0</div>
+        <div class="rating-stars-col">
+          <div class="rating-stars-row">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="rating-count">105 Google reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="review-quote-svg">
+          <svg width="28" height="20" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V18.4C0 13.6 1.2 9.6 3.6 6.4 6 3.2 9.6 1.2 14.4 0.4L16 4.4C13.2 5.2 11.2 6.4 10 8 8.8 9.6 8.2 11.4 8.2 13.4H16V28H0ZM24 28V18.4C24 13.6 25.2 9.6 27.6 6.4 30 3.2 33.6 1.2 38.4 0.4L40 4.4C37.2 5.2 35.2 6.4 34 8 32.8 9.6 32.2 11.4 32.2 13.4H40V28H24Z" fill="rgba(26,102,179,0.25)"/>
+          </svg>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">City BioClean handled a very difficult situation at our home with complete professionalism and discretion. They arrived quickly, explained every step, and truly made a devastating situation manageable. I cannot thank this team enough.</p>
+        <div class="review-author">
+          <div class="review-avatar">SR</div>
+          <div>
+            <span class="review-name">Susan R.</span>
+            <span class="review-location">Hurst, TX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-quote-svg">
+          <svg width="28" height="20" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V18.4C0 13.6 1.2 9.6 3.6 6.4 6 3.2 9.6 1.2 14.4 0.4L16 4.4C13.2 5.2 11.2 6.4 10 8 8.8 9.6 8.2 11.4 8.2 13.4H16V28H0ZM24 28V18.4C24 13.6 25.2 9.6 27.6 6.4 30 3.2 33.6 1.2 38.4 0.4L40 4.4C37.2 5.2 35.2 6.4 34 8 32.8 9.6 32.2 11.4 32.2 13.4H40V28H24Z" fill="rgba(26,102,179,0.25)"/>
+          </svg>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">I called City BioClean after discovering significant mold behind our walls during a renovation. They were at our house within the hour, handled all the insurance paperwork, and the remediation was thorough. Genuinely impressed by the entire experience.</p>
+        <div class="review-author">
+          <div class="review-avatar">MK</div>
+          <div>
+            <span class="review-name">Mark K.</span>
+            <span class="review-location">Euless, TX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-quote-svg">
+          <svg width="28" height="20" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V18.4C0 13.6 1.2 9.6 3.6 6.4 6 3.2 9.6 1.2 14.4 0.4L16 4.4C13.2 5.2 11.2 6.4 10 8 8.8 9.6 8.2 11.4 8.2 13.4H16V28H0ZM24 28V18.4C24 13.6 25.2 9.6 27.6 6.4 30 3.2 33.6 1.2 38.4 0.4L40 4.4C37.2 5.2 35.2 6.4 34 8 32.8 9.6 32.2 11.4 32.2 13.4H40V28H24Z" fill="rgba(26,102,179,0.25)"/>
+          </svg>
+        </div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">As a property manager, I've needed biohazard cleanup services several times. City BioClean is the only company I trust. They're professional, fast, discreet, and their documentation for insurance is always perfect. Absolutely the best in DFW.</p>
+        <div class="review-author">
+          <div class="review-avatar">TW</div>
+          <div>
+            <span class="review-name">Thomas W.</span>
+            <span class="review-location">Bedford, TX</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas" id="areas">
+  <div class="areas-inner">
+    <div>
+      <div class="section-tag on-light">Service Areas</div>
+      <h2 class="section-headline">Serving the DFW Metroplex</h2>
+      <p class="section-sub">City BioClean responds to emergencies throughout Tarrant and Dallas counties. Our teams are strategically positioned to reach you within 60 minutes.</p>
+      <div class="areas-cities">
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Hurst
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Euless
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Bedford
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Arlington
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Fort Worth
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Irving
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Grapevine
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Colleyville
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Dallas
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Richland Hills
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Keller
+        </div>
+        <div class="city-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Mansfield
+        </div>
+      </div>
+    </div>
+    <div class="areas-visual">
+      <div class="map-icon-circle">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+      </div>
+      <div class="areas-visual-title">DFW-Wide Emergency Coverage</div>
+      <p class="areas-visual-sub">Tarrant and Dallas counties — 60-minute response to most DFW locations</p>
+      <a href="tel:2143802509" class="areas-visual-cta">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call Now: (214) 380-2509
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="section-tag on-dark">Get Help Now</div>
+      <h2 class="section-headline">Available 24/7 — We're Here</h2>
+      <p class="section-sub">Don't face a biohazard situation alone. Call us any time, day or night, and a real person will answer. We'll dispatch immediately and handle everything from there.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>24/7 Emergency Line</strong>
+            <a href="tel:2143802509">(214) 380-2509</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>Response Time</strong>
+            <span>60-minute dispatch · Available 24/7/365</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>Location</strong>
+            <span>Hurst, TX · Serving all of DFW</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#5ba3e0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong>Insurance</strong>
+            <span>We work directly with all major carriers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Request Service</div>
+      <div class="form-sub">For emergencies, please call directly: (214) 380-2509</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Jane">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Smith">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="(214) 555-0000">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="jane@email.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select>
+          <option value="">Select a service...</option>
+          <option>Crime Scene Cleanup</option>
+          <option>Biohazard Remediation</option>
+          <option>Trauma / Unattended Death</option>
+          <option>Hoarding Cleanup</option>
+          <option>Mold Remediation</option>
+          <option>Vehicle Decontamination</option>
+          <option>Other / Not Sure</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Brief Description</label>
+        <textarea placeholder="Briefly describe the situation. All information is kept strictly confidential."></textarea>
+      </div>
+      <button class="form-submit" type="submit">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Send Secure Request
+      </button>
+      <div class="form-discrete-note">All inquiries are handled with complete confidentiality.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-inner">
+    <div class="cta-eyebrow">24/7 Emergency Response · Hurst, TX</div>
+    <h2 class="cta-headline">You Don't Have to Handle This Alone</h2>
+    <p class="cta-sub">City BioClean's certified team is on call around the clock. One call connects you with professionals who will take care of everything — safely, discreetly, and compassionately.</p>
+    <div class="cta-actions">
+      <a href="tel:2143802509" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.5 10.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012.41 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.75a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call 24/7: (214) 380-2509
+      </a>
+      <a href="#contact" class="btn-ghost">Request Service Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-name">City BioClean</div>
+        <div class="footer-logo-tag">IICRC Certified Biohazard Remediation · Hurst, TX</div>
+        <p class="footer-about">Professional biohazard, crime scene, and trauma cleanup across the DFW Metroplex. IICRC certified, fully insured, 24/7 emergency response.</p>
+        <a href="tel:2143802509" class="footer-phone">(214) 380-2509</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Crime Scene Cleanup</a></li>
+          <li><a href="#services">Biohazard Remediation</a></li>
+          <li><a href="#services">Trauma Cleanup</a></li>
+          <li><a href="#services">Hoarding Cleanup</a></li>
+          <li><a href="#services">Mold Remediation</a></li>
+          <li><a href="#services">Vehicle Decontamination</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#areas">Hurst</a></li>
+          <li><a href="#areas">Euless</a></li>
+          <li><a href="#areas">Bedford</a></li>
+          <li><a href="#areas">Fort Worth</a></li>
+          <li><a href="#areas">Arlington</a></li>
+          <li><a href="#areas">Dallas &amp; Metro</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#why">About Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#contact">Request Service</a></li>
+          <li><a href="tel:2143802509">Emergency Line</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2024 City BioClean. All rights reserved. Hurst, TX.</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Stat counter animation
+const stats = document.querySelectorAll('.stat-number[data-target]');
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const prefix = el.dataset.prefix || '';
+    const isDecimal = el.dataset.decimal === 'true';
+    const duration = 1800;
+    const startTime = performance.now();
+    function update(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const current = target * ease;
+      el.textContent = prefix + (isDecimal ? current.toFixed(1) : Math.floor(current).toLocaleString()) + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+    statObserver.unobserve(el);
+  });
+}, { threshold: 0.4 });
+stats.forEach(el => statObserver.observe(el));
+
+// Staggered fadeUp for cards
+const fadeEls = document.querySelectorAll('.service-card, .review-card, .step-card, .benefit-item');
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const siblings = Array.from(el.parentElement.children);
+    const idx = siblings.indexOf(el);
+    el.style.transitionDelay = (idx * 0.08) + 's';
+    el.classList.add('visible');
+    fadeObserver.unobserve(el);
+  });
+}, { threshold: 0.12 });
+fadeEls.forEach(el => fadeObserver.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>

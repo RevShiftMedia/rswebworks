@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dumpster DFW | Bedford, TX — Same-Day Roll-Off Dumpster Rental</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #132218;
+  --primary-dark: #080e0a;
+  --accent: #f97316;
+  --accent-dark: #c2550e;
+  --bg: #ffffff;
+  --bg-off: #f4f7f5;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #111827;
+  --grey-text: #6b7280;
+  --border: #dde5da;
+  --font-display: 'Oswald', sans-serif;
+  --font-body: 'Source Sans 3', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+@keyframes heroFadeUp { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:translateY(0); } }
+
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+.btn-primary { display:inline-flex; align-items:center; gap:8px; background:var(--accent); color:white; font-family:var(--font-display); font-size:15px; font-weight:700; padding:14px 28px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 4px 16px rgba(249,115,22,0.35); transition:all 0.15s ease; text-decoration:none; }
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(249,115,22,0.45); }
+.btn-primary:active { transform:scale(0.97); }
+.btn-ghost { display:inline-flex; align-items:center; gap:8px; background:transparent; color:white; font-family:var(--font-display); font-size:15px; font-weight:600; padding:13px 28px; border-radius:8px; border:2px solid rgba(255,255,255,0.6); cursor:pointer; transition:all 0.15s ease; text-decoration:none; }
+.btn-ghost:hover { border-color:white; background:rgba(255,255,255,0.08); }
+
+.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.grid-4 { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:32px; }
+@media(max-width:900px){ .grid-3,.grid-4 { grid-template-columns:repeat(2,1fr); } }
+@media(max-width:600px){ .grid-3,.grid-4,.grid-2 { grid-template-columns:1fr; } }
+
+/* HEADER */
+.site-header { background:var(--primary); position:sticky; top:0; z-index:1000; box-shadow:0 2px 12px rgba(0,0,0,0.4); padding:14px 0; }
+.header-inner { max-width:1100px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.header-name { font-family:var(--font-display); font-weight:700; font-size:20px; color:white; text-transform:uppercase; letter-spacing:0.05em; }
+.header-tag { font-family:var(--font-body); font-size:13px; color:var(--t2); }
+.header-cta { display:flex; align-items:center; gap:8px; background:var(--accent); color:white; font-family:var(--font-display); font-weight:700; font-size:14px; padding:10px 20px; border-radius:8px; text-decoration:none; box-shadow:0 2px 10px rgba(249,115,22,0.4); transition:all 0.15s ease; }
+.header-cta:hover { transform:translateY(-1px); }
+
+/* HERO */
+.hero { background:linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%); padding:80px 0 90px; position:relative; overflow:hidden; }
+.hero::after { content:''; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"); opacity:0.14; pointer-events:none; z-index:0; }
+.hero > * { position:relative; z-index:1; }
+.hero-layout { max-width:1100px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:60% 40%; gap:48px; align-items:center; }
+.hero-badge { display:inline-flex; align-items:center; gap:8px; background:var(--accent); color:white; font-family:var(--font-display); font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; padding:6px 14px; border-radius:20px; margin-bottom:20px; }
+.hero-headline { font-family:var(--font-display); font-size:clamp(42px,6vw,64px); font-weight:700; color:white; line-height:1.05; letter-spacing:-0.02em; margin-bottom:20px; }
+.hero-headline span { color:var(--accent); }
+.hero-sub { font-family:var(--font-body); font-size:18px; color:var(--t2); line-height:1.65; margin-bottom:32px; max-width:480px; }
+.hero-ctas { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:32px; }
+.hero-trust { display:flex; align-items:center; gap:16px; font-family:var(--font-body); font-size:13px; color:var(--t2); flex-wrap:wrap; }
+.trust-item { display:flex; align-items:center; gap:6px; }
+.trust-stars { display:flex; gap:2px; color:var(--accent); }
+.hero-card { background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); box-shadow:0 8px 32px rgba(0,0,0,0.3); backdrop-filter:blur(12px); border-radius:16px; padding:28px 32px; }
+.hero-card-title { font-family:var(--font-display); font-size:16px; font-weight:600; color:var(--t2); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:20px; }
+.hero-prop { display:flex; gap:12px; align-items:flex-start; margin-bottom:18px; }
+.hero-prop-icon { width:28px; height:28px; flex-shrink:0; background:rgba(249,115,22,0.15); border-radius:6px; display:flex; align-items:center; justify-content:center; color:var(--accent); margin-top:2px; }
+.hero-prop-title { font-family:var(--font-display); font-size:15px; font-weight:600; color:white; }
+.hero-prop-desc { font-family:var(--font-body); font-size:13px; color:var(--t2); line-height:1.4; }
+.hero-card-phone { margin-top:22px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-size:20px; font-weight:700; color:var(--accent); }
+@media(max-width:840px){ .hero-layout { grid-template-columns:1fr; } .hero-card { display:none; } }
+
+/* STATS */
+.stats-bar { background:var(--primary); }
+.stats-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); }
+.stat-box { padding:36px 24px; text-align:center; border-right:1px solid rgba(255,255,255,0.1); }
+.stat-box:last-child { border-right:none; }
+.stat-num { font-family:var(--font-display); font-size:clamp(32px,4vw,48px); font-weight:700; color:var(--accent); line-height:1; }
+.stat-label { font-family:var(--font-body); font-size:13px; color:var(--t2); margin-top:6px; text-transform:uppercase; letter-spacing:0.06em; }
+@media(max-width:600px){ .stats-grid { grid-template-columns:repeat(2,1fr); } .stat-box { border-bottom:1px solid rgba(255,255,255,0.1); } }
+
+/* SERVICES — icon inline with title */
+.section-label { font-family:var(--font-display); font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.1em; color:var(--accent); margin-bottom:12px; display:block; }
+.section-title { font-family:var(--font-display); font-size:36px; font-weight:700; color:var(--dark-text); margin-bottom:12px; }
+.section-sub { font-family:var(--font-body); font-size:16px; color:var(--grey-text); margin-bottom:48px; max-width:560px; }
+.service-card { background:var(--bg); border:1px solid var(--border); border-top:3px solid transparent; border-radius:var(--radius); padding:28px 24px; box-shadow:var(--shadow); transition:all 0.25s ease; }
+.service-card:hover { border-top-color:var(--accent); transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+.service-card-header { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+.service-icon-sm { width:36px; height:36px; border-radius:8px; flex-shrink:0; background:rgba(249,115,22,0.1); display:flex; align-items:center; justify-content:center; color:var(--accent); }
+.service-name { font-family:var(--font-display); font-size:17px; font-weight:600; color:var(--dark-text); }
+.service-desc { font-family:var(--font-body); font-size:14px; color:var(--grey-text); line-height:1.6; margin-bottom:14px; }
+.service-link { font-family:var(--font-body); font-size:13px; font-weight:600; color:var(--accent); text-decoration:none; }
+
+/* WHY */
+.why-section { background:var(--primary); position:relative; overflow:hidden; }
+.why-section::after { content:''; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n2)' opacity='0.04'/%3E%3C/svg%3E"); opacity:0.1; pointer-events:none; z-index:0; }
+.why-section > .container { position:relative; z-index:1; }
+.why-title { font-family:var(--font-display); font-size:36px; font-weight:700; color:white; margin-bottom:10px; }
+.why-sub { font-family:var(--font-body); font-size:16px; color:var(--t2); margin-bottom:48px; }
+.why-stat-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-bottom:48px; }
+.why-stat-card { background:var(--primary-dark); border-radius:var(--radius); padding:24px; text-align:center; }
+.why-stat-num { font-family:var(--font-display); font-size:32px; font-weight:700; color:var(--accent); margin-bottom:6px; }
+.why-stat-label { font-family:var(--font-body); font-size:13px; color:var(--t2); }
+.why-diff-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:28px; }
+.why-diff-item { display:flex; gap:14px; align-items:flex-start; }
+.why-check { width:32px; height:32px; flex-shrink:0; background:rgba(249,115,22,0.2); border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--accent); }
+.why-diff-title { font-family:var(--font-display); font-size:17px; font-weight:600; color:white; margin-bottom:6px; }
+.why-diff-desc { font-family:var(--font-body); font-size:14px; color:var(--t2); line-height:1.55; }
+@media(max-width:900px){ .why-stat-grid { grid-template-columns:repeat(2,1fr); } }
+
+/* HOW */
+.how-section { background:var(--primary-dark); }
+.how-title { font-family:var(--font-display); font-size:36px; font-weight:700; color:white; margin-bottom:10px; }
+.how-sub { font-family:var(--font-body); font-size:16px; color:var(--t2); margin-bottom:52px; }
+.how-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:0; position:relative; }
+.how-steps::before { content:''; position:absolute; top:28px; left:16.6%; right:16.6%; border-top:2px dashed rgba(255,255,255,0.15); }
+.how-step { text-align:center; padding:0 20px; }
+.how-num { width:56px; height:56px; border-radius:50%; background:var(--accent); margin:0 auto 20px; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:24px; font-weight:700; color:white; }
+.how-icon { color:white; margin-bottom:16px; display:flex; justify-content:center; }
+.how-step-title { font-family:var(--font-display); font-size:18px; font-weight:600; color:white; margin-bottom:10px; }
+.how-step-desc { font-family:var(--font-body); font-size:14px; color:var(--t2); line-height:1.6; }
+@media(max-width:600px){ .how-steps { grid-template-columns:1fr; } .how-steps::before { display:none; } }
+
+/* REVIEWS */
+.reviews-section { background:var(--bg-off); }
+.reviews-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:48px; flex-wrap:wrap; gap:16px; }
+.google-badge { display:flex; align-items:center; gap:10px; background:white; border:1px solid var(--border); border-radius:10px; padding:10px 16px; }
+.google-rating { font-family:var(--font-display); font-size:24px; font-weight:700; color:var(--dark-text); }
+.review-card { background:white; border:1px solid var(--border); border-radius:var(--radius); padding:28px; box-shadow:0 2px 16px rgba(0,0,0,0.06); transition:all 0.25s ease; }
+.review-card:hover { box-shadow:0 8px 32px rgba(0,0,0,0.12); transform:translateY(-3px); }
+.review-text { font-family:var(--font-body); font-style:italic; font-size:15px; line-height:1.7; color:var(--dark-text); margin-bottom:20px; }
+.review-divider { height:1px; background:var(--border); margin-bottom:16px; }
+.reviewer { display:flex; align-items:center; gap:12px; }
+.reviewer-avatar { width:40px; height:40px; border-radius:50%; background:rgba(249,115,22,0.15); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:14px; font-weight:700; color:var(--accent); flex-shrink:0; }
+.reviewer-name { font-family:var(--font-display); font-size:15px; font-weight:600; color:var(--dark-text); }
+.reviewer-detail { font-family:var(--font-body); font-size:12px; color:var(--grey-text); }
+
+/* AREAS */
+.areas-section { background:var(--primary); }
+.areas-layout { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+.areas-headline { font-family:var(--font-display); font-size:36px; font-weight:700; color:white; margin-bottom:16px; }
+.areas-body { font-family:var(--font-body); font-size:16px; color:var(--t2); margin-bottom:28px; line-height:1.65; }
+.areas-card { background:var(--primary-dark); border-radius:var(--radius); padding:28px; border:1px solid rgba(255,255,255,0.1); }
+.areas-card-title { font-family:var(--font-display); font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--t2); margin-bottom:16px; }
+.area-chips { display:flex; flex-wrap:wrap; gap:10px; }
+.area-chip { font-family:var(--font-body); font-size:13px; color:var(--t2); background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); padding:7px 14px; border-radius:20px; transition:all 0.2s; cursor:default; }
+.area-chip:hover { background:var(--accent); color:white; border-color:var(--accent); }
+@media(max-width:700px){ .areas-layout { grid-template-columns:1fr; } }
+
+/* CONTACT */
+.contact-section { background:white; }
+.contact-layout { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+.contact-title { font-family:var(--font-display); font-size:32px; font-weight:700; color:var(--dark-text); margin-bottom:10px; }
+.contact-sub { font-family:var(--font-body); font-size:15px; color:var(--grey-text); margin-bottom:28px; }
+.form-group { margin-bottom:16px; }
+.form-label { font-family:var(--font-body); font-size:13px; font-weight:600; color:var(--dark-text); margin-bottom:6px; display:block; }
+input, select, textarea { width:100%; background:var(--bg-off); border:1px solid var(--border); border-radius:8px; padding:12px 14px; font-family:var(--font-body); font-size:14px; color:var(--dark-text); transition:border-color 0.2s; }
+input:focus, select:focus, textarea:focus { outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgba(249,115,22,0.1); }
+textarea { resize:vertical; min-height:100px; }
+.btn-submit { width:100%; background:var(--accent); color:white; font-family:var(--font-display); font-size:16px; font-weight:700; padding:16px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 4px 16px rgba(249,115,22,0.4); transition:all 0.15s ease; margin-top:8px; }
+.btn-submit:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(249,115,22,0.5); }
+.contact-info-card { background:var(--primary); border-radius:var(--radius); padding:32px; color:white; }
+.contact-info-title { font-family:var(--font-display); font-size:22px; font-weight:700; margin-bottom:24px; }
+.contact-info-item { display:flex; gap:14px; align-items:flex-start; margin-bottom:22px; }
+.contact-info-icon { width:40px; height:40px; flex-shrink:0; background:rgba(249,115,22,0.2); border-radius:8px; display:flex; align-items:center; justify-content:center; color:var(--accent); }
+.contact-info-label { font-family:var(--font-display); font-size:13px; color:var(--t2); text-transform:uppercase; letter-spacing:0.05em; }
+.contact-info-value { font-family:var(--font-display); font-size:18px; font-weight:600; color:white; }
+@media(max-width:700px){ .contact-layout { grid-template-columns:1fr; } }
+
+/* CTA BAND */
+.cta-band { background:linear-gradient(135deg,var(--accent-dark),var(--accent)); padding:80px 0; text-align:center; position:relative; overflow:hidden; }
+.cta-band::after { content:''; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n3'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n3)' opacity='0.04'/%3E%3C/svg%3E"); opacity:0.15; pointer-events:none; z-index:0; }
+.cta-band > * { position:relative; z-index:1; }
+.cta-headline { font-family:var(--font-display); font-size:clamp(28px,4vw,42px); font-weight:700; color:white; margin-bottom:14px; letter-spacing:-0.02em; }
+.cta-sub { font-family:var(--font-body); font-size:17px; color:rgba(255,255,255,0.85); margin-bottom:32px; }
+.cta-btn { display:inline-flex; align-items:center; gap:10px; background:white; color:var(--accent); font-family:var(--font-display); font-size:16px; font-weight:700; padding:16px 32px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 4px 20px rgba(0,0,0,0.2); transition:all 0.15s ease; text-decoration:none; }
+.cta-btn:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,0,0,0.25); }
+
+/* FOOTER */
+.site-footer { background:var(--primary-dark); padding:70px 0 0; }
+.footer-grid { max-width:1100px; margin:0 auto; padding:0 24px 48px; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; }
+.footer-brand-name { font-family:var(--font-display); font-size:20px; font-weight:700; color:white; text-transform:uppercase; margin-bottom:12px; }
+.footer-brand-desc { font-family:var(--font-body); font-size:14px; color:var(--t2); line-height:1.65; }
+.footer-col-title { font-family:var(--font-display); font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:white; margin-bottom:16px; }
+.footer-links { list-style:none; }
+.footer-links li { margin-bottom:8px; }
+.footer-links a { font-family:var(--font-body); font-size:14px; color:var(--t2); text-decoration:none; transition:color 0.2s; }
+.footer-links a:hover { color:var(--accent); }
+.footer-bottom { max-width:1100px; margin:0 auto; padding:20px 24px; border-top:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+.footer-copy { font-family:var(--font-body); font-size:13px; color:var(--t3); }
+@media(max-width:900px){ .footer-grid { grid-template-columns:1fr 1fr; } }
+@media(max-width:600px){ .footer-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div>
+      <div class="header-name">Dumpster DFW</div>
+      <div class="header-tag">Bedford, TX — Roll-Off Container Rental, Same-Day Delivery</div>
+    </div>
+    <a href="tel:8172939093" class="header-cta">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (817) 293-9093
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-layout">
+    <div>
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        5.0 Stars &middot; Bedford, TX &middot; Same-Day Delivery
+      </div>
+      <h1 class="hero-headline">DFW's Most Dependable <span>Dumpster Rental</span></h1>
+      <p class="hero-sub">From renovation cleanouts in Bedford to job sites across Tarrant County — we drop a roll-off container when you need it and pick it up when you're done. Simple, fast, no hassle.</p>
+      <div class="hero-ctas">
+        <a href="tel:8172939093" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Reserve a Dumpster Now
+        </a>
+        <a href="#contact" class="btn-ghost">Get a Free Quote</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <div class="trust-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          5.0 Stars
+        </div>
+        <span style="color:var(--t3)">|</span>
+        <div class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; Insured</div>
+        <span style="color:var(--t3)">|</span>
+        <div class="trust-item">Multiple Sizes Available</div>
+        <span style="color:var(--t3)">|</span>
+        <div class="trust-item">No Hidden Fees</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Why Choose Dumpster DFW</div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="hero-prop-title">Same-Day Delivery Available</div><div class="hero-prop-desc">Order in the morning, have a dumpster on your driveway by noon.</div></div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="hero-prop-title">Flexible Rental Periods</div><div class="hero-prop-desc">Keep it 3 days or 3 weeks — you set the timeline for your project.</div></div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="hero-prop-title">All-Inclusive Flat Pricing</div><div class="hero-prop-desc">Delivery, pickup, and disposal included — no surprise weight fees.</div></div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="hero-prop-title">Locally Operated in Bedford</div><div class="hero-prop-desc">Not a national broker — direct service from your local Bedford team.</div></div>
+      </div>
+      <div class="hero-card-phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (817) 293-9093
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-box"><div class="stat-num" data-target="5" data-suffix=".0">0</div><div class="stat-label">Star Rating</div></div>
+    <div class="stat-box"><div class="stat-num" data-target="15" data-suffix="+">0+</div><div class="stat-label">Google Reviews</div></div>
+    <div class="stat-box"><div class="stat-num" data-target="4" data-suffix=" Sizes">0</div><div class="stat-label">Container Options</div></div>
+    <div class="stat-box"><div class="stat-num" data-target="100" data-suffix="%">0%</div><div class="stat-label">On-Time Delivery</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section style="background:var(--bg);">
+  <div class="container">
+    <span class="section-label">Container Options</span>
+    <h2 class="section-title">The Right Size for Every Project</h2>
+    <p class="section-sub">Small bathroom reno or full construction site — we have a roll-off that fits your load and your driveway.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-card-header">
+          <div class="service-icon-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div class="service-name">10-Yard Container</div>
+        </div>
+        <div class="service-desc">Ideal for bathroom renovations, small cleanouts, and single-room projects. Fits comfortably in a standard single-car driveway without blocking traffic.</div>
+        <a href="#contact" class="service-link">Reserve Now &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-card-header">
+          <div class="service-icon-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <div class="service-name">15-Yard Container</div>
+        </div>
+        <div class="service-desc">The sweet spot for most residential jobs — kitchen remodels, mid-sized cleanouts, landscaping debris. Our most popular size for Bedford homeowners.</div>
+        <a href="#contact" class="service-link">Reserve Now &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-card-header">
+          <div class="service-icon-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div class="service-name">20-Yard Container</div>
+        </div>
+        <div class="service-desc">Full-home cleanouts, large renovation debris, and estate clearing. Handles the equivalent of 6 standard pickup truck loads in a single drop.</div>
+        <a href="#contact" class="service-link">Reserve Now &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-card-header">
+          <div class="service-icon-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="service-name">30-Yard Container</div>
+        </div>
+        <div class="service-desc">Commercial demolition, roofing projects, and large-scale construction sites. Maximum capacity for maximum efficiency — keeps your crew working without waiting on pickups.</div>
+        <a href="#contact" class="service-link">Reserve Now &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-card-header">
+          <div class="service-icon-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+          <div class="service-name">Yard &amp; Landscaping Waste</div>
+        </div>
+        <div class="service-desc">Tree trimmings, sod, dirt, and brush fill up fast. Our green-waste containers handle organic material that standard roll-offs don't accept.</div>
+        <a href="#contact" class="service-link">Ask About This &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-card-header">
+          <div class="service-icon-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/><path d="M2 11a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3z"/><path d="M4 16v2"/><path d="M20 16v2"/></svg></div>
+          <div class="service-name">Commercial Site Service</div>
+        </div>
+        <div class="service-desc">Scheduled pickups and swap-outs for contractors, property managers, and commercial clients in the DFW Metroplex. One point of contact, reliable delivery, volume pricing available.</div>
+        <a href="#contact" class="service-link">Get Commercial Quote &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why-section">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent);">Why Dumpster DFW</span>
+    <h2 class="why-title">The DFW Dumpster Rental That Shows Up</h2>
+    <p class="why-sub">No brokered jobs, no third-party dispatching — we own our trucks and our timeline.</p>
+    <div class="why-stat-grid">
+      <div class="why-stat-card card"><div class="why-stat-num">5.0</div><div class="why-stat-label">Google Rating</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num">Same</div><div class="why-stat-label">Day Available</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num">4</div><div class="why-stat-label">Container Sizes</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num">Zero</div><div class="why-stat-label">Hidden Fees</div></div>
+    </div>
+    <div class="why-diff-grid">
+      <div class="why-diff-item card">
+        <div class="why-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="why-diff-title">Not a Broker — We Own Our Fleet</div>
+          <div class="why-diff-desc">When you call Dumpster DFW, you're talking to the people who own and drive the trucks. No middleman, no dispatching to a different company at the last minute.</div>
+        </div>
+      </div>
+      <div class="why-diff-item card">
+        <div class="why-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="why-diff-title">Flexible Pickup Scheduling</div>
+          <div class="why-diff-desc">Done early? Call and we'll pick up same day. Need it longer? Just let us know — we accommodate your project timeline, not a rigid calendar.</div>
+        </div>
+      </div>
+      <div class="why-diff-item card">
+        <div class="why-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="why-diff-title">Precise Placement, Every Time</div>
+          <div class="why-diff-desc">Our drivers are experienced placing containers on driveways, tight side yards, and job sites without damaging pavement or property. We bring wood boards if needed.</div>
+        </div>
+      </div>
+      <div class="why-diff-item card">
+        <div class="why-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="why-diff-title">All-Inclusive Pricing</div>
+          <div class="why-diff-desc">Delivery, rental period, pickup, and disposal — one flat number. No weight overage surprises, no fuel surcharges added after the fact.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent);">How It Works</span>
+    <h2 class="how-title">Three Steps to a Clean Job Site</h2>
+    <p class="how-sub">Reserve, fill, done. Most rentals start the same day you call.</p>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-num">1</div>
+        <div class="how-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="how-step-title">Call or Book Online</div>
+        <div class="how-step-desc">Tell us your project type and we'll recommend the right size. Get a flat quote in 60 seconds, and schedule your delivery window — same-day available.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">2</div>
+        <div class="how-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="how-step-title">We Drop It, You Fill It</div>
+        <div class="how-step-desc">We place the container exactly where you need it — driveway, side yard, or street with permit. Your job, your pace, your timeline.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-num">3</div>
+        <div class="how-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="how-step-title">Call, We Haul</div>
+        <div class="how-step-desc">When you're ready, call us and we'll pick up within hours. Container gone, debris hauled, project done — exactly as planned.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-header">
+      <div>
+        <span class="section-label">Customer Reviews</span>
+        <h2 class="section-title" style="color:var(--dark-text);">Trusted Across Bedford &amp; DFW</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div><div class="google-rating">5.0</div><div style="font-size:12px;color:var(--grey-text);">15 Google Reviews</div></div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Rented a 20-yard for a full kitchen gut and floor replacement. Called on Monday morning, had the container by 1 PM. Driver placed it perfectly on the driveway without touching the landscaping. Picked it up two days after I called — exactly as promised. Will definitely use again for the bathroom next."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">RK</div>
+          <div><div class="reviewer-name">Robert K.</div><div class="reviewer-detail">Bedford, TX &middot; Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Using Dumpster DFW for our roofing crew now. We've had containers from two other companies before and the difference is night and day — these guys actually answer their phone, show up when they say, and the containers aren't beat up and leaking. Switched our whole crew over."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">DH</div>
+          <div><div class="reviewer-name">Danny H.</div><div class="reviewer-detail">Hurst, TX &middot; Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Needed a dumpster for a backyard renovation — pulled out an old deck, shed, and about 10 cubic yards of old concrete chunks. They told me honestly which size I'd need, priced it fairly, and the whole job was handled in one rental. Cleanup would have taken us a month without them."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">LM</div>
+          <div><div class="reviewer-name">Linda M.</div><div class="reviewer-detail">Euless, TX &middot; Google Review</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas-section">
+  <div class="container">
+    <div class="areas-layout">
+      <div>
+        <span class="section-label" style="color:var(--accent);">Coverage</span>
+        <h2 class="areas-headline">Delivering Across All of DFW</h2>
+        <p class="areas-body">Based in Bedford, Tarrant County — we deliver roll-off containers throughout the Mid-Cities, Fort Worth, Dallas, and surrounding suburbs without travel fees for most locations.</p>
+        <a href="tel:8172939093" class="btn-primary" style="margin-top:8px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Confirm Your Area
+        </a>
+      </div>
+      <div class="areas-card">
+        <div class="areas-card-title">Service Locations</div>
+        <div class="area-chips">
+          <span class="area-chip">Bedford</span><span class="area-chip">Euless</span><span class="area-chip">Hurst</span>
+          <span class="area-chip">Colleyville</span><span class="area-chip">Grapevine</span><span class="area-chip">Southlake</span>
+          <span class="area-chip">Fort Worth</span><span class="area-chip">North Richland Hills</span>
+          <span class="area-chip">Keller</span><span class="area-chip">Watauga</span>
+          <span class="area-chip">Arlington</span><span class="area-chip">Irving</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div>
+        <span class="section-label">Reserve a Container</span>
+        <h2 class="contact-title">Get Your Dumpster Quote</h2>
+        <p class="contact-sub">Fill out this form and we'll call back within 30 minutes with a flat-price quote. Same-day delivery available for most requests received before noon.</p>
+        <form>
+          <div class="form-group"><label class="form-label">Your Name</label><input type="text" placeholder="Alex Johnson"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="form-group"><label class="form-label">Phone</label><input type="tel" placeholder="(817) 555-0000"></div>
+            <div class="form-group"><label class="form-label">Zip Code</label><input type="text" placeholder="76021"></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Container Size Needed</label>
+            <select><option>10-Yard (small reno / cleanout)</option><option>15-Yard (mid-size project)</option><option>20-Yard (full home cleanout)</option><option>30-Yard (commercial / construction)</option><option>Not Sure — Need Advice</option></select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Type of Material Being Disposed</label>
+            <select><option>General Household Junk</option><option>Construction Debris (drywall, lumber)</option><option>Roofing Materials</option><option>Yard Waste / Brush</option><option>Concrete / Dirt (heavy)</option><option>Mixed Load</option></select>
+          </div>
+          <div class="form-group"><label class="form-label">When Do You Need Delivery?</label><input type="text" placeholder="e.g. Tomorrow morning, ASAP, Next Monday..."></div>
+          <button type="submit" class="btn-submit">Get My Flat-Price Quote Now</button>
+        </form>
+      </div>
+      <div class="contact-info-card">
+        <div class="contact-info-title">Contact Dumpster DFW</div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="contact-info-label">Phone</div><div class="contact-info-value">(817) 293-9093</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="contact-info-label">Based In</div><div class="contact-info-value">Bedford, Texas 76021</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="contact-info-label">Hours</div><div class="contact-info-value">Mon–Sat 7AM–6PM</div></div>
+        </div>
+        <div style="margin-top:20px;padding:16px;background:rgba(249,115,22,0.12);border:1px solid rgba(249,115,22,0.25);border-radius:10px;">
+          <div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--accent);margin-bottom:4px;">Same-Day Available</div>
+          <div style="font-family:var(--font-body);font-size:13px;color:var(--t2);">Order before noon for afternoon delivery in most Bedford zip codes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2 class="cta-headline">Need a Dumpster Today? We're Ready.</h2>
+    <p class="cta-sub">Same-day delivery available. Flat pricing. No broker BS — just your local Bedford dumpster crew.</p>
+    <a href="tel:8172939093" class="cta-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (817) 293-9093
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">Dumpster DFW</div>
+      <p class="footer-brand-desc">Bedford, TX's locally owned roll-off dumpster rental company. Same-day delivery across the DFW Mid-Cities and Tarrant County. Four container sizes, flat pricing, no broker runaround.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Container Sizes</div>
+      <ul class="footer-links">
+        <li><a href="#">10-Yard Containers</a></li>
+        <li><a href="#">15-Yard Containers</a></li>
+        <li><a href="#">20-Yard Containers</a></li>
+        <li><a href="#">30-Yard Containers</a></li>
+        <li><a href="#">Yard Waste Bins</a></li>
+        <li><a href="#">Commercial Service</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="#">Bedford</a></li>
+        <li><a href="#">Euless</a></li>
+        <li><a href="#">Hurst</a></li>
+        <li><a href="#">Fort Worth</a></li>
+        <li><a href="#">Arlington</a></li>
+        <li><a href="#">North Richland Hills</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:8172939093">(817) 293-9093</a></li>
+        <li><a href="#">Same-Day Delivery</a></li>
+        <li><a href="#">Commercial Accounts</a></li>
+        <li><a href="#">Free Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2025 Dumpster DFW — Bedford, TX. Licensed &amp; Insured.</span>
+    <span class="footer-copy">Privacy Policy &middot; Terms of Service</span>
+  </div>
+</footer>
+
+<script>
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => statObs.observe(el));
+
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.15 });
+document.querySelectorAll('.card').forEach(el => cardObs.observe(el));
+
+window.addEventListener('scroll', () => {
+  const h = document.getElementById('siteHeader');
+  h.style.boxShadow = window.scrollY > 50 ? '0 4px 20px rgba(0,0,0,0.5)' : '0 2px 12px rgba(0,0,0,0.4)';
+});
+</script>
+</body>
+</html>
