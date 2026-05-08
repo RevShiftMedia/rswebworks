@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pasadena Animal Shelter — Adopt, Foster &amp; Volunteer in Pasadena TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#1a3a5c;
+  --primary-dark:#0d1e30;
+  --primary-mid:#234e7a;
+  --accent:#f97316;
+  --accent-dark:#ea6a0a;
+  --accent-light:#fb923c;
+  --text:#1e293b;
+  --text-light:#64748b;
+  --bg-white:#ffffff;
+  --bg-off:#f8fafc;
+  --bg-warm:#fff7ed;
+  --radius:10px;
+  --shadow:0 4px 24px rgba(0,0,0,0.09);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;color:var(--text);background:var(--bg-white);overflow-x:hidden}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:var(--primary-dark);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.5)}
+nav{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-icon{width:40px;height:40px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:22px;height:22px;fill:#fff}
+.logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.25rem;color:#fff;letter-spacing:.5px;line-height:1.1}
+.logo-text span{display:block;font-size:.72rem;font-weight:600;color:var(--accent-light);letter-spacing:1.5px;text-transform:uppercase}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-phone{color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;display:flex;align-items:center;gap:6px}
+.nav-phone svg{width:15px;height:15px;fill:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:var(--radius);font-weight:700;font-size:.95rem;text-decoration:none;transition:all .2s;font-family:'Nunito Sans',sans-serif;cursor:pointer;border:none}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.3)}
+.btn-outline:hover{border-color:var(--accent-light);color:var(--accent-light)}
+
+/* HERO */
+.hero{background:var(--primary);position:relative;overflow:hidden;padding:90px 24px 80px}
+.hero-grain{position:absolute;inset:0;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px}
+.hero-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:60fr 40fr;gap:64px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(249,115,22,0.15);border:1px solid rgba(249,115,22,0.4);color:var(--accent-light);padding:6px 14px;border-radius:20px;font-size:.82rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:22px}
+.hero-badge svg{width:14px;height:14px;fill:var(--accent-light)}
+h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.6rem,5.5vw,3.9rem);color:#fff;line-height:1.05;margin-bottom:20px;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--accent-light)}
+.hero-sub{font-size:1.08rem;color:rgba(255,255,255,0.72);line-height:1.7;max-width:520px;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.trust-row{display:flex;gap:28px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.6);font-size:.85rem;font-weight:600}
+.trust-item svg{width:16px;height:16px;fill:var(--accent)}
+.hero-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px 24px}
+.hero-card-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px}
+.quick-way{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);cursor:pointer;transition:all .2s}
+.quick-way:last-child{border-bottom:none}
+.quick-way:hover .quick-icon{background:var(--accent)}
+.quick-way:hover .quick-icon svg{fill:#fff}
+.quick-icon{width:40px;height:40px;background:rgba(249,115,22,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .2s}
+.quick-icon svg{width:20px;height:20px;fill:var(--accent-light);transition:all .2s}
+.quick-text{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:#fff;letter-spacing:.3px}
+.quick-sub{font-size:.8rem;color:rgba(255,255,255,0.5);margin-top:2px}
+
+/* ANIMATIONS */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{animation:heroFadeUp .6s ease both;animation-delay:.1s}
+h1{animation:heroFadeUp .6s ease both;animation-delay:.2s}
+.hero-sub{animation:heroFadeUp .6s ease both;animation-delay:.3s}
+.hero-ctas{animation:heroFadeUp .6s ease both;animation-delay:.4s}
+.trust-row{animation:heroFadeUp .6s ease both;animation-delay:.5s}
+.hero-card{animation:heroFadeUp .7s ease both;animation-delay:.35s}
+
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:none}
+
+/* STATS BAR */
+.stats-bar{background:var(--accent);padding:40px 24px}
+.stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stat-item{text-align:center}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2.5rem;color:#fff;line-height:1;display:block}
+.stat-label{font-size:.82rem;color:rgba(255,255,255,0.88);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
+
+/* SERVICES (Ways to Help) */
+.services{background:var(--bg-white);padding:96px 24px}
+.section-header{text-align:center;margin-bottom:56px}
+.section-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(249,115,22,0.10);color:var(--accent-dark);padding:5px 14px;border-radius:20px;font-size:.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.section-tag svg{width:13px;height:13px;fill:var(--accent-dark)}
+h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,2.9rem);color:var(--primary);line-height:1.1;margin-bottom:16px;letter-spacing:-.3px}
+.section-sub{color:var(--text-light);font-size:1rem;max-width:580px;margin:0 auto;line-height:1.7}
+.services-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc-card{background:var(--bg-white);border:1px solid #e2e8f0;border-radius:var(--radius);padding:28px 24px;text-align:center;transition:all .3s;box-shadow:var(--shadow)}
+.svc-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(249,115,22,0.12);border-color:var(--accent)}
+.svc-icon{width:52px;height:52px;background:rgba(249,115,22,0.10);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.svc-icon svg{width:26px;height:26px;fill:var(--accent)}
+.svc-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:var(--primary);margin-bottom:10px;letter-spacing:.3px}
+.svc-desc{font-size:.88rem;color:var(--text-light);line-height:1.65}
+
+/* WHY ADOPT */
+.why{background:var(--primary);padding:96px 24px}
+.why h2{color:#fff}
+.why .section-sub{color:rgba(255,255,255,0.6)}
+.why-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.why-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);border-radius:var(--radius);padding:28px 24px;transition:all .3s}
+.why-card:hover{background:rgba(249,115,22,0.08);border-color:rgba(249,115,22,0.35)}
+.why-icon{width:46px;height:46px;background:rgba(249,115,22,0.14);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.why-icon svg{width:24px;height:24px;fill:var(--accent-light)}
+.why-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;margin-bottom:10px;letter-spacing:.3px}
+.why-card p{font-size:.88rem;color:rgba(255,255,255,0.58);line-height:1.65}
+
+/* ADOPTION PROCESS */
+.how{background:var(--primary-dark);padding:96px 24px}
+.how h2{color:#fff}
+.how .section-sub{color:rgba(255,255,255,0.5)}
+.steps-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.step{text-align:center}
+.step-num{width:70px;height:70px;background:rgba(249,115,22,0.12);border:2px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.step-num span{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.6rem;color:var(--accent)}
+.step h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;margin-bottom:10px}
+.step p{font-size:.87rem;color:rgba(255,255,255,0.5);line-height:1.65}
+
+/* REVIEWS */
+.reviews{background:var(--bg-warm);padding:96px 24px}
+.reviews-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--bg-white);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);border-top:4px solid var(--accent);position:relative}
+.review-stars{display:flex;gap:3px;margin-bottom:12px}
+.review-stars svg{width:16px;height:16px;fill:var(--accent)}
+.review-text{font-size:.9rem;color:var(--text);line-height:1.72;margin-bottom:16px;font-style:italic}
+.reviewer{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid #f1f5f9}
+.reviewer-avatar{width:38px;height:38px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;flex-shrink:0}
+.reviewer-name{font-weight:700;font-size:.88rem;color:var(--primary)}
+.reviewer-note{font-size:.77rem;color:var(--text-light);margin-top:2px;display:flex;align-items:center;gap:4px}
+.reviewer-note svg{width:12px;height:12px;fill:var(--accent)}
+
+/* SERVICE AREAS */
+.areas{background:var(--primary-mid);padding:80px 24px}
+.areas h2{color:#fff}
+.areas .section-sub{color:rgba(255,255,255,0.55)}
+.areas-grid{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.area-chip{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:24px;padding:8px 18px;color:rgba(255,255,255,0.78);font-size:.88rem;font-weight:600;transition:all .2s}
+.area-chip:hover{background:rgba(249,115,22,0.18);border-color:var(--accent);color:#fff}
+
+/* CONTACT */
+.contact{background:var(--bg-white);padding:96px 24px}
+.contact-wrapper{max-width:760px;margin:0 auto;text-align:center}
+.contact-card{background:var(--bg-off);border-radius:16px;padding:48px 40px;margin-top:40px;border:1px solid #e2e8f0}
+.contact-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:32px}
+.contact-method{background:var(--bg-white);border-radius:var(--radius);padding:20px 16px;text-align:center;box-shadow:var(--shadow);border-top:3px solid var(--accent)}
+.contact-method-icon{width:42px;height:42px;background:rgba(249,115,22,0.10);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.contact-method-icon svg{width:21px;height:21px;fill:var(--accent)}
+.contact-method-label{font-size:.77rem;color:var(--text-light);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.contact-method-value{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:var(--primary)}
+form{display:grid;gap:14px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,textarea,select{width:100%;padding:13px 16px;border:1px solid #e2e8f0;border-radius:var(--radius);font-family:'Nunito Sans',sans-serif;font-size:.95rem;color:var(--text);background:#fff;transition:border-color .2s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
+textarea{resize:vertical;min-height:110px}
+.form-submit{background:var(--accent);color:#fff;border:none;border-radius:var(--radius);padding:15px 32px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:.5px;cursor:pointer;transition:all .2s;width:100%}
+.form-submit:hover{background:var(--accent-dark);transform:translateY(-1px)}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--accent-dark) 0%,var(--accent) 55%,var(--accent-light) 100%);padding:72px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-band-grain{position:absolute;inset:0;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px}
+.cta-band h2{color:#fff;margin-bottom:12px}
+.cta-band p{color:rgba(255,255,255,0.88);margin-bottom:32px;font-size:1.05rem}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--accent-dark);font-weight:700}
+.btn-white:hover{background:#fff7ed;transform:translateY(-2px)}
+.btn-outline-white{background:transparent;border:2px solid rgba(255,255,255,0.6);color:#fff;font-weight:700}
+.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,0.12)}
+
+/* FOOTER */
+footer{background:#060c14;padding:56px 24px 28px}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.footer-brand p{color:rgba(255,255,255,0.4);font-size:.88rem;line-height:1.7;margin-top:14px;max-width:300px}
+.footer-col h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:#fff;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:.88rem;transition:color .2s}
+.footer-col ul li a:hover{color:var(--accent-light)}
+.footer-bottom{max-width:1200px;margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{color:rgba(255,255,255,0.28);font-size:.8rem}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-card{display:none}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid,.why-grid,.steps-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .services-grid,.why-grid,.steps-grid,.reviews-grid{grid-template-columns:1fr}
+  .contact-methods{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .nav-cta .btn{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <nav>
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"/></svg>
+      </div>
+      <div class="logo-text">Pasadena Animal Shelter<span>Pasadena, TX</span></div>
+    </a>
+    <div class="nav-cta">
+      <a href="tel:2819910602" class="nav-phone">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        (281) 991-0602
+      </a>
+      <a href="#contact" class="btn btn-accent">Meet Our Animals</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        4-Star Rated — 823 Community Reviews
+      </div>
+      <h1>Every Pet Deserves a <em>Loving</em> Home</h1>
+      <p class="hero-sub">The Pasadena Animal Shelter is Pasadena's home for animals in need. We care for hundreds of dogs, cats, and small animals — and we need your help to find them forever families.</p>
+      <div class="hero-ctas">
+        <a href="#services" class="btn btn-accent">
+          <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          View Adoptable Pets
+        </a>
+        <a href="tel:2819910602" class="btn btn-outline">
+          <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          (281) 991-0602
+        </a>
+      </div>
+      <div class="trust-row">
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          Open to the Public
+        </span>
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          Affordable Adoptions
+        </span>
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          Foster &amp; Volunteer Programs
+        </span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">How You Can Help</div>
+      <div class="quick-way">
+        <div class="quick-icon"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>
+        <div>
+          <div class="quick-text">Adopt a Pet</div>
+          <div class="quick-sub">Give a dog, cat, or small animal a forever home</div>
+        </div>
+      </div>
+      <div class="quick-way">
+        <div class="quick-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div>
+        <div>
+          <div class="quick-text">Become a Foster</div>
+          <div class="quick-sub">Temporary care makes a permanent difference</div>
+        </div>
+      </div>
+      <div class="quick-way">
+        <div class="quick-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+        <div>
+          <div class="quick-text">Volunteer</div>
+          <div class="quick-sub">Walk dogs, socialize cats, help at events</div>
+        </div>
+      </div>
+      <div class="quick-way">
+        <div class="quick-icon"><svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg></div>
+        <div>
+          <div class="quick-text">Donate</div>
+          <div class="quick-sub">Food, supplies, or financial support</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item fade-up">
+      <span class="stat-num" data-target="823">0</span>
+      <span class="stat-label">Community Reviews</span>
+    </div>
+    <div class="stat-item fade-up">
+      <span class="stat-num" data-target="0" data-static="1,000+">0</span>
+      <span class="stat-label">Animals Helped Yearly</span>
+    </div>
+    <div class="stat-item fade-up">
+      <span class="stat-num" data-target="0" data-static="Open">Open</span>
+      <span class="stat-label">7 Days a Week</span>
+    </div>
+    <div class="stat-item fade-up">
+      <span class="stat-num" data-target="0" data-static="Free">Free</span>
+      <span class="stat-label">Lost Pet Intake</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES (Programs) -->
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-tag">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Our Programs
+    </div>
+    <h2>How We Serve Pasadena's Animals</h2>
+    <p class="section-sub">From adoption and fostering to lost pet recovery — we connect animals with the people and care they need.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>
+      <div class="svc-name">Pet Adoption</div>
+      <p class="svc-desc">Dogs, cats, rabbits, and small animals — all vaccinated, microchipped, and spayed or neutered before going home. Affordable adoption fees make it easy to say yes.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div>
+      <div class="svc-name">Foster Program</div>
+      <p class="svc-desc">Fostering gives animals a safe, loving home environment while they wait to be adopted. We provide food, supplies, and vet care — you provide the warmth and attention.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+      <div class="svc-name">Volunteer Opportunities</div>
+      <p class="svc-desc">Dog walkers, cat socializers, event helpers, and administrative volunteers all needed. No experience required — just a love of animals and a few hours a week.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+      <div class="svc-name">Lost &amp; Found Pets</div>
+      <p class="svc-desc">Lost your pet or found a stray? We maintain a lost-and-found registry for Pasadena area animals. Bring found animals to our shelter — we'll help reunite them with their families.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg></div>
+      <div class="svc-name">Donations &amp; Supplies</div>
+      <p class="svc-desc">We gratefully accept food, bedding, toys, leashes, and monetary donations. Every contribution directly supports the animals in our care as they wait for their forever families.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div>
+      <div class="svc-name">Owner Surrender Intake</div>
+      <p class="svc-desc">Sometimes life circumstances change. We accept owner surrenders with compassion and no judgment — ensuring your pet receives proper care and finds a loving new home.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ADOPT HERE -->
+<section class="why" id="about">
+  <div class="section-header">
+    <div class="section-tag" style="background:rgba(249,115,22,0.16);color:var(--accent-light)">
+      <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+      Why Adopt Here
+    </div>
+    <h2>Why Adopt from Pasadena Animal Shelter</h2>
+    <p class="section-sub">Adopting from a shelter saves a life. Here's everything that comes with your new family member.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+      <h3>Vaccinated &amp; Microchipped</h3>
+      <p>Every adoptable animal leaves our shelter fully vaccinated and microchipped, giving them a safe, traceable start to their new life.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+      <h3>Spayed or Neutered</h3>
+      <p>All adopted pets are spayed or neutered before placement — so you can focus on bonding with your new companion, not unexpected litters.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
+      <h3>Affordable Adoption Fees</h3>
+      <p>Our fees are kept low so that cost is never a barrier between an animal and a loving home. Everything included in the fee would cost far more at a vet or breeder.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+      <h3>Knowledgeable Staff</h3>
+      <p>Our team gets to know every animal in our care — their personality, energy level, and ideal home environment — so we can help match you with the right pet.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <h3>4-Star Community Rating</h3>
+      <p>823 Google reviews from Pasadena families who've adopted, volunteered, and brought animals to us over the years. We're proud of what those reviews represent.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg></div>
+      <h3>You Save a Life</h3>
+      <p>Shelter adoption directly saves the life of the animal you bring home — and creates space to help another animal in need. There is no more meaningful way to get a pet.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ADOPTION PROCESS -->
+<section class="how">
+  <div class="section-header">
+    <div class="section-tag" style="background:rgba(249,115,22,0.13);color:var(--accent-light)">
+      <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+      Adoption Process
+    </div>
+    <h2>How Adoption Works</h2>
+    <p class="section-sub">Three simple steps to bring your new best friend home from Pasadena Animal Shelter.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step fade-up">
+      <div class="step-num"><span>01</span></div>
+      <h3>Visit &amp; Meet</h3>
+      <p>Come in during open hours and spend time with our available animals. Our staff will introduce you to pets that match your lifestyle, living situation, and family needs.</p>
+    </div>
+    <div class="step fade-up">
+      <div class="step-num"><span>02</span></div>
+      <h3>Apply &amp; Approve</h3>
+      <p>Complete a brief adoption application. We review it quickly — our goal is to match animals with loving homes, not create unnecessary barriers. Same-day approvals are common.</p>
+    </div>
+    <div class="step fade-up">
+      <div class="step-num"><span>03</span></div>
+      <h3>Bring Them Home</h3>
+      <p>Pay the adoption fee, receive all records, and take your new family member home. Our team is always available for follow-up questions as you get settled in together.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-header">
+    <div class="section-tag">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Community Reviews
+    </div>
+    <h2>What Pasadena Families Say</h2>
+    <p class="section-sub">4 stars across 823 reviews from adopters, volunteers, and community members who trust Pasadena Animal Shelter.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card fade-up">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"Adopted our dog Charlie here two years ago and he's completely transformed our family. The staff was incredibly helpful — they knew his personality perfectly and matched us right away."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">N</div>
+        <div>
+          <div class="reviewer-name">Nicole &amp; Family</div>
+          <div class="reviewer-note"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"I've been volunteering here on weekends for 6 months. The team is so dedicated — these animals are genuinely cared for and the foster program is really well organized. Highly recommend."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">G</div>
+        <div>
+          <div class="reviewer-name">Grace T.</div>
+          <div class="reviewer-note"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"Lost my cat and someone turned him in here. Staff called me within the same day — had him scanned and found my contact via the microchip. Incredibly grateful for how quickly they responded."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">H</div>
+        <div>
+          <div class="reviewer-name">Henry W.</div>
+          <div class="reviewer-note"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Google Review</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas" id="areas">
+  <div class="section-header">
+    <div class="section-tag" style="background:rgba(255,255,255,0.08);color:var(--accent-light)">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      Communities We Serve
+    </div>
+    <h2>Serving Pasadena &amp; Surrounding Communities</h2>
+    <p class="section-sub">Located at 5150 Burke Rd in Pasadena — serving the entire southeast Houston area for animal intake, adoption, and lost pet recovery.</p>
+  </div>
+  <div class="areas-grid fade-up">
+    <span class="area-chip">Pasadena, TX</span>
+    <span class="area-chip">South Houston</span>
+    <span class="area-chip">La Porte</span>
+    <span class="area-chip">Deer Park</span>
+    <span class="area-chip">Baytown</span>
+    <span class="area-chip">League City</span>
+    <span class="area-chip">Friendswood</span>
+    <span class="area-chip">Pearland</span>
+    <span class="area-chip">Clear Lake</span>
+    <span class="area-chip">Galena Park</span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-wrapper">
+    <div class="section-header">
+      <div class="section-tag">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Contact Us
+      </div>
+      <h2>Get In Touch With Our Shelter</h2>
+      <p class="section-sub">Questions about adoption, fostering, volunteering, or a lost pet? We're here to help.</p>
+    </div>
+    <div class="contact-card fade-up">
+      <div class="contact-methods">
+        <div class="contact-method">
+          <div class="contact-method-icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+          <div class="contact-method-label">Phone</div>
+          <div class="contact-method-value">(281) 991-0602</div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div class="contact-method-label">Website</div>
+          <div class="contact-method-value">pasadenashelter.com</div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+          <div class="contact-method-label">Address</div>
+          <div class="contact-method-value">5150 Burke Rd, Pasadena TX</div>
+        </div>
+      </div>
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required>
+          <input type="tel" placeholder="Phone Number">
+        </div>
+        <input type="email" placeholder="Email Address" required>
+        <select>
+          <option value="" disabled selected>What are you interested in?</option>
+          <option>Adopting a Dog</option>
+          <option>Adopting a Cat</option>
+          <option>Adopting a Small Animal</option>
+          <option>Foster Program</option>
+          <option>Volunteering</option>
+          <option>Lost or Found Pet</option>
+          <option>Donation / Supplies</option>
+          <option>Owner Surrender</option>
+          <option>General Question</option>
+        </select>
+        <textarea placeholder="Tell us a bit more about what you're looking for or how you'd like to help..."></textarea>
+        <button type="submit" class="form-submit">Send My Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-band-grain"></div>
+  <h2>Your New Best Friend Is Waiting</h2>
+  <p>Hundreds of animals need homes in Pasadena. One visit could change everything — for both of you.</p>
+  <div class="cta-btns">
+    <a href="tel:2819910602" class="btn btn-white">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Call (281) 991-0602
+    </a>
+    <a href="#services" class="btn btn-outline-white">View Adoptable Pets</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M4.5 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM14.25 8.625a3.375 3.375 0 1 1 6.75 0 3.375 3.375 0 0 1-6.75 0ZM1.5 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM17.25 19.128l-.001.144a2.25 2.25 0 0 1-.233.96 10.088 10.088 0 0 0 5.06-1.01.75.75 0 0 0 .42-.643 4.875 4.875 0 0 0-6.957-4.611 8.586 8.586 0 0 1 1.71 5.157v.003Z"/></svg></div>
+        <div class="logo-text">Pasadena Animal Shelter<span>Pasadena, TX</span></div>
+      </a>
+      <p>Pasadena's home for animals in need. Adoption, fostering, volunteering, and lost pet services. 5150 Burke Rd, Pasadena TX 77504.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="#services">Pet Adoption</a></li>
+        <li><a href="#services">Foster Program</a></li>
+        <li><a href="#services">Volunteer</a></li>
+        <li><a href="#services">Lost &amp; Found Pets</a></li>
+        <li><a href="#services">Donate / Supplies</a></li>
+        <li><a href="#services">Owner Surrender</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:2819910602">(281) 991-0602</a></li>
+        <li><a href="#contact">Contact Form</a></li>
+        <li><a href="#areas">Communities Served</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Pasadena Animal Shelter — Pasadena, TX. All rights reserved.</p>
+    <p>5150 Burke Rd, Pasadena, TX 77504 | Open 7 Days a Week</p>
+  </div>
+</footer>
+
+<script>
+// Header scroll shadow
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// IntersectionObserver fadeUp
+const fadeEls = document.querySelectorAll('.fade-up');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+fadeEls.forEach(el => obs.observe(el));
+
+// Stat counter
+function animateCount(el) {
+  if (el.dataset.static) { el.textContent = el.dataset.static; return; }
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(eased * target) + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-num[data-target]').forEach(el => statObs.observe(el));
+</script>
+</body>
+</html>

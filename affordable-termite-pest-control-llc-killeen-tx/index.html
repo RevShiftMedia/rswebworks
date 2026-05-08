@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Affordable Termite &amp; Pest Control | Killeen &amp; Fort Hood Area, TX</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #1e1148;
+  --primary-dark: #0e0827;
+  --accent: #10b981;
+  --accent-dark: #059669;
+  --bg: #ffffff;
+  --bg-off: #f0fdf8;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #d1fae5;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(16,185,129,0.35); transition: all 0.15s ease; text-decoration: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(16,185,129,0.45); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 600;
+  padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.15s ease; text-decoration: none;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; } }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+.fade-card { opacity: 0; }
+.fade-card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.fade-card:nth-child(1) { animation-delay: 0.1s; }
+.fade-card:nth-child(2) { animation-delay: 0.2s; }
+.fade-card:nth-child(3) { animation-delay: 0.3s; }
+.fade-card:nth-child(4) { animation-delay: 0.4s; }
+.fade-card:nth-child(5) { animation-delay: 0.5s; }
+.fade-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* HEADER */
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--primary);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  padding: 0 24px;
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; height: 68px;
+}
+.header-brand { display: flex; flex-direction: column; gap: 2px; }
+.header-name { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; }
+.header-tag { font-family: var(--font-body); font-size: 12px; color: var(--t2); }
+.header-cta {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 14px; font-weight: 700;
+  padding: 10px 20px; border-radius: 7px; text-decoration: none;
+  box-shadow: 0 2px 10px rgba(16,185,129,0.35); transition: all 0.15s ease;
+}
+.header-cta:hover { transform: translateY(-1px); }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  position: relative; overflow: hidden; padding: 90px 0 80px;
+}
+.hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: center;
+}
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-card { display: none; } }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 6px 14px; border-radius: 20px; margin-bottom: 20px;
+}
+.hero-headline {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: clamp(42px, 6vw, 64px); color: white;
+  line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 20px;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-family: var(--font-body); font-size: 18px; color: var(--t2);
+  line-height: 1.6; margin-bottom: 32px; max-width: 520px;
+}
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+.hero-trust {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  font-family: var(--font-body); font-size: 13px; color: var(--t2);
+}
+.trust-item { display: flex; align-items: center; gap: 5px; }
+
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 16px; padding: 28px 32px;
+}
+.hero-card-title {
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  color: white; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.05em;
+}
+.hero-prop { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
+.hero-prop-icon {
+  width: 32px; height: 32px; background: rgba(16,185,129,0.2);
+  border-radius: 6px; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; color: var(--accent);
+}
+.hero-prop-text h4 { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: white; margin-bottom: 2px; }
+.hero-prop-text p { font-family: var(--font-body); font-size: 12px; color: var(--t2); line-height: 1.5; }
+.hero-card-phone {
+  margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.15);
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-card-phone span { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--accent); }
+
+/* STATS */
+.stats-bar { background: var(--primary); padding: 0; }
+.stats-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 700px) { .stats-inner { grid-template-columns: repeat(2, 1fr); } }
+.stat-box {
+  padding: 36px 24px; text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.stat-box:last-child { border-right: none; }
+.stat-number {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: clamp(32px, 4vw, 48px); color: var(--accent);
+  letter-spacing: -0.02em; line-height: 1;
+  display: block; margin-bottom: 6px;
+}
+.stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+
+/* SERVICES — icon-left layout */
+.services { background: var(--bg); }
+.section-label {
+  font-family: var(--font-display); font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--accent); margin-bottom: 12px; display: block;
+}
+.section-title {
+  font-family: var(--font-display); font-size: 36px; font-weight: 900;
+  color: var(--dark-text); margin-bottom: 12px; letter-spacing: -0.02em;
+}
+.section-sub {
+  font-family: var(--font-body); font-size: 16px;
+  color: var(--grey-text); margin-bottom: 48px; max-width: 520px;
+}
+.service-card {
+  background: var(--bg); border: 1px solid #ede9fe;
+  border-top: 3px solid transparent; border-radius: var(--radius);
+  padding: 24px; box-shadow: var(--shadow);
+  transition: all 0.25s ease;
+  display: flex; gap: 20px; align-items: flex-start;
+}
+.service-card:hover { border-top-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.svc-icon {
+  width: 52px; height: 52px; background: rgba(16,185,129,0.1);
+  border-radius: 12px; display: flex; align-items: center; justify-content: center;
+  color: var(--accent); flex-shrink: 0;
+}
+.svc-body { flex: 1; }
+.svc-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--dark-text); margin-bottom: 6px; }
+.svc-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 10px; }
+.svc-link { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; }
+
+/* WHY CHOOSE US */
+.why-us { background: var(--primary); position: relative; overflow: hidden; }
+.why-us::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.10; pointer-events: none; z-index: 0;
+}
+.why-us > * { position: relative; z-index: 1; }
+.why-us .section-title { color: white; }
+.why-us .section-sub { color: var(--t2); }
+.why-stat-card {
+  background: var(--primary-dark); border-radius: var(--radius); padding: 28px 20px;
+  text-align: center; border: 1px solid rgba(255,255,255,0.08);
+}
+.why-stat-num { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--accent); display: block; margin-bottom: 4px; }
+.why-stat-lbl { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+.why-stats { margin-bottom: 48px; }
+.why-diff-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+@media (max-width: 600px) { .why-diff-grid { grid-template-columns: 1fr; } }
+.why-diff { display: flex; gap: 16px; align-items: flex-start; }
+.why-diff-icon {
+  width: 40px; height: 40px; background: rgba(16,185,129,0.15);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; color: var(--accent);
+}
+.why-diff-text h4 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; margin-bottom: 4px; }
+.why-diff-text p { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.55; }
+
+/* HOW IT WORKS */
+.how-it-works { background: var(--primary-dark); }
+.how-it-works .section-title { color: white; }
+.steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; }
+@media (max-width: 700px) { .steps-row { grid-template-columns: 1fr; } }
+.steps-row::before {
+  content: ''; position: absolute; top: 32px;
+  left: calc(16.66% + 16px); right: calc(16.66% + 16px);
+  height: 1px; border-top: 2px dashed rgba(255,255,255,0.15);
+}
+@media (max-width: 700px) { .steps-row::before { display: none; } }
+.step-card { text-align: center; padding: 20px; }
+.step-num-circle {
+  width: 56px; height: 56px; background: var(--accent);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 24px; font-weight: 900; color: white;
+  margin: 0 auto 20px;
+}
+.step-icon { color: white; margin-bottom: 14px; display: flex; justify-content: center; }
+.step-title { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; margin-bottom: 8px; }
+.step-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.6; }
+
+/* REVIEWS — off-white cards */
+.reviews { background: var(--bg-off); }
+.reviews-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 16px; }
+.google-badge {
+  display: flex; align-items: center; gap: 8px;
+  background: white; border: 1px solid var(--border);
+  border-radius: 10px; padding: 10px 16px;
+  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+}
+.review-card {
+  background: white; border: 1px solid #ede9fe;
+  border-radius: var(--radius); padding: 28px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06); transition: all 0.25s ease;
+}
+.review-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); transform: translateY(-3px); }
+.review-stars { display: flex; gap: 3px; color: #f59e0b; margin-bottom: 14px; }
+.review-text {
+  font-family: var(--font-body); font-style: italic; font-size: 15px;
+  line-height: 1.7; color: var(--dark-text); margin-bottom: 16px;
+}
+.review-divider { border: none; border-top: 1px solid #ede9fe; margin-bottom: 16px; }
+.review-footer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(16,185,129,0.15); display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--accent); flex-shrink: 0;
+}
+.reviewer-name { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--dark-text); }
+.reviewer-loc { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); margin-top: 1px; }
+
+/* SERVICE AREAS */
+.service-areas { background: var(--primary); }
+.service-areas .section-title { color: white; }
+.service-areas .section-sub { color: var(--t2); }
+.areas-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+@media (max-width: 700px) { .areas-inner { grid-template-columns: 1fr; } }
+.areas-left p { font-family: var(--font-body); font-size: 16px; color: var(--t2); line-height: 1.65; margin-bottom: 28px; }
+.areas-card { background: var(--primary-dark); border-radius: var(--radius); padding: 28px 24px; border: 1px solid rgba(255,255,255,0.08); }
+.areas-card h4 { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--t2); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 18px; }
+.chip-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  background: rgba(255,255,255,0.08); color: var(--t2);
+  font-family: var(--font-body); font-size: 13px; font-weight: 500;
+  padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.12);
+  cursor: default; transition: all 0.15s ease;
+}
+.chip:hover { background: var(--accent); color: white; border-color: var(--accent); }
+
+/* CONTACT */
+.contact-section { background: white; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+@media (max-width: 800px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-form-title { font-family: var(--font-display); font-size: 28px; font-weight: 900; color: var(--dark-text); margin-bottom: 8px; }
+.contact-form-sub { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); margin-bottom: 28px; }
+.form-row { margin-bottom: 16px; }
+.form-row label { display: block; font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; }
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%; background: var(--bg-off); border: 1px solid #ede9fe;
+  border-radius: 8px; padding: 12px 14px;
+  font-family: var(--font-body); font-size: 14px; color: var(--dark-text); transition: border-color 0.2s;
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+  outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(16,185,129,0.12);
+}
+.form-row textarea { resize: vertical; min-height: 100px; }
+.form-submit {
+  width: 100%; background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 17px; font-weight: 700;
+  padding: 15px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(16,185,129,0.3); transition: all 0.15s ease; margin-top: 8px;
+}
+.form-submit:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.contact-info-card {
+  background: var(--primary); border-radius: var(--radius); padding: 36px 28px;
+  display: flex; flex-direction: column; gap: 24px;
+}
+.contact-info-title { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: white; }
+.info-item { display: flex; gap: 14px; align-items: flex-start; }
+.info-icon {
+  width: 36px; height: 36px; background: rgba(16,185,129,0.2);
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  color: var(--accent); flex-shrink: 0;
+}
+.info-item h5 { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--t2); margin-bottom: 3px; }
+.info-item p { font-family: var(--font-body); font-size: 14px; color: white; }
+
+/* CTA BAND */
+.cta-band {
+  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+  padding: 80px 0; position: relative; overflow: hidden; text-align: center;
+}
+.cta-band::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.15; pointer-events: none; z-index: 0;
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-headline {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: clamp(28px, 4vw, 42px); color: white;
+  letter-spacing: -0.02em; margin-bottom: 12px;
+}
+.cta-sub { font-family: var(--font-body); font-size: 17px; color: rgba(255,255,255,0.85); margin-bottom: 32px; }
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: white; color: var(--accent-dark);
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  padding: 15px 32px; border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2); text-decoration: none; transition: all 0.15s ease;
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
+
+/* FOOTER */
+.footer { background: var(--primary-dark); padding: 64px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+.footer-brand-name { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; margin-bottom: 10px; }
+.footer-brand-desc { font-family: var(--font-body); font-size: 13px; color: var(--t2); line-height: 1.65; margin-bottom: 20px; }
+.footer-col-title { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { font-family: var(--font-body); font-size: 13px; color: var(--t2); text-decoration: none; transition: color 0.15s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+}
+.footer-copyright { font-family: var(--font-body); font-size: 12px; color: var(--t3); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <span class="header-name">Affordable Termite &amp; Pest Control</span>
+      <span class="header-tag">Licensed &amp; Insured — Killeen &amp; Bell County, TX</span>
+    </div>
+    <a href="tel:2543681206" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (254) 368-1206
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        4.6 Stars · Bell County's Most Trusted
+      </div>
+      <h1 class="hero-headline">Killeen's Affordable <span>Termite</span> Experts</h1>
+      <p class="hero-sub">Fort Hood families and Killeen homeowners deserve pest protection that actually fits their budget. Fair prices, honest quotes, guaranteed results — no contracts required.</p>
+      <div class="hero-ctas">
+        <a href="tel:2543681206" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (254) 368-1206
+        </a>
+        <a href="#contact" class="btn-ghost">Free Estimate</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          4.6 · 74 Reviews
+        </div>
+        <span style="color:var(--t3)">|</span>
+        <span>Licensed &amp; Insured</span>
+        <span style="color:var(--t3)">|</span>
+        <span>Family Owned</span>
+        <span style="color:var(--t3)">|</span>
+        <span>No Hidden Fees</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Why Killeen Chooses Us</div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="hero-prop-text">
+          <h4>Upfront, Honest Pricing</h4>
+          <p>You get the full price before we start — never a surprise on the invoice</p>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="hero-prop-text">
+          <h4>Military Family Friendly</h4>
+          <p>We know military schedules and work around deployments and PCS moves</p>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="hero-prop-text">
+          <h4>Same-Day Service Available</h4>
+          <p>Call before noon — we'll do everything we can to be there today</p>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="hero-prop-text">
+          <h4>No Long-Term Contracts</h4>
+          <p>Service when you need it. We earn your business every single visit.</p>
+        </div>
+      </div>
+      <div class="hero-card-phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>(254) 368-1206</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-box">
+      <span class="stat-number" data-target="74">0</span>
+      <span class="stat-label">5-Star Reviews</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-number" data-target="15" data-suffix="+">0</span>
+      <span class="stat-label">Years in Business</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-number" data-target="500" data-suffix="+">0</span>
+      <span class="stat-label">Homes Treated</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-number" data-target="100" data-suffix="%">0</span>
+      <span class="stat-label">Satisfaction Guarantee</span>
+    </div>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="container">
+    <span class="section-label">Our Services</span>
+    <h2 class="section-title">Every Pest Problem, One Company</h2>
+    <p class="section-sub">From termites to roaches to rodents — Bell County's most complete pest control solution at prices that make sense.</p>
+    <div class="grid-3">
+      <div class="service-card fade-card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="svc-body">
+          <div class="svc-name">Termite Inspection &amp; Treatment</div>
+          <p class="svc-desc">Subterranean termites devour Killeen homes while families have no idea. Our inspection finds active colonies, damage, and entry points. Treatment stops them with a long-term soil barrier.</p>
+          <a href="#contact" class="svc-link">Get Free Inspection →</a>
+        </div>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        </div>
+        <div class="svc-body">
+          <div class="svc-name">Roach &amp; Ant Control</div>
+          <p class="svc-desc">German cockroaches in the kitchen, fire ants taking over the yard. We treat both the infestation and the entry points to prevent them coming back all season long.</p>
+          <a href="#contact" class="svc-link">Schedule Treatment →</a>
+        </div>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="svc-body">
+          <div class="svc-name">Rodent Exclusion &amp; Control</div>
+          <p class="svc-desc">Mice and rats find every gap. We locate each entry point, seal it properly, and remove what's already inside — a complete solution, not just traps left on the floor.</p>
+          <a href="#contact" class="svc-link">Schedule Inspection →</a>
+        </div>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div class="svc-body">
+          <div class="svc-name">Bed Bug Treatment</div>
+          <p class="svc-desc">One of Central Texas's fastest-spreading problems. Our targeted treatment reaches every hiding spot — seams, box springs, baseboards — and eliminates all life stages in a single visit.</p>
+          <a href="#contact" class="svc-link">Get Free Estimate →</a>
+        </div>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+        </div>
+        <div class="svc-body">
+          <div class="svc-name">Mosquito &amp; Outdoor Pest</div>
+          <p class="svc-desc">Central Texas mosquito season runs March through November. Our barrier spray program treats all resting and breeding areas so your backyard stays usable all season.</p>
+          <a href="#contact" class="svc-link">Schedule Service →</a>
+        </div>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="svc-body">
+          <div class="svc-name">General Pest Control</div>
+          <p class="svc-desc">Spiders, silverfish, scorpions, and seasonal invaders. Our quarterly maintenance plan keeps your home's perimeter defended year-round without long-term contracts or surprise charges.</p>
+          <a href="#contact" class="svc-link">See Pricing →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-us">
+  <div class="container">
+    <span class="section-label">Why We're Different</span>
+    <h2 class="section-title">Locally Owned, Genuinely Affordable</h2>
+    <p class="section-sub">Killeen has national pest control chains. We're the one that actually picks up the phone, shows up on time, and charges a fair price.</p>
+    <div class="grid-4 why-stats">
+      <div class="why-stat-card fade-card">
+        <span class="why-stat-num" data-target="74">0</span>
+        <span class="why-stat-lbl">Google Reviews</span>
+      </div>
+      <div class="why-stat-card fade-card">
+        <span class="why-stat-num" data-target="4" data-suffix=".6★">0</span>
+        <span class="why-stat-lbl">Average Rating</span>
+      </div>
+      <div class="why-stat-card fade-card">
+        <span class="why-stat-num" data-target="500" data-suffix="+">0</span>
+        <span class="why-stat-lbl">Customers Served</span>
+      </div>
+      <div class="why-stat-card fade-card">
+        <span class="why-stat-num" data-target="15" data-suffix="+">0</span>
+        <span class="why-stat-lbl">Years in Bell County</span>
+      </div>
+    </div>
+    <div class="why-diff-grid">
+      <div class="why-diff fade-card">
+        <div class="why-diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="why-diff-text">
+          <h4>No Hidden Fees, Ever</h4>
+          <p>We quote your price before we start. What we say is what you pay — no "material charges" added at the end of the visit.</p>
+        </div>
+      </div>
+      <div class="why-diff fade-card">
+        <div class="why-diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="why-diff-text">
+          <h4>Military Family Expertise</h4>
+          <p>We've served Fort Hood families for over a decade. We know how to work around deployments, BAH, and the unique pest challenges of Central Texas housing.</p>
+        </div>
+      </div>
+      <div class="why-diff fade-card">
+        <div class="why-diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="why-diff-text">
+          <h4>Licensed &amp; Fully Insured</h4>
+          <p>Texas Structural Pest Control licensed technicians on every job. Full liability insurance means you're protected no matter what.</p>
+        </div>
+      </div>
+      <div class="why-diff fade-card">
+        <div class="why-diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="why-diff-text">
+          <h4>Re-Treatment Guarantee</h4>
+          <p>Pests come back? So do we — free of charge. We don't consider a job done until you're completely satisfied with the result.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-it-works">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent)">Simple Process</span>
+    <h2 class="section-title">Pest-Free in Three Easy Steps</h2>
+    <p class="section-sub" style="color:var(--t2);margin-bottom:48px;">No complicated contracts, no confusing service tiers. Just fast, professional pest control.</p>
+    <div class="steps-row">
+      <div class="step-card fade-card">
+        <div class="step-num-circle">1</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div class="step-title">Call for a Free Estimate</div>
+        <p class="step-desc">Call us at (254) 368-1206 or submit the form. We'll ask a few questions and give you an honest quote — often over the phone — with no pressure to commit.</p>
+      </div>
+      <div class="step-card fade-card">
+        <div class="step-num-circle">2</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="step-title">Professional On-Site Treatment</div>
+        <p class="step-desc">A licensed technician arrives on schedule, explains what they're doing, and performs a thorough treatment targeting the specific pest and its known harborage areas.</p>
+      </div>
+      <div class="step-card fade-card">
+        <div class="step-num-circle">3</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="step-title">Guaranteed Results</div>
+        <p class="step-desc">If the problem isn't resolved, we come back. Our satisfaction guarantee means you paid for pest-free results — and that's exactly what we deliver.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div class="reviews-title-block">
+        <span class="section-label">What Customers Say</span>
+        <h2 class="section-title">Bell County Families Trust Us</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        4.6 · 74 Google Reviews
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card fade-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"My husband was deployed and I discovered a termite swarm in the garage. I was panicking. Called Affordable Termite and someone picked up immediately — they were at my house in two hours. The technician was kind, didn't rush me, and explained everything before starting. The whole job was done in 90 minutes and the price was exactly what they quoted. I've recommended them to four other spouses on post."</p>
+        <hr class="review-divider">
+        <div class="review-footer">
+          <div class="reviewer-avatar">SM</div>
+          <div>
+            <div class="reviewer-name">Sarah M.</div>
+            <div class="reviewer-loc">Fort Hood Area, Killeen TX &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Called three companies for roach treatment quotes. Two gave me the runaround on price. Affordable Termite told me over the phone what it would cost, came the next morning, and did a thorough job. Two weeks later — completely gone. No more roaches, no more coming back in from outside. The quarterly plan is a no-brainer at their prices. Honest, professional people."</p>
+        <hr class="review-divider">
+        <div class="review-footer">
+          <div class="reviewer-avatar">DH</div>
+          <div>
+            <div class="reviewer-name">David H.</div>
+            <div class="reviewer-loc">Harker Heights, TX &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Found mice in the walls of my rental property right before a tenant moved in. Called Affordable Termite on a Saturday — they actually answered. Showed up Sunday morning, did a full exclusion and set traps throughout the attic. Within a week the activity had stopped completely. Property manager signed up three of our units for their quarterly program. Reliable, responsive, and priced right."</p>
+        <hr class="review-divider">
+        <div class="review-footer">
+          <div class="reviewer-avatar">RT</div>
+          <div>
+            <div class="reviewer-name">Robert T.</div>
+            <div class="reviewer-loc">Copperas Cove, TX &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-areas">
+  <div class="container">
+    <div class="areas-inner">
+      <div class="areas-left">
+        <span class="section-label">Where We Serve</span>
+        <h2 class="section-title">All of Bell &amp; Coryell County</h2>
+        <p>From Killeen and Fort Hood to Temple, Belton, and Copperas Cove — we cover every corner of Central Texas. If you're in the area and have a pest problem, we can help.</p>
+        <a href="tel:2543681206" class="btn-primary" style="margin-top:8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Check Your Area
+        </a>
+      </div>
+      <div>
+        <div class="areas-card">
+          <h4>Service Areas</h4>
+          <div class="chip-grid">
+            <span class="chip">Killeen</span>
+            <span class="chip">Fort Hood</span>
+            <span class="chip">Temple</span>
+            <span class="chip">Belton</span>
+            <span class="chip">Harker Heights</span>
+            <span class="chip">Copperas Cove</span>
+            <span class="chip">Nolanville</span>
+            <span class="chip">Lampasas</span>
+            <span class="chip">Gatesville</span>
+            <span class="chip">Waco Area</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="contact-form-title">Get Your Free Estimate</div>
+        <p class="contact-form-sub">No pressure. We'll give you a straight price and you decide — often the same day. Most Killeen appointments available within 24 hours.</p>
+        <form>
+          <div class="form-row"><label>Full Name</label><input type="text" placeholder="Your full name"></div>
+          <div class="form-row"><label>Phone Number</label><input type="tel" placeholder="(254) 555-0000"></div>
+          <div class="form-row"><label>Email Address</label><input type="email" placeholder="you@email.com"></div>
+          <div class="form-row">
+            <label>Service Needed</label>
+            <select>
+              <option value="">Select a service...</option>
+              <option>Termite Inspection</option>
+              <option>Roach / Ant Control</option>
+              <option>Rodent Exclusion</option>
+              <option>Bed Bug Treatment</option>
+              <option>Mosquito Control</option>
+              <option>General Pest Control</option>
+            </select>
+          </div>
+          <div class="form-row"><label>Details</label><textarea placeholder="Describe the problem, how long it's been happening, and any treatments you've tried..."></textarea></div>
+          <button type="submit" class="form-submit">Request Free Estimate</button>
+        </form>
+      </div>
+      <div>
+        <div class="contact-info-card">
+          <div class="contact-info-title">Reach Us Anytime</div>
+          <div class="info-item">
+            <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><h5>Phone</h5><p>(254) 368-1206</p></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><h5>Hours</h5><p>Mon–Fri: 7:00 AM – 7:00 PM<br>Sat–Sun: Emergency Service Available</p></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><h5>Location</h5><p>Killeen, TX — Serving All of Bell &amp; Coryell County</p></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><h5>Credentials</h5><p>TX Structural Pest Control Licensed · Fully Insured · Family Owned LLC</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2 class="cta-headline">Fair Prices. Guaranteed Results. No Contracts.</h2>
+    <p class="cta-sub">Bell County families deserve honest pest control. Call us today for a free, no-pressure estimate.</p>
+    <a href="tel:2543681206" class="cta-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (254) 368-1206
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Affordable Termite &amp; Pest Control, LLC</div>
+        <p class="footer-brand-desc">Killeen, TX's trusted family-owned pest control service. Honest pricing, same-day service, and guaranteed results for Bell and Coryell County homeowners.</p>
+        <div style="display:flex;gap:6px;align-items:center;margin-top:4px;color:var(--t2);font-family:var(--font-body);font-size:13px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (254) 368-1206
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">Termite Inspection</a></li>
+          <li><a href="#">Roach &amp; Ant Control</a></li>
+          <li><a href="#">Rodent Exclusion</a></li>
+          <li><a href="#">Bed Bug Treatment</a></li>
+          <li><a href="#">Mosquito Control</a></li>
+          <li><a href="#">General Pest Control</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#">Killeen, TX</a></li>
+          <li><a href="#">Fort Hood</a></li>
+          <li><a href="#">Temple, TX</a></li>
+          <li><a href="#">Harker Heights</a></li>
+          <li><a href="#">Copperas Cove</a></li>
+          <li><a href="#">Belton, TX</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:2543681206">(254) 368-1206</a></li>
+          <li><a href="#">Free Estimate</a></li>
+          <li><a href="#">Mon–Fri: 7AM–7PM</a></li>
+          <li><a href="#">Weekend Emergency</a></li>
+          <li><a href="#">No-Contract Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">&copy; 2026 Affordable Termite &amp; Pest Control, LLC. All rights reserved.</span>
+      <span class="footer-copyright">TX Pest Control Licensed · Killeen, TX</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); statObserver.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => statObserver.observe(el));
+
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); cardObserver.unobserve(e.target); } });
+}, { threshold: 0.2 });
+document.querySelectorAll('.fade-card').forEach(el => cardObserver.observe(el));
+
+const header = document.querySelector('.site-header');
+window.addEventListener('scroll', () => {
+  header.style.boxShadow = window.scrollY > 50 ? '0 2px 20px rgba(0,0,0,0.5)' : '0 2px 12px rgba(0,0,0,0.4)';
+});
+</script>
+</body>
+</html>

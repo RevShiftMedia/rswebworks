@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Control Solutions Inc — Pasadena TX Pest Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#111827;
+  --primary-dark:#080d17;
+  --accent:#3b82f6;
+  --accent-dark:#2563eb;
+  --text:#1e293b;
+  --text-light:#64748b;
+  --bg-white:#ffffff;
+  --bg-off:#f1f5f9;
+  --bg-dark:#0d1117;
+  --radius:10px;
+  --shadow:0 4px 24px rgba(0,0,0,0.10);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;color:var(--text);background:var(--bg-white);overflow-x:hidden}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:var(--primary-dark);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.45)}
+nav{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-icon{width:40px;height:40px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:22px;height:22px;fill:#fff}
+.logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.25rem;color:#fff;letter-spacing:.5px;line-height:1.1}
+.logo-text span{display:block;font-size:.75rem;font-weight:600;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-phone{color:#fff;text-decoration:none;font-weight:700;font-size:1rem;display:flex;align-items:center;gap:6px}
+.nav-phone svg{width:16px;height:16px;fill:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:var(--radius);font-weight:700;font-size:.95rem;text-decoration:none;transition:all .2s;font-family:'Nunito Sans',sans-serif;cursor:pointer;border:none}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.35)}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.08)}
+
+/* HERO */
+.hero{background:var(--primary);position:relative;overflow:hidden;padding:90px 24px 80px}
+.hero-grain{position:absolute;inset:0;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px}
+.hero-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:60fr 40fr;gap:64px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.35);color:var(--accent);padding:6px 14px;border-radius:20px;font-size:.82rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:22px}
+.hero-badge svg{width:14px;height:14px;fill:var(--accent)}
+h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.6rem,5.5vw,4rem);color:#fff;line-height:1.05;margin-bottom:20px;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:1.08rem;color:rgba(255,255,255,0.72);line-height:1.7;max-width:520px;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.trust-row{display:flex;gap:28px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.65);font-size:.85rem;font-weight:600}
+.trust-item svg{width:16px;height:16px;fill:var(--accent)}
+.hero-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:28px 24px;backdrop-filter:blur(12px)}
+.hero-card-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:16px;letter-spacing:.5px;text-transform:uppercase}
+.hero-feature{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.08)}
+.hero-feature:last-child{border-bottom:none}
+.hero-feature-icon{width:36px;height:36px;background:rgba(59,130,246,0.18);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hero-feature-icon svg{width:18px;height:18px;fill:var(--accent)}
+.hero-feature-text{font-size:.9rem;color:rgba(255,255,255,0.78);font-weight:500;line-height:1.35}
+
+/* ANIMATIONS */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{animation:heroFadeUp .6s ease both;animation-delay:.1s}
+h1{animation:heroFadeUp .6s ease both;animation-delay:.2s}
+.hero-sub{animation:heroFadeUp .6s ease both;animation-delay:.3s}
+.hero-ctas{animation:heroFadeUp .6s ease both;animation-delay:.4s}
+.trust-row{animation:heroFadeUp .6s ease both;animation-delay:.5s}
+.hero-card{animation:heroFadeUp .7s ease both;animation-delay:.35s}
+
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:none}
+
+/* STATS BAR */
+.stats-bar{background:var(--accent);padding:40px 24px}
+.stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stat-item{text-align:center}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2.5rem;color:#fff;line-height:1;display:block}
+.stat-label{font-size:.82rem;color:rgba(255,255,255,0.85);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
+
+/* SERVICES */
+.services{background:var(--bg-white);padding:96px 24px}
+.section-header{text-align:center;margin-bottom:56px}
+.section-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.10);color:var(--accent);padding:5px 14px;border-radius:20px;font-size:.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.section-tag svg{width:13px;height:13px;fill:var(--accent)}
+h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,2.9rem);color:var(--primary);line-height:1.1;margin-bottom:16px;letter-spacing:-.3px}
+.section-sub{color:var(--text-light);font-size:1rem;max-width:580px;margin:0 auto;line-height:1.7}
+.services-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc-card{background:var(--bg-white);border:1px solid #e2e8f0;border-radius:var(--radius);padding:28px 24px;text-align:center;transition:all .3s;box-shadow:var(--shadow)}
+.svc-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(59,130,246,0.12);border-color:var(--accent)}
+.svc-icon{width:52px;height:52px;background:rgba(59,130,246,0.10);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.svc-icon svg{width:26px;height:26px;fill:var(--accent)}
+.svc-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:var(--primary);margin-bottom:10px;letter-spacing:.3px}
+.svc-desc{font-size:.88rem;color:var(--text-light);line-height:1.65}
+
+/* WHY CHOOSE US */
+.why{background:var(--primary);padding:96px 24px}
+.why h2{color:#fff}
+.why .section-sub{color:rgba(255,255,255,0.65)}
+.why-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.why-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);border-radius:var(--radius);padding:28px 24px;transition:all .3s}
+.why-card:hover{background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.35)}
+.why-icon{width:48px;height:48px;background:rgba(59,130,246,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.why-icon svg{width:24px;height:24px;fill:var(--accent)}
+.why-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;margin-bottom:10px;letter-spacing:.3px}
+.why-card p{font-size:.88rem;color:rgba(255,255,255,0.62);line-height:1.65}
+
+/* HOW IT WORKS */
+.how{background:var(--bg-dark);padding:96px 24px}
+.how h2{color:#fff}
+.how .section-sub{color:rgba(255,255,255,0.55)}
+.steps-grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;position:relative}
+.steps-grid::before{content:'';position:absolute;top:36px;left:16%;right:16%;height:2px;background:linear-gradient(90deg,var(--accent),transparent);opacity:.35}
+.step{text-align:center;position:relative}
+.step-num{width:72px;height:72px;border:2px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;background:rgba(59,130,246,0.10)}
+.step-num span{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.6rem;color:var(--accent)}
+.step h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;margin-bottom:10px}
+.step p{font-size:.87rem;color:rgba(255,255,255,0.55);line-height:1.65}
+
+/* REVIEWS */
+.reviews{background:var(--bg-off);padding:96px 24px}
+.reviews-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--bg-white);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);border-left:4px solid var(--accent);position:relative}
+.review-quote-mark{position:absolute;top:16px;right:20px;font-family:'Barlow Condensed',sans-serif;font-size:3rem;line-height:1;color:var(--accent);opacity:.25;font-weight:800}
+.stars{display:flex;gap:3px;margin-bottom:12px}
+.stars svg{width:16px;height:16px;fill:#f59e0b}
+.review-text{font-size:.9rem;color:var(--text);line-height:1.7;margin-bottom:16px;font-style:italic}
+.reviewer{display:flex;align-items:center;gap:12px}
+.reviewer-avatar{width:38px;height:38px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:#fff;flex-shrink:0}
+.reviewer-name{font-weight:700;font-size:.88rem;color:var(--primary)}
+.reviewer-verified{font-size:.77rem;color:var(--text-light);display:flex;align-items:center;gap:4px;margin-top:2px}
+.reviewer-verified svg{width:12px;height:12px;fill:var(--accent)}
+
+/* SERVICE AREAS */
+.areas{background:var(--primary-dark);padding:80px 24px}
+.areas h2{color:#fff}
+.areas .section-sub{color:rgba(255,255,255,0.55)}
+.areas-grid{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.area-chip{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.13);border-radius:24px;padding:8px 18px;color:rgba(255,255,255,0.8);font-size:.88rem;font-weight:600;transition:all .2s}
+.area-chip:hover{background:rgba(59,130,246,0.18);border-color:var(--accent);color:#fff}
+
+/* CONTACT */
+.contact{background:var(--bg-white);padding:96px 24px}
+.contact-wrapper{max-width:760px;margin:0 auto;text-align:center}
+.contact-card{background:var(--bg-off);border-radius:16px;padding:48px 40px;margin-top:40px}
+.contact-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:32px}
+.contact-method{background:var(--bg-white);border-radius:var(--radius);padding:20px 16px;text-align:center;box-shadow:var(--shadow)}
+.contact-method-icon{width:44px;height:44px;background:rgba(59,130,246,0.10);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.contact-method-icon svg{width:22px;height:22px;fill:var(--accent)}
+.contact-method-label{font-size:.78rem;color:var(--text-light);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.contact-method-value{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;color:var(--primary)}
+form{display:grid;gap:14px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,textarea,select{width:100%;padding:13px 16px;border:1px solid #e2e8f0;border-radius:var(--radius);font-family:'Nunito Sans',sans-serif;font-size:.95rem;color:var(--text);background:#fff;transition:border-color .2s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
+textarea{resize:vertical;min-height:110px}
+.form-submit{background:var(--accent);color:#fff;border:none;border-radius:var(--radius);padding:15px 32px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:.5px;cursor:pointer;transition:all .2s;width:100%}
+.form-submit:hover{background:var(--accent-dark);transform:translateY(-1px)}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--accent-dark) 0%,var(--accent) 60%,#60a5fa 100%);padding:72px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-band-grain{position:absolute;inset:0;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px}
+.cta-band h2{color:#fff;margin-bottom:12px}
+.cta-band p{color:rgba(255,255,255,0.85);margin-bottom:32px;font-size:1.05rem}
+.cta-band-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--accent-dark);font-weight:700}
+.btn-white:hover{background:#f0f9ff;transform:translateY(-2px)}
+.btn-outline-white{background:transparent;border:2px solid rgba(255,255,255,0.6);color:#fff;font-weight:700}
+.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,0.12)}
+
+/* FOOTER */
+footer{background:#030608;padding:56px 24px 28px}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-brand p{color:rgba(255,255,255,0.45);font-size:.88rem;line-height:1.7;margin-top:14px;max-width:300px}
+.footer-col h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:#fff;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{color:rgba(255,255,255,0.45);text-decoration:none;font-size:.88rem;transition:color .2s}
+.footer-col ul li a:hover{color:var(--accent)}
+.footer-bottom{max-width:1200px;margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{color:rgba(255,255,255,0.3);font-size:.8rem}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-card{display:none}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid,.why-grid,.steps-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-grid::before{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .services-grid,.why-grid,.steps-grid,.reviews-grid{grid-template-columns:1fr}
+  .contact-methods{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .nav-cta .btn{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <nav>
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+      </div>
+      <div class="logo-text">Control Solutions Inc<span>Pasadena, TX</span></div>
+    </a>
+    <div class="nav-cta">
+      <a href="tel:2818922500" class="nav-phone">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        (281) 892-2500
+      </a>
+      <a href="#contact" class="btn btn-accent">Free Inspection</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+        Pasadena's Trusted Pest Professionals
+      </div>
+      <h1>Precision Pest <em>Control</em> That Actually Works</h1>
+      <p class="hero-sub">Control Solutions Inc delivers methodical, science-backed pest elimination for homes and businesses across Pasadena and the greater Houston area. 4.5 stars across 87 verified reviews.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-accent">
+          <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          Get Free Inspection
+        </a>
+        <a href="tel:2818922500" class="btn btn-outline">
+          <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          (281) 892-2500
+        </a>
+      </div>
+      <div class="trust-row">
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          Licensed &amp; Insured
+        </span>
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          Residential &amp; Commercial
+        </span>
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          Same-Day Service
+        </span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Why Pasadena Chooses Us</div>
+      <div class="hero-feature">
+        <div class="hero-feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div class="hero-feature-text">4.5-Star Average Across 87 Google Reviews</div>
+      </div>
+      <div class="hero-feature">
+        <div class="hero-feature-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+        <div class="hero-feature-text">Detailed Inspection Reports Provided</div>
+      </div>
+      <div class="hero-feature">
+        <div class="hero-feature-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+        <div class="hero-feature-text">100% Satisfaction Guarantee on All Services</div>
+      </div>
+      <div class="hero-feature">
+        <div class="hero-feature-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
+        <div class="hero-feature-text">Flexible Scheduling — Including Weekends</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item fade-up">
+      <span class="stat-num" data-target="87">0</span>
+      <span class="stat-label">5-Star Reviews</span>
+    </div>
+    <div class="stat-item fade-up">
+      <span class="stat-num" data-target="20" data-suffix="+">0</span>
+      <span class="stat-label">Years Serving Pasadena</span>
+    </div>
+    <div class="stat-item fade-up">
+      <span class="stat-num" data-target="100" data-suffix="%">0</span>
+      <span class="stat-label">Satisfaction Guarantee</span>
+    </div>
+    <div class="stat-item fade-up">
+      <span class="stat-num" data-target="24" data-suffix="/7">0</span>
+      <span class="stat-label">Emergency Response</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-tag">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Our Services
+    </div>
+    <h2>Complete Pest Control Solutions</h2>
+    <p class="section-sub">From termites to roaches to rodents — we identify the problem, eliminate it at the source, and keep it from coming back.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+      <div class="svc-name">Termite Treatment</div>
+      <p class="svc-desc">Liquid treatments, bait stations, and pre-construction barriers. We stop termite colonies before they cost you thousands in structural damage.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div>
+      <div class="svc-name">Roach Elimination</div>
+      <p class="svc-desc">German and American cockroach infestations require targeted gel baiting, crack-and-crevice treatment, and follow-up monitoring — we handle all of it.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M15.5 9.5c0 1.6-.9 3-2.2 3.7V15h-2.6v-1.8C9.4 12.5 8.5 11.1 8.5 9.5c0-2.2 1.6-4 3.5-4s3.5 1.8 3.5 4zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14c-2.21 0-4-1.79-4-4 0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.21-1.79 4-4 4z"/></svg></div>
+      <div class="svc-name">Rodent Control</div>
+      <p class="svc-desc">Full rodent exclusion: exterior entry points sealed, bait stations placed, and trapping programs set up — so mice and rats stay out for good.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+      <div class="svc-name">Mosquito &amp; Tick Control</div>
+      <p class="svc-desc">Backyard treatments target breeding sites and resting areas. Enjoy your outdoor space again with monthly or bi-monthly barrier sprays through mosquito season.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19.34L5.71 21l1-1.5c.53.36 1.06.69 1.59.99C10.3 17.7 14.74 15 21 15c0-5-2.45-8-4-7z"/></svg></div>
+      <div class="svc-name">Bed Bug Treatment</div>
+      <p class="svc-desc">Heat treatment and chemical protocols for complete bed bug elimination. We inspect the full room, not just the mattress, and follow up to confirm eradication.</p>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>
+      <div class="svc-name">Commercial Pest Control</div>
+      <p class="svc-desc">Restaurants, warehouses, office buildings — we handle commercial accounts with discretion, documented compliance reporting, and zero-interruption scheduling.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why" id="about">
+  <div class="section-header">
+    <div class="section-tag" style="background:rgba(59,130,246,0.18);color:#93c5fd">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      Why Choose Us
+    </div>
+    <h2>The Control Solutions Difference</h2>
+    <p class="section-sub">We don't just spray and leave. Every visit follows a structured protocol so you get lasting results, not a temporary fix.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg></div>
+      <h3>Detailed Inspection Reports</h3>
+      <p>After every visit you receive a written summary of what was found, what was treated, and what to watch for — so you're never in the dark about your home's status.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div>
+      <h3>Methodical Treatment Protocols</h3>
+      <p>We follow step-by-step IPM (Integrated Pest Management) protocols — meaning the right product in the right place at the right concentration, every time.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+      <h3>Licensed &amp; Fully Insured</h3>
+      <p>All technicians are state-licensed pest control operators. We carry full liability insurance so you're protected on every job, no exceptions.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
+      <h3>Same-Day &amp; Emergency Service</h3>
+      <p>Pest problems don't wait for Monday. We offer same-day service and emergency response for urgent infestations throughout Pasadena and surrounding areas.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div>
+      <h3>Satisfaction Guarantee</h3>
+      <p>If pests return between scheduled treatments, we come back at no charge. Your satisfaction isn't just a policy — it's how we've built 87 five-star reviews.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <h3>4.5-Star Reputation</h3>
+      <p>87 Google reviews averaging 4.5 stars — built one job at a time by doing what we say we'll do and showing up when we say we will.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="section-header">
+    <div class="section-tag" style="background:rgba(59,130,246,0.15);color:#93c5fd">
+      <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+      Our Process
+    </div>
+    <h2>How We Solve Your Pest Problem</h2>
+    <p class="section-sub">Three clear steps from first call to confirmed elimination — no surprises, no upsells, just results.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step fade-up">
+      <div class="step-num"><span>01</span></div>
+      <h3>Inspection &amp; Diagnosis</h3>
+      <p>Our technician performs a thorough inspection of your home or business, identifies the exact pest species, entry points, and severity level, then provides a written findings report.</p>
+    </div>
+    <div class="step fade-up">
+      <div class="step-num"><span>02</span></div>
+      <h3>Targeted Treatment</h3>
+      <p>Using the right product for the specific pest — not a generic spray — we treat the infestation at its source, addressing both adults and eggs for complete elimination.</p>
+    </div>
+    <div class="step fade-up">
+      <div class="step-num"><span>03</span></div>
+      <h3>Follow-Up &amp; Prevention</h3>
+      <p>We schedule a follow-up visit to confirm success, seal any new entry points we find, and set up a maintenance plan so the problem doesn't return.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-header">
+    <div class="section-tag">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Customer Reviews
+    </div>
+    <h2>What Pasadena Homeowners Say</h2>
+    <p class="section-sub">4.5 stars across 87 Google reviews — here's what our customers experience.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card fade-up">
+      <div class="review-quote-mark">"</div>
+      <div class="stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"They actually found the source of our roach problem — a gap behind the dishwasher no one else had checked. Completely gone after two visits. Very professional and thorough."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">M</div>
+        <div>
+          <div class="reviewer-name">Marcus L.</div>
+          <div class="reviewer-verified"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-quote-mark">"</div>
+      <div class="stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"Used them for a termite inspection on a house I was buying. Fast report, detailed photos, fair price. The realtor was impressed too. Will use for ongoing pest service."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">D</div>
+        <div>
+          <div class="reviewer-name">Denise P.</div>
+          <div class="reviewer-verified"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-quote-mark">"</div>
+      <div class="stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"Our restaurant has been on a monthly program with them for over a year. Zero violations, zero complaints. The technician knows our building inside and out. Wouldn't switch."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">R</div>
+        <div>
+          <div class="reviewer-name">Roberto A.</div>
+          <div class="reviewer-verified"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Google Review</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas">
+  <div class="section-header">
+    <div class="section-tag" style="background:rgba(255,255,255,0.08);color:#93c5fd">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      Service Areas
+    </div>
+    <h2>Serving the Greater Pasadena Area</h2>
+    <p class="section-sub">We serve homes and businesses throughout Pasadena and the southeast Houston metro.</p>
+  </div>
+  <div class="areas-grid fade-up">
+    <span class="area-chip">Pasadena, TX</span>
+    <span class="area-chip">South Houston</span>
+    <span class="area-chip">La Porte</span>
+    <span class="area-chip">Deer Park</span>
+    <span class="area-chip">Baytown</span>
+    <span class="area-chip">League City</span>
+    <span class="area-chip">Friendswood</span>
+    <span class="area-chip">Pearland</span>
+    <span class="area-chip">Galena Park</span>
+    <span class="area-chip">Clear Lake</span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-wrapper">
+    <div class="section-header">
+      <div class="section-tag">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Get In Touch
+      </div>
+      <h2>Request Your Free Inspection</h2>
+      <p class="section-sub">Tell us about your pest issue and we'll schedule a no-obligation inspection at your convenience.</p>
+    </div>
+    <div class="contact-card fade-up">
+      <div class="contact-methods">
+        <div class="contact-method">
+          <div class="contact-method-icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+          <div class="contact-method-label">Phone</div>
+          <div class="contact-method-value">(281) 892-2500</div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div class="contact-method-label">Email</div>
+          <div class="contact-method-value">info@controlsolutionsinc.com</div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+          <div class="contact-method-label">Location</div>
+          <div class="contact-method-value">Pasadena, TX 77507</div>
+        </div>
+      </div>
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required>
+          <input type="tel" placeholder="Phone Number" required>
+        </div>
+        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Street Address / Area">
+        <select>
+          <option value="" disabled selected>What type of pest issue?</option>
+          <option>Termites</option>
+          <option>Cockroaches</option>
+          <option>Rodents / Mice</option>
+          <option>Mosquitoes</option>
+          <option>Bed Bugs</option>
+          <option>Ants</option>
+          <option>Commercial Service</option>
+          <option>Other / Multiple</option>
+        </select>
+        <textarea placeholder="Any additional details about your pest problem..."></textarea>
+        <button type="submit" class="form-submit">Send My Free Inspection Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-band-grain"></div>
+  <h2>Stop the Problem Before It Spreads</h2>
+  <p>Free inspection. Same-day availability. Guaranteed results. Call Control Solutions Inc today.</p>
+  <div class="cta-band-btns">
+    <a href="tel:2818922500" class="btn btn-white">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Call (281) 892-2500
+    </a>
+    <a href="#contact" class="btn btn-outline-white">Request Inspection Online</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div>
+        <div class="logo-text">Control Solutions Inc<span>Pasadena, TX</span></div>
+      </a>
+      <p>Licensed pest control professionals serving Pasadena, TX and the greater Houston area. Residential &amp; commercial. Same-day service available.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Termite Treatment</a></li>
+        <li><a href="#services">Roach Elimination</a></li>
+        <li><a href="#services">Rodent Control</a></li>
+        <li><a href="#services">Mosquito Control</a></li>
+        <li><a href="#services">Bed Bug Treatment</a></li>
+        <li><a href="#services">Commercial Pest Control</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:2818922500">(281) 892-2500</a></li>
+        <li><a href="#contact">Request Inspection</a></li>
+        <li><a href="#areas">Service Areas</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Control Solutions Inc — Pasadena, TX. All rights reserved.</p>
+    <p>Licensed Pest Control Operator | Insured</p>
+  </div>
+</footer>
+
+<script>
+// Header scroll shadow
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// IntersectionObserver fadeUp
+const fadeEls = document.querySelectorAll('.fade-up');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+fadeEls.forEach(el => obs.observe(el));
+
+// Stat counter
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(eased * target) + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-num[data-target]').forEach(el => statObs.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Knight's Termite &amp; Pest Control — La Porte TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#0f1f12;
+  --primary-dark:#060d07;
+  --primary-mid:#1a3520;
+  --accent:#c9a227;
+  --accent-dark:#a07f1a;
+  --accent-light:#e2bb3f;
+  --text:#1e293b;
+  --text-light:#64748b;
+  --bg-white:#ffffff;
+  --bg-off:#f8fafc;
+  --radius:10px;
+  --shadow:0 4px 24px rgba(0,0,0,0.09);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;color:var(--text);background:var(--bg-white);overflow-x:hidden}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:var(--primary-dark);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.55)}
+nav{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-icon{width:40px;height:40px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:22px;height:22px;fill:var(--primary-dark)}
+.logo-text{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.3rem;color:#fff;letter-spacing:.5px;line-height:1.1}
+.logo-text span{display:block;font-size:.72rem;font-weight:600;color:var(--accent-light);letter-spacing:1.5px;text-transform:uppercase}
+.nav-cta{display:flex;align-items:center;gap:16px}
+.nav-phone{color:#fff;text-decoration:none;font-weight:700;font-size:1rem;display:flex;align-items:center;gap:6px}
+.nav-phone svg{width:16px;height:16px;fill:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:var(--radius);font-weight:700;font-size:.95rem;text-decoration:none;transition:all .2s;font-family:'Nunito Sans',sans-serif;cursor:pointer;border:none}
+.btn-accent{background:var(--accent);color:var(--primary-dark)}
+.btn-accent:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.3)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+/* HERO */
+.hero{background:var(--primary);position:relative;overflow:hidden;padding:90px 24px 80px}
+.hero-grain{position:absolute;inset:0;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px}
+.hero-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:60fr 40fr;gap:64px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,39,0.15);border:1px solid rgba(201,162,39,0.4);color:var(--accent);padding:6px 14px;border-radius:20px;font-size:.82rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:22px}
+.hero-badge svg{width:14px;height:14px;fill:var(--accent)}
+h1{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2.6rem,5.5vw,3.9rem);color:#fff;line-height:1.05;margin-bottom:20px;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:1.08rem;color:rgba(255,255,255,0.72);line-height:1.7;max-width:520px;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.trust-row{display:flex;gap:28px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.6);font-size:.85rem;font-weight:600}
+.trust-item svg{width:16px;height:16px;fill:var(--accent)}
+.hero-shield{background:rgba(0,0,0,0.3);border:1px solid rgba(201,162,39,0.25);border-radius:16px;padding:28px 24px}
+.shield-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid rgba(201,162,39,0.2)}
+.shield-icon{width:52px;height:52px;background:rgba(201,162,39,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.shield-icon svg{width:28px;height:28px;fill:var(--accent)}
+.shield-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.05rem;color:#fff;letter-spacing:.5px;line-height:1.2}
+.shield-subtitle{font-size:.82rem;color:rgba(255,255,255,0.5);margin-top:3px}
+.shield-promise{display:flex;flex-direction:column;gap:12px}
+.shield-item{display:flex;align-items:center;gap:12px}
+.shield-item-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.shield-item-text{font-size:.9rem;color:rgba(255,255,255,0.75);line-height:1.4;font-weight:500}
+
+/* ANIMATIONS */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{animation:heroFadeUp .6s ease both;animation-delay:.1s}
+h1{animation:heroFadeUp .6s ease both;animation-delay:.2s}
+.hero-sub{animation:heroFadeUp .6s ease both;animation-delay:.3s}
+.hero-ctas{animation:heroFadeUp .6s ease both;animation-delay:.4s}
+.trust-row{animation:heroFadeUp .6s ease both;animation-delay:.5s}
+.hero-shield{animation:heroFadeUp .7s ease both;animation-delay:.35s}
+
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:none}
+
+/* STATS BAR */
+.stats-bar{background:var(--accent);padding:40px 24px}
+.stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stat-item{text-align:center}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:2.5rem;color:var(--primary-dark);line-height:1;display:block}
+.stat-label{font-size:.82rem;color:rgba(0,0,0,0.6);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-top:4px;display:block}
+
+/* SERVICES */
+.services{background:var(--bg-white);padding:96px 24px}
+.section-header{text-align:center;margin-bottom:56px}
+.section-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,39,0.10);color:var(--accent-dark);padding:5px 14px;border-radius:20px;font-size:.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.section-tag svg{width:13px;height:13px;fill:var(--accent-dark)}
+h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,2.9rem);color:var(--primary);line-height:1.1;margin-bottom:16px;letter-spacing:-.3px}
+.section-sub{color:var(--text-light);font-size:1rem;max-width:580px;margin:0 auto;line-height:1.7}
+.services-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc-card{background:var(--bg-white);border:1px solid #e2e8f0;border-left:4px solid var(--accent);border-radius:var(--radius);padding:24px;display:flex;align-items:flex-start;gap:16px;transition:all .3s;box-shadow:var(--shadow)}
+.svc-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(15,31,18,0.12);border-left-color:var(--primary)}
+.svc-icon{width:46px;height:46px;background:rgba(15,31,18,0.07);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.svc-icon svg{width:23px;height:23px;fill:var(--primary)}
+.svc-body{}
+.svc-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.15rem;color:var(--primary);margin-bottom:8px;letter-spacing:.3px}
+.svc-desc{font-size:.87rem;color:var(--text-light);line-height:1.65}
+
+/* WHY CHOOSE US */
+.why{background:var(--primary);padding:96px 24px}
+.why h2{color:#fff}
+.why .section-sub{color:rgba(255,255,255,0.6)}
+.why-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.why-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:var(--radius);padding:28px 24px;position:relative;overflow:hidden;transition:all .3s}
+.why-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.why-card:hover::after{transform:scaleX(1)}
+.why-card:hover{background:rgba(201,162,39,0.06)}
+.why-icon{width:46px;height:46px;background:rgba(201,162,39,0.14);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.why-icon svg{width:24px;height:24px;fill:var(--accent)}
+.why-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;margin-bottom:10px;letter-spacing:.3px}
+.why-card p{font-size:.88rem;color:rgba(255,255,255,0.58);line-height:1.65}
+
+/* HOW IT WORKS */
+.how{background:var(--primary-dark);padding:96px 24px}
+.how h2{color:#fff}
+.how .section-sub{color:rgba(255,255,255,0.5)}
+.steps-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.step{text-align:center}
+.step-num{width:70px;height:70px;background:rgba(201,162,39,0.12);border:2px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.step-num span{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.6rem;color:var(--accent)}
+.step h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;margin-bottom:10px}
+.step p{font-size:.87rem;color:rgba(255,255,255,0.5);line-height:1.65}
+
+/* REVIEWS */
+.reviews{background:var(--bg-off);padding:96px 24px}
+.reviews-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--primary);border-radius:var(--radius);padding:28px 24px;border-bottom:4px solid var(--accent)}
+.review-stars{display:flex;gap:3px;margin-bottom:14px}
+.review-stars svg{width:17px;height:17px;fill:var(--accent)}
+.review-text{font-size:.9rem;color:rgba(255,255,255,0.78);line-height:1.72;margin-bottom:18px;font-style:italic}
+.reviewer{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid rgba(201,162,39,0.2)}
+.reviewer-avatar{width:38px;height:38px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;color:var(--primary-dark);flex-shrink:0}
+.reviewer-name{font-weight:700;font-size:.88rem;color:#fff}
+.reviewer-note{font-size:.78rem;color:rgba(255,255,255,0.42);margin-top:2px;display:flex;align-items:center;gap:4px}
+.reviewer-note svg{width:12px;height:12px;fill:var(--accent)}
+
+/* SERVICE AREAS */
+.areas{background:var(--primary-mid);padding:80px 24px}
+.areas h2{color:#fff}
+.areas .section-sub{color:rgba(255,255,255,0.55)}
+.areas-grid{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.area-chip{background:rgba(255,255,255,0.06);border:1px solid rgba(201,162,39,0.25);border-radius:24px;padding:8px 18px;color:rgba(255,255,255,0.75);font-size:.88rem;font-weight:600;transition:all .2s}
+.area-chip:hover{background:rgba(201,162,39,0.15);border-color:var(--accent);color:#fff}
+
+/* CONTACT */
+.contact{background:var(--bg-white);padding:96px 24px}
+.contact-wrapper{max-width:760px;margin:0 auto;text-align:center}
+.contact-card{background:var(--bg-off);border-radius:16px;padding:48px 40px;margin-top:40px;border:1px solid #e2e8f0}
+.contact-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:32px}
+.contact-method{background:var(--bg-white);border-radius:var(--radius);padding:20px 16px;text-align:center;box-shadow:var(--shadow);border-bottom:3px solid var(--accent)}
+.contact-method-icon{width:42px;height:42px;background:rgba(15,31,18,0.07);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.contact-method-icon svg{width:21px;height:21px;fill:var(--primary)}
+.contact-method-label{font-size:.77rem;color:var(--text-light);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.contact-method-value{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;color:var(--primary)}
+form{display:grid;gap:14px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+input,textarea,select{width:100%;padding:13px 16px;border:1px solid #e2e8f0;border-radius:var(--radius);font-family:'Nunito Sans',sans-serif;font-size:.95rem;color:var(--text);background:#fff;transition:border-color .2s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)}
+textarea{resize:vertical;min-height:110px}
+.form-submit{background:var(--accent);color:var(--primary-dark);border:none;border-radius:var(--radius);padding:15px 32px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:.5px;cursor:pointer;transition:all .2s;width:100%}
+.form-submit:hover{background:var(--accent-dark);transform:translateY(-1px)}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 60%,var(--primary-mid) 100%);padding:72px 24px;text-align:center;position:relative;overflow:hidden}
+.cta-band-grain{position:absolute;inset:0;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px}
+.cta-gold-line{position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--accent)}
+.cta-band h2{color:#fff;margin-bottom:12px}
+.cta-band p{color:rgba(255,255,255,0.78);margin-bottom:32px;font-size:1.05rem}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-gold{background:var(--accent);color:var(--primary-dark);font-weight:700}
+.btn-gold:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-outline-white{background:transparent;border:2px solid rgba(255,255,255,0.5);color:#fff;font-weight:700}
+.btn-outline-white:hover{border-color:var(--accent);color:var(--accent)}
+
+/* FOOTER */
+footer{background:#020804;padding:56px 24px 28px}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.footer-brand p{color:rgba(255,255,255,0.4);font-size:.88rem;line-height:1.7;margin-top:14px;max-width:300px}
+.footer-col h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;color:#fff;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:.88rem;transition:color .2s}
+.footer-col ul li a:hover{color:var(--accent)}
+.footer-bottom{max-width:1200px;margin:24px auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{color:rgba(255,255,255,0.28);font-size:.8rem}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-shield{display:none}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid,.why-grid,.steps-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .services-grid,.why-grid,.steps-grid,.reviews-grid{grid-template-columns:1fr}
+  .contact-methods{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .nav-cta .btn{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <nav>
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      </div>
+      <div class="logo-text">Knight's Pest Control<span>La Porte, TX</span></div>
+    </a>
+    <div class="nav-cta">
+      <a href="tel:2814706886" class="nav-phone">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        (281) 470-6886
+      </a>
+      <a href="#contact" class="btn btn-accent">Free Inspection</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        5-Star Rated — La Porte's Trusted Pest Pro
+      </div>
+      <h1>Your Home Deserves a <em>Knight</em> in Its Corner</h1>
+      <p class="hero-sub">Knight's Termite &amp; Pest Control delivers 5-star pest and termite protection for La Porte and the east Houston area. We guard your home with the thoroughness it deserves — every single visit.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-accent">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          Get Free Inspection
+        </a>
+        <a href="tel:2814706886" class="btn btn-outline">
+          <svg width="16" height="16" fill="#fff" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          (281) 470-6886
+        </a>
+      </div>
+      <div class="trust-row">
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          Perfect 5-Star Rating
+        </span>
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          Termite Specialists
+        </span>
+        <span class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+          Licensed &amp; Insured
+        </span>
+      </div>
+    </div>
+    <div class="hero-shield">
+      <div class="shield-header">
+        <div class="shield-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        </div>
+        <div>
+          <div class="shield-title">The Knight's Protection Promise</div>
+          <div class="shield-subtitle">Every job, every time</div>
+        </div>
+      </div>
+      <div class="shield-promise">
+        <div class="shield-item">
+          <div class="shield-item-dot"></div>
+          <div class="shield-item-text">Thorough inspection of every corner of your property before any treatment begins</div>
+        </div>
+        <div class="shield-item">
+          <div class="shield-item-dot"></div>
+          <div class="shield-item-text">Pest-specific treatments — never a generic spray applied everywhere</div>
+        </div>
+        <div class="shield-item">
+          <div class="shield-item-dot"></div>
+          <div class="shield-item-text">Follow-up verification to confirm complete elimination</div>
+        </div>
+        <div class="shield-item">
+          <div class="shield-item-dot"></div>
+          <div class="shield-item-text">Free return visits if any pest activity persists after treatment</div>
+        </div>
+        <div class="shield-item">
+          <div class="shield-item-dot"></div>
+          <div class="shield-item-text">Upfront pricing — no surprises on the final bill</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item fade-up">
+      <span class="stat-num" data-target="5" data-suffix="-Star">0</span>
+      <span class="stat-label">Perfect Rating</span>
+    </div>
+    <div class="stat-item fade-up">
+      <span class="stat-num" data-target="18">0</span>
+      <span class="stat-label">Verified Reviews</span>
+    </div>
+    <div class="stat-item fade-up">
+      <span class="stat-num" data-target="100" data-suffix="%">0</span>
+      <span class="stat-label">Satisfaction Guarantee</span>
+    </div>
+    <div class="stat-item fade-up">
+      <span class="stat-num" data-target="0" data-static="Free">Free</span>
+      <span class="stat-label">Estimates Always</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-tag">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      Our Services
+    </div>
+    <h2>Complete Termite &amp; Pest Defense</h2>
+    <p class="section-sub">From termite colonies to rodent invasions — Knight's handles the full range of pest threats facing La Porte and east Houston homes.</p>
+  </div>
+  <div class="services-grid">
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+      <div class="svc-body">
+        <div class="svc-name">Termite Treatment</div>
+        <p class="svc-desc">Liquid barrier treatments and bait station monitoring designed to eliminate existing colonies and prevent new infestations from forming around your foundation.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg></div>
+      <div class="svc-body">
+        <div class="svc-name">General Pest Control</div>
+        <p class="svc-desc">Roaches, ants, spiders, silverfish — quarterly and bi-monthly programs that keep your home protected through every season without disrupting your household.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19.34L5.71 21l1-1.5c.53.36 1.06.69 1.59.99C10.3 17.7 14.74 15 21 15c0-5-2.45-8-4-7z"/></svg></div>
+      <div class="svc-body">
+        <div class="svc-name">Mosquito Control</div>
+        <p class="svc-desc">Yard barrier spray treatments targeting mosquito resting and breeding sites. Monthly applications from spring through fall so your outdoor spaces stay usable.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M15.5 9.5c0 1.6-.9 3-2.2 3.7V15h-2.6v-1.8C9.4 12.5 8.5 11.1 8.5 9.5c0-2.2 1.6-4 3.5-4s3.5 1.8 3.5 4z"/></svg></div>
+      <div class="svc-body">
+        <div class="svc-name">Rodent Exclusion</div>
+        <p class="svc-desc">Entry-point inspection and sealing, bait station placement, and trapping programs. We keep mice and rats out of your walls and attic before they cause real damage.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2z"/></svg></div>
+      <div class="svc-body">
+        <div class="svc-name">Bed Bug Treatment</div>
+        <p class="svc-desc">Full-room inspection and treatment protocols for complete bed bug elimination. We inspect mattresses, furniture, and baseboards — not just the obvious spots.</p>
+      </div>
+    </div>
+    <div class="svc-card fade-up">
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg></div>
+      <div class="svc-body">
+        <div class="svc-name">Scheduled Protection Plans</div>
+        <p class="svc-desc">Monthly, bi-monthly, and quarterly service plans that keep every seasonal pest threat handled proactively — so you never wake up to a surprise infestation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why" id="about">
+  <div class="section-header">
+    <div class="section-tag" style="background:rgba(201,162,39,0.14);color:var(--accent)">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+      Why Knight's
+    </div>
+    <h2>5-Star Protection on Every Job</h2>
+    <p class="section-sub">A perfect 5-star rating reflects how we treat every home — as if it were our own.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <h3>Perfect 5-Star Rating</h3>
+      <p>Every review we've earned is five stars — because our standard of service doesn't shift based on job size or location. Big home or small, you get the same thorough treatment.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+      <h3>Termite Expertise</h3>
+      <p>Termite identification, treatment selection, and monitoring require specialized knowledge. Our technicians understand Gulf Coast termite species and apply the right defense for your specific situation.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+      <h3>Free, Honest Estimates</h3>
+      <p>We inspect your property thoroughly and give you a clear, upfront price before any work begins. No pressure, no surprise charges — just an honest assessment of what you actually need.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg></div>
+      <h3>Satisfaction Guaranteed</h3>
+      <p>If any pest activity returns between scheduled treatments, we come back at no charge. Our guarantee isn't a sales line — it's built into how we price and schedule every job.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg></div>
+      <h3>Flexible Scheduling</h3>
+      <p>We fit our schedule around yours. Whether you need a morning slot, a weekend appointment, or a quick turnaround inspection, we work to make it happen without hassle.</p>
+    </div>
+    <div class="why-card fade-up">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg></div>
+      <h3>Licensed &amp; Insured</h3>
+      <p>State-licensed pest control operators. Full liability insurance. You can trust that every treatment meets regulatory standards and that your property is protected throughout the process.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="section-header">
+    <div class="section-tag" style="background:rgba(201,162,39,0.12);color:var(--accent)">
+      <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+      Our Process
+    </div>
+    <h2>How Knight's Protects Your Home</h2>
+    <p class="section-sub">A structured approach from first call to confirmed results — every time.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step fade-up">
+      <div class="step-num"><span>01</span></div>
+      <h3>Inspect Every Inch</h3>
+      <p>We begin with a complete property inspection — interior, exterior, foundation, attic, and crawlspaces. No corner is skipped. We identify every active problem and every vulnerability before recommending a treatment plan.</p>
+    </div>
+    <div class="step fade-up">
+      <div class="step-num"><span>02</span></div>
+      <h3>Treat With Precision</h3>
+      <p>Each pest species requires a specific approach. We apply the correct treatment method — targeted to the source — so we eliminate the infestation rather than masking it with a surface-level spray.</p>
+    </div>
+    <div class="step fade-up">
+      <div class="step-num"><span>03</span></div>
+      <h3>Verify &amp; Guard</h3>
+      <p>We schedule a follow-up to confirm complete elimination, seal any remaining entry points, and place you on a maintenance schedule that prevents reinfestation before it starts.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-header">
+    <div class="section-tag">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Customer Reviews
+    </div>
+    <h2>5 Stars. Every Single Review.</h2>
+    <p class="section-sub">18 Google reviews — every one of them five stars. Here's what La Porte homeowners say about Knight's.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card fade-up">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"Knight's found termites in our garage wall during the inspection. Treated same week. The follow-up confirmed full elimination. Incredibly professional from start to finish."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">S</div>
+        <div>
+          <div class="reviewer-name">Sandra K.</div>
+          <div class="reviewer-note"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"Put my whole home on their quarterly plan. Every three months they show up on time, do the full treatment, and I haven't seen a single roach or ant since. Worth every penny."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">P</div>
+        <div>
+          <div class="reviewer-name">Patricia M.</div>
+          <div class="reviewer-note"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Google Review</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card fade-up">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"Called about a rodent problem I'd had for weeks with no luck fixing myself. Knight's came out, found four entry points I'd completely missed, sealed them, and set the traps. Problem solved."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">B</div>
+        <div>
+          <div class="reviewer-name">Brian F.</div>
+          <div class="reviewer-note"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Verified Google Review</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas" id="areas">
+  <div class="section-header">
+    <div class="section-tag" style="background:rgba(201,162,39,0.12);color:var(--accent)">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      Service Areas
+    </div>
+    <h2>Serving La Porte &amp; East Houston</h2>
+    <p class="section-sub">Based in La Porte, TX — we cover the east Houston and Baytown corridor and surrounding communities.</p>
+  </div>
+  <div class="areas-grid fade-up">
+    <span class="area-chip">La Porte, TX</span>
+    <span class="area-chip">Pasadena</span>
+    <span class="area-chip">Baytown</span>
+    <span class="area-chip">Deer Park</span>
+    <span class="area-chip">Seabrook</span>
+    <span class="area-chip">Clear Lake</span>
+    <span class="area-chip">Nassau Bay</span>
+    <span class="area-chip">El Lago</span>
+    <span class="area-chip">Kemah</span>
+    <span class="area-chip">League City</span>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-wrapper">
+    <div class="section-header">
+      <div class="section-tag">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Get In Touch
+      </div>
+      <h2>Request Your Free Inspection</h2>
+      <p class="section-sub">No pressure, no obligation. Tell us what you're dealing with and we'll schedule a thorough inspection at your convenience.</p>
+    </div>
+    <div class="contact-card fade-up">
+      <div class="contact-methods">
+        <div class="contact-method">
+          <div class="contact-method-icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+          <div class="contact-method-label">Phone</div>
+          <div class="contact-method-value">(281) 470-6886</div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div class="contact-method-label">Website</div>
+          <div class="contact-method-value">knightstermiteandpestcontrol.com</div>
+        </div>
+        <div class="contact-method">
+          <div class="contact-method-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+          <div class="contact-method-label">Location</div>
+          <div class="contact-method-value">La Porte, TX 77571</div>
+        </div>
+      </div>
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required>
+          <input type="tel" placeholder="Phone Number" required>
+        </div>
+        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Property Address / City">
+        <select>
+          <option value="" disabled selected>What type of pest problem?</option>
+          <option>Termites</option>
+          <option>Cockroaches / Ants</option>
+          <option>Mosquitoes</option>
+          <option>Rodents / Mice</option>
+          <option>Bed Bugs</option>
+          <option>General Pest Control</option>
+          <option>Quarterly Maintenance Plan</option>
+          <option>Other</option>
+        </select>
+        <textarea placeholder="Describe what you're seeing — type of pest, where, how long..."></textarea>
+        <button type="submit" class="form-submit">Request My Free Inspection</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-band-grain"></div>
+  <div class="cta-gold-line"></div>
+  <h2>5-Star Protection for Your Home Starts Here</h2>
+  <p>Free inspection. Upfront pricing. Satisfaction guaranteed. Knight's is ready to defend your home.</p>
+  <div class="cta-btns">
+    <a href="tel:2814706886" class="btn btn-gold">
+      <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Call (281) 470-6886
+    </a>
+    <a href="#contact" class="btn btn-outline-white">Request Free Inspection</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+        <div class="logo-text">Knight's Pest Control<span>La Porte, TX</span></div>
+      </a>
+      <p>Termite and pest control specialists serving La Porte, Pasadena, Baytown, and the east Houston area. Perfect 5-star rating. Licensed and insured. Free estimates.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Termite Treatment</a></li>
+        <li><a href="#services">General Pest Control</a></li>
+        <li><a href="#services">Mosquito Control</a></li>
+        <li><a href="#services">Rodent Exclusion</a></li>
+        <li><a href="#services">Bed Bug Treatment</a></li>
+        <li><a href="#services">Maintenance Plans</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:2814706886">(281) 470-6886</a></li>
+        <li><a href="#contact">Free Inspection</a></li>
+        <li><a href="#areas">Service Areas</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Knight's Termite &amp; Pest Control — La Porte, TX. All rights reserved.</p>
+    <p>Licensed Pest Control Operator | Fully Insured</p>
+  </div>
+</footer>
+
+<script>
+// Header scroll shadow
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// IntersectionObserver fadeUp
+const fadeEls = document.querySelectorAll('.fade-up');
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+fadeEls.forEach(el => obs.observe(el));
+
+// Stat counter
+function animateCount(el) {
+  if (el.dataset.static) { el.textContent = el.dataset.static; return; }
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(eased * target) + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-num[data-target]').forEach(el => statObs.observe(el));
+</script>
+</body>
+</html>

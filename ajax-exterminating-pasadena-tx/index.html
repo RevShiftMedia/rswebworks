@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajax Exterminating | Pest Control Near Me | Pasadena, TX</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #1a1e21;
+  --primary-dark: #0d0f11;
+  --accent: #29c4a9;
+  --accent-dark: #1a9e88;
+  --bg: #ffffff;
+  --bg-off: #f0fdfb;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #ccfbf1;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.09);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--primary-dark); font-family: var(--font-display); font-size: 15px; font-weight: 700; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; box-shadow: 0 4px 16px rgba(41,196,169,0.35); transition: all 0.15s ease; text-decoration: none; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(41,196,169,0.5); }
+.btn-primary:active { transform: scale(0.97); }
+.btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: white; font-family: var(--font-display); font-size: 15px; font-weight: 600; padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6); cursor: pointer; transition: all 0.15s ease; text-decoration: none; }
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+@media (max-width: 900px) { .grid-3,.grid-4 { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 600px) { .grid-3,.grid-4,.grid-2 { grid-template-columns: 1fr; } }
+@keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+@keyframes heroFadeUp { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:translateY(0); } }
+.hero-badge { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+.fade-card { opacity: 0; }
+.fade-card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.fade-card:nth-child(1) { animation-delay: 0.1s; }
+.fade-card:nth-child(2) { animation-delay: 0.2s; }
+.fade-card:nth-child(3) { animation-delay: 0.3s; }
+.fade-card:nth-child(4) { animation-delay: 0.4s; }
+.fade-card:nth-child(5) { animation-delay: 0.5s; }
+.fade-card:nth-child(6) { animation-delay: 0.6s; }
+
+.site-header { position: sticky; top: 0; z-index: 1000; background: var(--primary); box-shadow: 0 2px 12px rgba(0,0,0,0.5); padding: 0 24px; }
+.header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.header-brand { display: flex; flex-direction: column; gap: 2px; }
+.header-name { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; }
+.header-tag { font-family: var(--font-body); font-size: 12px; color: var(--t2); }
+.header-cta { display: inline-flex; align-items: center; gap: 7px; background: var(--accent); color: var(--primary-dark); font-family: var(--font-display); font-size: 14px; font-weight: 700; padding: 10px 20px; border-radius: 7px; text-decoration: none; transition: all 0.15s ease; }
+.header-cta:hover { transform: translateY(-1px); }
+
+.hero { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%); position: relative; overflow: hidden; padding: 90px 0 80px; }
+.hero::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.12; pointer-events: none; z-index: 0; }
+.hero > * { position: relative; z-index: 1; }
+.hero-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: center; }
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-card { display: none; } }
+.hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--accent); color: var(--primary-dark); font-family: var(--font-display); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 6px 14px; border-radius: 20px; margin-bottom: 20px; }
+.hero-headline { font-family: var(--font-display); font-weight: 900; font-size: clamp(42px, 6vw, 64px); color: white; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 20px; }
+.hero-headline span { color: var(--accent); }
+.hero-sub { font-family: var(--font-body); font-size: 18px; color: var(--t2); line-height: 1.6; margin-bottom: 32px; max-width: 520px; }
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+.hero-trust { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+.hero-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 8px 32px rgba(0,0,0,0.3); backdrop-filter: blur(12px); border-radius: 16px; padding: 28px 32px; }
+.hero-card-title { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: white; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+.hero-prop { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
+.hero-prop-icon { width: 32px; height: 32px; background: rgba(41,196,169,0.18); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); }
+.hero-prop-text h4 { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: white; margin-bottom: 2px; }
+.hero-prop-text p { font-family: var(--font-body); font-size: 12px; color: var(--t2); line-height: 1.5; }
+.hero-card-phone { margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; gap: 10px; }
+.hero-card-phone span { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--accent); }
+
+.stats-bar { background: var(--primary); padding: 0; }
+.stats-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 700px) { .stats-inner { grid-template-columns: repeat(2, 1fr); } }
+.stat-box { padding: 36px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,0.1); }
+.stat-box:last-child { border-right: none; }
+.stat-number { font-family: var(--font-display); font-weight: 900; font-size: clamp(32px, 4vw, 48px); color: var(--accent); letter-spacing: -0.02em; line-height: 1; display: block; margin-bottom: 6px; }
+.stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+
+/* SERVICES — icon inline (number badge style) */
+.services { background: var(--bg); }
+.section-label { font-family: var(--font-display); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-dark); margin-bottom: 12px; display: block; }
+.section-title { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--dark-text); margin-bottom: 12px; letter-spacing: -0.02em; }
+.section-sub { font-family: var(--font-body); font-size: 16px; color: var(--grey-text); margin-bottom: 48px; max-width: 520px; }
+.service-card { background: var(--bg); border: 1px solid var(--border); border-left: 4px solid transparent; border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); transition: all 0.25s ease; }
+.service-card:hover { border-left-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.svc-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.svc-num { width: 36px; height: 36px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 18px; font-weight: 900; color: var(--primary-dark); flex-shrink: 0; }
+.svc-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--dark-text); }
+.svc-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 14px; }
+.svc-link { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent-dark); text-decoration: none; }
+
+.why-us { background: var(--primary); position: relative; overflow: hidden; }
+.why-us::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.10; pointer-events: none; z-index: 0; }
+.why-us > * { position: relative; z-index: 1; }
+.why-us .section-title { color: white; }
+.why-us .section-sub { color: var(--t2); }
+.why-stat-card { background: var(--primary-dark); border-radius: var(--radius); padding: 28px 20px; text-align: center; border: 1px solid rgba(255,255,255,0.08); }
+.why-stat-num { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--accent); display: block; margin-bottom: 4px; }
+.why-stat-lbl { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+.why-stats { margin-bottom: 48px; }
+.why-diff-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+@media (max-width: 600px) { .why-diff-grid { grid-template-columns: 1fr; } }
+.why-diff { display: flex; gap: 16px; align-items: flex-start; }
+.why-diff-icon { width: 40px; height: 40px; background: rgba(41,196,169,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); }
+.why-diff-text h4 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; margin-bottom: 4px; }
+.why-diff-text p { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.55; }
+
+.how-it-works { background: var(--primary-dark); }
+.how-it-works .section-title { color: white; }
+.steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; }
+@media (max-width: 700px) { .steps-row { grid-template-columns: 1fr; } }
+.steps-row::before { content: ''; position: absolute; top: 32px; left: calc(16.66% + 16px); right: calc(16.66% + 16px); height: 1px; border-top: 2px dashed rgba(255,255,255,0.15); }
+@media (max-width: 700px) { .steps-row::before { display: none; } }
+.step-card { text-align: center; padding: 20px; }
+.step-num-circle { width: 56px; height: 56px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 24px; font-weight: 900; color: var(--primary-dark); margin: 0 auto 20px; }
+.step-icon { color: white; margin-bottom: 14px; display: flex; justify-content: center; }
+.step-title { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; margin-bottom: 8px; }
+.step-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.6; }
+
+.reviews { background: var(--bg-off); }
+.reviews-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 16px; }
+.google-badge { display: flex; align-items: center; gap: 8px; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; font-family: var(--font-body); font-size: 14px; font-weight: 600; }
+.review-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); transition: all 0.25s ease; }
+.review-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); transform: translateY(-3px); }
+.review-stars { display: flex; gap: 3px; color: #f59e0b; margin-bottom: 14px; }
+.review-text { font-family: var(--font-body); font-style: italic; font-size: 15px; line-height: 1.7; color: var(--dark-text); margin-bottom: 16px; }
+.review-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 16px; }
+.review-footer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar { width: 40px; height: 40px; border-radius: 50%; background: rgba(41,196,169,0.15); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--accent-dark); flex-shrink: 0; }
+.reviewer-name { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--dark-text); }
+.reviewer-loc { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); margin-top: 1px; }
+
+.service-areas { background: var(--primary); }
+.service-areas .section-title { color: white; }
+.areas-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+@media (max-width: 700px) { .areas-inner { grid-template-columns: 1fr; } }
+.areas-left p { font-family: var(--font-body); font-size: 16px; color: var(--t2); line-height: 1.65; margin-bottom: 28px; }
+.areas-card { background: var(--primary-dark); border-radius: var(--radius); padding: 28px 24px; border: 1px solid rgba(255,255,255,0.08); }
+.areas-card h4 { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--t2); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 18px; }
+.chip-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { background: rgba(255,255,255,0.08); color: var(--t2); font-family: var(--font-body); font-size: 13px; font-weight: 500; padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.12); cursor: default; transition: all 0.15s ease; }
+.chip:hover { background: var(--accent); color: var(--primary-dark); border-color: var(--accent); }
+
+.contact-section { background: white; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+@media (max-width: 800px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-form-title { font-family: var(--font-display); font-size: 28px; font-weight: 900; color: var(--dark-text); margin-bottom: 8px; }
+.contact-form-sub { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); margin-bottom: 28px; }
+.form-row { margin-bottom: 16px; }
+.form-row label { display: block; font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; }
+.form-row input,.form-row select,.form-row textarea { width: 100%; background: var(--bg-off); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; font-family: var(--font-body); font-size: 14px; color: var(--dark-text); transition: border-color 0.2s; }
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(41,196,169,0.12); }
+.form-row textarea { resize: vertical; min-height: 100px; }
+.form-submit { width: 100%; background: var(--accent); color: var(--primary-dark); font-family: var(--font-display); font-size: 17px; font-weight: 700; padding: 15px; border-radius: 8px; border: none; cursor: pointer; box-shadow: 0 4px 16px rgba(41,196,169,0.3); transition: all 0.15s ease; margin-top: 8px; }
+.form-submit:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.contact-info-card { background: var(--primary); border-radius: var(--radius); padding: 36px 28px; display: flex; flex-direction: column; gap: 24px; }
+.contact-info-title { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: white; }
+.info-item { display: flex; gap: 14px; align-items: flex-start; }
+.info-icon { width: 36px; height: 36px; background: rgba(41,196,169,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0; }
+.info-item h5 { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--t2); margin-bottom: 3px; }
+.info-item p { font-family: var(--font-body); font-size: 14px; color: white; }
+
+.cta-band { background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%); padding: 80px 0; position: relative; overflow: hidden; text-align: center; }
+.cta-band::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.15; pointer-events: none; z-index: 0; }
+.cta-band > * { position: relative; z-index: 1; }
+.cta-headline { font-family: var(--font-display); font-weight: 900; font-size: clamp(28px, 4vw, 42px); color: var(--primary-dark); letter-spacing: -0.02em; margin-bottom: 12px; }
+.cta-sub { font-family: var(--font-body); font-size: 17px; color: rgba(13,15,17,0.7); margin-bottom: 32px; }
+.cta-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--primary-dark); color: var(--accent); font-family: var(--font-display); font-size: 16px; font-weight: 700; padding: 15px 32px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); text-decoration: none; transition: all 0.15s ease; }
+.cta-btn:hover { transform: translateY(-2px); }
+
+.footer { background: var(--primary-dark); padding: 64px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+.footer-brand-name { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; margin-bottom: 10px; }
+.footer-brand-desc { font-family: var(--font-body); font-size: 13px; color: var(--t2); line-height: 1.65; margin-bottom: 20px; }
+.footer-col-title { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { font-family: var(--font-body); font-size: 13px; color: var(--t2); text-decoration: none; transition: color 0.15s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.footer-copyright { font-family: var(--font-body); font-size: 12px; color: var(--t3); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <span class="header-name">Ajax Exterminating</span>
+      <span class="header-tag">Fast. Precise. Guaranteed. — Pasadena, TX</span>
+    </div>
+    <a href="tel:8328889121" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (832) 888-9121
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        4.8 Stars · 101 Reviews · Pasadena's Precision Exterminators
+      </div>
+      <h1 class="hero-headline">Pasadena's Most <span>Precise</span> Pest Exterminators</h1>
+      <p class="hero-sub">Ajax means fast and effective. We diagnose the root cause, treat it precisely, and follow up until your pest problem is completely eliminated — not just suppressed.</p>
+      <div class="hero-ctas">
+        <a href="tel:8328889121" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (832) 888-9121
+        </a>
+        <a href="#contact" class="btn-ghost">Free Estimate</a>
+      </div>
+      <div class="hero-trust">
+        <div style="display:flex;align-items:center;gap:4px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 4.8 · 101 Reviews</div>
+        <span style="color:var(--t3)">|</span><span>Licensed &amp; Insured</span>
+        <span style="color:var(--t3)">|</span><span>Same-Day Available</span>
+        <span style="color:var(--t3)">|</span><span>Satisfaction Guarantee</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Why Ajax Works</div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="hero-prop-text"><h4>Root-Cause Diagnosis</h4><p>We find why pests are entering — and eliminate that cause, not just the symptom</p></div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="hero-prop-text"><h4>Precision Treatment</h4><p>Targeted application where pests live — not a blanket spray that wears off in days</p></div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="hero-prop-text"><h4>Satisfaction Guarantee</h4><p>If pests return within the guarantee window, we re-treat at zero cost</p></div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="hero-prop-text"><h4>Rapid Same-Day Response</h4><p>Most Pasadena-area calls receive same or next-day scheduling</p></div>
+      </div>
+      <div class="hero-card-phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>(832) 888-9121</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-box"><span class="stat-number" data-target="101">0</span><span class="stat-label">5-Star Reviews</span></div>
+    <div class="stat-box"><span class="stat-number" data-target="4" data-suffix=".8★">0</span><span class="stat-label">Average Rating</span></div>
+    <div class="stat-box"><span class="stat-number" data-target="24" data-suffix="/7">0</span><span class="stat-label">Emergency Response</span></div>
+    <div class="stat-box"><span class="stat-number" data-target="100" data-suffix="%">0</span><span class="stat-label">Satisfaction Guaranteed</span></div>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="container">
+    <span class="section-label">Precision Services</span>
+    <h2 class="section-title">Every Pest. One Expert Team.</h2>
+    <p class="section-sub">Ajax handles every pest problem Southeast Houston throws at us — fast diagnostics, precise treatment, guaranteed results.</p>
+    <div class="grid-3">
+      <div class="service-card fade-card">
+        <div class="svc-header"><div class="svc-num">01</div><div class="svc-name">Roach Elimination</div></div>
+        <p class="svc-desc">German cockroaches thrive in Pasadena's humid climate. We apply gel bait in every harborage point — behind appliances, under sinks, inside cabinets — and eliminate the colony from the inside out.</p>
+        <a href="#contact" class="svc-link">Schedule Treatment →</a>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-header"><div class="svc-num">02</div><div class="svc-name">Termite Control</div></div>
+        <p class="svc-desc">Subterranean termites don't announce themselves — they work silently for years. Our inspection locates the colony and treatment creates a permanent barrier around your foundation.</p>
+        <a href="#contact" class="svc-link">Free Inspection →</a>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-header"><div class="svc-num">03</div><div class="svc-name">Rodent Exclusion</div></div>
+        <p class="svc-desc">Rats and mice enter through gaps smaller than a quarter. We conduct a full exclusion audit, seal every entry point with professional materials, then eliminate what's already inside.</p>
+        <a href="#contact" class="svc-link">Get Assessment →</a>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-header"><div class="svc-num">04</div><div class="svc-name">Mosquito Control</div></div>
+        <p class="svc-desc">Houston mosquito season is relentless. Our barrier spray targets breeding sites, resting areas, and leaf litter — protecting your entire yard for 3–4 weeks per treatment.</p>
+        <a href="#contact" class="svc-link">Schedule Spray →</a>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-header"><div class="svc-num">05</div><div class="svc-name">Bed Bug Treatment</div></div>
+        <p class="svc-desc">Bed bugs require precision — they hide in seams, frames, outlets, and floorboards. Our targeted treatment reaches every hiding spot and breaks the reproductive cycle in a single service.</p>
+        <a href="#contact" class="svc-link">Book Treatment →</a>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-header"><div class="svc-num">06</div><div class="svc-name">Quarterly Maintenance</div></div>
+        <p class="svc-desc">Prevention beats infestation every time. Our quarterly program maintains a protective perimeter around your home, catches seasonal pest shifts early, and keeps you covered year-round.</p>
+        <a href="#contact" class="svc-link">View Plans →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-us">
+  <div class="container">
+    <span class="section-label">The Ajax Difference</span>
+    <h2 class="section-title">Precision Extermination. Proven Results.</h2>
+    <p class="section-sub">101 verified five-star reviews from Pasadena and Southeast Houston homeowners who needed the job done right.</p>
+    <div class="grid-4 why-stats">
+      <div class="why-stat-card fade-card"><span class="why-stat-num" data-target="101">0</span><span class="why-stat-lbl">Google Reviews</span></div>
+      <div class="why-stat-card fade-card"><span class="why-stat-num" data-target="4" data-suffix=".8★">0</span><span class="why-stat-lbl">Average Rating</span></div>
+      <div class="why-stat-card fade-card"><span class="why-stat-num" data-target="500" data-suffix="+">0</span><span class="why-stat-lbl">Homes Treated</span></div>
+      <div class="why-stat-card fade-card"><span class="why-stat-num" data-target="100" data-suffix="%">0</span><span class="why-stat-lbl">Satisfaction Rate</span></div>
+    </div>
+    <div class="why-diff-grid">
+      <div class="why-diff fade-card">
+        <div class="why-diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="why-diff-text"><h4>Root-Cause Extermination</h4><p>We don't spray and hope. Every treatment targets the specific species, its harborage, and the entry points — eliminating the infestation at its source.</p></div>
+      </div>
+      <div class="why-diff fade-card">
+        <div class="why-diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="why-diff-text"><h4>Rapid Response Scheduling</h4><p>Most calls receive same-day or next-morning appointments. When you have a pest problem, waiting a week isn't an option.</p></div>
+      </div>
+      <div class="why-diff fade-card">
+        <div class="why-diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="why-diff-text"><h4>Licensed &amp; Fully Insured</h4><p>Every technician is Texas Structural Pest Control licensed and carries full liability insurance — protecting you on every visit.</p></div>
+      </div>
+      <div class="why-diff fade-card">
+        <div class="why-diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="why-diff-text"><h4>Backed by a Solid Guarantee</h4><p>If pests return within the guarantee period, we come back and re-treat at no additional charge. We don't stop until you're pest-free.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-it-works">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent)">Our Method</span>
+    <h2 class="section-title">Diagnose. Treat. Guarantee.</h2>
+    <p class="section-sub" style="color:var(--t2);margin-bottom:48px;">Three steps built around getting it right the first time.</p>
+    <div class="steps-row">
+      <div class="step-card fade-card">
+        <div class="step-num-circle">1</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <div class="step-title">Precision Diagnosis</div>
+        <p class="step-desc">We identify the specific species, map its harborage areas, and find every entry point. Understanding the problem fully is the only way to eliminate it completely.</p>
+      </div>
+      <div class="step-card fade-card">
+        <div class="step-num-circle">2</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="step-title">Targeted Treatment</div>
+        <p class="step-desc">Professional-grade treatments applied exactly where they'll be most effective. No over-application, no under-treatment — precise chemistry for precise results.</p>
+      </div>
+      <div class="step-card fade-card">
+        <div class="step-num-circle">3</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="step-title">Guaranteed Follow-Through</div>
+        <p class="step-desc">We follow up and stand behind every job with our re-treatment guarantee. Your pest-free home is the only outcome we'll accept.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div class="reviews-title-block">
+        <span class="section-label">Customer Reviews</span>
+        <h2 class="section-title">101 Reasons Pasadena Trusts Ajax</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        4.8 · 101 Google Reviews
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card fade-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p class="review-text">"Three other companies had treated our roach problem before Ajax. Same result every time — they'd come back within a month. Ajax came out, spent actual time diagnosing where the infestation was centered, and applied the gel bait in spots the other guys completely missed. That was seven months ago. Not a single roach since. The diagnostic step is what makes the difference."</p>
+        <hr class="review-divider">
+        <div class="review-footer"><div class="reviewer-avatar">KR</div><div><div class="reviewer-name">Kevin R.</div><div class="reviewer-loc">Pasadena, TX &middot; Google Review</div></div></div>
+      </div>
+      <div class="review-card fade-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p class="review-text">"Discovered a termite swarm coming through my window frame on a Tuesday morning. Called Ajax at 8 AM and a technician was at my house by noon. He did a complete inspection, walked me through exactly what he found, and they treated the same afternoon. The whole thing was handled in under 24 hours. Price was transparent from the start. These are exactly the kind of professionals you want for this kind of job."</p>
+        <hr class="review-divider">
+        <div class="review-footer"><div class="reviewer-avatar">TN</div><div><div class="reviewer-name">Tanya N.</div><div class="reviewer-loc">South Houston, TX &middot; Google Review</div></div></div>
+      </div>
+      <div class="review-card fade-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p class="review-text">"Signed up for the quarterly plan after a bad mosquito summer. The technician treats the entire yard — not just a quick spray of the patio. Since starting the program, we've been able to use our backyard again. It's not an exaggeration to say it completely changed how we use our outdoor space. Worth every dollar."</p>
+        <hr class="review-divider">
+        <div class="review-footer"><div class="reviewer-avatar">BF</div><div><div class="reviewer-name">Brian F.</div><div class="reviewer-loc">Deer Park, TX &middot; Google Review</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-areas">
+  <div class="container">
+    <div class="areas-inner">
+      <div class="areas-left">
+        <span class="section-label">Coverage Area</span>
+        <h2 class="section-title">Serving All of SE Houston</h2>
+        <p style="font-family:var(--font-body);font-size:16px;color:var(--t2);line-height:1.65;margin-bottom:28px;">From Pasadena and Deer Park to La Porte, Baytown, and the broader Southeast Houston area — Ajax is ready to respond fast wherever you are.</p>
+        <a href="tel:8328889121" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Check Availability
+        </a>
+      </div>
+      <div>
+        <div class="areas-card">
+          <h4>Service Areas</h4>
+          <div class="chip-grid">
+            <span class="chip">Pasadena</span><span class="chip">Deer Park</span><span class="chip">La Porte</span>
+            <span class="chip">Baytown</span><span class="chip">South Houston</span><span class="chip">Galena Park</span>
+            <span class="chip">Channelview</span><span class="chip">Pearland</span><span class="chip">League City</span>
+            <span class="chip">Webster</span><span class="chip">Clear Lake</span><span class="chip">Friendswood</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="contact-form-title">Request a Free Estimate</div>
+        <p class="contact-form-sub">Tell us what you're dealing with — we'll diagnose it, price it honestly, and get to work fast.</p>
+        <form>
+          <div class="form-row"><label>Full Name</label><input type="text" placeholder="Your full name"></div>
+          <div class="form-row"><label>Phone Number</label><input type="tel" placeholder="(832) 555-0000"></div>
+          <div class="form-row"><label>Email Address</label><input type="email" placeholder="you@email.com"></div>
+          <div class="form-row"><label>Pest Problem</label><select><option value="">Select a pest type...</option><option>Roaches / Ants</option><option>Termites</option><option>Rodents</option><option>Mosquitoes</option><option>Bed Bugs</option><option>Other / Not Sure</option></select></div>
+          <div class="form-row"><label>Details</label><textarea placeholder="Describe what you've seen, where, and for how long..."></textarea></div>
+          <button type="submit" class="form-submit">Request Free Estimate</button>
+        </form>
+      </div>
+      <div>
+        <div class="contact-info-card">
+          <div class="contact-info-title">Reach Ajax Directly</div>
+          <div class="info-item"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><h5>Phone</h5><p>(832) 888-9121</p></div></div>
+          <div class="info-item"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><h5>Response Time</h5><p>Same-day or next-morning for most Pasadena-area calls</p></div></div>
+          <div class="info-item"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h5>Service Area</h5><p>Pasadena, Deer Park, La Porte, Baytown &amp; SE Houston</p></div></div>
+          <div class="info-item"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><h5>Guarantee</h5><p>Re-treatment guarantee included with every service — we come back if pests return</p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2 class="cta-headline">Fast. Precise. Guaranteed Extermination.</h2>
+    <p class="cta-sub">101 five-star reviews from Pasadena homeowners who needed it done right. Call Ajax today.</p>
+    <a href="tel:8328889121" class="cta-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (832) 888-9121
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Ajax Exterminating</div>
+        <p class="footer-brand-desc">Pasadena, TX's precision pest extermination service. Fast response, root-cause diagnostics, and guaranteed elimination for SE Houston homeowners.</p>
+        <div style="display:flex;gap:6px;align-items:center;margin-top:4px;color:var(--t2);font-family:var(--font-body);font-size:13px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(832) 888-9121</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links"><li><a href="#">Roach Elimination</a></li><li><a href="#">Termite Control</a></li><li><a href="#">Rodent Exclusion</a></li><li><a href="#">Mosquito Control</a></li><li><a href="#">Bed Bug Treatment</a></li><li><a href="#">Quarterly Plans</a></li></ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links"><li><a href="#">Pasadena, TX</a></li><li><a href="#">Deer Park, TX</a></li><li><a href="#">La Porte, TX</a></li><li><a href="#">Baytown, TX</a></li><li><a href="#">South Houston</a></li><li><a href="#">Pearland, TX</a></li></ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links"><li><a href="tel:8328889121">(832) 888-9121</a></li><li><a href="#">Free Estimate</a></li><li><a href="#">Same-Day Service</a></li><li><a href="#">TX Licensed &amp; Insured</a></li><li><a href="#">Re-Treatment Guarantee</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">&copy; 2026 Ajax Exterminating. All rights reserved.</span>
+      <span class="footer-copyright">TX Structural Pest Control Licensed · Pasadena, TX</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function animateCount(el) {
+  const target = parseInt(el.dataset.target), suffix = el.dataset.suffix || '', duration = 1800, start = performance.now();
+  const update = (time) => { const p = Math.min((time-start)/duration,1), ease = 1-Math.pow(1-p,3); el.textContent = Math.floor(ease*target).toLocaleString()+suffix; if(p<1) requestAnimationFrame(update); };
+  requestAnimationFrame(update);
+}
+const sObs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) { animateCount(x.target); sObs.unobserve(x.target); } }), {threshold:0.5});
+document.querySelectorAll('[data-target]').forEach(el => sObs.observe(el));
+const cObs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) { x.target.classList.add('visible'); cObs.unobserve(x.target); } }), {threshold:0.2});
+document.querySelectorAll('.fade-card').forEach(el => cObs.observe(el));
+const hdr = document.querySelector('.site-header');
+window.addEventListener('scroll', () => { hdr.style.boxShadow = window.scrollY > 50 ? '0 2px 20px rgba(0,0,0,0.6)' : '0 2px 12px rgba(0,0,0,0.5)'; });
+</script>
+</body>
+</html>

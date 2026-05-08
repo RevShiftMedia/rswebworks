@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green and Safe Pest Control | Eco-Friendly Pest Solutions | Frisco, TX</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #1b4332;
+  --primary-dark: #0d2b1e;
+  --accent: #22c55e;
+  --accent-dark: #15803d;
+  --bg: #ffffff;
+  --bg-off: #f0faf4;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #d1fae5;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(34,197,94,0.35); transition: all 0.15s ease;
+  text-decoration: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(34,197,94,0.45); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 600;
+  padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.15s ease; text-decoration: none;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; } }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+
+.fade-card { opacity: 0; }
+.fade-card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.fade-card:nth-child(1) { animation-delay: 0.1s; }
+.fade-card:nth-child(2) { animation-delay: 0.2s; }
+.fade-card:nth-child(3) { animation-delay: 0.3s; }
+.fade-card:nth-child(4) { animation-delay: 0.4s; }
+.fade-card:nth-child(5) { animation-delay: 0.5s; }
+.fade-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* HEADER */
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--primary);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  padding: 0 24px;
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+}
+.header-brand { display: flex; flex-direction: column; gap: 2px; }
+.header-name { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; letter-spacing: 0.01em; }
+.header-tag { font-family: var(--font-body); font-size: 12px; color: var(--t2); }
+.header-cta {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 14px; font-weight: 700;
+  padding: 10px 20px; border-radius: 7px; text-decoration: none;
+  box-shadow: 0 2px 10px rgba(34,197,94,0.35); transition: all 0.15s ease;
+}
+.header-cta:hover { transform: translateY(-1px); }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  position: relative; overflow: hidden; padding: 90px 0 80px;
+}
+.hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: center;
+}
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-card { display: none; } }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 6px 14px; border-radius: 20px; margin-bottom: 20px;
+}
+.hero-headline {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: clamp(42px, 6vw, 64px); color: white;
+  line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 20px;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-family: var(--font-body); font-size: 18px; color: var(--t2);
+  line-height: 1.6; margin-bottom: 32px; max-width: 520px;
+}
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+.hero-trust {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  font-family: var(--font-body); font-size: 13px; color: var(--t2);
+}
+.trust-item { display: flex; align-items: center; gap: 5px; }
+
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 16px; padding: 28px 32px;
+}
+.hero-card-title {
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  color: white; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.05em;
+}
+.hero-prop { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; }
+.hero-prop-icon {
+  width: 28px; height: 28px; background: rgba(34,197,94,0.2);
+  border-radius: 6px; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; color: var(--accent);
+}
+.hero-prop-text h4 { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: white; margin-bottom: 2px; }
+.hero-prop-text p { font-family: var(--font-body); font-size: 12px; color: var(--t2); line-height: 1.5; }
+.hero-card-phone {
+  margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.15);
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-card-phone span { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--accent); }
+
+/* STATS */
+.stats-bar {
+  background: var(--primary);
+  padding: 0;
+}
+.stats-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 700px) { .stats-inner { grid-template-columns: repeat(2, 1fr); } }
+.stat-box {
+  padding: 36px 24px; text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.stat-box:last-child { border-right: none; }
+.stat-number {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: clamp(32px, 4vw, 48px); color: var(--accent);
+  letter-spacing: -0.02em; line-height: 1;
+  display: block; margin-bottom: 6px;
+}
+.stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+
+/* SERVICES */
+.services { background: var(--bg); }
+.section-label {
+  font-family: var(--font-display); font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--accent); margin-bottom: 12px; display: block;
+}
+.section-title {
+  font-family: var(--font-display); font-size: 36px; font-weight: 900;
+  color: var(--dark-text); margin-bottom: 12px; letter-spacing: -0.02em;
+}
+.section-sub {
+  font-family: var(--font-body); font-size: 16px;
+  color: var(--grey-text); margin-bottom: 48px; max-width: 520px;
+}
+.service-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-top: 3px solid transparent; border-radius: var(--radius);
+  padding: 28px 24px; box-shadow: var(--shadow);
+  transition: all 0.25s ease;
+}
+.service-card:hover {
+  border-top-color: var(--accent);
+  transform: translateY(-4px); box-shadow: var(--shadow-lg);
+}
+.svc-icon {
+  width: 52px; height: 52px; background: rgba(34,197,94,0.12);
+  border-radius: 12px; display: flex; align-items: center; justify-content: center;
+  color: var(--accent); margin-bottom: 18px;
+}
+.svc-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--dark-text); margin-bottom: 8px; }
+.svc-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 14px; }
+.svc-link { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; }
+.svc-link:hover { text-decoration: underline; }
+
+/* WHY CHOOSE US */
+.why-us {
+  background: var(--primary); position: relative; overflow: hidden;
+}
+.why-us::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.10; pointer-events: none; z-index: 0;
+}
+.why-us > * { position: relative; z-index: 1; }
+.why-us .section-title { color: white; }
+.why-us .section-sub { color: var(--t2); }
+.why-stat-card {
+  background: var(--primary-dark); border-radius: var(--radius); padding: 28px 20px;
+  text-align: center; border: 1px solid rgba(255,255,255,0.08);
+}
+.why-stat-num { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--accent); display: block; margin-bottom: 4px; }
+.why-stat-lbl { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+.why-stats { margin-bottom: 48px; }
+.why-diff-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+@media (max-width: 600px) { .why-diff-grid { grid-template-columns: 1fr; } }
+.why-diff {
+  display: flex; gap: 16px; align-items: flex-start;
+}
+.why-diff-icon {
+  width: 40px; height: 40px; background: rgba(34,197,94,0.15);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; color: var(--accent);
+}
+.why-diff-text h4 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; margin-bottom: 4px; }
+.why-diff-text p { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.55; }
+
+/* HOW IT WORKS */
+.how-it-works { background: var(--primary-dark); }
+.how-it-works .section-title { color: white; }
+.how-it-works .section-sub { color: var(--t2); }
+.steps-row {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  position: relative;
+}
+@media (max-width: 700px) { .steps-row { grid-template-columns: 1fr; } }
+.steps-row::before {
+  content: '';
+  position: absolute; top: 32px; left: calc(16.66% + 16px); right: calc(16.66% + 16px);
+  height: 1px; border-top: 2px dashed rgba(255,255,255,0.15);
+}
+@media (max-width: 700px) { .steps-row::before { display: none; } }
+.step-card { text-align: center; padding: 20px; }
+.step-num-circle {
+  width: 56px; height: 56px; background: var(--accent);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 24px; font-weight: 900; color: white;
+  margin: 0 auto 20px;
+}
+.step-icon { color: white; margin-bottom: 14px; display: flex; justify-content: center; }
+.step-title { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; margin-bottom: 8px; }
+.step-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.6; }
+
+/* REVIEWS */
+.reviews { background: var(--bg-off); }
+.reviews-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 48px; flex-wrap: wrap; gap: 16px;
+}
+.reviews-title-block .section-title { color: var(--dark-text); margin-bottom: 8px; }
+.google-badge {
+  display: flex; align-items: center; gap: 8px;
+  background: white; border: 1px solid var(--border);
+  border-radius: 10px; padding: 10px 16px;
+  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+}
+.review-card {
+  background: white; border: 1px solid #e8f5e9;
+  border-radius: var(--radius); padding: 28px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  transition: all 0.25s ease;
+}
+.review-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); transform: translateY(-3px); }
+.review-stars { display: flex; gap: 3px; color: #f59e0b; margin-bottom: 14px; }
+.review-text {
+  font-family: var(--font-body); font-style: italic; font-size: 15px;
+  line-height: 1.7; color: var(--dark-text); margin-bottom: 16px;
+}
+.review-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 16px; }
+.review-footer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(34,197,94,0.15); display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--accent);
+  flex-shrink: 0;
+}
+.reviewer-name { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--dark-text); }
+.reviewer-loc { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); margin-top: 1px; }
+
+/* SERVICE AREAS */
+.service-areas { background: var(--primary); }
+.service-areas .section-title { color: white; }
+.service-areas .section-sub { color: var(--t2); }
+.areas-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+@media (max-width: 700px) { .areas-inner { grid-template-columns: 1fr; } }
+.areas-left p { font-family: var(--font-body); font-size: 16px; color: var(--t2); line-height: 1.65; margin-bottom: 28px; }
+.areas-card {
+  background: var(--primary-dark); border-radius: var(--radius);
+  padding: 28px 24px; border: 1px solid rgba(255,255,255,0.08);
+}
+.areas-card h4 {
+  font-family: var(--font-display); font-size: 14px; font-weight: 700;
+  color: var(--t2); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 18px;
+}
+.chip-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  background: rgba(255,255,255,0.08); color: var(--t2);
+  font-family: var(--font-body); font-size: 13px; font-weight: 500;
+  padding: 6px 14px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.12);
+  cursor: default; transition: all 0.15s ease;
+}
+.chip:hover { background: var(--accent); color: white; border-color: var(--accent); }
+
+/* CONTACT */
+.contact-section { background: white; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+@media (max-width: 800px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-form-title { font-family: var(--font-display); font-size: 28px; font-weight: 900; color: var(--dark-text); margin-bottom: 8px; }
+.contact-form-sub { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); margin-bottom: 28px; }
+.form-row { margin-bottom: 16px; }
+.form-row label {
+  display: block; font-family: var(--font-body); font-size: 13px;
+  font-weight: 600; color: var(--dark-text); margin-bottom: 6px;
+}
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%; background: var(--bg-off); border: 1px solid var(--border);
+  border-radius: 8px; padding: 12px 14px;
+  font-family: var(--font-body); font-size: 14px; color: var(--dark-text);
+  transition: border-color 0.2s;
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+  outline: none; border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(34,197,94,0.12);
+}
+.form-row textarea { resize: vertical; min-height: 100px; }
+.form-submit {
+  width: 100%; background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 17px; font-weight: 700;
+  padding: 15px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(34,197,94,0.3); transition: all 0.15s ease;
+  margin-top: 8px;
+}
+.form-submit:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.contact-info-card {
+  background: var(--primary); border-radius: var(--radius); padding: 36px 28px;
+  display: flex; flex-direction: column; gap: 24px;
+}
+.contact-info-title { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: white; }
+.info-item { display: flex; gap: 14px; align-items: flex-start; }
+.info-icon {
+  width: 36px; height: 36px; background: rgba(34,197,94,0.2);
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  color: var(--accent); flex-shrink: 0;
+}
+.info-item h5 { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--t2); margin-bottom: 3px; }
+.info-item p { font-family: var(--font-body); font-size: 14px; color: white; }
+
+/* CTA BAND */
+.cta-band {
+  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+  padding: 80px 0; position: relative; overflow: hidden; text-align: center;
+}
+.cta-band::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.15; pointer-events: none; z-index: 0;
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-headline {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: clamp(28px, 4vw, 42px); color: white;
+  letter-spacing: -0.02em; margin-bottom: 12px;
+}
+.cta-sub { font-family: var(--font-body); font-size: 17px; color: rgba(255,255,255,0.85); margin-bottom: 32px; }
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: white; color: var(--accent-dark);
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  padding: 15px 32px; border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2); text-decoration: none;
+  transition: all 0.15s ease;
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
+
+/* FOOTER */
+.footer { background: var(--primary-dark); padding: 64px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+.footer-brand-name { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; margin-bottom: 10px; }
+.footer-brand-desc { font-family: var(--font-body); font-size: 13px; color: var(--t2); line-height: 1.65; margin-bottom: 20px; }
+.footer-col-title { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { font-family: var(--font-body); font-size: 13px; color: var(--t2); text-decoration: none; transition: color 0.15s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 0;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
+}
+.footer-copyright { font-family: var(--font-body); font-size: 12px; color: var(--t3); }
+.footer-license { font-family: var(--font-body); font-size: 12px; color: var(--t3); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <span class="header-name">Green and Safe Pest Control</span>
+      <span class="header-tag">Eco-Friendly Pest Solutions — Frisco, TX</span>
+    </div>
+    <a href="tel:8179930024" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (817) 993-0024
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        5.0 Stars — Frisco's Eco Pest Experts
+      </div>
+      <h1 class="hero-headline">Frisco's Trusted <span>Eco Pest</span> Protection</h1>
+      <p class="hero-sub">Safe for your kids, safe for your pets, deadly for pests. Serving Frisco, Plano, and the DFW corridor with treatments your whole family can feel good about.</p>
+      <div class="hero-ctas">
+        <a href="tel:8179930024" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (817) 993-0024
+        </a>
+        <a href="#contact" class="btn-ghost">Free Inspection</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          5.0 · 22 Reviews
+        </div>
+        <span style="color:var(--t3)">|</span>
+        <span>Licensed &amp; Insured</span>
+        <span style="color:var(--t3)">|</span>
+        <span>Pet &amp; Child Safe</span>
+        <span style="color:var(--t3)">|</span>
+        <span>15+ Years Serving DFW</span>
+      </div>
+    </div>
+    <div class="hero-card hero-card">
+      <div class="hero-card-title">Why Eco Matters</div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        </div>
+        <div class="hero-prop-text">
+          <h4>100% Eco-Safe Formulas</h4>
+          <p>No harsh chemical residue on your floors, furniture, or family</p>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="hero-prop-text">
+          <h4>Pet &amp; Child Safe</h4>
+          <p>Treatments are dry in 30 minutes — life goes on immediately</p>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="hero-prop-text">
+          <h4>Satisfaction Guarantee</h4>
+          <p>If pests return between visits, so do we — at no charge</p>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="hero-prop-text">
+          <h4>Same-Day Appointments</h4>
+          <p>Call before noon and we'll often be there today</p>
+        </div>
+      </div>
+      <div class="hero-card-phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>(817) 993-0024</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-box">
+      <span class="stat-number" data-target="500" data-suffix="+">0</span>
+      <span class="stat-label">Homes Protected</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-number" data-target="5" data-suffix="★">0</span>
+      <span class="stat-label">Average Rating</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-number" data-target="100" data-suffix="%">0</span>
+      <span class="stat-label">Eco-Safe Guarantee</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-number" data-target="15" data-suffix="+ Yrs">0</span>
+      <span class="stat-label">Serving DFW</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <span class="section-label">What We Treat</span>
+    <h2 class="section-title">Complete Eco-Friendly Pest Solutions</h2>
+    <p class="section-sub">Every service uses plant-derived, low-toxicity treatments that eliminate pests without putting your family at risk.</p>
+    <div class="grid-3">
+      <div class="service-card fade-card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        </div>
+        <div class="svc-name">Eco General Pest Control</div>
+        <p class="svc-desc">Roaches, ants, spiders, and silverfish building up around your home. Our barrier treatment stops them at entry points without soaking your living spaces in chemicals.</p>
+        <a href="#contact" class="svc-link">Schedule Service →</a>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div class="svc-name">Mosquito Treatment</div>
+        <p class="svc-desc">Can't enjoy your backyard? Our seasonal mosquito programs target breeding sites and resting areas with botanical-based repellents — safe for pollinators, fatal for mosquitoes.</p>
+        <a href="#contact" class="svc-link">Schedule Service →</a>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="svc-name">Termite Inspection &amp; Treatment</div>
+        <p class="svc-desc">Subterranean termites are eating Frisco homes quietly right now. Our inspection finds them before structural damage sets in, and our treatment stops them with minimal environmental impact.</p>
+        <a href="#contact" class="svc-link">Schedule Service →</a>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="svc-name">Rodent Exclusion</div>
+        <p class="svc-desc">Mice and rats don't need a welcome mat — a gap the size of a dime is enough. We find every entry point, seal it permanently, and remove what's already inside.</p>
+        <a href="#contact" class="svc-link">Schedule Service →</a>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+        </div>
+        <div class="svc-name">Bed Bug Elimination</div>
+        <p class="svc-desc">Waking up with bites and dreading bedtime. Our heat and botanical combination treatment eliminates every life stage — eggs, nymphs, adults — in a single service.</p>
+        <a href="#contact" class="svc-link">Schedule Service →</a>
+      </div>
+      <div class="service-card fade-card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="svc-name">Quarterly Maintenance Plans</div>
+        <p class="svc-desc">Prevention is cheaper than infestation. Our quarterly plan keeps your home's perimeter defended year-round with regularly scheduled eco-safe treatments.</p>
+        <a href="#contact" class="svc-link">Schedule Service →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-us" id="why-us">
+  <div class="container">
+    <span class="section-label">Why Homeowners Choose Us</span>
+    <h2 class="section-title">Protection You Can Feel Good About</h2>
+    <p class="section-sub">The only Frisco pest company that puts your family's safety ahead of the fastest possible kill.</p>
+    <div class="grid-4 why-stats">
+      <div class="why-stat-card fade-card">
+        <span class="why-stat-num" data-target="500" data-suffix="+">0</span>
+        <span class="why-stat-lbl">Frisco-Area Homes</span>
+      </div>
+      <div class="why-stat-card fade-card">
+        <span class="why-stat-num" data-target="22">0</span>
+        <span class="why-stat-lbl">5-Star Google Reviews</span>
+      </div>
+      <div class="why-stat-card fade-card">
+        <span class="why-stat-num" data-target="15" data-suffix="+">0</span>
+        <span class="why-stat-lbl">Years in DFW</span>
+      </div>
+      <div class="why-stat-card fade-card">
+        <span class="why-stat-num" data-target="100" data-suffix="%">0</span>
+        <span class="why-stat-lbl">Satisfaction Guarantee</span>
+      </div>
+    </div>
+    <div class="why-diff-grid">
+      <div class="why-diff fade-card">
+        <div class="why-diff-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="why-diff-text">
+          <h4>Zero Harsh Chemical Residue</h4>
+          <p>Our formulas break down within hours. No lingering smell, no waxy residue on baseboards — just a pest-free home you can return to immediately.</p>
+        </div>
+      </div>
+      <div class="why-diff fade-card">
+        <div class="why-diff-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="why-diff-text">
+          <h4>Licensed, Insured &amp; Background Checked</h4>
+          <p>Every technician is Texas-licensed, fully insured, and background-cleared before they ever set foot in a customer's home.</p>
+        </div>
+      </div>
+      <div class="why-diff fade-card">
+        <div class="why-diff-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="why-diff-text">
+          <h4>Free Re-Treatment Guarantee</h4>
+          <p>If pests return within 30 days of any service, we come back and re-treat at absolutely no charge. Your satisfaction is the only result we accept.</p>
+        </div>
+      </div>
+      <div class="why-diff fade-card">
+        <div class="why-diff-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="why-diff-text">
+          <h4>Locally Owned, DFW Focused</h4>
+          <p>Not a national franchise with a 1-800 number. We live and work in Frisco and know the specific pest pressures this region faces each season.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent)">The Process</span>
+    <h2 class="section-title">From Call to Pest-Free in Three Steps</h2>
+    <p class="section-sub" style="color:var(--t2); margin-bottom:48px;">Simple, transparent, and built around your schedule.</p>
+    <div class="steps-row">
+      <div class="step-card fade-card">
+        <div class="step-num-circle">1</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div class="step-title">Schedule Free Inspection</div>
+        <p class="step-desc">Call or book online. We arrive on time, inspect every corner, and explain exactly what we find — no pressure, no upsell, just honest assessment.</p>
+      </div>
+      <div class="step-card fade-card">
+        <div class="step-num-circle">2</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="step-title">Custom Eco Treatment Plan</div>
+        <p class="step-desc">We design a treatment plan specific to your home's pest pressure, layout, and your family's sensitivities. You approve every step before we begin.</p>
+      </div>
+      <div class="step-card fade-card">
+        <div class="step-num-circle">3</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="step-title">Ongoing Protection Guarantee</div>
+        <p class="step-desc">After treatment, your home stays protected through our guarantee period. Quarterly plan members get priority same-day service all year long.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div class="reviews-title-block">
+        <span class="section-label">What Our Customers Say</span>
+        <h2 class="section-title">Real Families, Real Results</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        5.0 · Google Reviews
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card fade-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"We had a bad German cockroach problem in our kitchen — I have a toddler and two dogs, so I was terrified about spraying chemicals everywhere. Green and Safe showed up within two days, explained every product they were using, and within a week the roaches were completely gone. It's been four months and nothing has come back. I finally feel safe cooking in my own kitchen again."</p>
+        <hr class="review-divider">
+        <div class="review-footer">
+          <div class="reviewer-avatar">AR</div>
+          <div>
+            <div class="reviewer-name">Ashley R.</div>
+            <div class="reviewer-loc">Stonebriar, Frisco TX &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Termite damage scared us badly. Our inspector at Green and Safe actually walked me through the damage he found on my phone screen, explained the treatment options, and gave me a fair price — no high-pressure sales. They treated the perimeter the same week and the follow-up inspection three months later showed zero activity. Worth every penny for the peace of mind alone."</p>
+        <hr class="review-divider">
+        <div class="review-footer">
+          <div class="reviewer-avatar">MW</div>
+          <div>
+            <div class="reviewer-name">Marcus W.</div>
+            <div class="reviewer-loc">Eldorado Pkwy, Frisco TX &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"I specifically sought out an eco-friendly company because my son has severe asthma. The technician arrived in under an hour for our same-day appointment, explained everything, and the treatment genuinely had no smell at all. My son had zero reaction. Six weeks out and the fire ants in our yard are completely gone. I've already signed up for their quarterly plan and referred them to four neighbors."</p>
+        <hr class="review-divider">
+        <div class="review-footer">
+          <div class="reviewer-avatar">JL</div>
+          <div>
+            <div class="reviewer-name">Jennifer L.</div>
+            <div class="reviewer-loc">The District, Frisco TX &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="service-areas">
+  <div class="container">
+    <div class="areas-inner">
+      <div class="areas-left">
+        <span class="section-label">Where We Serve</span>
+        <h2 class="section-title">Protecting DFW Families</h2>
+        <p>From Frisco's new developments to established neighborhoods in Plano and McKinney, our eco-safe treatments cover the entire North Dallas corridor. Call us wherever you are in DFW — if we can't serve you, we'll tell you honestly.</p>
+        <a href="tel:8179930024" class="btn-primary" style="margin-top:8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Check Your Area
+        </a>
+      </div>
+      <div class="areas-right">
+        <div class="areas-card">
+          <h4>Service Areas</h4>
+          <div class="chip-grid">
+            <span class="chip">Frisco</span>
+            <span class="chip">Plano</span>
+            <span class="chip">Allen</span>
+            <span class="chip">McKinney</span>
+            <span class="chip">Little Elm</span>
+            <span class="chip">Prosper</span>
+            <span class="chip">Celina</span>
+            <span class="chip">The Colony</span>
+            <span class="chip">Lewisville</span>
+            <span class="chip">Flower Mound</span>
+            <span class="chip">Carrollton</span>
+            <span class="chip">Addison</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="contact-form-title">Get Your Free Pest Inspection</div>
+        <p class="contact-form-sub">Fill out the form and we'll contact you within the hour to schedule. Most Frisco homes receive same-day or next-day appointments.</p>
+        <form>
+          <div class="form-row">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your full name">
+          </div>
+          <div class="form-row">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="(817) 555-0000">
+          </div>
+          <div class="form-row">
+            <label>Email Address</label>
+            <input type="email" placeholder="you@email.com">
+          </div>
+          <div class="form-row">
+            <label>Type of Pest Problem</label>
+            <select>
+              <option value="">Select a pest type...</option>
+              <option>Cockroaches / Ants</option>
+              <option>Termites</option>
+              <option>Rodents / Mice</option>
+              <option>Mosquitoes</option>
+              <option>Bed Bugs</option>
+              <option>Not Sure / General Inspection</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Additional Details</label>
+            <textarea placeholder="Describe what you've been seeing, how long it's been going on, etc."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Request Free Inspection</button>
+        </form>
+      </div>
+      <div>
+        <div class="contact-info-card">
+          <div class="contact-info-title">Reach Us Directly</div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h5>Phone</h5>
+              <p>(817) 993-0024</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h5>Hours</h5>
+              <p>Mon–Fri: 7:00 AM – 7:00 PM<br>Saturday: 8:00 AM – 5:00 PM</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h5>Service Area</h5>
+              <p>Frisco, Plano, Allen, McKinney &amp; Surrounding DFW Communities</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h5>License &amp; Insurance</h5>
+              <p>Texas Structural Pest Control Licensed · Fully Insured</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2 class="cta-headline">Protect Your Family Without Harsh Chemicals</h2>
+    <p class="cta-sub">Join 500+ Frisco-area households who've switched to the smarter, safer pest solution.</p>
+    <a href="tel:8179930024" class="cta-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (817) 993-0024
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Green and Safe Pest Control</div>
+        <p class="footer-brand-desc">Eco-friendly pest elimination for Frisco, TX and the DFW corridor. Safe for your family, devastating for pests. Licensed, insured, and guaranteed.</p>
+        <div style="display:flex;gap:6px;align-items:center;margin-top:4px;color:var(--t2);font-family:var(--font-body);font-size:13px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (817) 993-0024
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">Eco General Pest Control</a></li>
+          <li><a href="#">Mosquito Treatment</a></li>
+          <li><a href="#">Termite Inspection</a></li>
+          <li><a href="#">Rodent Exclusion</a></li>
+          <li><a href="#">Bed Bug Elimination</a></li>
+          <li><a href="#">Quarterly Plans</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#">Frisco, TX</a></li>
+          <li><a href="#">Plano, TX</a></li>
+          <li><a href="#">Allen, TX</a></li>
+          <li><a href="#">McKinney, TX</a></li>
+          <li><a href="#">Little Elm, TX</a></li>
+          <li><a href="#">Prosper, TX</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:8179930024">(817) 993-0024</a></li>
+          <li><a href="#">Free Inspection</a></li>
+          <li><a href="#">Mon–Fri: 7AM–7PM</a></li>
+          <li><a href="#">Saturday: 8AM–5PM</a></li>
+          <li><a href="#">Service Guarantee</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">&copy; 2026 Green and Safe Pest Control. All rights reserved.</span>
+      <span class="footer-license">Texas Structural Pest Control License · Fully Insured · Frisco, TX</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Stat counter animation
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+
+// IntersectionObserver for stat counters
+const statEls = document.querySelectorAll('[data-target]');
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateCount(e.target);
+      statObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+statEls.forEach(el => statObserver.observe(el));
+
+// IntersectionObserver for fade-card animations
+const cardEls = document.querySelectorAll('.fade-card');
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      cardObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+cardEls.forEach(el => cardObserver.observe(el));
+
+// Header scroll shadow
+const header = document.querySelector('.site-header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.4)';
+  } else {
+    header.style.boxShadow = '0 2px 12px rgba(0,0,0,0.3)';
+  }
+});
+</script>
+</body>
+</html>
