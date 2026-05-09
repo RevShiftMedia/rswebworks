@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sureguard Lawn &amp; Pest — Carrollton, TX</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600&display=swap');
+:root {
+  --primary: #0d3532; --primary-dark: #082220;
+  --accent: #f97316; --accent-dark: #c2410c; --accent-rgb: 249,115,22;
+  --bg: #fff; --bg-off: #fef9f5; --t1: #fff; --t2: rgba(255,255,255,.78); --t3: rgba(255,255,255,.45);
+  --dark-text: #111827; --grey-text: #6b7280; --border: #e5e7eb;
+  --font-display: 'Barlow Condensed',sans-serif; --font-body: 'Nunito Sans',sans-serif;
+  --radius: 12px; --shadow: 0 4px 20px rgba(13,53,50,.1); --shadow-lg: 0 8px 40px rgba(13,53,50,.2);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);background:var(--bg);color:var(--dark-text);line-height:1.65}
+h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-.02em}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{animation:heroFadeUp .5s ease-out .1s both}.hero-headline{animation:heroFadeUp .5s ease-out .2s both}
+.hero-sub{animation:heroFadeUp .5s ease-out .35s both}.hero-ctas{animation:heroFadeUp .5s ease-out .5s both}
+.hero-trust{animation:heroFadeUp .5s ease-out .65s both}.hero-card{animation:heroFadeUp .5s ease-out .4s both}
+.card{opacity:0}.card.visible{animation:fadeUp .4s ease-out forwards}
+.card:nth-child(1){animation-delay:.1s}.card:nth-child(2){animation-delay:.2s}.card:nth-child(3){animation-delay:.3s}
+.card:nth-child(4){animation-delay:.4s}.card:nth-child(5){animation-delay:.5s}.card:nth-child(6){animation-delay:.6s}
+section{padding:90px 0}.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-family:var(--font-display);font-size:15px;font-weight:700;padding:14px 28px;border-radius:8px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(var(--accent-rgb),.4);transition:all .15s ease;text-decoration:none}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(var(--accent-rgb),.5)}.btn-primary:active{transform:scale(.97)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-family:var(--font-display);font-size:15px;font-weight:600;padding:13px 28px;border-radius:8px;border:2px solid rgba(255,255,255,.6);cursor:pointer;transition:all .15s;text-decoration:none}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+@media(max-width:900px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.grid-3,.grid-4,.grid-2{grid-template-columns:1fr}}
+.site-header{background:var(--primary);position:sticky;top:0;z-index:1000;box-shadow:0 2px 12px rgba(0,0,0,.35)}
+.site-header.scrolled{box-shadow:0 4px 24px rgba(0,0,0,.55)}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px}
+.header-brand{display:flex;flex-direction:column}.header-name{font-family:var(--font-display);font-weight:700;font-size:20px;color:#fff}.header-tagline{font-family:var(--font-body);font-size:12px;color:var(--t2)}
+.header-cta{display:inline-flex;align-items:center;gap:7px;background:var(--accent);color:#fff;font-family:var(--font-display);font-weight:700;font-size:14px;padding:10px 20px;border-radius:7px;text-decoration:none;box-shadow:0 3px 12px rgba(var(--accent-rgb),.4);transition:all .15s}
+.header-cta:hover{transform:translateY(-1px)}
+.hero{background:linear-gradient(145deg,var(--primary-dark) 0%,var(--primary) 65%,#0d4a3a 100%);padding:100px 0 80px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.12;pointer-events:none;z-index:0}
+.hero>*{position:relative;z-index:1}
+.hero-layout{max-width:1100px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 380px;gap:56px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;font-family:var(--font-display);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:20px}
+.hero-headline{font-family:var(--font-display);font-size:clamp(42px,6vw,64px);font-weight:900;color:#fff;line-height:1.05;letter-spacing:-.02em;margin-bottom:18px}
+.hero-headline span{color:var(--accent)}.hero-sub{font-family:var(--font-body);font-size:18px;color:var(--t2);line-height:1.65;margin-bottom:32px;max-width:500px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px}.hero-trust{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.trust-stars{display:flex;align-items:center;gap:3px;color:#fbbf24}.trust-text{font-family:var(--font-body);font-size:13px;color:var(--t2)}.trust-sep{width:1px;height:16px;background:rgba(255,255,255,.25)}
+.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);box-shadow:0 8px 32px rgba(0,0,0,.3);backdrop-filter:blur(12px);border-radius:16px;padding:28px 30px}
+.hero-card-title{font-family:var(--font-display);font-size:17px;font-weight:700;color:#fff;margin-bottom:20px}
+.review-count-hero{text-align:center;padding:20px;background:rgba(249,115,22,.15);border:1px solid rgba(249,115,22,.3);border-radius:12px;margin-bottom:20px}
+.review-count-num{font-family:var(--font-display);font-size:48px;font-weight:900;color:var(--accent);line-height:1;display:block}
+.review-count-label{font-family:var(--font-body);font-size:13px;color:var(--t2);margin-top:4px}
+.hero-props{display:flex;flex-direction:column;gap:12px;margin-bottom:22px}
+.hero-prop{display:flex;align-items:center;gap:10px}
+.hero-prop-icon{width:20px;height:20px;border-radius:50%;background:rgba(249,115,22,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent)}
+.hero-prop-text{font-family:var(--font-body);font-size:13px;color:var(--t2)}
+.hero-phone{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-family:var(--font-display);font-size:21px;font-weight:900;color:#fff;display:flex;align-items:center;gap:10px}
+@media(max-width:900px){.hero-layout{grid-template-columns:1fr}.hero-card{display:none}}
+.stats-bar{background:var(--primary)}.stats-grid{max-width:1100px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-box{padding:36px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}.stat-box:last-child{border-right:none}
+.stat-number{font-family:var(--font-display);font-size:clamp(32px,4vw,48px);font-weight:900;color:var(--accent);line-height:1;margin-bottom:8px;display:block}
+.stat-label{font-family:var(--font-body);font-size:13px;color:var(--t2)}@media(max-width:600px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+.services-section{background:var(--bg)}.section-label{font-family:var(--font-display);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:10px}
+.section-title{font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--dark-text);margin-bottom:12px}.section-sub{font-family:var(--font-body);font-size:16px;color:var(--grey-text);margin-bottom:48px}
+.service-card{background:var(--bg);border:1px solid var(--border);border-top:3px solid transparent;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);transition:all .25s ease;display:flex;gap:14px;align-items:flex-start}
+.service-card:hover{border-top-color:var(--accent);transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.service-icon{width:48px;height:48px;border-radius:10px;flex-shrink:0;background:rgba(var(--accent-rgb),.1);display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.service-body{flex:1}.service-name{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--dark-text);margin-bottom:6px}
+.service-desc{font-family:var(--font-body);font-size:14px;color:var(--grey-text);line-height:1.6;margin-bottom:12px}.service-link{font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.why-section{background:var(--primary);position:relative;overflow:hidden}
+.why-section::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.08;pointer-events:none;z-index:0}
+.why-section>.container{position:relative;z-index:1}.why-section .section-title{color:#fff}.why-section .section-sub{color:var(--t2)}
+.why-stat-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:26px 20px;text-align:center}
+.why-stat-num{font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--accent)}.why-stat-label{font-family:var(--font-body);font-size:13px;color:var(--t2);margin-top:6px}
+.why-diff{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:48px}
+.why-diff-item{display:flex;gap:14px;align-items:flex-start}.why-diff-icon{width:36px;height:36px;border-radius:50%;background:rgba(var(--accent-rgb),.2);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.why-diff-title{font-family:var(--font-display);font-size:17px;font-weight:700;color:#fff;margin-bottom:4px}.why-diff-text{font-family:var(--font-body);font-size:14px;color:var(--t2)}
+.how-section{background:var(--primary-dark)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+.steps::before{content:'';position:absolute;top:36px;left:15%;right:15%;border-top:2px dashed rgba(255,255,255,.12)}
+.step{padding:0 20px;text-align:center}.step-num{width:56px;height:56px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-family:var(--font-display);font-size:22px;font-weight:900;color:#fff}
+.step-icon{color:#fff;margin-bottom:12px;display:flex;justify-content:center}.step-title{font-family:var(--font-display);font-size:18px;font-weight:700;color:#fff;margin-bottom:8px}.step-desc{font-family:var(--font-body);font-size:14px;color:var(--t2)}
+.reviews-section{background:var(--bg-off)}.reviews-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:48px;flex-wrap:wrap;gap:16px}
+.google-badge{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:8px 14px}.google-badge-text{font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--dark-text)}
+.review-card{background:var(--bg-off);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:0 2px 12px rgba(0,0,0,.05);transition:all .25s}
+.review-card:hover{box-shadow:0 8px 28px rgba(0,0,0,.1);transform:translateY(-3px)}
+.review-text{font-family:var(--font-body);font-style:italic;font-size:15px;line-height:1.7;color:var(--dark-text);margin-bottom:18px}
+.review-divider{border:none;border-top:1px solid var(--border);margin-bottom:16px}.review-author{display:flex;align-items:center;gap:12px}
+.review-avatar{width:42px;height:42px;border-radius:50%;background:rgba(var(--accent-rgb),.12);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:16px;font-weight:700;color:var(--accent);flex-shrink:0}
+.review-name{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--dark-text)}.review-location{font-family:var(--font-body);font-size:12px;color:var(--grey-text);margin-top:2px}
+.review-stars{display:flex;gap:2px;color:#fbbf24;margin-bottom:3px}
+.areas-section{background:var(--primary)}.areas-layout{display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center}
+.areas-section .section-title{color:#fff}.areas-section p{font-family:var(--font-body);font-size:16px;color:var(--t2);margin-bottom:28px}
+.areas-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:32px}
+.areas-card-title{font-family:var(--font-display);font-size:18px;font-weight:700;color:#fff;margin-bottom:20px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}.chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:var(--t2);font-family:var(--font-body);font-size:13px;padding:7px 14px;border-radius:20px;cursor:pointer;transition:all .15s;text-decoration:none}
+.chip:hover{background:var(--accent);border-color:var(--accent);color:#fff}@media(max-width:900px){.areas-layout{grid-template-columns:1fr}}
+.contact-section{background:var(--bg)}.contact-layout{display:grid;grid-template-columns:1fr 360px;gap:60px;align-items:start}
+.contact-form-label{font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--dark-text);margin-bottom:6px;display:block}.form-group{margin-bottom:18px}
+input[type="text"],input[type="email"],input[type="tel"],select,textarea{width:100%;background:var(--bg-off);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-family:var(--font-body);font-size:14px;color:var(--dark-text);transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(var(--accent-rgb),.1)}
+.contact-info-card{background:var(--primary);border-radius:16px;padding:32px}.contact-info-title{font-family:var(--font-display);font-size:22px;font-weight:700;color:#fff;margin-bottom:24px}
+.contact-info-item{display:flex;gap:12px;margin-bottom:20px;align-items:flex-start}.contact-info-icon{color:var(--accent);margin-top:2px;flex-shrink:0}
+.contact-info-text{font-family:var(--font-body);font-size:14px;color:var(--t2)}.contact-info-text strong{font-family:var(--font-display);font-size:16px;color:#fff;font-weight:700;display:block}
+@media(max-width:900px){.contact-layout{grid-template-columns:1fr}}
+.cta-band{background:linear-gradient(135deg,var(--accent-dark),var(--accent));padding:80px 0;position:relative;overflow:hidden;text-align:center}
+.cta-band::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.14;pointer-events:none;z-index:0}
+.cta-band>*{position:relative;z-index:1}.cta-band h2{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);font-weight:900;color:#fff;margin-bottom:12px}
+.cta-band p{font-family:var(--font-body);font-size:17px;color:rgba(255,255,255,.88);margin-bottom:32px}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--accent-dark);font-family:var(--font-display);font-size:16px;font-weight:700;padding:16px 36px;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,.2);text-decoration:none;transition:all .15s}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.25)}
+.footer{background:var(--primary-dark);padding:70px 0 0}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+.footer-brand-name{font-family:var(--font-display);font-size:20px;font-weight:700;color:#fff;margin-bottom:8px}.footer-brand-desc{font-family:var(--font-body);font-size:14px;color:var(--t2);line-height:1.65}
+.footer-col-title{font-family:var(--font-display);font-size:14px;font-weight:700;color:#fff;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px}
+.footer-links{list-style:none}.footer-links li{margin-bottom:9px}.footer-links a{font-family:var(--font-body);font-size:14px;color:var(--t2);text-decoration:none;transition:color .15s}.footer-links a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;display:flex;justify-content:space-between;align-items:center}
+.footer-copyright{font-family:var(--font-body);font-size:13px;color:var(--t3)}
+@media(max-width:900px){.footer-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:8px;text-align:center}}
+</style>
+</head>
+<body>
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <div class="header-brand"><span class="header-name">Sureguard Lawn &amp; Pest</span><span class="header-tagline">1,708 Five-Star Reviews · Carrollton, TX</span></div>
+    <a href="tel:9724273345" class="header-cta"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(972) 427-3345</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-layout">
+    <div class="hero-left">
+      <div class="hero-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.9 Stars · 1,708 Reviews · Carrollton's #1</div>
+      <h1 class="hero-headline">Carrollton's Most <span>Proven</span><br>Pest &amp; Lawn Experts</h1>
+      <p class="hero-sub">With 1,708 verified five-star reviews, Sureguard is the name Carrollton homeowners trust most. Full-service lawn care and pest control from a team that's done it right thousands of times.</p>
+      <div class="hero-ctas">
+        <a href="tel:9724273345" class="btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call for Free Quote</a>
+        <a href="#contact" class="btn-ghost">Schedule Online</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <span class="trust-text">4.9 · 1,708 Reviews</span><div class="trust-sep"></div><span class="trust-text">Licensed &amp; Insured</span><div class="trust-sep"></div><span class="trust-text">Lawn + Pest Bundle</span>
+      </div>
+    </div>
+    <div class="hero-card hero-card">
+      <div class="hero-card-title">Why 1,708 Families Chose Us</div>
+      <div class="review-count-hero"><span class="review-count-num">1,708</span><div class="review-count-label">Verified 4.9-Star Google Reviews</div></div>
+      <div class="hero-props">
+        <div class="hero-prop"><div class="hero-prop-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="hero-prop-text">Full lawn care + pest control, one company</span></div>
+        <div class="hero-prop"><div class="hero-prop-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="hero-prop-text">Licensed technicians, insured on every job</span></div>
+        <div class="hero-prop"><div class="hero-prop-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="hero-prop-text">Satisfaction guarantee — free re-service included</span></div>
+      </div>
+      <div class="hero-phone"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(972) 427-3345</div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-box"><span class="stat-number" data-target="1708" data-suffix="">0</span><span class="stat-label">Google Reviews at 4.9 Stars</span></div>
+    <div class="stat-box"><span class="stat-number" data-target="15" data-suffix="+">0</span><span class="stat-label">Years Serving Carrollton</span></div>
+    <div class="stat-box"><span class="stat-number" data-target="5000" data-suffix="+">0</span><span class="stat-label">Homes &amp; Lawns Serviced</span></div>
+    <div class="stat-box"><span class="stat-number" data-target="100" data-suffix="%">0</span><span class="stat-label">Satisfaction Guaranteed</span></div>
+  </div>
+</div>
+
+<section class="services-section">
+  <div class="container">
+    <span class="section-label">What We Do</span>
+    <h2 class="section-title">Lawn Care + Pest Control — One Trusted Team</h2>
+    <p class="section-sub">We handle both so you're not coordinating between two companies. One call, complete coverage.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+        <div class="service-body"><div class="service-name">Lawn Fertilization</div><p class="service-desc">North Texas clay soil needs the right nutrients at the right times. Our seasonal fertilization program produces thick, green turf that crowds out weeds naturally.</p><a href="#contact" class="service-link">Get Quote →</a></div>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="service-body"><div class="service-name">Pest Control</div><p class="service-desc">Quarterly perimeter treatments stop roaches, ants, spiders, and silverfish before they get inside. Covered pests come back? We do too, free of charge.</p><a href="#contact" class="service-link">Get Quote →</a></div>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="service-body"><div class="service-name">Fire Ant Control</div><p class="service-desc">Fire ants are aggressive, persistent, and painful. Our broadcast granular and mound treatments eliminate colonies and maintain a yard-wide barrier through the season.</p><a href="#contact" class="service-link">Get Quote →</a></div>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="service-body"><div class="service-name">Termite Protection</div><p class="service-desc">Termites cost Texans billions annually. Our liquid barrier and bait station programs stop subterranean termites at the perimeter before they reach structural wood.</p><a href="#contact" class="service-link">Free Inspection →</a></div>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+        <div class="service-body"><div class="service-name">Mosquito Reduction</div><p class="service-desc">We treat foliage and breeding sites around your property using season-long residuals. Most clients see 85%+ reduction in mosquito activity after the first application.</p><a href="#contact" class="service-link">Get Quote →</a></div>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="service-body"><div class="service-name">Weed Control</div><p class="service-desc">Pre-emergent and post-emergent weed programs prevent crabgrass, dandelions, and broadleaf weeds from stealing nutrients and ruining your lawn's appearance.</p><a href="#contact" class="service-link">Get Quote →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section">
+  <div class="container">
+    <span class="section-label">Our Record</span>
+    <h2 class="section-title">1,708 Reasons to Call Sureguard</h2>
+    <p class="section-sub">Every one of those reviews represents a real Carrollton family who called us, trusted us, and came back. We don't take that lightly.</p>
+    <div class="grid-4">
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="1708" data-suffix="">0</div><div class="why-stat-label">Google Reviews</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="4.9" data-suffix="★">0</div><div class="why-stat-label">Average Rating</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="15" data-suffix="+">0</div><div class="why-stat-label">Years in Business</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="5000" data-suffix="+">0</div><div class="why-stat-label">Properties Served</div></div>
+    </div>
+    <div class="why-diff">
+      <div class="why-diff-item"><div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><div class="why-diff-title">Lawn + Pest — One Call</div><p class="why-diff-text">Stop coordinating between two vendors. We handle your full outdoor property — lawn and pests — under one plan.</p></div></div>
+      <div class="why-diff-item"><div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><div class="why-diff-title">Licensed State Technicians</div><p class="why-diff-text">Every technician holds current Texas licenses for both structural pest control and lawn care. We don't send unlicensed workers.</p></div></div>
+      <div class="why-diff-item"><div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><div class="why-diff-title">No-Contract Flexibility</div><p class="why-diff-text">Our programs are month-to-month. Stay because you love the results — not because you're locked into a contract.</p></div></div>
+      <div class="why-diff-item"><div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><div class="why-diff-title">Proven Results</div><p class="why-diff-text">1,708 reviews don't lie. When you call Sureguard, you get the same service that earned all of those five-star ratings.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section">
+  <div class="container">
+    <span class="section-label" style="color:rgba(249,115,22,.8)">How It Works</span>
+    <h2 class="section-title" style="color:#fff;margin-bottom:10px;">Easy as Three Steps</h2>
+    <p class="section-sub" style="color:var(--t2);margin-bottom:60px;">We've streamlined the process so getting started takes minutes, not weeks.</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div class="step-title">Call or Book Online</div><p class="step-desc">Tell us what you need. We'll provide a free quote and schedule your first service — usually within 48 hours in Carrollton.</p></div>
+      <div class="step"><div class="step-num">2</div><div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div class="step-title">We Assess &amp; Treat</div><p class="step-desc">Our licensed tech assesses your lawn and pest situation, applies the right products for each, and documents everything for your records.</p></div>
+      <div class="step"><div class="step-num">3</div><div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="step-title">Stay Protected</div><p class="step-desc">Quarterly services maintain your protection. Anything comes back between visits, we return at no cost. You're covered all year.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-header">
+      <div><span class="section-label">1,708 Reviews</span><h2 class="section-title">What Carrollton Homeowners Are Saying</h2></div>
+      <div class="google-badge"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg><span class="google-badge-text">4.9 ★ · 1,708 Reviews</span></div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"We've used Sureguard for lawn fertilization and pest control together for three years. Having one company handle both is such a relief. They communicate well, show up when they say they will, and our yard looks better every season. 1,700 reviews — now I understand why."</p>
+        <hr class="review-divider">
+        <div class="review-author"><div class="review-avatar">LN</div><div><div class="review-stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="review-name">Linda N.</div><div class="review-location">Carrollton · Google Review</div></div></div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Fire ants were taking over our backyard — my kids couldn't play outside without getting stung. Sureguard treated the yard and within 10 days the mounds were gone. They also did our quarterly pest control and explained every product being used. Reasonable price, professional job."</p>
+        <hr class="review-divider">
+        <div class="review-author"><div class="review-avatar">PG</div><div><div class="review-stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="review-name">Paul G.</div><div class="review-location">Prestonview, Carrollton · Google Review</div></div></div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"My previous lawn company and pest company never talked to each other. Switching to Sureguard for both was the best decision. They spotted a termite problem during a routine pest service visit — found it before we ever would have. Saved us what could've been a very expensive repair."</p>
+        <hr class="review-divider">
+        <div class="review-author"><div class="review-avatar">RC</div><div><div class="review-stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="review-name">Rachel C.</div><div class="review-location">Josey Ranch, Carrollton · Google Review</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas-section">
+  <div class="container">
+    <div class="areas-layout">
+      <div><span class="section-label">Service Area</span><h2 class="section-title">Carrollton and All of North Dallas County</h2><p>From the Josey Ranch corridor to Farmers Branch and beyond, our routes cover all of North Dallas County. Local knowledge means better results for your specific turf and pest environment.</p>
+      <a href="tel:9724273345" class="btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Get Free Quote</a></div>
+      <div class="areas-card"><div class="areas-card-title">Where We Service</div><div class="chips"><a href="#contact" class="chip">Carrollton</a><a href="#contact" class="chip">Farmers Branch</a><a href="#contact" class="chip">Addison</a><a href="#contact" class="chip">Coppell</a><a href="#contact" class="chip">Irving</a><a href="#contact" class="chip">Lewisville</a><a href="#contact" class="chip">The Colony</a><a href="#contact" class="chip">Dallas (N)</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <span class="section-label">Get Started</span>
+    <h2 class="section-title" style="margin-bottom:8px;">Join 1,708 Satisfied Carrollton Homeowners</h2>
+    <p style="font-family:var(--font-body);color:var(--grey-text);margin-bottom:48px;">Request your free quote and see why we're Carrollton's most-reviewed pest and lawn company.</p>
+    <div class="contact-layout">
+      <form>
+        <div class="grid-2" style="gap:16px;"><div class="form-group"><label class="contact-form-label">First Name</label><input type="text" placeholder="Linda"></div><div class="form-group"><label class="contact-form-label">Last Name</label><input type="text" placeholder="Nelson"></div></div>
+        <div class="form-group"><label class="contact-form-label">Phone</label><input type="tel" placeholder="(972) 555-0100"></div>
+        <div class="form-group"><label class="contact-form-label">Email</label><input type="email" placeholder="linda@example.com"></div>
+        <div class="form-group"><label class="contact-form-label">Service Needed</label><select><option>Select service...</option><option>Pest Control</option><option>Lawn Fertilization</option><option>Fire Ant Treatment</option><option>Termite Inspection</option><option>Mosquito Control</option><option>Bundle (Pest + Lawn)</option></select></div>
+        <div class="form-group"><label class="contact-form-label">Notes (optional)</label><textarea rows="3" placeholder="Tell us about your property and any specific concerns..."></textarea></div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Request Free Quote</button>
+      </form>
+      <div class="contact-info-card">
+        <div class="contact-info-title">Call Sureguard</div>
+        <div class="contact-info-item"><div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div class="contact-info-text"><strong>(972) 427-3345</strong>Quick response guaranteed</div></div>
+        <div class="contact-info-item"><div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="contact-info-text"><strong>Mon–Sat: 7am–7pm</strong>Same-week service available</div></div>
+        <div class="contact-info-item"><div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="contact-info-text"><strong>Carrollton, TX</strong>All of North Dallas County</div></div>
+        <div class="contact-info-item"><div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="contact-info-text"><strong>Licensed &amp; Fully Insured</strong>Texas Licensed — Pest + Lawn</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Join 1,708 Happy Carrollton Families</h2>
+    <p>Call for your free quote — lawn care and pest control handled by one trusted team.</p>
+    <a href="tel:9724273345" class="btn-white"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (972) 427-3345</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-brand-name">Sureguard Lawn &amp; Pest</div><p class="footer-brand-desc">Carrollton's most-reviewed lawn and pest control company. 1,708 five-star reviews and counting — because we consistently do exactly what we promise.</p></div>
+      <div><div class="footer-col-title">Services</div><ul class="footer-links"><li><a href="#contact">Pest Control</a></li><li><a href="#contact">Lawn Fertilization</a></li><li><a href="#contact">Fire Ant Control</a></li><li><a href="#contact">Termite Protection</a></li><li><a href="#contact">Mosquito Reduction</a></li><li><a href="#contact">Weed Control</a></li></ul></div>
+      <div><div class="footer-col-title">Service Areas</div><ul class="footer-links"><li><a href="#contact">Carrollton, TX</a></li><li><a href="#contact">Farmers Branch, TX</a></li><li><a href="#contact">Addison, TX</a></li><li><a href="#contact">Coppell, TX</a></li><li><a href="#contact">Irving, TX</a></li><li><a href="#contact">Lewisville, TX</a></li></ul></div>
+      <div><div class="footer-col-title">Contact</div><ul class="footer-links"><li><a href="tel:9724273345">(972) 427-3345</a></li><li><a href="#contact">Free Quote</a></li><li><a href="#contact">Schedule Service</a></li><li><a href="#contact">Bundle Plans</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copyright">&copy; 2024 Sureguard Lawn &amp; Pest · Carrollton, TX</span><span class="footer-copyright">Licensed &amp; Insured · 1,708 Google Reviews</span></div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('site-header').classList.toggle('scrolled',window.scrollY>50)});
+function animateCount(el){const target=parseFloat(el.dataset.target),suffix=el.dataset.suffix||'',duration=1800,start=performance.now();const update=(time)=>{const p=Math.min((time-start)/duration,1),ease=1-Math.pow(1-p,3),val=ease*target;el.textContent=(Number.isInteger(target)?Math.floor(val).toLocaleString():val.toFixed(1))+suffix;if(p<1)requestAnimationFrame(update)};requestAnimationFrame(update)}
+const sO=new IntersectionObserver((e)=>{e.forEach(e=>{if(e.isIntersecting){animateCount(e.target);sO.unobserve(e.target)}})},{threshold:.5});document.querySelectorAll('[data-target]').forEach(el=>sO.observe(el));
+const cO=new IntersectionObserver((e)=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');cO.unobserve(e.target)}})},{threshold:.2});document.querySelectorAll('.card').forEach(el=>cO.observe(el));
+</script>
+</body>
+</html>

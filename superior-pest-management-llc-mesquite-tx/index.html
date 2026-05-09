@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Superior Pest Management LLC — Mesquite, TX Pest Control</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #14113a;
+  --primary-dark: #0b0c2e;
+  --accent: #7c3aed;
+  --accent-dark: #5b21b6;
+  --accent-rgb: 124,58,237;
+  --bg: #ffffff;
+  --bg-off: #f5f4fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.78);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1527;
+  --grey-text: #6b7280;
+  --border: #e8e5f5;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(20,17,58,0.12);
+  --shadow-lg: 0 8px 40px rgba(20,17,58,0.2);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+
+.card { opacity: 0; animation: fadeUp 0.4s ease-out forwards; }
+.card.visible { opacity: 1; }
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(var(--accent-rgb),0.4);
+  transition: all 0.15s ease; text-decoration: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(var(--accent-rgb),0.5); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 600;
+  padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.15s ease; text-decoration: none;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+
+@media (max-width: 900px) {
+  .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
+}
+
+/* HEADER */
+.site-header {
+  background: var(--primary);
+  position: sticky; top: 0; z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  transition: box-shadow 0.2s;
+}
+.site-header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.5); }
+.header-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+}
+.header-brand { display: flex; flex-direction: column; }
+.header-name { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: white; letter-spacing: 0.02em; }
+.header-tagline { font-family: var(--font-body); font-size: 12px; color: var(--t2); margin-top: -2px; }
+.header-cta {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-weight: 700; font-size: 14px;
+  padding: 10px 20px; border-radius: 7px; text-decoration: none;
+  box-shadow: 0 3px 12px rgba(var(--accent-rgb),0.4);
+  transition: all 0.15s ease;
+}
+.header-cta:hover { transform: translateY(-1px); }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  padding: 100px 0 80px; position: relative; overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-layout {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: center;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 20px; margin-bottom: 20px;
+}
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 64px);
+  font-weight: 900; color: white; line-height: 1.05;
+  letter-spacing: -0.02em; margin-bottom: 18px;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-family: var(--font-body); font-size: 18px;
+  color: var(--t2); line-height: 1.65; margin-bottom: 32px;
+  max-width: 520px;
+}
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+.hero-trust {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.trust-stars { display: flex; align-items: center; gap: 4px; color: #fbbf24; }
+.trust-text { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+.trust-sep { width: 1px; height: 16px; background: rgba(255,255,255,0.25); }
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 16px; padding: 28px 32px;
+}
+.hero-card-title {
+  font-family: var(--font-display); font-size: 18px; font-weight: 700;
+  color: white; margin-bottom: 20px; letter-spacing: 0.02em;
+}
+.hero-props { display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; }
+.hero-prop {
+  display: flex; align-items: flex-start; gap: 10px;
+}
+.hero-prop-icon {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: rgba(124,58,237,0.25); display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; margin-top: 1px; color: var(--accent);
+}
+.hero-prop-text { font-family: var(--font-body); font-size: 14px; color: var(--t2); }
+.hero-prop-text strong { font-family: var(--font-display); color: white; font-weight: 700; font-size: 15px; display: block; line-height: 1.2; }
+.hero-phone {
+  border-top: 1px solid rgba(255,255,255,0.12); padding-top: 20px;
+  display: flex; align-items: center; gap: 10px;
+  color: white; font-family: var(--font-display); font-size: 20px; font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .hero-layout { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+}
+
+/* STATS */
+.stats-bar { background: var(--primary); padding: 0; }
+.stats-grid {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.stat-box {
+  padding: 40px 24px; text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.stat-box:last-child { border-right: none; }
+.stat-number {
+  font-family: var(--font-display); font-size: clamp(32px,4vw,48px);
+  font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 8px; display: block;
+}
+.stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: repeat(2,1fr); } }
+
+/* SERVICES */
+.services-section { background: var(--bg); }
+.section-label {
+  font-family: var(--font-display); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent); display: block; margin-bottom: 10px;
+}
+.section-title {
+  font-family: var(--font-display); font-size: 36px; font-weight: 900;
+  color: var(--dark-text); margin-bottom: 12px; line-height: 1.1;
+}
+.section-sub { font-family: var(--font-body); font-size: 16px; color: var(--grey-text); margin-bottom: 48px; }
+
+.service-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-top: 3px solid transparent; border-radius: var(--radius);
+  padding: 28px 24px; box-shadow: var(--shadow);
+  transition: all 0.25s ease;
+}
+.service-card:hover { border-top-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.service-icon {
+  width: 52px; height: 52px; border-radius: 12px;
+  background: rgba(var(--accent-rgb),0.1); display: flex; align-items: center;
+  justify-content: center; margin-bottom: 16px; color: var(--accent);
+}
+.service-name {
+  font-family: var(--font-display); font-size: 18px; font-weight: 700;
+  color: var(--dark-text); margin-bottom: 8px;
+}
+.service-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 14px; }
+.service-link {
+  font-family: var(--font-body); font-size: 13px; font-weight: 600;
+  color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
+}
+
+/* WHY CHOOSE US */
+.why-section { background: var(--primary); position: relative; overflow: hidden; }
+.why-section::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.08; pointer-events: none; z-index: 0;
+}
+.why-section > .container { position: relative; z-index: 1; }
+.why-header { margin-bottom: 48px; }
+.why-section .section-label { color: rgba(124,58,237,0.9); }
+.why-section .section-title { color: white; }
+.why-section .section-sub { color: var(--t2); }
+.why-stats { margin-bottom: 52px; }
+.why-stat-card {
+  background: var(--primary-dark); border-radius: var(--radius);
+  padding: 28px 20px; text-align: center;
+}
+.why-stat-num { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--accent); line-height: 1; }
+.why-stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); margin-top: 6px; }
+.why-diff { display: grid; grid-template-columns: repeat(2,1fr); gap: 28px; }
+.why-diff-item { display: flex; gap: 14px; align-items: flex-start; }
+.why-diff-icon {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(var(--accent-rgb),0.2); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; color: var(--accent);
+}
+.why-diff-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; margin-bottom: 4px; }
+.why-diff-text { font-family: var(--font-body); font-size: 14px; color: var(--t2); }
+
+/* HOW IT WORKS */
+.how-section { background: var(--primary-dark); }
+.how-section .section-title { color: white; }
+.how-section .section-label { color: rgba(124,58,237,0.8); }
+.how-section .section-sub { color: var(--t2); }
+.steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; position: relative; }
+.steps::before {
+  content: '';
+  position: absolute; top: 36px; left: 15%; right: 15%;
+  border-top: 2px dashed rgba(255,255,255,0.15);
+}
+.step { padding: 0 20px; text-align: center; }
+.step-num {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--accent); display: flex; align-items: center;
+  justify-content: center; margin: 0 auto 20px;
+  font-family: var(--font-display); font-size: 22px; font-weight: 900; color: white;
+}
+.step-icon { color: white; margin-bottom: 12px; display: flex; justify-content: center; }
+.step-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: white; margin-bottom: 8px; }
+.step-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); }
+
+/* REVIEWS */
+.reviews-section { background: var(--bg-off); }
+.reviews-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 48px; }
+.google-badge {
+  display: flex; align-items: center; gap: 8px;
+  background: white; border: 1px solid var(--border);
+  border-radius: 8px; padding: 8px 14px;
+}
+.google-badge-text { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); }
+.review-card {
+  background: white; border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06); transition: all 0.25s ease;
+}
+.review-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); transform: translateY(-3px); }
+.review-quote-icon { color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block; }
+.review-text { font-family: var(--font-body); font-style: italic; font-size: 15px; line-height: 1.7; color: var(--dark-text); margin-bottom: 18px; }
+.review-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 16px; }
+.review-author { display: flex; align-items: center; gap: 12px; }
+.review-avatar {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: rgba(var(--accent-rgb),0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--accent); flex-shrink: 0;
+}
+.review-name { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--dark-text); }
+.review-location { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); margin-top: 2px; }
+.review-stars { display: flex; gap: 2px; color: #fbbf24; margin-bottom: 3px; }
+
+/* SERVICE AREAS */
+.areas-section { background: var(--primary); }
+.areas-layout { display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; }
+.areas-section .section-label { color: rgba(124,58,237,0.9); }
+.areas-section .section-title { color: white; }
+.areas-section p { font-family: var(--font-body); font-size: 16px; color: var(--t2); margin-bottom: 28px; }
+.areas-card {
+  background: var(--primary-dark); border-radius: 16px; padding: 32px;
+}
+.areas-card-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: white; margin-bottom: 20px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+  color: var(--t2); font-family: var(--font-body); font-size: 13px; font-weight: 500;
+  padding: 7px 14px; border-radius: 20px; cursor: pointer;
+  transition: all 0.15s ease; text-decoration: none;
+}
+.chip:hover { background: var(--accent); border-color: var(--accent); color: white; }
+@media (max-width: 900px) { .areas-layout { grid-template-columns: 1fr; } }
+
+/* CONTACT */
+.contact-section { background: var(--bg); }
+.contact-layout { display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: start; }
+.contact-form-label { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; display: block; }
+.form-group { margin-bottom: 18px; }
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+  width: 100%; background: var(--bg-off); border: 1px solid var(--border);
+  border-radius: 8px; padding: 12px 14px;
+  font-family: var(--font-body); font-size: 14px; color: var(--dark-text);
+  transition: border-color 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none; border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb),0.1);
+}
+.contact-info-card {
+  background: var(--primary); border-radius: 16px; padding: 32px; color: white;
+}
+.contact-info-title { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: white; margin-bottom: 24px; }
+.contact-info-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 20px; }
+.contact-info-icon { color: var(--accent); margin-top: 2px; flex-shrink: 0; }
+.contact-info-text { font-family: var(--font-body); font-size: 14px; color: var(--t2); }
+.contact-info-text strong { font-family: var(--font-display); font-size: 16px; color: white; font-weight: 700; display: block; }
+@media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; } }
+
+/* CTA BAND */
+.cta-band {
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  padding: 80px 0; position: relative; overflow: hidden; text-align: center;
+}
+.cta-band::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.15; pointer-events: none; z-index: 0;
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-band h2 { font-family: var(--font-display); font-size: clamp(28px,4vw,42px); font-weight: 900; color: white; margin-bottom: 12px; }
+.cta-band p { font-family: var(--font-body); font-size: 17px; color: rgba(255,255,255,0.85); margin-bottom: 32px; }
+.cta-band .btn-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: white; color: var(--accent);
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  padding: 16px 36px; border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2); text-decoration: none;
+  transition: all 0.15s ease;
+}
+.cta-band .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
+
+/* FOOTER */
+.footer { background: var(--primary-dark); padding: 70px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+.footer-brand-name { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; margin-bottom: 8px; }
+.footer-brand-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.65; }
+.footer-col-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: white; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 9px; }
+.footer-links a { font-family: var(--font-body); font-size: 14px; color: var(--t2); text-decoration: none; transition: color 0.15s; }
+.footer-links a:hover { color: white; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-copyright { font-family: var(--font-body); font-size: 13px; color: var(--t3); }
+.footer-license { font-family: var(--font-body); font-size: 13px; color: var(--t3); }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; gap: 8px; text-align: center; } }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <span class="header-name">Superior Pest Management</span>
+      <span class="header-tagline">Licensed &amp; Insured · Mesquite, TX</span>
+    </div>
+    <a href="tel:2144189805" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (214) 418-9805
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-layout">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        5.0-Star Rated · Mesquite's Best
+      </div>
+      <h1 class="hero-headline">Mesquite's <span>Superior</span><br>Pest Defense</h1>
+      <p class="hero-sub">From Belt Line Road to Sunnyvale, we eliminate roaches, rodents, and termites fast — with treatments safe for your family and pets. One call ends it.</p>
+      <div class="hero-ctas">
+        <a href="tel:2144189805" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now — Free Estimate
+        </a>
+        <a href="#contact" class="btn-ghost">Book Inspection</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <span class="trust-text">5.0 · 10 Reviews</span>
+        <div class="trust-sep"></div>
+        <span class="trust-text">Licensed &amp; Insured</span>
+        <div class="trust-sep"></div>
+        <span class="trust-text">Pet-Safe Treatments</span>
+      </div>
+    </div>
+    <div class="hero-card hero-card">
+      <div class="hero-card-title">Why Mesquite Trusts Us</div>
+      <div class="hero-props">
+        <div class="hero-prop">
+          <div class="hero-prop-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="hero-prop-text"><strong>Same-Day Service Available</strong>Bug emergencies don't wait — neither do we.</div>
+        </div>
+        <div class="hero-prop">
+          <div class="hero-prop-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="hero-prop-text"><strong>100% Satisfaction Guarantee</strong>If pests return between visits, so do we — free.</div>
+        </div>
+        <div class="hero-prop">
+          <div class="hero-prop-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="hero-prop-text"><strong>Family &amp; Pet-Safe Products</strong>EPA-registered treatments, no harmful residue.</div>
+        </div>
+        <div class="hero-prop">
+          <div class="hero-prop-icon">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="hero-prop-text"><strong>Upfront Pricing, No Surprises</strong>Know your cost before we arrive. Always.</div>
+        </div>
+      </div>
+      <div class="hero-phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (214) 418-9805
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-box">
+      <span class="stat-number" data-target="15" data-suffix="+">0</span>
+      <span class="stat-label">Years Protecting Mesquite Homes</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-number" data-target="2400" data-suffix="+">0</span>
+      <span class="stat-label">Homes &amp; Businesses Treated</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-number" data-target="5" data-suffix=".0★">0</span>
+      <span class="stat-label">Average Google Rating</span>
+    </div>
+    <div class="stat-box">
+      <span class="stat-number" data-target="100" data-suffix="%">0</span>
+      <span class="stat-label">Satisfaction Guarantee</span>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section">
+  <div class="container">
+    <span class="section-label">Our Services</span>
+    <h2 class="section-title">Complete Pest Protection</h2>
+    <p class="section-sub">Every treatment is targeted, safe, and backed by our guarantee — pests gone or we come back free.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="service-name">Roach Control</div>
+        <p class="service-desc">Roaches multiply fast and contaminate everything they touch. We locate harborage areas, apply targeted gel baits and residuals, and eliminate the colony at the source.</p>
+        <a href="#contact" class="service-link">Free Estimate →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="service-name">Rodent Control</div>
+        <p class="service-desc">Mice and rats destroy insulation, chew wiring, and spread disease. We identify entry points, seal gaps, set traps, and make sure they don't come back.</p>
+        <a href="#contact" class="service-link">Free Estimate →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="service-name">Termite Treatment</div>
+        <p class="service-desc">Termites silently destroy the structural integrity of your home. We use industry-leading baiting systems and liquid treatments to stop colonies before the damage becomes catastrophic.</p>
+        <a href="#contact" class="service-link">Free Inspection →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+        </div>
+        <div class="service-name">Mosquito Control</div>
+        <p class="service-desc">Backyard barbecues and evening walks shouldn't mean welts. Our mosquito treatments reduce populations by up to 90% and protect your outdoor spaces all season long.</p>
+        <a href="#contact" class="service-link">Free Estimate →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="service-name">Bed Bug Elimination</div>
+        <p class="service-desc">Bed bugs hitch rides home and multiply in weeks. Our heat treatment and targeted chemical protocol eliminates every life stage — eggs, nymphs, and adults — in a single visit.</p>
+        <a href="#contact" class="service-link">Emergency Service →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="service-name">Ant &amp; Spider Control</div>
+        <p class="service-desc">Fire ants, carpenter ants, and brown recluse spiders are more than a nuisance. We treat the perimeter, entry points, and nest sites to keep them off your property for good.</p>
+        <a href="#contact" class="service-link">Free Estimate →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section">
+  <div class="container">
+    <div class="why-header">
+      <span class="section-label">Why Superior</span>
+      <h2 class="section-title">Built on a Simple Promise</h2>
+      <p class="section-sub">We don't leave until the problem is solved. That's been our standard since day one.</p>
+    </div>
+    <div class="grid-4 why-stats" style="margin-bottom:52px">
+      <div class="why-stat-card card">
+        <div class="why-stat-num" data-target="15" data-suffix="+">0</div>
+        <div class="why-stat-label">Years in Business</div>
+      </div>
+      <div class="why-stat-card card">
+        <div class="why-stat-num" data-target="2400" data-suffix="+">0</div>
+        <div class="why-stat-label">Clients Served</div>
+      </div>
+      <div class="why-stat-card card">
+        <div class="why-stat-num" data-target="98" data-suffix="%">0</div>
+        <div class="why-stat-label">First-Visit Resolution</div>
+      </div>
+      <div class="why-stat-card card">
+        <div class="why-stat-num" data-target="24" data-suffix="/7">0</div>
+        <div class="why-stat-label">Emergency Response</div>
+      </div>
+    </div>
+    <div class="why-diff">
+      <div class="why-diff-item">
+        <div class="why-diff-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">State-Licensed Technicians</div>
+          <p class="why-diff-text">Every technician holds a Texas Structural Pest Control license. No unlicensed sub-contractors, ever.</p>
+        </div>
+      </div>
+      <div class="why-diff-item">
+        <div class="why-diff-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Integrated Pest Management</div>
+          <p class="why-diff-text">We use the minimum effective treatment — targeted, not blanketed — to protect your family and the environment.</p>
+        </div>
+      </div>
+      <div class="why-diff-item">
+        <div class="why-diff-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Transparent, Flat Pricing</div>
+          <p class="why-diff-text">You get the quote before we start. What we say is what you pay — no bait-and-switch add-ons on invoice day.</p>
+        </div>
+      </div>
+      <div class="why-diff-item">
+        <div class="why-diff-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Free Return Visits</div>
+          <p class="why-diff-text">If covered pests return within the guarantee period, we come back at no charge. No questions asked.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="container">
+    <span class="section-label">The Process</span>
+    <h2 class="section-title" style="color:white;margin-bottom:10px;">Three Steps to a Pest-Free Home</h2>
+    <p class="section-sub" style="color:var(--t2);margin-bottom:60px;">No guesswork. No waiting. Just results.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div class="step-title">Call or Book Online</div>
+        <p class="step-desc">Tell us what you're seeing. We'll schedule your inspection for a time that works — often same or next day.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <div class="step-title">Inspect &amp; Identify</div>
+        <p class="step-desc">Our licensed technician inspects interior, exterior, and entry points. We identify exactly what you're dealing with and where it's coming from.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="step-title">Treat &amp; Guarantee</div>
+        <p class="step-desc">We apply the right treatment for your specific pest and property. You get a written guarantee — if they return, we do too, at zero cost to you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-header">
+      <div>
+        <span class="section-label">Customer Reviews</span>
+        <h2 class="section-title">Mesquite Homeowners Speak Up</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span class="google-badge-text">5.0 ★ Google Reviews</span>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg class="review-quote-icon" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Called them when we found roaches in our kitchen. They came out the same afternoon, walked me through every product they were using, and asked about my dog before treating anything. Had the problem handled in about 2 hours. Three weeks later — not a single roach anywhere. Absolutely worth it."</p>
+        <hr class="review-divider">
+        <div class="review-author">
+          <div class="review-avatar">MG</div>
+          <div>
+            <div class="review-stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="review-name">Maria G.</div>
+            <div class="review-location">Sunnyvale, Mesquite · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg class="review-quote-icon" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Mice found their way into our garage in October. Superior had a tech here within 24 hours. He sealed four entry points I never would've found myself, and set traps in the right spots. Caught three mice in 48 hours. No return visits needed. Pricing was straightforward, nothing added at the end."</p>
+        <hr class="review-divider">
+        <div class="review-author">
+          <div class="review-avatar">DL</div>
+          <div>
+            <div class="review-stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="review-name">David L.</div>
+            <div class="review-location">Sunridge Estates, Mesquite · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg class="review-quote-icon" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"We signed up for their quarterly maintenance after our neighbors had a termite issue. During the first inspection, the tech found signs of termite activity near our back fence — before it reached the house. That early catch probably saved us thousands in structural damage. These guys know what they're doing."</p>
+        <hr class="review-divider">
+        <div class="review-author">
+          <div class="review-avatar">KR</div>
+          <div>
+            <div class="review-stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="review-name">Karen R.</div>
+            <div class="review-location">Chapman Highlands, Mesquite · Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas-section">
+  <div class="container">
+    <div class="areas-layout">
+      <div>
+        <span class="section-label">Coverage Area</span>
+        <h2 class="section-title">Serving Mesquite &amp; Surrounding Communities</h2>
+        <p>From Mesquite's established neighborhoods to Garland's growing suburbs, we protect homes across Eastern Dallas County. Our local knowledge means we know the pest pressures specific to your area.</p>
+        <a href="tel:2144189805" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Check Your Area
+        </a>
+      </div>
+      <div class="areas-card">
+        <div class="areas-card-title">Service Locations</div>
+        <div class="chips">
+          <a href="#contact" class="chip">Mesquite</a>
+          <a href="#contact" class="chip">Garland</a>
+          <a href="#contact" class="chip">Balch Springs</a>
+          <a href="#contact" class="chip">Sunnyvale</a>
+          <a href="#contact" class="chip">Rowlett</a>
+          <a href="#contact" class="chip">Seagoville</a>
+          <a href="#contact" class="chip">Forney</a>
+          <a href="#contact" class="chip">Sachse</a>
+          <a href="#contact" class="chip">Dallas</a>
+          <a href="#contact" class="chip">Wylie</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <span class="section-label">Get Started</span>
+    <h2 class="section-title" style="margin-bottom:8px;">Request Your Free Inspection</h2>
+    <p style="font-family:var(--font-body);color:var(--grey-text);margin-bottom:48px;">We'll respond within 2 hours during business hours. Same-day appointments often available.</p>
+    <div class="contact-layout">
+      <form>
+        <div class="grid-2" style="gap:16px;">
+          <div class="form-group">
+            <label class="contact-form-label">First Name</label>
+            <input type="text" placeholder="Maria">
+          </div>
+          <div class="form-group">
+            <label class="contact-form-label">Last Name</label>
+            <input type="text" placeholder="Garcia">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="contact-form-label">Phone Number</label>
+          <input type="tel" placeholder="(214) 555-0100">
+        </div>
+        <div class="form-group">
+          <label class="contact-form-label">Email Address</label>
+          <input type="email" placeholder="maria@example.com">
+        </div>
+        <div class="form-group">
+          <label class="contact-form-label">What Pest Are You Dealing With?</label>
+          <select>
+            <option value="">Select a pest...</option>
+            <option>Roaches</option>
+            <option>Mice / Rats</option>
+            <option>Termites</option>
+            <option>Mosquitoes</option>
+            <option>Bed Bugs</option>
+            <option>Ants / Spiders</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="contact-form-label">Additional Details (optional)</label>
+          <textarea rows="3" placeholder="Tell us where you're seeing activity, how long it's been an issue, etc."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Send My Request — It's Free
+        </button>
+      </form>
+      <div class="contact-info-card">
+        <div class="contact-info-title">Reach Us Directly</div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact-info-text"><strong>(214) 418-9805</strong>Available for emergencies 24/7</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="contact-info-text"><strong>Mon–Sat: 7am–7pm</strong>Sunday emergency calls accepted</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-info-text"><strong>Mesquite, TX</strong>Serving all of Eastern Dallas County</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="contact-info-text"><strong>Licensed &amp; Fully Insured</strong>Texas Structural Pest Control Board certified</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Don't Wait — Pests Don't Either</h2>
+    <p>Every day you wait, the problem grows. Call now for a free inspection and same-day service.</p>
+    <a href="tel:2144189805" class="btn-white">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (214) 418-9805
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Superior Pest Management LLC</div>
+        <p class="footer-brand-desc">Mesquite's trusted pest control specialists. Licensed, insured, and committed to protecting your home and family with safe, effective treatments since 2009.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Roach Control</a></li>
+          <li><a href="#contact">Rodent Control</a></li>
+          <li><a href="#contact">Termite Treatment</a></li>
+          <li><a href="#contact">Mosquito Control</a></li>
+          <li><a href="#contact">Bed Bug Elimination</a></li>
+          <li><a href="#contact">Ant &amp; Spider Control</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Mesquite, TX</a></li>
+          <li><a href="#contact">Garland, TX</a></li>
+          <li><a href="#contact">Balch Springs, TX</a></li>
+          <li><a href="#contact">Sunnyvale, TX</a></li>
+          <li><a href="#contact">Rowlett, TX</a></li>
+          <li><a href="#contact">Seagoville, TX</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:2144189805">(214) 418-9805</a></li>
+          <li><a href="#contact">Free Inspection</a></li>
+          <li><a href="#contact">Schedule Service</a></li>
+          <li><a href="#contact">Emergency Line</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">&copy; 2024 Superior Pest Management LLC · Mesquite, TX</span>
+      <span class="footer-license">Texas Structural Pest Control License · Licensed &amp; Insured</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Header scroll
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Stat counter
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+
+// IntersectionObserver for stats + cards
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateCount(e.target);
+      statObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => statObs.observe(el));
+
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      cardObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.card').forEach(el => cardObs.observe(el));
+</script>
+</body>
+</html>

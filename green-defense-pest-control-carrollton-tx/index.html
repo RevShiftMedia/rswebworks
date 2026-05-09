@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Defense Pest Control — Carrollton, TX</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #0d3b1d;
+  --primary-dark: #091d0f;
+  --accent: #ea580c;
+  --accent-dark: #c2410c;
+  --accent-rgb: 234,88,12;
+  --bg: #ffffff;
+  --bg-off: #f9f5f0;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.78);
+  --t3: rgba(255,255,255,0.45);
+  --dark-text: #111827;
+  --grey-text: #6b7280;
+  --border: #e5e7eb;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(13,59,29,0.1);
+  --shadow-lg: 0 8px 40px rgba(13,59,29,0.2);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: white; font-family: var(--font-display); font-size: 15px; font-weight: 700; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; box-shadow: 0 4px 16px rgba(var(--accent-rgb),0.4); transition: all 0.15s ease; text-decoration: none; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(var(--accent-rgb),0.5); }
+.btn-primary:active { transform: scale(0.97); }
+.btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: white; font-family: var(--font-display); font-size: 15px; font-weight: 600; padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6); cursor: pointer; transition: all 0.15s ease; text-decoration: none; }
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 600px) { .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; } }
+
+.site-header { background: var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(0,0,0,0.35); }
+.site-header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.55); }
+.header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.header-brand { display: flex; flex-direction: column; }
+.header-name { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: white; }
+.header-tagline { font-family: var(--font-body); font-size: 12px; color: var(--t2); }
+.header-cta { display: inline-flex; align-items: center; gap: 7px; background: var(--accent); color: white; font-family: var(--font-display); font-weight: 700; font-size: 14px; padding: 10px 20px; border-radius: 7px; text-decoration: none; box-shadow: 0 3px 12px rgba(var(--accent-rgb),0.4); transition: all 0.15s; }
+.header-cta:hover { transform: translateY(-1px); }
+
+.hero { background: linear-gradient(145deg, var(--primary-dark) 0%, var(--primary) 70%, #1a4d15 100%); padding: 100px 0 80px; position: relative; overflow: hidden; }
+.hero::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.12; pointer-events: none; z-index: 0; }
+.hero > * { position: relative; z-index: 1; }
+.hero-layout { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 390px; gap: 60px; align-items: center; }
+.hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--accent); color: white; font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; margin-bottom: 20px; }
+.hero-headline { font-family: var(--font-display); font-size: clamp(42px,6vw,64px); font-weight: 900; color: white; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 18px; }
+.hero-headline span { color: var(--accent); }
+.hero-sub { font-family: var(--font-body); font-size: 18px; color: var(--t2); line-height: 1.65; margin-bottom: 32px; max-width: 500px; }
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+.hero-trust { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.trust-stars { display: flex; align-items: center; gap: 3px; color: #fbbf24; }
+.trust-text { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+.trust-sep { width: 1px; height: 16px; background: rgba(255,255,255,0.25); }
+.hero-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 8px 32px rgba(0,0,0,0.3); backdrop-filter: blur(12px); border-radius: 16px; padding: 28px 30px; }
+.hero-card-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; margin-bottom: 20px; }
+.hero-props { display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; }
+.hero-prop { display: flex; align-items: flex-start; gap: 10px; }
+.hero-prop-icon { width: 20px; height: 20px; border-radius: 50%; background: rgba(234,88,12,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: var(--accent); }
+.hero-prop-text { font-family: var(--font-body); font-size: 14px; color: var(--t2); }
+.hero-prop-text strong { font-family: var(--font-display); color: white; font-weight: 700; font-size: 15px; display: block; line-height: 1.2; }
+.hero-phone { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 20px; font-family: var(--font-display); font-size: 21px; font-weight: 900; color: white; display: flex; align-items: center; gap: 10px; }
+@media (max-width: 900px) { .hero-layout { grid-template-columns: 1fr; } .hero-card { display: none; } }
+
+.stats-bar { background: var(--primary); }
+.stats-grid { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(4,1fr); }
+.stat-box { padding: 36px 20px; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
+.stat-box:last-child { border-right: none; }
+.stat-number { font-family: var(--font-display); font-size: clamp(32px,4vw,48px); font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 8px; display: block; }
+.stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: repeat(2,1fr); } }
+
+.services-section { background: var(--bg); }
+.section-label { font-family: var(--font-display); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 10px; }
+.section-title { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--dark-text); margin-bottom: 12px; }
+.section-sub { font-family: var(--font-body); font-size: 16px; color: var(--grey-text); margin-bottom: 48px; }
+.service-card { background: var(--bg); border: 1px solid var(--border); border-top: 3px solid transparent; border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); transition: all 0.25s ease; }
+.service-card:hover { border-top-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.service-icon { width: 52px; height: 52px; border-radius: 12px; background: rgba(var(--accent-rgb),0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--accent); }
+.service-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--dark-text); margin-bottom: 8px; }
+.service-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 14px; }
+.service-link { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; }
+
+.why-section { background: var(--primary); position: relative; overflow: hidden; }
+.why-section::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.08; pointer-events: none; z-index: 0; }
+.why-section > .container { position: relative; z-index: 1; }
+.why-section .section-title { color: white; }
+.why-section .section-sub { color: var(--t2); }
+.why-stat-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 26px 20px; text-align: center; }
+.why-stat-num { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--accent); }
+.why-stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); margin-top: 6px; }
+.why-diff { display: grid; grid-template-columns: repeat(2,1fr); gap: 28px; margin-top: 48px; }
+.why-diff-item { display: flex; gap: 14px; align-items: flex-start; }
+.why-diff-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(var(--accent-rgb),0.2); flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: var(--accent); }
+.why-diff-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; margin-bottom: 4px; }
+.why-diff-text { font-family: var(--font-body); font-size: 14px; color: var(--t2); }
+
+.how-section { background: var(--primary-dark); }
+.steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; position: relative; }
+.steps::before { content: ''; position: absolute; top: 36px; left: 15%; right: 15%; border-top: 2px dashed rgba(255,255,255,0.12); }
+.step { padding: 0 20px; text-align: center; }
+.step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-family: var(--font-display); font-size: 22px; font-weight: 900; color: white; }
+.step-icon { color: white; margin-bottom: 12px; display: flex; justify-content: center; }
+.step-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: white; margin-bottom: 8px; }
+.step-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); }
+
+.reviews-section { background: var(--bg-off); }
+.reviews-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 48px; flex-wrap: wrap; gap: 16px; }
+.google-badge { display: flex; align-items: center; gap: 8px; background: white; border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; }
+.google-badge-text { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); }
+.review-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); transition: all 0.25s ease; }
+.review-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); transform: translateY(-3px); }
+.review-text { font-family: var(--font-body); font-style: italic; font-size: 15px; line-height: 1.7; color: var(--dark-text); margin-bottom: 18px; }
+.review-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 16px; }
+.review-author { display: flex; align-items: center; gap: 12px; }
+.review-avatar { width: 42px; height: 42px; border-radius: 50%; background: rgba(var(--accent-rgb),0.12); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--accent); flex-shrink: 0; }
+.review-name { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--dark-text); }
+.review-location { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); margin-top: 2px; }
+.review-stars { display: flex; gap: 2px; color: #fbbf24; margin-bottom: 3px; }
+
+.areas-section { background: var(--primary); }
+.areas-layout { display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: center; }
+.areas-section .section-title { color: white; }
+.areas-section p { font-family: var(--font-body); font-size: 16px; color: var(--t2); margin-bottom: 28px; }
+.areas-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 32px; }
+.areas-card-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: white; margin-bottom: 20px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); color: var(--t2); font-family: var(--font-body); font-size: 13px; padding: 7px 14px; border-radius: 20px; cursor: pointer; transition: all 0.15s; text-decoration: none; }
+.chip:hover { background: var(--accent); border-color: var(--accent); color: white; }
+@media (max-width: 900px) { .areas-layout { grid-template-columns: 1fr; } }
+
+.contact-section { background: var(--bg); }
+.contact-layout { display: grid; grid-template-columns: 1fr 360px; gap: 60px; align-items: start; }
+.contact-form-label { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; display: block; }
+.form-group { margin-bottom: 18px; }
+input[type="text"], input[type="email"], input[type="tel"], select, textarea { width: 100%; background: var(--bg-off); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; font-family: var(--font-body); font-size: 14px; color: var(--dark-text); transition: border-color 0.2s; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(var(--accent-rgb),0.1); }
+.contact-info-card { background: var(--primary); border-radius: 16px; padding: 32px; }
+.contact-info-title { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: white; margin-bottom: 24px; }
+.contact-info-item { display: flex; gap: 12px; margin-bottom: 20px; align-items: flex-start; }
+.contact-info-icon { color: var(--accent); margin-top: 2px; flex-shrink: 0; }
+.contact-info-text { font-family: var(--font-body); font-size: 14px; color: var(--t2); }
+.contact-info-text strong { font-family: var(--font-display); font-size: 16px; color: white; font-weight: 700; display: block; }
+@media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; } }
+
+.cta-band { background: linear-gradient(135deg, var(--accent-dark), var(--accent)); padding: 80px 0; position: relative; overflow: hidden; text-align: center; }
+.cta-band::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.14; pointer-events: none; z-index: 0; }
+.cta-band > * { position: relative; z-index: 1; }
+.cta-band h2 { font-family: var(--font-display); font-size: clamp(28px,4vw,42px); font-weight: 900; color: white; margin-bottom: 12px; }
+.cta-band p { font-family: var(--font-body); font-size: 17px; color: rgba(255,255,255,0.88); margin-bottom: 32px; }
+.btn-white { display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--accent-dark); font-family: var(--font-display); font-size: 16px; font-weight: 700; padding: 16px 36px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); text-decoration: none; transition: all 0.15s; }
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
+
+.footer { background: var(--primary-dark); padding: 70px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+.footer-brand-name { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; margin-bottom: 8px; }
+.footer-brand-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.65; }
+.footer-col-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: white; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 9px; }
+.footer-links a { font-family: var(--font-body); font-size: 14px; color: var(--t2); text-decoration: none; transition: color 0.15s; }
+.footer-links a:hover { color: white; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+.footer-copyright { font-family: var(--font-body); font-size: 13px; color: var(--t3); }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; gap: 8px; text-align: center; } }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <span class="header-name">Green Defense Pest Control</span>
+      <span class="header-tagline">Licensed &amp; Insured · Carrollton, TX</span>
+    </div>
+    <a href="tel:4699645195" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (469) 964-5195
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-layout">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        4.8 Stars · 40 Reviews · Carrollton's Choice
+      </div>
+      <h1 class="hero-headline">Carrollton's <span>Defense</span><br>Against Every Pest</h1>
+      <p class="hero-sub">From Old Downtown Carrollton to the Rosemeade neighborhoods, Green Defense eliminates pests with targeted treatments that protect your home without the chemical overload. 4.8 stars across 40 verified reviews.</p>
+      <div class="hero-ctas">
+        <a href="tel:4699645195" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call for Free Estimate
+        </a>
+        <a href="#contact" class="btn-ghost">Book Online</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <span class="trust-text">4.8 · 40 Reviews</span>
+        <div class="trust-sep"></div>
+        <span class="trust-text">Licensed &amp; Insured</span>
+        <div class="trust-sep"></div>
+        <span class="trust-text">Pet-Safe Methods</span>
+      </div>
+    </div>
+    <div class="hero-card hero-card">
+      <div class="hero-card-title">Why Carrollton Chooses Green Defense</div>
+      <div class="hero-props">
+        <div class="hero-prop">
+          <div class="hero-prop-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="hero-prop-text"><strong>Fast Response — Same Day Available</strong>We don't make you wait days when pests are active now.</div>
+        </div>
+        <div class="hero-prop">
+          <div class="hero-prop-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="hero-prop-text"><strong>Free Estimates Always</strong>No charge to diagnose your pest situation.</div>
+        </div>
+        <div class="hero-prop">
+          <div class="hero-prop-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="hero-prop-text"><strong>Guaranteed Results</strong>If they come back within the service window, we return free.</div>
+        </div>
+        <div class="hero-prop">
+          <div class="hero-prop-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="hero-prop-text"><strong>Flat-Rate Pricing</strong>What we quote is what you pay. No surprises at billing.</div>
+        </div>
+      </div>
+      <div class="hero-phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (469) 964-5195
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-box"><span class="stat-number" data-target="10" data-suffix="+">0</span><span class="stat-label">Years Defending Carrollton Homes</span></div>
+    <div class="stat-box"><span class="stat-number" data-target="1200" data-suffix="+">0</span><span class="stat-label">Properties Protected</span></div>
+    <div class="stat-box"><span class="stat-number" data-target="40" data-suffix=" Reviews">0</span><span class="stat-label">Verified Google Reviews</span></div>
+    <div class="stat-box"><span class="stat-number" data-target="100" data-suffix="%">0</span><span class="stat-label">Satisfaction Guaranteed</span></div>
+  </div>
+</div>
+
+<section class="services-section">
+  <div class="container">
+    <span class="section-label">Our Services</span>
+    <h2 class="section-title">Targeted Defense for Every Threat</h2>
+    <p class="section-sub">We identify the specific pest, find where it's coming from, and eliminate it at the source — not just the surface.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="service-name">Roach Control</div>
+        <p class="service-desc">German roaches hide in kitchen voids and breed faster than most treatments can keep up. We use residual baits in harborage areas to collapse the colony — not just knock back the population.</p>
+        <a href="#contact" class="service-link">Free Estimate →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="service-name">Rodent Control</div>
+        <p class="service-desc">Roof rats are active in the Carrollton tree canopy; mice follow the cold inside every fall. We seal entry points and clear the infestation before they establish in your walls.</p>
+        <a href="#contact" class="service-link">Free Estimate →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="service-name">Termite Treatment</div>
+        <p class="service-desc">Subterranean termites travel underground and can consume a home's structural wood for years before detection. Our baiting and liquid barrier systems stop them before costs climb.</p>
+        <a href="#contact" class="service-link">Free Inspection →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+        <div class="service-name">Mosquito Control</div>
+        <p class="service-desc">Josey Ranch Lake and Carrollton's greenbelt corridors breed heavy mosquito populations through summer. We treat foliage and standing water sources to give you your yard back.</p>
+        <a href="#contact" class="service-link">Free Estimate →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="service-name">Fire Ant &amp; Ant Control</div>
+        <p class="service-desc">North Texas clay soil and warm winters let fire ant colonies grow enormous. We treat mound systems and broadcast granulars to eliminate colonies and maintain a barrier around your property.</p>
+        <a href="#contact" class="service-link">Free Estimate →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="service-name">General Pest Defense</div>
+        <p class="service-desc">Our quarterly program covers roaches, ants, spiders, silverfish, and more. One plan, year-round protection, guaranteed re-service if any covered pest returns between visits.</p>
+        <a href="#contact" class="service-link">See Plans →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section">
+  <div class="container">
+    <span class="section-label">Our Advantage</span>
+    <h2 class="section-title">Defense You Can Count On</h2>
+    <p class="section-sub">Fast, local, licensed — the kind of pest control Carrollton homeowners actually recommend to their neighbors.</p>
+    <div class="grid-4">
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="10" data-suffix="+">0</div><div class="why-stat-label">Years in Carrollton</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="1200" data-suffix="+">0</div><div class="why-stat-label">Homes Treated</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="4.8" data-suffix="★">0</div><div class="why-stat-label">Google Rating</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="24" data-suffix="hr">0</div><div class="why-stat-label">Response Window</div></div>
+    </div>
+    <div class="why-diff">
+      <div class="why-diff-item">
+        <div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="why-diff-title">Local — Not a Franchise</div>
+          <p class="why-diff-text">We're a locally owned operation. Every dollar you spend stays in the DFW area, and every job matters to us personally.</p>
+        </div>
+      </div>
+      <div class="why-diff-item">
+        <div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="why-diff-title">Free Re-Service Guarantee</div>
+          <p class="why-diff-text">If covered pests return between scheduled services, we come back at no extra charge. No phone trees, no waiting.</p>
+        </div>
+      </div>
+      <div class="why-diff-item">
+        <div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="why-diff-title">State-Licensed Technicians</div>
+          <p class="why-diff-text">Every tech holds a current Texas Structural Pest Control license. We don't send unlicensed helpers to your home.</p>
+        </div>
+      </div>
+      <div class="why-diff-item">
+        <div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="why-diff-title">Honest Diagnosis First</div>
+          <p class="why-diff-text">We tell you exactly what you have and what you need — before we touch a thing. No manufactured urgency, no phantom problems.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section">
+  <div class="container">
+    <span class="section-label" style="color:rgba(234,88,12,0.8)">Process</span>
+    <h2 class="section-title" style="color:white;margin-bottom:10px;">From First Call to Pest-Free</h2>
+    <p class="section-sub" style="color:var(--t2);margin-bottom:60px;">Three steps. Zero guesswork. Backed by guarantee.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="step-title">Free Estimate</div>
+        <p class="step-desc">Call or book online. We schedule your free inspection promptly — often same day for urgent situations in Carrollton.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <div class="step-title">Inspect &amp; Diagnose</div>
+        <p class="step-desc">We inspect every area of concern — interior, exterior, foundation, entry points. You get a clear diagnosis and a flat-rate treatment quote before we start.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="step-title">Treat &amp; Guarantee</div>
+        <p class="step-desc">Targeted treatment, thorough application, and a written guarantee. If pests return within the service window, we come back at no charge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-header">
+      <div>
+        <span class="section-label">Reviews</span>
+        <h2 class="section-title">Carrollton Homeowners Weigh In</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span class="google-badge-text">4.8 ★ · 40 Google Reviews</span>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Noticed mice droppings in our garage and called Green Defense on a Tuesday. They had someone out that same afternoon. The tech was thorough — found the gap behind where a pipe comes through the slab, sealed it, set bait stations. No more droppings within a week. Quick, honest, fair price."</p>
+        <hr class="review-divider">
+        <div class="review-author">
+          <div class="review-avatar">SB</div>
+          <div>
+            <div class="review-stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="review-name">Sarah B.</div>
+            <div class="review-location">Rosemeade, Carrollton · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Have been on their quarterly plan for two years. The technician knows our yard and knows where ants try to get in near the back patio. Every visit is thorough and the same tech shows up each time. We haven't had a single indoor bug problem since starting. Best pest control decision we've made."</p>
+        <hr class="review-divider">
+        <div class="review-author">
+          <div class="review-avatar">DK</div>
+          <div>
+            <div class="review-stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="review-name">David K.</div>
+            <div class="review-location">Prestonview, Carrollton · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"We found a large roach infestation in our rental property after tenants moved out. Green Defense came out immediately, did a full treatment of the unit, and gave us a clear timeline for follow-up. Two visits later, the problem was completely resolved. Priced very fairly and handled it fast."</p>
+        <hr class="review-divider">
+        <div class="review-author">
+          <div class="review-avatar">MT</div>
+          <div>
+            <div class="review-stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="review-name">Marcus T.</div>
+            <div class="review-location">Old Town Carrollton · Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas-section">
+  <div class="container">
+    <div class="areas-layout">
+      <div>
+        <span class="section-label">Coverage</span>
+        <h2 class="section-title">Protecting North DFW Communities</h2>
+        <p>From Carrollton's established central neighborhoods to the newer developments along the 635 corridor, we know the specific pest pressures each community faces through the Texas seasons.</p>
+        <a href="tel:4699645195" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Check Coverage
+        </a>
+      </div>
+      <div class="areas-card">
+        <div class="areas-card-title">Areas Served</div>
+        <div class="chips">
+          <a href="#contact" class="chip">Carrollton</a>
+          <a href="#contact" class="chip">Farmers Branch</a>
+          <a href="#contact" class="chip">Addison</a>
+          <a href="#contact" class="chip">Coppell</a>
+          <a href="#contact" class="chip">Irving</a>
+          <a href="#contact" class="chip">Lewisville</a>
+          <a href="#contact" class="chip">The Colony</a>
+          <a href="#contact" class="chip">Dallas (North)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <span class="section-label">Get Started</span>
+    <h2 class="section-title" style="margin-bottom:8px;">Request Your Free Estimate</h2>
+    <p style="font-family:var(--font-body);color:var(--grey-text);margin-bottom:48px;">We respond quickly and offer same-day service across Carrollton and surrounding areas.</p>
+    <div class="contact-layout">
+      <form>
+        <div class="grid-2" style="gap:16px;">
+          <div class="form-group"><label class="contact-form-label">First Name</label><input type="text" placeholder="Sarah"></div>
+          <div class="form-group"><label class="contact-form-label">Last Name</label><input type="text" placeholder="Brooks"></div>
+        </div>
+        <div class="form-group"><label class="contact-form-label">Phone</label><input type="tel" placeholder="(469) 555-0100"></div>
+        <div class="form-group"><label class="contact-form-label">Email</label><input type="email" placeholder="sarah@example.com"></div>
+        <div class="form-group"><label class="contact-form-label">Type of Pest</label>
+          <select><option>Select...</option><option>Roaches</option><option>Rodents</option><option>Termites</option><option>Mosquitoes</option><option>Ants / Fire Ants</option><option>Wasps</option><option>Not Sure</option></select>
+        </div>
+        <div class="form-group"><label class="contact-form-label">Details (optional)</label><textarea rows="3" placeholder="Where you're seeing activity, how long, any urgency..."></textarea></div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Request Free Estimate
+        </button>
+      </form>
+      <div class="contact-info-card">
+        <div class="contact-info-title">Call Green Defense</div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="contact-info-text"><strong>(469) 964-5195</strong>Same-day service available</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="contact-info-text"><strong>Mon–Sat: 7am–7pm</strong>Emergencies taken after hours</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="contact-info-text"><strong>Carrollton, TX</strong>Serving all of North Dallas County</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="contact-info-text"><strong>Licensed &amp; Insured</strong>TX Structural Pest Control Board</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Build Your Home's First Line of Defense</h2>
+    <p>Call for a free estimate — same-day appointments available across Carrollton.</p>
+    <a href="tel:4699645195" class="btn-white">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (469) 964-5195
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Green Defense Pest Control</div>
+        <p class="footer-brand-desc">Carrollton's locally owned pest defense specialists. Licensed, insured, and committed to targeted treatments that eliminate pests without unnecessary chemical exposure.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Roach Control</a></li>
+          <li><a href="#contact">Rodent Control</a></li>
+          <li><a href="#contact">Termite Treatment</a></li>
+          <li><a href="#contact">Mosquito Control</a></li>
+          <li><a href="#contact">Fire Ant Control</a></li>
+          <li><a href="#contact">General Pest Defense</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Carrollton, TX</a></li>
+          <li><a href="#contact">Farmers Branch, TX</a></li>
+          <li><a href="#contact">Addison, TX</a></li>
+          <li><a href="#contact">Coppell, TX</a></li>
+          <li><a href="#contact">Irving, TX</a></li>
+          <li><a href="#contact">Lewisville, TX</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:4699645195">(469) 964-5195</a></li>
+          <li><a href="#contact">Free Estimate</a></li>
+          <li><a href="#contact">Emergency Line</a></li>
+          <li><a href="#contact">Book Online</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">&copy; 2024 Green Defense Pest Control · Carrollton, TX</span>
+      <span class="footer-copyright">Licensed &amp; Insured · Local Since 2014</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => { document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 50); });
+function animateCount(el) {
+  const target = parseFloat(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const p = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    const val = ease * target;
+    el.textContent = (Number.isInteger(target) ? Math.floor(val).toLocaleString() : val.toFixed(1)) + suffix;
+    if (p < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const statObs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); } }); }, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => statObs.observe(el));
+const cardObs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); cardObs.unobserve(e.target); } }); }, { threshold: 0.2 });
+document.querySelectorAll('.card').forEach(el => cardObs.observe(el));
+</script>
+</body>
+</html>

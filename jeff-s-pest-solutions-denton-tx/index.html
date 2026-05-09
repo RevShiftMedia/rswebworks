@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeff's Pest Solutions | Personal Pest Control in Denton, TX</title>
+<meta name="description" content="Jeff's Pest Solutions — owner-operated pest control in Denton, TX. 5.0 stars, 74 reviews. When you call, you get Jeff. Call (940) 597-6340 for same-day service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#110e0b;--primary-dark:#080604;--accent:#059669;--accent-dark:#047857;--accent-rgb:5,150,105;--accent-light:#10b981;--text:#e8f0e8;--text-muted:#7aaa88;--surface:#1a1612;--surface2:#221e1a;--border:rgba(5,150,105,0.2);--white:#ffffff;--radius:12px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;background:var(--primary);color:var(--text);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;line-height:1.1}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(17,14,11,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-size:1.35rem;font-weight:800;color:var(--white)}
+.nav-logo span{color:var(--accent-light)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:0.875rem;font-weight:600;color:var(--text-muted);transition:color 0.2s}
+.nav-links a:hover{color:var(--accent-light)}
+.nav-cta{background:var(--accent);color:#fff !important;padding:0.55rem 1.3rem;border-radius:6px;font-weight:700 !important;transition:background 0.2s,transform 0.15s}
+.nav-cta:hover{background:var(--accent-dark) !important;transform:translateY(-1px)}
+.hero{min-height:100vh;background:linear-gradient(150deg,var(--primary-dark) 0%,var(--primary) 50%,#0e0c0a 100%);display:flex;align-items:center;padding:100px 5% 60px;position:relative;overflow:hidden}
+.hero-grain{position:absolute;inset:0;pointer-events:none;z-index:0;opacity:0.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-size:256px 256px}
+.hero-glow{position:absolute;top:18%;right:8%;width:480px;height:480px;background:radial-gradient(circle,rgba(5,150,105,0.1) 0%,transparent 70%);pointer-events:none;z-index:0}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:60% 40%;gap:4rem;align-items:center;max-width:1280px;margin:0 auto;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(5,150,105,0.12);border:1px solid rgba(5,150,105,0.3);color:var(--accent-light);font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 0.85rem;border-radius:100px;margin-bottom:1.2rem;opacity:0;animation:heroFadeUp 0.6s ease forwards;animation-delay:0.1s}
+.hero-badge svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
+.hero-title{font-size:clamp(2.8rem,5vw,4.2rem);font-weight:800;color:var(--white);margin-bottom:1.2rem;opacity:0;animation:heroFadeUp 0.6s ease forwards;animation-delay:0.25s}
+.hero-title span{color:var(--accent-light)}
+.hero-sub{font-size:1.05rem;color:var(--text-muted);max-width:520px;margin-bottom:2rem;line-height:1.7;opacity:0;animation:heroFadeUp 0.6s ease forwards;animation-delay:0.4s}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:heroFadeUp 0.6s ease forwards;animation-delay:0.55s}
+.btn-primary{background:var(--accent);color:#fff;padding:0.85rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;transition:background 0.2s,transform 0.15s,box-shadow 0.2s;box-shadow:0 4px 20px rgba(var(--accent-rgb),0.35)}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 8px 28px rgba(var(--accent-rgb),0.45)}
+.btn-secondary{border:2px solid rgba(var(--accent-rgb),0.4);color:var(--text);padding:0.85rem 2rem;border-radius:8px;font-weight:700;font-size:1rem;transition:border-color 0.2s,color 0.2s,transform 0.15s}
+.btn-secondary:hover{border-color:var(--accent-light);color:var(--accent-light);transform:translateY(-2px)}
+.hero-trust{display:flex;align-items:center;gap:1rem;margin-top:2rem;opacity:0;animation:heroFadeUp 0.6s ease forwards;animation-delay:0.7s}
+.hero-stars{display:flex;gap:3px}
+.hero-stars svg{width:18px;height:18px;fill:#f59e0b}
+.hero-trust-text{font-size:0.875rem;color:var(--text-muted)}
+.hero-trust-text strong{color:var(--text)}
+.hero-card{background:rgba(26,22,18,0.82);backdrop-filter:blur(12px);border:1px solid rgba(5,150,105,0.22);border-radius:20px;padding:2rem;opacity:0;animation:heroFadeUp 0.6s ease forwards;animation-delay:0.45s}
+.hero-card-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:1.5rem;padding-bottom:1.2rem;border-bottom:1px solid rgba(5,150,105,0.15)}
+.owner-avatar{width:48px;height:48px;background:rgba(5,150,105,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:800;color:var(--accent-light);flex-shrink:0;border:2px solid rgba(5,150,105,0.3)}
+.hero-card-label{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;color:var(--white)}
+.hero-card-sub{font-size:0.78rem;color:var(--text-muted)}
+.owner-quote{background:rgba(5,150,105,0.07);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:1rem 1.1rem;margin-bottom:1.2rem}
+.owner-quote p{font-size:0.88rem;color:var(--text-muted);font-style:italic;line-height:1.65}
+.owner-quote cite{font-size:0.78rem;color:var(--accent-light);font-style:normal;font-weight:700;display:block;margin-top:0.4rem}
+.owner-stats{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
+.o-stat{background:rgba(5,150,105,0.08);border:1px solid rgba(5,150,105,0.13);border-radius:8px;padding:0.75rem;text-align:center}
+.o-stat-val{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:800;color:var(--accent-light)}
+.o-stat-lbl{font-size:0.72rem;color:var(--text-muted);margin-top:0.15rem}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.trust-bar{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.5rem 5%}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1100px;margin:0 auto}
+.trust-item{text-align:center;padding:1rem}
+.trust-num{font-family:'Barlow Condensed',sans-serif;font-size:2.4rem;font-weight:800;color:var(--accent-light);line-height:1}
+.trust-label{font-size:0.82rem;color:var(--text-muted);margin-top:0.3rem}
+section{padding:5rem 5%}
+.section-tag{display:inline-block;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-light);margin-bottom:0.8rem}
+.section-title{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:var(--white);margin-bottom:1rem}
+.section-sub{font-size:1rem;color:var(--text-muted);max-width:560px;line-height:1.7}
+.section-header{margin-bottom:3rem}
+.section-header.centered{text-align:center}
+.section-header.centered .section-sub{margin:0 auto}
+/* SERVICES — icon-left */
+.services{background:var(--primary)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.6rem;transition:border-color 0.25s,transform 0.25s,box-shadow 0.25s;opacity:0;transform:translateY(24px)}
+.service-card.visible{opacity:1;transform:translateY(0);transition:opacity 0.5s ease,transform 0.5s ease,border-color 0.25s,box-shadow 0.25s}
+.service-card:hover{border-color:rgba(var(--accent-rgb),0.5);transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,0.45)}
+.service-card-header{display:flex;align-items:center;gap:0.9rem;margin-bottom:0.9rem}
+.service-icon{width:42px;height:42px;flex-shrink:0;background:rgba(5,150,105,0.12);border-radius:9px;display:flex;align-items:center;justify-content:center}
+.service-icon svg{width:22px;height:22px;stroke:var(--accent-light);fill:none;stroke-width:2}
+.service-name{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;font-weight:700;color:var(--white)}
+.service-desc{font-size:0.875rem;color:var(--text-muted);line-height:1.65;margin-bottom:0.8rem}
+.service-tag{display:inline-block;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--accent-light);background:rgba(5,150,105,0.1);border-radius:4px;padding:0.2rem 0.55rem}
+/* OWNER SECTION */
+.owner-section{background:var(--surface)}
+.owner-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1200px;margin:0 auto}
+.owner-points{display:flex;flex-direction:column;gap:1rem}
+.owner-point{display:flex;gap:1rem;align-items:flex-start;padding:1.2rem;background:var(--primary);border-radius:10px;border:1px solid var(--border);opacity:0;transform:translateX(-20px)}
+.owner-point.visible{opacity:1;transform:translateX(0);transition:opacity 0.5s ease,transform 0.5s ease}
+.op-icon{width:40px;height:40px;flex-shrink:0;background:rgba(5,150,105,0.12);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.op-icon svg{width:20px;height:20px;stroke:var(--accent-light);fill:none;stroke-width:2}
+.op-title{font-family:'Barlow Condensed',sans-serif;font-size:1.05rem;font-weight:700;color:var(--white);margin-bottom:0.3rem}
+.op-desc{font-size:0.85rem;color:var(--text-muted);line-height:1.6}
+.owner-bio{background:var(--primary);border:1px solid var(--border);border-radius:16px;padding:2rem}
+.owner-bio-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:1.2rem;border-bottom:1px solid rgba(5,150,105,0.15)}
+.owner-bio-avatar{width:60px;height:60px;background:rgba(5,150,105,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:800;color:var(--accent-light);border:2px solid rgba(5,150,105,0.3);flex-shrink:0}
+.owner-bio-name{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:700;color:var(--white)}
+.owner-bio-title{font-size:0.8rem;color:var(--text-muted)}
+.owner-bio-text{font-size:0.875rem;color:var(--text-muted);line-height:1.7;margin-bottom:1.2rem}
+.owner-credentials{display:flex;flex-direction:column;gap:0.55rem}
+.owner-cred{display:flex;align-items:center;gap:0.6rem;font-size:0.82rem;color:var(--text-muted)}
+.owner-cred svg{width:14px;height:14px;stroke:var(--accent-light);fill:none;flex-shrink:0}
+.owner-cred strong{color:var(--text)}
+/* PROCESS */
+.process{background:var(--primary)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.process-steps::before{content:'';position:absolute;top:28px;left:calc(12.5% + 20px);right:calc(12.5% + 20px);height:2px;background:linear-gradient(90deg,var(--accent),rgba(var(--accent-rgb),0.15));z-index:0}
+.process-step{text-align:center;padding:0 1.5rem;position:relative;z-index:1;opacity:0;transform:translateY(20px)}
+.process-step.visible{opacity:1;transform:translateY(0);transition:opacity 0.5s ease,transform 0.5s ease}
+.process-num{width:56px;height:56px;margin:0 auto 1.2rem;background:var(--primary);border:2px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:800;color:var(--accent-light)}
+.process-title{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.5rem}
+.process-desc{font-size:0.82rem;color:var(--text-muted);line-height:1.6}
+/* REVIEWS — dark */
+.reviews{background:var(--surface)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.review-card{background:var(--surface2);border:1px solid rgba(5,150,105,0.12);border-radius:var(--radius);padding:1.7rem;opacity:0;transform:translateY(20px)}
+.review-card.visible{opacity:1;transform:translateY(0);transition:opacity 0.5s ease,transform 0.5s ease}
+.review-stars{display:flex;gap:3px;margin-bottom:0.9rem}
+.review-stars svg{width:16px;height:16px;fill:#f59e0b}
+.review-text{font-size:0.9rem;color:#c5d8c0;line-height:1.7;margin-bottom:1.1rem;font-style:italic}
+.review-divider{height:1px;background:rgba(5,150,105,0.1);margin-bottom:0.9rem}
+.review-author{display:flex;align-items:center;gap:0.75rem}
+.review-avatar{width:36px;height:36px;border-radius:50%;background:rgba(5,150,105,0.15);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-size:0.95rem;font-weight:700;color:var(--accent-light);flex-shrink:0}
+.review-name{font-size:0.875rem;font-weight:700;color:var(--white)}
+.review-date{font-size:0.75rem;color:var(--text-muted)}
+.reviews-summary{text-align:center;margin-top:2.5rem;display:flex;align-items:center;justify-content:center;gap:0.75rem}
+.reviews-summary svg{width:22px;height:22px;fill:#f59e0b}
+.reviews-summary span{font-size:0.875rem;color:var(--text-muted)}
+.reviews-summary strong{color:var(--text)}
+.areas{background:var(--primary);padding:4rem 5%}
+.areas-inner{max-width:1100px;margin:0 auto}
+.areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0.85rem;margin-top:2rem}
+.area-pill{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:0.65rem 1rem;display:flex;align-items:center;gap:0.5rem;transition:border-color 0.2s}
+.area-pill:hover{border-color:rgba(var(--accent-rgb),0.45)}
+.area-pill svg{width:14px;height:14px;stroke:var(--accent-light);fill:none;flex-shrink:0}
+.area-pill span{font-size:0.85rem;color:var(--text-muted)}
+.cta-band{background:linear-gradient(135deg,var(--accent-dark) 0%,var(--accent-light) 100%);padding:5rem 5%;position:relative;overflow:hidden}
+.cta-grain{position:absolute;inset:0;pointer-events:none;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-size:256px 256px}
+.cta-inner{position:relative;z-index:1;max-width:700px;margin:0 auto;text-align:center}
+.cta-title{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;margin-bottom:1rem}
+.cta-sub{font-size:1.05rem;color:rgba(255,255,255,0.85);margin-bottom:2.5rem}
+.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--accent-dark);padding:0.9rem 2.2rem;border-radius:8px;font-weight:700;font-size:1rem;transition:transform 0.2s,box-shadow 0.2s}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,0.25)}
+.btn-outline-white{border:2px solid rgba(255,255,255,0.7);color:#fff;padding:0.9rem 2.2rem;border-radius:8px;font-weight:700;font-size:1rem;transition:background 0.2s,transform 0.2s}
+.btn-outline-white:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px)}
+footer{background:var(--primary-dark);border-top:1px solid var(--border);padding:3.5rem 5% 2rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.footer-brand{font-family:'Barlow Condensed',sans-serif;font-size:1.25rem;font-weight:800;color:var(--white);margin-bottom:0.5rem}
+.footer-brand span{color:var(--accent-light)}
+.footer-tagline{font-size:0.85rem;color:var(--text-muted);line-height:1.6;margin-bottom:1rem}
+.footer-contact{display:flex;flex-direction:column;gap:0.5rem}
+.footer-contact a{font-size:0.85rem;color:var(--text-muted);display:flex;align-items:center;gap:0.5rem;transition:color 0.2s}
+.footer-contact a:hover{color:var(--accent-light)}
+.footer-contact svg{width:14px;height:14px;stroke:currentColor;fill:none;flex-shrink:0}
+.footer-col-title{font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent-light);margin-bottom:1rem}
+.footer-links{display:flex;flex-direction:column;gap:0.55rem}
+.footer-links a{font-size:0.85rem;color:var(--text-muted);transition:color 0.2s}
+.footer-links a:hover{color:var(--accent-light)}
+.footer-bottom{border-top:1px solid var(--border);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+.footer-copy{font-size:0.8rem;color:var(--text-muted)}
+.footer-legal{display:flex;gap:1.5rem}
+.footer-legal a{font-size:0.8rem;color:var(--text-muted);transition:color 0.2s}
+.footer-legal a:hover{color:var(--accent-light)}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr;gap:2.5rem}.hero-card{display:none}.trust-grid{grid-template-columns:repeat(2,1fr)}.services-grid{grid-template-columns:repeat(2,1fr)}.owner-inner{grid-template-columns:1fr}.process-steps{grid-template-columns:repeat(2,1fr)}.process-steps::before{display:none}.reviews-grid{grid-template-columns:1fr 1fr}.areas-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr}.reviews-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.hero-actions,.cta-actions{flex-direction:column;align-items:flex-start}.cta-actions{align-items:center}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo"><span>Jeff's</span> Pest Solutions</div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#owner">About Jeff</a>
+    <a href="#process">Process</a>
+    <a href="#reviews">Reviews</a>
+    <a href="tel:9405976340" class="nav-cta">Call Jeff Direct</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Owner-Operated — When You Call, You Get Jeff
+      </div>
+      <h1 class="hero-title">Denton's <span>Personal</span><br>Pest Control<br>Expert</h1>
+      <p class="hero-sub">Jeff's Pest Solutions is owner-operated pest control in Denton, TX. No call centers, no franchises — just Jeff, a licensed and experienced professional who treats your home like his own.</p>
+      <div class="hero-actions">
+        <a href="tel:9405976340" class="btn-primary">Call Jeff: (940) 597-6340</a>
+        <a href="#services" class="btn-secondary">Services &amp; Pricing</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="hero-trust-text"><strong>5.0 Stars</strong> — 74 Verified Reviews — 100% Five-Star</p>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-header">
+        <div class="owner-avatar">J</div>
+        <div><div class="hero-card-label">Jeff's Pest Solutions</div><div class="hero-card-sub">Owner-operated — Denton, TX</div></div>
+      </div>
+      <div class="owner-quote">
+        <p>"My name is on every job I do. I take that seriously. When I treat your home, I treat it the way I'd want someone treating mine."</p>
+        <cite>— Jeff, Owner &amp; Lead Technician</cite>
+      </div>
+      <div class="owner-stats">
+        <div class="o-stat"><div class="o-stat-val">74</div><div class="o-stat-lbl">Five-Star Reviews</div></div>
+        <div class="o-stat"><div class="o-stat-val">5.0</div><div class="o-stat-lbl">Perfect Rating</div></div>
+        <div class="o-stat"><div class="o-stat-val">100%</div><div class="o-stat-lbl">Satisfaction Guarantee</div></div>
+        <div class="o-stat"><div class="o-stat-val">1</div><div class="o-stat-lbl">Owner Always On-Site</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="trust-bar">
+  <div class="trust-grid">
+    <div class="trust-item"><div class="trust-num" data-target="74" data-suffix="">0</div><div class="trust-label">Five-Star Reviews</div></div>
+    <div class="trust-item"><div class="trust-num" data-target="5" data-suffix=".0 Stars">0.0 Stars</div><div class="trust-label">Perfect Average</div></div>
+    <div class="trust-item"><div class="trust-num" data-target="100" data-suffix="%">0%</div><div class="trust-label">Satisfaction Guarantee</div></div>
+    <div class="trust-item"><div class="trust-num" data-target="1" data-suffix=" Owner">0 Owner</div><div class="trust-label">Always On Every Job</div></div>
+  </div>
+</div>
+<section class="services" id="services">
+  <div class="section-header centered">
+    <span class="section-tag">Services</span>
+    <h2 class="section-title">Expert Solutions for Every Pest</h2>
+    <p class="section-sub">Jeff brings hands-on expertise to every service call — no dispatched contractors, no inexperienced technicians. Just professional results you can count on.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-card-header">
+        <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="service-name">General Pest Control</div>
+      </div>
+      <p class="service-desc">Interior and exterior barrier treatments protecting your home from ants, spiders, cockroaches, and all common North Texas pests. Quarterly maintenance plans available.</p>
+      <span class="service-tag">Most Popular</span>
+    </div>
+    <div class="service-card">
+      <div class="service-card-header">
+        <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="service-name">Termite Treatment</div>
+      </div>
+      <p class="service-desc">Thorough termite inspections and liquid barrier or bait system treatment to stop subterranean termite damage before it costs you thousands in repairs.</p>
+      <span class="service-tag">Free Inspection</span>
+    </div>
+    <div class="service-card">
+      <div class="service-card-header">
+        <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+        <div class="service-name">Rodent Control</div>
+      </div>
+      <p class="service-desc">Complete mouse and rat elimination with traps, bait stations, and structural exclusion sealing. Jeff finds every entry point and closes it permanently.</p>
+      <span class="service-tag">Exclusion Included</span>
+    </div>
+    <div class="service-card">
+      <div class="service-card-header">
+        <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="service-name">Mosquito Control</div>
+      </div>
+      <p class="service-desc">Monthly barrier spray treatments to eliminate mosquitoes from your Denton yard. Effective through the full North Texas mosquito season.</p>
+      <span class="service-tag">Seasonal</span>
+    </div>
+    <div class="service-card">
+      <div class="service-card-header">
+        <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="service-name">Bed Bug Elimination</div>
+      </div>
+      <p class="service-desc">Targeted heat and chemical treatments to fully eradicate bed bug populations — adults, nymphs, and eggs — with satisfaction guaranteed.</p>
+      <span class="service-tag">Guaranteed</span>
+    </div>
+    <div class="service-card">
+      <div class="service-card-header">
+        <div class="service-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg></div>
+        <div class="service-name">Flea &amp; Tick Control</div>
+      </div>
+      <p class="service-desc">Interior and exterior treatments eliminating fleas and ticks from your home and yard — safe for pets and children when dry.</p>
+      <span class="service-tag">Pet-Friendly</span>
+    </div>
+  </div>
+</section>
+<section class="owner-section" id="owner">
+  <div class="owner-inner">
+    <div>
+      <div class="section-header">
+        <span class="section-tag">Owner-Operated</span>
+        <h2 class="section-title">Your Neighbor,<br>Not a Call Center</h2>
+        <p class="section-sub">Jeff built this business on a simple promise: show up, do it right, and stand behind your work. 74 five-star reviews say he's kept that promise every time.</p>
+      </div>
+      <div class="owner-points">
+        <div class="owner-point">
+          <div class="op-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+          <div><div class="op-title">Jeff Answers the Phone</div><p class="op-desc">No call centers, no dispatch queues. Call the number and talk directly to the person treating your home.</p></div>
+        </div>
+        <div class="owner-point">
+          <div class="op-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+          <div><div class="op-title">Owner Accountability</div><p class="op-desc">When your name is on the business, every job matters. Jeff's 5.0-star record reflects a standard no franchise can guarantee.</p></div>
+        </div>
+        <div class="owner-point">
+          <div class="op-icon"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+          <div><div class="op-title">Flexible Same-Day Scheduling</div><p class="op-desc">No rigid corporate booking windows. Jeff works with your schedule to get out quickly when you need him.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="owner-bio">
+      <div class="owner-bio-header">
+        <div class="owner-bio-avatar">J</div>
+        <div><div class="owner-bio-name">Jeff — Owner &amp; Lead Technician</div><div class="owner-bio-title">Jeff's Pest Solutions — Denton, TX</div></div>
+      </div>
+      <p class="owner-bio-text">Jeff founded this business on the belief that homeowners deserve honest, personal service — not a franchise experience. With years of hands-on pest control expertise in Denton County, Jeff knows the local pest pressures and brings proven solutions to every job he takes.</p>
+      <div class="owner-credentials">
+        <div class="owner-cred"><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Licensed</strong> pest control technician, State of Texas</span></div>
+        <div class="owner-cred"><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Fully insured</strong> — residential and commercial</span></div>
+        <div class="owner-cred"><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span><strong>74 five-star reviews</strong> — 100% five-star record</span></div>
+        <div class="owner-cred"><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span><strong>EPA-registered</strong>, family and pet safe products</span></div>
+        <div class="owner-cred"><svg viewBox="0 0 24 24" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Email:</strong> jeffspestsolutions@gmail.com</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="process" id="process">
+  <div class="section-header centered">
+    <span class="section-tag">How It Works</span>
+    <h2 class="section-title">Simple. Personal. Effective.</h2>
+    <p class="section-sub">Jeff's four-step process is designed to solve your pest problem correctly the first time — no unnecessary return visits, no upsells.</p>
+  </div>
+  <div class="process-steps">
+    <div class="process-step"><div class="process-num">01</div><div class="process-title">You Call Jeff</div><p class="process-desc">Call or text (940) 597-6340 and speak directly with Jeff. Same-day service available throughout Denton County.</p></div>
+    <div class="process-step"><div class="process-num">02</div><div class="process-title">Free Inspection</div><p class="process-desc">Jeff visits your property, inspects thoroughly, and tells you exactly what he found — with no unnecessary upsells or inflated estimates.</p></div>
+    <div class="process-step"><div class="process-num">03</div><div class="process-title">Expert Treatment</div><p class="process-desc">Targeted EPA-registered products applied precisely where pests are active. Jeff does the work himself — every single time.</p></div>
+    <div class="process-step"><div class="process-num">04</div><div class="process-title">Guaranteed Done</div><p class="process-desc">If pests return within your service window, Jeff comes back — no charge. His 5.0-star record speaks to how rarely that's needed.</p></div>
+  </div>
+</section>
+<section class="reviews" id="reviews">
+  <div class="section-header centered">
+    <span class="section-tag">Reviews</span>
+    <h2 class="section-title">74 Customers. 74 Five Stars.</h2>
+    <p class="section-sub">Every Denton homeowner who has trusted Jeff's Pest Solutions has rated the experience a perfect 5.0. Here's what they say.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <p class="review-text">"Jeff is the real deal. Came out fast, was incredibly thorough, and explained everything he was doing. The ant problem that had plagued us for a year was gone after one visit. I won't call anyone else."</p>
+      <div class="review-divider"></div>
+      <div class="review-author"><div class="review-avatar">TR</div><div><div class="review-name">Tanya R.</div><div class="review-date">Denton, TX — Verified Customer</div></div></div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <p class="review-text">"Called Jeff on a Tuesday afternoon and he was at our house that same day. Found the mouse entry points I'd never have spotted myself, sealed them, set traps — problem solved within a week. Excellent service."</p>
+      <div class="review-divider"></div>
+      <div class="review-author"><div class="review-avatar">MV</div><div><div class="review-name">Mark V.</div><div class="review-date">Denton, TX — Verified Customer</div></div></div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <p class="review-text">"I love supporting local owner-operated businesses and Jeff absolutely earned my loyalty. Professional, knowledgeable, fair pricing, and genuinely cares about doing a good job. My go-to for pest control in Denton."</p>
+      <div class="review-divider"></div>
+      <div class="review-author"><div class="review-avatar">SC</div><div><div class="review-name">Susan C.</div><div class="review-date">Denton, TX — Verified Customer</div></div></div>
+    </div>
+  </div>
+  <div class="reviews-summary"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span><strong>5.0 out of 5.0</strong> — 74 Verified Google Reviews — 100% Five-Star</span></div>
+</section>
+<section class="areas">
+  <div class="areas-inner">
+    <div class="section-header">
+      <span class="section-tag">Service Areas</span>
+      <h2 class="section-title">Serving Denton &amp; Surrounding Areas</h2>
+      <p class="section-sub">Jeff personally serves Denton and surrounding Denton County communities. Call to confirm availability in your area.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Denton, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Corinth, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Lake Dallas, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Krum, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Argyle, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Flower Mound, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Hickory Creek, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Lewisville, TX</span></div>
+    </div>
+  </div>
+</section>
+<section class="cta-band">
+  <div class="cta-grain"></div>
+  <div class="cta-inner">
+    <h2 class="cta-title">Call Jeff Today</h2>
+    <p class="cta-sub">74 perfect five-star reviews. Owner always on the job. Same-day service available. Call Jeff directly — no menus, no wait times.</p>
+    <div class="cta-actions">
+      <a href="tel:9405976340" class="btn-white">Call (940) 597-6340</a>
+      <a href="mailto:jeffspestsolutions@gmail.com" class="btn-outline-white">Send an Email</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand"><span>Jeff's</span> Pest Solutions</div>
+      <p class="footer-tagline">Owner-operated pest control in Denton, TX. Jeff treats your home like his own — 74 five-star reviews prove it. Call direct for same-day service.</p>
+      <div class="footer-contact">
+        <a href="tel:9405976340"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.52a16 16 0 006.29 6.29l1.05-1.05a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>(940) 597-6340</a>
+        <a href="mailto:jeffspestsolutions@gmail.com"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>jeffspestsolutions@gmail.com</a>
+        <a href="#"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>3229 Como Lake Rd, Denton, TX 76210</a>
+      </div>
+    </div>
+    <div><div class="footer-col-title">Services</div><div class="footer-links"><a href="#services">General Pest</a><a href="#services">Termite Treatment</a><a href="#services">Rodent Control</a><a href="#services">Mosquito Control</a><a href="#services">Bed Bugs</a><a href="#services">Fleas &amp; Ticks</a></div></div>
+    <div><div class="footer-col-title">About</div><div class="footer-links"><a href="#owner">About Jeff</a><a href="#process">How It Works</a><a href="#reviews">Reviews</a><a href="#services">Service Areas</a><a href="tel:9405976340">Call Jeff</a></div></div>
+    <div><div class="footer-col-title">Guarantee</div><div class="footer-links"><a href="#">5.0-Star Record</a><a href="#">Satisfaction Guarantee</a><a href="#">Licensed &amp; Insured</a><a href="#">Same-Day Service</a><a href="#">Free Inspection</a></div></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2025 Jeff's Pest Solutions. All rights reserved. Denton, TX.</div>
+    <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+  </div>
+</footer>
+<script>
+const obs=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const el=entry.target;const cls=['service-card','review-card','process-step','owner-point'].find(c=>el.classList.contains(c));if(cls){const idx=[...el.parentElement.querySelectorAll('.'+cls)].indexOf(el);setTimeout(()=>el.classList.add('visible'),idx*80);}obs.unobserve(el);}});},{threshold:0.1});
+document.querySelectorAll('.service-card,.review-card,.process-step,.owner-point').forEach(el=>obs.observe(el));
+const cObs=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const el=entry.target;const target=parseFloat(el.dataset.target);const suffix=el.dataset.suffix||'';let cur=0;const step=target/(1600/16);const t=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=(Number.isInteger(target)?Math.round(cur):cur.toFixed(1))+suffix;if(cur>=target)clearInterval(t);},16);cObs.unobserve(el);}});},{threshold:0.5});
+document.querySelectorAll('[data-target]').forEach(el=>cObs.observe(el));
+</script>
+</body>
+</html>

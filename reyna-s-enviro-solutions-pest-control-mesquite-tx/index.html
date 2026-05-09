@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reyna's Enviro Solutions Pest Control — Mesquite, TX</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --primary: #253036;
+  --primary-dark: #1a2428;
+  --accent: #22c55e;
+  --accent-dark: #15803d;
+  --accent-rgb: 34,197,94;
+  --bg: #ffffff;
+  --bg-off: #f0f7f2;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.78);
+  --t3: rgba(255,255,255,0.45);
+  --dark-text: #111827;
+  --grey-text: #6b7280;
+  --border: #d1fae5;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(37,48,54,0.1);
+  --shadow-lg: 0 8px 40px rgba(37,48,54,0.2);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(var(--accent-rgb),0.35);
+  transition: all 0.15s ease; text-decoration: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(var(--accent-rgb),0.45); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 600;
+  padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.15s ease; text-decoration: none;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 600px) { .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; } }
+
+/* HEADER */
+.site-header {
+  background: var(--primary); position: sticky; top: 0; z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.site-header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.5); }
+.header-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; height: 68px;
+}
+.header-brand { display: flex; align-items: center; gap: 12px; }
+.header-logo-dot { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; }
+.header-text { display: flex; flex-direction: column; }
+.header-name { font-family: var(--font-display); font-weight: 700; font-size: 19px; color: white; }
+.header-tagline { font-family: var(--font-body); font-size: 11px; color: var(--t2); }
+.header-cta {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-weight: 700; font-size: 14px;
+  padding: 10px 20px; border-radius: 7px; text-decoration: none;
+  transition: all 0.15s;
+}
+.header-cta:hover { transform: translateY(-1px); }
+
+/* HERO */
+.hero {
+  background: linear-gradient(140deg, var(--primary-dark) 0%, var(--primary) 55%, #1a3d2b 100%);
+  padding: 100px 0 80px; position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-layout {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 1fr 360px; gap: 56px; align-items: center;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 20px; margin-bottom: 20px;
+}
+.hero-headline {
+  font-family: var(--font-display); font-size: clamp(42px,6vw,64px);
+  font-weight: 900; color: white; line-height: 1.05;
+  letter-spacing: -0.02em; margin-bottom: 18px;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-family: var(--font-body); font-size: 18px; color: var(--t2);
+  line-height: 1.65; margin-bottom: 32px; max-width: 480px;
+}
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+.hero-trust { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.trust-stars { display: flex; align-items: center; gap: 3px; color: #fbbf24; }
+.trust-text { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+.trust-sep { width: 1px; height: 16px; background: rgba(255,255,255,0.25); }
+
+.hero-card {
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3); backdrop-filter: blur(12px);
+  border-radius: 16px; padding: 28px 30px;
+}
+.hero-card-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; margin-bottom: 20px; }
+.eco-seals { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+.eco-seal {
+  display: flex; align-items: center; gap: 10px;
+  background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.25);
+  border-radius: 8px; padding: 10px 14px;
+}
+.eco-seal-icon { color: var(--accent); flex-shrink: 0; }
+.eco-seal-text { font-family: var(--font-body); font-size: 13px; color: var(--t1); font-weight: 600; }
+.hero-phone {
+  border-top: 1px solid rgba(255,255,255,0.12); padding-top: 20px;
+  font-family: var(--font-display); font-size: 21px; font-weight: 900;
+  color: white; display: flex; align-items: center; gap: 10px;
+}
+
+@media (max-width: 900px) { .hero-layout { grid-template-columns: 1fr; } .hero-card { display: none; } }
+
+/* STATS */
+.stats-bar { background: var(--primary); }
+.stats-grid { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(4,1fr); }
+.stat-box { padding: 36px 20px; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
+.stat-box:last-child { border-right: none; }
+.stat-number { font-family: var(--font-display); font-size: clamp(32px,4vw,48px); font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 8px; display: block; }
+.stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+@media (max-width: 600px) { .stats-grid { grid-template-columns: repeat(2,1fr); } }
+
+/* SERVICES — inline icon layout */
+.services-section { background: var(--bg); }
+.section-label { font-family: var(--font-display); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 10px; }
+.section-title { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--dark-text); margin-bottom: 12px; }
+.section-sub { font-family: var(--font-body); font-size: 16px; color: var(--grey-text); margin-bottom: 48px; }
+
+.service-card {
+  background: var(--bg); border: 1px solid #e5f5ec;
+  border-top: 3px solid transparent; border-radius: var(--radius);
+  padding: 26px 24px; box-shadow: var(--shadow); transition: all 0.25s ease;
+}
+.service-card:hover { border-top-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.service-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.service-icon-sm {
+  width: 36px; height: 36px; border-radius: 8px; flex-shrink: 0;
+  background: rgba(var(--accent-rgb),0.1);
+  display: flex; align-items: center; justify-content: center; color: var(--accent);
+}
+.service-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--dark-text); }
+.service-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 14px; }
+.service-link { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; }
+
+/* WHY CHOOSE US */
+.why-section { background: var(--primary); position: relative; overflow: hidden; }
+.why-section::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.08; pointer-events: none; z-index: 0;
+}
+.why-section > .container { position: relative; z-index: 1; }
+.why-section .section-title { color: white; }
+.why-section .section-sub { color: var(--t2); }
+.why-stat-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 26px 20px; text-align: center; }
+.why-stat-num { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--accent); }
+.why-stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); margin-top: 6px; }
+.why-diff { display: grid; grid-template-columns: repeat(2,1fr); gap: 28px; margin-top: 48px; }
+.why-diff-item { display: flex; gap: 14px; align-items: flex-start; }
+.why-diff-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(var(--accent-rgb),0.2); flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: var(--accent); }
+.why-diff-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; margin-bottom: 4px; }
+.why-diff-text { font-family: var(--font-body); font-size: 14px; color: var(--t2); }
+
+/* HOW IT WORKS */
+.how-section { background: var(--primary-dark); }
+.steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; position: relative; }
+.steps::before { content: ''; position: absolute; top: 36px; left: 15%; right: 15%; border-top: 2px dashed rgba(255,255,255,0.12); }
+.step { padding: 0 20px; text-align: center; }
+.step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-family: var(--font-display); font-size: 22px; font-weight: 900; color: white; }
+.step-icon { color: white; margin-bottom: 12px; display: flex; justify-content: center; }
+.step-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: white; margin-bottom: 8px; }
+.step-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); }
+
+/* REVIEWS — dark bg cards */
+.reviews-section { background: var(--bg-off); }
+.reviews-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 48px; flex-wrap: wrap; gap: 16px; }
+.google-badge { display: flex; align-items: center; gap: 8px; background: white; border: 1px solid #d1fae5; border-radius: 8px; padding: 8px 14px; }
+.google-badge-text { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); }
+.review-card {
+  background: var(--primary); border: 1px solid rgba(34,197,94,0.2);
+  border-radius: var(--radius); padding: 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.25s ease;
+}
+.review-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.25); transform: translateY(-3px); }
+.review-text { font-family: var(--font-body); font-style: italic; font-size: 15px; line-height: 1.7; color: var(--t2); margin-bottom: 18px; }
+.review-divider { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin-bottom: 16px; }
+.review-author { display: flex; align-items: center; gap: 12px; }
+.review-avatar { width: 42px; height: 42px; border-radius: 50%; background: rgba(var(--accent-rgb),0.2); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--accent); flex-shrink: 0; }
+.review-name { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: white; }
+.review-location { font-family: var(--font-body); font-size: 12px; color: var(--t3); margin-top: 2px; }
+.review-stars { display: flex; gap: 2px; color: #fbbf24; margin-bottom: 3px; }
+
+/* SERVICE AREAS */
+.areas-section { background: var(--primary); }
+.areas-layout { display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: center; }
+.areas-section .section-title { color: white; }
+.areas-section p { font-family: var(--font-body); font-size: 16px; color: var(--t2); margin-bottom: 28px; }
+.areas-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(34,197,94,0.2); border-radius: 16px; padding: 32px; }
+.areas-card-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: white; margin-bottom: 20px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); color: var(--t2); font-family: var(--font-body); font-size: 13px; padding: 7px 14px; border-radius: 20px; cursor: pointer; transition: all 0.15s; text-decoration: none; }
+.chip:hover { background: var(--accent); border-color: var(--accent); color: white; }
+@media (max-width: 900px) { .areas-layout { grid-template-columns: 1fr; } }
+
+/* CONTACT */
+.contact-section { background: var(--bg); }
+.contact-layout { display: grid; grid-template-columns: 1fr 360px; gap: 60px; align-items: start; }
+.contact-form-label { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; display: block; }
+.form-group { margin-bottom: 18px; }
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+  width: 100%; background: var(--bg-off); border: 1px solid #d1fae5;
+  border-radius: 8px; padding: 12px 14px;
+  font-family: var(--font-body); font-size: 14px; color: var(--dark-text); transition: border-color 0.2s;
+}
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(var(--accent-rgb),0.1); }
+.contact-info-card { background: var(--primary); border-radius: 16px; padding: 32px; }
+.contact-info-title { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: white; margin-bottom: 24px; }
+.contact-info-item { display: flex; gap: 12px; margin-bottom: 20px; align-items: flex-start; }
+.contact-info-icon { color: var(--accent); margin-top: 2px; flex-shrink: 0; }
+.contact-info-text { font-family: var(--font-body); font-size: 14px; color: var(--t2); }
+.contact-info-text strong { font-family: var(--font-display); font-size: 16px; color: white; font-weight: 700; display: block; }
+@media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; } }
+
+/* CTA BAND */
+.cta-band {
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  padding: 80px 0; position: relative; overflow: hidden; text-align: center;
+}
+.cta-band::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.14; pointer-events: none; z-index: 0;
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-band h2 { font-family: var(--font-display); font-size: clamp(28px,4vw,42px); font-weight: 900; color: white; margin-bottom: 12px; }
+.cta-band p { font-family: var(--font-body); font-size: 17px; color: rgba(255,255,255,0.88); margin-bottom: 32px; }
+.btn-white { display: inline-flex; align-items: center; gap: 8px; background: white; color: var(--accent-dark); font-family: var(--font-display); font-size: 16px; font-weight: 700; padding: 16px 36px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); text-decoration: none; transition: all 0.15s; }
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.25); }
+
+/* FOOTER */
+.footer { background: var(--primary-dark); padding: 70px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+.footer-brand-name { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; margin-bottom: 8px; }
+.footer-brand-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.65; }
+.footer-col-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: white; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 9px; }
+.footer-links a { font-family: var(--font-body); font-size: 14px; color: var(--t2); text-decoration: none; transition: color 0.15s; }
+.footer-links a:hover { color: white; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+.footer-copyright { font-family: var(--font-body); font-size: 13px; color: var(--t3); }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } .footer-bottom { flex-direction: column; gap: 8px; text-align: center; } }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <div class="header-logo-dot"></div>
+      <div class="header-text">
+        <span class="header-name">Reyna's Enviro Solutions</span>
+        <span class="header-tagline">Eco-Conscious Pest Control · Mesquite, TX</span>
+      </div>
+    </div>
+    <a href="tel:2147323901" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (214) 732-3901
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-layout">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        Eco-Safe · Family-Owned · 5-Star Rated
+      </div>
+      <h1 class="hero-headline">Mesquite's <span>Greener</span><br>Pest Solution</h1>
+      <p class="hero-sub">Reyna's uses targeted, eco-conscious treatments that eliminate pests without loading your home with unnecessary chemicals. Safe for children, pets, and the environment — effective against every pest.</p>
+      <div class="hero-ctas">
+        <a href="tel:2147323901" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call for Free Inspection
+        </a>
+        <a href="#contact" class="btn-ghost">Schedule Online</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <span class="trust-text">5.0 · 24 Reviews</span>
+        <div class="trust-sep"></div>
+        <span class="trust-text">EPA-Registered Products</span>
+        <div class="trust-sep"></div>
+        <span class="trust-text">No Harsh Chemicals</span>
+      </div>
+    </div>
+    <div class="hero-card hero-card">
+      <div class="hero-card-title">Our Commitment to Your Family</div>
+      <div class="eco-seals">
+        <div class="eco-seal">
+          <div class="eco-seal-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/></svg></div>
+          <span class="eco-seal-text">Eco-Safe Treatments</span>
+        </div>
+        <div class="eco-seal">
+          <div class="eco-seal-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <span class="eco-seal-text">Licensed &amp; Insured</span>
+        </div>
+        <div class="eco-seal">
+          <div class="eco-seal-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <span class="eco-seal-text">100% Satisfaction Guaranteed</span>
+        </div>
+        <div class="eco-seal">
+          <div class="eco-seal-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <span class="eco-seal-text">Same-Day Service Available</span>
+        </div>
+      </div>
+      <div class="hero-phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (214) 732-3901
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-box"><span class="stat-number" data-target="12" data-suffix="+">0</span><span class="stat-label">Years Protecting Mesquite Families</span></div>
+    <div class="stat-box"><span class="stat-number" data-target="1600" data-suffix="+">0</span><span class="stat-label">Eco-Safe Treatments Completed</span></div>
+    <div class="stat-box"><span class="stat-number" data-target="5" data-suffix=".0★">0</span><span class="stat-label">Average Google Rating</span></div>
+    <div class="stat-box"><span class="stat-number" data-target="100" data-suffix="%">0</span><span class="stat-label">Pet &amp; Child-Safe Products</span></div>
+  </div>
+</div>
+
+<section class="services-section">
+  <div class="container">
+    <span class="section-label">Services</span>
+    <h2 class="section-title">Smart Solutions for Every Pest</h2>
+    <p class="section-sub">Minimal chemical footprint. Maximum effectiveness. That's the Enviro way.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-header">
+          <div class="service-icon-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="service-name">Roach &amp; Insect Control</div>
+        </div>
+        <p class="service-desc">We use gel baits and targeted residuals that eliminate colonies without broadcasting pesticide throughout your living space. Effective, precise, and family-safe.</p>
+        <a href="#contact" class="service-link">Free Estimate →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-header">
+          <div class="service-icon-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div class="service-name">Rodent Exclusion</div>
+        </div>
+        <p class="service-desc">Mice and rats are sealed out permanently. We locate every entry point — not just the obvious ones — and close them. Less chemical, more structure.</p>
+        <a href="#contact" class="service-link">Free Estimate →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-header">
+          <div class="service-icon-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <div class="service-name">Termite Control</div>
+        </div>
+        <p class="service-desc">Termites cause billions in structural damage annually. Our bait station approach targets the colony at the source with minimal chemical disruption to your home.</p>
+        <a href="#contact" class="service-link">Free Inspection →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-header">
+          <div class="service-icon-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+          <div class="service-name">Mosquito Reduction</div>
+        </div>
+        <p class="service-desc">We treat breeding sites and harborage areas with low-impact treatments that reduce mosquito populations by 85%+ without harming beneficial insects in your yard.</p>
+        <a href="#contact" class="service-link">Free Estimate →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-header">
+          <div class="service-icon-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="service-name">Ant &amp; Spider Program</div>
+        </div>
+        <p class="service-desc">Fire ants, carpenter ants, and brown recluse spiders are common in Mesquite yards. We treat nesting sites and perimeters using IPM protocols that keep reinfestation minimal.</p>
+        <a href="#contact" class="service-link">Free Estimate →</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-header">
+          <div class="service-icon-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <div class="service-name">Bed Bug Treatment</div>
+        </div>
+        <p class="service-desc">Bed bugs are impossible to ignore and hard to eliminate without proper technique. We eliminate all life stages using methods verified by Texas A&amp;M extension research.</p>
+        <a href="#contact" class="service-link">Emergency Service →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section">
+  <div class="container">
+    <span class="section-label">Why Choose Reyna's</span>
+    <h2 class="section-title">The Difference Is in the Details</h2>
+    <p class="section-sub">We take the time to do this right — not just fast.</p>
+    <div class="grid-4">
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="12" data-suffix="+">0</div><div class="why-stat-label">Years in Business</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="24" data-suffix="+">0</div><div class="why-stat-label">5-Star Reviews</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="100" data-suffix="%">0</div><div class="why-stat-label">Eco-Safe Products</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="96" data-suffix="%">0</div><div class="why-stat-label">First-Visit Resolution</div></div>
+    </div>
+    <div class="why-diff">
+      <div class="why-diff-item">
+        <div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="why-diff-title">IPM-First Approach</div>
+          <p class="why-diff-text">Integrated Pest Management means we use the least-invasive effective solution before reaching for chemical treatments. Prevention first.</p>
+        </div>
+      </div>
+      <div class="why-diff-item">
+        <div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="why-diff-title">No Blanket Spraying</div>
+          <p class="why-diff-text">We target treatments precisely. You won't come home to your house smelling like a chemical plant. Spot-applied, residue-minimal, results-focused.</p>
+        </div>
+      </div>
+      <div class="why-diff-item">
+        <div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="why-diff-title">Transparent Quotes</div>
+          <p class="why-diff-text">You get the full price upfront. No additional "discovery fees" on service day, no pressure to add services you didn't ask about.</p>
+        </div>
+      </div>
+      <div class="why-diff-item">
+        <div class="why-diff-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="why-diff-title">Satisfaction Guaranteed</div>
+          <p class="why-diff-text">If the pest returns within the coverage window, we come back at no charge. We're not done until the problem is solved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section">
+  <div class="container">
+    <span class="section-label" style="color:rgba(34,197,94,0.8)">Process</span>
+    <h2 class="section-title" style="color:white;margin-bottom:10px;">Thorough. Targeted. Done.</h2>
+    <p class="section-sub" style="color:var(--t2);margin-bottom:60px;">From first call to final result in three clear steps.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="step-title">Free Consultation</div>
+        <p class="step-desc">Tell us what you're dealing with. We schedule a free inspection — usually within 24 hours anywhere in Mesquite.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <div class="step-title">Identify &amp; Plan</div>
+        <p class="step-desc">We inspect carefully, identify exactly what's present, and design a targeted treatment plan — the minimum effective approach for your specific situation.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/></svg></div>
+        <div class="step-title">Treat &amp; Monitor</div>
+        <p class="step-desc">We treat strategically, follow up as needed, and make sure the problem is fully resolved before we close the job. Guaranteed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-header">
+      <div>
+        <span class="section-label">What Clients Say</span>
+        <h2 class="section-title">Mesquite Families Trust Reyna's</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span class="google-badge-text">5.0 ★ · 24 Reviews</span>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"I specifically looked for a pest company that wouldn't drench the house in chemicals — we have two young kids and a dog. Reyna's was exactly what I needed. They explained every product before using it, treated the perimeter and kitchen entry points only, and the roach problem we'd had for months was gone in two visits."</p>
+        <hr class="review-divider">
+        <div class="review-author">
+          <div class="review-avatar">TH</div>
+          <div>
+            <div class="review-stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="review-name">Teresa H.</div>
+            <div class="review-location">Buckner Terrace, Mesquite · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Reyna herself came out for the inspection and was incredibly thorough. She identified moisture issues under my kitchen sink that were attracting pests, not just the ants I called about. Fixed the source, not just the symptom. That kind of detail is rare — most companies just spray and bill you."</p>
+        <hr class="review-divider">
+        <div class="review-author">
+          <div class="review-avatar">CL</div>
+          <div>
+            <div class="review-stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="review-name">Carlos L.</div>
+            <div class="review-location">South Mesquite · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"We had termite activity along our back patio posts. Reyna's came out within 48 hours, set bait stations along the perimeter, and followed up monthly for three months to confirm the colony was eliminated. Very professional process, explained everything clearly, and honest about what was needed and what wasn't."</p>
+        <hr class="review-divider">
+        <div class="review-author">
+          <div class="review-avatar">MV</div>
+          <div>
+            <div class="review-stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="review-name">Monica V.</div>
+            <div class="review-location">Mesquite Highlands · Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas-section">
+  <div class="container">
+    <div class="areas-layout">
+      <div>
+        <span class="section-label">Service Area</span>
+        <h2 class="section-title">Covering All of Eastern Dallas County</h2>
+        <p>From Mesquite's older established neighborhoods to newer Forney developments, we bring eco-conscious pest control to communities across the eastern DFW area.</p>
+        <a href="tel:2147323901" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Confirm Your Location
+        </a>
+      </div>
+      <div class="areas-card">
+        <div class="areas-card-title">Where We Serve</div>
+        <div class="chips">
+          <a href="#contact" class="chip">Mesquite</a>
+          <a href="#contact" class="chip">Garland</a>
+          <a href="#contact" class="chip">Sunnyvale</a>
+          <a href="#contact" class="chip">Balch Springs</a>
+          <a href="#contact" class="chip">Forney</a>
+          <a href="#contact" class="chip">Rowlett</a>
+          <a href="#contact" class="chip">Seagoville</a>
+          <a href="#contact" class="chip">Sachse</a>
+          <a href="#contact" class="chip">Dallas (East)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <span class="section-label">Book Your Visit</span>
+    <h2 class="section-title" style="margin-bottom:8px;">Get Your Free Inspection</h2>
+    <p style="font-family:var(--font-body);color:var(--grey-text);margin-bottom:48px;">We typically respond within a few hours and can schedule inspections same or next day.</p>
+    <div class="contact-layout">
+      <form>
+        <div class="grid-2" style="gap:16px;">
+          <div class="form-group"><label class="contact-form-label">First Name</label><input type="text" placeholder="Teresa"></div>
+          <div class="form-group"><label class="contact-form-label">Last Name</label><input type="text" placeholder="Hernandez"></div>
+        </div>
+        <div class="form-group"><label class="contact-form-label">Phone Number</label><input type="tel" placeholder="(214) 555-0100"></div>
+        <div class="form-group"><label class="contact-form-label">Email</label><input type="email" placeholder="teresa@example.com"></div>
+        <div class="form-group">
+          <label class="contact-form-label">What Are You Dealing With?</label>
+          <select>
+            <option>Select a pest...</option>
+            <option>Roaches / Insects</option><option>Mice / Rats</option><option>Termites</option>
+            <option>Mosquitoes</option><option>Ants</option><option>Bed Bugs</option><option>Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="contact-form-label">Notes (optional)</label><textarea rows="3" placeholder="Any details about where or when you've seen activity..."></textarea></div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Request Free Eco-Inspection
+        </button>
+      </form>
+      <div class="contact-info-card">
+        <div class="contact-info-title">Reach Reyna's Team</div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="contact-info-text"><strong>(214) 732-3901</strong>Call or text anytime</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="contact-info-text"><strong>Mon–Sat: 7am–6pm</strong>Emergency calls after hours</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="contact-info-text"><strong>Mesquite, TX</strong>Eastern Dallas County</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/></svg></div>
+          <div class="contact-info-text"><strong>Eco-Conscious Treatment</strong>EPA-registered, low-impact products</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Pest-Free Starts With One Call</h2>
+    <p>Eco-safe treatments. Real results. Guaranteed satisfaction for Mesquite families.</p>
+    <a href="tel:2147323901" class="btn-white">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (214) 732-3901
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Reyna's Enviro Solutions</div>
+        <p class="footer-brand-desc">Eco-conscious pest control in Mesquite, TX. We protect your family and home using integrated, low-impact methods that get real results without unnecessary chemical exposure.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Roach &amp; Insect Control</a></li>
+          <li><a href="#contact">Rodent Exclusion</a></li>
+          <li><a href="#contact">Termite Control</a></li>
+          <li><a href="#contact">Mosquito Reduction</a></li>
+          <li><a href="#contact">Ant &amp; Spider Control</a></li>
+          <li><a href="#contact">Bed Bug Treatment</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Mesquite, TX</a></li>
+          <li><a href="#contact">Garland, TX</a></li>
+          <li><a href="#contact">Sunnyvale, TX</a></li>
+          <li><a href="#contact">Balch Springs, TX</a></li>
+          <li><a href="#contact">Forney, TX</a></li>
+          <li><a href="#contact">Rowlett, TX</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:2147323901">(214) 732-3901</a></li>
+          <li><a href="#contact">Free Inspection</a></li>
+          <li><a href="#contact">Schedule Service</a></li>
+          <li><a href="#contact">Emergency Line</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">&copy; 2024 Reyna's Enviro Solutions Pest Control · Mesquite, TX</span>
+      <span class="footer-copyright">Licensed &amp; Insured · Eco-Safe Methods</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 50);
+});
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const p = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (p < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => statObs.observe(el));
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); cardObs.unobserve(e.target); } });
+}, { threshold: 0.2 });
+document.querySelectorAll('.card').forEach(el => cardObs.observe(el));
+</script>
+</body>
+</html>

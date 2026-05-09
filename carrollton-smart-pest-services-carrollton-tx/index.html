@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrollton Smart Pest Services | Precision Pest Control in Carrollton, TX</title>
+<meta name="description" content="Carrollton Smart Pest Services delivers precision pest control for homes and businesses in Carrollton, TX. Smart solutions, guaranteed results. Call (945) 223-1082.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #070c16;
+  --primary-dark: #03060b;
+  --accent: #0ea5e9;
+  --accent-dark: #0369a1;
+  --accent-rgb: 14,165,233;
+  --text: #e8edf5;
+  --text-muted: #94a3b8;
+  --surface: #0d1525;
+  --surface2: #111e30;
+  --border: rgba(14,165,233,0.15);
+  --white: #ffffff;
+  --radius: 12px;
+  --shadow: 0 8px 32px rgba(0,0,0,0.45);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background: var(--primary);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+h1,h2,h3,h4 { font-family: 'Barlow Condensed', sans-serif; line-height: 1.1; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(7,12,22,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 5%;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+}
+.nav-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.35rem; font-weight: 800; letter-spacing: 0.01em;
+  color: var(--white);
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 600; color: var(--text-muted); transition: color 0.2s; }
+.nav-links a:hover { color: var(--accent); }
+.nav-cta {
+  background: var(--accent); color: var(--primary-dark) !important;
+  padding: 0.55rem 1.3rem; border-radius: 6px;
+  font-weight: 700 !important; color: #fff !important;
+  transition: background 0.2s, transform 0.15s;
+}
+.nav-cta:hover { background: var(--accent-dark) !important; transform: translateY(-1px); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 40%, #071528 100%);
+  display: flex; align-items: center;
+  padding: 100px 5% 60px;
+  position: relative; overflow: hidden;
+}
+.hero-grain {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+.hero-grid {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: 0.04;
+  background-image: linear-gradient(var(--accent) 1px, transparent 1px),
+                    linear-gradient(90deg, var(--accent) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-glow {
+  position: absolute; top: 20%; right: 10%; width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+.hero-inner {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 60% 40%; gap: 4rem; align-items: center;
+  max-width: 1280px; margin: 0 auto; width: 100%;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(14,165,233,0.12); border: 1px solid rgba(14,165,233,0.3);
+  color: var(--accent); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; padding: 0.35rem 0.85rem; border-radius: 100px;
+  margin-bottom: 1.2rem;
+  opacity: 0; animation: heroFadeUp 0.6s ease forwards; animation-delay: 0.1s;
+}
+.hero-badge svg { width: 14px; height: 14px; }
+.hero-title {
+  font-size: clamp(2.8rem, 5vw, 4.2rem); font-weight: 800;
+  color: var(--white); margin-bottom: 1.2rem;
+  opacity: 0; animation: heroFadeUp 0.6s ease forwards; animation-delay: 0.25s;
+}
+.hero-title span { color: var(--accent); }
+.hero-sub {
+  font-size: 1.05rem; color: var(--text-muted); max-width: 520px;
+  margin-bottom: 2rem; line-height: 1.7;
+  opacity: 0; animation: heroFadeUp 0.6s ease forwards; animation-delay: 0.4s;
+}
+.hero-actions {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  opacity: 0; animation: heroFadeUp 0.6s ease forwards; animation-delay: 0.55s;
+}
+.btn-primary {
+  background: var(--accent); color: var(--primary-dark);
+  padding: 0.85rem 2rem; border-radius: 8px; font-weight: 700; font-size: 1rem;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(var(--accent-rgb),0.35);
+}
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(var(--accent-rgb),0.45); }
+.btn-secondary {
+  border: 2px solid rgba(var(--accent-rgb),0.4); color: var(--text);
+  padding: 0.85rem 2rem; border-radius: 8px; font-weight: 700; font-size: 1rem;
+  transition: border-color 0.2s, color 0.2s, transform 0.15s;
+}
+.btn-secondary:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.hero-trust {
+  display: flex; align-items: center; gap: 1rem; margin-top: 2rem;
+  opacity: 0; animation: heroFadeUp 0.6s ease forwards; animation-delay: 0.7s;
+}
+.hero-stars { display: flex; gap: 3px; }
+.hero-stars svg { width: 18px; height: 18px; fill: #f59e0b; }
+.hero-trust-text { font-size: 0.875rem; color: var(--text-muted); }
+.hero-trust-text strong { color: var(--text); }
+
+/* Hero Card */
+.hero-card {
+  background: rgba(13,21,37,0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(14,165,233,0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  opacity: 0; animation: heroFadeUp 0.6s ease forwards; animation-delay: 0.45s;
+}
+.hero-card-header {
+  display: flex; align-items: center; gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(14,165,233,0.15);
+}
+.hero-card-icon {
+  width: 42px; height: 42px;
+  background: rgba(14,165,233,0.15); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-card-icon svg { width: 22px; height: 22px; stroke: var(--accent); fill: none; }
+.hero-card-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--white); }
+.hero-card-sub { font-size: 0.78rem; color: var(--text-muted); }
+.smart-metrics { display: flex; flex-direction: column; gap: 1rem; }
+.smart-metric {
+  background: rgba(14,165,233,0.06);
+  border: 1px solid rgba(14,165,233,0.12);
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.smart-metric-label { font-size: 0.8rem; color: var(--text-muted); }
+.smart-metric-value { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--accent); }
+.hero-card-footer {
+  margin-top: 1.5rem; padding-top: 1.2rem;
+  border-top: 1px solid rgba(14,165,233,0.15);
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.hero-card-footer svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; flex-shrink: 0; }
+.hero-card-footer span { font-size: 0.82rem; color: var(--text-muted); }
+.hero-card-footer strong { color: var(--text); }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── TRUST BAR ── */
+.trust-bar {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 2.5rem 5%;
+}
+.trust-grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem;
+  max-width: 1100px; margin: 0 auto;
+}
+.trust-item {
+  text-align: center; padding: 1rem;
+}
+.trust-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.4rem; font-weight: 800; color: var(--accent);
+  line-height: 1;
+}
+.trust-label { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.3rem; }
+
+/* ── SECTIONS COMMON ── */
+section { padding: 5rem 5%; }
+.section-tag {
+  display: inline-block;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 0.8rem;
+}
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 800; color: var(--white);
+  margin-bottom: 1rem;
+}
+.section-sub { font-size: 1rem; color: var(--text-muted); max-width: 560px; line-height: 1.7; }
+.section-header { margin-bottom: 3rem; }
+.section-header.centered { text-align: center; }
+.section-header.centered .section-sub { margin: 0 auto; }
+
+/* ── SERVICES ── */
+.services { background: var(--primary); }
+.services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  opacity: 0; transform: translateY(24px);
+}
+.service-card.visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.25s, box-shadow 0.25s; }
+.service-card:hover { border-color: rgba(var(--accent-rgb),0.45); transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,0.4); }
+.service-card-header {
+  display: flex; align-items: center; gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+.service-icon {
+  width: 38px; height: 38px; flex-shrink: 0;
+  background: rgba(14,165,233,0.12); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.service-icon svg { width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 2; }
+.service-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--white); }
+.service-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 0.8rem; }
+.service-tag { display: inline-block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); background: rgba(14,165,233,0.1); border-radius: 4px; padding: 0.2rem 0.55rem; }
+
+/* ── WHY CHOOSE ── */
+.why { background: var(--surface); }
+.why-inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  max-width: 1200px; margin: 0 auto;
+}
+.why-features { display: flex; flex-direction: column; gap: 1.2rem; }
+.why-feature {
+  display: flex; gap: 1rem; align-items: flex-start;
+  padding: 1.2rem; background: var(--primary); border-radius: 10px;
+  border: 1px solid var(--border);
+  opacity: 0; transform: translateX(-20px);
+}
+.why-feature.visible { opacity: 1; transform: translateX(0); transition: opacity 0.5s ease, transform 0.5s ease; }
+.why-feature-icon {
+  width: 40px; height: 40px; flex-shrink: 0;
+  background: rgba(14,165,233,0.12); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.why-feature-icon svg { width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 2; }
+.why-feature-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
+.why-feature-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+.why-visual {
+  background: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 16px; padding: 2rem;
+}
+.why-visual-header { margin-bottom: 1.5rem; }
+.why-visual-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--white); }
+.why-visual-sub { font-size: 0.82rem; color: var(--text-muted); }
+.smart-tech-list { display: flex; flex-direction: column; gap: 0.85rem; }
+.smart-tech-item {
+  display: flex; align-items: center; gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  background: var(--surface2); border-radius: 8px;
+  border-left: 3px solid var(--accent);
+}
+.smart-tech-item svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; flex-shrink: 0; }
+.smart-tech-item span { font-size: 0.88rem; color: var(--text); }
+.smart-tech-item strong { color: var(--accent); }
+
+/* ── PESTS ── */
+.pests { background: var(--primary); }
+.pests-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; }
+.pest-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  transition: border-color 0.25s, transform 0.25s;
+  opacity: 0; transform: translateY(20px);
+}
+.pest-card.visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.25s, transform 0.25s; }
+.pest-card:hover { border-color: rgba(var(--accent-rgb),0.4); transform: translateY(-3px); }
+.pest-icon {
+  width: 52px; height: 52px; margin: 0 auto 0.85rem;
+  background: rgba(14,165,233,0.1); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.pest-icon svg { width: 26px; height: 26px; stroke: var(--accent); fill: none; stroke-width: 1.5; }
+.pest-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
+.pest-desc { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
+
+/* ── PROCESS ── */
+.process { background: var(--surface); }
+.process-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; position: relative; }
+.process-steps::before {
+  content: ''; position: absolute;
+  top: 28px; left: calc(12.5% + 20px); right: calc(12.5% + 20px); height: 2px;
+  background: linear-gradient(90deg, var(--accent), rgba(var(--accent-rgb),0.2));
+  z-index: 0;
+}
+.process-step {
+  text-align: center; padding: 0 1.5rem; position: relative; z-index: 1;
+  opacity: 0; transform: translateY(20px);
+}
+.process-step.visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease, transform 0.5s ease; }
+.process-num {
+  width: 56px; height: 56px; margin: 0 auto 1.2rem;
+  background: var(--primary);
+  border: 2px solid var(--accent); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 800; color: var(--accent);
+}
+.process-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+.process-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+
+/* ── REVIEWS ── */
+.reviews { background: var(--primary); }
+.reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.review-card {
+  background: var(--surface2);
+  border: 1px solid rgba(14,165,233,0.12);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  opacity: 0; transform: translateY(20px);
+}
+.review-card.visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease, transform 0.5s ease; }
+.review-stars { display: flex; gap: 3px; margin-bottom: 0.9rem; }
+.review-stars svg { width: 16px; height: 16px; fill: #f59e0b; }
+.review-text { font-size: 0.9rem; color: #c8d6e8; line-height: 1.7; margin-bottom: 1.1rem; font-style: italic; }
+.review-divider { height: 1px; background: rgba(14,165,233,0.1); margin-bottom: 0.9rem; }
+.review-author { display: flex; align-items: center; gap: 0.75rem; }
+.review-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(14,165,233,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--accent);
+  flex-shrink: 0;
+}
+.review-name { font-size: 0.875rem; font-weight: 700; color: var(--white); }
+.review-date { font-size: 0.75rem; color: var(--text-muted); }
+.reviews-badge {
+  text-align: center; margin-top: 2.5rem;
+  display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+}
+.reviews-badge svg { width: 22px; height: 22px; fill: #f59e0b; }
+.reviews-badge span { font-size: 0.875rem; color: var(--text-muted); }
+.reviews-badge strong { color: var(--white); }
+
+/* ── SERVICE AREAS ── */
+.areas { background: var(--surface); padding: 4rem 5%; }
+.areas-inner { max-width: 1100px; margin: 0 auto; }
+.areas-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0.85rem; margin-top: 2rem; }
+.area-pill {
+  background: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 8px; padding: 0.65rem 1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  transition: border-color 0.2s;
+}
+.area-pill:hover { border-color: rgba(var(--accent-rgb),0.4); }
+.area-pill svg { width: 14px; height: 14px; stroke: var(--accent); fill: none; flex-shrink: 0; }
+.area-pill span { font-size: 0.85rem; color: var(--text-muted); }
+
+/* ── CTA BAND ── */
+.cta-band {
+  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+  padding: 5rem 5%;
+  position: relative; overflow: hidden;
+}
+.cta-band-grain {
+  position: absolute; inset: 0; pointer-events: none; opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+}
+.cta-band-inner {
+  position: relative; z-index: 1;
+  max-width: 700px; margin: 0 auto; text-align: center;
+}
+.cta-band-title { font-size: clamp(2rem,4vw,3rem); font-weight: 800; color: var(--primary-dark); margin-bottom: 1rem; }
+.cta-band-sub { font-size: 1.05rem; color: rgba(3,6,11,0.75); margin-bottom: 2.5rem; }
+.cta-band-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-dark { background: var(--primary-dark); color: var(--white); padding: 0.9rem 2.2rem; border-radius: 8px; font-weight: 700; font-size: 1rem; transition: transform 0.2s, box-shadow 0.2s; }
+.btn-dark:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.4); }
+.btn-outline-dark { border: 2px solid var(--primary-dark); color: var(--primary-dark); padding: 0.9rem 2.2rem; border-radius: 8px; font-weight: 700; font-size: 1rem; transition: background 0.2s, transform 0.2s; }
+.btn-outline-dark:hover { background: rgba(3,6,11,0.1); transform: translateY(-2px); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--primary-dark);
+  border-top: 1px solid var(--border);
+  padding: 3.5rem 5% 2rem;
+}
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
+.footer-brand-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--white); margin-bottom: 0.5rem; }
+.footer-brand-name span { color: var(--accent); }
+.footer-tagline { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem; }
+.footer-contact { display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-contact a { font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+.footer-contact a:hover { color: var(--accent); }
+.footer-contact svg { width: 14px; height: 14px; stroke: currentColor; fill: none; flex-shrink: 0; }
+.footer-col-title { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+.footer-links { display: flex; flex-direction: column; gap: 0.55rem; }
+.footer-links a { font-size: 0.85rem; color: var(--text-muted); transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+.footer-copy { font-size: 0.8rem; color: var(--text-muted); }
+.footer-legal { display: flex; gap: 1.5rem; }
+.footer-legal a { font-size: 0.8rem; color: var(--text-muted); transition: color 0.2s; }
+.footer-legal a:hover { color: var(--accent); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-card { display: none; }
+  .trust-grid { grid-template-columns: repeat(2,1fr); }
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .why-inner { grid-template-columns: 1fr; }
+  .pests-grid { grid-template-columns: repeat(2,1fr); }
+  .process-steps { grid-template-columns: repeat(2,1fr); }
+  .process-steps::before { display: none; }
+  .reviews-grid { grid-template-columns: 1fr 1fr; }
+  .areas-grid { grid-template-columns: repeat(2,1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .nav-links { display: none; }
+}
+@media (max-width: 600px) {
+  .trust-grid { grid-template-columns: 1fr 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .pests-grid { grid-template-columns: repeat(2,1fr); }
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-grid { grid-template-columns: repeat(2,1fr); }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-actions { flex-direction: column; }
+  .cta-band-actions { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><span>Smart</span>Pest Carrollton</div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#process">Process</a>
+    <a href="#reviews">Reviews</a>
+    <a href="tel:9452231082" class="nav-cta">Call Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+        Smart Precision Technology
+      </div>
+      <h1 class="hero-title">Carrollton's<br><span>Precision Pest</span><br>Control</h1>
+      <p class="hero-sub">Data-informed treatments. Smart detection systems. Guaranteed elimination. Carrollton Smart Pest Services brings modern pest science to your home or business.</p>
+      <div class="hero-actions">
+        <a href="tel:9452231082" class="btn-primary">Call (945) 223-1082</a>
+        <a href="#services" class="btn-secondary">View Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="hero-trust-text"><strong>5.0 Stars</strong> — 8 Verified Reviews in Carrollton, TX</p>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-header">
+        <div class="hero-card-icon">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+        </div>
+        <div>
+          <div class="hero-card-title">Smart Pest Analysis</div>
+          <div class="hero-card-sub">Real-time treatment report</div>
+        </div>
+      </div>
+      <div class="smart-metrics">
+        <div class="smart-metric">
+          <span class="smart-metric-label">Detection Accuracy</span>
+          <span class="smart-metric-value">99.2%</span>
+        </div>
+        <div class="smart-metric">
+          <span class="smart-metric-label">Avg. Elimination Time</span>
+          <span class="smart-metric-value">&lt; 72hrs</span>
+        </div>
+        <div class="smart-metric">
+          <span class="smart-metric-label">Re-treatment Rate</span>
+          <span class="smart-metric-value">0.8%</span>
+        </div>
+        <div class="smart-metric">
+          <span class="smart-metric-label">Customer Satisfaction</span>
+          <span class="smart-metric-value">5.0 / 5.0</span>
+        </div>
+      </div>
+      <div class="hero-card-footer">
+        <svg viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span>All treatments backed by our <strong>100% Re-service Guarantee</strong></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <div class="trust-num" data-target="100" data-suffix="%">0%</div>
+      <div class="trust-label">Re-service Guarantee</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num" data-target="24" data-suffix="hr">0hr</div>
+      <div class="trust-label">Response Time</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num" data-target="15" data-suffix="+">0+</div>
+      <div class="trust-label">Years in Carrollton</div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-num" data-target="5" data-suffix=" Stars">0 Stars</div>
+      <div class="trust-label">Average Rating</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header centered">
+    <span class="section-tag">Our Services</span>
+    <h2 class="section-title">Smart Solutions for Every Pest</h2>
+    <p class="section-sub">Precision-targeted treatments designed for Carrollton homes and businesses. Every service is backed by our complete elimination guarantee.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-card-header">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="service-name">General Pest Control</div>
+      </div>
+      <p class="service-desc">Comprehensive interior and exterior treatment targeting ants, spiders, roaches, silverfish, and 30+ common household pests. Quarterly and monthly plans available.</p>
+      <span class="service-tag">Most Popular</span>
+    </div>
+    <div class="service-card">
+      <div class="service-card-header">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="service-name">Termite Treatment</div>
+      </div>
+      <p class="service-desc">Advanced bait stations and liquid barrier treatments stop termite colonies at the source. We monitor activity and re-treat at no charge if needed.</p>
+      <span class="service-tag">Structural Protection</span>
+    </div>
+    <div class="service-card">
+      <div class="service-card-header">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="service-name">Mosquito Control</div>
+      </div>
+      <p class="service-desc">Monthly barrier spray and breeding-site elimination dramatically reduces mosquito populations. Reclaim your yard for spring and summer.</p>
+      <span class="service-tag">Seasonal Plans</span>
+    </div>
+    <div class="service-card">
+      <div class="service-card-header">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <div class="service-name">Rodent Control</div>
+      </div>
+      <p class="service-desc">Snap-trap deployment, exclusion sealing, and bait station installation eliminate mice and rats — with entry-point sealing to prevent re-invasion.</p>
+      <span class="service-tag">Exclusion Included</span>
+    </div>
+    <div class="service-card">
+      <div class="service-card-header">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="service-name">Bed Bug Treatment</div>
+      </div>
+      <p class="service-desc">Heat treatment and targeted chemical application eradicates entire bed bug populations — eggs included — in a single visit for most infestations.</p>
+      <span class="service-tag">Single-Visit Option</span>
+    </div>
+    <div class="service-card">
+      <div class="service-card-header">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+        <div class="service-name">Commercial Pest Control</div>
+      </div>
+      <p class="service-desc">IPM-based commercial programs for restaurants, offices, warehouses, and retail. Compliant with health codes and regulatory requirements.</p>
+      <span class="service-tag">IPM Certified</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div>
+      <div class="section-header">
+        <span class="section-tag">Why Choose Us</span>
+        <h2 class="section-title">Pest Control Built on Precision</h2>
+        <p class="section-sub">We don't guess — we diagnose. Every treatment plan is tailored to your specific pest pressure, property type, and environment.</p>
+      </div>
+      <div class="why-features">
+        <div class="why-feature">
+          <div class="why-feature-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div>
+            <div class="why-feature-title">Smart Diagnostic Inspection</div>
+            <p class="why-feature-desc">We map every entry point, harborage zone, and moisture source before applying a single drop of treatment. Precision starts with knowledge.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div>
+            <div class="why-feature-title">100% Re-service Guarantee</div>
+            <p class="why-feature-desc">If pests return within your service window, we come back — free of charge. Your satisfaction isn't optional; it's our standard.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="why-feature-title">Family &amp; Pet Safe Formulas</div>
+            <p class="why-feature-desc">We use EPA-registered, low-toxicity solutions that are tough on pests and gentle on the people and pets you care about most.</p>
+          </div>
+        </div>
+        <div class="why-feature">
+          <div class="why-feature-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <div class="why-feature-title">Same-Day &amp; Emergency Service</div>
+            <p class="why-feature-desc">Pest emergencies don't wait for Monday. We offer same-day response throughout Carrollton and the surrounding DFW area.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual">
+      <div class="why-visual-header">
+        <div class="why-visual-title">Our Smart Tech Advantage</div>
+        <div class="why-visual-sub">Tools that make us more effective</div>
+      </div>
+      <div class="smart-tech-list">
+        <div class="smart-tech-item">
+          <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span><strong>Digital inspection reports</strong> sent after every visit</span>
+        </div>
+        <div class="smart-tech-item">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          <span><strong>Targeted bait matrices</strong> disrupting colony communication</span>
+        </div>
+        <div class="smart-tech-item">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          <span><strong>Customer portal</strong> for service history &amp; scheduling</span>
+        </div>
+        <div class="smart-tech-item">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <span><strong>Activity monitoring</strong> between scheduled visits</span>
+        </div>
+        <div class="smart-tech-item">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span><strong>EPA-registered low-impact</strong> product formulations</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PESTS -->
+<section class="pests">
+  <div class="section-header centered">
+    <span class="section-tag">Pest Library</span>
+    <h2 class="section-title">We Eliminate Every Threat</h2>
+    <p class="section-sub">From common household nuisances to serious structural threats, our precision treatments cover every pest found in Carrollton and DFW.</p>
+  </div>
+  <div class="pests-grid">
+    <div class="pest-card">
+      <div class="pest-icon">
+        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+      </div>
+      <div class="pest-name">Ants</div>
+      <p class="pest-desc">Fire ants, carpenter ants, odorous house ants — identified and eliminated at colony level</p>
+    </div>
+    <div class="pest-card">
+      <div class="pest-icon">
+        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 2a5 5 0 015 5c0 1.5-.7 2.8-1.7 3.8L17 13h-2.5l.3 2H17l-1.5 5H15v2h-2v-2h-2v2H9v-2h-.5L7 15h2.2l.3-2H7L8.7 10.8C7.7 9.8 7 8.5 7 7a5 5 0 015-5z"/></svg>
+      </div>
+      <div class="pest-name">Roaches</div>
+      <p class="pest-desc">German and American cockroach elimination with gel bait + IGR — even severe infestations</p>
+    </div>
+    <div class="pest-card">
+      <div class="pest-icon">
+        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M6.5 11.5a1 1 0 100-2 1 1 0 000 2zm11 0a1 1 0 100-2 1 1 0 000 2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-3-7h6v2H9v-2z"/></svg>
+      </div>
+      <div class="pest-name">Termites</div>
+      <p class="pest-desc">Subterranean termite bait systems and liquid treatments with ongoing monitoring</p>
+    </div>
+    <div class="pest-card">
+      <div class="pest-icon">
+        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 3c-4 0-8 1.5-8 5v7l2 2h12l2-2V8c0-3.5-4-5-8-5zm0 2c2.5 0 6 1 6 3v6l-1 1H7l-1-1V8c0-2 3.5-3 6-3zm-2 9h4v2h-4v-2zm-2-4h2v2H8v-2zm6 0h2v2h-2v-2z"/></svg>
+      </div>
+      <div class="pest-name">Bed Bugs</div>
+      <p class="pest-desc">Heat and chemical treatments eliminate complete bed bug populations including eggs</p>
+    </div>
+    <div class="pest-card">
+      <div class="pest-icon">
+        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 2C8 2 5 5 5 9c0 2 .8 3.8 2 5l-3 4h4l1-1.5L10 22h4l1-5.5L16 18h4l-3-4c1.2-1.2 2-3 2-5 0-4-3-7-7-7z"/></svg>
+      </div>
+      <div class="pest-name">Spiders</div>
+      <p class="pest-desc">Black widow and brown recluse targeted treatments plus web removal and exclusion</p>
+    </div>
+    <div class="pest-card">
+      <div class="pest-icon">
+        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M4 19h16M4 15h16M12 3L4 9v6h16V9L12 3zm0 2.5l6 4.5v4H6V10l6-4.5z"/></svg>
+      </div>
+      <div class="pest-name">Mosquitoes</div>
+      <p class="pest-desc">Barrier spray programs reduce mosquito populations by up to 90% season-long</p>
+    </div>
+    <div class="pest-card">
+      <div class="pest-icon">
+        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A1 1 0 013 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44C11.59 2.06 11.79 2 12 2c.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9z"/></svg>
+      </div>
+      <div class="pest-name">Rodents</div>
+      <p class="pest-desc">Mice and rat control with bait stations, snap traps, and structural exclusion sealing</p>
+    </div>
+    <div class="pest-card">
+      <div class="pest-icon">
+        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z"/></svg>
+      </div>
+      <div class="pest-name">Scorpions</div>
+      <p class="pest-desc">Perimeter spray and targeted indoor treatment for scorpion prevention in DFW homes</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="section-header centered">
+    <span class="section-tag">Our Process</span>
+    <h2 class="section-title">Smart 4-Step Elimination Method</h2>
+    <p class="section-sub">Every Carrollton Smart Pest job follows our proven precision protocol — from your first call to confirmed elimination.</p>
+  </div>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="process-num">01</div>
+      <div class="process-title">Smart Inspection</div>
+      <p class="process-desc">Thorough digital inspection maps every pest entry point, nest location, and activity zone throughout your property.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">02</div>
+      <div class="process-title">Custom Treatment Plan</div>
+      <p class="process-desc">We design a targeted treatment protocol based on your specific pest species, infestation level, and property type.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">03</div>
+      <div class="process-title">Precision Application</div>
+      <p class="process-desc">Licensed technicians apply EPA-registered treatments to precise hot zones — no blanket spraying, no wasted product.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-num">04</div>
+      <div class="process-title">Verified Elimination</div>
+      <p class="process-desc">Follow-up inspection confirms elimination and closes out your service report. We document results, not assumptions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="section-header centered">
+    <span class="section-tag">Customer Reviews</span>
+    <h2 class="section-title">A Perfect 5-Star Record</h2>
+    <p class="section-sub">Every Carrollton homeowner who's trusted our precision approach has been completely satisfied. Here's what they say.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"Came out same day I called. The technician did a thorough inspection and actually explained what he found — not just sprayed and left. No more roaches after one treatment. Incredible service."</p>
+      <div class="review-divider"></div>
+      <div class="review-author">
+        <div class="review-avatar">DR</div>
+        <div>
+          <div class="review-name">David R.</div>
+          <div class="review-date">Carrollton, TX &mdash; Verified Customer</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"We had a persistent ant problem that two other companies couldn't fix. Smart Pest Services diagnosed it as a colony nesting in the wall void — treated it correctly and haven't had a single ant since."</p>
+      <div class="review-divider"></div>
+      <div class="review-author">
+        <div class="review-avatar">LM</div>
+        <div>
+          <div class="review-name">Laura M.</div>
+          <div class="review-date">Carrollton, TX &mdash; Verified Customer</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="review-text">"Best pest control experience I've had in 10 years of homeownership. Professional, punctual, and most importantly — they actually solved the problem. The digital report they left was incredibly thorough."</p>
+      <div class="review-divider"></div>
+      <div class="review-author">
+        <div class="review-avatar">KP</div>
+        <div>
+          <div class="review-name">Kevin P.</div>
+          <div class="review-date">Carrollton, TX &mdash; Verified Customer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reviews-badge">
+    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    <span><strong>5.0 out of 5.0</strong> &mdash; Based on 8 verified Google reviews &mdash; 100% Five-Star</span>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas">
+  <div class="areas-inner">
+    <div class="section-header">
+      <span class="section-tag">Service Areas</span>
+      <h2 class="section-title">Serving Carrollton &amp; DFW</h2>
+      <p class="section-sub">Precision pest control for homeowners and businesses throughout the greater Dallas-Fort Worth metroplex.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Carrollton, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Addison, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Farmers Branch, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Plano, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Irving, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Richardson, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Lewisville, TX</span></div>
+      <div class="area-pill"><svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Allen, TX</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-band-grain"></div>
+  <div class="cta-band-inner">
+    <h2 class="cta-band-title">Ready for Smarter Pest Control?</h2>
+    <p class="cta-band-sub">Call Carrollton Smart Pest Services today. Same-day service available. Every treatment backed by our 100% guarantee.</p>
+    <div class="cta-band-actions">
+      <a href="tel:9452231082" class="btn-dark">Call (945) 223-1082</a>
+      <a href="#services" class="btn-outline-dark">See All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name"><span>Smart</span>Pest Carrollton</div>
+      <p class="footer-tagline">Precision pest control for Carrollton, TX homes and businesses. Smart technology. Guaranteed results. Locally trusted.</p>
+      <div class="footer-contact">
+        <a href="tel:9452231082">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.52a16 16 0 006.29 6.29l1.05-1.05a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (945) 223-1082
+        </a>
+        <a href="mailto:info@carrolltonsmartpest.com">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@carrolltonsmartpest.com
+        </a>
+        <a href="#">
+          <svg viewBox="0 0 24 24" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Carrollton, TX 75006
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <div class="footer-links">
+        <a href="#services">General Pest Control</a>
+        <a href="#services">Termite Treatment</a>
+        <a href="#services">Mosquito Control</a>
+        <a href="#services">Rodent Control</a>
+        <a href="#services">Bed Bug Treatment</a>
+        <a href="#services">Commercial Services</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <div class="footer-links">
+        <a href="#why">About Us</a>
+        <a href="#process">Our Process</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#services">Service Areas</a>
+        <a href="tel:9452231082">Contact</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Guarantee</div>
+      <div class="footer-links">
+        <a href="#">100% Re-service Guarantee</a>
+        <a href="#">Family &amp; Pet Safe</a>
+        <a href="#">Licensed &amp; Insured</a>
+        <a href="#">Free Inspection</a>
+        <a href="#">Same-Day Service</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2025 Carrollton Smart Pest Services. All rights reserved.</div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Intersection Observer for fadeUp animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const siblings = el.parentElement.querySelectorAll(el.tagName + '.' + [...el.classList].find(c => ['service-card','pest-card','review-card','process-step','why-feature'].includes(c)));
+      const delay = siblings ? [...siblings].indexOf(el) * 80 : 0;
+      setTimeout(() => el.classList.add('visible'), delay);
+      observer.unobserve(el);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.service-card,.pest-card,.review-card,.process-step,.why-feature').forEach(el => observer.observe(el));
+
+// Stat counters
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseFloat(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1600;
+      const step = target / (duration / 16);
+      let current = 0;
+      const timer = setInterval(() => {
+        current = Math.min(current + step, target);
+        el.textContent = (Number.isInteger(target) ? Math.round(current) : current.toFixed(1)) + suffix;
+        if (current >= target) clearInterval(timer);
+      }, 16);
+      counterObs.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+</script>
+</body>
+</html>
