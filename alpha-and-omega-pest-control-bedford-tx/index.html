@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpha &amp; Omega Pest Control | Bedford TX | 4.9★ 802 Reviews</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#1e1b4b;
+  --primary-dark:#141240;
+  --primary-light:#3730a3;
+  --accent:#ea580c;
+  --accent-dark:#c2410c;
+  --bg-light:#f8f9fc;
+  --text-dark:#111827;
+  --text-mid:#374151;
+  --text-muted:#6b7280;
+  --white:#ffffff;
+  --border:#e5e7eb;
+  --shadow:0 4px 24px rgba(30,27,75,0.12);
+  --radius:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Work Sans',sans-serif;color:var(--text-dark);background:var(--white);line-height:1.6;overflow-x:hidden}
+
+/* ── Nav ── */
+.nav{position:sticky;top:0;z-index:100;background:var(--primary);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;box-shadow:0 2px 12px rgba(0,0,0,0.25)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo-icon{width:36px;height:36px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav-logo-text{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--white);letter-spacing:-0.01em;line-height:1.15}
+.nav-logo-text span{color:var(--accent)}
+.nav-logo-sub{font-family:'Work Sans',sans-serif;font-size:.62rem;font-weight:500;color:rgba(255,255,255,0.5);letter-spacing:.06em;text-transform:uppercase;display:block}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none}
+.nav-links a{color:rgba(255,255,255,0.82);text-decoration:none;font-size:.9rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--accent);color:var(--white);padding:9px 20px;border-radius:8px;font-size:.9rem;font-weight:700;text-decoration:none;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--accent-dark)}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--white);border-radius:2px}
+.nav-mobile{display:none;position:fixed;top:68px;left:0;right:0;background:var(--primary-dark);padding:24px 5% 32px;z-index:99;flex-direction:column;gap:0}
+.nav-mobile a{color:rgba(255,255,255,0.88);text-decoration:none;font-size:1rem;font-weight:500;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.08);display:block}
+.nav-mobile.open{display:flex}
+
+/* ── Hero ── */
+.hero{min-height:91vh;background:var(--primary);position:relative;display:flex;align-items:center;padding:80px 5%;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(140deg,var(--primary-dark) 0%,var(--primary) 55%,#2d2a7a 100%);opacity:.7}
+.hero-grain{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");opacity:.55}
+.hero-arc{position:absolute;bottom:-2px;left:0;right:0;line-height:0}
+.hero-arc svg{width:100%;height:60px}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center;max-width:1200px;margin:0 auto;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(234,88,12,0.15);border:1px solid rgba(234,88,12,0.35);color:#fdba74;padding:6px 14px;border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;animation:heroFadeUp .5s ease-out .1s both;width:fit-content}
+.hero-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,5vw,4.4rem);font-weight:700;color:var(--white);line-height:1.08;letter-spacing:-0.025em;margin-top:14px;animation:heroFadeUp .5s ease-out .2s both}
+.hero-headline em{font-style:normal;color:var(--accent)}
+.hero-sub{font-size:1.12rem;color:rgba(255,255,255,0.75);max-width:500px;line-height:1.7;margin-top:14px;animation:heroFadeUp .5s ease-out .35s both}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;animation:heroFadeUp .5s ease-out .5s both}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--white);padding:14px 28px;border-radius:10px;font-size:1rem;font-weight:700;text-decoration:none;transition:background .2s,transform .15s;white-space:nowrap}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);padding:14px 28px;border-radius:10px;font-size:1rem;font-weight:600;text-decoration:none;border:2px solid rgba(255,255,255,0.28);transition:border-color .2s,background .2s}
+.btn-outline:hover{border-color:rgba(255,255,255,0.65);background:rgba(255,255,255,0.06)}
+.hero-trust{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:24px;animation:heroFadeUp .5s ease-out .65s both}
+.trust-chip{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.68);font-size:.82rem;font-weight:500}
+.trust-chip svg{color:var(--accent)}
+.trust-divider{width:1px;height:14px;background:rgba(255,255,255,0.18)}
+
+/* Hero card */
+.hero-card{background:rgba(255,255,255,0.07);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.14);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:22px;animation:heroFadeUp .5s ease-out .4s both;min-width:0}
+.hero-card-rating-row{display:flex;align-items:center;justify-content:center;gap:14px;background:rgba(255,255,255,0.05);border-radius:10px;padding:16px}
+.hero-rating-number{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:700;color:var(--white);line-height:1}
+.hero-rating-right{display:flex;flex-direction:column;gap:4px}
+.hero-stars{display:flex;gap:3px}
+.hero-stars svg{fill:#f59e0b}
+.hero-review-count{color:rgba(255,255,255,0.58);font-size:.82rem;font-weight:500}
+.hero-card-divider{border:none;border-top:1px solid rgba(255,255,255,0.1);margin:0}
+.hero-quote-wrap{position:relative;padding:4px 8px}
+.hero-quote-icon{position:absolute;top:-8px;left:0;opacity:.2}
+.hero-quote{font-style:italic;color:rgba(255,255,255,0.82);font-size:.93rem;line-height:1.65;padding-left:16px}
+.hero-quote-author{color:rgba(255,255,255,0.45);font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-top:8px;padding-left:16px}
+.hero-card-cta{display:flex;flex-direction:column;gap:10px}
+.hero-card-btn-primary{background:var(--accent);color:var(--white);padding:13px;border-radius:8px;font-size:.97rem;font-weight:700;text-decoration:none;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s}
+.hero-card-btn-primary:hover{background:var(--accent-dark)}
+.hero-card-btn-secondary{background:transparent;color:rgba(255,255,255,0.8);padding:11px;border-radius:8px;font-size:.88rem;font-weight:500;text-decoration:none;text-align:center;border:1px solid rgba(255,255,255,0.2);transition:border-color .2s,color .2s;display:block}
+.hero-card-btn-secondary:hover{border-color:rgba(255,255,255,0.5);color:var(--white)}
+.hero-card-guarantee{display:flex;align-items:center;justify-content:center;gap:6px;color:rgba(255,255,255,0.48);font-size:.77rem;text-align:center}
+
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── Section Helpers ── */
+.section{padding:88px 5%}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.14;letter-spacing:-0.02em;margin-bottom:16px}
+.section-sub{color:var(--text-mid);font-size:1.05rem;max-width:580px;line-height:1.72}
+.text-center{text-align:center}
+.text-center .section-sub{margin:0 auto}
+
+/* ── Services ── */
+.services{background:var(--bg-light)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.service-card{background:var(--white);border-radius:var(--radius);padding:32px 26px;border:1px solid var(--border);transition:transform .25s,box-shadow .25s;opacity:0;transform:translateY(24px)}
+.service-card.visible{opacity:1;transform:translateY(0)}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.service-icon{width:52px;height:52px;background:rgba(234,88,12,0.09);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;flex-shrink:0}
+.service-icon svg{color:var(--accent)}
+.service-name{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--text-dark);margin-bottom:8px}
+.service-desc{color:var(--text-mid);font-size:.9rem;line-height:1.68}
+.service-badge{display:inline-block;background:rgba(234,88,12,0.08);color:var(--accent);font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:100px;margin-top:12px;letter-spacing:.03em}
+
+/* ── Stats ── */
+.stats{background:var(--primary-dark);padding:72px 5%}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(255,255,255,0.06);border-radius:var(--radius);overflow:hidden}
+.stat-cell{background:var(--primary-dark);padding:44px 24px;text-align:center;opacity:0;transform:translateY(20px)}
+.stat-cell.visible{opacity:1;transform:translateY(0);transition:opacity .5s ease,transform .5s ease}
+.stat-number{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,3.6rem);font-weight:700;color:var(--accent);line-height:1;margin-bottom:8px}
+.stat-label{color:rgba(255,255,255,0.62);font-size:.85rem;font-weight:500;text-transform:uppercase;letter-spacing:.07em}
+
+/* ── Process ── */
+.process{background:var(--white)}
+.process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:52px;position:relative}
+.process-grid::before{content:'';position:absolute;top:35px;left:16.5%;right:16.5%;height:2px;background:linear-gradient(90deg,var(--accent) 0%,var(--primary-light) 100%);opacity:.25;z-index:0}
+.process-step{text-align:center;position:relative;z-index:1;opacity:0;transform:translateY(24px)}
+.process-step.visible{opacity:1;transform:translateY(0);transition:opacity .5s ease,transform .5s ease}
+.step-circle{width:70px;height:70px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;border:3px solid var(--accent);position:relative}
+.step-number{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:700;color:var(--white);line-height:1}
+.step-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--text-dark);margin-bottom:10px}
+.step-desc{color:var(--text-mid);font-size:.92rem;line-height:1.68}
+
+/* ── Why Choose ── */
+.why-choose{background:var(--bg-light)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+.why-card{background:var(--white);border-radius:var(--radius);padding:28px;border:1px solid var(--border);display:flex;gap:16px;align-items:flex-start;opacity:0;transform:translateY(20px)}
+.why-card.visible{opacity:1;transform:translateY(0);transition:opacity .5s ease,transform .5s ease}
+.why-icon{width:44px;height:44px;background:rgba(234,88,12,0.09);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why-icon svg{color:var(--accent)}
+.why-title{font-weight:700;font-size:.98rem;color:var(--text-dark);margin-bottom:6px}
+.why-desc{font-size:.88rem;color:var(--text-mid);line-height:1.65}
+
+/* ── Testimonials ── */
+.testimonials{background:var(--white)}
+.reviews-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-bottom:52px}
+.reviews-summary{display:flex;align-items:center;gap:14px;background:var(--bg-light);border:1px solid var(--border);border-radius:12px;padding:16px 24px}
+.reviews-summary-rating{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;color:var(--text-dark);line-height:1}
+.reviews-summary-right{display:flex;flex-direction:column;gap:4px}
+.reviews-summary-stars{display:flex;gap:3px}
+.reviews-summary-stars svg{fill:#f59e0b}
+.reviews-summary-count{font-size:.82rem;color:var(--text-muted);font-weight:500}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--bg-light);border-radius:var(--radius);padding:30px;border:1px solid var(--border);position:relative;opacity:0;transform:translateY(24px)}
+.review-card.visible{opacity:1;transform:translateY(0)}
+.review-quote-icon{position:absolute;top:24px;right:24px;opacity:.1}
+.review-stars{display:flex;gap:3px;margin-bottom:14px}
+.review-stars svg{fill:#f59e0b}
+.review-text{color:var(--text-mid);font-size:.93rem;line-height:1.72;margin-bottom:20px}
+.review-author{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--border)}
+.review-avatar{width:40px;height:40px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700;font-size:.88rem;flex-shrink:0}
+.review-name{font-weight:700;font-size:.9rem;color:var(--text-dark)}
+.review-meta{font-size:.76rem;color:var(--text-muted);margin-top:2px}
+
+/* ── Service Areas ── */
+.service-areas{background:var(--primary-dark);padding:72px 5%}
+.areas-inner{max-width:1200px;margin:0 auto}
+.areas-header{text-align:center;margin-bottom:44px}
+.areas-header .section-eyebrow{color:rgba(234,88,12,0.9)}
+.areas-header .section-title{color:var(--white)}
+.areas-header .section-sub{color:rgba(255,255,255,0.6);margin:0 auto}
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.area-chip{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:13px 18px;color:rgba(255,255,255,0.8);font-size:.9rem;font-weight:500;display:flex;align-items:center;gap:9px;transition:background .2s,border-color .2s}
+.area-chip:hover{background:rgba(255,255,255,0.11);border-color:rgba(234,88,12,0.35)}
+.area-chip svg{color:var(--accent);flex-shrink:0}
+
+/* ── FAQ ── */
+.faq{background:var(--bg-light)}
+.faq-list{max-width:800px;margin:52px auto 0;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:20px 24px;font-family:'Work Sans',sans-serif;font-size:1rem;font-weight:600;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;transition:color .2s}
+.faq-q:hover{color:var(--accent)}
+.faq-q.open{color:var(--accent)}
+.faq-q svg{flex-shrink:0;transition:transform .25s;color:var(--text-muted)}
+.faq-q.open svg{transform:rotate(45deg);color:var(--accent)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s}
+.faq-a.open{max-height:320px;padding:0 24px 20px}
+.faq-a p{color:var(--text-mid);font-size:.95rem;line-height:1.72}
+
+/* ── CTA Band ── */
+.cta-band{background:var(--primary);position:relative;padding:88px 5%;overflow:hidden;text-align:center}
+.cta-band-grain{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");opacity:.5}
+.cta-band-inner{position:relative;z-index:2;max-width:680px;margin:0 auto}
+.cta-band .section-title{color:var(--white)}
+.cta-band-sub{color:rgba(255,255,255,0.7);font-size:1.08rem;max-width:520px;margin:0 auto 38px;line-height:1.7}
+.cta-band-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.cta-phone-big{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--white);padding:16px 34px;border-radius:10px;font-size:1.12rem;font-weight:700;text-decoration:none;transition:background .2s}
+.cta-phone-big:hover{background:var(--accent-dark)}
+.cta-secondary-link{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,0.75);text-decoration:none;font-size:.97rem;font-weight:500;padding:16px 22px;border:1px solid rgba(255,255,255,0.22);border-radius:10px;transition:border-color .2s,color .2s}
+.cta-secondary-link:hover{border-color:rgba(255,255,255,0.6);color:var(--white)}
+.cta-trust-row{display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap;margin-top:32px}
+.cta-trust-item{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.5);font-size:.82rem;font-weight:500}
+.cta-trust-item svg{color:var(--accent)}
+
+/* ── Footer ── */
+.footer{background:var(--primary-dark);padding:56px 5% 30px;color:rgba(255,255,255,0.72)}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr;gap:52px;margin-bottom:40px}
+.footer-brand-name{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;color:var(--white);margin-bottom:12px;line-height:1.2}
+.footer-brand-name span{color:var(--accent)}
+.footer-brand-desc{font-size:.88rem;line-height:1.68;color:rgba(255,255,255,0.55);margin-bottom:18px}
+.footer-contact-item{display:flex;align-items:center;gap:8px;font-size:.87rem;margin-bottom:9px;color:rgba(255,255,255,0.65)}
+.footer-contact-item a{color:rgba(255,255,255,0.65);text-decoration:none;transition:color .2s}
+.footer-contact-item a:hover{color:var(--accent)}
+.footer-col-title{font-weight:700;color:var(--white);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-links a{color:rgba(255,255,255,0.58);text-decoration:none;font-size:.87rem;transition:color .2s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.81rem;color:rgba(255,255,255,0.38)}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .process-grid{grid-template-columns:1fr 1fr}
+  .process-grid::before{display:none}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .areas-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .nav-cta{display:none}
+  .nav-toggle{display:flex}
+  .reviews-header{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:600px){
+  .section{padding:64px 5%}
+  .services-grid{grid-template-columns:1fr}
+  .stats-inner{grid-template-columns:1fr 1fr}
+  .process-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .areas-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .hero-ctas{flex-direction:column;align-items:flex-start}
+  .cta-band-actions{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div class="nav-logo-text">
+      Alpha <span>&amp;</span> Omega
+      <span class="nav-logo-sub">Pest Control</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Our Process</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#areas">Service Areas</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="tel:8174264445" class="nav-cta">Call (817) 426-4445</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="#services">Services</a>
+  <a href="#process">Our Process</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#areas">Service Areas</a>
+  <a href="#faq">FAQ</a>
+  <a href="tel:8174264445" style="color:#ea580c;font-weight:700;border-bottom:none;margin-top:8px">&#9742; (817) 426-4445</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Bedford's #1 Rated Pest Control — 802 Five-Star Reviews
+      </div>
+      <h1 class="hero-headline">Total Pest Elimination.<br><em>Guaranteed.</em></h1>
+      <p class="hero-sub">Alpha &amp; Omega has protected Mid-Cities families and businesses for over 15 years. Precision treatments, same-day availability, and a 100% satisfaction promise on every visit.</p>
+      <div class="hero-ctas">
+        <a href="tel:8174264445" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63 2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 6.91a16 16 0 006.29 6.29l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call (817) 426-4445
+        </a>
+        <a href="#services" class="btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          See All Services
+        </a>
+      </div>
+      <div class="hero-trust">
+        <span class="trust-chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Licensed &amp; Bonded
+        </span>
+        <span class="trust-divider"></span>
+        <span class="trust-chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Fully Insured
+        </span>
+        <span class="trust-divider"></span>
+        <span class="trust-chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          4.9&#9733; · 802 Reviews
+        </span>
+        <span class="trust-divider"></span>
+        <span class="trust-chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          100% Satisfaction Guarantee
+        </span>
+      </div>
+    </div>
+
+    <!-- HERO CARD: Reputation Showcase -->
+    <div class="hero-card">
+      <div class="hero-card-rating-row">
+        <div class="hero-rating-number">4.9</div>
+        <div class="hero-rating-right">
+          <div class="hero-stars">
+            <svg width="18" height="18" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="hero-review-count">802 Google Reviews</div>
+        </div>
+      </div>
+      <hr class="hero-card-divider">
+      <div class="hero-quote-wrap">
+        <svg class="hero-quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/></svg>
+        <p class="hero-quote">"Showed up the same day, treated every room, and we haven't seen a single bug since. Absolutely worth every penny — these guys are the real deal."</p>
+        <p class="hero-quote-author">— Michael R., Bedford TX</p>
+      </div>
+      <div class="hero-card-cta">
+        <a href="tel:8174264445" class="hero-card-btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63 2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 6.91a16 16 0 006.29 6.29l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now — Free Estimate
+        </a>
+        <a href="mailto:alphaomegapest@yahoo.com" class="hero-card-btn-secondary">Email for a Quote</a>
+      </div>
+      <div class="hero-card-guarantee">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        100% Satisfaction — We Return Free If Pests Come Back
+      </div>
+    </div>
+  </div>
+  <!-- Scalloped bottom -->
+  <div class="hero-arc">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="white"><path d="M0,60 C360,0 1080,0 1440,60 L1440,60 L0,60 Z"/></svg>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="section-inner">
+    <p class="section-eyebrow text-center">What We Treat</p>
+    <h2 class="section-title text-center">Comprehensive Pest Solutions<br>for Every Threat</h2>
+    <p class="section-sub text-center">From kitchen ants to subterranean termites, our certified technicians use targeted, family-safe treatments that eliminate pests at the source — not just the surface.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+        </div>
+        <h3 class="service-name">Ant Control</h3>
+        <p class="service-desc">Carpenter ants, fire ants, odorous house ants — we identify the exact species and eliminate colonies at the nest, not just the foragers you can see.</p>
+        <span class="service-badge">Interior + Exterior</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3 class="service-name">Cockroach Elimination</h3>
+        <p class="service-desc">German, American, and Oriental cockroach infestations eliminated using gel bait, insect growth regulators, and targeted residual treatments.</p>
+        <span class="service-badge">Restaurant-Grade Protocol</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <h3 class="service-name">Spider &amp; Web Removal</h3>
+        <p class="service-desc">Full web removal plus interior and exterior perimeter treatment. Special attention to black widow and brown recluse harborage zones.</p>
+        <span class="service-badge">Black Widow Specialists</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 class="service-name">Rodent Exclusion</h3>
+        <p class="service-desc">Mice and rat removal through mechanical trapping, entry-point sealing, and sanitation recommendations that prevent future infestations.</p>
+        <span class="service-badge">Full Exclusion Service</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="service-name">Mosquito Control</h3>
+        <p class="service-desc">Seasonal yard barrier treatments and misting systems that reduce mosquito populations by up to 90% — reclaim your outdoor living spaces.</p>
+        <span class="service-badge">Seasonal Programs Available</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>
+        </div>
+        <h3 class="service-name">Termite Defense</h3>
+        <p class="service-desc">Full-structure termite inspections, Termidor liquid treatments, and Sentricon bait station installation for permanent colony elimination.</p>
+        <span class="service-badge">WDI Reports Available</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" id="stats">
+  <div class="stats-inner">
+    <div class="stat-cell">
+      <div class="stat-number" data-target="802" data-suffix="">802</div>
+      <div class="stat-label">Five-Star Reviews</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-number">4.9&#9733;</div>
+      <div class="stat-label">Google Rating</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-number" data-target="15" data-suffix="+">15+</div>
+      <div class="stat-label">Years Serving DFW</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-number" data-target="100" data-suffix="%">100%</div>
+      <div class="stat-label">Satisfaction Guarantee</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process" id="process">
+  <div class="section-inner">
+    <p class="section-eyebrow text-center">How It Works</p>
+    <h2 class="section-title text-center">Three Steps to a<br>Permanently Pest-Free Home</h2>
+    <p class="section-sub text-center">No guesswork. No generic spraying. Our proven three-step protocol eliminates today's pests and prevents tomorrow's infestations.</p>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-circle">
+          <span class="step-number">1</span>
+        </div>
+        <h3 class="step-title">Thorough Inspection</h3>
+        <p class="step-desc">Every visit starts with a certified technician examining your interior, exterior, attic, crawlspace, and foundation — identifying pest species, entry points, and nesting sites before a single drop of product is applied.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle">
+          <span class="step-number">2</span>
+        </div>
+        <h3 class="step-title">Precision Treatment</h3>
+        <p class="step-desc">We select the right product for the right pest in the right location. EPA-registered formulas applied with surgical precision — devastatingly effective against pests, gentle for your family and pets.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-circle">
+          <span class="step-number">3</span>
+        </div>
+        <h3 class="step-title">Ongoing Protection</h3>
+        <p class="step-desc">Quarterly maintenance plans keep pests out year-round. Between visits, if pest activity returns, we come back and re-treat at no additional charge. That's the Alpha &amp; Omega guarantee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="section why-choose">
+  <div class="section-inner">
+    <p class="section-eyebrow text-center">Why Alpha &amp; Omega</p>
+    <h2 class="section-title text-center">What Sets Bedford's Most<br>Reviewed Pest Control Apart</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="why-title">Same-Day &amp; Next-Day Service</div>
+          <p class="why-desc">Pest problems can't always wait. We offer same-day appointments for most calls — just dial (817) 426-4445 before noon.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div>
+          <div class="why-title">Free Re-Service Guarantee</div>
+          <p class="why-desc">If pest activity returns between scheduled visits, we come back and treat again at absolutely no extra cost. Period.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div>
+          <div class="why-title">Family &amp; Pet Safe Treatments</div>
+          <p class="why-desc">All products are EPA-registered. We provide clear re-entry timing and answer every safety question before we begin work.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div>
+          <div class="why-title">Certified &amp; Licensed Technicians</div>
+          <p class="why-desc">Every Alpha &amp; Omega technician is state-licensed, background-checked, and continuously trained on the latest pest control science.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div>
+          <div class="why-title">Transparent, Honest Pricing</div>
+          <p class="why-desc">No hidden fees, no upselling. We quote the job before we start and stand behind our pricing with a written estimate every time.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="why-title">Local DFW Experts</div>
+          <p class="why-desc">Bedford-based, Mid-Cities focused. We know the specific pest pressures of North Texas and tailor treatments to local seasonal cycles.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials" id="reviews">
+  <div class="section-inner">
+    <div class="reviews-header">
+      <div>
+        <p class="section-eyebrow">Customer Stories</p>
+        <h2 class="section-title" style="margin-bottom:0">What 802 Happy Customers<br>Are Saying</h2>
+      </div>
+      <div class="reviews-summary">
+        <div class="reviews-summary-rating">4.9</div>
+        <div class="reviews-summary-right">
+          <div class="reviews-summary-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="reviews-summary-count">802 verified Google reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <svg class="review-quote-icon" width="52" height="52" viewBox="0 0 24 24" fill="var(--primary)"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+        <div class="review-stars">
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Had a severe cockroach infestation in our restaurant kitchen. Alpha &amp; Omega was out within hours, fully treated every corner, and we passed our next health inspection without a single violation. Absolute lifesavers."</p>
+        <div class="review-author">
+          <div class="review-avatar">JT</div>
+          <div>
+            <div class="review-name">James T.</div>
+            <div class="review-meta">Bedford, TX · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <svg class="review-quote-icon" width="52" height="52" viewBox="0 0 24 24" fill="var(--primary)"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+        <div class="review-stars">
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"We tried three other pest companies before finding Alpha &amp; Omega. They actually solved our rat problem for good — sealed every entry point, set traps, and we've been completely rodent-free for 18 months now."</p>
+        <div class="review-author">
+          <div class="review-avatar">SC</div>
+          <div>
+            <div class="review-name">Sarah C.</div>
+            <div class="review-meta">Hurst, TX · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <svg class="review-quote-icon" width="52" height="52" viewBox="0 0 24 24" fill="var(--primary)"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+        <div class="review-stars">
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"On the quarterly plan for two years. My backyard is finally mosquito-free and the ant trails that covered my kitchen haven't returned. Best pest control investment I've ever made — highly recommend."</p>
+        <div class="review-author">
+          <div class="review-avatar">DM</div>
+          <div>
+            <div class="review-name">David M.</div>
+            <div class="review-meta">Colleyville, TX · Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="service-areas" id="areas">
+  <div class="areas-inner">
+    <div class="areas-header">
+      <p class="section-eyebrow">Where We Serve</p>
+      <h2 class="section-title">Proudly Protecting the<br>Mid-Cities &amp; All of DFW</h2>
+      <p class="section-sub">From Bedford and Hurst to Grapevine and Fort Worth — if you're in North Texas, we've got you covered.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Bedford, TX
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Hurst, TX
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Euless, TX
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Colleyville, TX
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Grapevine, TX
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Southlake, TX
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        North Richland Hills, TX
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Keller, TX
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Fort Worth, TX
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="section-inner">
+    <p class="section-eyebrow text-center">Common Questions</p>
+    <h2 class="section-title text-center">Frequently Asked<br>Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">
+          How quickly can you respond to my pest problem?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>We typically schedule same-day or next-day service for most pest issues. For urgent situations — wasp nests, severe infestations, or pre-inspection emergencies — call us at (817) 426-4445 and we'll do our best to be there within hours.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Are your treatments safe for my children and pets?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Yes. All products we use are EPA-registered, and our technicians apply them with precision to minimize exposure. We'll give you clear re-entry guidelines — typically 30–60 minutes for indoor treatment — and answer every safety question you have before starting.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          What is your satisfaction guarantee?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>If pest activity returns between your scheduled visits, call us and we'll come back to re-treat at no additional charge. We stand 100% behind our work. That's not a marketing slogan — it's the reason we have 802 five-star reviews.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          What does your quarterly maintenance plan include?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Four annual treatments timed to North Texas seasonal pest activity cycles, covering ants, roaches, spiders, wasps, and general perimeter pests. Plan members also get priority scheduling and free re-service calls between visits at no extra charge.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Do you treat commercial properties?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Absolutely — restaurants, retail stores, office buildings, warehouses, and multi-family properties. We provide detailed service reports for health inspection compliance and can work around your operating hours. Call for a custom commercial quote.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Do you offer termite inspections and treatments?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a"><p>Yes. We conduct full wood-destroying insect (WDI) inspections and provide Termidor liquid treatments and Sentricon bait station installations. WDI inspection reports for real estate closings are also available — call for pricing.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-band-grain"></div>
+  <div class="cta-band-inner">
+    <p class="section-eyebrow" style="color:rgba(234,88,12,0.9)">Ready to Be Pest-Free?</p>
+    <h2 class="section-title">Join 802 Families Who<br>Trust Alpha &amp; Omega</h2>
+    <p class="cta-band-sub">Your first step is a free, no-pressure estimate. Call us now or send an email — we respond fast and we'll get a technician to you quickly.</p>
+    <div class="cta-band-actions">
+      <a href="tel:8174264445" class="cta-phone-big">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63 2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 6.91a16 16 0 006.29 6.29l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (817) 426-4445
+      </a>
+      <a href="mailto:alphaomegapest@yahoo.com" class="cta-secondary-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        alphaomegapest@yahoo.com
+      </a>
+    </div>
+    <div class="cta-trust-row">
+      <span class="cta-trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Free Estimate
+      </span>
+      <span class="cta-trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        No Contracts Required
+      </span>
+      <span class="cta-trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        100% Guaranteed
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Alpha <span>&amp;</span> Omega Pest Control</div>
+      <p class="footer-brand-desc">Bedford's most trusted and reviewed pest control company — 802 five-star Google reviews and counting. We eliminate pests with precision and protect your family with care.</p>
+      <div class="footer-contact-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63 2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 6.91a16 16 0 006.29 6.29l.41-.41a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <a href="tel:8174264445">(817) 426-4445</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:alphaomegapest@yahoo.com">alphaomegapest@yahoo.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        121 NW Renfro St, Burleson, TX 76028
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Our Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Ant Control</a></li>
+        <li><a href="#services">Cockroach Elimination</a></li>
+        <li><a href="#services">Spider Treatment</a></li>
+        <li><a href="#services">Rodent Exclusion</a></li>
+        <li><a href="#services">Mosquito Control</a></li>
+        <li><a href="#services">Termite Defense</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="#areas">Bedford</a></li>
+        <li><a href="#areas">Hurst</a></li>
+        <li><a href="#areas">Euless</a></li>
+        <li><a href="#areas">Colleyville</a></li>
+        <li><a href="#areas">Grapevine</a></li>
+        <li><a href="#areas">Fort Worth</a></li>
+        <li><a href="#areas">North Richland Hills</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2024 Alpha &amp; Omega Pest Control · Bedford, TX · All Rights Reserved</div>
+    <div>Licensed &amp; Insured · 802 Five-Star Reviews · Serving DFW</div>
+  </div>
+</footer>
+
+<script>
+// Nav mobile toggle
+const navToggle = document.getElementById('navToggle');
+const navMobile = document.getElementById('navMobile');
+navToggle.addEventListener('click', () => {
+  navMobile.classList.toggle('open');
+});
+document.querySelectorAll('.nav-mobile a').forEach(a => {
+  a.addEventListener('click', () => navMobile.classList.remove('open'));
+});
+
+// Card fade-up via IntersectionObserver
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      e.target.style.transition = 'opacity .55s ease, transform .55s ease';
+      fadeObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.service-card, .review-card, .process-step, .why-card, .stat-cell').forEach(el => fadeObserver.observe(el));
+
+// Stat counters
+document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800;
+        const start = performance.now();
+        const update = (time) => {
+          const p = Math.min((time - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+          if (p < 1) requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+      }
+    });
+  }, { threshold: 0.5 }).observe(el);
+});
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-q.open').forEach(b => {
+      b.classList.remove('open');
+      b.nextElementSibling.classList.remove('open');
+    });
+    if (!isOpen) {
+      btn.classList.add('open');
+      answer.classList.add('open');
+    }
+  });
+});
+</script>
+</body>
+</html>
