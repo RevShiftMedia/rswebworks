@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weedex Lawn Care — Lewisville, TX | Premier Lawn Care Experts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#1b4332;
+  --primary-dark:#0d2b1f;
+  --accent:#84cc16;
+  --accent-dark:#4d7c0f;
+  --text:#eef6ee;
+  --text-dim:rgba(238,246,238,0.65);
+  --text-dimmer:rgba(238,246,238,0.38);
+  --surface:rgba(255,255,255,0.04);
+  --surface-hover:rgba(255,255,255,0.07);
+  --border:rgba(255,255,255,0.09);
+  --bg-off:#f7faf3;
+  --radius:10px;
+  --radius-lg:16px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Lora',serif;background:var(--primary-dark);color:var(--text);overflow-x:hidden;line-height:1.65}
+h1,h2,h3,h4,h5{font-family:'Playfair Display',serif;line-height:1.12;font-weight:700}
+
+/* ── NAV ────────────────────────────────────── */
+nav{position:sticky;top:0;z-index:100;background:var(--primary);border-bottom:1px solid rgba(255,255,255,0.07);padding:0 32px;transition:box-shadow 0.3s}
+nav.scrolled{box-shadow:0 4px 24px rgba(0,0,0,0.35)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:66px;gap:24px}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:900;color:var(--text);text-decoration:none;letter-spacing:0.01em}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--text-dim);text-decoration:none;font-family:'Lora',serif;font-size:0.88rem;font-weight:600;letter-spacing:0.04em;transition:color 0.2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{background:var(--accent-dark);color:#fff;padding:10px 24px;border-radius:6px;font-family:'Lora',serif;font-size:0.92rem;font-weight:700;letter-spacing:0.04em;text-decoration:none;white-space:nowrap;transition:background 0.2s}
+.nav-cta:hover{background:#365314}
+@media(max-width:900px){.nav-links{display:none}}
+
+/* ── HERO ───────────────────────────────────── */
+.hero{min-height:92vh;background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%);position:relative;display:flex;align-items:center;overflow:hidden;padding:80px 32px}
+.hero::after{content:'';position:absolute;inset:0;opacity:0.045;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
+.hero-glow{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(132,204,22,0.08) 0%,transparent 70%);bottom:-100px;right:40px;pointer-events:none}
+.hero-glow-2{position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(132,204,22,0.05) 0%,transparent 70%);top:40px;left:-60px;pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:56px;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(132,204,22,0.1);border:1px solid rgba(132,204,22,0.28);color:var(--accent);padding:6px 16px;border-radius:30px;font-family:'Lora',serif;font-size:0.8rem;font-weight:600;letter-spacing:0.06em;opacity:0;animation:heroFadeUp 0.6s ease forwards}
+.hero-headline{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:900;color:var(--text);line-height:1.05;margin-top:20px;opacity:0;animation:heroFadeUp 0.6s ease 0.1s forwards}
+.hero-headline span{color:var(--accent)}
+.hero-sub{font-family:'Lora',serif;font-size:1.08rem;color:var(--text-dim);max-width:500px;margin-top:18px;line-height:1.82;opacity:0;animation:heroFadeUp 0.6s ease 0.2s forwards}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;opacity:0;animation:heroFadeUp 0.6s ease 0.3s forwards}
+.btn-primary{background:var(--accent-dark);color:#fff;padding:15px 32px;border-radius:8px;font-family:'Lora',serif;font-size:1rem;font-weight:700;letter-spacing:0.04em;text-decoration:none;transition:background 0.2s,transform 0.15s}
+.btn-primary:hover{background:#365314;transform:translateY(-2px)}
+.btn-outline{border:2px solid rgba(238,246,238,0.28);color:var(--text);padding:15px 28px;border-radius:8px;font-family:'Lora',serif;font-size:1rem;font-weight:600;letter-spacing:0.04em;text-decoration:none;transition:border-color 0.2s,color 0.2s,transform 0.15s}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+.hero-trust{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:24px;opacity:0;animation:heroFadeUp 0.6s ease 0.4s forwards}
+.hero-trust-item{display:flex;align-items:center;gap:7px;font-family:'Lora',serif;font-size:0.84rem;color:var(--text-dim);font-weight:600}
+.hero-trust-dot{width:5px;height:5px;border-radius:50%;background:var(--accent)}
+.hero-card{background:rgba(255,255,255,0.07);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);padding:32px;opacity:0;animation:heroFadeUp 0.6s ease 0.5s forwards}
+.hero-card-tag{font-family:'Lora',serif;font-size:0.76rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dimmer);margin-bottom:16px}
+.hero-stars{display:flex;gap:3px;margin-bottom:6px}
+.hero-star{color:var(--accent);font-size:1.15rem}
+.hero-rating-row{display:flex;align-items:baseline;gap:10px;margin-bottom:20px}
+.hero-rating-big{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--text)}
+.hero-rating-sub{font-family:'Lora',serif;font-size:0.88rem;color:var(--text-dim);font-weight:600}
+.hero-divider{height:1px;background:var(--border);margin:20px 0}
+.hero-local-badge{background:rgba(132,204,22,0.08);border:1px solid rgba(132,204,22,0.2);border-radius:8px;padding:14px 16px;margin-bottom:20px}
+.hero-local-badge-label{font-family:'Lora',serif;font-size:0.8rem;font-weight:700;color:var(--accent);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px}
+.hero-local-badge p{font-family:'Lora',serif;font-size:0.88rem;color:var(--text-dim);line-height:1.6}
+.hero-card-label{font-family:'Lora',serif;font-size:0.76rem;color:var(--text-dimmer);text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin-top:14px}
+.hero-card-phone{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--text);text-decoration:none;display:block;margin-top:5px}
+.hero-card-phone:hover{color:var(--accent)}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-card{display:none}}
+
+/* ── STATS ───────────────────────────────────── */
+.stats{background:var(--primary);padding:56px 32px}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.stat-box{background:rgba(255,255,255,0.04);padding:32px 24px;text-align:center}
+.stat-box:first-child{border-radius:var(--radius) 0 0 var(--radius)}
+.stat-box:last-child{border-radius:0 var(--radius) var(--radius) 0}
+.stat-num{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--accent);line-height:1;letter-spacing:-0.01em}
+.stat-label{font-family:'Lora',serif;font-size:0.86rem;color:var(--text-dim);font-weight:600;text-transform:uppercase;letter-spacing:0.07em;margin-top:8px}
+@media(max-width:900px){.stats-inner{grid-template-columns:repeat(2,1fr)}.stat-box:first-child{border-radius:var(--radius) 0 0 0}.stat-box:last-child{border-radius:0 0 var(--radius) 0}}
+@media(max-width:600px){.stats-inner{grid-template-columns:repeat(1,1fr)}.stat-box:first-child{border-radius:var(--radius) var(--radius) 0 0}.stat-box:last-child{border-radius:0 0 var(--radius) var(--radius)}}
+
+/* ── SECTION LABELS ──────────────────────────── */
+.section-label{display:inline-block;font-family:'Lora',serif;font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:30px;margin-bottom:16px}
+.section-label-dark{background:rgba(132,204,22,0.1);color:var(--accent);border:1px solid rgba(132,204,22,0.25)}
+.section-label-light{background:rgba(77,124,15,0.1);color:var(--accent-dark);border:1px solid rgba(77,124,15,0.2)}
+
+/* ── SERVICES ────────────────────────────────── */
+.services{background:var(--primary-dark);padding:88px 32px}
+.services-inner{max-width:1200px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:52px}
+.section-header h2{font-family:'Playfair Display',serif;font-size:clamp(2.1rem,4vw,3rem);font-weight:900;color:var(--text)}
+.section-header p{font-family:'Lora',serif;color:var(--text-dim);font-size:1.02rem;max-width:540px;margin:16px auto 0;line-height:1.78}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service-card{background:var(--surface);border:1px solid var(--border);border-top:3px solid transparent;border-radius:var(--radius-lg);padding:36px 28px;text-align:center;transition:border-top-color 0.25s,transform 0.2s,background 0.2s;opacity:0;transform:translateY(20px)}
+.service-card.visible{opacity:1;transform:translateY(0);transition:opacity 0.5s ease,transform 0.5s ease,border-top-color 0.25s,background 0.2s}
+.service-card:hover{border-top-color:var(--accent);background:var(--surface-hover);transform:translateY(-4px)}
+.service-icon{width:56px;height:56px;background:rgba(132,204,22,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.service-icon svg{width:28px;height:28px;fill:var(--accent)}
+.service-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:10px}
+.service-card p{font-family:'Lora',serif;font-size:0.92rem;color:var(--text-dim);line-height:1.72}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.services-grid{grid-template-columns:repeat(1,1fr)}}
+
+/* ── WHY US ───────────────────────────────────── */
+.whyus{background:var(--primary);position:relative;padding:88px 32px;overflow:hidden}
+.whyus::after{content:'';position:absolute;inset:0;opacity:0.04;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
+.whyus-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.whyus-header{text-align:center;margin-bottom:52px}
+.whyus-header h2{font-family:'Playfair Display',serif;font-size:clamp(2.1rem,4vw,3rem);font-weight:900;color:var(--text)}
+.whyus-header p{font-family:'Lora',serif;color:var(--text-dim);font-size:1.02rem;max-width:520px;margin:16px auto 0;line-height:1.78}
+.whyus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.whyus-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);padding:32px;display:flex;gap:20px;align-items:flex-start;opacity:0;transform:translateY(20px)}
+.whyus-card.visible{opacity:1;transform:translateY(0);transition:opacity 0.5s ease,transform 0.5s ease}
+.whyus-icon{width:48px;height:48px;background:rgba(132,204,22,0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.whyus-icon svg{width:24px;height:24px;fill:var(--accent)}
+.whyus-card h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:8px}
+.whyus-card p{font-family:'Lora',serif;font-size:0.92rem;color:var(--text-dim);line-height:1.72}
+@media(max-width:900px){.whyus-grid{grid-template-columns:repeat(1,1fr)}}
+
+/* ── HOW IT WORKS ────────────────────────────── */
+.how{background:var(--primary-dark);padding:88px 32px}
+.how-inner{max-width:1200px;margin:0 auto}
+.how-header{text-align:center;margin-bottom:52px}
+.how-header h2{font-family:'Playfair Display',serif;font-size:clamp(2.1rem,4vw,3rem);font-weight:900;color:var(--text)}
+.how-header p{font-family:'Lora',serif;color:var(--text-dim);font-size:1.02rem;max-width:520px;margin:16px auto 0;line-height:1.78}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.how-step{text-align:center;padding:36px 28px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius-lg);opacity:0;transform:translateY(20px)}
+.how-step.visible{opacity:1;transform:translateY(0);transition:opacity 0.5s ease,transform 0.5s ease}
+.how-step-num{width:52px;height:52px;border-radius:50%;background:var(--accent-dark);color:#fff;font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.how-step h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:10px}
+.how-step p{font-family:'Lora',serif;font-size:0.92rem;color:var(--text-dim);line-height:1.72}
+@media(max-width:900px){.how-steps{grid-template-columns:repeat(1,1fr)}}
+
+/* ── REVIEWS ─────────────────────────────────── */
+.reviews{background:var(--bg-off);padding:88px 32px}
+.reviews-inner{max-width:1200px;margin:0 auto}
+.reviews-header{text-align:center;margin-bottom:52px}
+.reviews-header h2{font-family:'Playfair Display',serif;font-size:clamp(2.1rem,4vw,3rem);font-weight:900;color:var(--primary-dark)}
+.reviews-header p{font-family:'Lora',serif;color:#4a6a3a;font-size:1.02rem;max-width:520px;margin:16px auto 0;line-height:1.78}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.review-card{background:#fff;border-radius:var(--radius-lg);padding:32px;border:1px solid rgba(0,0,0,0.07);box-shadow:0 2px 12px rgba(0,0,0,0.06);opacity:0;transform:translateY(20px)}
+.review-card.visible{opacity:1;transform:translateY(0);transition:opacity 0.5s ease,transform 0.5s ease}
+.review-card:nth-child(2).visible{transition-delay:0.1s}
+.review-card:nth-child(3).visible{transition-delay:0.2s}
+.review-stars{display:flex;gap:3px;margin-bottom:14px}
+.review-star{color:var(--accent-dark);font-size:1rem}
+.review-text{font-family:'Lora',serif;font-size:0.94rem;color:#2a4a2a;line-height:1.78;margin-bottom:20px}
+.review-author{display:flex;align-items:center;gap:12px;border-top:1px solid rgba(0,0,0,0.07);padding-top:16px}
+.review-avatar{width:40px;height:40px;border-radius:50%;background:var(--primary);color:var(--accent);font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.review-name{font-family:'Lora',serif;font-weight:700;font-size:0.9rem;color:var(--primary-dark)}
+.review-loc{font-family:'Lora',serif;font-size:0.8rem;color:#4a6a3a}
+@media(max-width:900px){.reviews-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.reviews-grid{grid-template-columns:repeat(1,1fr)}}
+
+/* ── SERVICE AREAS ───────────────────────────── */
+.areas{background:var(--primary-dark);padding:88px 32px}
+.areas-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:56px;align-items:center}
+.areas-left h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.9rem);font-weight:900;color:var(--text);margin-bottom:16px}
+.areas-left p{font-family:'Lora',serif;font-size:1rem;color:var(--text-dim);line-height:1.78;margin-bottom:28px}
+.areas-cta{display:inline-block;background:var(--accent-dark);color:#fff;padding:13px 30px;border-radius:8px;font-family:'Lora',serif;font-size:0.97rem;font-weight:700;letter-spacing:0.03em;text-decoration:none;transition:background 0.2s}
+.areas-cta:hover{background:#365314}
+.areas-chip-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.09);border-radius:var(--radius-lg);padding:32px}
+.areas-chip-card-title{font-family:'Lora',serif;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dimmer);margin-bottom:18px}
+.area-chips{display:flex;flex-wrap:wrap;gap:10px}
+.area-chip{background:rgba(132,204,22,0.08);border:1px solid rgba(132,204,22,0.18);color:var(--text);padding:7px 16px;border-radius:30px;font-family:'Lora',serif;font-size:0.88rem;font-weight:600}
+@media(max-width:900px){.areas-inner{grid-template-columns:repeat(1,1fr)}}
+
+/* ── CONTACT ─────────────────────────────────── */
+.contact{background:#fff;padding:88px 32px}
+.contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:52px;align-items:start}
+.contact-form-wrap h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4vw,2.7rem);font-weight:900;color:var(--primary-dark);margin-bottom:8px}
+.contact-form-wrap p{font-family:'Lora',serif;font-size:1rem;color:#4a6a3a;margin-bottom:28px;line-height:1.72}
+.contact-form{display:flex;flex-direction:column;gap:16px}
+.form-row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.form-field{display:flex;flex-direction:column;gap:6px}
+.form-field label{font-family:'Lora',serif;font-size:0.82rem;font-weight:700;color:var(--primary-dark);text-transform:uppercase;letter-spacing:0.06em}
+.form-field input,.form-field select,.form-field textarea{border:2px solid #cde0cc;border-radius:8px;padding:12px 14px;font-family:'Lora',serif;font-size:0.95rem;color:var(--primary-dark);background:#fff;outline:none;transition:border-color 0.2s}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--accent-dark)}
+.form-field textarea{resize:vertical;min-height:110px}
+.form-submit{background:var(--accent-dark);color:#fff;border:none;padding:14px 32px;border-radius:8px;font-family:'Lora',serif;font-size:0.97rem;font-weight:700;letter-spacing:0.04em;cursor:pointer;transition:background 0.2s,transform 0.15s;align-self:flex-start}
+.form-submit:hover{background:#365314;transform:translateY(-2px)}
+.contact-info{background:var(--primary-dark);border-radius:var(--radius-lg);padding:36px;color:var(--text)}
+.contact-info h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;margin-bottom:22px;color:var(--text)}
+.info-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:22px}
+.info-icon{width:40px;height:40px;background:rgba(132,204,22,0.12);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.info-icon svg{width:20px;height:20px;fill:var(--accent)}
+.info-label{font-family:'Lora',serif;font-size:0.76rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-dimmer);margin-bottom:3px}
+.info-value{font-family:'Lora',serif;font-size:0.97rem;color:var(--text);font-weight:600}
+.info-value a{color:var(--text);text-decoration:none}
+.info-value a:hover{color:var(--accent)}
+.info-divider{height:1px;background:rgba(255,255,255,0.08);margin:22px 0}
+.badge-ssl-note{background:rgba(132,204,22,0.08);border:1px solid rgba(132,204,22,0.18);border-radius:8px;padding:12px 14px;font-family:'Lora',serif;font-size:0.84rem;color:var(--text-dim);margin-top:4px;line-height:1.58}
+@media(max-width:900px){.contact-inner{grid-template-columns:repeat(1,1fr)}.form-row{grid-template-columns:repeat(1,1fr)}}
+
+/* ── CTA BAND ────────────────────────────────── */
+.cta-band{background:linear-gradient(135deg,var(--accent-dark),var(--accent));position:relative;overflow:hidden;padding:72px 32px;text-align:center}
+.cta-band::after{content:'';position:absolute;inset:0;opacity:0.08;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")}
+.cta-band-inner{max-width:700px;margin:0 auto;position:relative;z-index:1}
+.cta-band h2{font-family:'Playfair Display',serif;font-size:clamp(2.1rem,4vw,3rem);font-weight:900;color:var(--primary-dark);margin-bottom:14px}
+.cta-band p{font-family:'Lora',serif;font-size:1.05rem;color:rgba(13,43,31,0.75);margin-bottom:32px;line-height:1.72;max-width:500px;margin-left:auto;margin-right:auto}
+.cta-band-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-dark{background:var(--primary-dark);color:var(--text);padding:14px 32px;border-radius:8px;font-family:'Lora',serif;font-size:1rem;font-weight:700;letter-spacing:0.03em;text-decoration:none;transition:background 0.2s,transform 0.15s}
+.btn-dark:hover{background:var(--primary);transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--primary-dark);padding:14px 30px;border-radius:8px;font-family:'Lora',serif;font-size:1rem;font-weight:700;letter-spacing:0.03em;text-decoration:none;transition:background 0.2s,transform 0.15s}
+.btn-white:hover{background:#f0fdf0;transform:translateY(-2px)}
+
+/* ── FOOTER ──────────────────────────────────── */
+footer{background:var(--primary-dark);border-top:1px solid rgba(255,255,255,0.08);padding:64px 32px 32px}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;margin-bottom:48px}
+.footer-brand .footer-logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:900;color:var(--text);text-decoration:none;display:block;margin-bottom:12px}
+.footer-logo span{color:var(--accent)}
+.footer-brand p{font-family:'Lora',serif;font-size:0.88rem;color:var(--text-dim);line-height:1.68}
+.footer-col h4{font-family:'Lora',serif;font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dimmer);margin-bottom:14px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-links a{font-family:'Lora',serif;color:var(--text-dim);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s}
+.footer-links a:hover{color:var(--accent)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-copy{font-family:'Lora',serif;font-size:0.82rem;color:var(--text-dimmer)}
+.footer-note{font-family:'Lora',serif;font-size:0.78rem;color:var(--text-dimmer)}
+@media(max-width:900px){.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.footer-grid{grid-template-columns:repeat(1,1fr)}.footer-bottom{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Weedex <span>Lawn Care</span></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">Why Us</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#areas">Areas</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:9724269348" class="nav-cta">Call Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">1,296 Five-Star Reviews</div>
+      <h1 class="hero-headline">Lewisville's Premier <span>Lawn Care</span> Experts</h1>
+      <p class="hero-sub">From weed control to fertilization, Weedex has transformed thousands of Lewisville lawns into lush, healthy showpieces.</p>
+      <div class="hero-ctas">
+        <a href="tel:9724269348" class="btn-primary">Call (972) 426-9348</a>
+        <a href="#contact" class="btn-outline">Get Free Estimate</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item"><div class="hero-trust-dot"></div>20+ Years Serving DFW</div>
+        <div class="hero-trust-item"><div class="hero-trust-dot"></div>1,296 Five-Star Reviews</div>
+        <div class="hero-trust-item"><div class="hero-trust-dot"></div>Licensed &amp; Insured</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-tag">Customer Rating</div>
+      <div class="hero-stars">
+        <span class="hero-star">&#9733;</span>
+        <span class="hero-star">&#9733;</span>
+        <span class="hero-star">&#9733;</span>
+        <span class="hero-star">&#9733;</span>
+        <span class="hero-star">&#9733;</span>
+      </div>
+      <div class="hero-rating-row">
+        <span class="hero-rating-big">4.7</span>
+        <span class="hero-rating-sub">1,296 Google Reviews</span>
+      </div>
+      <div class="hero-local-badge">
+        <div class="hero-local-badge-label">Serving Lewisville, TX</div>
+        <p>Over two decades of transforming DFW lawns. Weedex brings expertise, proven programs, and a passion for beautiful turf to every property we serve.</p>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-card-label">Call Anytime</div>
+      <a href="tel:9724269348" class="hero-card-phone">(972) 426-9348</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-box">
+      <div class="stat-num" data-target="1296">0</div>
+      <div class="stat-label">Five-Star Reviews</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" data-target="47" data-decimal="1">0</div>
+      <div class="stat-label">Star Rating</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" data-text="20+">20+</div>
+      <div class="stat-label">Years Serving DFW</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" data-text="10K+">10K+</div>
+      <div class="stat-label">Lawns Transformed</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="section-header">
+      <div class="section-label section-label-dark">Our Programs</div>
+      <h2>Complete Lawn Care Solutions</h2>
+      <p>Weedex offers a full suite of science-backed lawn treatments designed for Texas lawns — keeping them green, healthy, and weed-free all year long.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 8C8 10 5.9 16.17 3.82 19.21L5 21l1.46-1.46c.7.62 1.5 1 2.23 1 .87 0 1.7-.45 2.3-1.14C12.28 18.1 13 16.5 13 15c0-3.31 2.69-6 6-6h1v-1c0-1.81-1.06-3.38-2.61-4.13A5.989 5.989 0 0 0 17 8zM7 5.07C3.96 5.56 2 8.02 2 11h1c3.31 0 6-2.69 6-6 0-.32-.03-.63-.08-.93H7v1z"/></svg>
+        </div>
+        <h3>Lawn Fertilization Program</h3>
+        <p>A structured multi-application fertilization plan tailored to Texas soil and climate, delivering the nutrients your lawn needs to thrive season after season.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        </div>
+        <h3>Weed Control &amp; Prevention</h3>
+        <p>Targeted broadleaf weed elimination combined with ongoing prevention to stop weeds from taking hold and stealing nutrients from your grass.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l6 2.67V11c0 3.57-2.29 6.92-6 8.19-3.71-1.27-6-4.62-6-8.19V7.67L12 5z"/></svg>
+        </div>
+        <h3>Grub Control</h3>
+        <p>Protective grub treatments applied at the right time of year to prevent larvae from destroying your lawn's root system before damage becomes visible.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.5 12c0-3.87-3.13-7-7-7S5.5 8.13 5.5 12c0 2.4 1.22 4.51 3.07 5.77L8 20h8l-.57-2.23C17.28 16.51 19.5 14.4 19.5 12zm-10 6l.5-2h4l.5 2H9.5zm2.5-4c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/></svg>
+        </div>
+        <h3>Lawn Disease Treatment</h3>
+        <p>Expert diagnosis and treatment of common Texas lawn diseases including brown patch, dollar spot, and take-all root rot before they spread and cause lasting harm.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+        </div>
+        <h3>Aeration &amp; Overseeding</h3>
+        <p>Core aeration breaks up compaction so water, air, and nutrients reach the roots. Paired with overseeding to fill thin spots and build a denser, healthier turf.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 17.013l4.413-.015 9.632-9.54c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.756-.756-2.075-.752-2.825-.003L7 12.583v4.43zM18.045 4.458l1.589 1.583-1.443 1.425-1.585-1.586 1.439-1.422zM9 13.417l6.03-5.973 1.586 1.586-6.029 5.971L9 15.006v-1.589z"/><path d="M5 21h14c1.103 0 2-.897 2-2v-8.668l-2 2V19H8.158c-.026 0-.053.01-.079.01-.033 0-.066-.009-.1-.01H5V5h6.847l2-2H5C3.897 3 3 3.897 3 5v14c0 1.103.897 2 2 2z"/></svg>
+        </div>
+        <h3>Pre-Emergent Weed Prevention</h3>
+        <p>Timely pre-emergent applications create a protective barrier in the soil, preventing crabgrass, goosegrass, and other annual weeds from germinating in your lawn.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="whyus" id="about">
+  <div class="whyus-inner">
+    <div class="whyus-header">
+      <div class="section-label section-label-dark">Why Weedex</div>
+      <h2>Your Lawn Deserves Better</h2>
+      <p>With over 1,296 five-star reviews and 20 years serving DFW, Weedex has earned a reputation for results that last and service that's always professional.</p>
+    </div>
+    <div class="whyus-grid">
+      <div class="whyus-card">
+        <div class="whyus-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4l6 2.67V11c0 3.57-2.29 6.92-6 8.19-3.71-1.27-6-4.62-6-8.19V7.67L12 5z"/></svg>
+        </div>
+        <div>
+          <h3>Science-Backed Programs</h3>
+          <p>Every Weedex treatment plan is built around what Texas lawns actually need. We apply the right products at the right times — not a one-size-fits-all approach that wastes your money.</p>
+        </div>
+      </div>
+      <div class="whyus-card">
+        <div class="whyus-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+        </div>
+        <div>
+          <h3>Full Transparency</h3>
+          <p>We tell you exactly what we're applying and why before every visit. No mystery chemicals, no vague descriptions — just clear communication and confident expertise.</p>
+        </div>
+      </div>
+      <div class="whyus-card">
+        <div class="whyus-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <div>
+          <h3>Proven Track Record</h3>
+          <p>1,296 five-star reviews don't happen by accident. Weedex has built its reputation over 20 years by delivering visible, lasting results for thousands of DFW homeowners.</p>
+        </div>
+      </div>
+      <div class="whyus-card">
+        <div class="whyus-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        </div>
+        <div>
+          <h3>Reliable &amp; On Schedule</h3>
+          <p>Weedex runs on a structured program calendar so your treatments happen at exactly the right time of year. You don't have to remember — we handle the timing for you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="how-inner">
+    <div class="how-header">
+      <div class="section-label section-label-dark">Getting Started</div>
+      <h2>A Better Lawn Starts Here</h2>
+      <p>Signing up for Weedex is simple. We do the hard work — you enjoy the results every time you walk outside.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <h3>Free Lawn Evaluation</h3>
+        <p>Call or request a quote online. A Weedex specialist will assess your lawn's current condition, identify problem areas, and recommend the right program for your property.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <h3>Custom Treatment Plan</h3>
+        <p>We build a personalized annual program around your lawn's specific needs, grass type, and soil conditions — with a schedule that hits every treatment at the optimal time.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <h3>Ongoing Results</h3>
+        <p>Weedex handles every application on schedule and follows up on any concerns. Most customers see dramatic improvement within one growing season — and neighbors start asking questions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="reviews-header">
+      <div class="section-label section-label-light">What Customers Say</div>
+      <h2>1,296 Reasons to Trust Weedex</h2>
+      <p>From Lewisville to Flower Mound to Coppell, homeowners across DFW trust Weedex to deliver lawns they're proud of.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span>
+        </div>
+        <p class="review-text">My lawn went from weed-covered and patchy to lush, thick green in just one growing season with their fertilization program. My neighbors keep asking what I did — I just tell them to call Weedex. Absolutely remarkable transformation.</p>
+        <div class="review-author">
+          <div class="review-avatar">NJ</div>
+          <div>
+            <div class="review-name">Nancy Johansson</div>
+            <div class="review-loc">Lewisville, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span>
+        </div>
+        <p class="review-text">I tried other lawn services for years and nothing really worked. Weedex is the only company that actually explains what they're applying and why before each visit. No more mystery treatments — and no more weeds. Finally found the right team.</p>
+        <div class="review-author">
+          <div class="review-avatar">PW</div>
+          <div>
+            <div class="review-name">Paul Westbrook</div>
+            <div class="review-loc">Flower Mound, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span>
+        </div>
+        <p class="review-text">Signed up for the annual program 3 years ago and the lawn is the best on the street now. The tech is always friendly, professional, and on time. It's become one of those things I just don't think about anymore — because Weedex handles it.</p>
+        <div class="review-author">
+          <div class="review-avatar">SI</div>
+          <div>
+            <div class="review-name">Sandra Ibarra</div>
+            <div class="review-loc">Coppell, TX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas" id="areas">
+  <div class="areas-inner">
+    <div class="areas-left">
+      <div class="section-label section-label-dark">Coverage</div>
+      <h2>Serving Lewisville &amp; All of North DFW</h2>
+      <p>Weedex serves Lewisville and the surrounding communities throughout northern Dallas-Fort Worth. If you're in the area, our teams are nearby and ready to transform your lawn.</p>
+      <a href="tel:9724269348" class="areas-cta">Call to Check Your Area</a>
+    </div>
+    <div class="areas-chip-card">
+      <div class="areas-chip-card-title">Service Locations</div>
+      <div class="area-chips">
+        <span class="area-chip">Lewisville</span>
+        <span class="area-chip">Flower Mound</span>
+        <span class="area-chip">Coppell</span>
+        <span class="area-chip">Carrollton</span>
+        <span class="area-chip">The Colony</span>
+        <span class="area-chip">Little Elm</span>
+        <span class="area-chip">Denton</span>
+        <span class="area-chip">Frisco</span>
+        <span class="area-chip">Plano</span>
+        <span class="area-chip">Highland Village</span>
+        <span class="area-chip">Grapevine</span>
+        <span class="area-chip">Southlake</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-form-wrap">
+      <div class="section-label section-label-light">Get Started</div>
+      <h2>Request a Free Lawn Evaluation</h2>
+      <p>Tell us about your lawn and a Weedex specialist will reach out to schedule your free evaluation — no commitment required.</p>
+      <form class="contact-form" onsubmit="return false;">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Nancy">
+          </div>
+          <div class="form-field">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Johansson">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="(972) 555-0100">
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="nancy@email.com">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="service">Service Interested In</label>
+          <select id="service">
+            <option value="">Select a service...</option>
+            <option>Lawn Fertilization Program</option>
+            <option>Weed Control &amp; Prevention</option>
+            <option>Grub Control</option>
+            <option>Lawn Disease Treatment</option>
+            <option>Aeration &amp; Overseeding</option>
+            <option>Pre-Emergent Weed Prevention</option>
+            <option>Full Annual Program</option>
+            <option>Not Sure — Need Evaluation</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">Tell Us About Your Lawn</label>
+          <textarea id="message" placeholder="Describe your lawn's current condition, main problems (weeds, thinning, bare spots), approximate square footage, and anything else helpful..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Request Free Evaluation</button>
+      </form>
+    </div>
+    <div class="contact-info">
+      <h3>Contact Info</h3>
+      <div class="info-item">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Phone</div>
+          <div class="info-value"><a href="tel:9724269348">(972) 426-9348</a></div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Location</div>
+          <div class="info-value">Lewisville, TX</div>
+        </div>
+      </div>
+      <div class="info-item">
+        <div class="info-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        </div>
+        <div>
+          <div class="info-label">Hours</div>
+          <div class="info-value">Mon–Fri: 7am–6pm<br>Sat: 8am–4pm</div>
+        </div>
+      </div>
+      <div class="info-divider"></div>
+      <div class="badge-ssl-note">This site is a marketing mockup. Secure your website with an SSL certificate to protect customer form data and improve your Google search ranking.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <h2>Ready for a Lawn You're Proud Of?</h2>
+    <p>Join thousands of DFW homeowners who trust Weedex for a healthier, greener, weed-free lawn — season after season.</p>
+    <div class="cta-band-btns">
+      <a href="tel:9724269348" class="btn-dark">Call (972) 426-9348</a>
+      <a href="#contact" class="btn-white">Get Free Evaluation</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Weedex <span>Lawn Care</span></a>
+        <p>Lewisville's premier lawn care experts. 20+ years transforming DFW lawns with science-backed fertilization and weed control programs.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Lawn Fertilization</a></li>
+          <li><a href="#services">Weed Control</a></li>
+          <li><a href="#services">Grub Control</a></li>
+          <li><a href="#services">Lawn Disease Treatment</a></li>
+          <li><a href="#services">Aeration &amp; Overseeding</a></li>
+          <li><a href="#services">Pre-Emergent Prevention</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul class="footer-links">
+          <li><a href="#areas">Lewisville</a></li>
+          <li><a href="#areas">Flower Mound</a></li>
+          <li><a href="#areas">Coppell</a></li>
+          <li><a href="#areas">Carrollton</a></li>
+          <li><a href="#areas">Frisco</a></li>
+          <li><a href="#areas">Plano</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:9724269348">(972) 426-9348</a></li>
+          <li><a href="#contact">Free Lawn Evaluation</a></li>
+          <li><a href="#reviews">Read Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Weedex Lawn Care. All rights reserved.</div>
+      <div class="footer-note">Lewisville, TX | Licensed &amp; Insured</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Header scroll shadow
+(function(){
+  var nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', function(){
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  }, {passive: true});
+})();
+
+// Stat counter
+(function(){
+  var stats = document.querySelectorAll('.stat-num[data-target]');
+  var observed = new Set();
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && !observed.has(e.target)){
+        observed.add(e.target);
+        var el = e.target;
+        var target = parseInt(el.getAttribute('data-target'), 10);
+        var isDecimal = el.getAttribute('data-decimal') === '1';
+        var duration = 1800;
+        var start = performance.now();
+        function tick(now){
+          var p = Math.min((now - start) / duration, 1);
+          var ease = 1 - Math.pow(1 - p, 3);
+          var val = Math.round(target * ease);
+          if(isDecimal){ el.textContent = (val / 10).toFixed(1); }
+          else { el.textContent = val.toLocaleString(); }
+          if(p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }
+    });
+  }, {threshold: 0.4});
+  stats.forEach(function(s){ io.observe(s); });
+})();
+
+// Card fadeUp IntersectionObserver
+(function(){
+  var cards = document.querySelectorAll('.service-card, .whyus-card, .how-step, .review-card');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, {threshold: 0.12});
+  cards.forEach(function(c){ io.observe(c); });
+})();
+</script>
+</body>
+</html>

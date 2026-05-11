@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BugWipe Pest Control | Richardson, TX — 5-Star Local Experts</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #1b5e20;
+  --primary-dark: #0d3312;
+  --accent: #e85d04;
+  --accent-dark: #c44e03;
+  --bg: #ffffff;
+  --bg-off: #f4faf4;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.78);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #0f1f10;
+  --grey-text: #5a7060;
+  --border: #d1e8d3;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(27,94,32,0.1);
+  --shadow-lg: 0 8px 40px rgba(27,94,32,0.2);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(232,93,4,0.4); transition: all 0.15s ease; text-decoration: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232,93,4,0.5); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 600;
+  padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.15s ease; text-decoration: none;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; } }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--primary); box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; height: 68px;
+}
+.brand-name { font-family: var(--font-display); font-weight: 900; font-size: 21px; color: white; }
+.brand-tagline { font-family: var(--font-body); font-size: 12px; color: var(--t2); margin-top: 1px; }
+.header-cta { display: flex; align-items: center; gap: 20px; }
+.header-phone { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--t2); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+.header-phone:hover { color: white; }
+
+.hero {
+  background: linear-gradient(140deg, var(--primary-dark) 0%, var(--primary) 60%, #2a7a2f 100%);
+  padding: 90px 0 80px; position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-grid {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: center;
+}
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 20px; margin-bottom: 20px;
+  animation: heroFadeUp 0.5s ease-out 0.1s both;
+}
+.hero-headline {
+  font-family: var(--font-display); font-size: clamp(42px, 6vw, 64px);
+  font-weight: 900; color: white; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 20px;
+  animation: heroFadeUp 0.5s ease-out 0.2s both;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-family: var(--font-body); font-size: 18px; color: var(--t2);
+  line-height: 1.65; margin-bottom: 32px; max-width: 520px;
+  animation: heroFadeUp 0.5s ease-out 0.35s both;
+}
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.trust-item { display: flex; align-items: center; gap: 6px; font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+
+.hero-card {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3); backdrop-filter: blur(12px);
+  border-radius: 16px; padding: 28px 32px; animation: heroFadeUp 0.5s ease-out 0.4s both;
+}
+.hero-card-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px; }
+.value-prop { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; }
+.value-prop:last-of-type { margin-bottom: 24px; }
+.vp-icon { width: 32px; height: 32px; border-radius: 50%; background: rgba(232,93,4,0.18); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); }
+.vp-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: white; line-height: 1.2; }
+.vp-desc { font-family: var(--font-body); font-size: 13px; color: var(--t2); line-height: 1.5; }
+.card-phone { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 20px; }
+.card-phone-label { font-family: var(--font-body); font-size: 12px; color: var(--t3); margin-bottom: 4px; }
+.card-phone-number { font-family: var(--font-display); font-size: 22px; font-weight: 900; color: white; text-decoration: none; }
+.card-phone-number:hover { color: var(--accent); }
+
+.stats-bar { background: var(--primary); }
+.stats-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 700px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+.stat-box { padding: 36px 24px; border-right: 1px solid rgba(255,255,255,0.1); text-align: center; }
+.stat-box:last-child { border-right: none; }
+.stat-number { font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px); font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 6px; }
+.stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+
+.services-section { background: var(--bg); }
+.section-label { font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; display: block; }
+.section-title { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--dark-text); margin-bottom: 12px; letter-spacing: -0.02em; }
+.section-sub { font-family: var(--font-body); font-size: 16px; color: var(--grey-text); margin-bottom: 48px; max-width: 560px; }
+.service-card {
+  background: var(--bg); border: 1px solid var(--border); border-top: 3px solid transparent;
+  border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow); transition: all 0.25s ease;
+}
+.service-card:hover { border-top-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.svc-icon { width: 52px; height: 52px; border-radius: 50%; background: rgba(232,93,4,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; color: var(--accent); }
+.svc-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--dark-text); margin-bottom: 10px; }
+.svc-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 16px; }
+.svc-link { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+
+.why-section { background: var(--primary); position: relative; overflow: hidden; }
+.why-section::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.why-section > .container { position: relative; z-index: 1; }
+.why-diff-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 40px; }
+@media (max-width: 600px) { .why-diff-grid { grid-template-columns: 1fr; } }
+.diff-item { display: flex; align-items: flex-start; gap: 16px; }
+.diff-icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(232,93,4,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); }
+.diff-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; margin-bottom: 6px; }
+.diff-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.65; }
+
+.how-section { background: var(--primary-dark); }
+.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 48px; position: relative; }
+@media (max-width: 700px) { .steps-grid { grid-template-columns: 1fr; } }
+.steps-grid::before { content: ''; position: absolute; top: 36px; left: 16.67%; right: 16.67%; height: 1px; border-top: 2px dashed rgba(255,255,255,0.15); }
+@media (max-width: 700px) { .steps-grid::before { display: none; } }
+.step { text-align: center; padding: 0 8px; }
+.step-num { width: 60px; height: 60px; border-radius: 50%; background: var(--accent); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 26px; font-weight: 900; color: white; }
+.step-icon { margin-bottom: 16px; color: white; display: flex; justify-content: center; }
+.step-title { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: white; margin-bottom: 10px; }
+.step-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.65; }
+
+.reviews-section { background: var(--bg-off); }
+.reviews-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
+.google-badge { display: flex; align-items: center; gap: 10px; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; }
+.google-rating { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--dark-text); }
+.google-badge-text { font-family: var(--font-body); font-size: 13px; color: var(--grey-text); }
+.review-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: 0 2px 16px rgba(27,94,32,0.06); transition: all 0.25s ease; }
+.review-card:hover { box-shadow: 0 8px 32px rgba(27,94,32,0.12); transform: translateY(-3px); }
+.review-quote { color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block; }
+.review-text { font-family: var(--font-body); font-style: italic; font-size: 15px; line-height: 1.7; color: var(--dark-text); margin-bottom: 16px; }
+.review-divider { height: 1px; background: var(--border); margin: 16px 0; }
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar { width: 40px; height: 40px; border-radius: 50%; background: rgba(232,93,4,0.15); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--accent-dark); flex-shrink: 0; }
+.reviewer-name { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--dark-text); }
+.reviewer-meta { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); }
+.stars { display: flex; gap: 2px; color: #f59e0b; margin-bottom: 2px; }
+
+.areas-section { background: var(--primary); }
+.areas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; align-items: center; }
+@media (max-width: 700px) { .areas-grid { grid-template-columns: 1fr; gap: 40px; } }
+.areas-chips { background: var(--primary-dark); border-radius: var(--radius); padding: 28px; display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { font-family: var(--font-body); font-size: 14px; font-weight: 600; padding: 7px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); color: var(--t2); cursor: default; transition: all 0.2s ease; }
+.chip:hover { background: var(--accent); border-color: var(--accent); color: white; }
+
+.contact-section { background: var(--bg); }
+.contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; align-items: start; }
+@media (max-width: 700px) { .contact-grid { grid-template-columns: 1fr; } }
+.form-group { margin-bottom: 20px; }
+.form-label { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; display: block; }
+input, select, textarea { width: 100%; background: var(--bg-off); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; font-family: var(--font-body); font-size: 14px; color: var(--dark-text); transition: border-color 0.2s; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(232,93,4,0.1); }
+.contact-info-card { background: var(--primary); border-radius: var(--radius); padding: 32px; color: white; }
+.info-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 24px; }
+.info-icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(232,93,4,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); }
+.info-label { font-family: var(--font-body); font-size: 12px; color: var(--t3); margin-bottom: 4px; }
+.info-value { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; }
+
+.cta-band { background: linear-gradient(135deg, var(--accent-dark), var(--accent)); padding: 80px 0; text-align: center; position: relative; overflow: hidden; }
+.cta-band::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.15; pointer-events: none; z-index: 0;
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-headline { font-family: var(--font-display); font-size: clamp(28px, 4vw, 44px); font-weight: 900; color: white; margin-bottom: 12px; letter-spacing: -0.02em; }
+.cta-sub { font-family: var(--font-body); font-size: 16px; color: rgba(255,255,255,0.9); margin-bottom: 32px; }
+.cta-btn { display: inline-flex; align-items: center; gap: 10px; background: white; color: var(--accent-dark); font-family: var(--font-display); font-size: 16px; font-weight: 700; padding: 16px 36px; border-radius: 8px; text-decoration: none; box-shadow: 0 6px 24px rgba(0,0,0,0.2); transition: all 0.15s ease; }
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(0,0,0,0.25); }
+
+footer { background: var(--primary-dark); padding: 60px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 48px; margin-bottom: 48px; }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+.footer-brand-name { font-family: var(--font-display); font-size: 21px; font-weight: 900; color: white; margin-bottom: 12px; }
+.footer-desc { font-family: var(--font-body); font-size: 14px; color: var(--t3); line-height: 1.7; margin-bottom: 20px; }
+.footer-col-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--accent); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { font-family: var(--font-body); font-size: 14px; color: var(--t2); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; }
+.footer-bottom-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.copyright { font-family: var(--font-body); font-size: 13px; color: var(--t3); }
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="header-inner">
+    <div>
+      <div class="brand-name">BugWipe Pest Control</div>
+      <div class="brand-tagline">Richardson, TX — 5.0 Stars · No-Nonsense Pest Elimination</div>
+    </div>
+    <div class="header-cta">
+      <a href="tel:4694578186" class="header-phone">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (469) 457-8186
+      </a>
+      <a href="tel:4694578186" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Now — Free Quote
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Richardson's Highest-Rated Pest Control
+      </div>
+      <h1 class="hero-headline">Richardson's <span>Bug-Free</span> Guarantee</h1>
+      <p class="hero-sub">When bugs show up in your Richardson home, BugWipe ends it — roaches, rodents, termites, and more. Click-to-call goes straight to a local tech, not a call center. Real people, same-day service.</p>
+      <div class="hero-ctas">
+        <a href="tel:4694578186" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (469) 457-8186 — Tap to Call
+        </a>
+        <a href="#contact" class="btn-ghost">Get Free Estimate</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>5.0 Stars · 10 Reviews</span>
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Pet-Safe Treatments
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Licensed &amp; Insured
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <div class="hero-card-title">The BugWipe Difference</div>
+        <div class="value-prop">
+          <div class="vp-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><div class="vp-title">Same-Day Service Available</div><div class="vp-desc">Bugs don't wait for Tuesday. We often have same-day slots for Richardson homeowners</div></div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><div class="vp-title">Satisfaction Guaranteed</div><div class="vp-desc">If pests return between scheduled treatments, we come back at no extra charge</div></div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><div class="vp-title">Pet &amp; Kid Safe Products</div><div class="vp-desc">EPA-registered treatments that target pests without harming your family or pets</div></div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><div class="vp-title">Upfront, Flat Pricing</div><div class="vp-desc">No hidden fees. We quote the full price before any work begins — always</div></div>
+        </div>
+        <div class="card-phone">
+          <div class="card-phone-label">Call for same-day availability</div>
+          <a href="tel:4694578186" class="card-phone-number">(469) 457-8186</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-box"><div class="stat-number" data-target="5" data-suffix=".0">0.0</div><div class="stat-label">Google Star Rating</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="100" data-suffix="%">0%</div><div class="stat-label">Satisfaction Guarantee</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="14" data-suffix=" Pests">0 Pests</div><div class="stat-label">We Eliminate</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="24" data-suffix="hr">0hr</div><div class="stat-label">Typical Response Time</div></div>
+  </div>
+</div>
+
+<section class="services-section">
+  <div class="container">
+    <span class="section-label">What We Eliminate</span>
+    <h2 class="section-title">No Pest Survives the Wipe</h2>
+    <p class="section-sub">Every treatment is targeted to the specific pest you're dealing with — we don't spray and pray. Precision treatments, proven results.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="svc-name">Roach Control</div>
+        <p class="svc-desc">German roaches multiply fast and hide everywhere. Our gel bait and exclusion method breaks the cycle in one treatment — not a multi-month "plan."</p>
+        <a href="#contact" class="svc-link">Get Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="svc-name">Rodent Exclusion</div>
+        <p class="svc-desc">Mice and rats aren't just gross — they chew wiring and spread disease. We trap, remove, and seal entry points so they can't come back. Ever.</p>
+        <a href="#contact" class="svc-link">Get Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="svc-name">Termite Treatment</div>
+        <p class="svc-desc">Subterranean termites are Richardson's biggest structural threat. We use liquid barrier and bait systems that protect your home for years — not months.</p>
+        <a href="#contact" class="svc-link">Get Inspection &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+        <div class="svc-name">Mosquito Control</div>
+        <p class="svc-desc">Take back your Richardson backyard. Our monthly spray program eliminates adult mosquitoes and treats breeding sites so your evenings outside are actually enjoyable.</p>
+        <a href="#contact" class="svc-link">Get Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div class="svc-name">Bed Bug Elimination</div>
+        <p class="svc-desc">Bed bugs survive DIY sprays — they need targeted heat or chemical treatment. We identify the infestation scope and eliminate it completely, room by room.</p>
+        <a href="#contact" class="svc-link">Get Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="svc-name">General Pest Program</div>
+        <p class="svc-desc">Ants, spiders, silverfish, wasps — our quarterly maintenance plan keeps them out year-round. One affordable plan, all the covered pests, zero surprises.</p>
+        <a href="#contact" class="svc-link">See Plans &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent)">Why BugWipe</span>
+    <h2 class="section-title" style="color:white">Richardson's Pest Control Without the Runaround</h2>
+    <p class="section-sub" style="color:var(--t2)">Big national chains send a different tech every time and push annual contracts. We send the same local expert and stand behind our work with a real guarantee.</p>
+    <div class="why-diff-grid">
+      <div class="diff-item card">
+        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="diff-title">You Talk to the Tech, Not a Dispatcher</div><div class="diff-desc">When you call (469) 457-8186, you reach the person who will actually show up. No phone trees, no scheduling centers in another state.</div></div>
+      </div>
+      <div class="diff-item card">
+        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><div class="diff-title">Pest-Specific, Not One-Size Sprays</div><div class="diff-desc">German roaches need gel bait. Subterranean termites need barrier treatment. We match the method to the pest, not the other way around.</div></div>
+      </div>
+      <div class="diff-item card">
+        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div><div class="diff-title">Free Retreatment Between Visits</div><div class="diff-desc">If something comes back between your scheduled services, we return and retreat at zero cost. No arguments, no fine print.</div></div>
+      </div>
+      <div class="diff-item card">
+        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div><div class="diff-title">Same-Day for Active Infestations</div><div class="diff-desc">Finding roaches in your kitchen is an emergency. We prioritize same-day and next-day service for active infestation calls.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent)">Our Process</span>
+    <h2 class="section-title" style="color:white">Bug-Free in 3 Steps</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="step-title">Call for a Free Quote</div>
+        <p class="step-desc">Tell us what you're seeing. We'll ask a few questions to understand the pest and scope, then give you a flat upfront price — no inspection fee, no games.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="step-title">Targeted Treatment</div>
+        <p class="step-desc">Your tech arrives on time, inspects the problem areas, and applies the right treatment for your specific pest. Pet and kid safe. No strong chemical smell.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="step-title">Guaranteed Results</div>
+        <p class="step-desc">If bugs return between scheduled visits, call us. We'll be back within 48 hours at no cost. That's the BugWipe guarantee — your home stays bug-free, period.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-header">
+      <div><span class="section-label">What Richardson Residents Say</span><h2 class="section-title">5.0 Stars — Every Google Review</h2></div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div><div class="google-rating">5.0 Stars</div><div class="google-badge-text">Google Reviews</div></div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg class="review-quote" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Found roaches in my Richardson kitchen cabinet on a Wednesday evening and panicked. Called BugWipe right then — they answered, gave me a price over the phone, and had a tech at my house by Thursday noon. Used gel bait in the cabinets and perimeter spray outside. Haven't seen a single roach in 8 weeks. No weird chemical smell either."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">DK</div>
+          <div>
+            <div class="stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="reviewer-name">Diana K.</div>
+            <div class="reviewer-meta">Richardson, TX &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg class="review-quote" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Had a quarterly maintenance plan with a big national company for two years — kept seeing ants every summer anyway. Switched to BugWipe and the difference was immediate. They found where the ants were entering (gap under the back door frame), sealed it, and treated. Zero ants all summer. Worth every penny compared to what I was paying before."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">PG</div>
+          <div>
+            <div class="stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="reviewer-name">Phil G.</div>
+            <div class="reviewer-meta">Richardson, TX &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg class="review-quote" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Mice in the attic. Called three companies — two wanted to charge $150 just for the inspection. BugWipe quoted me over the phone for free, came out next day, found two entry points in the roofline that I never would have spotted, sealed them, set traps. Followed up two weeks later. Problem completely resolved. Fair price, no drama."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">AL</div>
+          <div>
+            <div class="stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="reviewer-name">Anna L.</div>
+            <div class="reviewer-meta">Richardson, TX &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas-section">
+  <div class="container">
+    <div class="areas-grid">
+      <div>
+        <span class="section-label" style="color:var(--accent)">Where We Work</span>
+        <h2 class="section-title" style="color:white">Richardson &amp; All of North Dallas</h2>
+        <p style="font-family:var(--font-body);font-size:16px;color:var(--t2);line-height:1.7;margin-bottom:28px;">Based in Richardson, serving Plano, Garland, Allen, and the surrounding communities. Same-day availability for Richardson customers.</p>
+        <a href="tel:4694578186" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Check Same-Day Availability
+        </a>
+      </div>
+      <div class="areas-chips">
+        <span class="chip">Richardson</span>
+        <span class="chip">Plano</span>
+        <span class="chip">Allen</span>
+        <span class="chip">Garland</span>
+        <span class="chip">McKinney</span>
+        <span class="chip">Murphy</span>
+        <span class="chip">Sachse</span>
+        <span class="chip">Wylie</span>
+        <span class="chip">Dallas</span>
+        <span class="chip">Addison</span>
+        <span class="chip">Frisco</span>
+        <span class="chip">Mesquite</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <span class="section-label">Get Started Today</span>
+        <h2 class="section-title">Free Pest Control Quote</h2>
+        <p style="font-family:var(--font-body);font-size:16px;color:var(--grey-text);margin-bottom:32px;">Upfront pricing. No inspection fees. We'll respond within 2 hours.</p>
+        <form>
+          <div class="form-group"><label class="form-label">Full Name</label><input type="text" placeholder="Your name"></div>
+          <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" placeholder="(469) 000-0000"></div>
+          <div class="form-group"><label class="form-label">Email</label><input type="email" placeholder="your@email.com"></div>
+          <div class="form-group"><label class="form-label">Pest Problem</label>
+            <select><option>Roaches</option><option>Rodents / Mice</option><option>Termites</option><option>Mosquitoes</option><option>Bed Bugs</option><option>Ants</option><option>Spiders</option><option>Other / Not Sure</option></select>
+          </div>
+          <div class="form-group"><label class="form-label">Property Address</label><input type="text" placeholder="Richardson, TX address"></div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px;">Get My Free Quote</button>
+        </form>
+      </div>
+      <div class="contact-info-card">
+        <h3 style="font-family:var(--font-display);font-size:22px;font-weight:700;color:white;margin-bottom:28px;">Contact BugWipe</h3>
+        <div class="info-item">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="info-label">Phone — Tap to Call</div><div class="info-value">(469) 457-8186</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="info-label">Service Area</div><div class="info-value">Richardson &amp; North Dallas</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="info-label">Hours</div><div class="info-value">Mon–Sat 7AM–7PM</div></div>
+        </div>
+        <div style="border-top:1px solid rgba(255,255,255,0.12);padding-top:24px;margin-top:8px;">
+          <p style="font-family:var(--font-body);font-size:14px;color:var(--t2);line-height:1.7;"><strong style="color:white;font-family:var(--font-display);">Licensed &amp; Insured</strong><br>Texas-licensed pest control operator. Fully insured for residential and commercial properties.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2 class="cta-headline">Done Sharing Your Home With Bugs?</h2>
+    <p class="cta-sub">Call now — same-day available in Richardson. Free quote, no inspection fee.</p>
+    <a href="tel:4694578186" class="cta-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Tap to Call (469) 457-8186
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">BugWipe Pest Control</div>
+        <p class="footer-desc">Richardson, Texas's highest-rated pest control service. 5.0 stars on Google. Pet-safe, family-safe treatments with a real satisfaction guarantee.</p>
+        <a href="tel:4694578186" style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--accent);text-decoration:none;">(469) 457-8186</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Roach Control</a></li>
+          <li><a href="#contact">Rodent Exclusion</a></li>
+          <li><a href="#contact">Termite Treatment</a></li>
+          <li><a href="#contact">Mosquito Control</a></li>
+          <li><a href="#contact">Bed Bug Elimination</a></li>
+          <li><a href="#contact">General Pest Plan</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Richardson, TX</a></li>
+          <li><a href="#contact">Plano, TX</a></li>
+          <li><a href="#contact">Allen, TX</a></li>
+          <li><a href="#contact">Garland, TX</a></li>
+          <li><a href="#contact">McKinney, TX</a></li>
+          <li><a href="#contact">North Dallas, TX</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:4694578186">(469) 457-8186</a></li>
+          <li><a href="#contact">Request a Quote</a></li>
+          <li><a href="#contact">Schedule Service</a></li>
+        </ul>
+        <div style="margin-top:20px;padding:16px;background:rgba(232,93,4,0.12);border-radius:8px;border:1px solid rgba(232,93,4,0.25);">
+          <div style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--accent);margin-bottom:4px;">5.0 Stars — Verified</div>
+          <div style="font-family:var(--font-body);font-size:12px;color:var(--t3);">Texas Licensed &middot; Fully Insured &middot; Pet Safe</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <span class="copyright">&copy; 2026 BugWipe Pest Control Richardson. All rights reserved.</span>
+        <span class="copyright">Licensed &amp; Insured &middot; Richardson, TX 75080</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800, start = performance.now();
+        const update = (time) => {
+          const p = Math.min((time - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+          if (p < 1) requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+        e.target._obs?.disconnect();
+      }
+    });
+  }, { threshold: 0.5 }).observe(el);
+});
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.2 });
+document.querySelectorAll('.card').forEach(c => cardObs.observe(c));
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header').style.boxShadow = window.scrollY > 50 ? '0 4px 24px rgba(0,0,0,0.5)' : '0 2px 12px rgba(0,0,0,0.3)';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flower Mound Expert Pest Control — Flower Mound, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#1e293b;
+  --primary-dark:#0f172a;
+  --primary-mid:#263349;
+  --accent:#0ea5e9;
+  --accent-dark:#0284c7;
+  --accent-light:#38bdf8;
+  --dark:#0d1825;
+  --dark-2:#141f2e;
+  --light:#f0f7ff;
+  --light-2:#ffffff;
+  --text:#1e293b;
+  --text-muted:#64748b;
+  --border:rgba(14,165,233,0.15);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--dark);line-height:1.6}
+
+h1,h2,h3,h4{font-family:'Poppins',sans-serif;line-height:1.2}
+.section-label{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;opacity:.75}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;border-radius:8px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.95rem;text-decoration:none;cursor:pointer;transition:all .22s ease;border:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(14,165,233,.35)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff;transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--primary)}
+.btn-white:hover{background:var(--light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge   {animation:heroFadeUp .5s ease-out .1s both}
+.hero-headline{animation:heroFadeUp .5s ease-out .2s both}
+.hero-sub     {animation:heroFadeUp .5s ease-out .35s both}
+.hero-phone   {animation:heroFadeUp .5s ease-out .45s both}
+.hero-ctas    {animation:heroFadeUp .5s ease-out .55s both}
+.hero-trust   {animation:heroFadeUp .5s ease-out .7s both}
+.hero-card    {animation:heroFadeUp .5s ease-out .4s both}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:.9rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;background:rgba(13,24,37,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(14,165,233,.15)}
+.nav-logo{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.15rem;color:#fff;text-decoration:none;display:flex;align-items:center;gap:.6rem;flex-shrink:0}
+.nav-logo-mark{background:var(--accent);width:32px;height:32px;border-radius:7px;display:flex;align-items:center;justify-content:center}
+.nav-logo-mark svg{width:16px;height:16px;fill:#fff}
+.nav-phone-pill{display:flex;align-items:center;gap:.6rem;background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.3);color:var(--accent-light);padding:.5rem 1.2rem;border-radius:50px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .2s}
+.nav-phone-pill:hover{background:rgba(14,165,233,.2);color:#fff}
+.nav-phone-pill svg{width:15px;height:15px;fill:currentColor}
+.nav-cta{background:var(--accent);color:#fff;padding:.5rem 1.3rem;border-radius:7px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.85rem;text-decoration:none;transition:all .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--accent-dark)}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 420px;align-items:center;gap:3rem;padding:7rem 5% 4rem;background:linear-gradient(135deg,var(--dark) 0%,var(--dark-2) 50%,#0a1929 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none}
+.hero::after{content:'';position:absolute;top:-100px;right:300px;width:500px;height:500px;background:radial-gradient(circle,rgba(14,165,233,.1) 0%,transparent 70%);pointer-events:none}
+.hero-content{position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:.45rem;background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.35);color:var(--accent-light);padding:.4rem 1rem;border-radius:50px;font-size:.78rem;font-weight:700;letter-spacing:.05em;margin-bottom:1.4rem}
+.hero-badge svg{width:13px;height:13px;fill:currentColor}
+.hero-headline{font-size:clamp(2.3rem,4.2vw,3.5rem);font-weight:900;color:#fff;margin-bottom:1.1rem;letter-spacing:-.02em}
+.hero-headline em{color:var(--accent-light);font-style:normal}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.7);max-width:500px;margin-bottom:1.5rem;line-height:1.75}
+
+/* PHONE CTA — prominent due to no_click_to_call flaw */
+.hero-phone{margin-bottom:1.5rem}
+.phone-cta-box{display:inline-flex;align-items:center;gap:1rem;background:rgba(255,255,255,.06);border:2px solid rgba(14,165,233,.4);border-radius:12px;padding:1rem 1.5rem}
+.phone-icon-wrap{width:44px;height:44px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.phone-icon-wrap svg{width:22px;height:22px;fill:#fff}
+.phone-cta-text{}
+.phone-cta-label{font-size:.72rem;font-weight:700;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.15rem}
+.phone-cta-number{font-family:'Poppins',sans-serif;font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:.02em}
+.phone-cta-number a{color:inherit;text-decoration:none}
+.phone-cta-number a:hover{color:var(--accent-light)}
+
+.hero-ctas{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:2rem}
+.hero-trust{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.ht-stars{display:flex;gap:2px}
+.ht-stars svg{width:17px;height:17px;fill:#fbbf24}
+.ht-text{font-size:.85rem;color:rgba(255,255,255,.65)}
+.ht-div{width:1px;height:22px;background:rgba(255,255,255,.18)}
+
+/* HERO CARD */
+.hero-visual{position:relative;z-index:2}
+.hero-card{background:rgba(255,255,255,.06);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1.75rem;color:#fff}
+.hc-top{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding-bottom:1.25rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.hc-icon{width:42px;height:42px;background:var(--accent);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hc-icon svg{width:20px;height:20px;fill:#fff}
+.hc-title{font-family:'Poppins',sans-serif;font-weight:700;font-size:1rem}
+.hc-sub{font-size:.78rem;opacity:.6;margin-top:.1rem}
+.checklist{display:flex;flex-direction:column;gap:.65rem;margin-bottom:1.5rem}
+.check-item{display:flex;align-items:flex-start;gap:.65rem}
+.check-icon{width:20px;height:20px;background:rgba(14,165,233,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.15rem}
+.check-icon svg{width:11px;height:11px;fill:var(--accent-light)}
+.check-text{font-size:.88rem;color:rgba(255,255,255,.8);line-height:1.5}
+.check-text strong{color:#fff;font-weight:600}
+.hc-bottom{padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.1);text-align:center}
+.hc-cta{display:block;background:var(--accent);color:#fff;text-decoration:none;padding:.8rem 1.5rem;border-radius:8px;font-family:'Poppins',sans-serif;font-weight:700;font-size:.9rem;transition:all .2s}
+.hc-cta:hover{background:var(--accent-dark)}
+
+/* TRUST STRIP */
+.trust-strip{background:#fff;padding:2.8rem 5%}
+.trust-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;align-items:center}
+.trust-item{display:flex;align-items:center;gap:.85rem}
+.trust-item-icon{width:46px;height:46px;background:var(--light);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-item-icon svg{width:22px;height:22px;fill:var(--accent-dark)}
+.trust-item-lbl{font-size:.72rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em}
+.trust-item-val{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-top:.1rem}
+
+/* SERVICES */
+.services{background:var(--primary-dark);padding:6rem 5%}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:3.5rem}
+.section-header .section-label{display:block;margin-bottom:.75rem;color:var(--accent-light)}
+.section-header h2{font-size:clamp(1.9rem,3.2vw,2.7rem);font-weight:800;color:#fff;margin-bottom:1rem}
+.section-header p{color:rgba(255,255,255,.6);max-width:540px;margin:0 auto;font-size:1rem;line-height:1.7}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.svc-card{background:rgba(255,255,255,.04);border:1px solid rgba(14,165,233,.18);border-radius:14px;padding:1.75rem;transition:all .28s;cursor:default}
+.svc-card:hover{background:rgba(14,165,233,.08);border-color:rgba(14,165,233,.45);transform:translateY(-4px)}
+.svc-icon{width:50px;height:50px;background:rgba(14,165,233,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;transition:background .28s}
+.svc-card:hover .svc-icon{background:rgba(14,165,233,.2)}
+.svc-icon svg{width:24px;height:24px;fill:var(--accent)}
+.svc-card h3{font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:.5rem}
+.svc-card p{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.65}
+
+/* WHY US */
+.why{background:var(--light);padding:6rem 5%}
+.why .section-header .section-label{color:var(--accent-dark)}
+.why .section-header h2{color:var(--text)}
+.why .section-header p{color:var(--text-muted)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem}
+.why-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.75rem 1.75rem 2rem;transition:all .28s}
+.why-card:hover{box-shadow:0 12px 36px rgba(14,165,233,.12);transform:translateY(-4px);border-color:rgba(14,165,233,.35)}
+.why-card-icon{width:50px;height:50px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem}
+.why-card-icon svg{width:24px;height:24px;fill:var(--accent-dark)}
+.why-card h3{font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:.6rem}
+.why-card p{font-size:.88rem;color:var(--text-muted);line-height:1.65}
+
+/* PHONE CALLOUT — mid-page phone emphasis for no_click_to_call flaw */
+.phone-callout{background:var(--primary);padding:4rem 5%}
+.phone-callout-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.pcl-left h2{font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:800;color:#fff;margin-bottom:.5rem}
+.pcl-left p{color:rgba(255,255,255,.7);font-size:.95rem}
+.pcl-right{display:flex;flex-direction:column;align-items:center;gap:.5rem}
+.pcl-number{font-family:'Poppins',sans-serif;font-size:2rem;font-weight:900;color:#fff;letter-spacing:.02em}
+.pcl-number a{color:inherit;text-decoration:none}
+.pcl-number a:hover{color:var(--accent-light)}
+.pcl-sub{font-size:.82rem;color:rgba(255,255,255,.6);font-weight:600;text-transform:uppercase;letter-spacing:.1em}
+
+/* STATS */
+.stats{background:var(--accent);padding:4.5rem 5%}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;max-width:1200px;margin:0 auto;text-align:center}
+.stat-item{color:#fff}
+.stat-number{font-family:'Poppins',sans-serif;font-size:3rem;font-weight:900;line-height:1}
+.stat-bar{width:36px;height:3px;background:rgba(255,255,255,.35);margin:.7rem auto;border-radius:2px}
+.stat-label{font-size:.8rem;font-weight:600;opacity:.88;text-transform:uppercase;letter-spacing:.09em}
+
+/* REVIEWS */
+.reviews{background:var(--dark-2)}
+.dark-2{background:var(--dark-2)}
+.reviews{padding:6rem 5%;background:var(--dark-2)}
+.reviews .section-header .section-label{color:var(--accent-light)}
+.reviews .section-header h2{color:#fff}
+.reviews .section-header p{color:rgba(255,255,255,.6)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.review-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.75rem;position:relative;overflow:hidden;transition:all .25s}
+.review-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent-dark),var(--accent-light));transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.review-card:hover::after{transform:scaleX(1)}
+.review-card:hover{background:rgba(255,255,255,.08);transform:translateY(-3px)}
+.review-quote-svg{position:absolute;top:1rem;right:1.25rem}
+.review-quote-svg svg{width:26px;height:26px;fill:rgba(14,165,233,.15)}
+.rv-stars{display:flex;gap:3px;margin-bottom:.9rem}
+.rv-stars svg{width:15px;height:15px;fill:#fbbf24}
+.rv-text{font-size:.9rem;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:1.2rem;font-style:italic}
+.rv-author{display:flex;align-items:center;gap:.7rem}
+.rv-avatar{width:36px;height:36px;border-radius:50%;background:var(--primary-mid);border:2px solid rgba(14,165,233,.3);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:.8rem;color:#fff;flex-shrink:0}
+.rv-name{font-weight:600;color:#fff;font-size:.88rem}
+.rv-loc{font-size:.76rem;color:rgba(255,255,255,.45);margin-top:.1rem}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%);padding:6rem 5%;position:relative;overflow:hidden;text-align:center}
+.cta-band::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none}
+.cta-band::after{content:'';position:absolute;bottom:-60px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(circle,rgba(14,165,233,.12) 0%,transparent 70%);pointer-events:none}
+.cta-inner{max-width:720px;margin:0 auto;position:relative;z-index:2}
+.cta-inner .section-label{color:rgba(255,255,255,.65);display:block;margin-bottom:1rem}
+.cta-inner h2{font-size:clamp(2rem,3.4vw,2.8rem);font-weight:900;color:#fff;margin-bottom:1rem}
+.cta-inner h2 span{color:var(--accent-light)}
+.cta-inner p{color:rgba(255,255,255,.72);font-size:1rem;margin-bottom:2rem;line-height:1.7}
+.cta-phone-big{font-family:'Poppins',sans-serif;font-size:2.2rem;font-weight:900;color:#fff;display:block;margin-bottom:1.5rem;letter-spacing:.02em}
+.cta-phone-big a{color:inherit;text-decoration:none}
+.cta-phone-big a:hover{color:var(--accent-light)}
+.cta-phone-label{font-size:.8rem;font-weight:600;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.12em;display:block;margin-bottom:.5rem}
+.cta-actions{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+
+/* SERVICE AREA */
+.area{background:var(--light);padding:6rem 5%}
+.area .section-header .section-label{color:var(--accent-dark)}
+.area .section-header h2{color:var(--text)}
+.area .section-header p{color:var(--text-muted)}
+.area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;max-width:900px;margin:0 auto}
+.area-chip{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;display:flex;align-items:center;gap:.65rem;transition:all .22s}
+.area-chip:hover{border-color:var(--accent);box-shadow:0 4px 16px rgba(14,165,233,.12);transform:translateY(-2px)}
+.area-chip svg{width:18px;height:18px;fill:var(--accent-dark);flex-shrink:0}
+.area-city{font-weight:600;color:var(--text);font-size:.92rem}
+.area-mi{font-size:.76rem;color:var(--text-muted);margin-top:.1rem}
+
+/* FOOTER */
+footer{background:var(--dark);border-top:1px solid rgba(14,165,233,.12);padding:4rem 5% 2rem}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-brand-logo{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.1rem;color:#fff;text-decoration:none;display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem}
+.footer-brand-logo .nav-logo-mark{width:28px;height:28px;border-radius:6px}
+.footer-brand-logo .nav-logo-mark svg{width:14px;height:14px}
+.footer-desc{font-size:.87rem;color:rgba(255,255,255,.5);line-height:1.7;max-width:300px;margin-bottom:1.25rem}
+.footer-contacts{display:flex;flex-direction:column;gap:.5rem}
+.footer-contacts a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.87rem;display:flex;align-items:center;gap:.5rem;transition:color .2s}
+.footer-contacts a:hover{color:var(--accent-light)}
+.footer-contacts svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
+.footer-col h4{font-family:'Poppins',sans-serif;font-weight:700;color:#fff;font-size:.92rem;margin-bottom:.9rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.87rem;transition:color .2s}
+.footer-links a:hover{color:var(--accent-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:.8rem;color:rgba(255,255,255,.35)}
+.footer-rating{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:rgba(255,255,255,.35)}
+.footer-rating svg{width:14px;height:14px;fill:#fbbf24;opacity:.7}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:8rem}
+  .hero-visual{display:none}
+  .trust-inner{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr 1fr}
+  .area-grid{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .trust-inner{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .area-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .phone-callout-inner{flex-direction:column;text-align:center}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+    </div>
+    Flower Mound Expert
+  </a>
+  <a href="tel:9402414996" class="nav-phone-pill">
+    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    (940) 241-4996
+  </a>
+  <a href="tel:9402414996" class="nav-cta">Free Quote</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+      5.0 Stars · Flower Mound, TX
+    </div>
+    <h1 class="hero-headline">The <em>Expert</em> Team<br>Flower Mound Trusts</h1>
+    <p class="hero-sub">Certified pest control for homes and businesses in Flower Mound, TX. We show up on time, do the job right, and stand behind every treatment we provide.</p>
+
+    <div class="hero-phone">
+      <div class="phone-cta-box">
+        <div class="phone-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </div>
+        <div class="phone-cta-text">
+          <div class="phone-cta-label">Call Now — Free Inspection</div>
+          <div class="phone-cta-number"><a href="tel:9402414996">(940) 241-4996</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="tel:9402414996" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call Now
+      </a>
+      <a href="#services" class="btn btn-outline">See Services</a>
+    </div>
+    <div class="hero-trust">
+      <div class="ht-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+      </div>
+      <span class="ht-text"><strong style="color:#fff">5.0</strong> · 5 Google Reviews</span>
+      <div class="ht-div"></div>
+      <span class="ht-text">Licensed &amp; Insured</span>
+      <div class="ht-div"></div>
+      <span class="ht-text">Same-Week Service</span>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="hc-top">
+        <div class="hc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        </div>
+        <div>
+          <div class="hc-title">Our Approach to Pest Control</div>
+          <div class="hc-sub">How we stay different from the competition</div>
+        </div>
+      </div>
+      <div class="checklist">
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+          <div class="check-text"><strong>Thorough inspections</strong> before every treatment — we identify the source, not just the symptoms</div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+          <div class="check-text"><strong>Family and pet-safe products</strong> applied by licensed technicians who explain every step</div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+          <div class="check-text"><strong>Guaranteed results</strong> — if pests return between visits, we come back at no extra charge</div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+          <div class="check-text"><strong>Transparent flat pricing</strong> — know the full cost upfront, no hidden add-ons at the door</div>
+        </div>
+        <div class="check-item">
+          <div class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
+          <div class="check-text"><strong>Local expertise</strong> — we know Flower Mound's pest pressures by season and neighborhood</div>
+        </div>
+      </div>
+      <div class="hc-bottom">
+        <a href="tel:9402414996" class="hc-cta">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-right:.4rem;vertical-align:middle"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          Call (940) 241-4996
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item reveal">
+      <div class="trust-item-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+      </div>
+      <div>
+        <div class="trust-item-lbl">Google Rating</div>
+        <div class="trust-item-val">5.0 Stars · 5 Reviews</div>
+      </div>
+    </div>
+    <div class="trust-item reveal">
+      <div class="trust-item-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+      </div>
+      <div>
+        <div class="trust-item-lbl">Credentials</div>
+        <div class="trust-item-val">Licensed &amp; Insured</div>
+      </div>
+    </div>
+    <div class="trust-item reveal">
+      <div class="trust-item-icon">
+        <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+      </div>
+      <div>
+        <div class="trust-item-lbl">Availability</div>
+        <div class="trust-item-val">Same-Week Scheduling</div>
+      </div>
+    </div>
+    <div class="trust-item reveal">
+      <div class="trust-item-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.36C18 2.07 15.93 0 13.36 0c-1.31 0-2.48.54-3.36 1.39C9.12.54 7.95 0 6.64 0 4.07 0 2 2.07 2 4.64c0 .48.11.92.18 1.36H0v14h20V6z"/></svg>
+      </div>
+      <div>
+        <div class="trust-item-lbl">Guarantee</div>
+        <div class="trust-item-val">Satisfaction Assured</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">What We Treat</span>
+      <h2>Expert Solutions for Every Pest</h2>
+      <p>From one-time treatments to ongoing protection plans — we handle the full range of pests that Flower Mound homeowners face throughout the year.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5s-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8z"/></svg>
+        </div>
+        <h3>General Pest Control</h3>
+        <p>Ants, roaches, silverfish, earwigs, and seasonal invaders treated with targeted, residual applications that keep your home protected year-round.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 3h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4zM3 10h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4zM3 17h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4z"/></svg>
+        </div>
+        <h3>Rodent Control</h3>
+        <p>Full exclusion work — we find every entry point, seal it, and eliminate the active infestation. No more mice or rats returning through the same old gaps.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2z"/></svg>
+        </div>
+        <h3>Termite Protection</h3>
+        <p>Liquid barrier treatments and bait station monitoring protect your home from subterranean termites — the leading cause of structural damage in North Texas.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93s-3.05 7.44-7 7.93v2.02c5.05-.5 9-4.76 9-9.95S18.05 2.55 13 2.05zM11 2.05C5.95 2.55 2 6.81 2 12s3.95 9.45 9 9.95v-2.02C7.05 19.44 4 16.08 4 12s3.05-7.44 7-7.93V2.05z"/></svg>
+        </div>
+        <h3>Mosquito &amp; Tick Control</h3>
+        <p>Seasonal barrier spray programs that let you enjoy your yard again. Applied to shrubs, trees, and shaded areas where mosquitoes and ticks harbor.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+        </div>
+        <h3>Bed Bug Elimination</h3>
+        <p>Comprehensive heat and chemical treatments targeting every life stage. We don't leave until the infestation is fully eliminated and documented.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <h3>Wasps &amp; Stinging Insects</h3>
+        <p>Safe removal of yellow jackets, hornets, and paper wasps from eaves, attics, and ground nests — without putting your family at risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Why Choose Us</span>
+      <h2>What Makes Us the Expert Choice</h2>
+      <p>Flower Mound homeowners have options. Here's why they keep choosing Flower Mound Expert Pest Control.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        </div>
+        <h3>Licensed Professionals</h3>
+        <p>Every technician is fully licensed by the Texas Department of Agriculture and trained in the latest integrated pest management protocols.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+        </div>
+        <h3>Family-First Safety</h3>
+        <p>We select EPA-registered products with your kids, pets, and the environment in mind. We always walk you through safety prep before we start.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+        </div>
+        <h3>Results Guaranteed</h3>
+        <p>Our satisfaction guarantee means that if pests return between scheduled visits, we come back and re-treat at absolutely no additional cost to you.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+        </div>
+        <h3>Flexible Scheduling</h3>
+        <p>We work around your schedule with early morning, daytime, and Saturday appointments available. Getting started is as easy as one phone call.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
+        </div>
+        <h3>No-Surprise Pricing</h3>
+        <p>We quote the full job before we start. Our technicians are salaried, not commissioned — so you'll never feel pressured into services you don't need.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+        </div>
+        <h3>Locally Focused</h3>
+        <p>We're based right here in Flower Mound. We know the local pest seasons, the housing stock, and the neighborhoods — and we're invested in our community.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHONE CALLOUT (mid-page — no_click_to_call emphasis) -->
+<div class="phone-callout">
+  <div class="phone-callout-inner">
+    <div class="pcl-left">
+      <h2>Ready to Schedule?</h2>
+      <p>One call books your free inspection — same week, no commitment required.</p>
+    </div>
+    <div class="pcl-right">
+      <div class="pcl-number"><a href="tel:9402414996">(940) 241-4996</a></div>
+      <div class="pcl-sub">Mon – Sat · 8am – 6pm</div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="100" data-suffix="%">0%</div>
+      <div class="stat-bar"></div>
+      <div class="stat-label">5-Star Reviews</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="5" data-suffix="">0</div>
+      <div class="stat-bar"></div>
+      <div class="stat-label">Google Reviews</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="6" data-suffix="">0</div>
+      <div class="stat-bar"></div>
+      <div class="stat-label">Pest Types Covered</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="48" data-suffix="hr">0hr</div>
+      <div class="stat-bar"></div>
+      <div class="stat-label">Typical Response</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Customer Reviews</span>
+      <h2>Perfect 5 Stars, Every Time</h2>
+      <p>Every review Flower Mound Expert Pest Control has received is a 5-star rating. Here's what our neighbors are saying.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-quote-svg"><svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></div>
+        <div class="rv-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        </div>
+        <p class="rv-text">"They treated our home for a roach problem that had been going on for months. One treatment and the problem was completely resolved. The technician was professional, thorough, and explained exactly what he was doing."</p>
+        <div class="rv-author">
+          <div class="rv-avatar">SH</div>
+          <div>
+            <div class="rv-name">S. Harrison</div>
+            <div class="rv-loc">Flower Mound, TX · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-quote-svg"><svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></div>
+        <div class="rv-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        </div>
+        <p class="rv-text">"Highly recommend. We had a wasp nest in our attic that two other companies refused to touch. Flower Mound Expert came out the next day, removed it safely, and we haven't seen one since. Five stars without question."</p>
+        <div class="rv-author">
+          <div class="rv-avatar">DL</div>
+          <div>
+            <div class="rv-name">D. Larson</div>
+            <div class="rv-loc">Flower Mound, TX · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-quote-svg"><svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></div>
+        <div class="rv-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        </div>
+        <p class="rv-text">"Great experience from start to finish. Got a same-week appointment, the tech showed up on time, and the mice haven't been back. Best pest company I've used in Flower Mound. Will use them again without hesitation."</p>
+        <div class="rv-author">
+          <div class="rv-avatar">KP</div>
+          <div>
+            <div class="rv-name">K. Pruitt</div>
+            <div class="rv-loc">Flower Mound, TX · Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-inner">
+    <span class="section-label">Let's Get Started</span>
+    <h2>Your <span>Free Inspection</span> Awaits</h2>
+    <p>No commitment. No pressure. Just an expert assessment of your pest situation and a clear plan to solve it. Call or email us today to book.</p>
+    <div class="cta-phone-label">Call us directly:</div>
+    <div class="cta-phone-big"><a href="tel:9402414996">(940) 241-4996</a></div>
+    <div class="cta-actions">
+      <a href="tel:9402414996" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call Now
+      </a>
+      <a href="#services" class="btn btn-white">See Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Service Coverage</span>
+      <h2>Serving Flower Mound &amp; Surrounding Communities</h2>
+      <p>Based in Flower Mound — we serve homeowners and businesses across northwest Dallas-Fort Worth.</p>
+    </div>
+    <div class="area-grid">
+      <div class="area-chip reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div>
+          <div class="area-city">Flower Mound, TX</div>
+          <div class="area-mi">Home Base</div>
+        </div>
+      </div>
+      <div class="area-chip reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div>
+          <div class="area-city">Lewisville, TX</div>
+          <div class="area-mi">~6 miles</div>
+        </div>
+      </div>
+      <div class="area-chip reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div>
+          <div class="area-city">Grapevine, TX</div>
+          <div class="area-mi">~8 miles</div>
+        </div>
+      </div>
+      <div class="area-chip reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div>
+          <div class="area-city">Lantana, TX</div>
+          <div class="area-mi">~5 miles</div>
+        </div>
+      </div>
+      <div class="area-chip reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div>
+          <div class="area-city">Highland Village, TX</div>
+          <div class="area-mi">~4 miles</div>
+        </div>
+      </div>
+      <div class="area-chip reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div>
+          <div class="area-city">Argyle, TX</div>
+          <div class="area-mi">~8 miles</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="#" class="footer-brand-logo">
+          <div class="nav-logo-mark">
+            <svg viewBox="0 0 24 24" fill="#fff" width="14" height="14"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </div>
+          Flower Mound Expert Pest Control
+        </a>
+        <p class="footer-desc">Expert pest control for Flower Mound and northwest DFW. Licensed, insured, and guaranteed to get results — or we come back for free.</p>
+        <div class="footer-contacts">
+          <a href="tel:9402414996">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            (940) 241-4996
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+            2840 Flower Mound Rd, Flower Mound, TX 75022
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">General Pest Control</a></li>
+          <li><a href="#">Rodent Control</a></li>
+          <li><a href="#">Termite Protection</a></li>
+          <li><a href="#">Mosquito &amp; Tick</a></li>
+          <li><a href="#">Bed Bug Treatment</a></li>
+          <li><a href="#">Stinging Insects</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul class="footer-links">
+          <li><a href="#">Flower Mound, TX</a></li>
+          <li><a href="#">Lewisville, TX</a></li>
+          <li><a href="#">Grapevine, TX</a></li>
+          <li><a href="#">Lantana, TX</a></li>
+          <li><a href="#">Highland Village, TX</a></li>
+          <li><a href="#">Argyle, TX</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 Flower Mound Expert Pest Control. All rights reserved.</div>
+      <div class="footer-rating">
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        5.0 Stars · Flower Mound's Trusted Pest Experts
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800, start = performance.now();
+        const update = (time) => {
+          const p = Math.min((time - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+          if (p < 1) requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+      }
+    });
+  }, { threshold: 0.5 }).observe(el);
+});
+
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.boxShadow = window.scrollY > 40 ? '0 4px 24px rgba(0,0,0,.5)' : 'none';
+});
+</script>
+</body>
+</html>

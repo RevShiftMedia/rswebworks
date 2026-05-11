@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preston Pest Service LLC | Mansfield's Most Trusted Pest Control</title>
+<meta name="description" content="Preston Pest Service LLC — 212 five-star reviews in Mansfield, TX. Your neighbors already use us. Call (469) 575-4374 for family pest control done right.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #14532d;
+  --primary-dark: #0a3319;
+  --accent: #d97706;
+  --accent-dark: #92400e;
+  --accent-rgb: 217,119,6;
+  --text: #d8f3e5;
+  --text-muted: #7aab8e;
+  --surface: #1a6636;
+  --surface2: #1d7040;
+  --border: rgba(217,119,6,0.2);
+  --white: #ffffff;
+  --bg-off: #f4faf6;
+  --radius: 12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',sans-serif;background:var(--primary);color:var(--text);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;line-height:1.1}
+a{color:inherit;text-decoration:none}
+
+/* HEADER */
+header{position:sticky;top:0;left:0;right:0;z-index:100;background:var(--primary);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:70px;transition:box-shadow 0.3s}
+header.scrolled{box-shadow:0 2px 24px rgba(10,51,25,0.8)}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:900;color:var(--white);letter-spacing:0.01em}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:0.875rem;font-weight:600;color:var(--text-muted);transition:color 0.2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--accent);color:#fff !important;padding:0.55rem 1.4rem;border-radius:6px;font-weight:700 !important;font-size:0.95rem;transition:background 0.2s,transform 0.15s}
+.nav-cta:hover{background:var(--accent-dark) !important;transform:translateY(-1px)}
+
+/* HERO */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.hero{min-height:100vh;background:linear-gradient(150deg,var(--primary-dark) 0%,var(--primary) 60%,#185c32 100%);display:flex;align-items:center;padding:100px 5% 60px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-size:256px 256px}
+.hero-glow{position:absolute;top:15%;right:5%;width:520px;height:520px;background:radial-gradient(circle,rgba(217,119,6,0.08) 0%,transparent 70%);pointer-events:none;z-index:0}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:60% 40%;gap:3.5rem;align-items:center;max-width:1280px;margin:0 auto;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(217,119,6,0.13);border:1px solid rgba(217,119,6,0.35);color:var(--accent);font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 0.9rem;border-radius:100px;margin-bottom:1.2rem;opacity:0;animation:heroFadeUp 0.6s ease forwards;animation-delay:0.1s}
+.hero-badge svg{width:14px;height:14px;fill:currentColor}
+.hero-title{font-size:clamp(2.8rem,5vw,4.5rem);font-weight:900;color:var(--white);margin-bottom:1.2rem;opacity:0;animation:heroFadeUp 0.6s ease forwards;animation-delay:0.25s}
+.hero-title span{color:var(--accent)}
+.hero-sub{font-size:1.05rem;color:var(--text-muted);max-width:520px;margin-bottom:2rem;line-height:1.7;opacity:0;animation:heroFadeUp 0.6s ease forwards;animation-delay:0.4s}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:heroFadeUp 0.6s ease forwards;animation-delay:0.55s}
+.btn-primary{background:var(--accent);color:#fff;padding:0.9rem 2.1rem;border-radius:8px;font-weight:700;font-size:1rem;transition:background 0.2s,transform 0.15s,box-shadow 0.2s;box-shadow:0 4px 20px rgba(217,119,6,0.35)}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 6px 28px rgba(217,119,6,0.45)}
+.btn-secondary{background:rgba(255,255,255,0.1);color:#fff;padding:0.9rem 2.1rem;border-radius:8px;font-weight:700;font-size:1rem;border:1px solid rgba(255,255,255,0.25);transition:background 0.2s,transform 0.15s}
+.btn-secondary:hover{background:rgba(255,255,255,0.18);transform:translateY(-2px)}
+.hero-trust{display:flex;align-items:center;gap:0.75rem;margin-top:2rem;opacity:0;animation:heroFadeUp 0.6s ease forwards;animation-delay:0.7s}
+.trust-stars{display:flex;gap:3px}
+.trust-stars svg{width:16px;height:16px;fill:var(--accent)}
+.trust-text{font-size:0.85rem;color:var(--text-muted)}
+.trust-text strong{color:var(--white)}
+.hero-card{background:rgba(255,255,255,0.07);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:2rem;opacity:0;animation:heroFadeUp 0.6s ease forwards;animation-delay:0.4s}
+.hero-card-title{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;color:var(--white);margin-bottom:1.25rem}
+.hero-card-item{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:1rem}
+.hero-card-item:last-child{margin-bottom:0}
+.hero-card-icon{width:36px;height:36px;background:rgba(217,119,6,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hero-card-icon svg{width:18px;height:18px;fill:var(--accent)}
+.hero-card-label{font-size:0.8rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.15rem}
+.hero-card-value{font-size:0.95rem;color:var(--text)}
+
+/* STATS */
+.stats{background:var(--primary);padding:60px 5%}
+.stats-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.stat-box{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:2rem 1.5rem;text-align:center}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-size:2.8rem;font-weight:900;color:var(--accent);line-height:1}
+.stat-label{font-size:0.875rem;font-weight:600;color:var(--text-muted);margin-top:0.5rem;text-transform:uppercase;letter-spacing:0.05em}
+
+/* SERVICES — inline-left icon layout */
+.services{background:var(--bg-off);padding:90px 5%}
+.services-inner{max-width:1280px;margin:0 auto}
+.section-label{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-dark);margin-bottom:0.6rem}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#0d2e17;margin-bottom:1rem}
+.section-sub{font-size:1rem;color:#3a5c44;max-width:560px;margin-bottom:3rem;line-height:1.7}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.service-card{background:#fff;border-radius:var(--radius);padding:1.75rem;border-top:3px solid transparent;transition:border-color 0.25s,box-shadow 0.25s,transform 0.25s;box-shadow:0 2px 12px rgba(20,83,45,0.07);display:flex;gap:1.1rem;align-items:flex-start}
+.service-card:hover{border-top-color:var(--accent);box-shadow:0 8px 32px rgba(20,83,45,0.14);transform:translateY(-3px)}
+.service-icon{width:46px;height:46px;background:rgba(20,83,45,0.09);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:0.1rem}
+.service-icon svg{width:24px;height:24px;fill:var(--primary)}
+.service-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.25rem;font-weight:700;color:#0d2e17;margin-bottom:0.4rem}
+.service-card p{font-size:0.875rem;color:#3a5c44;line-height:1.65}
+
+/* WHY US */
+.why{background:var(--primary);padding:90px 5%;position:relative;overflow:hidden}
+.why::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-size:256px 256px}
+.why-inner{max-width:1280px;margin:0 auto;position:relative;z-index:1}
+.why-header{text-align:center;margin-bottom:3rem}
+.why-header .section-label{color:var(--accent)}
+.why-header .section-title{color:var(--white)}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.why-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:2rem;display:flex;gap:1.25rem;align-items:flex-start}
+.why-icon{width:52px;height:52px;background:rgba(217,119,6,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.why-icon svg{width:26px;height:26px;fill:var(--accent)}
+.why-card h3{font-family:'Barlow Condensed',sans-serif;font-size:1.25rem;font-weight:700;color:var(--white);margin-bottom:0.4rem}
+.why-card p{font-size:0.9rem;color:var(--text-muted);line-height:1.65}
+
+/* HOW IT WORKS */
+.how{background:var(--primary-dark);padding:90px 5%}
+.how-inner{max-width:1280px;margin:0 auto}
+.how-header{text-align:center;margin-bottom:3rem}
+.how-header .section-label{color:var(--accent)}
+.how-header .section-title{color:var(--white)}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;position:relative}
+.how-steps::before{content:'';position:absolute;top:32px;left:calc(16.66% + 1rem);right:calc(16.66% + 1rem);height:2px;background:rgba(217,119,6,0.22);z-index:0}
+.how-step{text-align:center;position:relative;z-index:1}
+.step-num{width:64px;height:64px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;color:#fff}
+.how-step h3{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:700;color:var(--white);margin-bottom:0.5rem}
+.how-step p{font-size:0.9rem;color:var(--text-muted);line-height:1.65;max-width:260px;margin:0 auto}
+
+/* REVIEWS — dark card background */
+.reviews{background:var(--bg-off);padding:90px 5%}
+.reviews-inner{max-width:1280px;margin:0 auto}
+.reviews-header{text-align:center;margin-bottom:3rem}
+.reviews-header .section-label{color:var(--accent-dark)}
+.reviews-header .section-title{color:#0d2e17}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.review-card{background:var(--primary-dark);border-radius:var(--radius);padding:2rem;border:1px solid rgba(217,119,6,0.15);opacity:0;transform:translateY(20px);transition:opacity 0.5s,transform 0.5s}
+.review-card.visible{opacity:1;transform:translateY(0)}
+.review-card:nth-child(2){transition-delay:0.15s}
+.review-card:nth-child(3){transition-delay:0.3s}
+.review-stars{display:flex;gap:3px;margin-bottom:1rem}
+.review-stars svg{width:16px;height:16px;fill:var(--accent)}
+.review-text{font-size:0.92rem;color:#b8d9c4;line-height:1.7;margin-bottom:1.5rem}
+.review-author{display:flex;align-items:center;gap:0.75rem}
+.review-avatar{width:42px;height:42px;background:rgba(217,119,6,0.18);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;color:var(--accent)}
+.review-name{font-weight:700;font-size:0.9rem;color:var(--white)}
+.review-location{font-size:0.8rem;color:var(--text-muted)}
+
+/* SERVICE AREAS */
+.areas{background:#071f10;padding:90px 5%}
+.areas-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:4rem;align-items:center}
+.areas-label{font-size:0.78rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem}
+.areas h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:900;color:var(--white);margin-bottom:1rem}
+.areas p{font-size:0.95rem;color:var(--text-muted);line-height:1.7;margin-bottom:1.5rem}
+.areas-chips{display:flex;flex-wrap:wrap;gap:0.65rem}
+.chip{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:var(--text);padding:0.4rem 1rem;border-radius:100px;font-size:0.85rem;font-weight:600;transition:background 0.2s,color 0.2s,border-color 0.2s;cursor:default}
+.chip:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* CONTACT */
+.contact{background:#fff;padding:90px 5%}
+.contact-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:4rem;align-items:start}
+.contact .section-label{color:var(--accent-dark)}
+.contact .section-title{color:#0d2e17}
+.contact .section-sub{color:#3a5c44;margin-bottom:2rem}
+.form-group{margin-bottom:1.25rem}
+.form-group label{display:block;font-size:0.85rem;font-weight:700;color:#1a4028;margin-bottom:0.4rem}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:0.75rem 1rem;border:2px solid #c8e0d0;border-radius:8px;font-family:'Nunito Sans',sans-serif;font-size:0.95rem;color:#1a3020;background:#f6faf7;transition:border-color 0.2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--primary)}
+.form-group textarea{height:110px;resize:vertical}
+.form-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.form-submit{background:var(--primary);color:#fff;padding:0.9rem 2.2rem;border-radius:8px;font-weight:700;font-size:1rem;border:none;cursor:pointer;width:100%;font-family:'Nunito Sans',sans-serif;transition:background 0.2s,transform 0.15s}
+.form-submit:hover{background:var(--primary-dark);transform:translateY(-1px)}
+.contact-info{background:var(--primary-dark);border-radius:var(--radius);padding:2.5rem;color:var(--text)}
+.contact-info h3{font-family:'Barlow Condensed',sans-serif;font-size:1.6rem;font-weight:900;color:var(--white);margin-bottom:1.5rem}
+.info-item{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,0.1)}
+.info-item:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.info-icon{width:42px;height:42px;background:rgba(217,119,6,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.info-icon svg{width:20px;height:20px;fill:var(--accent)}
+.info-label{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--accent);margin-bottom:0.25rem}
+.info-val{font-size:0.95rem;color:var(--text);font-weight:600}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(120deg,var(--accent-dark) 0%,var(--accent) 100%);padding:70px 5%;position:relative;overflow:hidden}
+.cta-band::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:0.06;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-size:256px 256px}
+.cta-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;position:relative;z-index:1}
+.cta-text h2{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#fff;margin-bottom:0.5rem}
+.cta-text p{color:rgba(255,255,255,0.85);font-size:1rem}
+.cta-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--accent-dark);padding:0.9rem 2.2rem;border-radius:8px;font-weight:700;font-size:1rem;transition:background 0.2s,transform 0.15s}
+.btn-white:hover{background:rgba(255,255,255,0.9);transform:translateY(-2px)}
+.btn-outline-white{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.6);padding:0.9rem 2.2rem;border-radius:8px;font-weight:700;font-size:1rem;transition:background 0.2s,transform 0.15s}
+.btn-outline-white:hover{background:rgba(255,255,255,0.12);transform:translateY(-2px)}
+
+/* FOOTER */
+footer{background:var(--primary-dark);padding:60px 5% 30px}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,0.1)}
+.footer-brand .nav-logo{display:block;margin-bottom:1rem;font-size:1.3rem}
+.footer-brand p{font-size:0.875rem;color:var(--text-muted);line-height:1.7}
+.footer-col h4{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;color:var(--white);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1rem}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:0.5rem}
+.footer-col ul li a{font-size:0.875rem;color:var(--text-muted);transition:color 0.2s}
+.footer-col ul li a:hover{color:var(--accent)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:1.5rem;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:0.8rem;color:var(--text-muted)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+  .hero-card{display:none}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:1fr}
+  .how-steps{grid-template-columns:1fr;gap:2rem}
+  .how-steps::before{display:none}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .areas-inner{grid-template-columns:1fr}
+  .contact-inner{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .nav-links{display:none}
+  .stats-inner{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .cta-inner{flex-direction:column;text-align:center}
+  .form-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <a href="/" class="nav-logo">Preston <span>Pest</span> Service LLC</a>
+  <nav class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#why">Why Preston</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#areas">Service Areas</a>
+    <a href="tel:4695754374" class="nav-cta">(469) 575-4374</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11ZM8 11C9.66 11 10.99 9.66 10.99 8C10.99 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11ZM8 13C5.67 13 1 14.17 1 16.5V18H15V16.5C15 14.17 10.33 13 8 13ZM16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V18H23V16.5C23 14.17 18.33 13 16 13Z"/></svg>
+        212 Five-Star Reviews in Mansfield
+      </div>
+      <h1 class="hero-title">Mansfield Families Trust <span>Preston Pest</span></h1>
+      <p class="hero-sub">Mansfield's parks and neighborhoods deserve protection from the pests that call North Texas home. Preston Pest Service is the company your neighbors already use — referred family to family, five stars at a time.</p>
+      <div class="hero-ctas">
+        <a href="tel:4695754374" class="btn-primary">Call (469) 575-4374</a>
+        <a href="#contact" class="btn-secondary">Request a Free Quote</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="trust-text"><strong>5.0 stars</strong> across 212 reviews — the most trusted name in Mansfield</p>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Why Mansfield Chooses Preston</div>
+      <div class="hero-card-item">
+        <div class="hero-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11ZM8 11C9.66 11 10.99 9.66 10.99 8C10.99 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11ZM8 13C5.67 13 1 14.17 1 16.5V18H15V16.5C15 14.17 10.33 13 8 13ZM16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V18H23V16.5C23 14.17 18.33 13 16 13Z"/></svg>
+        </div>
+        <div>
+          <div class="hero-card-label">Neighbor Referred</div>
+          <div class="hero-card-value">212 five-star reviews — because neighbors tell neighbors</div>
+        </div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hero-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/></svg>
+        </div>
+        <div>
+          <div class="hero-card-label">100% Guarantee</div>
+          <div class="hero-card-value">Free return visits if pests reappear between services</div>
+        </div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hero-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5C3.9 3 3 3.9 3 5V7H5V5H19V19H5V17H3V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM11 9L9.59 10.41L11.17 12H3V14H11.17L9.59 15.58L11 17L15 13L11 9Z"/></svg>
+        </div>
+        <div>
+          <div class="hero-card-label">Quarterly Plans</div>
+          <div class="hero-card-value">Fair, consistent pricing — year-round protection</div>
+        </div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hero-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/></svg>
+        </div>
+        <div>
+          <div class="hero-card-label">Locally Owned</div>
+          <div class="hero-card-value">Family LLC — we live and work in this community</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat-box">
+      <div class="stat-num" data-target="212" data-suffix="">212</div>
+      <div class="stat-label">Five-Star Reviews</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" data-target="5.0" data-suffix="" data-decimal="1">5.0</div>
+      <div class="stat-label">Star Rating</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" data-target="3" data-suffix="">3</div>
+      <div class="stat-label">Day Avg Response</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" data-target="100" data-suffix="%">100%</div>
+      <div class="stat-label">Guarantee</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="section-label">What We Handle</div>
+    <h2 class="section-title">Full-Service Pest Protection for Mansfield Homes</h2>
+    <p class="section-sub">Whether it's a one-time emergency or ongoing quarterly protection, Preston Pest Service delivers results that keep your family comfortable all year long.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20ZM11 7H13V9H15V11H13V13H11V11H9V9H11V7Z"/></svg>
+        </div>
+        <div>
+          <h3>General Pest Control</h3>
+          <p>Comprehensive interior and exterior treatment for roaches, ants, silverfish, earwigs, and the full spectrum of common household pests plaguing Mansfield homes.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5C3.9 3 3 3.9 3 5V7H5V5H19V19H5V17H3V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM11 9L9.59 10.41L11.17 12H3V14H11.17L9.59 15.58L11 17L15 13L11 9Z"/></svg>
+        </div>
+        <div>
+          <h3>Termite Inspection &amp; Treatment</h3>
+          <p>Pre-purchase inspections, annual monitoring, and liquid barrier or bait station programs. We provide clear, detailed reports and coordinate with sellers when damage is found.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M15 9.5C15 7.57 13.43 6 11.5 6H6V8H11.5C12.33 8 13 8.67 13 9.5S12.33 11 11.5 11H10V13H11.5C12.33 13 13 13.67 13 14.5S12.33 16 11.5 16H6V18H11.5C13.43 18 15 16.43 15 14.5C15 13.53 14.6 12.65 13.94 12C14.6 11.35 15 10.47 15 9.5ZM16 11H18V13H16V11ZM20 11H22V13H20V11Z"/></svg>
+        </div>
+        <div>
+          <h3>Rodent Removal &amp; Exclusion</h3>
+          <p>Live removal, snap traps, and full-property exclusion — we seal every gap, crack, and entry point so rodents never find their way back into your home.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61C20.3 4.07 19.58 3.74 18.81 3.74C18.04 3.74 17.32 4.07 16.77 4.61L12 9.38L7.23 4.61C6.68 4.07 5.96 3.74 5.19 3.74C4.42 3.74 3.7 4.07 3.16 4.61C2.61 5.16 2.28 5.88 2.28 6.65C2.28 7.42 2.61 8.14 3.16 8.69L12 17.52L20.84 8.69C21.39 8.14 21.72 7.42 21.72 6.65C21.72 5.88 21.39 5.16 20.84 4.61Z"/></svg>
+        </div>
+        <div>
+          <h3>Mosquito Barrier Program</h3>
+          <p>Seasonal mosquito barrier applications to your yard, landscaping, and resting areas. Reduce mosquito populations by up to 90% so your family can enjoy Mansfield's outdoor spaces.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17M2 12L12 17L22 12"/></svg>
+        </div>
+        <div>
+          <h3>Bed Bug Elimination</h3>
+          <p>Targeted heat and chemical treatments that reach every crack, seam, and hiding spot. We follow up until every bed bug and egg is confirmed gone — no exceptions.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19.82C4.49 19.93 6.24 19.56 7 18.5C7 18.5 7 22 12 22C17 22 20 18 20 15C20 12 18 8 17 8Z"/></svg>
+        </div>
+        <div>
+          <h3>Fire Ant Control</h3>
+          <p>Fire ants are a year-round hazard in Mansfield yards. Our broadcast and mound treatments eliminate colonies fast and our prevention plans keep them from re-establishing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-header">
+      <div class="section-label">Why Preston Pest</div>
+      <h2 class="section-title">The Pest Service Your Neighbors Already Use</h2>
+      <p style="font-size:1rem;color:var(--text-muted);max-width:580px;margin:0.5rem auto 2.5rem;line-height:1.7">212 five-star reviews don't happen by accident. They happen because every Mansfield family we serve becomes a neighbor who recommends us to the next one. Here's what we get right.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11ZM8 11C9.66 11 10.99 9.66 10.99 8C10.99 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11ZM8 13C5.67 13 1 14.17 1 16.5V18H15V16.5C15 14.17 10.33 13 8 13ZM16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V18H23V16.5C23 14.17 18.33 13 16 13Z"/></svg>
+        </div>
+        <div>
+          <h3>Neighbor-to-Neighbor Trust</h3>
+          <p>The majority of our Mansfield customers came to us through a neighbor's referral. That kind of trust isn't earned through advertising — it's earned through consistent, dependable service visit after visit.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.8 10.9C9.53 10.31 8.8 9.7 8.8 8.75C8.8 7.66 9.81 6.9 11.5 6.9C13.28 6.9 13.94 7.75 14 9H16.21C16.14 7.28 15.09 5.7 13 5.19V3H10V5.16C8.06 5.58 6.5 6.84 6.5 8.77C6.5 11.08 8.41 12.23 11.2 12.9C13.7 13.5 14.2 14.38 14.2 15.31C14.2 16 13.71 17.1 11.5 17.1C9.44 17.1 8.63 16.18 8.5 15H6.32C6.44 17.19 8.08 18.42 10 18.83V21H13V18.85C14.95 18.48 16.5 17.35 16.5 15.3C16.5 12.46 14.07 11.49 11.8 10.9Z"/></svg>
+        </div>
+        <div>
+          <h3>Fair, Transparent Pricing</h3>
+          <p>Our quarterly plan pricing never changes without notice. You'll always know what you're paying and exactly what it covers. No surprise fees, no upsell pressure, no bait-and-switch quotes.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/></svg>
+        </div>
+        <div>
+          <h3>Guaranteed Results</h3>
+          <p>If pests return between scheduled visits, we come back and re-treat at no charge. Our 100% satisfaction guarantee is a real promise, not fine-print marketing language.</p>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3L1 9L12 15L21 10.09V17H23V9M5 13.18V17.18L12 21L19 17.18V13.18L12 17L5 13.18Z"/></svg>
+        </div>
+        <div>
+          <h3>Professional, Punctual Technicians</h3>
+          <p>Our techs show up on schedule, introduce themselves, explain the plan, and treat your home with the same respect they'd give their own. That consistency is why families keep renewing year after year.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="how-inner">
+    <div class="how-header">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Getting Protected Is Easy</h2>
+      <p style="font-size:1rem;color:var(--text-muted);max-width:500px;margin:0.5rem auto 2.5rem;line-height:1.7">From your first call to a pest-free home — Preston Pest keeps the process simple, clear, and hassle-free.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="step-num">1</div>
+        <h3>Give Us a Call</h3>
+        <p>Reach out by phone or online form. We'll ask a few quick questions about your pest concern and schedule an appointment that fits your calendar.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">2</div>
+        <h3>Thorough Inspection</h3>
+        <p>Your Preston technician inspects inside and out, identifies the pest, assesses the extent of the problem, and explains exactly what treatment is needed and why.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-num">3</div>
+        <h3>Treatment &amp; Ongoing Care</h3>
+        <p>We treat the problem, document the work, and enroll you in a protection plan if you want year-round coverage. We check in — pests don't get the last word.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS — dark card background -->
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="reviews-header">
+      <div class="section-label">212 Five-Star Reviews</div>
+      <h2 class="section-title">What Your Mansfield Neighbors Are Saying</h2>
+      <p style="font-size:1rem;color:#3a5c44;max-width:520px;margin:0.5rem auto 2.5rem;line-height:1.7">Perfect 5.0 rating. Here are a few of the stories behind the stars.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">Three of my neighbors had already recommended Preston before I finally called. I kept putting it off and really wish I hadn't — they had my roach problem completely handled in a single visit. Should have called months earlier. Absolutely worth every penny.</p>
+        <div class="review-author">
+          <div class="review-avatar">DR</div>
+          <div>
+            <div class="review-name">Donna Richardson</div>
+            <div class="review-location">Mansfield, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">Preston has been doing our quarterly service for three years running. Always professional, always on time, and the pricing has never changed without warning. I've referred them to four people on my street. That says everything about how I feel about this company.</p>
+        <div class="review-author">
+          <div class="review-avatar">SP</div>
+          <div>
+            <div class="review-name">Scott Palmer</div>
+            <div class="review-location">Kennedale, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">Used Preston for a termite inspection during a home purchase. Their report was thorough, clear, and came back fast. They found evidence of past activity, the seller agreed to remediation, and Preston handled everything before closing. I cannot recommend them enough.</p>
+        <div class="review-author">
+          <div class="review-avatar">MJ</div>
+          <div>
+            <div class="review-name">Maya Johnson</div>
+            <div class="review-location">Arlington, TX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas" id="areas">
+  <div class="areas-inner">
+    <div>
+      <div class="areas-label">Where We Serve</div>
+      <h2>Protecting Families Across Mansfield and Beyond</h2>
+      <p>Preston Pest Service is rooted in Mansfield and proud to serve the surrounding communities of the DFW metroplex. If your neighborhood is on this list, you already have neighbors who use us.</p>
+      <a href="tel:4695754374" class="btn-primary" style="display:inline-block;margin-top:0.5rem">Confirm Your Area — (469) 575-4374</a>
+    </div>
+    <div>
+      <div class="areas-chips">
+        <span class="chip">Mansfield</span>
+        <span class="chip">Kennedale</span>
+        <span class="chip">Arlington</span>
+        <span class="chip">Burleson</span>
+        <span class="chip">Grand Prairie</span>
+        <span class="chip">Midlothian</span>
+        <span class="chip">Crowley</span>
+        <span class="chip">Fort Worth</span>
+        <span class="chip">Cedar Hill</span>
+        <span class="chip">Duncanville</span>
+        <span class="chip">Rendon</span>
+        <span class="chip">Everman</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Request a Free Inspection</h2>
+      <p class="section-sub">Fill out this quick form and a Preston Pest technician will follow up within one business hour. Your neighbors are glad they called — you will be too.</p>
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Jane">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="(469) 555-0000">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="jane@example.com">
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>General Pest Control</option>
+            <option>Termite Inspection &amp; Treatment</option>
+            <option>Rodent Removal &amp; Exclusion</option>
+            <option>Mosquito Barrier Program</option>
+            <option>Bed Bug Elimination</option>
+            <option>Fire Ant Control</option>
+            <option>Not sure — need an assessment</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Describe Your Situation</label>
+          <textarea placeholder="Tell us what you're seeing and the best time to reach you..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send My Request</button>
+      </form>
+    </div>
+    <div>
+      <div class="contact-info">
+        <h3>Contact Preston Pest</h3>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79C8.06 13.62 10.38 15.93 13.21 17.38L15.41 15.18C15.68 14.91 16.08 14.82 16.43 14.94C17.55 15.31 18.76 15.51 20 15.51C20.55 15.51 21 15.96 21 16.51V20C21 20.55 20.55 21 20 21C10.61 21 3 13.39 3 4C3 3.45 3.45 3 4 3H7.5C8.05 3 8.5 3.45 8.5 4C8.5 5.25 8.7 6.45 9.07 7.57C9.18 7.92 9.1 8.31 8.82 8.59L6.62 10.79Z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-val">(469) 575-4374</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Service Area</div>
+            <div class="info-val">Mansfield, TX and surrounding DFW communities</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M13 2.05V4.07C17.06 4.56 20 8.03 20 12C20 16.47 16.39 20 12 20C7.61 20 4 16.47 4 12C4 8.03 6.94 4.56 11 4.07V2.05C5.86 2.56 2 6.81 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.81 18.14 2.56 13 2.05ZM13 12V7H11V13L15.28 17.28L16.7 15.87L13 12Z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Hours</div>
+            <div class="info-val">Mon–Fri: 8am–6pm</div>
+            <div class="info-val">Sat: 9am–2pm</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Our Promise</div>
+            <div class="info-val">100% satisfaction — free return visits between scheduled service</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2>Join 212 Happy Mansfield Families</h2>
+      <p>Your neighbors already use Preston Pest. Find out why — call today for your free inspection.</p>
+    </div>
+    <div class="cta-actions">
+      <a href="tel:4695754374" class="btn-white">Call (469) 575-4374</a>
+      <a href="#contact" class="btn-outline-white">Request a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo">Preston <span>Pest</span> Service LLC</span>
+        <p>Mansfield's most referred pest control family business. 212 five-star reviews and counting.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">General Pest Control</a></li>
+          <li><a href="#services">Termite Treatment</a></li>
+          <li><a href="#services">Rodent Removal</a></li>
+          <li><a href="#services">Mosquito Barrier</a></li>
+          <li><a href="#services">Bed Bug Elimination</a></li>
+          <li><a href="#services">Fire Ant Control</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#why">Why Preston Pest</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#areas">Service Areas</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:4695754374">(469) 575-4374</a></li>
+          <li><a href="#contact">Free Inspection Request</a></li>
+          <li><a href="#areas">Mansfield, TX</a></li>
+          <li><a href="#areas">DFW Metro Area</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Preston Pest Service LLC. All rights reserved. Mansfield, TX. Texas Structural Pest Control Licensed.</p>
+      <p>Serving Mansfield and surrounding DFW communities.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Header scroll shadow
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// Stat counter
+const statNums = document.querySelectorAll('.stat-num[data-target]');
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const target = parseFloat(el.dataset.target);
+    const suffix = el.dataset.suffix || '';
+    const decimal = parseInt(el.dataset.decimal || '0');
+    const duration = 1400;
+    const start = performance.now();
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = target * eased;
+      el.textContent = (decimal > 0 ? current.toFixed(decimal) : Math.round(current)) + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+    counterObserver.unobserve(el);
+  });
+}, { threshold: 0.5 });
+statNums.forEach(el => counterObserver.observe(el));
+
+// Card fadeUp
+const fadeCards = document.querySelectorAll('.review-card');
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+fadeCards.forEach(card => fadeObserver.observe(card));
+</script>
+</body>
+</html>

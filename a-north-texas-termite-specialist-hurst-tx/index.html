@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A North Texas Termite Specialist | Hurst, TX | dallasfortworthtermitepestcontrol.com</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #1a1230;
+  --primary-dark: #0d091a;
+  --accent: #8b5cf6;
+  --accent-dark: #6d28d9;
+  --accent-text: #5b21b6;
+  --white: #ffffff;
+  --bg-off: #f5f3ff;
+  --text-dark: #111827;
+  --text-mid: #374151;
+  --text-muted: #6b7280;
+  --grain-opacity: 0.035;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  color: var(--text-dark);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+.display { font-family: 'Barlow Condensed', sans-serif; }
+
+/* =========== HEADER =========== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--primary);
+  padding: 0 40px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-logo-mark {
+  width: 38px;
+  height: 38px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.header-name span {
+  display: block;
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-nav a {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+.header-nav a:hover { color: var(--white); }
+
+.btn-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.btn-call:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+/* =========== HERO =========== */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  padding: 90px 40px 80px;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: var(--grain-opacity);
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(139,92,246,0.15);
+  border: 1px solid rgba(139,92,246,0.35);
+  color: var(--accent);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 22px;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.hero-badge-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.hero-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  line-height: 1.0;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-headline span { color: var(--accent); }
+
+.hero-sub {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.72);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  border: 2px solid rgba(255,255,255,0.28);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.06);
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+}
+
+.hero-trust-sep {
+  width: 1px;
+  height: 16px;
+  background: rgba(255,255,255,0.18);
+}
+
+/* Hero card */
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 32px;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.hero-card-subtitle {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 20px;
+}
+
+.hero-card-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-card-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+}
+
+.hero-card-list li svg { flex-shrink: 0; color: var(--accent); }
+
+.hero-card-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 22px 0;
+}
+
+.hero-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-stars { display: flex; gap: 3px; }
+.hero-stars svg { color: #fbbf24; }
+
+.hero-rating-text {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+}
+
+.hero-rating-text strong { color: var(--white); font-weight: 700; }
+
+.hero-spec-tag {
+  display: inline-block;
+  background: rgba(139,92,246,0.2);
+  border: 1px solid rgba(139,92,246,0.3);
+  color: var(--accent);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-top: 14px;
+}
+
+@keyframes heroFadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========== STATS ROW =========== */
+.stats-row {
+  background: var(--primary);
+  padding: 50px 40px;
+}
+
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.stat-item + .stat-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: rgba(255,255,255,0.1);
+}
+
+.stat-number {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* =========== SERVICES =========== */
+.services {
+  padding: 90px 40px;
+  background: var(--white);
+}
+
+.section-header {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.section-eyebrow {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--text-dark);
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.services-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--white);
+  border: 1px solid #e5e7eb;
+  border-top: 3px solid transparent;
+  border-radius: 12px;
+  padding: 28px 28px 32px;
+  transition: border-top-color 0.25s, box-shadow 0.25s, transform 0.2s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, border-top-color 0.25s, box-shadow 0.25s;
+}
+
+.service-card:hover {
+  border-top-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(139,92,246,0.12);
+  transform: translateY(-3px);
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  background: #ede9fe;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: var(--accent-text);
+}
+
+.service-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
+
+.service-desc {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* =========== WHY US =========== */
+.why-us {
+  position: relative;
+  background: var(--primary);
+  padding: 90px 40px;
+  overflow: hidden;
+}
+
+.why-us::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: var(--grain-opacity);
+  pointer-events: none;
+}
+
+.why-us-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.why-us-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.why-us-header .section-eyebrow { color: var(--accent); }
+.why-us-header .section-title { color: var(--white); }
+.why-us-header .section-sub { color: rgba(255,255,255,0.6); }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.why-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 14px;
+  padding: 30px 32px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.why-card.visible { opacity: 1; transform: translateY(0); }
+
+.why-card-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(139,92,246,0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.why-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+
+.why-card-desc {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.65;
+}
+
+/* =========== HOW IT WORKS =========== */
+.how-it-works {
+  background: var(--primary-dark);
+  padding: 90px 40px;
+}
+
+.how-inner { max-width: 1200px; margin: 0 auto; }
+
+.how-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.how-header .section-eyebrow { color: var(--accent); }
+.how-header .section-title { color: var(--white); }
+.how-header .section-sub { color: rgba(255,255,255,0.55); }
+
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.how-steps::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: calc(16.66% + 15px);
+  right: calc(16.66% + 15px);
+  height: 2px;
+  background: rgba(139,92,246,0.25);
+  z-index: 0;
+}
+
+.how-step {
+  text-align: center;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.how-step.visible { opacity: 1; transform: translateY(0); }
+
+.step-circle {
+  width: 60px;
+  height: 60px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.step-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--white);
+  margin-bottom: 10px;
+  letter-spacing: 0.01em;
+}
+
+.step-desc {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+}
+
+/* =========== REVIEWS =========== */
+.reviews {
+  background: var(--bg-off);
+  padding: 90px 40px;
+}
+
+.reviews-inner { max-width: 1200px; margin: 0 auto; }
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.reviews-header .section-eyebrow { color: var(--accent-text); }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 30px 28px 28px;
+  box-shadow: 0 2px 12px rgba(139,92,246,0.07);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.review-card.visible { opacity: 1; transform: translateY(0); }
+.review-card:nth-child(2) { transition-delay: 0.1s; }
+.review-card:nth-child(3) { transition-delay: 0.2s; }
+
+.review-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+
+.review-stars svg { color: #fbbf24; }
+
+.review-text {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #ede9fe;
+  padding-top: 18px;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.review-name {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.review-location {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* =========== SERVICE AREAS =========== */
+.service-areas {
+  background: var(--primary-dark);
+  padding: 90px 40px;
+}
+
+.areas-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  align-items: center;
+}
+
+.areas-text-side .section-eyebrow { color: var(--accent); }
+.areas-text-side .section-title {
+  color: var(--white);
+  text-align: left;
+}
+.areas-text-side .section-sub {
+  color: rgba(255,255,255,0.55);
+  text-align: left;
+  margin: 0;
+  max-width: 100%;
+}
+
+.areas-cta {
+  margin-top: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.areas-cta:hover { background: var(--accent-dark); }
+
+.areas-chip-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.areas-chip-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 18px;
+}
+
+.areas-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.area-chip {
+  background: rgba(139,92,246,0.1);
+  border: 1px solid rgba(139,92,246,0.22);
+  color: var(--accent);
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 6px 14px;
+  border-radius: 100px;
+}
+
+.area-chip.primary-chip {
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent);
+  font-weight: 700;
+}
+
+/* =========== CONTACT =========== */
+.contact {
+  background: var(--white);
+  padding: 90px 40px;
+}
+
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-form-side .section-eyebrow { color: var(--accent-text); }
+.contact-form-side .section-title { text-align: left; }
+.contact-form-side .section-sub { text-align: left; margin: 0; max-width: 100%; }
+
+.contact-form {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-mid);
+}
+
+.form-input {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 11px 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(139,92,246,0.12);
+}
+
+textarea.form-input { resize: vertical; min-height: 110px; }
+
+.form-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent-dark);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+  padding: 14px 28px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.form-submit:hover { background: #4c1d95; transform: translateY(-1px); }
+
+.contact-info-card {
+  background: var(--primary);
+  border-radius: 16px;
+  padding: 36px 32px;
+  color: var(--white);
+}
+
+.info-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 24px;
+  letter-spacing: 0.01em;
+}
+
+.info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.info-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.info-icon {
+  width: 38px;
+  height: 38px;
+  background: rgba(139,92,246,0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.info-content-label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+
+.info-content-value {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.info-content-value a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.info-content-value a:hover { text-decoration: underline; }
+
+.info-card-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin-bottom: 22px;
+}
+
+.info-hours-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.info-hours-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.info-hours-list li {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.65);
+}
+
+.info-hours-list li span:last-child { color: rgba(255,255,255,0.45); }
+
+/* =========== CTA BAND =========== */
+.cta-band {
+  position: relative;
+  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+  padding: 70px 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.cta-band-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-band-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--white);
+  line-height: 1.05;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.cta-band-sub {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.78);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.cta-band-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-dark);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.btn-dark:hover { background: #05030d; }
+
+.btn-white-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  border: 2px solid rgba(255,255,255,0.4);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-white-outline:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.7);
+}
+
+/* =========== FOOTER =========== */
+.site-footer {
+  background: var(--primary-dark);
+  padding: 60px 40px 30px;
+}
+
+.footer-inner { max-width: 1200px; margin: 0 auto; }
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.footer-brand .footer-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.footer-brand p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.footer-spec-badge {
+  display: inline-block;
+  background: rgba(139,92,246,0.15);
+  border: 1px solid rgba(139,92,246,0.25);
+  color: var(--accent);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  display: block;
+  width: fit-content;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social a {
+  width: 34px;
+  height: 34px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer-social a:hover { background: var(--accent); color: var(--white); }
+
+.footer-col-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links li a {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links li a:hover { color: var(--accent); }
+
+.footer-contact-info {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-contact-info li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.55);
+}
+
+.footer-contact-info li svg { flex-shrink: 0; color: var(--accent); margin-top: 2px; }
+
+.footer-contact-info a {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-contact-info a:hover { color: var(--accent); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-copy {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal a {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-legal a:hover { color: rgba(255,255,255,0.6); }
+
+/* =========== RESPONSIVE =========== */
+@media (max-width: 900px) {
+  .site-header { padding: 0 24px; }
+  .header-nav { display: none; }
+  .hero { padding: 60px 24px; }
+  .hero-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .stats-row { padding: 40px 24px; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .stat-item + .stat-item::before { display: none; }
+  .services { padding: 60px 24px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-us { padding: 60px 24px; }
+  .how-it-works { padding: 60px 24px; }
+  .how-steps { grid-template-columns: repeat(2, 1fr); }
+  .how-steps::before { display: none; }
+  .reviews { padding: 60px 24px; }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-areas { padding: 60px 24px; }
+  .areas-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .contact { padding: 60px 24px; }
+  .contact-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .cta-band { padding: 50px 24px; }
+  .site-footer { padding: 50px 24px 24px; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+}
+
+@media (max-width: 600px) {
+  .site-header { padding: 0 16px; }
+  .header-name span { display: none; }
+  .hero { padding: 48px 16px 40px; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .services { padding: 50px 16px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .why-us { padding: 50px 16px; }
+  .why-grid { grid-template-columns: 1fr; }
+  .how-it-works { padding: 50px 16px; }
+  .how-steps { grid-template-columns: 1fr; }
+  .reviews { padding: 50px 16px; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .service-areas { padding: 50px 16px; }
+  .areas-inner { grid-template-columns: 1fr; }
+  .contact { padding: 50px 16px; }
+  .contact-inner { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .cta-band { padding: 40px 16px; }
+  .site-footer { padding: 40px 16px 20px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-brand">
+    <div class="header-logo-mark">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    </div>
+    <div class="header-name">
+      A North Texas Termite Specialist
+      <span>dallasfortworthtermitepestcontrol.com</span>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <a href="#services">Services</a>
+    <a href="#why-us">Our Approach</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:8173663130" class="btn-call">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.66-.66a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      (817) 366-3130
+    </a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Termite Specialists Since 2006 &mdash; Hurst, TX
+      </div>
+      <h1 class="hero-headline">North Texas's <span>Termite</span> Specialists</h1>
+      <p class="hero-sub">Termite colonies are silently compromising foundations across the DFW Metroplex right now. We don't do general pest control. We do termites — with the depth of expertise and precision that protecting a major investment demands.</p>
+      <div class="hero-ctas">
+        <a href="tel:8173663130" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.66-.66a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now: (817) 366-3130
+        </a>
+        <a href="#contact" class="btn-outline">Get Free Inspection</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);"><polyline points="20 6 9 17 4 12"/></svg>
+          4.9 Stars &mdash; 59 Reviews
+        </div>
+        <div class="hero-trust-sep"></div>
+        <div class="hero-trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);"><polyline points="20 6 9 17 4 12"/></svg>
+          Termite-Only Focus
+        </div>
+        <div class="hero-trust-sep"></div>
+        <div class="hero-trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);"><polyline points="20 6 9 17 4 12"/></svg>
+          Free Re-Treatment Guarantee
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-card-title">Termite Services</div>
+      <div class="hero-card-subtitle">Specialized. Nothing else.</div>
+      <ul class="hero-card-list">
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Subterranean Termite Treatment
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Drywood Termite Control
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Termite Inspection &amp; Report
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Termite Bait Stations
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Annual Termite Monitoring
+        </li>
+      </ul>
+      <div class="hero-card-divider"></div>
+      <div class="hero-card-rating">
+        <div class="hero-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="hero-rating-text"><strong>4.9</strong> &mdash; 59 Google Reviews</div>
+      </div>
+      <div class="hero-spec-tag">Termite-Only Specialists</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS ROW -->
+<section class="stats-row">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-number display"><span data-target="59" data-suffix="">0</span></div>
+      <div class="stat-label">Five-Star Reviews</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number display"><span data-target="4" data-suffix=".9">0</span></div>
+      <div class="stat-label">Star Rating</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number display"><span data-target="20" data-suffix="+">0</span></div>
+      <div class="stat-label">Years Termite Focused</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number display"><span data-target="100" data-suffix="%">0</span></div>
+      <div class="stat-label">Free Re-Treatment</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-eyebrow">What We Do — And Only What We Do</div>
+    <h2 class="section-title">Termite Control. Fully Specialized.</h2>
+    <p class="section-sub">We have spent over 20 years mastering a single discipline. Every service we offer exists to find, eliminate, and prevent termites — nothing more, nothing less.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="service-name">Subterranean Termite Treatment</div>
+      <p class="service-desc">The most destructive termite species in North Texas. We use liquid barrier and baiting system approaches to eliminate underground colonies and cut off access to your structure at the foundation level.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+      </div>
+      <div class="service-name">Drywood Termite Control</div>
+      <p class="service-desc">Drywood termites infest wood directly without soil contact, making them harder to detect and eliminate. Our targeted treatment methods reach colonies inside wall voids, attic framing, and furniture.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <div class="service-name">Termite Inspection &amp; Report</div>
+      <p class="service-desc">Comprehensive inspections with detailed written reports identifying every area of activity, risk, and prior damage. Used for real estate transactions, peace of mind, and establishing a treatment baseline.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg>
+      </div>
+      <div class="service-name">Termite Bait Stations</div>
+      <p class="service-desc">In-ground bait station systems placed around your home's perimeter intercept foraging termites before they reach your structure. A low-disruption, ongoing protection approach ideal for active colonies and prevention.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="service-name">Fumigation Services</div>
+      <p class="service-desc">Whole-structure fumigation for severe drywood termite infestations. We manage the entire process from pre-treatment prep to post-fumigation clearance, ensuring complete colony elimination throughout the structure.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <div class="service-name">Annual Termite Monitoring</div>
+      <p class="service-desc">Year-round monitoring programs keep a specialist's eyes on your property. We inspect bait stations, check for new activity, and intervene immediately if any termite pressure is detected — before damage occurs.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us" id="why-us">
+  <div class="why-us-inner">
+    <div class="why-us-header">
+      <div class="section-eyebrow">Why Choose a Specialist</div>
+      <h2 class="section-title">The Case for Termite-Only Expertise</h2>
+      <p class="section-sub">A company that does everything does nothing with mastery. When termites threaten your largest investment, you want a specialist who has spent every working day solving exactly this problem.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div class="why-card-title">20+ Years of Termite-Only Focus</div>
+        <p class="why-card-desc">We have not spent time learning ant control or mosquito programs. Every hour of our professional development has been dedicated to termite biology, behavior, and treatment. That depth shows in every inspection and every result.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="why-card-title">Detailed Written Inspection Reports</div>
+        <p class="why-card-desc">We document everything. Our inspection reports identify active colonies, damage areas, conducive conditions, and treatment recommendations with the specificity that real estate transactions and informed homeowners require.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="why-card-title">Free Re-Treatment Guarantee</div>
+        <p class="why-card-desc">If termite activity returns after our treatment, we come back and re-treat at no cost. This guarantee reflects our confidence in our methods and our commitment to standing behind every job we do in DFW.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="why-card-title">Precise Colony Identification</div>
+        <p class="why-card-desc">Knowing where a colony is active changes the treatment entirely. Our specialists use targeted inspection techniques to pinpoint colony locations, entry points, and foraging trails before selecting any treatment method.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="how-inner">
+    <div class="how-header">
+      <div class="section-eyebrow">Our Process</div>
+      <h2 class="section-title">Precision from First Call to Final Clearance</h2>
+      <p class="section-sub">Every engagement follows a disciplined protocol. We identify precisely, treat methodically, and monitor continuously.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="step-circle">1</div>
+        <div class="step-title">Thorough Inspection</div>
+        <p class="step-desc">We inspect the entire structure — foundation, crawl spaces, attic framing, wood-to-soil contact points, and moisture areas. We map every area of concern and document findings in a detailed written report before any treatment is discussed.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-circle">2</div>
+        <div class="step-title">Tailored Treatment Plan</div>
+        <p class="step-desc">No two infestations are identical. Based on species, colony location, and structural conditions, we design a treatment plan using the most effective method for your specific situation. We explain every recommendation before we proceed.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-circle">3</div>
+        <div class="step-title">Treatment and Monitoring</div>
+        <p class="step-desc">Precision treatment is followed by scheduled monitoring to confirm colony elimination and catch any new activity early. Annual monitoring plans keep a specialist actively watching your property year-round.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="reviews-header">
+      <div class="section-eyebrow">Customer Reviews</div>
+      <h2 class="section-title">What DFW Homeowners Say</h2>
+      <p class="section-sub">A 4.9-star rating across 59 reviews, earned by doing one thing exceptionally well for over 20 years.</p>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">We had termites flagged during our home purchase inspection. The general inspector gave us a vague report — this specialist came out and identified the exact colony locations, showed us the entry points, and gave us a written report specific enough to take back to the sellers. It saved the deal and we knew exactly what we were buying. Absolutely worth it.</p>
+        <div class="review-author">
+          <div class="review-avatar">PM</div>
+          <div>
+            <div class="review-name">Patricia Moss</div>
+            <div class="review-location">Hurst, TX</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">I have been on their annual monitoring plan for three years. Last spring they detected new termite activity in a bait station before it ever reached the house. They re-treated the same week at no charge under the guarantee. That kind of proactive monitoring is the whole point of having a specialist — catching it before it becomes structural damage.</p>
+        <div class="review-author">
+          <div class="review-avatar">DO</div>
+          <div>
+            <div class="review-name">David Okafor</div>
+            <div class="review-location">Fort Worth, TX</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">I got quotes from two larger pest control companies and this specialist. The bigger companies gave me a one-size treatment and moved on. This company gave me a 12-page inspection report, explained exactly what species I had, where the colony entry points were, and why their recommended approach was the right one. I chose the expert and have had zero regrets.</p>
+        <div class="review-author">
+          <div class="review-avatar">CR</div>
+          <div>
+            <div class="review-name">Carmen Reyes</div>
+            <div class="review-location">Arlington, TX</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="service-areas">
+  <div class="areas-inner">
+    <div class="areas-text-side">
+      <div class="section-eyebrow">Where We Serve</div>
+      <h2 class="section-title" style="text-align:left;">Termite Specialists Across the DFW Metroplex</h2>
+      <p class="section-sub">Based in Hurst, we deploy our termite expertise across the full DFW region. Wherever you are in North Texas, you have access to a true termite specialist — not a generalist with a termite checkbox.</p>
+      <a href="tel:8173663130" class="areas-cta">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.66-.66a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Confirm Your Area
+      </a>
+    </div>
+    <div class="areas-chip-card">
+      <div class="areas-chip-card-title">Coverage Area</div>
+      <div class="areas-chips">
+        <span class="area-chip primary-chip">Hurst</span>
+        <span class="area-chip">Fort Worth</span>
+        <span class="area-chip">Arlington</span>
+        <span class="area-chip">Grand Prairie</span>
+        <span class="area-chip">Irving</span>
+        <span class="area-chip">Grapevine</span>
+        <span class="area-chip">Euless</span>
+        <span class="area-chip">Bedford</span>
+        <span class="area-chip">Mansfield</span>
+        <span class="area-chip">Burleson</span>
+        <span class="area-chip">Crowley</span>
+        <span class="area-chip">Kennedale</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-form-side">
+      <div class="section-eyebrow">Schedule an Inspection</div>
+      <h2 class="section-title" style="text-align:left;">Start With a Specialist Consultation</h2>
+      <p class="section-sub" style="margin:0; max-width:100%;">Describe your situation and one of our termite specialists will reach out promptly. Every engagement begins with a thorough inspection and written report — no guesswork, no generic treatment packages.</p>
+      <form class="contact-form" onsubmit="return false;">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="fname">First Name</label>
+            <input class="form-input" type="text" id="fname" name="fname" placeholder="Patricia">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lname">Last Name</label>
+            <input class="form-input" type="text" id="lname" name="lname" placeholder="Moss">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="(817) 555-0100">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="city">City</label>
+            <input class="form-input" type="text" id="city" name="city" placeholder="Hurst">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="concern">Termite Concern</label>
+          <input class="form-input" type="text" id="concern" name="concern" placeholder="Swarmers, mud tubes, home purchase inspection...">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Additional Details</label>
+          <textarea class="form-input" id="message" name="message" placeholder="Property type, age of home, areas of concern, any prior treatments..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Request Specialist Consultation
+        </button>
+      </form>
+    </div>
+
+    <div>
+      <div class="contact-info-card">
+        <div class="info-card-title">Reach a Termite Specialist</div>
+        <ul class="info-list">
+          <li>
+            <div class="info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.66-.66a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="info-content-label">Phone</div>
+              <div class="info-content-value"><a href="tel:8173663130">(817) 366-3130</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="info-content-label">Location</div>
+              <div class="info-content-value">Hurst, TX — Serving DFW</div>
+            </div>
+          </li>
+          <li>
+            <div class="info-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            </div>
+            <div>
+              <div class="info-content-label">Website</div>
+              <div class="info-content-value"><a href="https://dallasfortworthtermitepestcontrol.com">dallasfortworthtermitepestcontrol.com</a></div>
+            </div>
+          </li>
+        </ul>
+        <div class="info-card-divider"></div>
+        <div class="info-hours-title">Hours of Operation</div>
+        <ul class="info-hours-list">
+          <li><span>Monday - Friday</span><span>8:00 AM - 6:00 PM</span></li>
+          <li><span>Saturday</span><span>9:00 AM - 4:00 PM</span></li>
+          <li><span>Sunday</span><span>Emergency Only</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-band-inner">
+    <h2 class="cta-band-title">North Texas's Termite Experts Are One Call Away</h2>
+    <p class="cta-band-sub">Don't hand a termite problem to a generalist. Call the specialists who have spent 20+ years doing this and nothing else — backed by a free re-treatment guarantee.</p>
+    <div class="cta-band-btns">
+      <a href="tel:8173663130" class="btn-dark">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.66-.66a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call (817) 366-3130
+      </a>
+      <a href="#contact" class="btn-white-outline">Schedule Inspection</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-spec-badge">Termite Specialists</div>
+        <div class="footer-name">A North Texas Termite Specialist</div>
+        <p>20+ years of termite-only expertise serving the Dallas-Fort Worth Metroplex. Precise inspections, effective treatments, and guaranteed results.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Google">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          </a>
+          <a href="#" aria-label="Nextdoor">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Termite Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Subterranean Treatment</a></li>
+          <li><a href="#services">Drywood Control</a></li>
+          <li><a href="#services">Termite Inspection</a></li>
+          <li><a href="#services">Bait Stations</a></li>
+          <li><a href="#services">Fumigation</a></li>
+          <li><a href="#services">Annual Monitoring</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#">Hurst, TX</a></li>
+          <li><a href="#">Fort Worth, TX</a></li>
+          <li><a href="#">Arlington, TX</a></li>
+          <li><a href="#">Grand Prairie, TX</a></li>
+          <li><a href="#">Irving, TX</a></li>
+          <li><a href="#">Mansfield, TX</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-contact-info">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l.66-.66a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:8173663130">(817) 366-3130</a>
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Hurst, TX 76054
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            dallasfortworthtermitepestcontrol.com
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 A North Texas Termite Specialist. All rights reserved. Licensed &amp; Insured in Texas.</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Header shadow on scroll
+(function() {
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+})();
+
+// Stat counter animation
+(function() {
+  var statEls = document.querySelectorAll('[data-target]');
+  if (!statEls.length) return;
+
+  function animateCounter(el) {
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    var suffix = el.getAttribute('data-suffix') || '';
+    var duration = 1400;
+    var startTime = null;
+
+    function easeOutQuart(t) {
+      return 1 - Math.pow(1 - t, 4);
+    }
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      var current = Math.floor(easeOutQuart(progress) * target);
+      el.textContent = current + suffix;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = target + suffix;
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  statEls.forEach(function(el) { observer.observe(el); });
+})();
+
+// FadeUp cards via IntersectionObserver
+(function() {
+  var fadeEls = document.querySelectorAll('.service-card, .why-card, .how-step, .review-card');
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  fadeEls.forEach(function(el) { observer.observe(el); });
+})();
+</script>
+
+</body>
+</html>

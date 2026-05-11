@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Pest Shop | Pro Pest Control &amp; DIY Products — Richardson, TX</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #1a1e21;
+  --primary-dark: #0d1013;
+  --accent: #1760c4;
+  --accent-dark: #0f4a9e;
+  --bg: #ffffff;
+  --bg-off: #f5f7fb;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.45);
+  --dark-text: #0f1523;
+  --grey-text: #5b6880;
+  --border: #dde3ef;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(23,96,196,0.1);
+  --shadow-lg: 0 8px 40px rgba(23,96,196,0.2);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(23,96,196,0.4); transition: all 0.15s ease; text-decoration: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(23,96,196,0.5); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 600;
+  padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.15s ease; text-decoration: none;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; } }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--primary); box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; height: 68px;
+}
+.brand-wrap { display: flex; flex-direction: column; }
+.brand-name { font-family: var(--font-display); font-weight: 900; font-size: 21px; color: white; letter-spacing: 0.01em; }
+.brand-tagline { font-family: var(--font-body); font-size: 12px; color: var(--t2); margin-top: 1px; }
+.header-cta { display: flex; align-items: center; gap: 20px; }
+.header-phone { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--t2); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+.header-phone:hover { color: white; }
+
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, #1e2530 100%);
+  padding: 90px 0 80px; position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.14; pointer-events: none; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-grid {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: center;
+}
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 20px; margin-bottom: 20px;
+  animation: heroFadeUp 0.5s ease-out 0.1s both;
+}
+.hero-headline {
+  font-family: var(--font-display); font-size: clamp(42px, 6vw, 64px);
+  font-weight: 900; color: white; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 20px;
+  animation: heroFadeUp 0.5s ease-out 0.2s both;
+}
+.hero-headline span { color: #5ba3ff; }
+.hero-sub {
+  font-family: var(--font-body); font-size: 18px; color: var(--t2);
+  line-height: 1.65; margin-bottom: 32px; max-width: 520px;
+  animation: heroFadeUp 0.5s ease-out 0.35s both;
+}
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.trust-item { display: flex; align-items: center; gap: 6px; font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+
+.hero-card {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(91,163,255,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35); backdrop-filter: blur(12px);
+  border-radius: 16px; padding: 28px 32px; animation: heroFadeUp 0.5s ease-out 0.4s both;
+}
+.hero-card-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: #5ba3ff; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px; }
+
+/* Icon-inline layout — different from other leads */
+.value-prop { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding: 12px; background: rgba(255,255,255,0.04); border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); }
+.value-prop:last-of-type { margin-bottom: 22px; }
+.vp-icon { width: 28px; height: 28px; border-radius: 6px; background: rgba(23,96,196,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #5ba3ff; }
+.vp-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: white; line-height: 1.2; }
+.card-phone { border-top: 1px solid rgba(91,163,255,0.15); padding-top: 20px; }
+.card-phone-label { font-family: var(--font-body); font-size: 12px; color: var(--t3); margin-bottom: 4px; }
+.card-phone-number { font-family: var(--font-display); font-size: 22px; font-weight: 900; color: white; text-decoration: none; }
+.card-phone-number:hover { color: #5ba3ff; }
+
+.stats-bar { background: var(--primary); }
+.stats-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 700px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+.stat-box { padding: 36px 24px; border-right: 1px solid rgba(255,255,255,0.08); text-align: center; }
+.stat-box:last-child { border-right: none; }
+.stat-number { font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px); font-weight: 900; color: #5ba3ff; line-height: 1; margin-bottom: 6px; }
+.stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+
+/* Dual-track services — split into Pro and DIY */
+.services-section { background: var(--bg); }
+.section-label { font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; display: block; }
+.section-title { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--dark-text); margin-bottom: 12px; letter-spacing: -0.02em; }
+.section-sub { font-family: var(--font-body); font-size: 16px; color: var(--grey-text); margin-bottom: 48px; max-width: 560px; }
+
+.track-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-display); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 6px; margin-bottom: 20px;
+}
+.track-pro { background: var(--accent); color: white; }
+.track-diy { background: var(--dark-text); color: white; }
+
+.service-card {
+  background: var(--bg); border: 1px solid var(--border); border-top: 3px solid transparent;
+  border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); transition: all 0.25s ease;
+}
+.service-card:hover { border-top-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.svc-icon { width: 48px; height: 48px; border-radius: 8px; background: rgba(23,96,196,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--accent); }
+.svc-name { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--dark-text); margin-bottom: 8px; }
+.svc-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 14px; }
+.svc-link { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+
+.why-section { background: var(--primary); position: relative; overflow: hidden; }
+.why-section::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.why-section > .container { position: relative; z-index: 1; }
+.why-diff-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 40px; }
+@media (max-width: 600px) { .why-diff-grid { grid-template-columns: 1fr; } }
+.diff-item { display: flex; align-items: flex-start; gap: 16px; }
+.diff-icon { width: 40px; height: 40px; border-radius: 8px; background: rgba(23,96,196,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #5ba3ff; }
+.diff-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; margin-bottom: 6px; }
+.diff-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.65; }
+
+.how-section { background: var(--primary-dark); }
+.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 48px; position: relative; }
+@media (max-width: 700px) { .steps-grid { grid-template-columns: 1fr; } }
+.steps-grid::before { content: ''; position: absolute; top: 36px; left: 16.67%; right: 16.67%; height: 1px; border-top: 2px dashed rgba(91,163,255,0.2); }
+@media (max-width: 700px) { .steps-grid::before { display: none; } }
+.step { text-align: center; padding: 0 8px; }
+.step-num { width: 60px; height: 60px; border-radius: 50%; background: var(--accent); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 26px; font-weight: 900; color: white; }
+.step-icon { margin-bottom: 16px; color: #5ba3ff; display: flex; justify-content: center; }
+.step-title { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: white; margin-bottom: 10px; }
+.step-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.65; }
+
+/* Dark review cards — distinct from other leads */
+.reviews-section { background: var(--bg-off); }
+.reviews-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
+.google-badge { display: flex; align-items: center; gap: 10px; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; }
+.google-rating { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--dark-text); }
+.google-badge-text { font-family: var(--font-body); font-size: 13px; color: var(--grey-text); }
+.review-card { background: var(--primary); border: 1px solid rgba(91,163,255,0.12); border-radius: var(--radius); padding: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: all 0.25s ease; }
+.review-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.25); transform: translateY(-3px); border-color: rgba(91,163,255,0.25); }
+.review-quote { color: #5ba3ff; opacity: 0.5; margin-bottom: 14px; display: block; }
+.review-text { font-family: var(--font-body); font-style: italic; font-size: 15px; line-height: 1.7; color: var(--t1); margin-bottom: 16px; }
+.review-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 16px 0; }
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar { width: 40px; height: 40px; border-radius: 50%; background: rgba(23,96,196,0.3); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 14px; font-weight: 700; color: #5ba3ff; flex-shrink: 0; }
+.reviewer-name { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: white; }
+.reviewer-meta { font-family: var(--font-body); font-size: 12px; color: var(--t3); }
+.stars { display: flex; gap: 2px; color: #f59e0b; margin-bottom: 2px; }
+
+.areas-section { background: var(--primary); }
+.areas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; align-items: center; }
+@media (max-width: 700px) { .areas-grid { grid-template-columns: 1fr; gap: 40px; } }
+.areas-chips { background: var(--primary-dark); border-radius: var(--radius); padding: 28px; display: flex; flex-wrap: wrap; gap: 10px; border: 1px solid rgba(91,163,255,0.1); }
+.chip { font-family: var(--font-body); font-size: 14px; font-weight: 600; padding: 7px 16px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2); color: var(--t2); cursor: default; transition: all 0.2s ease; }
+.chip:hover { background: var(--accent); border-color: var(--accent); color: white; }
+
+.contact-section { background: var(--bg); }
+.contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; align-items: start; }
+@media (max-width: 700px) { .contact-grid { grid-template-columns: 1fr; } }
+.form-group { margin-bottom: 20px; }
+.form-label { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; display: block; }
+input, select, textarea { width: 100%; background: var(--bg-off); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; font-family: var(--font-body); font-size: 14px; color: var(--dark-text); transition: border-color 0.2s; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(23,96,196,0.12); }
+.contact-info-card { background: var(--primary); border-radius: var(--radius); padding: 32px; color: white; }
+.info-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 24px; }
+.info-icon { width: 40px; height: 40px; border-radius: 8px; background: rgba(23,96,196,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #5ba3ff; }
+.info-label { font-family: var(--font-body); font-size: 12px; color: var(--t3); margin-bottom: 4px; }
+.info-value { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; }
+
+.cta-band { background: linear-gradient(135deg, var(--accent-dark), var(--accent)); padding: 80px 0; text-align: center; position: relative; overflow: hidden; }
+.cta-band::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.15; pointer-events: none; z-index: 0;
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-headline { font-family: var(--font-display); font-size: clamp(28px, 4vw, 44px); font-weight: 900; color: white; margin-bottom: 12px; letter-spacing: -0.02em; }
+.cta-sub { font-family: var(--font-body); font-size: 16px; color: rgba(255,255,255,0.88); margin-bottom: 32px; }
+.cta-btn { display: inline-flex; align-items: center; gap: 10px; background: white; color: var(--accent-dark); font-family: var(--font-display); font-size: 16px; font-weight: 700; padding: 16px 36px; border-radius: 8px; text-decoration: none; box-shadow: 0 6px 24px rgba(0,0,0,0.2); transition: all 0.15s ease; }
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(0,0,0,0.25); }
+
+footer { background: var(--primary-dark); padding: 60px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 48px; margin-bottom: 48px; }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+.footer-brand-name { font-family: var(--font-display); font-size: 21px; font-weight: 900; color: white; margin-bottom: 12px; }
+.footer-desc { font-family: var(--font-body); font-size: 14px; color: var(--t3); line-height: 1.7; margin-bottom: 20px; }
+.footer-col-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: #5ba3ff; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { font-family: var(--font-body); font-size: 14px; color: var(--t2); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: #5ba3ff; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; }
+.footer-bottom-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.copyright { font-family: var(--font-body); font-size: 13px; color: var(--t3); }
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="header-inner">
+    <div class="brand-wrap">
+      <div class="brand-name">The Pest Shop</div>
+      <div class="brand-tagline">Pro Pest Control &amp; DIY Products — Richardson, TX</div>
+    </div>
+    <div class="header-cta">
+      <a href="tel:9725190355" class="header-phone">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (972) 519-0355
+      </a>
+      <a href="tel:9725190355" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call for Expert Advice
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Richardson's Expert Pest Control — 4.9 Stars · 240 Reviews
+      </div>
+      <h1 class="hero-headline">Richardson's <span>Pro-Grade</span> Pest Control Shop</h1>
+      <p class="hero-sub">The only place in Collin County where you buy the exact same products the pros use — or hire our licensed technicians to handle it for you. 240 five-star reviews don't lie.</p>
+      <div class="hero-ctas">
+        <a href="tel:9725190355" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (972) 519-0355
+        </a>
+        <a href="#contact" class="btn-ghost">Schedule Service</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>4.9 Stars · 240 Reviews</span>
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Texas Licensed
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/></svg>
+          Pro Products In-Store
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <div class="hero-card-title">Two Ways to Win Against Pests</div>
+        <div class="value-prop">
+          <div class="vp-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="vp-title">Hire Our Licensed Technicians</div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="vp-title">Buy Pro-Grade DIY Products</div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="vp-title">Free Expert Consultation In-Store</div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="vp-title">4.9 Stars — 240 Verified Reviews</div>
+        </div>
+        <div class="card-phone">
+          <div class="card-phone-label">Call for expert advice or to book service</div>
+          <a href="tel:9725190355" class="card-phone-number">(972) 519-0355</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-box"><div class="stat-number" data-target="240" data-suffix="+">0+</div><div class="stat-label">Google Reviews</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="4" data-suffix=".9">0.0</div><div class="stat-label">Star Rating</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="200" data-suffix="+">0+</div><div class="stat-label">Pro Products In-Stock</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="2" data-suffix=" Ways">0 Ways</div><div class="stat-label">DIY or Full Service</div></div>
+  </div>
+</div>
+
+<section class="services-section">
+  <div class="container">
+    <span class="section-label">Pro Service + Retail Products</span>
+    <h2 class="section-title">Your Pest Problem, Your Choice</h2>
+    <p class="section-sub">Let us handle it, or we'll sell you exactly what we use — professional-grade concentrates, baits, and equipment not available at hardware stores.</p>
+
+    <div style="margin-bottom:16px;"><span class="track-label track-pro">Professional Service</span></div>
+    <div class="grid-3" style="margin-bottom:48px;">
+      <div class="service-card card">
+        <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="svc-name">General Pest Control</div>
+        <p class="svc-desc">Roaches, ants, spiders, silverfish — quarterly or monthly service plans that keep your home pest-free year-round with a callback guarantee.</p>
+        <a href="#contact" class="svc-link">Schedule Service &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="svc-name">Termite Control</div>
+        <p class="svc-desc">Subterranean and drywood termite treatments using commercial-grade products. Liquid barriers, bait systems, and annual monitoring available.</p>
+        <a href="#contact" class="svc-link">Schedule Inspection &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="svc-name">Rodent Exclusion</div>
+        <p class="svc-desc">We find and seal every entry point mice and rats are using — then eliminate the current population. No return visits means no return pests.</p>
+        <a href="#contact" class="svc-link">Get Quote &rarr;</a>
+      </div>
+    </div>
+
+    <div style="margin-bottom:16px;"><span class="track-label track-diy">DIY Products</span></div>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+        <div class="svc-name">Pro-Grade Concentrates</div>
+        <p class="svc-desc">Commercial pesticide concentrates that actually work — Bifen IT, Taurus SC, Alpine WSG. Not available at Home Depot. Available at The Pest Shop.</p>
+        <a href="tel:9725190355" class="svc-link">Ask In-Store &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div class="svc-name">Bait Stations &amp; Traps</div>
+        <p class="svc-desc">Termite bait stations, rodent bait blocks, cockroach gel baits — same equipment our technicians install, available for purchase with expert guidance.</p>
+        <a href="tel:9725190355" class="svc-link">Ask In-Store &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div class="svc-name">Free Expert Consultation</div>
+        <p class="svc-desc">Walk in and describe your pest problem. We'll identify the species, recommend the right product, and show you exactly how to apply it. No charge, ever.</p>
+        <a href="tel:9725190355" class="svc-link">Visit the Store &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section">
+  <div class="container">
+    <span class="section-label" style="color:#5ba3ff">Why Richardson Chooses Us</span>
+    <h2 class="section-title" style="color:white">Pro Knowledge. Both Paths. 240 Reviews.</h2>
+    <p class="section-sub" style="color:var(--t2)">Big box stores sell pest control products. We sell pest control expertise. There's a difference — and 240 reviews confirm it.</p>
+    <div class="why-diff-grid">
+      <div class="diff-item card">
+        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <div><div class="diff-title">Pro Products, Not Watered-Down Retail</div><div class="diff-desc">We stock commercial concentrates — the same formulas licensed technicians use. Hardware store products are diluted for consumer liability reasons. Ours aren't.</div></div>
+      </div>
+      <div class="diff-item card">
+        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="diff-title">Diagnosis Before Prescription</div><div class="diff-desc">We identify what you're dealing with before recommending anything. Different cockroach species respond to different treatments — we get it right the first time.</div></div>
+      </div>
+      <div class="diff-item card">
+        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><div class="diff-title">4.9 Stars — 240 Verified Reviews</div><div class="diff-desc">Richardson's most-reviewed pest control service by a wide margin. Both the products we sell and the service we provide earn 5-star reviews consistently.</div></div>
+      </div>
+      <div class="diff-item card">
+        <div class="diff-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/></svg></div>
+        <div><div class="diff-title">Store + Service Under One Roof</div><div class="diff-desc">Buy what you need today. Or schedule our licensed technicians to handle it. Either way, you're working with the same pest control experts.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section">
+  <div class="container">
+    <span class="section-label" style="color:#5ba3ff">How It Works</span>
+    <h2 class="section-title" style="color:white">Expert Help, Your Way</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="step-title">Call or Visit the Store</div>
+        <p class="step-desc">Tell us what you're seeing — we'll ask a few questions and identify the pest. Phone consultation is free. In-store consultation is free. Always.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="step-title">DIY or Full Service</div>
+        <p class="step-desc">We'll recommend the exact product for your pest and show you how to use it safely — or we'll schedule our licensed technicians to handle the whole job for you.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="step-title">Problem Solved</div>
+        <p class="step-desc">Pro products work as well in your hands as ours — we make sure you know how to apply them. For service calls, we follow up to confirm results and retreat free if needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-header">
+      <div><span class="section-label">What 240 Customers Say</span><h2 class="section-title">4.9 Stars. Richardson's Most Trusted.</h2></div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div><div class="google-rating">4.9 Stars</div><div class="google-badge-text">240 Google Reviews</div></div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg class="review-quote" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"I've been buying pest control products here for three years. These guys know their stuff in a way that no one at Home Depot even comes close to. Walked in with a serious German roach problem in my restaurant kitchen — they identified the species, handed me exactly the right gel bait, and explained the rotation protocol. Problem resolved in one treatment cycle."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">RN</div>
+          <div>
+            <div class="stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="reviewer-name">Ray N.</div>
+            <div class="reviewer-meta">Richardson, TX &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg class="review-quote" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Had them come out for a full termite treatment on my Richardson home — not just an inspection, the full liquid barrier. Competitive pricing, showed up on time, walked me through exactly what they were applying and why. Two years later still no termite activity. I also stop in every spring to buy my annual mosquito concentrate for the yard."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">CF</div>
+          <div>
+            <div class="stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="reviewer-name">Cindy F.</div>
+            <div class="reviewer-meta">Richardson, TX &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg class="review-quote" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"I manage 14 rental properties in Richardson and Plano. The Pest Shop does our service contracts for all of them. Consistent quality, their techs know the difference between a German roach and an American roach and they treat accordingly. When I had a tenant report bed bugs in three units, they were there the next morning. I'd never go anywhere else."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">MT</div>
+          <div>
+            <div class="stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="reviewer-name">Mark T.</div>
+            <div class="reviewer-meta">Richardson, TX — Property Manager &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas-section">
+  <div class="container">
+    <div class="areas-grid">
+      <div>
+        <span class="section-label" style="color:#5ba3ff">Where We Serve</span>
+        <h2 class="section-title" style="color:white">Richardson &amp; All of Dallas County</h2>
+        <p style="font-family:var(--font-body);font-size:16px;color:var(--t2);line-height:1.7;margin-bottom:28px;">Store located in Richardson. Professional service throughout Dallas County and Collin County. DIY products available in-store or we'll help you order online.</p>
+        <a href="tel:9725190355" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Check Service Availability
+        </a>
+      </div>
+      <div class="areas-chips">
+        <span class="chip">Richardson</span>
+        <span class="chip">Plano</span>
+        <span class="chip">Garland</span>
+        <span class="chip">Allen</span>
+        <span class="chip">McKinney</span>
+        <span class="chip">Dallas</span>
+        <span class="chip">Addison</span>
+        <span class="chip">Murphy</span>
+        <span class="chip">Sachse</span>
+        <span class="chip">Wylie</span>
+        <span class="chip">Mesquite</span>
+        <span class="chip">Rowlett</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title">Call for Advice or Schedule Service</h2>
+        <p style="font-family:var(--font-body);font-size:16px;color:var(--grey-text);margin-bottom:32px;">Tell us your pest problem and we'll prescribe the right solution — DIY products, professional service, or both.</p>
+        <form>
+          <div class="form-group"><label class="form-label">Full Name</label><input type="text" placeholder="Your name"></div>
+          <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" placeholder="(972) 000-0000"></div>
+          <div class="form-group"><label class="form-label">Email</label><input type="email" placeholder="your@email.com"></div>
+          <div class="form-group"><label class="form-label">What Do You Need?</label>
+            <select><option>Professional pest control service</option><option>Buy DIY products in-store</option><option>Termite inspection &amp; treatment</option><option>Rodent exclusion</option><option>Expert consultation (free)</option><option>Commercial pest control</option></select>
+          </div>
+          <div class="form-group"><label class="form-label">Tell Us More</label><textarea rows="3" placeholder="Describe the pest problem, property type, or what you're looking for..."></textarea></div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px;">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-info-card">
+        <h3 style="font-family:var(--font-display);font-size:22px;font-weight:700;color:white;margin-bottom:28px;">Find The Pest Shop</h3>
+        <div class="info-item">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="info-label">Call Us</div><div class="info-value">(972) 519-0355</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="info-label">Store Location</div><div class="info-value">Richardson, TX 75080</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="info-label">Store Hours</div><div class="info-value">Mon–Fri 8AM–5PM · Sat 9AM–2PM</div></div>
+        </div>
+        <div style="background:rgba(23,96,196,0.15);border:1px solid rgba(91,163,255,0.2);border-radius:8px;padding:16px;margin-top:8px;">
+          <div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:#5ba3ff;margin-bottom:6px;">Texas Licensed Pest Control Operator</div>
+          <div style="font-family:var(--font-body);font-size:13px;color:var(--t2);line-height:1.6;">Professional products sold only with proper guidance. We verify your pest problem before recommending any treatment.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2 class="cta-headline">Richardson's Most Trusted Pest Experts</h2>
+    <p class="cta-sub">Pro service or DIY products — 4.9 stars, 240 reviews, one trusted local source.</p>
+    <a href="tel:9725190355" class="cta-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (972) 519-0355
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">The Pest Shop</div>
+        <p class="footer-desc">Richardson's only pest control retailer and service provider. Buy professional-grade products in-store or hire our licensed technicians. 4.9 stars · 240 reviews.</p>
+        <a href="tel:9725190355" style="font-family:var(--font-display);font-size:18px;font-weight:700;color:#5ba3ff;text-decoration:none;">(972) 519-0355</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Pro Services</div>
+        <ul class="footer-links">
+          <li><a href="#contact">General Pest Control</a></li>
+          <li><a href="#contact">Termite Treatment</a></li>
+          <li><a href="#contact">Rodent Exclusion</a></li>
+          <li><a href="#contact">Bed Bug Treatment</a></li>
+          <li><a href="#contact">Commercial Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">DIY Products</div>
+        <ul class="footer-links">
+          <li><a href="tel:9725190355">Pro Concentrates</a></li>
+          <li><a href="tel:9725190355">Bait Stations</a></li>
+          <li><a href="tel:9725190355">Termite Products</a></li>
+          <li><a href="tel:9725190355">Mosquito Control</a></li>
+          <li><a href="tel:9725190355">Expert Consultation</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Visit Us</div>
+        <ul class="footer-links">
+          <li><a href="tel:9725190355">(972) 519-0355</a></li>
+          <li><a href="#contact">Richardson, TX 75080</a></li>
+          <li><a href="#contact">Schedule Service</a></li>
+        </ul>
+        <div style="margin-top:20px;padding:16px;background:rgba(23,96,196,0.15);border-radius:8px;border:1px solid rgba(91,163,255,0.2);">
+          <div style="font-family:var(--font-display);font-size:13px;font-weight:700;color:#5ba3ff;margin-bottom:4px;">4.9 Stars · 240 Reviews</div>
+          <div style="font-family:var(--font-body);font-size:12px;color:var(--t3);">Texas Licensed &middot; Fully Insured</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <span class="copyright">&copy; 2026 The Pest Shop — Pest Control &amp; DIY Products. Richardson, TX.</span>
+        <span class="copyright">Texas Licensed Pest Control Operator</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800, start = performance.now();
+        const update = (time) => {
+          const p = Math.min((time - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+          if (p < 1) requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+      }
+    });
+  }, { threshold: 0.5 }).observe(el);
+});
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.2 });
+document.querySelectorAll('.card').forEach(c => cardObs.observe(c));
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header').style.boxShadow = window.scrollY > 50 ? '0 4px 24px rgba(0,0,0,0.5)' : '0 2px 12px rgba(0,0,0,0.35)';
+});
+</script>
+</body>
+</html>

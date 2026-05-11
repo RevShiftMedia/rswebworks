@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sureguard Lawn &amp; Pest | Mansfield, TX | (972) 975-5460</title>
+<meta name="description" content="Sureguard Lawn &amp; Pest — Mansfield's most trusted lawn care and pest control experts. 936 five-star reviews. Serving Mansfield, Arlington, Kennedale, and all of Tarrant County. Call (972) 975-5460.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #0c4a6e;
+  --primary-dark: #082f47;
+  --accent: #0891b2;
+  --accent-dark: #0e7490;
+  --white: #ffffff;
+  --bg-off: #f2f6f8;
+  --text-dark: #0c2233;
+  --text-muted: #4b6a7c;
+  --text-light: #93c5d4;
+  --border: #0e3a55;
+  --card-dark: #0d3f5e;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--primary);
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  transition: box-shadow 0.3s;
+}
+
+#site-header.scrolled {
+  box-shadow: 0 2px 24px rgba(0,0,0,0.35);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+}
+
+.header-logo-mark {
+  width: 42px;
+  height: 42px;
+  background: var(--accent);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header-logo-mark svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.header-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.header-name span {
+  display: block;
+  font-size: 11px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-nav a {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-light);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.header-nav a:hover { color: var(--white); }
+
+.btn-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.btn-header:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 88px 48px 88px;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(8, 145, 178, 0.15);
+  border: 1px solid rgba(8, 145, 178, 0.4);
+  color: #38bdf8;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  width: fit-content;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.1s;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #38bdf8;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.hero-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(44px, 5.5vw, 76px);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.0;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-headline span {
+  color: #38bdf8;
+  display: inline;
+}
+
+.hero-sub {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-light);
+  line-height: 1.65;
+  margin-bottom: 34px;
+  max-width: 540px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 14px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 13px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 2px solid rgba(255,255,255,0.25);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.05);
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-light);
+  letter-spacing: 0.02em;
+}
+
+.trust-item svg {
+  width: 16px;
+  height: 16px;
+  fill: #38bdf8;
+  flex-shrink: 0;
+}
+
+.trust-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255,255,255,0.12);
+}
+
+/* Hero Card */
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 38px 32px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease forwards;
+  animation-delay: 0.45s;
+}
+
+.hero-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-card-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.hero-card-stars svg {
+  width: 18px;
+  height: 18px;
+  fill: #fbbf24;
+}
+
+.hero-card-rating-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.hero-card-rating-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
+
+.hero-card-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero-card-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-bottom: 28px;
+}
+
+.hero-card-items li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.4;
+}
+
+.hero-card-items li::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6l3 3 5-5' stroke='white' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+}
+
+.hero-card-cta {
+  display: block;
+  text-align: center;
+  background: var(--accent);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.hero-card-cta:hover {
+  background: var(--accent-dark);
+}
+
+.hero-card-note {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  margin-top: 10px;
+  font-style: italic;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== STATS ROW ===== */
+.stats-row {
+  background: var(--primary);
+  padding: 0;
+}
+
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-item {
+  padding: 36px 24px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 54px;
+  font-weight: 900;
+  color: #38bdf8;
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.stat-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-light);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ===== SECTION HEADERS ===== */
+.section-label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.section-sub {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 560px;
+}
+
+/* ===== SERVICES ===== */
+.services-section {
+  padding: 88px 48px;
+  background: var(--white);
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.services-header .section-sub {
+  margin: 0 auto;
+}
+
+.services-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.service-card {
+  background: var(--bg-off);
+  border-radius: 8px;
+  padding: 32px 28px;
+  border-top: 3px solid transparent;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.25s, box-shadow 0.25s;
+}
+
+.service-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 36px rgba(8, 145, 178, 0.12);
+  transform: translateY(-4px);
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.service-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: #38bdf8;
+}
+
+.service-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ===== WHY US ===== */
+.why-section {
+  background: var(--primary);
+  padding: 88px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.why-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.why-header {
+  margin-bottom: 52px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.why-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 8px;
+  padding: 34px 30px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.why-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.why-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.why-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+
+.why-desc {
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 1.65;
+}
+
+/* ===== HOW IT WORKS ===== */
+.how-section {
+  background: var(--primary-dark);
+  padding: 88px 48px;
+}
+
+.how-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.how-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.how-header .section-sub {
+  margin: 0 auto;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.how-grid::before {
+  content: '';
+  position: absolute;
+  top: 38px;
+  left: calc(16.6% + 22px);
+  right: calc(16.6% + 22px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent) 0%, rgba(8,145,178,0.25) 100%);
+}
+
+.how-step {
+  text-align: center;
+  padding: 0 28px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.how-step.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.step-circle {
+  width: 76px;
+  height: 76px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--white);
+  margin: 0 auto 26px;
+  position: relative;
+  z-index: 1;
+  border: 4px solid var(--primary-dark);
+}
+
+.step-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.step-desc {
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 1.65;
+}
+
+/* ===== REVIEWS ===== */
+.reviews-section {
+  background: var(--bg-off);
+  padding: 88px 48px;
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.reviews-header .section-sub {
+  margin: 0 auto;
+}
+
+.reviews-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.review-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 34px 30px;
+  box-shadow: 0 2px 16px rgba(12, 74, 110, 0.07);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.review-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.review-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+
+.review-stars svg {
+  width: 18px;
+  height: 18px;
+  fill: #f59e0b;
+}
+
+.review-text {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-avatar {
+  width: 44px;
+  height: 44px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.review-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-dark);
+}
+
+.review-loc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ===== SERVICE AREAS ===== */
+.areas-section {
+  background: var(--primary);
+  padding: 88px 48px;
+}
+
+.areas-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.areas-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin-top: 8px;
+}
+
+.area-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-light);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
+}
+
+.area-item:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.area-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #38bdf8;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.area-item:hover {
+  color: var(--white);
+}
+
+/* ===== CONTACT ===== */
+.contact-section {
+  background: var(--white);
+  padding: 88px 48px;
+}
+
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.contact-header {
+  margin-bottom: 34px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  padding: 13px 16px;
+  border: 2px solid #d4e6ef;
+  border-radius: 6px;
+  color: var(--text-dark);
+  background: var(--white);
+  transition: border-color 0.2s;
+  outline: none;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.btn-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--white);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-submit:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.contact-info-card {
+  background: var(--primary);
+  border-radius: 8px;
+  padding: 44px 38px;
+}
+
+.contact-info-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 30px;
+}
+
+.contact-info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 34px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contact-info-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(8, 145, 178, 0.15);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #38bdf8;
+}
+
+.contact-info-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.contact-info-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.contact-info-value a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.ssl-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 11px 14px;
+}
+
+.ssl-badge svg {
+  width: 18px;
+  height: 18px;
+  fill: #4ade80;
+  flex-shrink: 0;
+}
+
+.ssl-badge span {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ===== CTA BAND ===== */
+.cta-band {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  padding: 72px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  pointer-events: none;
+}
+
+.cta-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-headline {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(36px, 5vw, 62px);
+  font-weight: 900;
+  color: var(--white);
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  letter-spacing: -0.01em;
+}
+
+.cta-sub {
+  font-size: 18px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 36px;
+  line-height: 1.6;
+}
+
+.btn-cta-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--white);
+  color: var(--accent-dark);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 16px 44px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn-cta-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.2);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--primary-dark);
+  padding: 68px 48px 34px;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 44px;
+  margin-bottom: 52px;
+}
+
+.footer-brand-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.footer-brand-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.footer-phone {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.footer-col-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #38bdf8;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.footer-legal {
+  display: flex;
+  gap: 22px;
+}
+
+.footer-legal a {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-legal a:hover {
+  color: var(--white);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .stats-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-top: 1px solid var(--border); }
+  .stat-item:nth-child(4) { border-top: 1px solid var(--border); border-right: none; }
+
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .areas-inner { grid-template-columns: repeat(2, 1fr); }
+  .contact-inner { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .header-nav { display: none; }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-card { display: none; }
+
+  .stats-inner { grid-template-columns: 1fr; }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .stat-item:last-child { border-bottom: none; }
+
+  .services-section { padding: 64px 20px; }
+  .services-grid { grid-template-columns: 1fr; }
+
+  .why-section { padding: 64px 20px; }
+  .why-grid { grid-template-columns: 1fr; }
+
+  .how-section { padding: 64px 20px; }
+  .how-grid { grid-template-columns: 1fr; }
+  .how-grid::before { display: none; }
+
+  .reviews-section { padding: 64px 20px; }
+  .reviews-grid { grid-template-columns: 1fr; }
+
+  .areas-section { padding: 64px 20px; }
+  .areas-inner { grid-template-columns: 1fr; gap: 36px; }
+
+  .contact-section { padding: 64px 20px; }
+  .contact-inner { grid-template-columns: 1fr; gap: 36px; }
+  .form-row { grid-template-columns: 1fr; }
+
+  .cta-band { padding: 60px 20px; }
+
+  footer { padding: 60px 20px 28px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <a href="#" class="header-brand">
+    <div class="header-logo-mark">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 8C8 10 5.9 16.17 3.82 19.73L5.71 21l1-1.5c.51.36 1.06.64 1.63.82L8 21c2 0 6-3 6-3v-2c-3 0-5 .5-5 .5 1-3 3.5-5.5 8-6.5V8zM19 3l-1.5 1.5c.7.7 1.1 1.68 1.1 2.68L17 9l1 1 1.5-1.5c.74.74 1.5 1.84 1.5 3L23 12l1-1c0-2.46-1.02-4.74-2.7-6.3L19 3z"/></svg>
+    </div>
+    <div class="header-name">
+      Sureguard Lawn &amp; Pest
+      <span>Mansfield, TX &mdash; Serving Tarrant County</span>
+    </div>
+  </a>
+  <nav class="header-nav">
+    <a href="#services">Services</a>
+    <a href="#why-us">Why Us</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="tel:9729755460" class="btn-header">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.3 1L6.6 10.8z"/></svg>
+    (972) 975-5460
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">936 Five-Star Reviews in Mansfield &amp; Tarrant County</div>
+      <h1 class="hero-headline">Mansfield's Most Trusted <span>Lawn &amp; Pest</span> Experts</h1>
+      <p class="hero-sub">For over 20 years, Sureguard has been the undisputed choice for lawn care and pest control throughout Mansfield, Arlington, Kennedale, and all of Tarrant County. 936 five-star reviews don't happen by accident.</p>
+      <div class="hero-ctas">
+        <a href="tel:9729755460" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.3 1L6.6 10.8z"/></svg>
+          Call Now
+        </a>
+        <a href="#contact" class="btn-outline">Get a Free Quote</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+          4.9-Star Average
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+          20+ Years Serving Mansfield
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19.73L5.71 21l1-1.5c.51.36 1.06.64 1.63.82L8 21c2 0 6-3 6-3v-2c-3 0-5 .5-5 .5 1-3 3.5-5.5 8-6.5V8z"/></svg>
+          Lawn &amp; Pest in One Plan
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-rating">
+        <div class="hero-card-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+        </div>
+        <div>
+          <div class="hero-card-rating-text">4.9 / 5.0</div>
+          <div class="hero-card-rating-sub">936 verified reviews</div>
+        </div>
+      </div>
+      <div class="hero-card-title">What's Included</div>
+      <ul class="hero-card-items">
+        <li>Lawn fertilization &amp; weed control</li>
+        <li>General pest control service</li>
+        <li>Fire ant elimination</li>
+        <li>Mosquito barrier treatments</li>
+        <li>Termite protection available</li>
+      </ul>
+      <a href="tel:9729755460" class="hero-card-cta">(972) 975-5460 &mdash; Free Quote</a>
+      <p class="hero-card-note">Lawn &amp; pest bundled &mdash; one plan, one call</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS ROW -->
+<div class="stats-row">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num"><span data-target="936" data-suffix="">0</span></div>
+      <div class="stat-label">Five-Star Reviews</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span data-target="4" data-suffix=".9">0</span></div>
+      <div class="stat-label">Star Rating</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span data-target="20" data-suffix="+">0</span></div>
+      <div class="stat-label">Years in Business</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num"><span data-target="2" data-suffix="">0</span></div>
+      <div class="stat-label">Services in 1 Plan</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="services-header">
+    <div class="section-label">Lawn &amp; Pest Protection</div>
+    <h2 class="section-title">Complete Lawn &amp; Pest Solutions</h2>
+    <p class="section-sub">Sureguard is the only company in Mansfield that handles your lawn and your pest control under one roof — one call, one relationship, one bill.</p>
+  </div>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 8C8 10 5.9 16.17 3.82 19.73L5.71 21l1-1.5c.51.36 1.06.64 1.63.82L8 21c2 0 6-3 6-3v-2c-3 0-5 .5-5 .5 1-3 3.5-5.5 8-6.5V8zM19 3l-1.5 1.5c.7.7 1.1 1.68 1.1 2.68L17 9l1 1 1.5-1.5c.74.74 1.5 1.84 1.5 3L23 12l1-1c0-2.46-1.02-4.74-2.7-6.3L19 3z"/></svg>
+      </div>
+      <div class="service-name">Lawn Fertilization &amp; Weed Control</div>
+      <p class="service-desc">Customized seasonal fertilization programs paired with pre- and post-emergent weed control that transforms patchy, struggling lawns into lush, thick turf within a single growing season.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L3 7v5c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7L12 2zm0 4.5l5 2.7V12c0 3.4-2.3 6.6-5 7.9-2.7-1.3-5-4.5-5-7.9V9.2L12 6.5z"/></svg>
+      </div>
+      <div class="service-name">General Pest Control</div>
+      <p class="service-desc">Comprehensive interior and exterior pest treatments targeting ants, roaches, spiders, silverfish, and other common household invaders. Quarterly maintenance keeps your home protected year-round.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 3H4v2l4.5 4.5L12 8l3.5 1.5L20 5V3zm-4 10c0 .55-.45 1-1 1h-6c-.55 0-1-.45-1-1v-1h8v1zM5 19c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-5H5v5zm5-3h4v1h-4v-1z"/></svg>
+      </div>
+      <div class="service-name">Termite Protection</div>
+      <p class="service-desc">Licensed termite inspection, liquid barrier treatment, and ongoing bait station monitoring to protect your home's structure from subterranean termite damage — the most costly pest problem in Texas.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+      </div>
+      <div class="service-name">Mosquito Barrier Treatment</div>
+      <p class="service-desc">Targeted spray treatments applied to shrubs, trees, and low-lying vegetation dramatically reduce mosquito populations through the spring and summer months so you can actually enjoy your outdoor space.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+      </div>
+      <div class="service-name">Fire Ant Control</div>
+      <p class="service-desc">Two-step fire ant elimination using broadcast bait treatments followed by individual mound applications. We eradicate existing colonies and create a barrier that prevents new ones from establishing on your property.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm1 14h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
+      </div>
+      <div class="service-name">Lawn Disease &amp; Fungus Treatment</div>
+      <p class="service-desc">Diagnosis and treatment of brown patch, take-all root rot, dollar spot, and other turf diseases that can devastate a lawn. We identify the pathogen and apply targeted fungicide programs that restore turf health.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section" id="why-us">
+  <div class="why-inner">
+    <div class="why-header">
+      <div class="section-label">The Sureguard Difference</div>
+      <h2 class="section-title" style="color:var(--white);">936 Reviews. 20+ Years. One Clear Standard.</h2>
+      <p class="section-sub" style="color:var(--text-light);">You don't accumulate nearly 1,000 five-star reviews in Mansfield by accident. Here's why homeowners and businesses throughout Tarrant County keep choosing Sureguard year after year.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <div class="why-title">Dual-Service Expertise</div>
+        <p class="why-desc">Most companies specialize in one or the other. Sureguard's technicians are trained in both lawn science and pest management — giving you resort-quality turf alongside clinical pest precision, all from a single provider you can trust.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <div class="why-title">936 Verified Five-Star Reviews</div>
+        <p class="why-desc">We are Mansfield's most-reviewed lawn and pest company by a wide margin. Our reputation was built over 20+ years of showing up on time, communicating clearly, and delivering results that speak for themselves.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <div class="why-title">Knowledgeable, Consistent Technicians</div>
+        <p class="why-desc">We don't rotate strangers through your property. Our technicians are experienced, licensed, and trained to explain what they're doing and why. You'll see the same familiar face and get the same high standard every single visit.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">04</div>
+        <div class="why-title">Transparent, Fair Pricing</div>
+        <p class="why-desc">No promotional introductory rates that spike after the first visit. Sureguard's pricing is straightforward and consistent. Bundling lawn and pest services provides significant savings compared to maintaining two separate contracts with two companies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="how-inner">
+    <div class="how-header">
+      <div class="section-label">The Process</div>
+      <h2 class="section-title" style="color:var(--white);">Simple from Day One</h2>
+      <p class="section-sub" style="color:var(--text-light);">Getting started with Sureguard is straightforward. We assess your property, build a custom plan, and take it from there so you never have to think about it again.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="step-circle">1</div>
+        <div class="step-title">Free Property Assessment</div>
+        <p class="step-desc">We evaluate your lawn's current condition, soil type, weed pressure, and any active pest issues. This gives us the data to build a plan that's right for your specific property — not a one-size-fits-all package.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-circle">2</div>
+        <div class="step-title">Custom Lawn &amp; Pest Plan</div>
+        <p class="step-desc">We present a tailored service plan covering fertilization timing, weed control, pest treatments, and any specialty needs. You'll see exactly what we'll do and when, with transparent pricing before any commitment.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-circle">3</div>
+        <div class="step-title">Ongoing Service &amp; Results</div>
+        <p class="step-desc">Sureguard handles everything on a scheduled basis. You'll receive notifications before each visit and follow-up communication after. If any issue arises between visits, we come back at no additional charge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="reviews-header">
+    <div class="section-label">Customer Reviews</div>
+    <h2 class="section-title">What Mansfield Residents Are Saying</h2>
+    <p class="section-sub">936 five-star reviews across Mansfield, Arlington, Kennedale, and surrounding communities. Here are just a few of the stories behind those ratings.</p>
+  </div>
+  <div class="reviews-grid">
+
+    <div class="review-card">
+      <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+      </div>
+      <p class="review-text">"My lawn was an embarrassment — patchy, full of weeds, barely holding together. Sureguard put it on their fertilization program and by the end of the season it was completely transformed. I also added their pest plan. Best decision I've made for this house."</p>
+      <div class="review-author">
+        <div class="review-avatar">BH</div>
+        <div>
+          <div class="review-name">Brian Holloway</div>
+          <div class="review-loc">Mansfield, TX</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+      </div>
+      <p class="review-text">"We had fire ants everywhere — front yard, backyard, even in the flower beds. Sureguard completely solved the problem. Their two-step treatment eliminated all the colonies and we haven't seen a single mound since. The quarterly pest plan also keeps everything else in check."</p>
+      <div class="review-author">
+        <div class="review-avatar">SC</div>
+        <div>
+          <div class="review-name">Stephanie Cruz</div>
+          <div class="review-loc">Kennedale, TX</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+      <div class="review-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1z"/></svg>
+      </div>
+      <p class="review-text">"I've been a Sureguard customer for more than five years. Reliable every single time — they show up when they say they will, the technicians are knowledgeable and explain everything, and the pricing has stayed fair. That kind of consistency is hard to find. I recommend them to everyone I know."</p>
+      <div class="review-author">
+        <div class="review-avatar">HJ</div>
+        <div>
+          <div class="review-name">Harold Jenkins</div>
+          <div class="review-loc">Arlington, TX</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas-section" id="service-areas">
+  <div class="areas-inner">
+    <div>
+      <div class="section-label">Coverage Zone</div>
+      <h2 class="section-title" style="color:var(--white);">Serving Mansfield &amp; All of Tarrant County</h2>
+      <p class="section-sub" style="color:var(--text-light);">Sureguard serves a wide corridor of communities across Tarrant and surrounding counties. If you're in the area, chances are we're already working in your neighborhood.</p>
+      <br>
+      <a href="tel:9729755460" class="btn-primary" style="margin-top:16px; border-radius:6px;">Check Your Area &mdash; Call Now</a>
+    </div>
+    <div>
+      <div class="areas-list">
+        <div class="area-item">Mansfield</div>
+        <div class="area-item">Arlington</div>
+        <div class="area-item">Kennedale</div>
+        <div class="area-item">Burleson</div>
+        <div class="area-item">Grand Prairie</div>
+        <div class="area-item">Midlothian</div>
+        <div class="area-item">Crowley</div>
+        <div class="area-item">Fort Worth</div>
+        <div class="area-item">Cleburne</div>
+        <div class="area-item">Cedar Hill</div>
+        <div class="area-item">Duncanville</div>
+        <div class="area-item">DeSoto</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="contact-header">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">Request Your Free Property Assessment</h2>
+        <p class="section-sub">Tell us about your lawn and pest needs and we'll put together a customized plan. No pressure, no commitment required to get a quote.</p>
+      </div>
+      <form class="contact-form" action="#" method="post">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Brian" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Holloway" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(972) 000-0000" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="brian@email.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">Primary Service Interest</label>
+          <select id="service" name="service">
+            <option value="">Select a service...</option>
+            <option>Lawn Fertilization &amp; Weed Control</option>
+            <option>General Pest Control</option>
+            <option>Termite Protection</option>
+            <option>Mosquito Barrier Treatment</option>
+            <option>Fire Ant Control</option>
+            <option>Lawn Disease &amp; Fungus Treatment</option>
+            <option>Lawn &amp; Pest Bundle Plan</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell Us About Your Property</label>
+          <textarea id="message" name="message" placeholder="Approximate lawn size, current issues with weeds, pests, or lawn health, and anything else that would help us prepare a quote..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          Request Free Assessment
+        </button>
+      </form>
+    </div>
+    <div class="contact-info-card">
+      <div class="contact-info-title">Contact Sureguard</div>
+      <div class="contact-info-items">
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.3 1L6.6 10.8z"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Phone</div>
+            <div class="contact-info-value"><a href="tel:9729755460">(972) 975-5460</a></div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Primary Service Area</div>
+            <div class="contact-info-value">Mansfield, TX &amp; Tarrant County</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Business Hours</div>
+            <div class="contact-info-value">Mon&ndash;Fri 8AM&ndash;6PM<br>Saturday 8AM&ndash;2PM</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Experience</div>
+            <div class="contact-info-value">20+ Years Serving Mansfield &amp; Beyond</div>
+          </div>
+        </div>
+      </div>
+      <div class="ssl-badge">
+        <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+        <span>Secure HTTPS Site &mdash; Your Information Is Safe</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-inner">
+    <h2 class="cta-headline">Join 936 Satisfied Mansfield Customers</h2>
+    <p class="cta-sub">Get a free property assessment and custom lawn and pest plan from Tarrant County's most-reviewed team. No pressure, no commitment.</p>
+    <a href="tel:9729755460" class="btn-cta-white">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C9.6 21 3 14.4 3 6.3c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.3 1L6.6 10.8z"/></svg>
+      (972) 975-5460 &mdash; Call for a Free Quote
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">Sureguard Lawn &amp; Pest</div>
+      <p class="footer-brand-desc">Mansfield's most trusted lawn care and pest control company. 936 five-star reviews, 20+ years of service, and a dual-service approach that keeps your home and yard in perfect condition.</p>
+      <a href="tel:9729755460" class="footer-phone">(972) 975-5460</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Lawn Fertilization &amp; Weed Control</a></li>
+        <li><a href="#services">General Pest Control</a></li>
+        <li><a href="#services">Termite Protection</a></li>
+        <li><a href="#services">Mosquito Barrier Treatment</a></li>
+        <li><a href="#services">Fire Ant Control</a></li>
+        <li><a href="#services">Lawn Disease &amp; Fungus</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="#service-areas">Mansfield, TX</a></li>
+        <li><a href="#service-areas">Arlington, TX</a></li>
+        <li><a href="#service-areas">Kennedale, TX</a></li>
+        <li><a href="#service-areas">Burleson, TX</a></li>
+        <li><a href="#service-areas">Midlothian, TX</a></li>
+        <li><a href="#service-areas">Fort Worth, TX</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="#why-us">Why Sureguard</a></li>
+        <li><a href="#reviews">Customer Reviews</a></li>
+        <li><a href="#contact">Free Assessment</a></li>
+        <li><a href="#services">Lawn &amp; Pest Bundle</a></li>
+        <li><a href="#contact">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 Sureguard Lawn &amp; Pest. All rights reserved. Serving Mansfield, TX and Tarrant County.</div>
+    <div class="footer-legal">
+      <a href="#contact">Privacy Policy</a>
+      <a href="#contact">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Header shadow on scroll
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 10);
+}, { passive: true });
+
+// Stat counter animation
+function animateCounter(el) {
+  const target = parseInt(el.getAttribute('data-target'), 10);
+  const suffix = el.getAttribute('data-suffix') || '';
+  if (isNaN(target)) return;
+  const duration = 1800;
+  const startTime = performance.now();
+  function tick(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.round(eased * target);
+    el.textContent = current + suffix;
+    if (progress < 1) requestAnimationFrame(tick);
+    else el.textContent = target + suffix;
+  }
+  requestAnimationFrame(tick);
+}
+
+// FadeUp via IntersectionObserver
+const fadeTargets = document.querySelectorAll('.service-card, .why-card, .how-step, .review-card');
+
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      fadeObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+fadeTargets.forEach(el => fadeObserver.observe(el));
+
+// Stat counter observer
+const statEls = document.querySelectorAll('[data-target]');
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounter(entry.target);
+      statObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+statEls.forEach(el => statObserver.observe(el));
+
+// Stagger review cards
+document.querySelectorAll('.review-card').forEach((card, i) => {
+  card.style.transitionDelay = (i * 0.13) + 's';
+});
+
+// Stagger service cards
+document.querySelectorAll('.service-card').forEach((card, i) => {
+  card.style.transitionDelay = (i * 0.08) + 's';
+});
+
+// Stagger why cards
+document.querySelectorAll('.why-card').forEach((card, i) => {
+  card.style.transitionDelay = (i * 0.1) + 's';
+});
+
+// Stagger how steps
+document.querySelectorAll('.how-step').forEach((step, i) => {
+  step.style.transitionDelay = (i * 0.15) + 's';
+});
+</script>
+
+</body>
+</html>

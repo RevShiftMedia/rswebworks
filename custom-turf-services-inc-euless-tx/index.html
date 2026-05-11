@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Custom Turf Services — Lawn Care &amp; Pest Control, Colleyville TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#035c2e;
+  --primary-dark:#023d1e;
+  --primary-mid:#04703a;
+  --primary-light:#037e3f;
+  --accent:#cc4b37;
+  --accent-dark:#a83a28;
+  --accent-light:#e05f49;
+  --dark:#071a0e;
+  --dark-2:#0c2416;
+  --light:#f0fdf4;
+  --light-2:#ffffff;
+  --text:#071a0e;
+  --text-muted:#4a6e52;
+  --border:rgba(3,92,46,.15);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;color:var(--text);background:var(--dark);line-height:1.65}
+h1,h2,h3,h4{font-family:'Cabin',sans-serif;line-height:1.2;font-weight:700}
+.section-label{font-family:'Source Sans 3',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;border-radius:6px;font-family:'Cabin',sans-serif;font-weight:700;font-size:.95rem;text-decoration:none;cursor:pointer;transition:all .22s ease;border:none}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(204,75,55,.35)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff;transform:translateY(-2px)}
+.btn-green{background:var(--primary-light);color:#fff}
+.btn-green:hover{background:var(--primary);transform:translateY(-2px);box-shadow:0 8px 24px rgba(3,92,46,.35)}
+
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge   {animation:heroFadeUp .5s ease-out .1s both}
+.hero-headline{animation:heroFadeUp .5s ease-out .2s both}
+.hero-sub     {animation:heroFadeUp .5s ease-out .35s both}
+.hero-ctas    {animation:heroFadeUp .5s ease-out .5s both}
+.hero-trust   {animation:heroFadeUp .5s ease-out .65s both}
+.hero-card    {animation:heroFadeUp .5s ease-out .4s both}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:.9rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;background:rgba(7,26,14,.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(3,126,63,.2)}
+.nav-logo{font-family:'Cabin',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;text-decoration:none;display:flex;align-items:center;gap:.6rem;flex-shrink:0}
+.nav-logo-mark{width:34px;height:34px;background:var(--primary-light);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.nav-logo-mark svg{width:18px;height:18px;fill:#fff}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-phone{color:rgba(255,255,255,.8);text-decoration:none;font-weight:600;font-size:.9rem;display:flex;align-items:center;gap:.4rem;transition:color .2s}
+.nav-phone:hover{color:#a7f3d0}
+.nav-phone svg{width:15px;height:15px;fill:currentColor}
+.nav-cta{background:var(--accent);color:#fff;padding:.52rem 1.3rem;border-radius:6px;font-family:'Cabin',sans-serif;font-weight:700;font-size:.85rem;text-decoration:none;transition:all .2s}
+.nav-cta:hover{background:var(--accent-dark)}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 420px;align-items:center;gap:3rem;padding:7rem 5% 4rem;background:linear-gradient(140deg,var(--dark) 0%,var(--dark-2) 55%,#041a09 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none}
+.hero::after{content:'';position:absolute;top:-80px;right:320px;width:520px;height:520px;background:radial-gradient(circle,rgba(3,126,63,.15) 0%,transparent 70%);pointer-events:none}
+.hero-content{position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(204,75,55,.12);border:1px solid rgba(204,75,55,.35);color:var(--accent-light);padding:.4rem 1rem;border-radius:4px;font-size:.78rem;font-weight:700;letter-spacing:.05em;margin-bottom:1.4rem}
+.hero-badge svg{width:13px;height:13px;fill:currentColor}
+.hero-headline{font-size:clamp(2.3rem,4.2vw,3.5rem);color:#fff;margin-bottom:1.1rem;font-weight:700;letter-spacing:-.01em}
+.hero-headline em{color:#a7f3d0;font-style:normal}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.7);max-width:500px;margin-bottom:2rem;line-height:1.75}
+.hero-ctas{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hero-trust{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.ht-stars{display:flex;gap:2px}
+.ht-stars svg{width:17px;height:17px;fill:#fbbf24}
+.ht-text{font-size:.85rem;color:rgba(255,255,255,.65)}
+.ht-div{width:1px;height:22px;background:rgba(255,255,255,.2)}
+
+/* HERO CARD — seasonal plan selector */
+.hero-visual{position:relative;z-index:2}
+.hero-card{background:rgba(255,255,255,.07);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1.75rem;color:#fff}
+.hc-header{margin-bottom:1.25rem;padding-bottom:1.1rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.hc-title{font-family:'Cabin',sans-serif;font-weight:700;font-size:1.05rem;color:#fff;margin-bottom:.2rem}
+.hc-sub{font-size:.8rem;color:rgba(255,255,255,.55)}
+.season-grid{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;margin-bottom:1.25rem}
+.season-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:.85rem;transition:all .2s;cursor:pointer;text-align:center}
+.season-card:hover,.season-card.active{background:rgba(3,126,63,.2);border-color:rgba(3,126,63,.5)}
+.season-icon{width:32px;height:32px;border-radius:8px;background:rgba(3,126,63,.15);display:flex;align-items:center;justify-content:center;margin:0 auto .45rem;transition:background .2s}
+.season-card:hover .season-icon,.season-card.active .season-icon{background:rgba(3,126,63,.3)}
+.season-icon svg{width:16px;height:16px;fill:#a7f3d0}
+.season-name{font-size:.8rem;font-weight:700;color:rgba(255,255,255,.85)}
+.hc-review{background:rgba(255,255,255,.06);border-radius:10px;padding:.85rem 1rem;margin-bottom:1.2rem}
+.hc-review-stars{display:flex;gap:3px;margin-bottom:.4rem}
+.hc-review-stars svg{width:13px;height:13px;fill:#fbbf24}
+.hc-review-text{font-size:.8rem;color:rgba(255,255,255,.7);line-height:1.5;font-style:italic;margin-bottom:.4rem}
+.hc-review-auth{font-size:.74rem;color:rgba(255,255,255,.45);font-weight:600}
+.hc-cta{display:block;background:var(--accent);color:#fff;text-decoration:none;padding:.8rem;border-radius:8px;font-family:'Cabin',sans-serif;font-weight:700;font-size:.9rem;text-align:center;transition:all .2s}
+.hc-cta:hover{background:var(--accent-dark)}
+
+/* TRUST STRIP */
+.trust-strip{background:#fff;padding:2.8rem 5%}
+.trust-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;align-items:center}
+.ti{display:flex;align-items:center;gap:.85rem}
+.ti-icon{width:46px;height:46px;background:var(--light);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ti-icon svg{width:22px;height:22px;fill:var(--primary-light)}
+.ti-lbl{font-size:.72rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em}
+.ti-val{font-family:'Cabin',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin-top:.1rem}
+
+/* SERVICES */
+.services{background:var(--dark-2);padding:6rem 5%}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:3.5rem}
+.section-header .section-label{display:block;margin-bottom:.75rem;color:#a7f3d0}
+.section-header h2{font-size:clamp(2rem,3.5vw,2.8rem);color:#fff;margin-bottom:.9rem}
+.section-header p{color:rgba(255,255,255,.62);max-width:560px;margin:0 auto;font-size:1rem;line-height:1.7}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.svc{background:rgba(255,255,255,.04);border:1px solid rgba(3,126,63,.2);border-radius:14px;padding:1.75rem;transition:all .3s}
+.svc:hover{background:rgba(3,126,63,.08);border-color:rgba(3,126,63,.45);transform:translateY(-4px)}
+.svc-icon{width:52px;height:52px;background:rgba(204,75,55,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;transition:background .3s}
+.svc:hover .svc-icon{background:rgba(204,75,55,.2)}
+.svc-icon svg{width:26px;height:26px;fill:var(--accent-light)}
+.svc h3{font-size:1.05rem;color:#fff;margin-bottom:.5rem}
+.svc p{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.65}
+
+/* DUAL TRACK */
+.dual{background:var(--light);padding:6rem 5%}
+.dual .section-header .section-label{color:var(--primary-mid)}
+.dual .section-header h2{color:var(--text)}
+.dual .section-header p{color:var(--text-muted)}
+.dual-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.dual-card{background:#fff;border:2px solid var(--border);border-radius:16px;padding:2rem;transition:all .28s}
+.dual-card:hover{border-color:var(--primary);box-shadow:0 12px 40px rgba(3,92,46,.1);transform:translateY(-4px)}
+.dual-card-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}
+.dual-card-icon{width:50px;height:50px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dual-card-icon.green{background:rgba(3,126,63,.1)}
+.dual-card-icon.red{background:rgba(204,75,55,.1)}
+.dual-card-icon.green svg{fill:var(--primary-light)}
+.dual-card-icon.red svg{fill:var(--accent)}
+.dual-card-icon svg{width:24px;height:24px}
+.dual-card-title{font-family:'Cabin',sans-serif;font-weight:700;font-size:1.15rem;color:var(--text)}
+.dual-card-sub{font-size:.82rem;color:var(--text-muted);margin-top:.15rem}
+.dual-features{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.dual-features li{display:flex;align-items:flex-start;gap:.65rem;font-size:.9rem;color:var(--text-muted)}
+.dual-features li svg{width:16px;height:16px;fill:var(--primary-light);flex-shrink:0;margin-top:.2rem}
+.dual-card.red-card .dual-features li svg{fill:var(--accent)}
+
+/* STATS */
+.stats{background:var(--primary);padding:5rem 5%}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;max-width:1200px;margin:0 auto;text-align:center}
+.stat-item{color:#fff}
+.stat-number{font-family:'Cabin',sans-serif;font-weight:700;font-size:3.2rem;line-height:1;color:#fff}
+.stat-divider{width:40px;height:3px;background:rgba(255,255,255,.3);margin:.7rem auto;border-radius:2px}
+.stat-label{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;opacity:.88}
+
+/* REVIEWS */
+.reviews{background:var(--dark);padding:6rem 5%}
+.reviews .section-header .section-label{color:#a7f3d0}
+.reviews .section-header h2{color:#fff}
+.reviews .section-header p{color:rgba(255,255,255,.6)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.review-card{background:rgba(255,255,255,.05);border:1px solid rgba(3,126,63,.2);border-radius:12px;padding:1.75rem;position:relative;overflow:hidden;transition:all .25s}
+.review-card:hover{background:rgba(255,255,255,.08);border-color:rgba(3,126,63,.4);transform:translateY(-3px)}
+.rc-accent{position:absolute;bottom:0;left:1.75rem;right:1.75rem;height:3px;background:linear-gradient(90deg,var(--primary-light),var(--accent));opacity:.6;border-radius:3px 3px 0 0}
+.rv-quote{position:absolute;top:1.2rem;right:1.25rem}
+.rv-quote svg{width:26px;height:26px;fill:rgba(3,126,63,.15)}
+.rv-stars{display:flex;gap:3px;margin-bottom:.9rem}
+.rv-stars svg{width:15px;height:15px;fill:#fbbf24}
+.rv-text{font-size:.9rem;color:rgba(255,255,255,.76);line-height:1.7;margin-bottom:1.2rem;font-style:italic}
+.rv-author{display:flex;align-items:center;gap:.7rem}
+.rv-avatar{width:38px;height:38px;border-radius:50%;background:var(--primary-dark);border:2px solid rgba(3,126,63,.35);display:flex;align-items:center;justify-content:center;font-family:'Cabin',sans-serif;font-weight:700;font-size:.85rem;color:#fff;flex-shrink:0}
+.rv-name{font-weight:700;color:#fff;font-size:.9rem}
+.rv-loc{font-size:.76rem;color:rgba(255,255,255,.45);margin-top:.1rem}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--dark-2) 0%,var(--primary-dark) 100%);padding:6rem 5%;position:relative;overflow:hidden;text-align:center}
+.cta-band::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none}
+.cta-band::after{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(204,75,55,.12) 0%,transparent 70%);pointer-events:none}
+.cta-inner{max-width:760px;margin:0 auto;position:relative;z-index:2}
+.cta-inner .section-label{color:rgba(255,255,255,.65);display:block;margin-bottom:1rem}
+.cta-inner h2{font-size:clamp(2rem,3.5vw,2.9rem);color:#fff;margin-bottom:1.1rem}
+.cta-inner h2 em{color:#a7f3d0;font-style:normal}
+.cta-inner p{color:rgba(255,255,255,.72);font-size:1rem;margin-bottom:2.5rem;line-height:1.7}
+.cta-actions{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap}
+.cta-phone{display:flex;align-items:center;gap:.55rem;font-family:'Cabin',sans-serif;font-weight:700;font-size:1.1rem;color:#fff}
+.cta-phone svg{width:18px;height:18px;fill:#a7f3d0}
+.cta-phone a{color:inherit;text-decoration:none}
+.cta-phone a:hover{color:#a7f3d0}
+
+/* AREA */
+.area{background:var(--light);padding:6rem 5%}
+.area .section-header .section-label{color:var(--primary-mid)}
+.area .section-header h2{color:var(--text)}
+.area .section-header p{color:var(--text-muted)}
+.area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;max-width:900px;margin:0 auto}
+.area-chip{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1.1rem 1.35rem;display:flex;align-items:center;gap:.7rem;transition:all .22s}
+.area-chip:hover{border-color:var(--primary);box-shadow:0 4px 16px rgba(3,92,46,.1);transform:translateY(-2px)}
+.area-chip svg{width:18px;height:18px;fill:var(--primary-mid);flex-shrink:0}
+.area-city{font-weight:700;color:var(--text);font-size:.9rem}
+.area-mi{font-size:.76rem;color:var(--text-muted);margin-top:.1rem}
+
+/* FOOTER */
+footer{background:var(--dark);border-top:1px solid rgba(3,126,63,.15);padding:4rem 5% 2rem}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-logo{font-family:'Cabin',sans-serif;font-weight:700;font-size:1.15rem;color:#fff;text-decoration:none;display:flex;align-items:center;gap:.6rem;margin-bottom:.9rem}
+.footer-logo .nav-logo-mark{width:28px;height:28px;border-radius:6px}
+.footer-logo .nav-logo-mark svg{width:14px;height:14px}
+.footer-desc{font-size:.87rem;color:rgba(255,255,255,.5);line-height:1.7;max-width:300px;margin-bottom:1.25rem}
+.footer-contacts{display:flex;flex-direction:column;gap:.5rem}
+.footer-contacts a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.87rem;display:flex;align-items:center;gap:.5rem;transition:color .2s}
+.footer-contacts a:hover{color:#a7f3d0}
+.footer-contacts svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
+.footer-col h4{font-family:'Cabin',sans-serif;font-weight:700;color:#fff;font-size:.95rem;margin-bottom:.9rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.87rem;transition:color .2s}
+.footer-links a:hover{color:#a7f3d0}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:.8rem;color:rgba(255,255,255,.38)}
+.footer-badge{display:flex;align-items:center;gap:.45rem;font-size:.8rem;color:rgba(255,255,255,.38)}
+.footer-badge svg{width:14px;height:14px;fill:#fbbf24;opacity:.7}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:8rem}
+  .hero-visual{display:none}
+  .trust-inner{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .dual-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr 1fr}
+  .area-grid{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .trust-inner{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .area-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 20.77L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2s3.5-3 4-3H3.5C4 3 4 8 6 10S17 8 17 8z"/></svg>
+    </div>
+    Custom Turf Services
+  </a>
+  <div class="nav-right">
+    <a href="tel:8175458873" class="nav-phone">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      (817) 545-8873
+    </a>
+    <a href="tel:8175458873" class="nav-cta">Free Quote</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+      4.9 Stars · 219 Reviews · Colleyville TX
+    </div>
+    <h1 class="hero-headline">The <em>Lawn &amp; Pest Experts</em><br>Colleyville Relies On</h1>
+    <p class="hero-sub">Custom Turf Services delivers year-round lawn care and full-service pest control for Colleyville and Euless homeowners. One company. Complete outdoor protection.</p>
+    <div class="hero-ctas">
+      <a href="tel:8175458873" class="btn btn-accent">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call (817) 545-8873
+      </a>
+      <a href="mailto:info@customturfservices.com" class="btn btn-outline">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Get a Free Quote
+      </a>
+    </div>
+    <div class="hero-trust">
+      <div class="ht-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+      </div>
+      <span class="ht-text"><strong style="color:#fff">4.9</strong> · 219 Google Reviews</span>
+      <div class="ht-div"></div>
+      <span class="ht-text">Lawn + Pest Combined</span>
+      <div class="ht-div"></div>
+      <span class="ht-text">Year-Round Programs</span>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="hc-header">
+        <div class="hc-title">What Season Are You In?</div>
+        <div class="hc-sub">We have programs for every time of year</div>
+      </div>
+      <div class="season-grid">
+        <div class="season-card active">
+          <div class="season-icon"><svg viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg></div>
+          <div class="season-name">Summer</div>
+        </div>
+        <div class="season-card">
+          <div class="season-icon"><svg viewBox="0 0 24 24"><path d="M14.5 2.5c0 1.5-1.5 7-1.5 7h-2S9.5 4 9.5 2.5a2.5 2.5 0 0 1 5 0zm-5 10.5a2.5 2.5 0 0 0 5 0v-1h-5v1zm8.24-7.41l-1.06 1.06c1.04 1.21 1.82 2.6 1.82 4.35 0 4.4-3.73 7-8 7-4.11 0-7.5-2.86-7.5-6.5 0-1.95.95-3.65 2.38-4.92L4.24 5.64C2.24 7.26 1 9.56 1 12c0 5.52 4.93 10 11 10s11-4.48 11-10c0-2.35-.81-4.51-2.26-6.41z"/></svg></div>
+          <div class="season-name">Fall</div>
+        </div>
+        <div class="season-card">
+          <div class="season-icon"><svg viewBox="0 0 24 24"><path d="M22 9V7h-2V5c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14z"/></svg></div>
+          <div class="season-name">Winter</div>
+        </div>
+        <div class="season-card">
+          <div class="season-icon"><svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 20.77L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2s3.5-3 4-3H3.5C4 3 4 8 6 10S17 8 17 8z"/></svg></div>
+          <div class="season-name">Spring</div>
+        </div>
+      </div>
+      <div class="hc-review">
+        <div class="hc-review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        </div>
+        <div class="hc-review-text">"Best lawn service in Colleyville — my yard has never looked better and the pest control keeps the mosquitoes away all summer."</div>
+        <div class="hc-review-auth">— Google Review · Colleyville, TX</div>
+      </div>
+      <a href="tel:8175458873" class="hc-cta">Call for a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+  <div class="trust-inner">
+    <div class="ti reveal">
+      <div class="ti-icon"><svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg></div>
+      <div><div class="ti-lbl">Google Rating</div><div class="ti-val">4.9 Stars · 219 Reviews</div></div>
+    </div>
+    <div class="ti reveal">
+      <div class="ti-icon"><svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 20.77L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2s3.5-3 4-3H3.5C4 3 4 8 6 10S17 8 17 8z"/></svg></div>
+      <div><div class="ti-lbl">Coverage</div><div class="ti-val">Lawn + Pest Control</div></div>
+    </div>
+    <div class="ti reveal">
+      <div class="ti-icon"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg></div>
+      <div><div class="ti-lbl">Programs</div><div class="ti-val">Year-Round Plans</div></div>
+    </div>
+    <div class="ti reveal">
+      <div class="ti-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg></div>
+      <div><div class="ti-lbl">Location</div><div class="ti-val">Colleyville, TX Local</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Our Services</span>
+      <h2>Lawn Care &amp; Pest Control — All Year</h2>
+      <p>From spring green-up to fall aeration, from fire ant control to termite monitoring — Custom Turf handles every outdoor need your Colleyville home has.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 20.77L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2s3.5-3 4-3H3.5C4 3 4 8 6 10S17 8 17 8z"/></svg></div>
+        <h3>Lawn Fertilization Programs</h3>
+        <p>Customized seasonal feeding programs matched to your grass type and soil conditions — Bermuda, St. Augustine, Zoysia, or Fescue — delivering thick, dark-green results.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg></div>
+        <h3>Weed Control</h3>
+        <p>Pre-emergent and post-emergent treatments that keep dandelions, crabgrass, and broadleaf weeds out of your turf — applied at the right time to actually work.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"/></svg></div>
+        <h3>Lawn Aeration &amp; Overseeding</h3>
+        <p>Core aeration breaks up compaction and improves root depth. Paired with overseeding, it thickens thin lawns and fills bare spots before the growing season.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93s-3.05 7.44-7 7.93v2.02c5.05-.5 9-4.76 9-9.95S18.05 2.55 13 2.05zM11 2.05C5.95 2.55 2 6.81 2 12s3.95 9.45 9 9.95v-2.02C7.05 19.44 4 16.08 4 12s3.05-7.44 7-7.93V2.05z"/></svg></div>
+        <h3>Mosquito &amp; Fire Ant Control</h3>
+        <p>Barrier spray programs that knock out mosquitoes at the source and targeted granular treatments that eliminate fire ant mounds — fast and thoroughly.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2z"/></svg></div>
+        <h3>Termite Treatment</h3>
+        <p>Liquid soil barrier and bait station programs that protect your home's foundation from subterranean termites — the number one structural pest in North Texas.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5s-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8z"/></svg></div>
+        <h3>General Pest Control</h3>
+        <p>Interior and exterior treatment for ants, roaches, spiders, and seasonal pests — quarterly or bi-monthly programs to keep your home protected year-round.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DUAL TRACK -->
+<section class="dual">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Two Services. One Company.</span>
+      <h2>Complete Outdoor Care — Simplified</h2>
+      <p>Most homeowners hire separate companies for lawn care and pest control. Custom Turf handles both — coordinated service, one account, and results that work together.</p>
+    </div>
+    <div class="dual-grid">
+      <div class="dual-card reveal">
+        <div class="dual-card-header">
+          <div class="dual-card-icon green">
+            <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 20.77L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2s3.5-3 4-3H3.5C4 3 4 8 6 10S17 8 17 8z"/></svg>
+          </div>
+          <div>
+            <div class="dual-card-title">Lawn &amp; Turf Care</div>
+            <div class="dual-card-sub">Year-round programs for every grass type</div>
+          </div>
+        </div>
+        <ul class="dual-features">
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Seasonal fertilization &amp; soil nutrition</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Pre-emergent and post-emergent weed control</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Core aeration and overseeding</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Lawn disease identification and treatment</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Grub control and turf insect management</li>
+        </ul>
+      </div>
+      <div class="dual-card red-card reveal">
+        <div class="dual-card-header">
+          <div class="dual-card-icon red">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          </div>
+          <div>
+            <div class="dual-card-title">Pest Control</div>
+            <div class="dual-card-sub">Interior + exterior protection programs</div>
+          </div>
+        </div>
+        <ul class="dual-features">
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>General pest interior + exterior treatments</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Mosquito barrier spray programs</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Fire ant control and elimination</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Termite treatment and monitoring</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Rodent exclusion and trapping</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="219" data-suffix="">0</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Google Reviews</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="49" data-suffix="/5">0/5</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Star Rating</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="2" data-suffix="">0</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Service Categories</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="4" data-suffix="">0</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Seasons Covered</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Customer Reviews</span>
+      <h2>219 Neighbors Trust Custom Turf</h2>
+      <p>A 4.9-star average from 219 verified Google reviews — Colleyville and Euless homeowners consistently praise the quality, consistency, and results.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="rc-accent"></div>
+        <div class="rv-quote"><svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></div>
+        <div class="rv-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        </div>
+        <p class="rv-text">"Custom Turf has been taking care of our lawn and pest control for three years. My yard is the greenest on the block and we haven't had a single ant or roach problem since they started. Worth every penny and then some."</p>
+        <div class="rv-author">
+          <div class="rv-avatar">BW</div>
+          <div><div class="rv-name">B. Wallace</div><div class="rv-loc">Colleyville, TX · Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="rc-accent"></div>
+        <div class="rv-quote"><svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></div>
+        <div class="rv-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        </div>
+        <p class="rv-text">"The mosquito barrier program is a game changer. We can actually use our backyard in summer now. The tech shows up reliably every month and the results are dramatic — zero mosquitoes all season. Highly recommend."</p>
+        <div class="rv-author">
+          <div class="rv-avatar">SN</div>
+          <div><div class="rv-name">S. Norris</div><div class="rv-loc">Euless, TX · Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="rc-accent"></div>
+        <div class="rv-quote"><svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></div>
+        <div class="rv-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        </div>
+        <p class="rv-text">"I switched from a national chain to Custom Turf and the difference was immediate. My grass is thicker, the weeds are gone, and the technician actually knows my lawn by name. Local service that outperforms the big guys every time."</p>
+        <div class="rv-author">
+          <div class="rv-avatar">RG</div>
+          <div><div class="rv-name">R. Garcia</div><div class="rv-loc">Colleyville, TX · Google Review</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-inner">
+    <span class="section-label">Ready for a Better Lawn?</span>
+    <h2>Get a <em>Free Quote</em> This Week</h2>
+    <p>Serving Colleyville, Euless, Hurst, Bedford, and surrounding Tarrant County communities. Call or email for a custom program recommendation.</p>
+    <div class="cta-actions">
+      <div class="cta-phone">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <a href="tel:8175458873">(817) 545-8873</a>
+      </div>
+      <a href="tel:8175458873" class="btn btn-accent">Call Now</a>
+      <a href="mailto:info@customturfservices.com" class="btn btn-outline">Email a Quote Request</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Where We Serve</span>
+      <h2>Colleyville &amp; Tarrant County</h2>
+      <p>Based in Colleyville, TX — Custom Turf services homes and businesses across northeast Tarrant County and surrounding DFW communities.</p>
+    </div>
+    <div class="area-grid">
+      <div class="area-chip reveal"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><div><div class="area-city">Colleyville, TX</div><div class="area-mi">Home Base</div></div></div>
+      <div class="area-chip reveal"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><div><div class="area-city">Euless, TX</div><div class="area-mi">~4 miles</div></div></div>
+      <div class="area-chip reveal"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><div><div class="area-city">Bedford, TX</div><div class="area-mi">~5 miles</div></div></div>
+      <div class="area-chip reveal"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><div><div class="area-city">Grapevine, TX</div><div class="area-mi">~5 miles</div></div></div>
+      <div class="area-chip reveal"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><div><div class="area-city">Hurst, TX</div><div class="area-mi">~6 miles</div></div></div>
+      <div class="area-chip reveal"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg><div><div class="area-city">Southlake, TX</div><div class="area-mi">~7 miles</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="#" class="footer-logo">
+          <div class="nav-logo-mark"><svg viewBox="0 0 24 24" fill="#fff" width="14" height="14"><path d="M17 8C8 10 5.9 16.17 3.82 20.77L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-8 2s3.5-3 4-3H3.5C4 3 4 8 6 10S17 8 17 8z"/></svg></div>
+          Custom Turf Services, Inc.
+        </a>
+        <p class="footer-desc">Lawn care and pest control for Colleyville, Euless, and Tarrant County. Year-round programs. 4.9 stars across 219 Google reviews.</p>
+        <div class="footer-contacts">
+          <a href="tel:8175458873"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>(817) 545-8873</a>
+          <a href="mailto:info@customturfservices.com"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>info@customturfservices.com</a>
+          <a href="#"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>6600 Colleyville Blvd Ste A, Colleyville, TX 76034</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Lawn Fertilization</a></li>
+          <li><a href="#">Weed Control</a></li>
+          <li><a href="#">Aeration &amp; Overseeding</a></li>
+          <li><a href="#">Mosquito Control</a></li>
+          <li><a href="#">Termite Treatment</a></li>
+          <li><a href="#">General Pest Control</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul class="footer-links">
+          <li><a href="#">Colleyville, TX</a></li>
+          <li><a href="#">Euless, TX</a></li>
+          <li><a href="#">Bedford, TX</a></li>
+          <li><a href="#">Grapevine, TX</a></li>
+          <li><a href="#">Hurst, TX</a></li>
+          <li><a href="#">Southlake, TX</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 Custom Turf Services, Inc. All rights reserved.</div>
+      <div class="footer-badge"><svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>4.9 Stars · 219 Reviews · Colleyville TX</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800, start = performance.now();
+        const update = (time) => {
+          const p = Math.min((time - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+          if (p < 1) requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+      }
+    });
+  }, { threshold: 0.5 }).observe(el);
+});
+
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.boxShadow = window.scrollY > 40 ? '0 4px 24px rgba(0,0,0,.4)' : 'none';
+});
+</script>
+</body>
+</html>

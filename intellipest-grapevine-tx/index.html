@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IntelliPEST — Smart Pest Control in Grapevine, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#0a7268;
+  --primary-dark:#065c52;
+  --primary-light:#0d9488;
+  --accent:#d97706;
+  --accent-dark:#b45309;
+  --accent-light:#fbbf24;
+  --dark:#0d1f1e;
+  --dark-2:#152e2c;
+  --light:#f0faf9;
+  --light-2:#ffffff;
+  --text:#1e3a38;
+  --text-muted:#4a7a76;
+  --border:rgba(10,114,104,0.15);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;color:var(--text);background:var(--dark);line-height:1.6}
+
+/* ── TYPOGRAPHY ── */
+h1,h2,h3,h4{font-family:'Raleway',sans-serif;line-height:1.15}
+.section-label{font-family:'Open Sans',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;opacity:.75}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2rem;border-radius:6px;font-family:'Raleway',sans-serif;font-weight:700;font-size:.95rem;text-decoration:none;cursor:pointer;transition:all .22s ease;border:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(217,119,6,.35)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45)}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff;transform:translateY(-2px)}
+.btn-dark{background:var(--primary);color:#fff}
+.btn-dark:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(10,114,104,.35)}
+
+/* ── ANIMATIONS ── */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shimmer{0%,100%{opacity:.4}50%{opacity:.8}}
+
+.hero-badge   {animation:heroFadeUp .5s ease-out .1s both}
+.hero-headline{animation:heroFadeUp .5s ease-out .2s both}
+.hero-sub     {animation:heroFadeUp .5s ease-out .35s both}
+.hero-ctas    {animation:heroFadeUp .5s ease-out .5s both}
+.hero-trust   {animation:heroFadeUp .5s ease-out .65s both}
+.hero-card    {animation:heroFadeUp .5s ease-out .4s both}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:.9rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(13,31,30,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(10,114,104,.2)}
+.nav-logo{font-family:'Raleway',sans-serif;font-weight:900;font-size:1.3rem;color:#fff;text-decoration:none;display:flex;align-items:center;gap:.6rem}
+.nav-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.nav-phone{display:flex;align-items:center;gap:.5rem;color:#fff;text-decoration:none;font-family:'Raleway',sans-serif;font-weight:700;font-size:.95rem}
+.nav-phone:hover{color:var(--accent-light)}
+.nav-cta{background:var(--accent);color:#fff;padding:.55rem 1.4rem;border-radius:6px;font-family:'Raleway',sans-serif;font-weight:700;font-size:.85rem;text-decoration:none;transition:all .2s}
+.nav-cta:hover{background:var(--accent-dark)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:3rem;padding:7rem 5% 4rem;background:linear-gradient(135deg,var(--dark) 0%,var(--dark-2) 60%,#0f3330 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.04'/%3E%3C/svg%3E");opacity:.7;pointer-events:none}
+.hero::after{content:'';position:absolute;top:-120px;right:-80px;width:600px;height:600px;background:radial-gradient(circle,rgba(10,114,104,.18) 0%,transparent 70%);pointer-events:none}
+.hero-content{position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(217,119,6,.15);border:1px solid rgba(217,119,6,.4);color:var(--accent-light);padding:.45rem 1.1rem;border-radius:50px;font-size:.8rem;font-weight:700;font-family:'Raleway',sans-serif;letter-spacing:.06em;margin-bottom:1.5rem}
+.hero-badge svg{width:14px;height:14px;fill:currentColor}
+.hero-headline{font-size:clamp(2.4rem,4.5vw,3.6rem);font-weight:900;color:#fff;margin-bottom:1.2rem;letter-spacing:-.02em}
+.hero-headline span{color:var(--accent-light)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.72);max-width:480px;margin-bottom:2rem;line-height:1.7}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hero-trust{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.trust-stars{display:flex;gap:2px}
+.trust-stars svg{width:18px;height:18px;fill:var(--accent)}
+.trust-text{color:rgba(255,255,255,.7);font-size:.88rem}
+.trust-divider{width:1px;height:24px;background:rgba(255,255,255,.2)}
+
+.hero-visual{position:relative;z-index:2}
+.hero-card{background:rgba(255,255,255,.07);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:2rem;color:#fff}
+.hero-card-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding-bottom:1.2rem;border-bottom:1px solid rgba(255,255,255,.12)}
+.hero-card-icon{width:44px;height:44px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hero-card-icon svg{width:22px;height:22px;fill:#fff}
+.hero-card-title{font-family:'Raleway',sans-serif;font-size:1.05rem;font-weight:700}
+.hero-card-sub{font-size:.8rem;opacity:.65;margin-top:.15rem}
+.pest-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.pest-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:.9rem;display:flex;align-items:center;gap:.6rem;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .2s}
+.pest-item:hover{background:rgba(217,119,6,.15);border-color:rgba(217,119,6,.4)}
+.pest-item svg{width:18px;height:18px;fill:var(--accent);flex-shrink:0}
+.hero-card-footer{margin-top:1.2rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:space-between}
+.hcf-stat{text-align:center}
+.hcf-num{font-family:'Raleway',sans-serif;font-size:1.4rem;font-weight:800;color:var(--accent-light)}
+.hcf-label{font-size:.7rem;opacity:.6;margin-top:.1rem}
+
+/* ── TRUST STRIP ── */
+.trust-strip{background:#fff;padding:2.8rem 5%}
+.trust-strip-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;align-items:center}
+.trust-badge{display:flex;align-items:center;gap:1rem}
+.trust-badge-icon{width:48px;height:48px;background:var(--light);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-badge-icon svg{width:24px;height:24px;fill:var(--primary)}
+.trust-badge-label{font-size:.75rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em}
+.trust-badge-value{font-family:'Raleway',sans-serif;font-size:1.05rem;font-weight:800;color:var(--text);margin-top:.1rem}
+
+/* ── SERVICES ── */
+.services{background:var(--dark-2);padding:6rem 5%}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:3.5rem}
+.section-header .section-label{color:var(--accent-light);display:block;margin-bottom:.75rem}
+.section-header h2{font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;color:#fff;margin-bottom:1rem}
+.section-header p{color:rgba(255,255,255,.65);max-width:560px;margin:0 auto;font-size:1.02rem}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.service-card{background:rgba(255,255,255,.04);border:1px solid rgba(10,114,104,.25);border-radius:14px;padding:2rem;transition:all .28s;cursor:default}
+.service-card:hover{background:rgba(10,114,104,.12);border-color:var(--primary-light);transform:translateY(-4px)}
+.service-icon{width:54px;height:54px;background:rgba(217,119,6,.12);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;transition:all .28s}
+.service-card:hover .service-icon{background:rgba(217,119,6,.2)}
+.service-icon svg{width:26px;height:26px;fill:var(--accent)}
+.service-card h3{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:.6rem}
+.service-card p{font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.65}
+
+/* ── WHY US ── */
+.why{background:var(--light);padding:6rem 5%}
+.why .section-header .section-label{color:var(--primary)}
+.why .section-header h2{color:var(--text)}
+.why .section-header p{color:var(--text-muted)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.why-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:2rem;position:relative;overflow:hidden;transition:all .28s}
+.why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.why-card:hover::before{transform:scaleX(1)}
+.why-card:hover{box-shadow:0 12px 40px rgba(10,114,104,.12);transform:translateY(-4px)}
+.why-num{font-family:'Raleway',sans-serif;font-size:3.5rem;font-weight:900;color:rgba(10,114,104,.08);position:absolute;top:.5rem;right:1rem;line-height:1}
+.why-icon{width:52px;height:52px;background:var(--light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem}
+.why-icon svg{width:26px;height:26px;fill:var(--primary)}
+.why-card h3{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:.65rem}
+.why-card p{font-size:.9rem;color:var(--text-muted);line-height:1.65}
+
+/* ── PROCESS ── */
+.process{background:var(--dark);padding:6rem 5%}
+.process .section-header .section-label{color:var(--accent-light)}
+.process .section-header h2{color:#fff}
+.process .section-header p{color:rgba(255,255,255,.6)}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+.process-steps::before{content:'';position:absolute;top:42px;left:calc(16.66% + 42px);right:calc(16.66% + 42px);height:2px;background:linear-gradient(90deg,var(--primary),var(--accent));z-index:0}
+.step{text-align:center;padding:0 1.5rem;position:relative;z-index:1}
+.step-num{width:84px;height:84px;background:var(--dark-2);border:2px solid var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-family:'Raleway',sans-serif;font-size:1.8rem;font-weight:900;color:var(--accent-light);transition:all .3s}
+.step:hover .step-num{background:var(--primary);border-color:var(--primary-light);color:#fff}
+.step h3{font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:.6rem}
+.step p{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.65}
+
+/* ── STATS ── */
+.stats{background:var(--primary);padding:5rem 5%}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;max-width:1200px;margin:0 auto;text-align:center}
+.stat-item{color:#fff}
+.stat-number{font-family:'Raleway',sans-serif;font-size:3.2rem;font-weight:900;color:#fff;line-height:1}
+.stat-label{font-size:.85rem;margin-top:.5rem;opacity:.8;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+.stat-divider{width:40px;height:3px;background:var(--accent-light);margin:.75rem auto 0;border-radius:2px}
+
+/* ── REVIEWS ── */
+.reviews{background:var(--dark-2);padding:6rem 5%}
+.reviews .section-header .section-label{color:var(--accent-light)}
+.reviews .section-header h2{color:#fff}
+.reviews .section-header p{color:rgba(255,255,255,.6)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.review-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-left:4px solid var(--accent);border-radius:12px;padding:1.75rem;transition:all .25s;position:relative}
+.review-card:hover{background:rgba(255,255,255,.07);transform:translateY(-3px)}
+.review-quote{position:absolute;top:1rem;right:1.25rem}
+.review-quote svg{width:28px;height:28px;fill:rgba(217,119,6,.2)}
+.review-stars{display:flex;gap:3px;margin-bottom:1rem}
+.review-stars svg{width:16px;height:16px;fill:var(--accent)}
+.review-text{font-size:.92rem;color:rgba(255,255,255,.78);line-height:1.7;margin-bottom:1.25rem;font-style:italic}
+.review-author{display:flex;align-items:center;gap:.75rem}
+.review-avatar{width:38px;height:38px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;font-family:'Raleway',sans-serif;font-weight:800;font-size:.9rem;color:#fff;flex-shrink:0}
+.review-name{font-weight:700;color:#fff;font-size:.9rem}
+.review-location{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:.1rem}
+
+/* ── CTA BAND ── */
+.cta-band{background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 50%,var(--dark-2) 100%);padding:6rem 5%;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.05'/%3E%3C/svg%3E");pointer-events:none}
+.cta-band::after{content:'';position:absolute;bottom:-80px;right:-80px;width:380px;height:380px;background:radial-gradient(circle,rgba(217,119,6,.15) 0%,transparent 70%);pointer-events:none}
+.cta-inner{max-width:780px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.cta-inner .section-label{color:rgba(255,255,255,.7);display:block;margin-bottom:1rem}
+.cta-inner h2{font-size:clamp(2rem,3.5vw,2.9rem);font-weight:900;color:#fff;margin-bottom:1.2rem}
+.cta-inner h2 span{color:var(--accent-light)}
+.cta-inner p{color:rgba(255,255,255,.75);font-size:1.05rem;margin-bottom:2.5rem;line-height:1.7}
+.cta-actions{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap}
+.cta-phone-block{display:flex;align-items:center;gap:.6rem;color:#fff}
+.cta-phone-block svg{width:20px;height:20px;fill:var(--accent-light)}
+.cta-phone-block a{color:#fff;text-decoration:none;font-family:'Raleway',sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:.02em}
+.cta-phone-block a:hover{color:var(--accent-light)}
+
+/* ── SERVICE AREA ── */
+.area{background:var(--light);padding:6rem 5%}
+.area .section-header .section-label{color:var(--primary)}
+.area .section-header h2{color:var(--text)}
+.area .section-header p{color:var(--text-muted)}
+.area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:900px;margin:0 auto}
+.area-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;display:flex;align-items:center;gap:.75rem;transition:all .22s}
+.area-card:hover{border-color:var(--primary);box-shadow:0 6px 20px rgba(10,114,104,.1);transform:translateY(-2px)}
+.area-card svg{width:20px;height:20px;fill:var(--primary);flex-shrink:0}
+.area-card-info{}
+.area-name{font-weight:700;color:var(--text);font-size:.95rem}
+.area-dist{font-size:.78rem;color:var(--text-muted);margin-top:.1rem}
+
+/* ── FOOTER ── */
+footer{background:var(--dark);border-top:1px solid rgba(10,114,104,.2);padding:4rem 5% 2rem}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-brand .nav-logo{display:inline-flex;margin-bottom:1rem;color:#fff}
+.footer-desc{font-size:.88rem;color:rgba(255,255,255,.55);line-height:1.7;max-width:300px}
+.footer-contact{margin-top:1.25rem;display:flex;flex-direction:column;gap:.5rem}
+.footer-contact a{color:rgba(255,255,255,.65);text-decoration:none;font-size:.88rem;display:flex;align-items:center;gap:.5rem;transition:color .2s}
+.footer-contact a:hover{color:var(--accent-light)}
+.footer-contact svg{width:16px;height:16px;fill:currentColor;flex-shrink:0}
+.footer-col h4{font-family:'Raleway',sans-serif;font-weight:700;color:#fff;font-size:.95rem;margin-bottom:1rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer-links a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.88rem;transition:color .2s}
+.footer-links a:hover{color:var(--accent-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:.82rem;color:rgba(255,255,255,.4)}
+.footer-badge{display:flex;align-items:center;gap:.5rem;font-size:.82rem;color:rgba(255,255,255,.4)}
+.footer-badge svg{width:16px;height:16px;fill:var(--accent);opacity:.6}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:8rem}
+  .hero-visual{display:none}
+  .trust-strip-inner{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .process-steps{grid-template-columns:1fr;gap:2rem}
+  .process-steps::before{display:none}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr 1fr}
+  .area-grid{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .hero{padding:7rem 5% 3rem}
+  .trust-strip-inner{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .area-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="#fff" width="18" height="18"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+    </div>
+    IntelliPEST
+  </a>
+  <a href="tel:6823808238" class="nav-phone">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    (682) 380-8238
+  </a>
+  <a href="tel:6823808238" class="nav-cta">Free Inspection</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+      Grapevine's Highest-Rated Pest Control — 5.0 Stars
+    </div>
+    <h1 class="hero-headline">Intelligent Pest Control.<br><span>Zero Compromises.</span></h1>
+    <p class="hero-sub">IntelliPEST brings precision, science-backed methods, and real accountability to pest control in Grapevine, TX. One call gets you a free inspection — same week, no runaround.</p>
+    <div class="hero-ctas">
+      <a href="tel:6823808238" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call (682) 380-8238
+      </a>
+      <a href="#services" class="btn btn-outline">Our Services</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+      </div>
+      <span class="trust-text"><strong style="color:#fff">5.0 Stars</strong> · 8 Verified Reviews</span>
+      <div class="trust-divider"></div>
+      <span class="trust-text">Grapevine, TX Local</span>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="hero-card-header">
+        <div class="hero-card-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 11.75A1.25 1.25 0 1 0 9 14.25 1.25 1.25 0 0 0 9 11.75zm6 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>
+        </div>
+        <div>
+          <div class="hero-card-title">What's Invading Your Home?</div>
+          <div class="hero-card-sub">Select a pest — we handle them all</div>
+        </div>
+      </div>
+      <div class="pest-grid">
+        <div class="pest-item">
+          <svg viewBox="0 0 24 24"><path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5s-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8zm-6 8h-4v-2h4v2zm0-4h-4v-2h4v2z"/></svg>
+          Cockroaches
+        </div>
+        <div class="pest-item">
+          <svg viewBox="0 0 24 24"><path d="M3 3h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4zM3 10h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4zM3 17h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4z"/></svg>
+          Rodents
+        </div>
+        <div class="pest-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+          Termites
+        </div>
+        <div class="pest-item">
+          <svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93s-3.05 7.44-7 7.93v2.02c5.05-.5 9-4.76 9-9.95S18.05 2.55 13 2.05zM11 2.05C5.95 2.55 2 6.81 2 12s3.95 9.45 9 9.95v-2.02C7.05 19.44 4 16.08 4 12s3.05-7.44 7-7.93V2.05z"/></svg>
+          Mosquitoes
+        </div>
+        <div class="pest-item">
+          <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3z"/></svg>
+          Bed Bugs
+        </div>
+        <div class="pest-item">
+          <svg viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
+          Fleas & Ticks
+        </div>
+      </div>
+      <div class="hero-card-footer">
+        <div class="hcf-stat">
+          <div class="hcf-num">5.0</div>
+          <div class="hcf-label">Star Rating</div>
+        </div>
+        <div class="hcf-stat">
+          <div class="hcf-num">8</div>
+          <div class="hcf-label">Reviews</div>
+        </div>
+        <div class="hcf-stat">
+          <div class="hcf-num">100%</div>
+          <div class="hcf-label">Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="trust-badge reveal">
+      <div class="trust-badge-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+      </div>
+      <div>
+        <div class="trust-badge-label">Verified Quality</div>
+        <div class="trust-badge-value">5.0 Stars on Google</div>
+      </div>
+    </div>
+    <div class="trust-badge reveal">
+      <div class="trust-badge-icon">
+        <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
+      </div>
+      <div>
+        <div class="trust-badge-label">Local Expertise</div>
+        <div class="trust-badge-value">Grapevine & DFW Area</div>
+      </div>
+    </div>
+    <div class="trust-badge reveal">
+      <div class="trust-badge-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <div>
+        <div class="trust-badge-label">Same-Week Service</div>
+        <div class="trust-badge-value">Fast Scheduling</div>
+      </div>
+    </div>
+    <div class="trust-badge reveal">
+      <div class="trust-badge-icon">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+      </div>
+      <div>
+        <div class="trust-badge-label">Family Owned</div>
+        <div class="trust-badge-value">Personal Accountability</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">What We Treat</span>
+      <h2>Comprehensive Pest Solutions</h2>
+      <p>From one-time treatments to year-round protection plans — IntelliPEST covers every pest problem homes and businesses in Grapevine face.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5s-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8z"/></svg>
+        </div>
+        <h3>Cockroach Elimination</h3>
+        <p>German, American, and Oriental cockroaches require different treatment protocols. We identify the species and apply targeted, residual treatments for complete elimination.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"/></svg>
+        </div>
+        <h3>Rodent Control</h3>
+        <p>Mice and rats in Grapevine homes cause real damage. We seal entry points, set strategic traps, and monitor activity until your home is completely rodent-free.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2z"/></svg>
+        </div>
+        <h3>Termite Treatment</h3>
+        <p>North Texas homes face constant termite pressure. We use both liquid soil treatments and bait station systems to create a perimeter no colony can breach.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93s-3.05 7.44-7 7.93v2.02c5.05-.5 9-4.76 9-9.95S18.05 2.55 13 2.05zM11 2.05C5.95 2.55 2 6.81 2 12s3.95 9.45 9 9.95v-2.02C7.05 19.44 4 16.08 4 12s3.05-7.44 7-7.93V2.05z"/></svg>
+        </div>
+        <h3>Mosquito Control</h3>
+        <p>Outdoor living in Grapevine shouldn't mean swatting all season. Our barrier spray program keeps your yard mosquito-free from spring through fall.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+        </div>
+        <h3>Bed Bug Treatment</h3>
+        <p>Heat treatment and targeted chemical application eliminate bed bugs at every life stage. We don't leave until every last one is gone — no callbacks needed.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+        </div>
+        <h3>Ants & Stinging Pests</h3>
+        <p>Fire ants, carpenter ants, wasps, and hornets. We treat the source — not just the surface — so colonies don't rebuild after the spray dries.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="about">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">The IntelliPEST Difference</span>
+      <h2>Why Grapevine Homeowners Choose Us</h2>
+      <p>We built IntelliPEST around one principle: you deserve more than a spray-and-leave technician. Every service we offer reflects that commitment.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-num">01</div>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        </div>
+        <h3>Science-Backed Methods</h3>
+        <p>We use IPM (Integrated Pest Management) principles — meaning we target root causes, not symptoms. Fewer chemicals. Better results. Longer-lasting protection.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-num">02</div>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.36C18 2.07 15.93 0 13.36 0c-1.31 0-2.48.54-3.36 1.39C9.12.54 7.95 0 6.64 0 4.07 0 2 2.07 2 4.64c0 .48.11.92.18 1.36H0v14h20V6z"/></svg>
+        </div>
+        <h3>Transparent Pricing</h3>
+        <p>You'll know the full price before we start — no hidden fees, no upsells at the door. Our quotes are firm and our technicians don't work on commission.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-num">03</div>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <h3>Same-Day Communication</h3>
+        <p>Questions don't wait, so neither do we. Call, text, or email — you'll hear back from a real person at IntelliPEST the same day, every time.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-num">04</div>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+        </div>
+        <h3>Child & Pet Safe Products</h3>
+        <p>Every product we apply is EPA-registered and selected with your family's safety in mind. We'll walk you through any prep needed before and after service.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-num">05</div>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
+        </div>
+        <h3>Satisfaction Guarantee</h3>
+        <p>If pests return between scheduled services, we come back — at no additional charge. Your satisfaction isn't a talking point; it's our policy.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-num">06</div>
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <h3>Grapevine Local</h3>
+        <p>We live and work here. We know Grapevine's pest pressures by season, neighborhood, and home type — and we've seen every problem before yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">How It Works</span>
+      <h2>Getting Started is Simple</h2>
+      <p>Three straightforward steps from your first call to a pest-free home. No contracts required for initial services.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>Call or Book Online</h3>
+        <p>Reach us at (682) 380-8238 or submit a service request. Describe what you're seeing — we'll ask the right questions to prepare for your visit.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h3>Free Inspection</h3>
+        <p>A licensed IntelliPEST technician visits your property, identifies the pest, assesses the severity, and explains your treatment options — no pressure, no upsells.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h3>Treatment &amp; Follow-Up</h3>
+        <p>We treat on-site and schedule any needed follow-up visits. If pests return between services, so do we — at no additional charge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="100" data-suffix="%">0%</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">5-Star Reviews</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="8" data-suffix="">0</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Verified Google Reviews</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="24" data-suffix="hr">0hr</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Response Time</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="6" data-suffix="">0</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Pest Types Covered</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">What Clients Say</span>
+      <h2>5 Stars Across the Board</h2>
+      <p>Every Google review IntelliPEST has received is a perfect 5 stars. Here's what Grapevine homeowners are saying.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-quote">
+          <svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg>
+        </div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        </div>
+        <p class="review-text">"IntelliPEST took care of a persistent cockroach problem we'd been battling for months. One treatment and they were completely gone. The tech was knowledgeable and explained everything clearly."</p>
+        <div class="review-author">
+          <div class="review-avatar">MR</div>
+          <div>
+            <div class="review-name">M. Reyes</div>
+            <div class="review-location">Grapevine, TX · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-quote">
+          <svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg>
+        </div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        </div>
+        <p class="review-text">"Called in the morning about a wasp nest under our eaves. They came out the same afternoon, removed it safely, and treated the area to prevent new colonies. Fast, professional, and reasonably priced."</p>
+        <div class="review-author">
+          <div class="review-avatar">TW</div>
+          <div>
+            <div class="review-name">T. Whitfield</div>
+            <div class="review-location">Grapevine, TX · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-quote">
+          <svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg>
+        </div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        </div>
+        <p class="review-text">"We'd had two other companies out before calling IntelliPEST. Neither solved the problem. These guys identified a secondary entry point the others missed and the mice haven't been back since. Worth every penny."</p>
+        <div class="review-author">
+          <div class="review-avatar">JK</div>
+          <div>
+            <div class="review-name">J. Kellerman</div>
+            <div class="review-location">Southlake, TX · Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-inner">
+    <span class="section-label">Ready to Get Started?</span>
+    <h2>Get a <span>Free Inspection</span> This Week</h2>
+    <p>IntelliPEST serves Grapevine, Southlake, Colleyville, and surrounding DFW communities. Call now to schedule — no commitment, no pressure, no surprises.</p>
+    <div class="cta-actions">
+      <div class="cta-phone-block">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <a href="tel:6823808238">(682) 380-8238</a>
+      </div>
+      <a href="mailto:steve.byrd@intellipestpros.com" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Email Us Today
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Where We Serve</span>
+      <h2>Grapevine &amp; Surrounding DFW Communities</h2>
+      <p>Based in Grapevine, TX — we serve homeowners and businesses across Tarrant and Dallas counties.</p>
+    </div>
+    <div class="area-grid">
+      <div class="area-card reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div class="area-card-info">
+          <div class="area-name">Grapevine, TX</div>
+          <div class="area-dist">Home Base</div>
+        </div>
+      </div>
+      <div class="area-card reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div class="area-card-info">
+          <div class="area-name">Southlake, TX</div>
+          <div class="area-dist">~5 miles</div>
+        </div>
+      </div>
+      <div class="area-card reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div class="area-card-info">
+          <div class="area-name">Colleyville, TX</div>
+          <div class="area-dist">~6 miles</div>
+        </div>
+      </div>
+      <div class="area-card reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div class="area-card-info">
+          <div class="area-name">Flower Mound, TX</div>
+          <div class="area-dist">~8 miles</div>
+        </div>
+      </div>
+      <div class="area-card reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div class="area-card-info">
+          <div class="area-name">Euless, TX</div>
+          <div class="area-dist">~8 miles</div>
+        </div>
+      </div>
+      <div class="area-card reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div class="area-card-info">
+          <div class="area-name">Keller, TX</div>
+          <div class="area-dist">~10 miles</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">
+          <div class="nav-logo-icon">
+            <svg viewBox="0 0 24 24" fill="#fff" width="18" height="18"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          IntelliPEST
+        </a>
+        <p class="footer-desc">Intelligent, science-backed pest control for Grapevine and DFW. We treat root causes — not just symptoms — so results last.</p>
+        <div class="footer-contact">
+          <a href="tel:6823808238">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            (682) 380-8238
+          </a>
+          <a href="mailto:steve.byrd@intellipestpros.com">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            steve.byrd@intellipestpros.com
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+            1785 TX-26 Suite 200, Grapevine, TX 76051
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">Cockroach Control</a></li>
+          <li><a href="#">Rodent Removal</a></li>
+          <li><a href="#">Termite Treatment</a></li>
+          <li><a href="#">Mosquito Control</a></li>
+          <li><a href="#">Bed Bug Treatment</a></li>
+          <li><a href="#">Ants &amp; Stinging Pests</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul class="footer-links">
+          <li><a href="#">Grapevine, TX</a></li>
+          <li><a href="#">Southlake, TX</a></li>
+          <li><a href="#">Colleyville, TX</a></li>
+          <li><a href="#">Flower Mound, TX</a></li>
+          <li><a href="#">Euless, TX</a></li>
+          <li><a href="#">Keller, TX</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 IntelliPEST &mdash; Grapevine, TX. All rights reserved.</div>
+      <div class="footer-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        5.0 Stars · Grapevine's Trusted Pest Control
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Reveal on scroll
+const revealEls = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => revealObs.observe(el));
+
+// Stat counters
+document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800, start = performance.now();
+        const update = (time) => {
+          const p = Math.min((time - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+          if (p < 1) requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+      }
+    });
+  }, { threshold: 0.5 }).observe(el);
+});
+
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.boxShadow = window.scrollY > 40 ? '0 4px 24px rgba(0,0,0,.4)' : 'none';
+});
+</script>
+</body>
+</html>

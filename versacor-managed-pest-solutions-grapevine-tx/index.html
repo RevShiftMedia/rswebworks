@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Versacor Managed Pest Solutions — Southlake, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#1a5c30;
+  --primary-dark:#0f3d20;
+  --primary-mid:#235c38;
+  --primary-light:#279142;
+  --accent:#f59e0b;
+  --accent-dark:#d97706;
+  --accent-light:#fcd34d;
+  --dark:#0b1f12;
+  --dark-2:#112819;
+  --light:#f0fdf4;
+  --light-2:#ffffff;
+  --text:#0b1f12;
+  --text-muted:#4a6e52;
+  --border:rgba(26,92,48,.15);
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:var(--dark);line-height:1.65}
+h1,h2,h3,h4{font-family:'DM Serif Display',serif;line-height:1.2}
+.section-label{font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 2.1rem;border-radius:6px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.95rem;text-decoration:none;cursor:pointer;transition:all .22s ease;border:none}
+.btn-accent{background:var(--accent);color:var(--dark)}
+.btn-accent:hover{background:var(--accent-dark);color:#fff;transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,158,11,.3)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff;transform:translateY(-2px)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,92,48,.35)}
+
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge   {animation:heroFadeUp .5s ease-out .1s both}
+.hero-headline{animation:heroFadeUp .5s ease-out .2s both}
+.hero-sub     {animation:heroFadeUp .5s ease-out .35s both}
+.hero-ctas    {animation:heroFadeUp .5s ease-out .5s both}
+.hero-trust   {animation:heroFadeUp .5s ease-out .65s both}
+.hero-card    {animation:heroFadeUp .5s ease-out .4s both}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:.9rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;background:rgba(11,31,18,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(39,145,66,.2)}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:1.3rem;color:#fff;text-decoration:none;display:flex;align-items:center;gap:.65rem;flex-shrink:0}
+.nav-logo-mark{width:34px;height:34px;background:var(--primary-light);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.nav-logo-mark svg{width:18px;height:18px;fill:#fff}
+.nav-right{display:flex;align-items:center;gap:1rem}
+.nav-phone{color:rgba(255,255,255,.8);text-decoration:none;font-size:.9rem;font-weight:600;display:flex;align-items:center;gap:.4rem;transition:color .2s}
+.nav-phone:hover{color:var(--accent-light)}
+.nav-phone svg{width:15px;height:15px;fill:currentColor}
+.nav-cta{background:var(--accent);color:var(--dark);padding:.52rem 1.3rem;border-radius:6px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.85rem;text-decoration:none;transition:all .2s}
+.nav-cta:hover{background:var(--accent-dark);color:#fff}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:3rem;padding:7rem 5% 4rem;background:linear-gradient(140deg,var(--dark) 0%,var(--dark-2) 55%,#0d2516 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none}
+.hero::after{content:'';position:absolute;top:-80px;left:48%;width:500px;height:500px;background:radial-gradient(circle,rgba(39,145,66,.12) 0%,transparent 70%);pointer-events:none}
+.hero-content{position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.35);color:var(--accent-light);padding:.4rem 1rem;border-radius:50px;font-size:.78rem;font-weight:700;letter-spacing:.05em;margin-bottom:1.4rem}
+.hero-badge svg{width:13px;height:13px;fill:currentColor}
+.hero-headline{font-size:clamp(2.4rem,4.2vw,3.6rem);color:#fff;margin-bottom:1.2rem;font-style:italic}
+.hero-headline strong{font-style:normal;color:var(--accent-light)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.7);max-width:500px;margin-bottom:2rem;line-height:1.75}
+.hero-ctas{display:flex;gap:.85rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hero-trust{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.ht-stars{display:flex;gap:2px}
+.ht-stars svg{width:17px;height:17px;fill:var(--accent)}
+.ht-text{font-size:.85rem;color:rgba(255,255,255,.65)}
+.ht-div{width:1px;height:22px;background:rgba(255,255,255,.2)}
+
+/* HERO CARD — plan tiers */
+.hero-visual{position:relative;z-index:2}
+.hero-card{background:rgba(255,255,255,.06);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:1.75rem;color:#fff}
+.hc-header{margin-bottom:1.25rem;padding-bottom:1.1rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.hc-header h3{font-size:1.1rem;color:#fff;margin-bottom:.25rem}
+.hc-header p{font-size:.82rem;color:rgba(255,255,255,.55)}
+.plan-tiers{display:flex;flex-direction:column;gap:.75rem;margin-bottom:1.25rem}
+.plan-tier{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:1rem 1.1rem;display:flex;align-items:center;gap:.85rem;cursor:pointer;transition:all .2s}
+.plan-tier:hover,.plan-tier.featured{background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.4)}
+.plan-icon{width:38px;height:38px;border-radius:8px;background:rgba(39,145,66,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+.plan-tier:hover .plan-icon,.plan-tier.featured .plan-icon{background:rgba(245,158,11,.2)}
+.plan-icon svg{width:18px;height:18px;fill:var(--primary-light)}
+.plan-tier:hover .plan-icon svg,.plan-tier.featured .plan-icon svg{fill:var(--accent)}
+.plan-info{flex:1}
+.plan-name{font-weight:700;font-size:.9rem;color:#fff}
+.plan-desc{font-size:.78rem;color:rgba(255,255,255,.55);margin-top:.1rem}
+.plan-badge{background:var(--accent);color:var(--dark);font-size:.68rem;font-weight:700;padding:.2rem .55rem;border-radius:50px;white-space:nowrap}
+.hc-footer{padding-top:1.1rem;border-top:1px solid rgba(255,255,255,.1)}
+.hc-footer a{display:flex;align-items:center;justify-content:center;gap:.5rem;background:var(--accent);color:var(--dark);text-decoration:none;padding:.8rem;border-radius:8px;font-weight:700;font-size:.9rem;transition:all .2s}
+.hc-footer a:hover{background:var(--accent-dark);color:#fff}
+.hc-footer svg{width:16px;height:16px;fill:currentColor}
+
+/* TRUST STRIP */
+.trust-strip{background:#fff;padding:2.8rem 5%}
+.trust-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;align-items:center}
+.ti{display:flex;align-items:center;gap:.9rem}
+.ti-icon{width:46px;height:46px;background:var(--light);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ti-icon svg{width:22px;height:22px;fill:var(--primary)}
+.ti-lbl{font-size:.72rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.09em}
+.ti-val{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--text);margin-top:.1rem}
+
+/* SERVICES */
+.services{background:var(--dark-2);padding:6rem 5%}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-header{text-align:center;margin-bottom:3.5rem}
+.section-header .section-label{display:block;margin-bottom:.75rem;color:var(--accent-light)}
+.section-header h2{font-size:clamp(2rem,3.5vw,2.9rem);color:#fff;margin-bottom:1rem}
+.section-header p{color:rgba(255,255,255,.62);max-width:560px;margin:0 auto;font-size:1rem;line-height:1.7}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.svc{background:rgba(255,255,255,.04);border:1px solid rgba(39,145,66,.2);border-radius:14px;padding:1.75rem;transition:all .3s}
+.svc:hover{background:rgba(39,145,66,.08);border-color:rgba(39,145,66,.4);transform:translateY(-4px)}
+.svc-icon{width:52px;height:52px;background:rgba(245,158,11,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;transition:background .3s}
+.svc:hover .svc-icon{background:rgba(245,158,11,.2)}
+.svc-icon svg{width:26px;height:26px;fill:var(--accent)}
+.svc h3{font-size:1.1rem;color:#fff;margin-bottom:.55rem}
+.svc p{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.65}
+
+/* MANAGED PROGRAM */
+.program{background:var(--primary-dark);padding:6rem 5%}
+.program .section-header .section-label{color:rgba(255,255,255,.7)}
+.program .section-header h2{color:#fff}
+.program .section-header p{color:rgba(255,255,255,.65)}
+.program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem}
+.prog-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:2rem;text-align:center;transition:all .3s;position:relative}
+.prog-card.popular{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.prog-popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--dark);font-size:.7rem;font-weight:700;padding:.25rem .85rem;border-radius:50px;white-space:nowrap;font-family:'DM Sans',sans-serif}
+.prog-card:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.prog-name{font-family:'DM Serif Display',serif;font-size:1.3rem;color:#fff;margin-bottom:.4rem}
+.prog-tagline{font-size:.82rem;color:rgba(255,255,255,.55);margin-bottom:1.5rem}
+.prog-features{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:2rem;text-align:left}
+.prog-features li{display:flex;align-items:flex-start;gap:.55rem;font-size:.88rem;color:rgba(255,255,255,.78)}
+.prog-features svg{width:16px;height:16px;fill:var(--accent-light);flex-shrink:0;margin-top:.2rem}
+.prog-cta{display:block;background:rgba(255,255,255,.1);color:#fff;text-decoration:none;padding:.8rem;border-radius:8px;font-weight:700;font-size:.9rem;transition:all .2s;font-family:'DM Sans',sans-serif}
+.prog-card.popular .prog-cta{background:var(--accent);color:var(--dark)}
+.prog-cta:hover{background:var(--accent);color:var(--dark)}
+
+/* STATS */
+.stats{background:var(--primary);padding:5rem 5%}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;max-width:1200px;margin:0 auto;text-align:center}
+.stat-item{color:#fff}
+.stat-number{font-family:'DM Serif Display',serif;font-size:3.4rem;color:#fff;line-height:1}
+.stat-divider{width:36px;height:2px;background:var(--accent);margin:.7rem auto;border-radius:2px}
+.stat-label{font-size:.8rem;font-weight:600;opacity:.82;text-transform:uppercase;letter-spacing:.1em}
+
+/* REVIEWS */
+.reviews{background:var(--dark);padding:6rem 5%}
+.reviews .section-header .section-label{color:var(--accent-light)}
+.reviews .section-header h2{color:#fff}
+.reviews .section-header p{color:rgba(255,255,255,.6)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.review-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.75rem;transition:all .25s;position:relative}
+.review-card:hover{background:rgba(255,255,255,.07);transform:translateY(-3px)}
+.review-accent-bar{position:absolute;top:0;left:1.75rem;right:1.75rem;height:3px;background:linear-gradient(90deg,var(--primary-light),var(--accent));border-radius:0 0 4px 4px}
+.rv-quote{position:absolute;top:1.25rem;right:1.25rem}
+.rv-quote svg{width:28px;height:28px;fill:rgba(245,158,11,.12)}
+.rv-stars{display:flex;gap:3px;margin-bottom:.9rem;margin-top:.75rem}
+.rv-stars svg{width:15px;height:15px;fill:var(--accent)}
+.rv-text{font-size:.9rem;color:rgba(255,255,255,.76);line-height:1.7;margin-bottom:1.2rem;font-style:italic}
+.rv-author{display:flex;align-items:center;gap:.7rem}
+.rv-avatar{width:38px;height:38px;border-radius:50%;background:var(--primary-mid);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;color:#fff;flex-shrink:0}
+.rv-name{font-weight:600;color:#fff;font-size:.88rem}
+.rv-loc{font-size:.76rem;color:rgba(255,255,255,.45);margin-top:.1rem}
+
+/* CTA BAND */
+.cta-band{background:linear-gradient(135deg,var(--dark-2) 0%,var(--primary-dark) 50%,#0a2215 100%);padding:6rem 5%;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.045'/%3E%3C/svg%3E");pointer-events:none}
+.cta-band::after{content:'';position:absolute;top:-80px;right:-80px;width:420px;height:420px;background:radial-gradient(circle,rgba(245,158,11,.12) 0%,transparent 70%);pointer-events:none}
+.cta-inner{max-width:780px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.cta-inner .section-label{color:rgba(255,255,255,.65);display:block;margin-bottom:1rem}
+.cta-inner h2{font-size:clamp(2rem,3.5vw,2.9rem);color:#fff;margin-bottom:1.1rem}
+.cta-inner h2 em{color:var(--accent-light)}
+.cta-inner p{color:rgba(255,255,255,.7);font-size:1rem;margin-bottom:2.5rem;line-height:1.7}
+.cta-actions{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap}
+.cta-phone{display:flex;align-items:center;gap:.6rem;color:#fff;font-size:1.15rem;font-weight:700}
+.cta-phone svg{width:19px;height:19px;fill:var(--accent)}
+.cta-phone a{color:inherit;text-decoration:none}
+.cta-phone a:hover{color:var(--accent-light)}
+
+/* AREA */
+.area{background:var(--light);padding:6rem 5%}
+.area .section-header .section-label{color:var(--primary)}
+.area .section-header h2{color:var(--text)}
+.area .section-header p{color:var(--text-muted)}
+.area-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;max-width:900px;margin:0 auto}
+.area-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.35rem;display:flex;align-items:center;gap:.7rem;transition:all .22s}
+.area-card:hover{border-color:var(--primary);box-shadow:0 6px 20px rgba(26,92,48,.1);transform:translateY(-2px)}
+.area-card svg{width:18px;height:18px;fill:var(--primary);flex-shrink:0}
+.area-city{font-weight:600;color:var(--text);font-size:.92rem}
+.area-note{font-size:.77rem;color:var(--text-muted);margin-top:.1rem}
+
+/* FOOTER */
+footer{background:var(--dark);border-top:1px solid rgba(39,145,66,.15);padding:4rem 5% 2rem}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.footer-logo{font-family:'DM Serif Display',serif;font-size:1.2rem;color:#fff;text-decoration:none;display:flex;align-items:center;gap:.6rem;margin-bottom:1rem}
+.footer-desc{font-size:.87rem;color:rgba(255,255,255,.5);line-height:1.7;max-width:300px;margin-bottom:1.25rem}
+.footer-contact-links{display:flex;flex-direction:column;gap:.5rem}
+.footer-contact-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.87rem;display:flex;align-items:center;gap:.5rem;transition:color .2s}
+.footer-contact-links a:hover{color:var(--accent-light)}
+.footer-contact-links svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
+.footer-col h4{font-family:'DM Serif Display',serif;color:#fff;font-size:1rem;margin-bottom:.9rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.87rem;transition:color .2s}
+.footer-links a:hover{color:var(--accent-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:.8rem;color:rgba(255,255,255,.38)}
+.footer-badge{display:flex;align-items:center;gap:.45rem;font-size:.8rem;color:rgba(255,255,255,.38)}
+.footer-badge svg{width:14px;height:14px;fill:var(--accent);opacity:.65}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:8rem}
+  .hero-visual{display:none}
+  .trust-inner{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .program-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr 1fr}
+  .area-grid{grid-template-columns:1fr 1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .trust-inner{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .area-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+    </div>
+    Versacor
+  </a>
+  <div class="nav-right">
+    <a href="tel:8173103525" class="nav-phone">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      (817) 310-3525
+    </a>
+    <a href="tel:8173103525" class="nav-cta">Free Estimate</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+      4.3 Stars · Southlake, TX · Managed Pest Programs
+    </div>
+    <h1 class="hero-headline">Managed Pest Control.<br><strong>Done Right, Every Time.</strong></h1>
+    <p class="hero-sub">Versacor delivers structured pest management programs for homes and businesses across Southlake and DFW — not one-off spray visits, but accountable, ongoing protection you can count on.</p>
+    <div class="hero-ctas">
+      <a href="tel:8173103525" class="btn btn-accent">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call (817) 310-3525
+      </a>
+      <a href="#services" class="btn btn-outline">View Services</a>
+    </div>
+    <div class="hero-trust">
+      <div class="ht-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        <svg viewBox="0 0 24 24" style="opacity:.35"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+      </div>
+      <span class="ht-text"><strong style="color:#fff">4.3 Stars</strong> · 21 Google Reviews</span>
+      <div class="ht-div"></div>
+      <span class="ht-text">Southlake, TX Local</span>
+      <div class="ht-div"></div>
+      <span class="ht-text">Managed Programs</span>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="hc-header">
+        <h3>Choose Your Protection Plan</h3>
+        <p>Ongoing managed programs — not one-time visits</p>
+      </div>
+      <div class="plan-tiers">
+        <div class="plan-tier">
+          <div class="plan-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </div>
+          <div class="plan-info">
+            <div class="plan-name">Essential Guard</div>
+            <div class="plan-desc">Quarterly treatments · General pests</div>
+          </div>
+        </div>
+        <div class="plan-tier featured">
+          <div class="plan-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="plan-info">
+            <div class="plan-name">Premier Defense</div>
+            <div class="plan-desc">Bi-monthly · Full pest + rodent coverage</div>
+          </div>
+          <span class="plan-badge">Popular</span>
+        </div>
+        <div class="plan-tier">
+          <div class="plan-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 11.75A1.25 1.25 0 1 0 9 14.25 1.25 1.25 0 0 0 9 11.75zm6 0a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>
+          </div>
+          <div class="plan-info">
+            <div class="plan-name">Total Protect</div>
+            <div class="plan-desc">Monthly · All pests + termite monitoring</div>
+          </div>
+        </div>
+      </div>
+      <div class="hc-footer">
+        <a href="tel:8173103525">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          Get My Custom Plan — Call Now
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+  <div class="trust-inner">
+    <div class="ti reveal">
+      <div class="ti-icon"><svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg></div>
+      <div><div class="ti-lbl">Google Rating</div><div class="ti-val">4.3 Stars · 21 Reviews</div></div>
+    </div>
+    <div class="ti reveal">
+      <div class="ti-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg></div>
+      <div><div class="ti-lbl">Approach</div><div class="ti-val">Managed Programs</div></div>
+    </div>
+    <div class="ti reveal">
+      <div class="ti-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg></div>
+      <div><div class="ti-lbl">Service Area</div><div class="ti-val">Southlake &amp; DFW</div></div>
+    </div>
+    <div class="ti reveal">
+      <div class="ti-icon"><svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.36C18 2.07 15.93 0 13.36 0c-1.31 0-2.48.54-3.36 1.39C9.12.54 7.95 0 6.64 0 4.07 0 2 2.07 2 4.64c0 .48.11.92.18 1.36H0v14h20V6z"/></svg></div>
+      <div><div class="ti-lbl">Guarantee</div><div class="ti-val">Satisfaction or Return</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Pest Management Services</span>
+      <h2>Comprehensive Coverage for Every Pest</h2>
+      <p>Versacor's managed programs cover the full spectrum of pests common to Southlake and Tarrant County homes — with scheduled visits and documented service records.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M20 8h-2.81c-.45-.78-1.07-1.45-1.82-1.96L17 4.41 15.59 3l-2.17 2.17C12.96 5.06 12.49 5 12 5s-.96.06-1.41.17L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20V8z"/></svg></div>
+        <h3>General Pest Management</h3>
+        <p>Ants, roaches, spiders, earwigs, and seasonal invaders handled on a scheduled basis — so problems are caught and addressed before they escalate.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 3h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4zM3 10h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4zM3 17h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4z"/></svg></div>
+        <h3>Rodent Exclusion &amp; Control</h3>
+        <p>Full structural exclusion combined with trapping and monitoring. We eliminate the current population and seal the pathways they're using to enter.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2z"/></svg></div>
+        <h3>Termite Monitoring</h3>
+        <p>Bait station networks placed around your foundation create a perimeter that detects and eliminates termite colonies before they reach your structure.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93s-3.05 7.44-7 7.93v2.02c5.05-.5 9-4.76 9-9.95S18.05 2.55 13 2.05zM11 2.05C5.95 2.55 2 6.81 2 12s3.95 9.45 9 9.95v-2.02C7.05 19.44 4 16.08 4 12s3.05-7.44 7-7.93V2.05z"/></svg></div>
+        <h3>Mosquito &amp; Tick Programs</h3>
+        <p>Monthly or bi-monthly outdoor barrier treatments from spring through fall. Reclaim your yard for family gatherings, cookouts, and everyday outdoor living.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg></div>
+        <h3>Bed Bug Treatment</h3>
+        <p>Heat and chemical combination protocols that reach every life stage. Our technicians confirm elimination before closing out the service — no guesswork.</p>
+      </div>
+      <div class="svc reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3z"/></svg></div>
+        <h3>Commercial Pest Management</h3>
+        <p>Documented, compliant pest programs for restaurants, offices, and retail — built to satisfy health inspectors and protect your business reputation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANAGED PROGRAM TIERS -->
+<section class="program">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Protection Plans</span>
+      <h2>Choose Your Managed Program</h2>
+      <p>Every Versacor plan includes scheduled visits, documented service reports, and our satisfaction guarantee — so you always know exactly what you're getting.</p>
+    </div>
+    <div class="program-grid">
+      <div class="prog-card reveal">
+        <div class="prog-name">Essential Guard</div>
+        <div class="prog-tagline">Quarterly protection for everyday pests</div>
+        <ul class="prog-features">
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>4 scheduled visits per year</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>General pest treatment</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Written service reports</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Satisfaction guarantee</li>
+        </ul>
+        <a href="tel:8173103525" class="prog-cta">Get Started</a>
+      </div>
+      <div class="prog-card popular reveal">
+        <div class="prog-popular-badge">Most Popular</div>
+        <div class="prog-name">Premier Defense</div>
+        <div class="prog-tagline">Bi-monthly coverage — full protection</div>
+        <ul class="prog-features">
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>6 visits per year</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>General pest + rodent monitoring</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Interior + exterior treatment</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Priority scheduling</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Free re-service guarantee</li>
+        </ul>
+        <a href="tel:8173103525" class="prog-cta">Get Started</a>
+      </div>
+      <div class="prog-card reveal">
+        <div class="prog-name">Total Protect</div>
+        <div class="prog-tagline">Monthly — complete year-round defense</div>
+        <ul class="prog-features">
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>12 visits per year</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>All pests + termite bait stations</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Mosquito &amp; tick barrier included</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Same-day emergency response</li>
+          <li><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Annual termite inspection report</li>
+        </ul>
+        <a href="tel:8173103525" class="prog-cta">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="21" data-suffix="">0</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Google Reviews</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="3" data-suffix="">0</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Protection Plans</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="6" data-suffix="">0</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Pest Categories</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-number" data-target="100" data-suffix="%">0%</div>
+      <div class="stat-divider"></div>
+      <div class="stat-label">Satisfaction Guarantee</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">What Clients Say</span>
+      <h2>Trusted by Southlake Homeowners</h2>
+      <p>Versacor has 21 reviews and a 4.3-star rating on Google. Here's what clients say about their managed pest programs.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-accent-bar"></div>
+        <div class="rv-quote"><svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></div>
+        <div class="rv-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        </div>
+        <p class="rv-text">"We've had Versacor on a bi-monthly program for over two years. Not a single pest issue since we started. The technicians are always professional and the service reports are thorough — I know exactly what was done each visit."</p>
+        <div class="rv-author">
+          <div class="rv-avatar">CB</div>
+          <div><div class="rv-name">C. Bergman</div><div class="rv-loc">Southlake, TX · Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-accent-bar"></div>
+        <div class="rv-quote"><svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></div>
+        <div class="rv-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        </div>
+        <p class="rv-text">"I manage three commercial properties and Versacor handles the pest programs for all of them. Their documentation is excellent for health inspections and the technicians show up reliably every single time. Highly recommend for commercial clients."</p>
+        <div class="rv-author">
+          <div class="rv-avatar">RM</div>
+          <div><div class="rv-name">R. McAllister</div><div class="rv-loc">Grapevine, TX · Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <div class="review-accent-bar"></div>
+        <div class="rv-quote"><svg viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg></div>
+        <div class="rv-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+          <svg viewBox="0 0 24 24" style="opacity:.35"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        </div>
+        <p class="rv-text">"Switched to Versacor after a frustrating run with a national chain. The difference is immediate — they actually inspect before they spray and explain what they're finding. Mice haven't been back since the exclusion work was done."</p>
+        <div class="rv-author">
+          <div class="rv-avatar">JF</div>
+          <div><div class="rv-name">J. Fitzgerald</div><div class="rv-loc">Colleyville, TX · Google Review</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="cta-inner">
+    <span class="section-label">Start Your Program</span>
+    <h2>Ready for <em>Managed</em> Pest Protection?</h2>
+    <p>Call Versacor to discuss your property's needs and get a custom program recommendation — no pressure, no commitment required until you're ready.</p>
+    <div class="cta-actions">
+      <div class="cta-phone">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <a href="tel:8173103525">(817) 310-3525</a>
+      </div>
+      <a href="tel:8173103525" class="btn btn-accent">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call for a Free Estimate
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="area">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="section-label">Service Area</span>
+      <h2>Serving Southlake &amp; Surrounding DFW</h2>
+      <p>Based in Southlake, TX — Versacor covers Tarrant County and surrounding communities throughout the metroplex.</p>
+    </div>
+    <div class="area-grid">
+      <div class="area-card reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div><div class="area-city">Southlake, TX</div><div class="area-note">Home Base</div></div>
+      </div>
+      <div class="area-card reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div><div class="area-city">Grapevine, TX</div><div class="area-note">~4 miles</div></div>
+      </div>
+      <div class="area-card reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div><div class="area-city">Colleyville, TX</div><div class="area-note">~5 miles</div></div>
+      </div>
+      <div class="area-card reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div><div class="area-city">Keller, TX</div><div class="area-note">~9 miles</div></div>
+      </div>
+      <div class="area-card reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div><div class="area-city">Hurst, TX</div><div class="area-note">~10 miles</div></div>
+      </div>
+      <div class="area-card reveal">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        <div><div class="area-city">Euless, TX</div><div class="area-note">~12 miles</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="#" class="footer-logo">
+          <div class="nav-logo-mark">
+            <svg viewBox="0 0 24 24" fill="#fff" width="16" height="16"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+          </div>
+          Versacor
+        </a>
+        <p class="footer-desc">Managed pest solutions for Southlake and DFW — structured programs with scheduled visits, documented service, and guaranteed results.</p>
+        <div class="footer-contact-links">
+          <a href="tel:8173103525">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            (817) 310-3525
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+            485 Cherry Ln, Southlake, TX 76092
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#">General Pest Management</a></li>
+          <li><a href="#">Rodent Exclusion</a></li>
+          <li><a href="#">Termite Monitoring</a></li>
+          <li><a href="#">Mosquito Programs</a></li>
+          <li><a href="#">Bed Bug Treatment</a></li>
+          <li><a href="#">Commercial Programs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul class="footer-links">
+          <li><a href="#">Southlake, TX</a></li>
+          <li><a href="#">Grapevine, TX</a></li>
+          <li><a href="#">Colleyville, TX</a></li>
+          <li><a href="#">Keller, TX</a></li>
+          <li><a href="#">Hurst, TX</a></li>
+          <li><a href="#">Euless, TX</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 Versacor Managed Pest Solutions. All rights reserved.</div>
+      <div class="footer-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 1l2.753 8.472H23l-7.18 5.22 2.752 8.471L12 18.944l-6.572 4.219 2.752-8.471L1 9.472h8.247z"/></svg>
+        4.3 Stars · Southlake's Managed Pest Specialists
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+  new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800, start = performance.now();
+        const update = (time) => {
+          const p = Math.min((time - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+          if (p < 1) requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+      }
+    });
+  }, { threshold: 0.5 }).observe(el);
+});
+
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.boxShadow = window.scrollY > 40 ? '0 4px 24px rgba(0,0,0,.4)' : 'none';
+});
+</script>
+</body>
+</html>

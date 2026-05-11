@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bee Swarm Rodeo | Humane Bee Removal — Allen & DFW, TX</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #4a2008;
+  --primary-dark: #240e02;
+  --accent: #d4900d;
+  --accent-dark: #a66c08;
+  --bg: #fffdf9;
+  --bg-off: #fdf6e8;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.8);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1c0d02;
+  --grey-text: #7a6152;
+  --border: #eddfc8;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(74,32,8,0.1);
+  --shadow-lg: 0 8px 40px rgba(74,32,8,0.2);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(212,144,13,0.45); transition: all 0.15s ease; text-decoration: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,144,13,0.55); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 600;
+  padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.15s ease; text-decoration: none;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.1); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+
+@media (max-width: 900px) {
+  .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+/* HEADER */
+header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--primary);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+}
+.brand-name { font-family: var(--font-display); font-weight: 900; font-size: 22px; color: white; letter-spacing: 0.02em; }
+.brand-tagline { font-family: var(--font-body); font-size: 12px; color: var(--t2); margin-top: 1px; }
+.header-phone { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--t2); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+.header-phone:hover { color: white; }
+.header-cta { display: flex; align-items: center; gap: 20px; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(140deg, var(--primary-dark) 0%, var(--primary) 55%, #6b2e0e 100%);
+  padding: 90px 0 80px; position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.15; pointer-events: none; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-grid {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: center;
+}
+@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 14px; border-radius: 20px; margin-bottom: 20px;
+  animation: heroFadeUp 0.5s ease-out 0.1s both;
+}
+.hero-headline {
+  font-family: var(--font-display); font-size: clamp(42px, 6vw, 64px);
+  font-weight: 900; color: white; line-height: 1.05; letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  animation: heroFadeUp 0.5s ease-out 0.2s both;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-family: var(--font-body); font-size: 18px; color: var(--t2);
+  line-height: 1.65; margin-bottom: 32px; max-width: 520px;
+  animation: heroFadeUp 0.5s ease-out 0.35s both;
+}
+.hero-ctas {
+  display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;
+  animation: heroFadeUp 0.5s ease-out 0.5s both;
+}
+.hero-trust {
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  animation: heroFadeUp 0.5s ease-out 0.65s both;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 6px;
+  font-family: var(--font-body); font-size: 13px; color: var(--t2);
+}
+.hero-card {
+  background: rgba(255,248,230,0.08);
+  border: 1px solid rgba(212,144,13,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  border-radius: 16px; padding: 28px 32px;
+  animation: heroFadeUp 0.5s ease-out 0.4s both;
+}
+.hero-card-title {
+  font-family: var(--font-display); font-size: 14px; font-weight: 700;
+  color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px;
+}
+.value-prop { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; }
+.value-prop:last-of-type { margin-bottom: 24px; }
+.vp-icon {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(212,144,13,0.2);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent);
+}
+.vp-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: white; line-height: 1.2; }
+.vp-desc { font-family: var(--font-body); font-size: 13px; color: var(--t2); line-height: 1.5; }
+.card-phone {
+  border-top: 1px solid rgba(212,144,13,0.2); padding-top: 20px;
+}
+.card-phone-label { font-family: var(--font-body); font-size: 12px; color: var(--t3); margin-bottom: 4px; }
+.card-phone-number { font-family: var(--font-display); font-size: 22px; font-weight: 900; color: white; text-decoration: none; }
+.card-phone-number:hover { color: var(--accent); }
+
+/* STATS */
+.stats-bar { background: var(--primary); }
+.stats-grid {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 700px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+.stat-box {
+  padding: 36px 24px; border-right: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+.stat-box:last-child { border-right: none; }
+.stat-number {
+  font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px);
+  font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 6px;
+}
+.stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+
+/* SERVICES */
+.services-section { background: var(--bg); }
+.section-label {
+  font-family: var(--font-display); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+  margin-bottom: 12px; display: block;
+}
+.section-title {
+  font-family: var(--font-display); font-size: 36px; font-weight: 900;
+  color: var(--dark-text); margin-bottom: 12px; letter-spacing: -0.02em;
+}
+.section-sub { font-family: var(--font-body); font-size: 16px; color: var(--grey-text); margin-bottom: 48px; max-width: 560px; }
+.service-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: 3px solid transparent;
+  border-radius: var(--radius); padding: 28px 24px;
+  box-shadow: var(--shadow); transition: all 0.25s ease;
+}
+.service-card:hover { border-top-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.svc-icon {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: rgba(212,144,13,0.12);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 18px; color: var(--accent);
+}
+.svc-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--dark-text); margin-bottom: 10px; }
+.svc-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 16px; }
+.svc-link { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+
+/* WHY CHOOSE */
+.why-section { background: var(--primary); position: relative; overflow: hidden; }
+.why-section::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.15; pointer-events: none; z-index: 0;
+}
+.why-section > .container { position: relative; z-index: 1; }
+.why-diff-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-top: 40px; }
+@media (max-width: 600px) { .why-diff-grid { grid-template-columns: 1fr; } }
+.diff-item { display: flex; align-items: flex-start; gap: 16px; }
+.diff-icon {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(212,144,13,0.2);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent);
+}
+.diff-title { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; margin-bottom: 6px; }
+.diff-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.65; }
+
+/* HOW IT WORKS */
+.how-section { background: var(--primary-dark); }
+.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 48px; position: relative; }
+@media (max-width: 700px) { .steps-grid { grid-template-columns: 1fr; } }
+.steps-grid::before {
+  content: ''; position: absolute; top: 36px; left: 16.67%; right: 16.67%;
+  height: 1px; border-top: 2px dashed rgba(212,144,13,0.25);
+}
+@media (max-width: 700px) { .steps-grid::before { display: none; } }
+.step { text-align: center; padding: 0 8px; }
+.step-num {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--accent); margin: 0 auto 20px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 26px; font-weight: 900; color: white;
+}
+.step-icon { margin-bottom: 16px; color: white; display: flex; justify-content: center; }
+.step-title { font-family: var(--font-display); font-size: 19px; font-weight: 700; color: white; margin-bottom: 10px; }
+.step-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.65; }
+
+/* REVIEWS */
+.reviews-section { background: var(--bg-off); }
+.reviews-header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 48px; flex-wrap: wrap; gap: 20px;
+}
+.google-badge {
+  display: flex; align-items: center; gap: 10px;
+  background: white; border: 1px solid var(--border);
+  border-radius: 10px; padding: 10px 16px;
+}
+.google-rating { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--dark-text); }
+.google-badge-text { font-family: var(--font-body); font-size: 13px; color: var(--grey-text); }
+.review-card {
+  background: #fffdf7; border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px;
+  box-shadow: 0 2px 16px rgba(74,32,8,0.06); transition: all 0.25s ease;
+}
+.review-card:hover { box-shadow: 0 8px 32px rgba(74,32,8,0.12); transform: translateY(-3px); }
+.review-quote { color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block; }
+.review-text { font-family: var(--font-body); font-style: italic; font-size: 15px; line-height: 1.7; color: var(--dark-text); margin-bottom: 16px; }
+.review-divider { height: 1px; background: var(--border); margin: 16px 0; }
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(212,144,13,0.18);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--accent-dark); flex-shrink: 0;
+}
+.reviewer-name { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--dark-text); }
+.reviewer-meta { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); }
+.stars { display: flex; gap: 2px; color: #f59e0b; margin-bottom: 2px; }
+
+/* SERVICE AREAS */
+.areas-section { background: var(--primary); }
+.areas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; align-items: center; }
+@media (max-width: 700px) { .areas-grid { grid-template-columns: 1fr; gap: 40px; } }
+.areas-chips {
+  background: var(--primary-dark); border-radius: var(--radius);
+  padding: 28px; display: flex; flex-wrap: wrap; gap: 10px;
+  border: 1px solid rgba(212,144,13,0.15);
+}
+.chip {
+  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+  padding: 7px 16px; border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2); color: var(--t2);
+  cursor: default; transition: all 0.2s ease;
+}
+.chip:hover { background: var(--accent); border-color: var(--accent); color: white; }
+
+/* CONTACT */
+.contact-section { background: var(--bg); }
+.contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 60px; align-items: start; }
+@media (max-width: 700px) { .contact-grid { grid-template-columns: 1fr; } }
+.form-group { margin-bottom: 20px; }
+.form-label { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; display: block; }
+input, select, textarea {
+  width: 100%; background: var(--bg-off);
+  border: 1px solid var(--border); border-radius: 8px;
+  padding: 12px 14px; font-family: var(--font-body); font-size: 14px;
+  color: var(--dark-text); transition: border-color 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none; border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212,144,13,0.15);
+}
+.contact-info-card { background: var(--primary); border-radius: var(--radius); padding: 32px; color: white; }
+.info-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 24px; }
+.info-icon {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(212,144,13,0.2);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent);
+}
+.info-label { font-family: var(--font-body); font-size: 12px; color: var(--t3); margin-bottom: 4px; }
+.info-value { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; }
+
+/* CTA BAND */
+.cta-band {
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  padding: 80px 0; text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-band::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.18; pointer-events: none; z-index: 0;
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-headline { font-family: var(--font-display); font-size: clamp(28px, 4vw, 44px); font-weight: 900; color: white; margin-bottom: 12px; letter-spacing: -0.02em; }
+.cta-sub { font-family: var(--font-body); font-size: 16px; color: rgba(255,255,255,0.9); margin-bottom: 32px; }
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: white; color: var(--accent-dark);
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  padding: 16px 36px; border-radius: 8px; text-decoration: none;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.2); transition: all 0.15s ease;
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(0,0,0,0.25); }
+
+/* FOOTER */
+footer { background: var(--primary-dark); padding: 60px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 48px; margin-bottom: 48px; }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+.footer-brand-name { font-family: var(--font-display); font-size: 22px; font-weight: 900; color: white; margin-bottom: 12px; letter-spacing: 0.02em; }
+.footer-desc { font-family: var(--font-body); font-size: 14px; color: var(--t3); line-height: 1.7; margin-bottom: 20px; }
+.footer-col-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--accent); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { font-family: var(--font-body); font-size: 14px; color: var(--t2); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding: 20px 0; }
+.footer-bottom-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.copyright { font-family: var(--font-body); font-size: 13px; color: var(--t3); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-inner">
+    <div>
+      <div class="brand-name">Bee Swarm Rodeo</div>
+      <div class="brand-tagline">Humane Bee Removal — Allen &amp; DFW, TX</div>
+    </div>
+    <div class="header-cta">
+      <a href="tel:4064048234" class="header-phone">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (406) 404-8234
+      </a>
+      <a href="tel:4064048234" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Now — It's Free
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Allen's Humane Bee Specialists — 5.0 Stars
+      </div>
+      <h1 class="hero-headline">Allen's <span>Live Bee</span> Removal Done Right</h1>
+      <p class="hero-sub">Every swarm that lands on your property in Allen, Plano, or McKinney gets removed alive and rehomed to our apiary — never sprayed, never wasted. Beekeepers first, wranglers always.</p>
+      <div class="hero-ctas">
+        <a href="tel:4064048234" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (406) 404-8234
+        </a>
+        <a href="#contact" class="btn-ghost">Get a Free Estimate</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>5.0 — 10 reviews</span>
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed Beekeeper
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          Same-Day Swarm Response
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="hero-card">
+        <div class="hero-card-title">The Rodeo Promise</div>
+        <div class="value-prop">
+          <div class="vp-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <div class="vp-title">Live Removal Only</div>
+            <div class="vp-desc">We never use pesticides. Every colony is captured alive and rehomed to our Texas apiaries</div>
+          </div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <div class="vp-title">Free Estimates, No Surprises</div>
+            <div class="vp-desc">We tell you exactly what it costs before any work begins — no hidden fees</div>
+          </div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <div class="vp-title">Wall Hive Specialists</div>
+            <div class="vp-desc">Hives inside walls, soffits, attics — we've done it all without tearing out your home</div>
+          </div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <div class="vp-title">Fully Insured</div>
+            <div class="vp-desc">Licensed and insured for residential and commercial properties across DFW</div>
+          </div>
+        </div>
+        <div class="card-phone">
+          <div class="card-phone-label">Swarm on your property? Call now</div>
+          <a href="tel:4064048234" class="card-phone-number">(406) 404-8234</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-box">
+      <div class="stat-number" data-target="500" data-suffix="+">0+</div>
+      <div class="stat-label">Swarms Rehomed</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" data-target="5" data-suffix=".0">0.0</div>
+      <div class="stat-label">Google Star Rating</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" data-target="0" data-suffix="Spray">0 Spray</div>
+      <div class="stat-label">Always Pesticide-Free</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" data-target="24" data-suffix="hr">0hr</div>
+      <div class="stat-label">Response for Active Swarms</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section">
+  <div class="container">
+    <span class="section-label">What We Do</span>
+    <h2 class="section-title">Five Ways We Wrangle</h2>
+    <p class="section-sub">From a fresh swarm on a fence post to a hive that's been in your wall for three seasons — we handle every situation safely and humanely.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="svc-name">Residential Bee Removal</div>
+        <p class="svc-desc">A swarm in your eaves turns into a permanent colony in weeks. We remove it safely, seal entry points, and leave your home protected — same day for active swarms.</p>
+        <a href="#contact" class="svc-link">Get Free Estimate &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2M8 21V7M16 21V7"/></svg>
+        </div>
+        <div class="svc-name">Commercial Removal</div>
+        <p class="svc-desc">Schools, retail, HOAs, and property managers — we work discreetly during off-hours and deliver a signed certificate of removal when the job is done.</p>
+        <a href="#contact" class="svc-link">Book Commercial &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        </div>
+        <div class="svc-name">Hive Relocation</div>
+        <p class="svc-desc">Established hives moved intact — queen, brood, and comb preserved. We transport the whole colony to our working apiaries where they'll thrive and pollinate Texas farms.</p>
+        <a href="#contact" class="svc-link">Learn More &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+        </div>
+        <div class="svc-name">Wall Hive Extraction</div>
+        <p class="svc-desc">Colonies inside walls, soffits, and attics require surgical precision. We extract the hive, treat the void, and seal against future colonization — minimal disruption to your home.</p>
+        <a href="#contact" class="svc-link">Get Free Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div class="svc-name">Bee &amp; Hive Consultation</div>
+        <p class="svc-desc">Found a hive and not sure what to do? We'll walk your property, identify the species, assess the risk, and give you a clear recommendation — no charge for the consult.</p>
+        <a href="#contact" class="svc-link">Book Consult &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="svc-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <div class="svc-name">Education Programs</div>
+        <p class="svc-desc">School visits, HOA talks, and garden workshops about native pollinators, honeybee behavior, and coexisting safely with bees. Available throughout Collin County.</p>
+        <a href="#contact" class="svc-link">Schedule Program &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent)">The Rodeo Difference</span>
+    <h2 class="section-title" style="color:white">We Don't Kill Bees. We Rehome Them.</h2>
+    <p class="section-sub" style="color:var(--t2)">Most pest control companies reach for the sprayer. We reach for our bee suit. Every colony removed becomes a working hive that pollinates Texas farmland.</p>
+    <div class="why-diff-grid">
+      <div class="diff-item card">
+        <div class="diff-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">Zero Pesticides — Ever</div>
+          <div class="diff-desc">We have never sprayed a bee colony and we never will. Live capture is harder, takes more skill, and it's the right thing to do for Texas pollinators.</div>
+        </div>
+      </div>
+      <div class="diff-item card">
+        <div class="diff-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">Beekeepers First</div>
+          <div class="diff-desc">We maintain working apiaries and know bee behavior intimately. That expertise means faster removals and less damage to your property.</div>
+        </div>
+      </div>
+      <div class="diff-item card">
+        <div class="diff-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">Same-Day for Active Swarms</div>
+          <div class="diff-desc">A fresh swarm is on the move and won't wait for a week-out appointment. We respond same day to active swarms across Allen and the DFW Metroplex.</div>
+        </div>
+      </div>
+      <div class="diff-item card">
+        <div class="diff-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">5.0 Stars — Every Review</div>
+          <div class="diff-desc">Ten for ten on Google with a perfect five stars. We do the job right, clean up after ourselves, and follow up to make sure you're satisfied.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent)">How It Works</span>
+    <h2 class="section-title" style="color:white">Simple. Safe. Done Right.</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div class="step-title">Call or Text Us</div>
+        <p class="step-desc">Describe what you're seeing — swarm, established hive, or something in the wall. We'll give you an immediate assessment and a free estimate over the phone.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="step-title">We Wrangle &amp; Rehome</div>
+        <p class="step-desc">Our beekeeper arrives in full gear, captures the colony alive, and transports them to our apiary. For hives in structures, we extract with minimal disruption to your property.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="step-title">Sealed &amp; Protected</div>
+        <p class="step-desc">We seal entry points to prevent future colonization, clean up any residual honeycomb, and follow up within 72 hours to confirm the colony hasn't returned.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-header">
+      <div>
+        <span class="section-label">What People Say</span>
+        <h2 class="section-title">5.0 Stars. Every Single Time.</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div>
+          <div class="google-rating">5.0 Stars</div>
+          <div class="google-badge-text">10 Google Reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg class="review-quote" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Had a massive swarm show up on the fence in my McKinney backyard — thousands of bees, no joke. Called Bee Swarm Rodeo at 9am and they were there by noon. Watched the whole thing — not a single bee killed, just carefully moved into boxes. Calmest removal you can imagine. Neighbors came over to watch. Kids loved it."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">TC</div>
+          <div>
+            <div class="stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="reviewer-name">Travis C.</div>
+            <div class="reviewer-meta">McKinney, TX &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg class="review-quote" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"We had a hive inside the wall of our Plano home for at least two seasons — I could hear buzzing for months before I finally figured out where it was. Bee Swarm Rodeo found the entry point in 10 minutes, removed everything without opening the wall, and sealed it up perfectly. Two months later, zero bees. Totally worth every dollar."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">SR</div>
+          <div>
+            <div class="stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="reviewer-name">Sarah R.</div>
+            <div class="reviewer-meta">Plano, TX &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg class="review-quote" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">"Booked them for an education visit at our Allen elementary school. The kids were absolutely fascinated — learning about honeybees without a hint of fear. He brought a glass-panel hive display and let kids get as close as they wanted. Parents were asking for his card afterward. Best science assembly we've had."</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">KM</div>
+          <div>
+            <div class="stars">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="reviewer-name">Karen M.</div>
+            <div class="reviewer-meta">Allen, TX — Bethany Elem. &middot; Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas-section">
+  <div class="container">
+    <div class="areas-grid">
+      <div>
+        <span class="section-label" style="color:var(--accent)">Where We Ride</span>
+        <h2 class="section-title" style="color:white">Serving All of DFW Metroplex</h2>
+        <p style="font-family:var(--font-body);font-size:16px;color:var(--t2);line-height:1.7;margin-bottom:28px;">
+          Based in Allen, operating across the entire DFW Metroplex. Same-day response for active swarms anywhere in Collin, Dallas, and Denton counties.
+        </p>
+        <a href="tel:4064048234" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Check Response Time
+        </a>
+      </div>
+      <div class="areas-chips">
+        <span class="chip">Allen</span>
+        <span class="chip">McKinney</span>
+        <span class="chip">Plano</span>
+        <span class="chip">Frisco</span>
+        <span class="chip">Richardson</span>
+        <span class="chip">Garland</span>
+        <span class="chip">Wylie</span>
+        <span class="chip">Murphy</span>
+        <span class="chip">Prosper</span>
+        <span class="chip">Fairview</span>
+        <span class="chip">Celina</span>
+        <span class="chip">Dallas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <span class="section-label">Get a Free Estimate</span>
+        <h2 class="section-title">Spotted a Swarm? Let's Wrangle.</h2>
+        <p style="font-family:var(--font-body);font-size:16px;color:var(--grey-text);margin-bottom:32px;">
+          Fill out the form or just call — we'll get back to you within the hour for active swarms.
+        </p>
+        <form>
+          <div class="form-group">
+            <label class="form-label">Your Name</label>
+            <input type="text" placeholder="Full name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" placeholder="(214) 000-0000">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">What Are You Dealing With?</label>
+            <select>
+              <option>Active swarm on my property</option>
+              <option>Hive in a wall or structure</option>
+              <option>Hive in eaves / soffit</option>
+              <option>Hive in attic</option>
+              <option>Not sure — need assessment</option>
+              <option>Commercial removal needed</option>
+              <option>Education program inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Property Address</label>
+            <input type="text" placeholder="Address in Allen, Plano, McKinney, etc.">
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px;">
+            Send — We'll Respond Within the Hour
+          </button>
+        </form>
+      </div>
+      <div class="contact-info-card">
+        <h3 style="font-family:var(--font-display);font-size:22px;font-weight:700;color:white;margin-bottom:28px;">Reach the Rodeo</h3>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Call or Text</div>
+            <div class="info-value">(406) 404-8234</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Based In</div>
+            <div class="info-value">Allen, TX — All of DFW</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Hours</div>
+            <div class="info-value">7 Days a Week, 8AM–7PM</div>
+          </div>
+        </div>
+        <div style="background:rgba(212,144,13,0.12);border:1px solid rgba(212,144,13,0.25);border-radius:8px;padding:16px;margin-top:8px;">
+          <div style="font-family:var(--font-display);font-size:14px;font-weight:700;color:var(--accent);margin-bottom:6px;">Active Swarm?</div>
+          <div style="font-family:var(--font-body);font-size:13px;color:var(--t2);line-height:1.6;">Same-day response for active swarms. Call directly — don't wait for a callback form.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2 class="cta-headline">Got a Swarm? We'll Wrangle It Today.</h2>
+    <p class="cta-sub">Free estimate. Same-day service for active swarms. Pesticide-free, always.</p>
+    <a href="tel:4064048234" class="cta-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (406) 404-8234
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Bee Swarm Rodeo</div>
+        <p class="footer-desc">Allen, Texas's humane bee removal specialists. Every swarm removed alive and rehomed to our apiaries. Serving the DFW Metroplex without ever reaching for a sprayer.</p>
+        <a href="tel:4064048234" style="font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--accent);text-decoration:none;">(406) 404-8234</a>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Residential Removal</a></li>
+          <li><a href="#contact">Commercial Removal</a></li>
+          <li><a href="#contact">Hive Relocation</a></li>
+          <li><a href="#contact">Wall Hive Extraction</a></li>
+          <li><a href="#contact">Bee Consultation</a></li>
+          <li><a href="#contact">Education Programs</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Allen, TX</a></li>
+          <li><a href="#contact">McKinney, TX</a></li>
+          <li><a href="#contact">Plano, TX</a></li>
+          <li><a href="#contact">Frisco, TX</a></li>
+          <li><a href="#contact">Richardson, TX</a></li>
+          <li><a href="#contact">All of DFW</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:4064048234">(406) 404-8234</a></li>
+          <li><a href="#contact">Request Estimate</a></li>
+        </ul>
+        <div style="margin-top:20px;padding:16px;background:rgba(212,144,13,0.1);border-radius:8px;border:1px solid rgba(212,144,13,0.2);">
+          <div style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--accent);margin-bottom:4px;">5.0 Stars on Google</div>
+          <div style="font-family:var(--font-body);font-size:12px;color:var(--t3);">Licensed Beekeeper &middot; Fully Insured</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <span class="copyright">&copy; 2026 Bee Swarm Rodeo. All rights reserved. Allen, TX.</span>
+        <span class="copyright">Licensed Beekeeper &middot; Pesticide-Free Since Day One</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800;
+        const start = performance.now();
+        const update = (time) => {
+          const progress = Math.min((time - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - progress, 3);
+          el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+          if (progress < 1) requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.5 });
+  observer.observe(el);
+});
+
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.2 });
+document.querySelectorAll('.card').forEach(c => cardObserver.observe(c));
+
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header').style.boxShadow =
+    window.scrollY > 50 ? '0 4px 24px rgba(0,0,0,0.5)' : '0 2px 12px rgba(0,0,0,0.35)';
+});
+</script>
+</body>
+</html>
