@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael's Master Plumbing | McKinney, TX | (469) 925-8080</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #0d1e34;
+  --primary-dark: #071222;
+  --accent: #f59e0b;
+  --accent-dark: #b45309;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #e8edf5;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 32px; }
+@media(max-width:900px){ .grid-3,.grid-4 { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .grid-3,.grid-4,.grid-2 { grid-template-columns: 1fr; } }
+
+/* ANIMATIONS */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1) { animation-delay: .1s; }
+.card:nth-child(2) { animation-delay: .2s; }
+.card:nth-child(3) { animation-delay: .3s; }
+.card:nth-child(4) { animation-delay: .4s; }
+.card:nth-child(5) { animation-delay: .5s; }
+.card:nth-child(6) { animation-delay: .6s; }
+
+/* HEADER */
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--primary);
+  transition: box-shadow 0.3s;
+}
+#header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: 16px;
+}
+.header-brand { display: flex; flex-direction: column; }
+.header-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--t1);
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+}
+.header-tagline {
+  font-size: 0.72rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.header-right { display: flex; align-items: center; gap: 16px; }
+.header-phone {
+  color: var(--t1);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--primary-dark);
+  border: none;
+  border-radius: var(--radius);
+  padding: 10px 22px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.btn-primary:hover { background: var(--accent-dark); color: #fff; transform: translateY(-1px); }
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: var(--radius);
+  padding: 10px 20px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+/* HERO */
+.hero {
+  position: relative;
+  background: linear-gradient(140deg, var(--primary-dark) 0%, var(--primary) 60%, #142840 100%);
+  padding: 100px 0 80px;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(245,158,11,0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  gap: 48px;
+  align-items: center;
+}
+@media(max-width:768px){ .hero-inner { grid-template-columns: 1fr; } }
+.hero-left { display: flex; flex-direction: column; gap: 20px; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245,158,11,0.15);
+  border: 1px solid rgba(245,158,11,0.35);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 40px;
+  width: fit-content;
+}
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  color: var(--t1);
+  line-height: 1.0;
+  letter-spacing: 0.01em;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--t2);
+  max-width: 480px;
+  line-height: 1.7;
+}
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-ctas .btn-primary { font-size: 1rem; padding: 14px 28px; }
+.hero-ctas .btn-outline { font-size: 1rem; padding: 14px 26px; }
+.hero-trust { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.trust-stars { display: flex; align-items: center; gap: 4px; }
+.trust-text { color: var(--t2); font-size: 0.88rem; font-weight: 500; }
+.trust-divider { color: var(--t3); }
+.hero-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.13);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 28px 32px;
+}
+.hero-card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--t1);
+  letter-spacing: 0.06em;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+.hero-review-count {
+  text-align: center;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 18px;
+}
+.hero-review-count-num {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: var(--accent);
+  line-height: 1;
+  display: block;
+}
+.hero-review-count-sub {
+  font-size: 0.78rem;
+  color: var(--t2);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.hero-card-items { display: flex; flex-direction: column; gap: 12px; }
+.hero-card-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--t2);
+  font-size: 0.88rem;
+}
+.hero-card-item svg { flex-shrink: 0; color: var(--accent); }
+.hero-card-item strong { color: var(--t1); }
+.hero-card-cta {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.hero-card-cta a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--primary-dark);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 13px;
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+.hero-card-cta a:hover { background: var(--accent-dark); color: #fff; }
+
+/* STATS ROW */
+.stats-row {
+  background: var(--primary-dark);
+  padding: 0;
+}
+.stats-row-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+@media(max-width:900px){ .stats-row-inner { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .stats-row-inner { grid-template-columns: 1fr; } }
+.stat-box {
+  padding: 36px 24px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.07);
+}
+.stat-box:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--t2);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* SERVICES */
+.services-section { background: var(--bg-off); }
+.section-header { text-align: center; margin-bottom: 48px; }
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  background: rgba(245,158,11,0.1);
+  padding: 5px 14px;
+  border-radius: 40px;
+  margin-bottom: 14px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--dark-text);
+  margin-bottom: 12px;
+}
+.section-sub {
+  color: var(--grey-text);
+  font-size: 1rem;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Icon-inline card layout: icon top-right, title left */
+.service-card {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.service-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.service-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--dark-text);
+  line-height: 1.1;
+  flex: 1;
+  padding-right: 12px;
+}
+.service-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: rgba(245,158,11,0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service-icon svg { color: var(--accent); }
+.service-desc {
+  color: var(--grey-text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.service-card-accent {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-dark);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* WHY CHOOSE US */
+.why-section {
+  position: relative;
+  background: var(--primary);
+  overflow: hidden;
+}
+.why-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+.why-section > * { position: relative; z-index: 1; }
+.why-section .section-label { color: var(--accent); background: rgba(245,158,11,0.15); }
+.why-section .section-title { color: var(--t1); }
+.why-section .section-sub { color: var(--t2); }
+.why-stat-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+}
+.why-stat-card .stat-num { font-size: 2.4rem; }
+.why-stat-card .stat-label { font-size: 0.78rem; }
+.why-diff-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.why-diff-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: rgba(245,158,11,0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.why-diff-icon svg { color: var(--accent); }
+.why-diff-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--t1);
+  margin-bottom: 6px;
+}
+.why-diff-desc { font-size: 0.88rem; color: var(--t2); line-height: 1.6; }
+
+/* HOW IT WORKS */
+.how-section { background: var(--primary-dark); }
+.how-section .section-label { color: var(--accent); background: rgba(245,158,11,0.12); }
+.how-section .section-title { color: var(--t1); }
+.how-section .section-sub { color: var(--t2); }
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 0;
+  margin-top: 16px;
+}
+@media(max-width:900px){ .how-steps { grid-template-columns: 1fr; } }
+.how-step {
+  position: relative;
+  padding: 32px 24px;
+  text-align: center;
+}
+.how-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50px;
+  right: -1px;
+  height: 60px;
+  border-right: 2px dashed rgba(245,158,11,0.35);
+}
+@media(max-width:900px){
+  .how-step:not(:last-child)::after {
+    top: auto;
+    bottom: 0;
+    right: 50%;
+    border-right: none;
+    border-bottom: 2px dashed rgba(245,158,11,0.35);
+    width: 60%;
+    height: 0;
+    transform: translateX(50%);
+  }
+}
+.how-step-num {
+  width: 56px;
+  height: 56px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+  margin: 0 auto 20px;
+  font-weight: 900;
+}
+.how-step-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--t1);
+  margin-bottom: 10px;
+}
+.how-step-desc { font-size: 0.88rem; color: var(--t2); line-height: 1.7; max-width: 240px; margin: 0 auto; }
+
+/* REVIEWS */
+.reviews-section { background: var(--bg-off); }
+.review-card {
+  background: #fefce8;
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid #fef3c7;
+  display: flex;
+  flex-direction: column;
+}
+.review-stars { display: flex; gap: 3px; margin-bottom: 2px; }
+.review-text {
+  font-size: 0.9rem;
+  color: var(--grey-text);
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 18px;
+}
+.review-author { display: flex; align-items: center; gap: 12px; }
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+.review-name { font-weight: 700; font-size: 0.9rem; color: var(--dark-text); }
+.review-meta { font-size: 0.78rem; color: var(--grey-text); }
+
+/* SERVICE AREAS */
+.areas-section { background: var(--primary); }
+.areas-section .section-title { color: var(--t1); }
+.areas-section .section-label { color: var(--accent); background: rgba(245,158,11,0.15); }
+.areas-left { display: flex; flex-direction: column; gap: 20px; justify-content: center; }
+.areas-left p { color: var(--t2); font-size: 1rem; line-height: 1.7; }
+.areas-left h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--t1);
+}
+.areas-card {
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+.areas-card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--t1);
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+.neighborhood-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chip {
+  background: rgba(245,158,11,0.12);
+  border: 1px solid rgba(245,158,11,0.28);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+/* CONTACT */
+.contact-section { background: var(--bg); }
+.contact-form-wrap { display: flex; flex-direction: column; gap: 14px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media(max-width:600px){ .form-row { grid-template-columns: 1fr; } }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field label { font-size: 0.82rem; font-weight: 600; color: var(--dark-text); }
+.form-field input, .form-field select, .form-field textarea {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--dark-text);
+  background: var(--bg-off);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+  border-color: var(--accent);
+}
+.form-field textarea { resize: vertical; min-height: 100px; }
+.form-submit {
+  background: var(--accent);
+  color: var(--primary-dark);
+  border: none;
+  border-radius: var(--radius);
+  padding: 14px 28px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.form-submit:hover { background: var(--accent-dark); color: #fff; }
+.info-card {
+  background: var(--primary);
+  border-radius: var(--radius);
+  padding: 32px;
+  color: var(--t1);
+}
+.info-card-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--t1);
+  margin-bottom: 8px;
+}
+.info-card-sub { font-size: 0.85rem; color: var(--t2); margin-bottom: 24px; line-height: 1.5; }
+.info-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.info-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: rgba(245,158,11,0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-icon svg { color: var(--accent); }
+.info-label { font-size: 0.75rem; color: var(--t3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+.info-value { font-size: 0.95rem; color: var(--t1); font-weight: 600; }
+.info-value a { color: var(--t1); text-decoration: none; }
+.guarantee-box {
+  margin-top: 20px;
+  background: rgba(245,158,11,0.12);
+  border: 1px solid rgba(245,158,11,0.25);
+  border-radius: var(--radius);
+  padding: 16px;
+  text-align: center;
+}
+.guarantee-box-title { font-family: var(--font-display); font-size: 1rem; color: var(--accent); letter-spacing: 0.04em; margin-bottom: 4px; }
+.guarantee-box p { font-size: 0.8rem; color: var(--t2); line-height: 1.5; }
+
+/* CTA BAND */
+.cta-band {
+  position: relative;
+  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+  padding: 80px 0;
+  overflow: hidden;
+  text-align: center;
+}
+.cta-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-band-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(7,18,34,0.7);
+  margin-bottom: 14px;
+}
+.cta-band-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+.cta-band-sub {
+  color: rgba(7,18,34,0.75);
+  font-size: 1rem;
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--primary-dark);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 16px 36px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.3); background: var(--primary); }
+
+/* FOOTER */
+footer { background: var(--primary-dark); padding: 60px 0 0; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+@media(max-width:900px){ .footer-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .footer-grid { grid-template-columns: 1fr; } }
+.footer-col-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--t1);
+  letter-spacing: 0.06em;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.footer-brand-name { font-family: var(--font-display); font-size: 1.3rem; color: var(--t1); margin-bottom: 8px; }
+.footer-brand-desc { font-size: 0.82rem; color: var(--t3); line-height: 1.6; margin-bottom: 16px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links li a { color: var(--t2); font-size: 0.85rem; text-decoration: none; transition: color 0.2s; }
+.footer-links li a:hover { color: var(--accent); }
+.footer-contact-item { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.footer-contact-item svg { flex-shrink: 0; color: var(--accent); }
+.footer-contact-item span { font-size: 0.84rem; color: var(--t2); }
+.footer-contact-item a { font-size: 0.84rem; color: var(--t2); text-decoration: none; }
+.footer-bar {
+  margin-top: 48px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding: 20px 24px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bar p { font-size: 0.78rem; color: var(--t3); }
+.footer-bar-links { display: flex; gap: 20px; }
+.footer-bar-links a { font-size: 0.78rem; color: var(--t3); text-decoration: none; }
+.footer-bar-links a:hover { color: var(--t2); }
+
+/* Gold accent bar under header on scroll */
+#header.scrolled::after {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+</style>
+</head>
+<body>
+
+<!-- 1. STICKY HEADER -->
+<header id="header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <span class="header-name">Michael's Master Plumbing</span>
+      <span class="header-tagline">McKinney's Most Reviewed Plumber — 507 Reviews</span>
+    </div>
+    <div class="header-right">
+      <a href="tel:4699258080" class="header-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.97a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+        (469) 925-8080
+      </a>
+      <a href="#contact" class="btn-primary">Free Estimate</a>
+    </div>
+  </div>
+</header>
+
+<!-- 2. HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        4.9 Stars — 507 Reviews — McKinney's #1 Choice
+      </div>
+      <h1 class="hero-headline">McKinney's Master<br><span>Plumbing Service</span></h1>
+      <p class="hero-sub">From Adriatica Village to Tucker Hill — Michael personally guarantees every job. When your name is on the truck, you do it right the first time, every time.</p>
+      <div class="hero-ctas">
+        <a href="tel:4699258080" class="btn-primary">Call (469) 925-8080</a>
+        <a href="#contact" class="btn-outline">Book Service</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-stars">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <span class="trust-text">4.9 / 507 Reviews</span>
+        <span class="trust-divider">|</span>
+        <span class="trust-text">Master Licensed Plumber</span>
+        <span class="trust-divider">|</span>
+        <span class="trust-text">Personal Guarantee</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <p class="hero-card-title">Trusted by 507 McKinney Homes</p>
+      <div class="hero-review-count">
+        <span class="hero-review-count-num">507</span>
+        <span class="hero-review-count-sub">Five-Star Reviews — McKinney's Most Reviewed</span>
+      </div>
+      <div class="hero-card-items">
+        <div class="hero-card-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>Master Licensed</strong> — state-certified expert craftsmanship</span>
+        </div>
+        <div class="hero-card-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>Personal Guarantee</strong> — Michael stands behind every repair</span>
+        </div>
+        <div class="hero-card-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>Flat-Rate Pricing</strong> — quoted upfront, never changed</span>
+        </div>
+        <div class="hero-card-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span><strong>Same-Day Service</strong> — available Monday through Saturday</span>
+        </div>
+      </div>
+      <div class="hero-card-cta">
+        <a href="tel:4699258080">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.97a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+          Call (469) 925-8080 Now
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. STATS ROW -->
+<div class="stats-row">
+  <div class="stats-row-inner">
+    <div class="stat-box">
+      <div class="stat-num" data-target="507" data-suffix="+">0</div>
+      <div class="stat-label">Verified Reviews</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" data-target="20" data-suffix="+">0</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" data-target="24" data-suffix="/7">0</div>
+      <div class="stat-label">Emergency Service</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" data-target="100" data-suffix="%">0</div>
+      <div class="stat-label">Satisfaction Guaranteed</div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. SERVICES -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Master-Grade Services</span>
+      <h2 class="section-title">Every Job Done Right the First Time</h2>
+      <p class="section-sub">Michael's hands-on approach means master-level quality on every service call — no subcontractors, no shortcuts.</p>
+    </div>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-card-top">
+          <h3 class="service-title">Drain Cleaning</h3>
+          <div class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+        </div>
+        <p class="service-desc">Gurgling drains or standing water in sinks signal a blockage that only gets worse. We clear clogs using professional-grade equipment and inspect for underlying causes — so it doesn't come back next month.</p>
+        <span class="service-card-accent">Fast Same-Day Response</span>
+      </div>
+      <div class="service-card card">
+        <div class="service-card-top">
+          <h3 class="service-title">Water Heater Repair &amp; Replace</h3>
+          <div class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+        </div>
+        <p class="service-desc">A failing water heater leaves your family without hot water and can quietly leak for days. Michael diagnoses whether a repair or full replacement is the smarter investment — and completes it same day when parts are available.</p>
+        <span class="service-card-accent">Tank &amp; Tankless Specialists</span>
+      </div>
+      <div class="service-card card">
+        <div class="service-card-top">
+          <h3 class="service-title">Pipe Repair &amp; Repiping</h3>
+          <div class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10H3M21 6H3M21 14H3M21 18H3"/></svg>
+          </div>
+        </div>
+        <p class="service-desc">Aging galvanized or polybutylene pipes are a ticking clock. When your pipes are due for an upgrade, Michael's team performs full repiping with PEX or copper — protecting your home value and eliminating chronic leak calls.</p>
+        <span class="service-card-accent">PEX &amp; Copper Certified</span>
+      </div>
+      <div class="service-card card">
+        <div class="service-card-top">
+          <h3 class="service-title">Leak Detection</h3>
+          <div class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+        </div>
+        <p class="service-desc">An unexplained spike in your water bill or damp spots on floors almost always means a hidden leak. Michael uses non-invasive electronic leak detection to find the exact source — saving walls, floors, and your sanity.</p>
+        <span class="service-card-accent">Non-Invasive Technology</span>
+      </div>
+      <div class="service-card card">
+        <div class="service-card-top">
+          <h3 class="service-title">Sewer Line Service</h3>
+          <div class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+        </div>
+        <p class="service-desc">Multiple drain backups or sewage odors in the yard point to a sewer line issue. We use camera inspection to confirm the diagnosis and trenchless repair methods where possible — protecting your landscaping and your budget.</p>
+        <span class="service-card-accent">Camera Inspection Included</span>
+      </div>
+      <div class="service-card card">
+        <div class="service-card-top">
+          <h3 class="service-title">Emergency Plumbing</h3>
+          <div class="service-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+        </div>
+        <p class="service-desc">A burst pipe or flooded kitchen doesn't wait for business hours. Michael's team is available around the clock for true emergencies — quick shutoff, damage control, and permanent repair in one visit when possible.</p>
+        <span class="service-card-accent">24/7 Emergency Response</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. WHY CHOOSE US -->
+<section class="why-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Why Michael's</span>
+      <h2 class="section-title">507 Customers Can't Be Wrong</h2>
+      <p class="section-sub">When your name is on the company, every job is personal. Michael's reputation is built one satisfied customer at a time.</p>
+    </div>
+    <div class="grid-4" style="margin-bottom:48px;">
+      <div class="why-stat-card">
+        <div class="stat-num" data-target="507" data-suffix="+">0</div>
+        <div class="stat-label">5-Star Reviews</div>
+      </div>
+      <div class="why-stat-card">
+        <div class="stat-num" data-target="20" data-suffix="+ yrs">0</div>
+        <div class="stat-label">Master Experience</div>
+      </div>
+      <div class="why-stat-card">
+        <div class="stat-num" data-target="4" data-suffix=".9">0</div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+      <div class="why-stat-card">
+        <div class="stat-num" data-target="0" data-suffix="hidden fees">0</div>
+        <div class="stat-label">Transparent Pricing</div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="why-diff-item">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Master Licensed Craftsman</div>
+          <p class="why-diff-desc">A master plumber license is the highest credential in Texas — fewer than 5% of working plumbers hold one. Michael brings that expertise to every residential service call, not just commercial jobs.</p>
+        </div>
+      </div>
+      <div class="why-diff-item">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Personal Accountability</div>
+          <p class="why-diff-desc">Michael reviews every job before it's closed. His name is on the truck, so he cares about your outcome personally — you won't get transferred to a call center or passed off to a junior tech.</p>
+        </div>
+      </div>
+      <div class="why-diff-item">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Flat-Rate Honest Pricing</div>
+          <p class="why-diff-desc">We quote a flat price before we start. No hourly rate that mysteriously balloons, no "diagnostic fees" stacked on top of the repair. What we say is what you pay.</p>
+        </div>
+      </div>
+      <div class="why-diff-item">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
+        </div>
+        <div>
+          <div class="why-diff-title">Repeat Customer Loyalty</div>
+          <p class="why-diff-desc">Over 60% of our work comes from repeat customers and referrals. When 507 reviews maintain a 4.9 average, it means people aren't just satisfied — they're coming back and bringing their neighbors with them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. HOW IT WORKS -->
+<section class="how-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">The Process</span>
+      <h2 class="section-title">Straightforward Service, Start to Finish</h2>
+      <p class="section-sub">No runaround, no surprises. Just a clean process from your first call to a solved problem.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <h3 class="how-step-title">You Call, We Listen</h3>
+        <p class="how-step-desc">Call (469) 925-8080 and describe what's happening. We ask the right questions so our plumber arrives with the right parts — saving you time and a second trip.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <h3 class="how-step-title">On-Site Diagnosis &amp; Quote</h3>
+        <p class="how-step-desc">Michael or a senior tech arrives, diagnoses the problem, and gives you a firm flat-rate quote. No work starts until you say yes — zero pressure.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <h3 class="how-step-title">Fixed Right, Guaranteed</h3>
+        <p class="how-step-desc">We complete the work to master-plumber standards, clean up after ourselves, and walk you through what we did. If anything isn't right, Michael makes it right — period.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. REVIEWS -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Customer Stories</span>
+      <h2 class="section-title">507 Reasons to Call Michael</h2>
+      <p class="section-sub">Real McKinney homeowners, real results — here are just a few of the 507 five-star reviews.</p>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <p class="review-text">I've called Michael's three times now — a drain replacement, water heater swap, and most recently a slab leak that two other companies said would cost me $4,000 to repair. Michael's team found it in one visit and fixed it for $800. That's the kind of honest, skilled work that keeps me coming back. The crew was clean, fast, and didn't try to upsell me on anything I didn't need. I send every neighbor straight to this company without hesitation.</p>
+        <div class="review-author">
+          <div class="review-avatar">DH</div>
+          <div>
+            <div class="review-name">David H.</div>
+            <div class="review-meta">Adriatica Village, McKinney</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <p class="review-text">Our tankless water heater started throwing error codes on a Sunday morning. I found Michael's through a neighbor's recommendation, called at 8am, and by 11am a technician was at the door. He diagnosed a faulty flow sensor, had the part on the truck, and the unit was back online within 45 minutes. I was amazed — most plumbers would've told me to wait until Monday and quoted twice the price. These guys clearly run a tight operation and take pride in the work. Five stars, no question.</p>
+        <div class="review-author">
+          <div class="review-avatar">PR</div>
+          <div>
+            <div class="review-name">Patricia R.</div>
+            <div class="review-meta">Tucker Hill, McKinney</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fbbf24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <p class="review-text">Scheduled a full house repipe through Michael's after our 1995 home started having chronic low-pressure issues throughout. The job took two days and the crew was phenomenal — minimal drywall cuts, everything patched and painted before they left, and the water pressure throughout our house is night and day better. Michael stopped by on day two personally to walk through the work and answer my questions. You don't get that level of ownership from a big plumbing franchise. Absolutely worth every dollar.</p>
+        <div class="review-author">
+          <div class="review-avatar">JW</div>
+          <div>
+            <div class="review-name">James W.</div>
+            <div class="review-meta">Stonebridge Ranch, McKinney</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. SERVICE AREAS -->
+<section class="areas-section">
+  <div class="container">
+    <div class="grid-2" style="align-items:center;">
+      <div class="areas-left">
+        <span class="section-label">Coverage Area</span>
+        <h2>McKinney, Allen &amp; Collin County</h2>
+        <p>Michael's Master Plumbing serves a wide footprint across Collin County. From the historic Chestnut Square district in downtown McKinney to the newest master-planned communities in Prosper and Celina, we bring master-grade plumbing to your neighborhood.</p>
+        <p>Our local knowledge of Collin County's water pressure zones, pipe eras, and soil conditions means we diagnose faster and fix better than anyone just passing through.</p>
+        <a href="#contact" class="btn-primary" style="width:fit-content;margin-top:8px;">Check Service Availability</a>
+      </div>
+      <div class="areas-card">
+        <p class="areas-card-title">Areas We Serve</p>
+        <div class="neighborhood-chips">
+          <span class="chip">McKinney</span>
+          <span class="chip">Allen</span>
+          <span class="chip">Frisco</span>
+          <span class="chip">Prosper</span>
+          <span class="chip">Celina</span>
+          <span class="chip">Anna</span>
+          <span class="chip">Melissa</span>
+          <span class="chip">Fairview</span>
+          <span class="chip">Murphy</span>
+          <span class="chip">Wylie</span>
+          <span class="chip">Plano</span>
+          <span class="chip">Richardson</span>
+          <span class="chip">Lucas</span>
+          <span class="chip">Parker</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Book Service</span>
+      <h2 class="section-title">Request a Free Estimate Today</h2>
+      <p class="section-sub">Fill out the form and we'll call you back within 1 hour during business hours to confirm your appointment.</p>
+    </div>
+    <div class="grid-2" style="align-items:start;">
+      <div class="contact-form-wrap">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Michael">
+          </div>
+          <div class="form-field">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Johnson">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="(469) 555-0100">
+        </div>
+        <div class="form-field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com">
+        </div>
+        <div class="form-field">
+          <label for="service">Service Needed</label>
+          <select id="service">
+            <option value="">Select a service...</option>
+            <option>Drain Cleaning</option>
+            <option>Water Heater Repair / Replace</option>
+            <option>Pipe Repair &amp; Repiping</option>
+            <option>Leak Detection</option>
+            <option>Sewer Line Service</option>
+            <option>Emergency Plumbing</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">Describe the Issue</label>
+          <textarea id="message" placeholder="What's happening? The more you tell us, the better prepared we'll be when we arrive..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Request My Free Estimate</button>
+      </div>
+      <div class="info-card">
+        <h3 class="info-card-title">Contact Michael's Team</h3>
+        <p class="info-card-sub">507 satisfied customers in McKinney and Collin County. Call now or fill out the form.</p>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.97a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+          </div>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-value"><a href="tel:4699258080">(469) 925-8080</a></div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Address</div>
+            <div class="info-value">610 E Main St Suite 400, Allen, TX 75002</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Business Hours</div>
+            <div class="info-value">Mon–Sat 7am–7pm | 24/7 Emergencies</div>
+          </div>
+        </div>
+        <div class="guarantee-box">
+          <div class="guarantee-box-title">Michael's Personal Guarantee</div>
+          <p>Every job is backed by a workmanship warranty. If it's not right, we come back and fix it at no charge.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. CTA BAND -->
+<div class="cta-band">
+  <div class="container">
+    <p class="cta-band-label">Join 507 Satisfied McKinney Customers</p>
+    <h2 class="cta-band-headline">Master-Grade Plumbing. One Call Away.</h2>
+    <p class="cta-band-sub">Don't settle for less than the best. Call McKinney's most reviewed master plumber right now.</p>
+    <a href="tel:4699258080" class="btn-cta">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.97a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+      Call (469) 925-8080 Now
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">Michael's Master Plumbing</div>
+      <p class="footer-brand-desc">McKinney's most trusted master plumber — 507 five-star reviews, flat-rate pricing, and a personal guarantee on every job.</p>
+      <div style="display:flex;gap:4px;align-items:center;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        <span style="color:var(--t3);font-size:0.75rem;margin-left:6px;">4.9 / 507 reviews</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#">Drain Cleaning</a></li>
+        <li><a href="#">Water Heater Service</a></li>
+        <li><a href="#">Pipe Repair &amp; Repiping</a></li>
+        <li><a href="#">Leak Detection</a></li>
+        <li><a href="#">Sewer Line Service</a></li>
+        <li><a href="#">Emergency Plumbing</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="#">McKinney, TX</a></li>
+        <li><a href="#">Allen, TX</a></li>
+        <li><a href="#">Frisco, TX</a></li>
+        <li><a href="#">Prosper, TX</a></li>
+        <li><a href="#">Celina, TX</a></li>
+        <li><a href="#">Plano, TX</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.97a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+        <a href="tel:4699258080">(469) 925-8080</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Allen, TX 75002</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Mon–Sat 7am–7pm</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <p>© 2025 Michael's Master Plumbing. All rights reserved. Texas Master Plumber Licensed.</p>
+    <div class="footer-bar-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+});
+function animateCount(el) {
+  const raw = el.dataset.target;
+  const suffix = el.dataset.suffix || '';
+  if(isNaN(raw)) return;
+  const target = parseInt(raw);
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const p = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if(p < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-num[data-target]').forEach(el => statObs.observe(el));
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) { e.target.classList.add('visible'); cardObs.unobserve(e.target); }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.card').forEach(c => cardObs.observe(c));
+</script>
+</body>
+</html>

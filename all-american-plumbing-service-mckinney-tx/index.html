@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All American Plumbing Service | McKinney, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --primary: #0a2449;
+    --primary-dark: #061530;
+    --accent: #dc2626;
+    --accent-dark: #991b1b;
+    --white: #ffffff;
+    --off-white: #f4f6f9;
+    --text: #111827;
+    --text-muted: #4b5563;
+    --t2: rgba(255,255,255,0.72);
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); color: var(--text); background: #fff; overflow-x: hidden; }
+
+  /* HEADER */
+  #header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: var(--primary);
+    padding: 0 40px;
+    height: 68px;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: box-shadow 0.3s;
+  }
+  #header.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.45); }
+  .header-brand { display: flex; flex-direction: column; gap: 1px; }
+  .header-name {
+    font-family: var(--font-display); font-size: 20px; color: var(--white);
+    letter-spacing: 0.04em; line-height: 1;
+  }
+  .header-tagline { font-family: var(--font-body); font-size: 12px; color: var(--t2); }
+  .header-right { display: flex; align-items: center; gap: 20px; }
+  .header-phone { font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--white); text-decoration: none; }
+  .btn-accent {
+    background: var(--accent); color: var(--white); border: none;
+    font-family: var(--font-body); font-size: 14px; font-weight: 700;
+    padding: 10px 22px; border-radius: 6px; cursor: pointer; text-decoration: none;
+    transition: background 0.2s, transform 0.15s; white-space: nowrap;
+  }
+  .btn-accent:hover { background: #ef4444; transform: translateY(-1px); }
+
+  /* HERO */
+  .hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #0d2d5e 100%);
+    min-height: 100vh;
+    display: grid; grid-template-columns: 60fr 40fr; gap: 48px;
+    align-items: center;
+    padding: 110px 60px 80px;
+    z-index: 0;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: 0; right: 0; width: 40%; height: 100%;
+    background: linear-gradient(180deg, rgba(220,38,38,0.06) 0%, transparent 60%);
+    pointer-events: none; z-index: 0;
+  }
+  .hero::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.12; pointer-events: none; z-index: 0;
+  }
+  .hero > * { position: relative; z-index: 1; }
+  .hero-left { display: flex; flex-direction: column; gap: 20px; }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(220,38,38,0.15); border: 1px solid rgba(220,38,38,0.35);
+    color: #f87171; font-size: 13px; font-weight: 600;
+    padding: 6px 16px; border-radius: 40px; width: fit-content;
+    animation: heroFadeUp 0.5s ease-out 0.1s both;
+  }
+  .hero-badge svg { flex-shrink: 0; }
+  .hero-headline {
+    font-family: var(--font-display); font-size: clamp(46px, 6vw, 76px);
+    color: var(--white); line-height: 1.0; letter-spacing: 0.02em;
+    animation: heroFadeUp 0.5s ease-out 0.2s both;
+  }
+  .hero-headline span { color: #f87171; }
+  .hero-sub {
+    font-size: 17px; color: var(--t2); line-height: 1.65; max-width: 520px;
+    animation: heroFadeUp 0.5s ease-out 0.35s both;
+  }
+  .hero-ctas {
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    animation: heroFadeUp 0.5s ease-out 0.5s both;
+  }
+  .btn-hero-primary {
+    background: var(--accent); color: var(--white);
+    font-family: var(--font-body); font-size: 16px; font-weight: 700;
+    padding: 14px 32px; border-radius: 8px; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-hero-primary:hover { background: #ef4444; transform: translateY(-2px); }
+  .btn-hero-ghost {
+    background: transparent; color: var(--white);
+    font-family: var(--font-body); font-size: 16px; font-weight: 600;
+    padding: 14px 32px; border-radius: 8px; text-decoration: none;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-hero-ghost:hover { border-color: #f87171; background: rgba(220,38,38,0.08); }
+  .hero-trust {
+    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    animation: heroFadeUp 0.5s ease-out 0.65s both;
+  }
+  .trust-item { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--t2); font-weight: 500; }
+  .trust-item svg { flex-shrink: 0; }
+  .trust-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.2); }
+
+  .hero-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 28px 32px;
+    animation: heroFadeUp 0.5s ease-out 0.4s both;
+  }
+  .hero-card-title {
+    font-family: var(--font-display); font-size: 22px; color: var(--white);
+    letter-spacing: 0.04em; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-card-flag {
+    display: flex; gap: 3px; align-items: center;
+  }
+  .flag-stripe { width: 4px; height: 18px; border-radius: 2px; }
+  .hero-card-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .hero-card-item:last-child { border-bottom: none; }
+  .hero-card-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: rgba(220,38,38,0.15); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hero-card-text strong { display: block; font-size: 14px; font-weight: 700; color: var(--white); }
+  .hero-card-text span { font-size: 12px; color: var(--t2); }
+  .hero-card-badge {
+    margin-top: 20px; padding: 10px 14px;
+    background: rgba(220,38,38,0.12); border-radius: 8px;
+    border: 1px solid rgba(220,38,38,0.25);
+    font-size: 13px; color: #f87171; font-weight: 600; text-align: center;
+  }
+
+  @keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* STATS ROW */
+  .stats-row {
+    background: var(--primary);
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 0;
+  }
+  .stats-row .stat-item {
+    padding: 44px 32px; text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .stats-row .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: var(--font-display); font-size: 54px; color: #f87171;
+    line-height: 1; letter-spacing: 0.02em;
+  }
+  .stat-label { font-size: 14px; color: var(--t2); margin-top: 8px; font-weight: 500; }
+
+  /* SERVICES */
+  .services { padding: 90px 60px; background: var(--white); }
+  .section-header { text-align: center; margin-bottom: 56px; }
+  .section-eyebrow {
+    display: inline-block; font-size: 12px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent-dark); margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--font-display); font-size: clamp(34px, 4vw, 52px);
+    color: var(--text); letter-spacing: 0.02em; line-height: 1.1;
+  }
+  .section-sub { font-size: 16px; color: var(--text-muted); margin-top: 12px; max-width: 560px; margin-left: auto; margin-right: auto; }
+
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 28px;
+  }
+
+  .card {
+    opacity: 0;
+    background: var(--white);
+    border: 1px solid #dde3ec;
+    border-radius: 12px;
+    padding: 32px 28px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.2s;
+  }
+  .card::before {
+    content: '';
+    position: absolute; left: 0; top: 0; right: 0; height: 4px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .card:hover::before { transform: scaleX(1); }
+  .card:hover { box-shadow: 0 8px 28px rgba(10,36,73,0.14); transform: translateY(-3px); }
+  .card.visible { animation: fadeUp 0.4s ease-out forwards; }
+  .card:nth-child(1) { animation-delay: .1s; }
+  .card:nth-child(2) { animation-delay: .2s; }
+  .card:nth-child(3) { animation-delay: .3s; }
+  .card:nth-child(4) { animation-delay: .4s; }
+  .card:nth-child(5) { animation-delay: .5s; }
+  .card:nth-child(6) { animation-delay: .6s; }
+
+  .card-icon {
+    width: 52px; height: 52px; border-radius: 10px;
+    background: rgba(220,38,38,0.08);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+  }
+  .card-title { font-family: var(--font-display); font-size: 22px; color: var(--text); margin-bottom: 10px; letter-spacing: 0.03em; }
+  .card-desc { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+  /* WHY CHOOSE US */
+  .why { padding: 90px 60px; background: var(--primary); position: relative; overflow: hidden; }
+  .why::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.12; pointer-events: none; z-index: 0;
+  }
+  .why > * { position: relative; z-index: 1; }
+  .why .section-title { color: var(--white); }
+  .why .section-eyebrow { color: #f87171; }
+  .why .section-sub { color: var(--t2); }
+
+  .why-stats-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 20px;
+    margin-bottom: 48px; margin-top: 48px;
+  }
+  .why-stat-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px; padding: 28px 24px; text-align: center;
+  }
+  .why-stat-num { font-family: var(--font-display); font-size: 44px; color: #f87171; line-height: 1; }
+  .why-stat-label { font-size: 13px; color: var(--t2); margin-top: 6px; font-weight: 500; }
+
+  .why-diff-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 20px;
+  }
+  .why-diff-item {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px; padding: 24px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .why-diff-icon {
+    width: 44px; height: 44px; border-radius: 8px;
+    background: rgba(220,38,38,0.14);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .why-diff-title { font-family: var(--font-display); font-size: 18px; color: var(--white); letter-spacing: 0.03em; }
+  .why-diff-desc { font-size: 13px; color: var(--t2); line-height: 1.6; }
+
+  /* HOW IT WORKS */
+  .how { padding: 90px 60px; background: var(--primary-dark); }
+  .how .section-title { color: var(--white); }
+  .how .section-eyebrow { color: #f87171; }
+  .how .section-sub { color: var(--t2); }
+
+  .steps-row {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 0;
+    margin-top: 56px; position: relative;
+  }
+  .steps-row::before {
+    content: '';
+    position: absolute; top: 38px; left: calc(16.66% + 16px); right: calc(16.66% + 16px);
+    height: 2px;
+    background: repeating-linear-gradient(90deg, #f87171 0, #f87171 12px, transparent 12px, transparent 24px);
+    z-index: 0;
+  }
+  .step { text-align: center; padding: 0 28px; position: relative; z-index: 1; }
+  .step-num {
+    width: 76px; height: 76px; border-radius: 50%;
+    background: var(--accent); color: var(--white);
+    font-family: var(--font-display); font-size: 30px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 24px;
+  }
+  .step-title { font-family: var(--font-display); font-size: 22px; color: var(--white); margin-bottom: 12px; letter-spacing: 0.03em; }
+  .step-desc { font-size: 14px; color: var(--t2); line-height: 1.65; }
+
+  /* REVIEWS */
+  .reviews { padding: 90px 60px; background: var(--off-white); }
+  .reviews-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 28px;
+  }
+  .review-card {
+    opacity: 0;
+    background: var(--white);
+    border-radius: 12px; padding: 32px 28px;
+    border: 1px solid #e5eaf3;
+    border-top: 4px solid var(--accent);
+    position: relative;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .review-card:hover { box-shadow: 0 6px 24px rgba(10,36,73,0.1); transform: translateY(-2px); }
+  .review-card.visible { animation: fadeUp 0.4s ease-out forwards; }
+  .review-card:nth-child(1) { animation-delay: .1s; }
+  .review-card:nth-child(2) { animation-delay: .2s; }
+  .review-card:nth-child(3) { animation-delay: .3s; }
+  .review-stars { display: flex; gap: 3px; margin-bottom: 14px; }
+  .review-star { color: #f59e0b; font-size: 16px; }
+  .review-text { font-size: 14px; color: var(--text); line-height: 1.72; margin-bottom: 20px; }
+  .reviewer { display: flex; align-items: center; gap: 10px; }
+  .reviewer-avatar {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--primary); display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 16px; color: var(--white);
+    flex-shrink: 0;
+  }
+  .reviewer-name { font-size: 14px; font-weight: 700; color: var(--text); }
+  .reviewer-detail { font-size: 12px; color: var(--text-muted); }
+
+  /* SERVICE AREAS */
+  .areas { padding: 90px 60px; background: var(--primary); }
+  .areas .section-title { color: var(--white); }
+  .areas .section-eyebrow { color: #f87171; }
+  .areas-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+    align-items: center; margin-top: 48px;
+  }
+  .areas-desc { font-size: 16px; color: var(--t2); line-height: 1.7; margin-bottom: 28px; }
+  .areas-right {
+    background: var(--primary-dark); border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.08); padding: 32px;
+  }
+  .areas-right-title { font-family: var(--font-display); font-size: 20px; color: var(--white); margin-bottom: 20px; letter-spacing: 0.04em; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip {
+    background: rgba(220,38,38,0.1);
+    border: 1px solid rgba(220,38,38,0.3);
+    color: #f87171; font-size: 13px; font-weight: 600;
+    padding: 7px 16px; border-radius: 40px;
+  }
+
+  /* CONTACT */
+  #contact { padding: 90px 60px; background: var(--white); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+    align-items: start; margin-top: 48px;
+  }
+  .form-group { margin-bottom: 20px; }
+  .form-label { display: block; font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .form-input, .form-select, .form-textarea {
+    width: 100%; padding: 12px 16px; border-radius: 8px;
+    border: 1px solid #d1d8e5; font-family: var(--font-body); font-size: 14px;
+    color: var(--text); background: #fff; transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+  }
+  .form-input:focus, .form-select:focus, .form-textarea:focus {
+    border-color: var(--accent); box-shadow: 0 0 0 3px rgba(220,38,38,0.12);
+  }
+  .form-textarea { resize: vertical; min-height: 120px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .btn-form {
+    width: 100%; background: var(--accent); color: var(--white);
+    font-family: var(--font-body); font-size: 16px; font-weight: 700;
+    padding: 14px; border-radius: 8px; border: none; cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-form:hover { background: #ef4444; }
+
+  .contact-info-card {
+    background: var(--primary); border-radius: 14px; padding: 36px;
+  }
+  .contact-info-title { font-family: var(--font-display); font-size: 24px; color: var(--white); margin-bottom: 24px; letter-spacing: 0.04em; }
+  .contact-info-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 22px; }
+  .contact-info-icon {
+    width: 40px; height: 40px; flex-shrink: 0; border-radius: 8px;
+    background: rgba(220,38,38,0.15);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .contact-info-label { font-size: 12px; color: var(--t2); margin-bottom: 2px; }
+  .contact-info-value { font-size: 15px; font-weight: 700; color: var(--white); }
+  .contact-hours { margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); }
+  .hours-title { font-size: 13px; color: var(--t2); margin-bottom: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+  .hours-row { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px; }
+  .hours-day { color: var(--t2); }
+  .hours-time { color: var(--white); font-weight: 600; }
+
+  /* CTA BAND */
+  .cta-band {
+    background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+    padding: 80px 60px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-band::after {
+    content: ''; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.12; pointer-events: none; z-index: 0;
+  }
+  .cta-band > * { position: relative; z-index: 1; }
+  .cta-band-headline {
+    font-family: var(--font-display); font-size: clamp(36px, 5vw, 60px);
+    color: var(--white); line-height: 1.1; letter-spacing: 0.02em; margin-bottom: 16px;
+  }
+  .cta-band-sub { font-size: 17px; color: rgba(255,255,255,0.82); margin-bottom: 32px; }
+  .btn-cta-dark {
+    display: inline-block; background: var(--primary-dark); color: var(--white);
+    font-family: var(--font-body); font-size: 17px; font-weight: 700;
+    padding: 16px 44px; border-radius: 8px; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-cta-dark:hover { background: #020c1f; transform: translateY(-2px); }
+
+  /* FOOTER */
+  footer { background: var(--primary-dark); padding: 64px 60px 0; }
+  .footer-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 40px; padding-bottom: 48px; }
+  .footer-brand-name { font-family: var(--font-display); font-size: 22px; color: var(--white); margin-bottom: 8px; }
+  .footer-brand-desc { font-size: 13px; color: var(--t2); line-height: 1.65; max-width: 240px; }
+  .footer-col-title { font-family: var(--font-display); font-size: 16px; color: var(--white); margin-bottom: 16px; letter-spacing: 0.05em; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 8px; }
+  .footer-links a { font-size: 13px; color: var(--t2); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: #f87171; }
+  .footer-bar {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 20px 0; display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-copy { font-size: 12px; color: var(--t2); }
+  .footer-lic { font-size: 12px; color: var(--t2); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr 1fr; padding: 100px 32px 64px; gap: 32px; }
+    .services-grid { grid-template-columns: repeat(2,1fr); }
+    .why-stats-grid { grid-template-columns: repeat(2,1fr); }
+    .why-diff-grid { grid-template-columns: repeat(2,1fr); }
+    .steps-row { grid-template-columns: repeat(2,1fr); }
+    .reviews-grid { grid-template-columns: repeat(2,1fr); }
+    .footer-grid { grid-template-columns: repeat(2,1fr); }
+    .stats-row { grid-template-columns: repeat(2,1fr); }
+  }
+  @media (max-width: 600px) {
+    #header { padding: 0 20px; }
+    .header-tagline { display: none; }
+    .hero { grid-template-columns: 1fr; padding: 90px 20px 48px; min-height: auto; }
+    .hero-card { display: none; }
+    .services { padding: 64px 20px; }
+    .why { padding: 64px 20px; }
+    .how { padding: 64px 20px; }
+    .reviews { padding: 64px 20px; }
+    .areas { padding: 64px 20px; }
+    #contact { padding: 64px 20px; }
+    .cta-band { padding: 60px 20px; }
+    footer { padding: 48px 20px 0; }
+    .services-grid { grid-template-columns: 1fr; }
+    .why-stats-grid { grid-template-columns: 1fr; }
+    .why-diff-grid { grid-template-columns: 1fr; }
+    .steps-row { grid-template-columns: 1fr; }
+    .steps-row::before { display: none; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .areas-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .stats-row { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-trust { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="header-brand">
+    <div class="header-name">All American Plumbing Service</div>
+    <div class="header-tagline">McKinney's Trusted Plumbers Since Day One</div>
+  </div>
+  <div class="header-right">
+    <a href="tel:9725429866" class="header-phone">(972) 542-9866</a>
+    <a href="#contact" class="btn-accent">Get a Quote</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.6 3.24L12.5 5.09l-2.75 2.68.65 3.78L7 9.75 4.6 11.55l.65-3.78L2.5 5.09l3.9-.85L7 1z" fill="rgba(248,113,113,0.8)"/></svg>
+      Locally Owned — McKinney's Own
+    </div>
+    <h1 class="hero-headline">McKinney's All-American <span>Plumbers</span></h1>
+    <p class="hero-sub">Serving Eldorado, Stonebridge Ranch, and all of McKinney with the dependability and straight-dealing that the All American name has always meant. Licensed, local, and proud of it.</p>
+    <div class="hero-ctas">
+      <a href="tel:9725429866" class="btn-hero-primary">Call (972) 542-9866</a>
+      <a href="#contact" class="btn-hero-ghost">Schedule Service</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1l1.6 3.24L14 5.09l-3.5 3.41.83 4.75L8 11.25l-3.33 1.99.83-4.75L2 5.09l4.4-.85L8 1z" fill="#f87171"/></svg>
+        4-Star Rated — 24 Reviews
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#f87171" stroke-width="1.5"/><path d="M8 4.5v4l2.5 1.5" stroke="#f87171" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Same-Day Available
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 2H3a1 1 0 00-1 1v10a1 1 0 001 1h10a1 1 0 001-1V3a1 1 0 00-1-1zM5 8l2 2 4-4" stroke="#f87171" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Licensed and Insured
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <div class="hero-card-title">
+      The All American Commitment
+    </div>
+    <div class="hero-card-item">
+      <div class="hero-card-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2C7.24 2 5 4.24 5 7c0 3.5 5 11 5 11s5-7.5 5-11c0-2.76-2.24-5-5-5zm0 6.5A1.5 1.5 0 1110 5.5a1.5 1.5 0 010 3z" fill="#f87171"/></svg>
+      </div>
+      <div class="hero-card-text">
+        <strong>100% McKinney Local</strong>
+        <span>Not a franchise — your neighbor, your plumber</span>
+      </div>
+    </div>
+    <div class="hero-card-item">
+      <div class="hero-card-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.06 4.17L17 7.27l-3.5 3.41.83 4.82L10 13.25l-4.33 2.25.83-4.82L3 7.27l4.94-1.1L10 2z" fill="#f87171"/></svg>
+      </div>
+      <div class="hero-card-text">
+        <strong>Honest, Upfront Pricing</strong>
+        <span>You see the price before work begins — every time</span>
+      </div>
+    </div>
+    <div class="hero-card-item">
+      <div class="hero-card-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M9 12l2 2 4-4M18 10a8 8 0 11-16 0 8 8 0 0116 0z" stroke="#f87171" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="hero-card-text">
+        <strong>Satisfaction Backed Work</strong>
+        <span>We stand behind every repair we make</span>
+      </div>
+    </div>
+    <div class="hero-card-item">
+      <div class="hero-card-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#f87171" stroke-width="1.5"/><path d="M10 6v4l2.5 2.5" stroke="#f87171" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <div class="hero-card-text">
+        <strong>Fast Response Times</strong>
+        <span>We know McKinney — shorter drives, quicker fixes</span>
+      </div>
+    </div>
+    <div class="hero-card-badge">Over 24 Verified Reviews From Your Neighbors</div>
+  </div>
+</section>
+
+<!-- STATS ROW -->
+<div class="stats-row">
+  <div class="stat-item">
+    <div class="stat-num" data-target="24" data-suffix="+">0</div>
+    <div class="stat-label">Verified Customer Reviews</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num" data-target="15" data-suffix="+ yrs">0</div>
+    <div class="stat-label">Serving McKinney</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num" data-target="100" data-suffix="%">0</div>
+    <div class="stat-label">Work Guaranteed</div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="section-header">
+    <div class="section-eyebrow">Our Services</div>
+    <h2 class="section-title">Full-Service Plumbing Done Right</h2>
+    <p class="section-sub">From a dripping faucet to a major pipe failure — we handle the full range of residential plumbing with the care your home deserves.</p>
+  </div>
+  <div class="services-grid">
+    <div class="card">
+      <div class="card-icon">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 4v6a7 7 0 0014 0V4" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/><path d="M4 4h20M14 10v10M10 24h8" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="card-title">Drain Cleaning</div>
+      <div class="card-desc">A sluggish or completely blocked drain creates backups, foul odors, and slow frustration. We cut through the clog completely so water flows freely again — and explain what caused it.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="6" y="8" width="16" height="16" rx="3" stroke="#dc2626" stroke-width="2"/><path d="M10 8V6a4 4 0 018 0v2M14 13v4" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="card-title">Water Heater Service</div>
+      <div class="card-desc">Running out of hot water — or getting none at all — turns mornings upside down. We diagnose, repair, or replace water heaters fast so your household is back to normal the same day.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/><path d="M8 20h12M14 6V4M4 14H2M26 14h-2" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="card-title">Pipe Repair</div>
+      <div class="card-desc">Cracked, corroded, or burst pipes do not get better on their own. We find the source of the problem and make a repair that holds up — protecting your walls, floors, and foundation.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="9" stroke="#dc2626" stroke-width="2"/><path d="M14 9v5l3 3" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 4L7 2M19 4l2-2" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="card-title">Leak Detection</div>
+      <div class="card-desc">A hidden leak silently inflates your water bill and destroys structural materials. Our detection methods find the exact source without destructive guesswork, so repairs are targeted and minimal.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M7 7h14v10a4 4 0 01-4 4H11a4 4 0 01-4-4V7z" stroke="#dc2626" stroke-width="2"/><path d="M4 7h20M11 7V5a3 3 0 016 0v2" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="card-title">Sewer Line Service</div>
+      <div class="card-desc">Sewage backups are among the most urgent and damaging plumbing emergencies. We diagnose main line blockages, root intrusions, and line failures — and clear or repair them before they escalate.</div>
+    </div>
+    <div class="card">
+      <div class="card-icon">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4v6M14 18v6M4 14h6M18 14h6" stroke="#dc2626" stroke-width="2" stroke-linecap="round"/><circle cx="14" cy="14" r="4" stroke="#dc2626" stroke-width="2"/></svg>
+      </div>
+      <div class="card-title">Emergency Plumbing</div>
+      <div class="card-desc">Plumbing disasters do not check the clock before striking. Our emergency line connects you to a real plumber any time of day or night — and we arrive ready to stop damage fast.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+  <div class="section-header">
+    <div class="section-eyebrow">The All American Difference</div>
+    <h2 class="section-title">Local Values, Professional Results</h2>
+    <p class="section-sub">We built this business on the same principles that make McKinney a great community — honesty, hard work, and treating people right.</p>
+  </div>
+  <div class="why-stats-grid">
+    <div class="why-stat-card">
+      <div class="why-stat-num" data-target="24" data-suffix="+">0</div>
+      <div class="why-stat-label">Happy Customers Reviewed</div>
+    </div>
+    <div class="why-stat-card">
+      <div class="why-stat-num" data-target="15" data-suffix="+ yrs">0</div>
+      <div class="why-stat-label">McKinney Experience</div>
+    </div>
+    <div class="why-stat-card">
+      <div class="why-stat-num" data-target="4" data-suffix="-Star">0</div>
+      <div class="why-stat-label">Average Google Rating</div>
+    </div>
+  </div>
+  <div class="why-diff-grid">
+    <div class="why-diff-item">
+      <div class="why-diff-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="why-diff-title">Straight Talk Pricing</div>
+      <div class="why-diff-desc">We give you the price before we start. No upselling, no inflated emergency rates, no bill that surprises you at the end.</div>
+    </div>
+    <div class="why-diff-item">
+      <div class="why-diff-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="why-diff-title">Locally Owned and Operated</div>
+      <div class="why-diff-desc">This is not a franchise with managers in another state. It is a McKinney family business — and that accountability matters to us and to our customers.</div>
+    </div>
+    <div class="why-diff-item">
+      <div class="why-diff-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#f87171" stroke-width="2"/><path d="M12 7v5l3 3" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="why-diff-title">On-Time, Every Time</div>
+      <div class="why-diff-desc">We know your time is valuable. We commit to an arrival window and we show up in it — no vague "sometime between 8 and 5" windows.</div>
+    </div>
+    <div class="why-diff-item">
+      <div class="why-diff-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="#f87171"/></svg>
+      </div>
+      <div class="why-diff-title">Work That Holds Up</div>
+      <div class="why-diff-desc">We use quality parts, follow proper procedures, and guarantee our work. A repair from All American is built to last — not just to get us out the door.</div>
+    </div>
+    <div class="why-diff-item">
+      <div class="why-diff-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="why-diff-title">24/7 Emergency Response</div>
+      <div class="why-diff-desc">Plumbing emergencies happen at all hours. Our emergency line connects you to someone who can help — not a voicemail box and a callback promise.</div>
+    </div>
+    <div class="why-diff-item">
+      <div class="why-diff-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="why-diff-title">Licensed and Fully Insured</div>
+      <div class="why-diff-desc">We carry the proper licensing and insurance on every job — protecting you, your home, and our crew. You should never have to wonder about that.</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="section-header">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-title">Simple, Straightforward, Done Right</h2>
+    <p class="section-sub">No complicated processes — just a reliable path from your call to a solved problem.</p>
+  </div>
+  <div class="steps-row">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-title">Call or Book Online</div>
+      <div class="step-desc">Pick up the phone or submit the contact form. Describe the problem and we will schedule your appointment — including same-day slots for urgent situations.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-title">We Assess and Quote</div>
+      <div class="step-desc">We arrive on time, diagnose the issue completely, and give you a flat price before starting any work. No partial quotes, no guessing at the final number.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-title">Job Done, Home Clean</div>
+      <div class="step-desc">We complete the repair to a high standard, clean up our work area, and make sure you understand exactly what was fixed and why before we close out the job.</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="section-header">
+    <div class="section-eyebrow">What Neighbors Say</div>
+    <h2 class="section-title">McKinney Trusts All American</h2>
+    <p class="section-sub">Real words from real customers — 4-star average across 24 verified Google reviews.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card card">
+      <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+      <div class="review-stars">
+        <span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span>
+      </div>
+      <p class="review-text">My kitchen drain had been slow for months and finally stopped completely on a Friday evening. All American picked up immediately, and a plumber was at my Eldorado home by 9 AM Saturday. He snaked the line, cleared a heavy grease buildup about 20 feet in, ran hot water for a full five minutes to confirm it was flowing clean, and was done in under an hour. Fair price, no weekend markup, no pressure to buy anything extra. Exactly what I needed.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">R</div>
+        <div>
+          <div class="reviewer-name">Robert H.</div>
+          <div class="reviewer-detail">Eldorado, McKinney — Drain Cleaning</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+      <div class="review-stars">
+        <span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span>
+      </div>
+      <p class="review-text">We noticed our water bill jumped by nearly 40 dollars in one month with no change in usage. Called All American to look into it. The technician ran a full leak check throughout the house and found a pinhole leak in a supply line behind our laundry room wall. He opened a small section of drywall, made the repair, and was finished in about two hours total. He told me exactly what happened and how to patch the drywall myself. No upselling, straight-up honest service.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">K</div>
+        <div>
+          <div class="reviewer-name">Karen W.</div>
+          <div class="reviewer-detail">Stonebridge Ranch, McKinney — Leak Detection</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card card">
+      <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+      <div class="review-stars">
+        <span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span><span class="review-star">&#9733;</span>
+      </div>
+      <p class="review-text">Water heater started making a loud rumbling noise and the hot water was running lukewarm at best. All American came out the next morning. The tech flushed out a significant sediment buildup from the bottom of the tank — more than I expected from a five-year-old unit — and replaced the anode rod. Cost was very reasonable for what it was. Hot water was back to full temperature the same afternoon. Good communication throughout and no surprise charges. Would call them again.</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">T</div>
+        <div>
+          <div class="reviewer-name">Thomas M.</div>
+          <div class="reviewer-detail">McKinney, TX — Water Heater Service</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas">
+  <div class="section-header">
+    <div class="section-eyebrow">Where We Serve</div>
+    <h2 class="section-title">McKinney is Our Home Field</h2>
+  </div>
+  <div class="areas-grid">
+    <div class="areas-left">
+      <p class="areas-desc">All American Plumbing Service was built in McKinney and stays in McKinney. We do not cover a sprawling service territory — we go deep in one community, which means better response times, stronger local knowledge, and real accountability.</p>
+      <p class="areas-desc">When you call us, you are calling someone who drives the same roads, shops at the same stores, and genuinely cares about the neighborhood reputation they maintain every single day.</p>
+      <a href="#contact" class="btn-hero-primary" style="display:inline-block;">Book Your Service</a>
+    </div>
+    <div class="areas-right">
+      <div class="areas-right-title">McKinney Neighborhoods We Cover</div>
+      <div class="chips">
+        <div class="chip">Eldorado</div>
+        <div class="chip">Stonebridge Ranch</div>
+        <div class="chip">Craig Ranch</div>
+        <div class="chip">Heritage Ranch</div>
+        <div class="chip">Tucker Hill</div>
+        <div class="chip">Trinity Falls</div>
+        <div class="chip">Adriatica Village</div>
+        <div class="chip">Painted Tree</div>
+        <div class="chip">Westridge</div>
+        <div class="chip">Historic Downtown McKinney</div>
+        <div class="chip">Allen (nearby)</div>
+        <div class="chip">Prosper (nearby)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header">
+    <div class="section-eyebrow">Get In Touch</div>
+    <h2 class="section-title">Schedule Your Plumbing Service</h2>
+    <p class="section-sub">Fill out the form and we will respond within one business hour. For same-day needs, call us directly.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-form">
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="fname">First Name</label>
+            <input type="text" id="fname" class="form-input" placeholder="First name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lname">Last Name</label>
+            <input type="text" id="lname" class="form-input" placeholder="Last name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="phone">Phone Number</label>
+          <input type="tel" id="phone" class="form-input" placeholder="(972) 000-0000">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input type="email" id="email" class="form-input" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="service">Service Needed</label>
+          <select id="service" class="form-select">
+            <option value="">Select a service...</option>
+            <option>Drain Cleaning</option>
+            <option>Water Heater Service</option>
+            <option>Pipe Repair</option>
+            <option>Leak Detection</option>
+            <option>Sewer Line Service</option>
+            <option>Emergency Plumbing</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Describe the Problem</label>
+          <textarea id="message" class="form-textarea" placeholder="What is going on with your plumbing?"></textarea>
+        </div>
+        <button type="submit" class="btn-form">Send Request</button>
+      </form>
+    </div>
+    <div class="contact-info-card">
+      <div class="contact-info-title">Contact All American</div>
+      <div class="contact-info-item">
+        <div class="contact-info-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M6.01 3.24a1 1 0 011.07.17l1.5 1.36a1 1 0 01.25 1.1l-.7 1.7a1 1 0 00.22 1.09l3 3a1 1 0 001.09.22l1.7-.7a1 1 0 011.1.25l1.36 1.5a1 1 0 01.17 1.07l-.7 1.87a1 1 0 01-.92.62C8.5 17.5 2.5 11.5 2.5 4.65a1 1 0 01.62-.92l1.87-.7a1 1 0 01.52.21z" stroke="#f87171" stroke-width="1.5"/></svg>
+        </div>
+        <div>
+          <div class="contact-info-label">Phone</div>
+          <div class="contact-info-value">(972) 542-9866</div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-info-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" stroke="#f87171" stroke-width="1.5"/><path d="M3 7l7 5 7-5" stroke="#f87171" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div>
+          <div class="contact-info-label">Email</div>
+          <div class="contact-info-value">lester@all-americanplumbing.com</div>
+        </div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-info-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2C7.24 2 5 4.24 5 7c0 3.5 5 11 5 11s5-7.5 5-11c0-2.76-2.24-5-5-5zm0 6.5A1.5 1.5 0 1110 5.5a1.5 1.5 0 010 3z" fill="#f87171"/></svg>
+        </div>
+        <div>
+          <div class="contact-info-label">Address</div>
+          <div class="contact-info-value">1515 S McDonald St STE 105, McKinney, TX 75069</div>
+        </div>
+      </div>
+      <div class="contact-hours">
+        <div class="hours-title">Business Hours</div>
+        <div class="hours-row">
+          <span class="hours-day">Monday - Friday</span>
+          <span class="hours-time">7:00 AM - 6:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Saturday</span>
+          <span class="hours-time">8:00 AM - 4:00 PM</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Sunday</span>
+          <span class="hours-time">By Appointment</span>
+        </div>
+        <div class="hours-row" style="margin-top:12px;">
+          <span class="hours-day" style="color:#f87171;font-weight:700;">Emergency Line 24/7</span>
+          <span class="hours-time" style="color:#f87171;">(972) 542-9866</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-band-headline">McKinney Deserves a Plumber It Can Count On</div>
+  <p class="cta-band-sub">All American Plumbing Service has been that plumber for over a decade. Call us today and find out why neighbors keep recommending us.</p>
+  <a href="tel:9725429866" class="btn-cta-dark">Call (972) 542-9866 Now</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">All American Plumbing Service</div>
+      <div class="footer-brand-desc">Locally owned, McKinney-based plumbing with the honest, dependable service that the All American name stands for.</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#">Drain Cleaning</a></li>
+        <li><a href="#">Water Heater Service</a></li>
+        <li><a href="#">Pipe Repair</a></li>
+        <li><a href="#">Leak Detection</a></li>
+        <li><a href="#">Sewer Line Service</a></li>
+        <li><a href="#">Emergency Plumbing</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:9725429866">(972) 542-9866</a></li>
+        <li><a href="mailto:lester@all-americanplumbing.com">lester@all-americanplumbing.com</a></li>
+        <li><a href="#">1515 S McDonald St STE 105</a></li>
+        <li><a href="#">McKinney, TX 75069</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <div class="footer-copy">Copyright 2026 All American Plumbing Service. All rights reserved.</div>
+    <div class="footer-lic">Licensed Plumber — McKinney, TX</div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{ document.getElementById('header').classList.toggle('scrolled',window.scrollY>50); });
+function animateCount(el) { const raw=el.dataset.target; const suffix=el.dataset.suffix||''; if(isNaN(raw)) return; const target=parseInt(raw); const duration=1800; const start=performance.now(); const update=(time)=>{ const p=Math.min((time-start)/duration,1); const ease=1-Math.pow(1-p,3); el.textContent=Math.floor(ease*target).toLocaleString()+suffix; if(p<1) requestAnimationFrame(update); }; requestAnimationFrame(update); }
+const statObs=new IntersectionObserver((e)=>{ e.forEach(e=>{ if(e.isIntersecting){ animateCount(e.target); statObs.unobserve(e.target); } }); },{threshold:0.5});
+document.querySelectorAll('.stat-num[data-target]').forEach(el=>statObs.observe(el));
+const cardObs=new IntersectionObserver((e)=>{ e.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); cardObs.unobserve(e.target); } }); },{threshold:0.2});
+document.querySelectorAll('.card').forEach(c=>cardObs.observe(c));
+</script>
+</body>
+</html>

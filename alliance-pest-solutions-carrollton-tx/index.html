@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alliance Pest Solutions | Expert Pest Control in Carrollton, TX</title>
+<meta name="description" content="Carrollton's precision pest control experts. 170 five-star reviews. Residential and commercial treatments for roaches, rodents, termites, and more. Licensed, insured. Call (817) 470-0108.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #0c1830;
+  --primary-dark: #060d1e;
+  --accent: #0891b2;
+  --accent-dark: #0e6688;
+  --bg: #ffffff;
+  --bg-off: #f5f7fa;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #0d1520;
+  --grey-text: #607080;
+  --border: #dde4ef;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Nunito Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+a { text-decoration: none; }
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(8,145,178,0.4); transition: all 0.15s ease;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(8,145,178,0.5); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 600;
+  padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.15s ease;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; } }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+
+/* HEADER */
+.site-header { background: var(--primary); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(0,0,0,0.4); padding: 0 24px; }
+.site-header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.55); }
+.header-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+.header-brand .name { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: white; letter-spacing: 0.05em; }
+.header-brand .tagline { font-family: var(--font-body); font-size: 12px; color: var(--t2); }
+.header-right { display: flex; align-items: center; gap: 20px; }
+.header-badge { display: flex; align-items: center; gap: 6px; background: rgba(8,145,178,0.15); border: 1px solid rgba(8,145,178,0.3); border-radius: 6px; padding: 5px 10px; }
+.header-badge span { font-family: var(--font-display); font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: 0.04em; }
+@media (max-width: 700px) { .header-badge { display: none; } }
+
+/* HERO */
+.hero { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%); position: relative; overflow: hidden; padding: 100px 0 80px; }
+.hero::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.12; pointer-events: none; z-index: 0; }
+.hero > * { position: relative; z-index: 1; }
+.hero-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: center; }
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } }
+.hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(8,145,178,0.2); border: 1px solid rgba(8,145,178,0.4); color: var(--accent); font-family: var(--font-display); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 6px 14px; border-radius: 100px; margin-bottom: 20px; }
+.hero-headline { font-family: var(--font-display); font-weight: 900; font-size: clamp(42px, 6vw, 64px); color: white; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 20px; }
+.hero-headline span { color: var(--accent); }
+.hero-sub { font-family: var(--font-body); font-size: 18px; color: var(--t2); margin-bottom: 32px; max-width: 480px; line-height: 1.6; }
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+.hero-trust { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+.trust-item { display: flex; align-items: center; gap: 5px; }
+.stars { display: flex; gap: 2px; color: var(--accent); }
+
+.hero-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(8,145,178,0.25); box-shadow: 0 8px 32px rgba(0,0,0,0.35); backdrop-filter: blur(12px); border-radius: 16px; padding: 28px 32px; }
+.hero-card-title { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px; }
+.hero-prop { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+.hero-prop-icon { width: 22px; height: 22px; flex-shrink: 0; background: rgba(8,145,178,0.2); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: var(--accent); margin-top: 2px; }
+.hero-prop-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: white; }
+.hero-prop-desc { font-family: var(--font-body); font-size: 13px; color: var(--t2); line-height: 1.5; }
+.hero-card-phone { margin-top: 22px; padding-top: 18px; border-top: 1px solid rgba(8,145,178,0.2); display: flex; align-items: center; gap: 10px; }
+.hero-card-phone a { font-family: var(--font-display); font-size: 21px; font-weight: 700; color: var(--accent); }
+.hero-card-phone .call-label { font-family: var(--font-body); font-size: 11px; color: var(--t3); }
+
+/* STATS */
+.stats-row { background: var(--primary); padding: 0; border-top: 1px solid rgba(8,145,178,0.15); }
+.stats-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 600px) { .stats-inner { grid-template-columns: repeat(2, 1fr); } }
+.stat-box { padding: 28px 20px; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
+.stat-box:last-child { border-right: none; }
+.stat-num { font-family: var(--font-display); font-weight: 900; font-size: clamp(32px, 4vw, 48px); color: var(--accent); line-height: 1; margin-bottom: 4px; }
+.stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+
+.section-label { font-family: var(--font-display); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px; display: block; }
+.section-title { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--dark-text); margin-bottom: 12px; }
+.section-sub { font-family: var(--font-body); font-size: 16px; color: var(--grey-text); margin-bottom: 48px; max-width: 540px; }
+
+/* SERVICES — dark card style */
+.services { background: var(--bg-off); }
+.service-card { background: var(--primary); border: 1px solid rgba(8,145,178,0.15); border-radius: var(--radius); padding: 28px 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: all 0.25s ease; }
+.service-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 8px 36px rgba(8,145,178,0.2); }
+.service-icon { width: 48px; height: 48px; border-radius: 8px; background: rgba(8,145,178,0.15); display: flex; align-items: center; justify-content: center; color: var(--accent); margin-bottom: 16px; }
+.service-name { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: white; margin-bottom: 8px; }
+.service-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.6; margin-bottom: 14px; }
+.service-link { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 4px; }
+.services .section-title { color: var(--dark-text); }
+
+/* WHY CHOOSE US */
+.why-us { background: var(--primary); position: relative; overflow: hidden; }
+.why-us::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.1; pointer-events: none; z-index: 0; }
+.why-us > * { position: relative; z-index: 1; }
+.why-us .section-title { color: white; }
+.why-us .section-sub { color: var(--t2); }
+.why-stat-card { background: var(--primary-dark); border: 1px solid rgba(8,145,178,0.15); border-radius: var(--radius); padding: 24px 20px; text-align: center; }
+.why-stat-num { font-family: var(--font-display); font-size: 36px; font-weight: 900; color: var(--accent); margin-bottom: 4px; }
+.why-stat-label { font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+.why-stats { margin-bottom: 56px; }
+.why-diff { display: flex; align-items: flex-start; gap: 14px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.why-diff:last-child { border-bottom: none; }
+.why-icon { width: 32px; height: 32px; border-radius: 6px; flex-shrink: 0; background: rgba(8,145,178,0.15); display: flex; align-items: center; justify-content: center; color: var(--accent); }
+.why-title { font-family: var(--font-display); font-size: 16px; font-weight: 700; color: white; margin-bottom: 4px; }
+.why-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.55; }
+
+/* HOW IT WORKS */
+.how-it-works { background: var(--primary-dark); }
+.how-it-works .section-title { color: white; }
+.steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; position: relative; }
+@media (max-width: 600px) { .steps-row { grid-template-columns: 1fr; } }
+.step { padding: 32px 24px; text-align: center; position: relative; }
+.step:not(:last-child)::after { content: ''; position: absolute; top: 52px; right: 0; width: 1px; height: 60px; border-right: 2px dashed rgba(8,145,178,0.25); }
+@media (max-width: 600px) { .step::after { display: none; } }
+.step-num { width: 44px; height: 44px; border-radius: 8px; background: var(--accent); color: white; font-family: var(--font-display); font-size: 22px; font-weight: 900; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+.step-icon { color: white; margin-bottom: 12px; }
+.step-title { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: white; margin-bottom: 8px; }
+.step-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.55; }
+
+/* REVIEWS */
+.reviews { background: var(--bg); }
+.reviews-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 16px; }
+.google-badge { display: flex; align-items: center; gap: 8px; background: white; border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; box-shadow: var(--shadow); }
+.google-rating { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--dark-text); }
+.google-sub { font-family: var(--font-body); font-size: 11px; color: var(--grey-text); }
+.review-card { background: var(--bg-off); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); transition: all 0.25s ease; }
+.review-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.review-divider { height: 1px; background: var(--border); margin: 16px 0; }
+.reviewer { display: flex; align-items: center; gap: 12px; }
+.reviewer-avatar { width: 40px; height: 40px; border-radius: 8px; background: rgba(8,145,178,0.15); color: var(--accent); font-family: var(--font-display); font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.reviewer-name { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--dark-text); }
+.reviewer-meta { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); }
+.review-text { font-family: var(--font-body); font-size: 15px; font-style: italic; color: var(--dark-text); line-height: 1.7; }
+
+/* SERVICE AREAS */
+.service-areas { background: var(--primary); }
+.service-areas .section-title { color: white; }
+.areas-inner { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; align-items: start; }
+@media (max-width: 600px) { .areas-inner { grid-template-columns: 1fr; } }
+.areas-desc { font-family: var(--font-body); font-size: 16px; color: var(--t2); margin-bottom: 28px; line-height: 1.6; }
+.areas-card { background: var(--primary-dark); border: 1px solid rgba(8,145,178,0.15); border-radius: var(--radius); padding: 28px; }
+.areas-card-title { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--t2); background: rgba(255,255,255,0.06); border: 1px solid rgba(8,145,178,0.2); border-radius: 6px; padding: 7px 14px; cursor: default; transition: all 0.2s ease; }
+.chip:hover { background: var(--accent); color: white; border-color: var(--accent); }
+
+/* CONTACT */
+.contact { background: white; }
+.contact-inner { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
+@media (max-width: 900px) { .contact-inner { grid-template-columns: 1fr; } }
+.form-group { margin-bottom: 18px; }
+.form-label { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; display: block; }
+input, select, textarea { width: 100%; background: var(--bg-off); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; font-family: var(--font-body); font-size: 14px; color: var(--dark-text); transition: border-color 0.2s; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(8,145,178,0.1); }
+textarea { resize: vertical; min-height: 110px; }
+.form-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+.contact-info { background: var(--primary); border-radius: var(--radius); padding: 36px 32px; }
+.contact-info-title { font-family: var(--font-display); font-size: 22px; font-weight: 900; color: white; margin-bottom: 6px; }
+.contact-info-sub { font-family: var(--font-body); font-size: 14px; color: var(--t2); margin-bottom: 28px; }
+.info-item { display: flex; gap: 14px; margin-bottom: 20px; }
+.info-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.info-label { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--t2); text-transform: uppercase; letter-spacing: 0.05em; }
+.info-value { font-family: var(--font-body); font-size: 15px; color: white; }
+
+/* CTA BAND */
+.cta-band { background: linear-gradient(135deg, var(--accent-dark), var(--accent)); position: relative; overflow: hidden; padding: 80px 0; text-align: center; }
+.cta-band::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.15; pointer-events: none; z-index: 0; }
+.cta-band > * { position: relative; z-index: 1; }
+.cta-band h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(28px, 4vw, 42px); color: white; margin-bottom: 12px; }
+.cta-band p { font-family: var(--font-body); font-size: 17px; color: rgba(255,255,255,0.85); margin-bottom: 32px; }
+.btn-dark { display: inline-flex; align-items: center; gap: 8px; background: var(--primary-dark); color: white; font-family: var(--font-display); font-size: 16px; font-weight: 700; padding: 16px 32px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: all 0.15s ease; }
+.btn-dark:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.4); }
+
+/* FOOTER */
+.footer { background: var(--primary-dark); padding: 64px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; max-width: 1100px; margin: 0 auto; padding: 0 24px 48px; }
+@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+.footer-brand .name { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: white; margin-bottom: 10px; }
+.footer-brand p { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.6; }
+.footer-col-title { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { font-family: var(--font-body); font-size: 14px; color: var(--t2); transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bar { border-top: 1px solid rgba(255,255,255,0.08); max-width: 1100px; margin: 0 auto; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.footer-bar p { font-family: var(--font-body); font-size: 13px; color: var(--t3); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <span class="name">ALLIANCE PEST SOLUTIONS</span>
+      <span class="tagline">Residential &amp; Commercial — Carrollton, TX</span>
+    </div>
+    <div class="header-right">
+      <div class="header-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>170 Five-Star Reviews</span>
+      </div>
+      <a href="tel:8174700108" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Free Inspection
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        5-Star · 170 Verified Reviews
+      </div>
+      <h1 class="hero-headline">Carrollton's Precision <span>Pest Defense</span></h1>
+      <p class="hero-sub">From Carrollton's Josey Ranch neighborhoods to the commercial corridor along I-35, Alliance brings clinical-grade pest elimination to homes and businesses throughout the North DFW area.</p>
+      <div class="hero-ctas">
+        <a href="tel:8174700108" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (817) 470-0108
+        </a>
+        <a href="#contact" class="btn-ghost">Schedule Free Inspection</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <div class="stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          5.0 · 170 Reviews
+        </div>
+        <span>·</span>
+        <div class="trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; Insured</div>
+        <span>·</span>
+        <div class="trust-item">Residential &amp; Commercial</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Alliance Advantage</div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="hero-prop-title">Residential &amp; Commercial</div>
+          <div class="hero-prop-desc">From single-family homes to restaurants, warehouses, and offices — we're certified for both.</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="hero-prop-title">170 Five-Star Reviews</div>
+          <div class="hero-prop-desc">A perfect rating built on delivering what we promise — every single job.</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="hero-prop-title">Science-Based Methods</div>
+          <div class="hero-prop-desc">Integrated Pest Management — targeted, minimal-exposure treatments that work long-term.</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="hero-prop-title">Satisfaction Guaranteed</div>
+          <div class="hero-prop-desc">Not satisfied? We return and retreat at no charge until the problem is fully resolved.</div>
+        </div>
+      </div>
+      <div class="hero-card-phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div><div class="call-label">Call or Text</div><a href="tel:8174700108">(817) 470-0108</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="stats-inner">
+    <div class="stat-box"><div class="stat-num" data-target="170" data-suffix="+">170+</div><div class="stat-label">Five-Star Reviews</div></div>
+    <div class="stat-box"><div class="stat-num" data-target="100" data-suffix="%">100%</div><div class="stat-label">Satisfaction Rate</div></div>
+    <div class="stat-box"><div class="stat-num" data-target="2" data-suffix=" types">2 types</div><div class="stat-label">Residential &amp; Commercial</div></div>
+    <div class="stat-box"><div class="stat-num" data-target="24" data-suffix="/7">24/7</div><div class="stat-label">Emergency Available</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services">
+  <div class="container">
+    <span class="section-label">Pest Services</span>
+    <h2 class="section-title">Clinical-Grade Pest Elimination</h2>
+    <p class="section-sub">Every treatment is designed around your specific pest — species-specific, property-specific, season-specific.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div class="service-name">Roach &amp; Ant Control</div>
+        <div class="service-desc">Species identification comes first. German roach treatment differs from American. Fire ants differ from carpenter ants. We match treatment to target, not guesswork.</div>
+        <span class="service-link">Learn more →</span>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="service-name">Rodent Control</div>
+        <div class="service-desc">Full exclusion work plus interior and exterior baiting. We seal the entry points so the same problem doesn't come back next season.</div>
+        <span class="service-link">Learn more →</span>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="service-name">Termite Treatment</div>
+        <div class="service-desc">Liquid barrier and baiting system options. We walk you through both and recommend based on your structure, construction type, and level of existing activity.</div>
+        <span class="service-link">Learn more →</span>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+        <div class="service-name">Mosquito Service</div>
+        <div class="service-desc">Backyard barrier spray programs that knock out active mosquitoes and treat standing water breeding sites — designed around Carrollton's wet-season surge.</div>
+        <span class="service-link">Learn more →</span>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="service-name">Commercial Pest Control</div>
+        <div class="service-desc">HACCP-compliant programs for food service, healthcare, and warehousing. Documentation, monitoring logs, and scheduled service visits built for commercial compliance.</div>
+        <span class="service-link">Learn more →</span>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="service-name">Recurring Protection Plans</div>
+        <div class="service-desc">Monthly, bi-monthly, or quarterly programs — perimeter treatments and interior monitoring keep pests from ever becoming a problem again.</div>
+        <span class="service-link">Learn more →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-us">
+  <div class="container">
+    <span class="section-label" style="color: var(--accent);">Why Alliance?</span>
+    <h2 class="section-title">Precision First. Results Always.</h2>
+    <p class="section-sub">170 perfect reviews come from one thing: we identify the problem precisely and treat it correctly the first time.</p>
+    <div class="grid-4 why-stats">
+      <div class="why-stat-card"><div class="why-stat-num">5.0</div><div class="why-stat-label">Google Rating</div></div>
+      <div class="why-stat-card"><div class="why-stat-num">170</div><div class="why-stat-label">Reviews</div></div>
+      <div class="why-stat-card"><div class="why-stat-num">Res+</div><div class="why-stat-label">Commercial</div></div>
+      <div class="why-stat-card"><div class="why-stat-num">IPM</div><div class="why-stat-label">Certified Methods</div></div>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="why-diff">
+          <div class="why-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="why-title">Integrated Pest Management</div>
+            <div class="why-desc">We use IPM principles — combining inspection, identification, targeted treatment, and prevention. Less product, better results, longer-lasting protection.</div>
+          </div>
+        </div>
+        <div class="why-diff">
+          <div class="why-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="why-title">Commercial-Grade Expertise</div>
+            <div class="why-desc">From restaurants needing health code compliance to warehouses managing stored product pests — we build programs that satisfy inspectors and protect your business.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="why-diff">
+          <div class="why-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="why-title">Transparent Reporting</div>
+            <div class="why-desc">After every visit you receive a service summary — pest activity levels, treatments applied, and specific recommendations. No guessing about what was done.</div>
+          </div>
+        </div>
+        <div class="why-diff">
+          <div class="why-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div>
+            <div class="why-title">Fully Licensed &amp; Insured</div>
+            <div class="why-desc">State-licensed in Texas, fully insured, and bonded. Residential or commercial, you're fully protected — and so is the work we perform.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="container">
+    <span class="section-label" style="color: var(--accent);">Our Process</span>
+    <h2 class="section-title">Identify. Target. Eliminate.</h2>
+    <p class="section-sub" style="color: var(--t2); margin-bottom: 56px;">Every Alliance job follows the same three-step protocol — because shortcuts produce temporary results.</p>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div class="step-title">Precision Inspection</div>
+        <div class="step-desc">We identify the exact species, map the infestation zone, and document entry points before recommending any product. Correct ID = correct treatment.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="step-title">Targeted Treatment</div>
+        <div class="step-desc">Species-matched products applied to harborage zones, entry points, and activity corridors. We go where the pests are, not just where they're visible.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="step-title">Prevention &amp; Guarantee</div>
+        <div class="step-desc">Exclusion recommendations, a written service report, and our full satisfaction guarantee. If pests return before the next scheduled service, we come back at no charge.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div>
+        <span class="section-label">Client Reviews</span>
+        <h2 class="section-title">170 Perfect Reviews. Zero Exceptions.</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div><div class="google-rating">5.0</div><div class="google-sub">170 Google Reviews</div></div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">Our restaurant had a German roach issue that two other companies couldn't solve. Alliance came in, actually identified the species and the source (a floor drain we'd overlooked), and implemented a gel bait protocol. Health inspection last week — perfect score. We've been on their monthly commercial plan ever since.</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">MK</div>
+          <div><div class="reviewer-name">Marcus K.</div><div class="reviewer-meta">Carrollton Business Owner · Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">Noticed termite mud tubes along my foundation on a Sunday morning. Called Alliance — they called back within an hour and had an inspector here Monday. Thorough inspection, liquid barrier treatment, and a one-year monitoring plan. The technician explained every step. Now I sleep better knowing my foundation is protected.</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">PV</div>
+          <div><div class="reviewer-name">Patricia V.</div><div class="reviewer-meta">Josey Ranch · Google Review</div></div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">I appreciated that they didn't just spray and leave. The technician took time to explain what he found, why he was using the specific products, and what I could do structurally to reduce the risk long-term. That level of transparency is rare. On the quarterly plan now and haven't had a single issue in 18 months.</p>
+        <div class="review-divider"></div>
+        <div class="reviewer">
+          <div class="reviewer-avatar">TR</div>
+          <div><div class="reviewer-name">Tanya R.</div><div class="reviewer-meta">Carrollton, TX · Google Review</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="service-areas">
+  <div class="container">
+    <div class="areas-inner">
+      <div class="areas-text">
+        <span class="section-label" style="color: var(--accent);">Coverage</span>
+        <h2 class="section-title">Carrollton, Farmers Branch &amp; North DFW</h2>
+        <p class="areas-desc">We cover Carrollton and the full surrounding North DFW metro with the same rapid response and precision service — residential and commercial across all areas.</p>
+        <a href="tel:8174700108" class="btn-primary" style="margin-top: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Check Coverage
+        </a>
+      </div>
+      <div class="areas-card">
+        <div class="areas-card-title">Cities We Serve</div>
+        <div class="chips">
+          <span class="chip">Carrollton</span>
+          <span class="chip">Farmers Branch</span>
+          <span class="chip">Addison</span>
+          <span class="chip">Irving</span>
+          <span class="chip">Lewisville</span>
+          <span class="chip">Coppell</span>
+          <span class="chip">Flower Mound</span>
+          <span class="chip">The Colony</span>
+          <span class="chip">Dallas</span>
+          <span class="chip">Plano</span>
+          <span class="chip">Richardson</span>
+          <span class="chip">Grand Prairie</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <span class="section-label">Contact</span>
+    <h2 class="section-title" style="margin-bottom: 40px;">Request Your Free Inspection</h2>
+    <div class="contact-inner">
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">First Name</label><input type="text" placeholder="First name"></div>
+          <div class="form-group"><label class="form-label">Last Name</label><input type="text" placeholder="Last name"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Phone</label><input type="tel" placeholder="(817) 000-0000"></div>
+        <div class="form-group"><label class="form-label">Email</label><input type="email" placeholder="you@example.com"></div>
+        <div class="form-group">
+          <label class="form-label">Service Type</label>
+          <select>
+            <option value="">Residential or Commercial?</option>
+            <option>Residential</option><option>Commercial</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Pest Issue</label>
+          <select>
+            <option value="">What are you dealing with?</option>
+            <option>Roaches</option><option>Rodents</option><option>Termites</option>
+            <option>Mosquitoes</option><option>Ants</option><option>Commercial Pest Program</option><option>Not sure</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Details</label><textarea placeholder="Tell us more about the issue and your property type..."></textarea></div>
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; font-size: 16px; padding: 16px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Request Free Inspection
+        </button>
+      </div>
+      <div class="contact-info">
+        <div class="contact-info-title">Contact Alliance</div>
+        <div class="contact-info-sub">Licensed technicians ready for residential and commercial calls.</div>
+        <div class="info-item">
+          <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="info-label">Phone</div><div class="info-value">(817) 470-0108</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="info-label">Service Area</div><div class="info-value">Carrollton &amp; North DFW</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div><div class="info-label">Hours</div><div class="info-value">Mon–Sat 7am–7pm · Emergency 24/7</div></div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><div class="info-label">Certifications</div><div class="info-value">TX Licensed · IPM Certified · Insured</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Precision Pest Control Starts Here</h2>
+    <p>Free inspection. No obligation. Residential and commercial. 170 five-star reviews.</p>
+    <a href="tel:8174700108" class="btn-dark">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (817) 470-0108
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="name">ALLIANCE PEST SOLUTIONS</div>
+      <p>Precision pest control for homes and businesses in Carrollton and across North DFW. IPM-certified, state licensed, and backed by a perfect 5.0 rating across 170 reviews.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#">Roach &amp; Ant Control</a></li>
+        <li><a href="#">Rodent Control</a></li>
+        <li><a href="#">Termite Treatment</a></li>
+        <li><a href="#">Mosquito Service</a></li>
+        <li><a href="#">Commercial Programs</a></li>
+        <li><a href="#">Recurring Plans</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="#">Carrollton, TX</a></li>
+        <li><a href="#">Farmers Branch, TX</a></li>
+        <li><a href="#">Addison, TX</a></li>
+        <li><a href="#">Irving, TX</a></li>
+        <li><a href="#">Lewisville, TX</a></li>
+        <li><a href="#">Coppell, TX</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:8174700108">(817) 470-0108</a></li>
+        <li><a href="#">Free Inspection</a></li>
+        <li><a href="#">Commercial Quote</a></li>
+        <li><a href="#">Emergency Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <p>&copy; 2026 Alliance Pest Solutions. All rights reserved.</p>
+    <p>TX Licensed · IPM Certified · Carrollton, TX</p>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('header').classList.toggle('scrolled', window.scrollY > 50);
+});
+function animateCount(el) {
+  const raw = el.dataset.target;
+  const suffix = el.dataset.suffix || '';
+  if (isNaN(raw)) return;
+  const target = parseInt(raw);
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const statEls = document.querySelectorAll('.stat-num[data-target]');
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+statEls.forEach(el => statObs.observe(el));
+const cards = document.querySelectorAll('.card');
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); cardObs.unobserve(e.target); } });
+}, { threshold: 0.2 });
+cards.forEach(c => cardObs.observe(c));
+</script>
+</body>
+</html>

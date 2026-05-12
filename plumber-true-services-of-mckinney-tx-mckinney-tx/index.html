@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plumber True Services of McKinney | Trusted Local Plumbing | (972) 846-8587</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #1d4f6e;
+  --primary-dark: #0f2f42;
+  --accent: #f97316;
+  --accent-dark: #c2570a;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #e8edf5;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 32px; }
+@media(max-width:900px){ .grid-3,.grid-4 { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .grid-3,.grid-4,.grid-2 { grid-template-columns: 1fr; } }
+
+/* ANIMATIONS */
+@keyframes heroFadeUp {
+  from { opacity:0; transform:translateY(32px); }
+  to { opacity:1; transform:translateY(0); }
+}
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(24px); }
+  to { opacity:1; transform:translateY(0); }
+}
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1){ animation-delay:.1s }
+.card:nth-child(2){ animation-delay:.2s }
+.card:nth-child(3){ animation-delay:.3s }
+.card:nth-child(4){ animation-delay:.4s }
+.card:nth-child(5){ animation-delay:.5s }
+.card:nth-child(6){ animation-delay:.6s }
+
+/* HEADER */
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--primary);
+  padding: 0 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 76px;
+}
+.brand-block { display: flex; align-items: center; gap: 14px; }
+.brand-icon {
+  width: 44px; height: 44px; background: var(--accent); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.brand-icon svg { width: 24px; height: 24px; fill: #fff; }
+.brand-text {}
+.brand-name { font-family: var(--font-display); font-size: 1.35rem; color: var(--t1); letter-spacing: 0.02em; line-height: 1.1; }
+.brand-tagline { font-size: 0.7rem; color: var(--t2); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 1px; }
+.header-right { display: flex; align-items: center; gap: 20px; }
+.header-phone { display: flex; align-items: center; gap: 8px; color: var(--t1); font-weight: 700; font-size: 1rem; text-decoration: none; }
+.header-phone svg { width: 18px; height: 18px; fill: var(--accent); }
+.btn-cta {
+  background: var(--accent); color: #fff;
+  padding: 11px 24px; border-radius: 6px;
+  font-weight: 700; font-size: 0.88rem;
+  text-decoration: none; text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: background 0.2s;
+}
+.btn-cta:hover { background: var(--accent-dark); }
+@media(max-width:600px){
+  .brand-tagline { display: none; }
+  .header-phone span { display: none; }
+  .btn-cta { padding: 10px 14px; font-size: 0.8rem; }
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  background: linear-gradient(145deg, #0a2030 0%, #1d4f6e 50%, #154060 100%);
+  padding: 120px 0 110px;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 75% 40%, rgba(249,115,22,0.12) 0%, transparent 55%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 60fr 40fr; gap: 56px; align-items: center;
+}
+@media(max-width:900px){ .hero-inner { grid-template-columns: 1fr; } }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(249,115,22,0.18); border: 1px solid rgba(249,115,22,0.45);
+  color: #fba55a; padding: 7px 16px; border-radius: 30px;
+  font-size: 0.77rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; margin-bottom: 22px;
+}
+.hero-badge svg { width: 14px; height: 14px; fill: var(--accent); }
+.hero-headline {
+  font-family: var(--font-display); font-size: clamp(2.8rem, 5vw, 4.8rem);
+  line-height: 1.0; color: var(--t1); margin-bottom: 22px;
+  letter-spacing: 0.01em;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-size: 1.08rem; color: var(--t2); max-width: 520px;
+  margin-bottom: 38px; line-height: 1.75;
+}
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 38px; }
+.btn-primary {
+  background: var(--accent); color: #fff;
+  padding: 16px 34px; border-radius: 8px;
+  font-weight: 700; font-size: 1rem;
+  text-decoration: none; text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 20px rgba(249,115,22,0.38);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+.btn-secondary {
+  background: transparent; color: var(--t1);
+  padding: 16px 34px; border-radius: 8px;
+  font-weight: 700; font-size: 1rem;
+  text-decoration: none; text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 2px solid rgba(255,255,255,0.28);
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-secondary:hover { border-color: var(--accent); background: rgba(249,115,22,0.1); }
+.hero-trust { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.trust-item { display: flex; align-items: center; gap: 7px; color: var(--t2); font-size: 0.84rem; font-weight: 600; }
+.trust-item svg { width: 16px; height: 16px; fill: var(--accent); flex-shrink: 0; }
+.trust-sep { width: 1px; height: 18px; background: rgba(255,255,255,0.18); }
+
+/* HERO CARD */
+.hero-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 18px;
+  padding: 38px 34px;
+}
+@media(max-width:900px){ .hero-card { display: none; } }
+.card-label {
+  font-size: 0.7rem; color: rgba(249,115,22,0.9); text-transform: uppercase;
+  letter-spacing: 0.1em; font-weight: 700; margin-bottom: 6px;
+}
+.card-title { font-family: var(--font-display); font-size: 1.7rem; color: var(--t1); margin-bottom: 26px; line-height: 1.1; }
+.card-feature {
+  display: flex; align-items: flex-start; gap: 13px;
+  margin-bottom: 18px; padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.card-feature:last-of-type { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.card-feature-icon {
+  width: 36px; height: 36px; background: rgba(249,115,22,0.2);
+  border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.card-feature-icon svg { width: 18px; height: 18px; fill: var(--accent); }
+.card-feature-text strong { display: block; color: var(--t1); font-size: 0.92rem; font-weight: 700; margin-bottom: 2px; }
+.card-feature-text span { color: var(--t2); font-size: 0.8rem; }
+.card-cta {
+  display: block; background: var(--accent); color: #fff;
+  text-align: center; padding: 14px; border-radius: 8px;
+  font-weight: 700; font-size: 0.95rem; text-decoration: none;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  margin-top: 26px;
+  transition: background 0.2s;
+}
+.card-cta:hover { background: var(--accent-dark); }
+
+/* STATS */
+.stats-section { background: var(--primary-dark); padding: 64px 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+@media(max-width:900px){ .stats-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .stats-grid { grid-template-columns: 1fr; } }
+.stat-box {
+  text-align: center; padding: 38px 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.04);
+  transition: background 0.2s;
+}
+.stat-box:hover { background: rgba(255,255,255,0.07); }
+.stat-num {
+  font-family: var(--font-display); font-size: 3.4rem; color: var(--accent);
+  line-height: 1;
+}
+.stat-label { color: var(--t2); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 8px; font-weight: 600; }
+
+/* SERVICES — icon-left layout */
+.services-section { background: var(--bg); }
+.section-header { text-align: center; margin-bottom: 56px; }
+.section-eyebrow {
+  display: inline-block; color: var(--accent);
+  font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; margin-bottom: 12px;
+}
+.section-title { font-size: clamp(2rem, 3.5vw, 3rem); color: var(--dark-text); margin-bottom: 16px; }
+.section-desc { color: var(--grey-text); max-width: 560px; margin: 0 auto; font-size: 1rem; }
+.service-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px 24px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  display: flex; flex-direction: row; align-items: flex-start; gap: 20px;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(29,79,110,0.2); }
+.service-icon {
+  width: 52px; height: 52px; flex-shrink: 0;
+  background: rgba(29,79,110,0.1); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.25s;
+}
+.service-card:hover .service-icon { background: rgba(249,115,22,0.12); }
+.service-icon svg { width: 26px; height: 26px; fill: var(--primary); transition: fill 0.25s; }
+.service-card:hover .service-icon svg { fill: var(--accent); }
+.service-content { flex: 1; }
+.service-name { font-family: var(--font-display); font-size: 1.45rem; color: var(--dark-text); margin-bottom: 8px; }
+.service-desc { color: var(--grey-text); font-size: 0.88rem; line-height: 1.65; margin-bottom: 14px; }
+.service-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--primary); font-weight: 700; font-size: 0.82rem;
+  text-decoration: none; text-transform: uppercase; letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+.service-card:hover .service-link { color: var(--accent); }
+.service-link svg { width: 13px; height: 13px; fill: currentColor; transition: transform 0.2s; }
+.service-link:hover svg { transform: translateX(4px); }
+
+/* WHY CHOOSE US */
+.why-section {
+  position: relative; background: var(--primary);
+  padding: 90px 0; overflow: hidden;
+}
+.why-section::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.why-section > * { position: relative; z-index: 1; }
+.why-stat-card {
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius); padding: 32px 20px; text-align: center;
+}
+.why-stat-num { font-family: var(--font-display); font-size: 2.6rem; color: var(--accent); line-height: 1; }
+.why-stat-label { color: var(--t2); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.07em; margin-top: 8px; font-weight: 600; }
+.differentiators { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+@media(max-width:900px){ .differentiators { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .differentiators { grid-template-columns: 1fr; } }
+.diff-card {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius); padding: 28px 24px;
+  border-left: 3px solid var(--accent);
+}
+.diff-icon { width: 44px; height: 44px; background: rgba(249,115,22,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.diff-icon svg { width: 22px; height: 22px; fill: var(--accent); }
+.diff-title { font-family: var(--font-display); font-size: 1.3rem; color: var(--t1); margin-bottom: 8px; }
+.diff-text { color: var(--t2); font-size: 0.84rem; line-height: 1.65; }
+
+/* HOW IT WORKS */
+.how-section { background: var(--primary-dark); padding: 90px 0; }
+.steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; position: relative; }
+@media(max-width:900px){ .steps { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .steps { grid-template-columns: 1fr; } }
+.steps-connector {
+  position: absolute; top: 40px; left: 0; right: 0; height: 2px;
+  border-top: 2px dashed rgba(249,115,22,0.3);
+  z-index: 0;
+}
+@media(max-width:900px){ .steps-connector { display: none; } }
+.step { padding: 0 28px; text-align: center; position: relative; z-index: 1; }
+.step-num {
+  width: 76px; height: 76px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  font-family: var(--font-display); font-size: 2.2rem;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 26px; box-shadow: 0 4px 20px rgba(249,115,22,0.35);
+}
+.step-title { font-family: var(--font-display); font-size: 1.55rem; color: var(--t1); margin-bottom: 12px; }
+.step-desc { color: var(--t2); font-size: 0.87rem; line-height: 1.65; }
+
+/* REVIEWS */
+.reviews-section { background: var(--bg-off); }
+.review-card {
+  background: #f0f4f8; border-radius: var(--radius);
+  padding: 38px 30px; box-shadow: var(--shadow);
+  display: flex; flex-direction: column;
+  border-top: 3px solid var(--primary);
+}
+.review-quote-icon { margin-bottom: 16px; }
+.review-stars { display: flex; gap: 4px; margin-bottom: 14px; }
+.review-stars svg { width: 18px; height: 18px; fill: #f59e0b; }
+.review-text { color: #374151; font-size: 0.92rem; line-height: 1.72; flex: 1; margin-bottom: 22px; }
+.reviewer { display: flex; align-items: center; gap: 12px; border-top: 1px solid rgba(29,79,110,0.12); padding-top: 18px; }
+.reviewer-avatar {
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--primary); color: var(--t1);
+  font-family: var(--font-display); font-size: 1.25rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.reviewer-name { font-weight: 700; color: var(--dark-text); font-size: 0.92rem; }
+.reviewer-loc { color: var(--grey-text); font-size: 0.77rem; }
+
+/* SERVICE AREAS */
+.areas-section { background: var(--primary); padding: 90px 0; }
+.areas-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+@media(max-width:700px){ .areas-inner { grid-template-columns: 1fr; } }
+.areas-title { font-family: var(--font-display); font-size: 2.5rem; color: var(--t1); margin-bottom: 16px; }
+.areas-desc { color: var(--t2); font-size: 0.95rem; line-height: 1.72; margin-bottom: 30px; }
+.area-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: #fff;
+  padding: 14px 28px; border-radius: 8px;
+  font-weight: 700; text-decoration: none; font-size: 0.95rem;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  transition: background 0.2s;
+}
+.area-cta:hover { background: var(--accent-dark); }
+.area-cta svg { width: 16px; height: 16px; fill: #fff; }
+.neighborhoods { display: flex; flex-wrap: wrap; gap: 10px; }
+.neighborhood-chip {
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18);
+  color: var(--t1); padding: 8px 16px; border-radius: 30px;
+  font-size: 0.82rem; font-weight: 600;
+  transition: background 0.2s;
+}
+.neighborhood-chip:hover { background: rgba(249,115,22,0.2); }
+
+/* CONTACT */
+.contact-section { background: var(--bg); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+@media(max-width:700px){ .contact-grid { grid-template-columns: 1fr; } }
+.contact-form-title { font-family: var(--font-display); font-size: 2.4rem; color: var(--dark-text); margin-bottom: 8px; }
+.contact-form-sub { color: var(--grey-text); font-size: 0.9rem; margin-bottom: 30px; line-height: 1.65; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-weight: 600; font-size: 0.85rem; color: var(--dark-text); margin-bottom: 6px; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 13px 16px; border: 1.5px solid var(--border);
+  border-radius: 8px; font-family: var(--font-body); font-size: 0.9rem;
+  color: var(--dark-text); background: var(--bg);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none; border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(29,79,110,0.1);
+}
+.form-group textarea { resize: vertical; min-height: 112px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media(max-width:500px){ .form-row { grid-template-columns: 1fr; } }
+.form-submit {
+  width: 100%; background: var(--primary); color: #fff;
+  padding: 15px; border: none; border-radius: 8px;
+  font-family: var(--font-body); font-weight: 700; font-size: 1rem;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  cursor: pointer; transition: background 0.2s;
+}
+.form-submit:hover { background: var(--accent); }
+.form-note { font-size: 0.78rem; color: var(--grey-text); margin-top: 10px; text-align: center; }
+.contact-info {
+  background: var(--primary-dark); border-radius: 18px;
+  padding: 42px 36px; color: var(--t1);
+}
+.contact-info-title { font-family: var(--font-display); font-size: 1.9rem; color: var(--t1); margin-bottom: 30px; }
+.info-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 24px; }
+.info-icon { width: 42px; height: 42px; background: rgba(249,115,22,0.18); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.info-icon svg { width: 20px; height: 20px; fill: var(--accent); }
+.info-label { font-size: 0.73rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--t3); margin-bottom: 3px; }
+.info-val { color: var(--t1); font-weight: 600; font-size: 0.95rem; }
+.info-val a { color: var(--t1); text-decoration: none; }
+.trust-promise {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px; padding: 20px; margin-top: 28px;
+}
+.trust-promise-title { font-family: var(--font-display); font-size: 1.15rem; color: var(--t1); margin-bottom: 8px; }
+.trust-promise p { color: var(--t2); font-size: 0.82rem; line-height: 1.6; }
+.promise-checks { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+.promise-check { display: flex; align-items: center; gap: 8px; color: var(--t2); font-size: 0.82rem; }
+.promise-check svg { width: 15px; height: 15px; fill: var(--accent); flex-shrink: 0; }
+
+/* CTA BAND */
+.cta-band {
+  position: relative;
+  background: linear-gradient(135deg, #1d4f6e 0%, #0f2f42 100%);
+  padding: 84px 0; text-align: center; overflow: hidden;
+}
+.cta-band::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(249,115,22,0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+.cta-band::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-band-eyebrow { color: var(--accent); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; }
+.cta-band-title { font-family: var(--font-display); font-size: clamp(2rem,4vw,3.4rem); color: #fff; margin-bottom: 16px; }
+.cta-band-sub { color: rgba(255,255,255,0.8); font-size: 1rem; margin-bottom: 38px; max-width: 520px; margin-left: auto; margin-right: auto; }
+.cta-band-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.btn-accent-solid {
+  background: var(--accent); color: #fff;
+  padding: 16px 38px; border-radius: 8px;
+  font-weight: 700; font-size: 1rem; text-decoration: none;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  box-shadow: 0 4px 20px rgba(249,115,22,0.35);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-accent-solid:hover { background: var(--accent-dark); transform: translateY(-2px); }
+.btn-outline-white {
+  background: transparent; color: #fff;
+  padding: 16px 38px; border-radius: 8px;
+  font-weight: 700; font-size: 1rem; text-decoration: none;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  border: 2px solid rgba(255,255,255,0.5);
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+/* FOOTER */
+footer { background: var(--primary-dark); padding: 70px 0 32px; }
+.footer-grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 32px;
+  margin-bottom: 48px;
+}
+@media(max-width:900px){ .footer-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .footer-grid { grid-template-columns: 1fr; } }
+.footer-brand-name { font-family: var(--font-display); font-size: 1.3rem; color: var(--t1); margin-bottom: 10px; }
+.footer-brand-desc { color: var(--t3); font-size: 0.83rem; line-height: 1.65; margin-bottom: 20px; }
+.footer-contact-item { display: flex; align-items: center; gap: 8px; color: var(--t2); font-size: 0.83rem; margin-bottom: 8px; }
+.footer-contact-item svg { width: 14px; height: 14px; fill: var(--accent); flex-shrink: 0; }
+.footer-contact-item a { color: var(--t2); text-decoration: none; }
+.footer-col-title { font-family: var(--font-display); font-size: 1.1rem; color: var(--t1); margin-bottom: 16px; letter-spacing: 0.03em; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { color: var(--t2); text-decoration: none; font-size: 0.84rem; transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  padding-top: 24px;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+}
+.footer-copy { color: var(--t3); font-size: 0.77rem; }
+.footer-promise { display: flex; align-items: center; gap: 7px; }
+.footer-promise svg { width: 14px; height: 14px; fill: var(--accent); }
+.footer-promise span { color: var(--accent); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+</style>
+</head>
+<body>
+
+<!-- 1. STICKY HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand-block">
+      <div class="brand-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"/></svg>
+      </div>
+      <div class="brand-text">
+        <div class="brand-name">Plumber True Services</div>
+        <div class="brand-tagline">Honest Plumbing — McKinney, TX</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <a href="tel:9728468587" class="header-phone">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <span>(972) 846-8587</span>
+      </a>
+      <a href="#contact" class="btn-cta">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- 2. HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"/></svg>
+        Transparent Pricing — No Surprises
+      </div>
+      <h1 class="hero-headline">McKinney's Most Trusted <span>Plumbers</span></h1>
+      <p class="hero-sub">From the Weiskopf corridor to Stonebridge Ranch, homeowners count on True Services for honest quotes, skilled work, and plumbers who actually show up when they say they will.</p>
+      <div class="hero-ctas">
+        <a href="tel:9728468587" class="btn-primary">Call (972) 846-8587</a>
+        <a href="#contact" class="btn-secondary">Free Estimate</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <span class="trust-sep"></span>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
+          Upfront Flat Pricing
+        </div>
+        <span class="trust-sep"></span>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Satisfaction Guaranteed
+        </div>
+        <span class="trust-sep"></span>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          25 Five-Star Reviews
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-label">The True Difference</div>
+      <div class="card-title">Honest Work. Fair Price. Every Time.</div>
+      <div class="card-feature">
+        <div class="card-feature-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
+        </div>
+        <div class="card-feature-text">
+          <strong>Written Quotes</strong>
+          <span>Price locked in before we start — period</span>
+        </div>
+      </div>
+      <div class="card-feature">
+        <div class="card-feature-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        </div>
+        <div class="card-feature-text">
+          <strong>On-Time Arrival</strong>
+          <span>We show up in the window we promise</span>
+        </div>
+      </div>
+      <div class="card-feature">
+        <div class="card-feature-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <div class="card-feature-text">
+          <strong>Guaranteed Workmanship</strong>
+          <span>If it fails, we fix it at no charge</span>
+        </div>
+      </div>
+      <a href="tel:9728468587" class="card-cta">Call for a Free Estimate</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3. STATS ROW -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-num" data-target="3100" data-suffix="+">0</div>
+        <div class="stat-label">Satisfied Customers</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" data-target="25" data-suffix="">0</div>
+        <div class="stat-label">5-Star Reviews</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" data-target="10" data-suffix="+ Yrs">0</div>
+        <div class="stat-label">Local Experience</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" data-target="100" data-suffix="%">0</div>
+        <div class="stat-label">Price Transparency</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SERVICES — icon-left layout -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Our Services</span>
+      <h2 class="section-title">True Plumbing Solutions for McKinney Homes</h2>
+      <p class="section-desc">Every job starts with an honest diagnosis and a clear price. No upsell, no scare tactics — just skilled work done right.</p>
+    </div>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20c4 0 4-2 8-2s4 2 8 2v-2c-4 0-4-2-8-2-1.13 0-1.9.16-2.53.33C14.2 13 16.88 10.5 21 10V8h-4z"/></svg>
+        </div>
+        <div class="service-content">
+          <h3 class="service-name">Drain Cleaning</h3>
+          <p class="service-desc">That clogged kitchen drain or slow-moving bathroom tub is not just inconvenient — it can back up into your home. We clear it completely and show you what caused it so it does not come back.</p>
+          <a href="tel:9728468587" class="service-link">
+            Schedule Service
+            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2v2h1v14a4 4 0 0 0 8 0V4h1V2H7zm4 14H9v-2h2v2zm0-4H9v-2h2v2zm0-4H9V6h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V6h2v2z"/></svg>
+        </div>
+        <div class="service-content">
+          <h3 class="service-name">Water Heater Repair</h3>
+          <p class="service-desc">No hot water in the morning is a household emergency. We carry common parts in the truck, diagnose the problem on-site, and give you a straight answer: repair or replace — and what each will cost.</p>
+          <a href="tel:9728468587" class="service-link">
+            Schedule Service
+            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 3H3v18h2V3m15.2 9L12 3 5.8 12l6.2 9 6.2-9z"/></svg>
+        </div>
+        <div class="service-content">
+          <h3 class="service-name">Pipe Repair</h3>
+          <p class="service-desc">A cracked or corroded pipe can spray water inside your walls for days before you notice. We locate the break precisely, make a clean repair — copper, PEX, or PVC — and leave no unnecessary holes behind.</p>
+          <a href="tel:9728468587" class="service-link">
+            Schedule Service
+            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <div class="service-content">
+          <h3 class="service-name">Leak Detection</h3>
+          <p class="service-desc">A water bill that keeps climbing often means a hidden slab or wall leak. We use acoustic and thermal detection equipment to find the source exactly — so you pay for a targeted repair, not a guessing game.</p>
+          <a href="tel:9728468587" class="service-link">
+            Schedule Service
+            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4S4 11.21 4 9m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4z"/></svg>
+        </div>
+        <div class="service-content">
+          <h3 class="service-name">Sewer Line Service</h3>
+          <p class="service-desc">Multiple slow drains or a gurgling toilet signal a sewer problem. We camera-inspect your main line, explain exactly what we find, and give you honest options — repair, hydro-jet, or full replacement with real pricing.</p>
+          <a href="tel:9728468587" class="service-link">
+            Schedule Service
+            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 2.05V4.07C16.95 4.56 20 7.92 20 12C20 14.96 18.5 17.61 16.22 19.17L14.83 17.77C16.66 16.56 17.9 14.43 17.9 12C17.9 8.95 15.69 6.35 12.8 5.74L13 2.05M11 2.05L11.2 5.74C8.31 6.35 6.1 8.95 6.1 12C6.1 14.43 7.34 16.56 9.17 17.77L7.78 19.17C5.5 17.61 4 14.96 4 12C4 7.92 7.05 4.56 11 4.07V2.05M12 20C13.1 20 14 19.1 14 18S13.1 16 12 16 10 16.9 10 18 10.9 20 12 20Z"/></svg>
+        </div>
+        <div class="service-content">
+          <h3 class="service-name">Emergency Plumbing</h3>
+          <p class="service-desc">Flooding or a burst pipe will not wait for business hours. Call us at any hour — we dispatch quickly, give you a clear quote before we start, and get your home stabilized without the emergency markup games.</p>
+          <a href="tel:9728468587" class="service-link">
+            Call Anytime 24/7
+            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. WHY CHOOSE US -->
+<section class="why-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow" style="color:var(--accent)">The True Difference</span>
+      <h2 class="section-title" style="color:var(--t1)">Why McKinney Homeowners Trust True Services</h2>
+    </div>
+    <div class="grid-4" style="margin-bottom:56px">
+      <div class="why-stat-card">
+        <div class="why-stat-num" data-target="10" data-suffix="+ Yrs">0</div>
+        <div class="why-stat-label">Serving McKinney</div>
+      </div>
+      <div class="why-stat-card">
+        <div class="why-stat-num" data-target="25" data-suffix="">0</div>
+        <div class="why-stat-label">5-Star Reviews</div>
+      </div>
+      <div class="why-stat-card">
+        <div class="why-stat-num" data-target="3100" data-suffix="+">0</div>
+        <div class="why-stat-label">Homes Served</div>
+      </div>
+      <div class="why-stat-card">
+        <div class="why-stat-num" data-target="100" data-suffix="%">0</div>
+        <div class="why-stat-label">Honest Quotes</div>
+      </div>
+    </div>
+    <div class="differentiators">
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
+        </div>
+        <h3 class="diff-title">Flat-Rate Pricing</h3>
+        <p class="diff-text">We quote by the job, not the hour. No watching the clock, no inflated bills. You know exactly what you are paying before we begin.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"/></svg>
+        </div>
+        <h3 class="diff-title">Licensed &amp; Verified</h3>
+        <p class="diff-text">State-licensed, fully insured, background-checked on every tech. We stand behind our credentials because you deserve to know who is in your home.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <h3 class="diff-title">Workmanship Warranty</h3>
+        <p class="diff-text">We guarantee every repair. If our work fails within the warranty period, we return and fix it — at zero cost to you. That is the True Services promise.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 11C17.66 11 18.99 9.66 18.99 8S17.66 5 16 5C14.34 5 13 6.34 13 8S14.34 11 16 11M8 11C9.66 11 10.99 9.66 10.99 8S9.66 5 8 5C6.34 5 5 6.34 5 8S6.34 11 8 11M8 13C5.67 13 1 14.17 1 16.5V18H15V16.5C15 14.17 10.33 13 8 13M16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V18H23V16.5C23 14.17 18.33 13 16 13Z"/></svg>
+        </div>
+        <h3 class="diff-title">Respect for Your Home</h3>
+        <p class="diff-text">Shoe covers on entry, clean workspace maintained throughout, and full cleanup before we leave. Your home should look the same as when we arrived — minus the plumbing problem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. HOW IT WORKS -->
+<section class="how-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow" style="color:var(--accent)">Simple Process</span>
+      <h2 class="section-title" style="color:var(--t1)">From Call to Complete in Three Steps</h2>
+      <p class="section-desc" style="color:var(--t2)">We keep it straightforward — because honest service should not be complicated.</p>
+    </div>
+    <div class="steps" style="position:relative">
+      <div class="steps-connector"></div>
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3 class="step-title">You Call — We Listen</h3>
+        <p class="step-desc" style="color:var(--t2)">Describe the issue and we ask the right questions. We arrive prepared with the parts most likely needed — so we can fix it on the first trip, not schedule a second.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3 class="step-title">Honest Diagnosis</h3>
+        <p class="step-desc" style="color:var(--t2)">We inspect, explain what we found in plain English, and give you a written flat-rate quote. No work starts until you say yes. No pressure, ever.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3 class="step-title">Quality Repair — Guaranteed</h3>
+        <p class="step-desc" style="color:var(--t2)">We complete the job to code, test everything, clean up the work area, and walk you through what was done. Our warranty means you are covered if anything goes wrong.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. REVIEWS -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Verified Reviews</span>
+      <h2 class="section-title">What McKinney Homeowners Say</h2>
+      <p class="section-desc">25 five-star Google reviews from real neighbors who wanted transparent pricing and quality work.</p>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <div class="review-quote-icon">
+          <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V17.5C0 12.8333 1.16667 9.08333 3.5 6.25C5.83333 3.41667 9.16667 1.41667 13.5 0.25L15 3.25C12.1667 4.08333 10 5.33333 8.5 7C7 8.58333 6.16667 10.75 6 13.5H12V28H0ZM20 28V17.5C20 12.8333 21.1667 9.08333 23.5 6.25C25.8333 3.41667 29.1667 1.41667 33.5 0.25L35 3.25C32.1667 4.08333 30 5.33333 28.5 7C27 8.58333 26.1667 10.75 26 13.5H32V28H20Z" fill="#1d4f6e" opacity="0.2"/>
+          </svg>
+        </div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <p class="review-text">True Services was the first plumber I called who actually gave me a firm price over the phone before showing up. They arrived within 40 minutes for a water heater that had stopped working completely. The quote they gave was exactly what I paid — not a penny more. Incredible service.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">S</div>
+          <div>
+            <div class="reviewer-name">Sandra W.</div>
+            <div class="reviewer-loc">McKinney, TX — Verified Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <div class="review-quote-icon">
+          <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V17.5C0 12.8333 1.16667 9.08333 3.5 6.25C5.83333 3.41667 9.16667 1.41667 13.5 0.25L15 3.25C12.1667 4.08333 10 5.33333 8.5 7C7 8.58333 6.16667 10.75 6 13.5H12V28H0ZM20 28V17.5C20 12.8333 21.1667 9.08333 23.5 6.25C25.8333 3.41667 29.1667 1.41667 33.5 0.25L35 3.25C32.1667 4.08333 30 5.33333 28.5 7C27 8.58333 26.1667 10.75 26 13.5H32V28H20Z" fill="#1d4f6e" opacity="0.2"/>
+          </svg>
+        </div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <p class="review-text">Had a drain backup that two other plumbers quoted me wildly different prices for. True Services came out, showed me camera footage of the blockage, explained it in terms I understood, and fixed it same day at a fair price with no hidden fees afterward. I felt respected as a customer.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">R</div>
+          <div>
+            <div class="reviewer-name">Robert L.</div>
+            <div class="reviewer-loc">McKinney, TX — Verified Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <div class="review-quote-icon">
+          <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V17.5C0 12.8333 1.16667 9.08333 3.5 6.25C5.83333 3.41667 9.16667 1.41667 13.5 0.25L15 3.25C12.1667 4.08333 10 5.33333 8.5 7C7 8.58333 6.16667 10.75 6 13.5H12V28H0ZM20 28V17.5C20 12.8333 21.1667 9.08333 23.5 6.25C25.8333 3.41667 29.1667 1.41667 33.5 0.25L35 3.25C32.1667 4.08333 30 5.33333 28.5 7C27 8.58333 26.1667 10.75 26 13.5H32V28H20Z" fill="#1d4f6e" opacity="0.2"/>
+          </svg>
+        </div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <p class="review-text">Called about a suspected slab leak — they detected it without tearing up the whole floor, showed up within 50 minutes, and repaired it the same afternoon. Honest pricing, clean work area, and a written warranty. This is how plumbing service should be done.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">A</div>
+          <div>
+            <div class="reviewer-name">Angela M.</div>
+            <div class="reviewer-loc">McKinney, TX — Verified Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. SERVICE AREAS -->
+<section class="areas-section">
+  <div class="container">
+    <div class="areas-inner">
+      <div class="areas-text">
+        <span class="section-eyebrow" style="color:var(--accent)">Service Coverage</span>
+        <h2 class="areas-title">McKinney and the Surrounding Area</h2>
+        <p class="areas-desc">True Services covers all of McKinney — from the Weiskopf Ave corridor to Heritage Ranch and Stonebridge Ranch. We also serve neighboring communities throughout Collin County with the same fast response and transparent pricing.</p>
+        <a href="tel:9728468587" class="area-cta">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          Confirm Your Area
+        </a>
+      </div>
+      <div>
+        <div class="neighborhoods">
+          <span class="neighborhood-chip">Weiskopf Corridor</span>
+          <span class="neighborhood-chip">Stonebridge Ranch</span>
+          <span class="neighborhood-chip">Heritage Ranch</span>
+          <span class="neighborhood-chip">Eldorado Heights</span>
+          <span class="neighborhood-chip">Waterford Park</span>
+          <span class="neighborhood-chip">Trinity Falls</span>
+          <span class="neighborhood-chip">Downtown McKinney</span>
+          <span class="neighborhood-chip">Craig Ranch</span>
+          <span class="neighborhood-chip">Allen, TX</span>
+          <span class="neighborhood-chip">Frisco, TX</span>
+          <span class="neighborhood-chip">Prosper, TX</span>
+          <span class="neighborhood-chip">Fairview, TX</span>
+          <span class="neighborhood-chip">Melissa, TX</span>
+          <span class="neighborhood-chip">Anna, TX</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. CONTACT / BOOKING -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <h2 class="contact-form-title">Get a Free Estimate</h2>
+        <p class="contact-form-sub">Fill in the form and a True Services plumber will call you back within 20 minutes to discuss your project and provide a transparent price quote — no obligation.</p>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" placeholder="Linda">
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" placeholder="Johnson">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Best Phone Number</label>
+            <input type="tel" id="phone" placeholder="(972) 555-0000">
+          </div>
+          <div class="form-group">
+            <label for="address">Property Address</label>
+            <input type="text" id="address" placeholder="6800 Weiskopf Ave, McKinney, TX">
+          </div>
+          <div class="form-group">
+            <label for="service">What Do You Need?</label>
+            <select id="service">
+              <option value="">-- Choose a service --</option>
+              <option>Drain Cleaning</option>
+              <option>Water Heater Repair or Replacement</option>
+              <option>Pipe Repair</option>
+              <option>Leak Detection</option>
+              <option>Sewer Line Inspection or Repair</option>
+              <option>Emergency Plumbing</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="urgency">How Soon Do You Need Service?</label>
+            <select id="urgency">
+              <option>Emergency — Right Now</option>
+              <option>Today or Tomorrow</option>
+              <option>This Week</option>
+              <option>Just Getting Quotes</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Additional Details</label>
+            <textarea id="message" placeholder="Describe what is happening — any details help us come prepared with the right parts."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Get My Free Estimate</button>
+          <p class="form-note">We typically respond within 20 minutes. Your information is never shared or sold.</p>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h3 class="contact-info-title">Reach Us Directly</h3>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-val"><a href="tel:9728468587">(972) 846-8587</a></div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-val"><a href="mailto:contact@plumberhonest.com">contact@plumberhonest.com</a></div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Location</div>
+            <div class="info-val">6800 Weiskopf Ave, McKinney, TX 75070</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Hours</div>
+            <div class="info-val">Mon–Sat 7am–8pm | Emergency: 24/7</div>
+          </div>
+        </div>
+        <div class="trust-promise">
+          <div class="trust-promise-title">The True Promise</div>
+          <div class="promise-checks">
+            <div class="promise-check">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Price quoted before work begins — always
+            </div>
+            <div class="promise-check">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              No upselling or unnecessary repairs
+            </div>
+            <div class="promise-check">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Workmanship guaranteed in writing
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <p class="cta-band-eyebrow">Ready to Get It Fixed Right?</p>
+    <h2 class="cta-band-title">Transparent Pricing. Quality Work. Guaranteed.</h2>
+    <p class="cta-band-sub">Call Plumber True Services for a free, no-pressure estimate. We serve all of McKinney and surrounding Collin County communities.</p>
+    <div class="cta-band-btns">
+      <a href="tel:9728468587" class="btn-accent-solid">Call (972) 846-8587</a>
+      <a href="#contact" class="btn-outline-white">Request Free Estimate</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Plumber True Services</div>
+        <p class="footer-brand-desc">McKinney's honest plumbing specialist. Transparent flat-rate pricing, licensed technicians, and a satisfaction guarantee on every job.</p>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:9728468587">(972) 846-8587</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:contact@plumberhonest.com">contact@plumberhonest.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          McKinney, TX 75070
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">Drain Cleaning</a></li>
+          <li><a href="#">Water Heater Repair</a></li>
+          <li><a href="#">Pipe Repair</a></li>
+          <li><a href="#">Leak Detection</a></li>
+          <li><a href="#">Sewer Line Service</a></li>
+          <li><a href="#">Emergency Plumbing</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#">McKinney, TX</a></li>
+          <li><a href="#">Allen, TX</a></li>
+          <li><a href="#">Frisco, TX</a></li>
+          <li><a href="#">Prosper, TX</a></li>
+          <li><a href="#">Fairview, TX</a></li>
+          <li><a href="#">Melissa, TX</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Our Promises</div>
+        <ul class="footer-links">
+          <li><a href="#">Flat-Rate Pricing</a></li>
+          <li><a href="#">Workmanship Warranty</a></li>
+          <li><a href="#">Licensed &amp; Insured</a></li>
+          <li><a href="#">Customer Reviews</a></li>
+          <li><a href="#contact">Free Estimate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 Plumber True Services of McKinney, TX. All rights reserved. | Licensed &amp; Insured | McKinney, TX</span>
+      <div class="footer-promise">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"/></svg>
+        <span>True Pricing Guarantee</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function animateCount(el) {
+  const raw = el.dataset.target;
+  const suffix = el.dataset.suffix || '';
+  if (isNaN(raw)) return;
+  const target = parseInt(raw);
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-num[data-target], .why-stat-num[data-target]').forEach(el => statObs.observe(el));
+
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); cardObs.unobserve(e.target); }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.card').forEach(c => cardObs.observe(c));
+
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Thank you for reaching out! A True Services plumber will call you back within 20 minutes with your free estimate.');
+});
+</script>
+</body>
+</html>

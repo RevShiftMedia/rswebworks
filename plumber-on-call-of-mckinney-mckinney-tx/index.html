@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plumber On Call of McKinney | 24/7 Emergency Plumbing | (972) 779-6274</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary: #0d2b4e;
+  --primary-dark: #071a30;
+  --accent: #e85d0a;
+  --accent-dark: #b84500;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #e8edf5;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 32px; }
+@media(max-width:900px){ .grid-3,.grid-4 { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .grid-3,.grid-4,.grid-2 { grid-template-columns: 1fr; } }
+
+/* ANIMATIONS */
+@keyframes heroFadeUp {
+  from { opacity:0; transform:translateY(32px); }
+  to { opacity:1; transform:translateY(0); }
+}
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(24px); }
+  to { opacity:1; transform:translateY(0); }
+}
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1){ animation-delay:.1s }
+.card:nth-child(2){ animation-delay:.2s }
+.card:nth-child(3){ animation-delay:.3s }
+.card:nth-child(4){ animation-delay:.4s }
+.card:nth-child(5){ animation-delay:.5s }
+.card:nth-child(6){ animation-delay:.6s }
+
+/* HEADER */
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--primary);
+  padding: 0 24px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px;
+}
+.brand-block { display: flex; flex-direction: column; }
+.brand-name { font-family: var(--font-display); font-size: 1.5rem; color: var(--t1); letter-spacing: 0.02em; line-height: 1; }
+.brand-tagline { font-size: 0.72rem; color: var(--t2); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 2px; }
+.header-right { display: flex; align-items: center; gap: 20px; }
+.header-phone { display: flex; align-items: center; gap: 8px; color: var(--t1); font-weight: 700; font-size: 1rem; text-decoration: none; }
+.header-phone svg { width: 18px; height: 18px; fill: var(--accent); }
+.btn-cta {
+  background: var(--accent); color: #fff;
+  padding: 10px 22px; border-radius: 6px;
+  font-weight: 700; font-size: 0.88rem;
+  text-decoration: none; text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: background 0.2s;
+}
+.btn-cta:hover { background: var(--accent-dark); }
+@media(max-width:600px){
+  .brand-tagline { display: none; }
+  .header-phone span { display: none; }
+  .btn-cta { padding: 9px 14px; font-size: 0.8rem; }
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #071a30 0%, #0d2b4e 45%, #0a2040 100%);
+  padding: 110px 0 100px;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(232,93,10,0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 60fr 40fr; gap: 48px; align-items: center;
+}
+@media(max-width:900px){ .hero-inner { grid-template-columns: 1fr; } }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(232,93,10,0.2); border: 1px solid rgba(232,93,10,0.5);
+  color: var(--accent); padding: 6px 14px; border-radius: 30px;
+  font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; margin-bottom: 20px;
+}
+.hero-badge svg { width: 14px; height: 14px; }
+.hero-headline {
+  font-family: var(--font-display); font-size: clamp(3rem, 5.5vw, 5rem);
+  line-height: 1.0; color: var(--t1); margin-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-size: 1.1rem; color: var(--t2); max-width: 520px;
+  margin-bottom: 36px; line-height: 1.7;
+}
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 36px; }
+.btn-primary {
+  background: var(--accent); color: #fff;
+  padding: 16px 32px; border-radius: 8px;
+  font-weight: 700; font-size: 1rem;
+  text-decoration: none; text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 20px rgba(232,93,10,0.4);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); }
+.btn-secondary {
+  background: transparent; color: var(--t1);
+  padding: 16px 32px; border-radius: 8px;
+  font-weight: 700; font-size: 1rem;
+  text-decoration: none; text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 2px solid rgba(255,255,255,0.3);
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-secondary:hover { border-color: var(--accent); background: rgba(232,93,10,0.1); }
+.hero-trust { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.trust-item { display: flex; align-items: center; gap: 7px; color: var(--t2); font-size: 0.85rem; font-weight: 600; }
+.trust-item svg { width: 16px; height: 16px; fill: var(--accent); flex-shrink: 0; }
+.trust-sep { width: 1px; height: 18px; background: rgba(255,255,255,0.2); }
+
+/* HERO CARD */
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 36px 32px;
+}
+@media(max-width:900px){ .hero-card { display: none; } }
+.card-title { font-family: var(--font-display); font-size: 1.6rem; color: var(--t1); margin-bottom: 8px; }
+.card-sub { font-size: 0.82rem; color: var(--t3); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 28px; }
+.card-feature {
+  display: flex; align-items: flex-start; gap: 12px;
+  margin-bottom: 18px; padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.card-feature:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.card-feature svg { width: 22px; height: 22px; fill: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.card-feature-text strong { display: block; color: var(--t1); font-size: 0.95rem; font-weight: 700; margin-bottom: 2px; }
+.card-feature-text span { color: var(--t2); font-size: 0.82rem; }
+.card-cta {
+  display: block; background: var(--accent); color: #fff;
+  text-align: center; padding: 14px; border-radius: 8px;
+  font-weight: 700; font-size: 1rem; text-decoration: none;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  margin-top: 28px;
+  transition: background 0.2s;
+}
+.card-cta:hover { background: var(--accent-dark); }
+
+/* STATS */
+.stats-section {
+  background: var(--primary-dark);
+  padding: 60px 0;
+}
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 24px;
+}
+@media(max-width:900px){ .stats-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .stats-grid { grid-template-columns: 1fr; } }
+.stat-box {
+  text-align: center; padding: 36px 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.04);
+}
+.stat-num {
+  font-family: var(--font-display); font-size: 3.2rem; color: var(--accent);
+  line-height: 1;
+}
+.stat-label { color: var(--t2); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.07em; margin-top: 8px; font-weight: 600; }
+
+/* SERVICES */
+.services-section { background: var(--bg); }
+.section-header { text-align: center; margin-bottom: 56px; }
+.section-eyebrow {
+  display: inline-block; color: var(--accent);
+  font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; margin-bottom: 12px;
+}
+.section-title { font-size: clamp(2rem, 3.5vw, 3rem); color: var(--dark-text); margin-bottom: 16px; }
+.section-desc { color: var(--grey-text); max-width: 560px; margin: 0 auto; font-size: 1rem; }
+.service-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 36px 28px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s, box-shadow 0.25s;
+  display: flex; flex-direction: column;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.service-icon {
+  width: 52px; height: 52px;
+  background: rgba(232,93,10,0.1); border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+}
+.service-icon svg { width: 28px; height: 28px; fill: var(--accent); }
+.service-name { font-family: var(--font-display); font-size: 1.5rem; color: var(--dark-text); margin-bottom: 10px; }
+.service-desc { color: var(--grey-text); font-size: 0.9rem; line-height: 1.65; flex: 1; }
+.service-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--accent); font-weight: 700; font-size: 0.85rem;
+  text-decoration: none; margin-top: 20px;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.service-link svg { width: 14px; height: 14px; fill: var(--accent); transition: transform 0.2s; }
+.service-link:hover svg { transform: translateX(4px); }
+
+/* WHY CHOOSE US */
+.why-section {
+  position: relative; background: var(--primary);
+  padding: 90px 0; overflow: hidden;
+}
+.why-section::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.why-section > * { position: relative; z-index: 1; }
+.why-stats { margin-bottom: 56px; }
+.why-stat-card {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius); padding: 30px 20px; text-align: center;
+}
+.why-stat-num { font-family: var(--font-display); font-size: 2.8rem; color: var(--accent); line-height: 1; }
+.why-stat-label { color: var(--t2); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.07em; margin-top: 8px; font-weight: 600; }
+.differentiators { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+@media(max-width:900px){ .differentiators { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .differentiators { grid-template-columns: 1fr; } }
+.diff-card {
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius); padding: 28px 24px;
+}
+.diff-icon { width: 44px; height: 44px; background: var(--accent); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.diff-icon svg { width: 22px; height: 22px; fill: #fff; }
+.diff-title { font-family: var(--font-display); font-size: 1.3rem; color: var(--t1); margin-bottom: 8px; }
+.diff-text { color: var(--t2); font-size: 0.85rem; line-height: 1.6; }
+
+/* HOW IT WORKS */
+.how-section { background: var(--primary-dark); padding: 90px 0; }
+.steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; position: relative; }
+@media(max-width:900px){ .steps { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .steps { grid-template-columns: 1fr; } }
+.steps-connector {
+  position: absolute; top: 40px; left: 0; right: 0; height: 2px;
+  border-top: 2px dashed rgba(232,93,10,0.35);
+  z-index: 0;
+}
+@media(max-width:900px){ .steps-connector { display: none; } }
+.step { padding: 0 24px; text-align: center; position: relative; z-index: 1; }
+.step-num {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: var(--accent); color: #fff;
+  font-family: var(--font-display); font-size: 2rem;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px; box-shadow: 0 4px 20px rgba(232,93,10,0.4);
+}
+.step-title { font-family: var(--font-display); font-size: 1.5rem; color: var(--t1); margin-bottom: 10px; }
+.step-desc { color: var(--t2); font-size: 0.88rem; line-height: 1.65; }
+
+/* REVIEWS */
+.reviews-section { background: var(--bg-off); }
+.review-card {
+  background: #ffffff; border-radius: var(--radius);
+  padding: 36px 28px; box-shadow: var(--shadow);
+  display: flex; flex-direction: column;
+}
+.review-quote-icon { margin-bottom: 16px; }
+.review-stars { display: flex; gap: 4px; margin-bottom: 14px; }
+.review-stars svg { width: 18px; height: 18px; fill: #f59e0b; }
+.review-text { color: #374151; font-size: 0.92rem; line-height: 1.7; flex: 1; margin-bottom: 20px; }
+.reviewer { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 18px; }
+.reviewer-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--primary); color: var(--t1);
+  font-family: var(--font-display); font-size: 1.2rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.reviewer-name { font-weight: 700; color: var(--dark-text); font-size: 0.92rem; }
+.reviewer-loc { color: var(--grey-text); font-size: 0.78rem; }
+
+/* SERVICE AREAS */
+.areas-section { background: var(--primary); padding: 90px 0; }
+.areas-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+@media(max-width:700px){ .areas-inner { grid-template-columns: 1fr; } }
+.areas-text {}
+.areas-title { font-family: var(--font-display); font-size: 2.6rem; color: var(--t1); margin-bottom: 16px; }
+.areas-desc { color: var(--t2); font-size: 0.95rem; line-height: 1.7; margin-bottom: 28px; }
+.area-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: #fff;
+  padding: 14px 28px; border-radius: 8px;
+  font-weight: 700; text-decoration: none; font-size: 0.95rem;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  transition: background 0.2s;
+}
+.area-cta:hover { background: var(--accent-dark); }
+.area-cta svg { width: 16px; height: 16px; fill: #fff; }
+.neighborhoods { display: flex; flex-wrap: wrap; gap: 10px; }
+.neighborhood-chip {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+  color: var(--t1); padding: 8px 16px; border-radius: 30px;
+  font-size: 0.82rem; font-weight: 600;
+}
+
+/* CONTACT */
+.contact-section { background: var(--bg); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+@media(max-width:700px){ .contact-grid { grid-template-columns: 1fr; } }
+.contact-form-wrap {}
+.contact-form-title { font-family: var(--font-display); font-size: 2.2rem; color: var(--dark-text); margin-bottom: 8px; }
+.contact-form-sub { color: var(--grey-text); font-size: 0.9rem; margin-bottom: 28px; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-weight: 600; font-size: 0.85rem; color: var(--dark-text); margin-bottom: 6px; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 12px 16px; border: 1px solid var(--border);
+  border-radius: 8px; font-family: var(--font-body); font-size: 0.9rem;
+  color: var(--dark-text); background: var(--bg);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none; border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(232,93,10,0.12);
+}
+.form-group textarea { resize: vertical; min-height: 110px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media(max-width:500px){ .form-row { grid-template-columns: 1fr; } }
+.form-submit {
+  width: 100%; background: var(--accent); color: #fff;
+  padding: 15px; border: none; border-radius: 8px;
+  font-family: var(--font-body); font-weight: 700; font-size: 1rem;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  cursor: pointer; transition: background 0.2s;
+}
+.form-submit:hover { background: var(--accent-dark); }
+.contact-info {
+  background: var(--primary-dark); border-radius: 16px;
+  padding: 40px 36px; color: var(--t1);
+}
+.contact-info-title { font-family: var(--font-display); font-size: 1.8rem; color: var(--t1); margin-bottom: 28px; }
+.info-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 24px; }
+.info-icon { width: 40px; height: 40px; background: rgba(232,93,10,0.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.info-icon svg { width: 20px; height: 20px; fill: var(--accent); }
+.info-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--t3); margin-bottom: 3px; }
+.info-val { color: var(--t1); font-weight: 600; font-size: 0.95rem; }
+.info-val a { color: var(--t1); text-decoration: none; }
+.emergency-notice {
+  background: rgba(232,93,10,0.15); border: 1px solid rgba(232,93,10,0.3);
+  border-radius: 10px; padding: 18px; margin-top: 28px;
+}
+.emergency-notice strong { color: var(--accent); display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+.emergency-notice p { color: var(--t2); font-size: 0.82rem; line-height: 1.5; }
+
+/* CTA BAND */
+.cta-band {
+  position: relative;
+  background: linear-gradient(135deg, var(--accent) 0%, #c04800 100%);
+  padding: 80px 0; text-align: center; overflow: hidden;
+}
+.cta-band::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-band-title { font-family: var(--font-display); font-size: clamp(2rem,4vw,3.2rem); color: #fff; margin-bottom: 16px; }
+.cta-band-sub { color: rgba(255,255,255,0.85); font-size: 1rem; margin-bottom: 36px; max-width: 540px; margin-left: auto; margin-right: auto; }
+.cta-band-btns { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.btn-white {
+  background: #fff; color: var(--accent);
+  padding: 16px 36px; border-radius: 8px;
+  font-weight: 700; font-size: 1rem; text-decoration: none;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
+.btn-outline-white {
+  background: transparent; color: #fff;
+  padding: 16px 36px; border-radius: 8px;
+  font-weight: 700; font-size: 1rem; text-decoration: none;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  border: 2px solid rgba(255,255,255,0.6);
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+/* FOOTER */
+footer {
+  background: var(--primary-dark); padding: 70px 0 32px;
+}
+.footer-grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 32px;
+  margin-bottom: 48px;
+}
+@media(max-width:900px){ .footer-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:600px){ .footer-grid { grid-template-columns: 1fr; } }
+.footer-brand-name { font-family: var(--font-display); font-size: 1.4rem; color: var(--t1); margin-bottom: 10px; }
+.footer-brand-desc { color: var(--t3); font-size: 0.83rem; line-height: 1.65; margin-bottom: 20px; }
+.footer-contact-item { display: flex; align-items: center; gap: 8px; color: var(--t2); font-size: 0.83rem; margin-bottom: 8px; }
+.footer-contact-item svg { width: 14px; height: 14px; fill: var(--accent); flex-shrink: 0; }
+.footer-contact-item a { color: var(--t2); text-decoration: none; }
+.footer-col-title { font-family: var(--font-display); font-size: 1.1rem; color: var(--t1); margin-bottom: 16px; letter-spacing: 0.03em; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { color: var(--t2); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 24px;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+}
+.footer-copy { color: var(--t3); font-size: 0.78rem; }
+.footer-badge {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(232,93,10,0.15); border: 1px solid rgba(232,93,10,0.3);
+  padding: 6px 14px; border-radius: 20px;
+}
+.footer-badge svg { width: 14px; height: 14px; fill: var(--accent); }
+.footer-badge span { color: var(--accent); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+</style>
+</head>
+<body>
+
+<!-- 1. STICKY HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand-block">
+      <span class="brand-name">Plumber On Call of McKinney</span>
+      <span class="brand-tagline">24/7 Emergency Plumbing — McKinney, TX</span>
+    </div>
+    <div class="header-right">
+      <a href="tel:9727796274" class="header-phone">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <span>(972) 779-6274</span>
+      </a>
+      <a href="tel:9727796274" class="btn-cta">Call Now</a>
+    </div>
+  </div>
+</header>
+
+<!-- 2. HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M13 2.05V4.07C16.95 4.56 20 7.92 20 12C20 14.96 18.5 17.61 16.22 19.17L14.83 17.77C16.66 16.56 17.9 14.43 17.9 12C17.9 8.95 15.69 6.35 12.8 5.74L13 2.05M11 2.05L11.2 5.74C8.31 6.35 6.1 8.95 6.1 12C6.1 14.43 7.34 16.56 9.17 17.77L7.78 19.17C5.5 17.61 4 14.96 4 12C4 7.92 7.05 4.56 11 4.07V2.05M12 20C13.1 20 14 19.1 14 18S13.1 16 12 16 10 16.9 10 18 10.9 20 12 20Z"/></svg>
+        24/7 Emergency Service
+      </div>
+      <h1 class="hero-headline">McKinney's Emergency <span>Plumbing Experts</span></h1>
+      <p class="hero-sub">When a burst pipe or flooding drain hits your home near Adriatica Village, you need someone who answers now — not tomorrow. Upfront pricing, no surprises.</p>
+      <div class="hero-ctas">
+        <a href="tel:9727796274" class="btn-primary">Call (972) 779-6274</a>
+        <a href="#contact" class="btn-secondary">Book Online</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <span class="trust-sep"></span>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>
+          Upfront Pricing
+        </div>
+        <span class="trust-sep"></span>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          Same-Day Response
+        </div>
+        <span class="trust-sep"></span>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          5-Star Rated
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-title">Emergency Response</div>
+      <div class="card-sub">Available right now</div>
+      <div class="card-feature">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <div class="card-feature-text">
+          <strong>Fast Dispatch</strong>
+          <span>Technicians on call around the clock</span>
+        </div>
+      </div>
+      <div class="card-feature">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
+        <div class="card-feature-text">
+          <strong>Transparent Quotes</strong>
+          <span>Price confirmed before any work starts</span>
+        </div>
+      </div>
+      <div class="card-feature">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"/></svg>
+        <div class="card-feature-text">
+          <strong>Licensed Plumbers</strong>
+          <span>Fully insured, background-checked techs</span>
+        </div>
+      </div>
+      <a href="tel:9727796274" class="card-cta">Call Now — We Answer 24/7</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3. STATS ROW -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-num" data-target="2400" data-suffix="+">0</div>
+        <div class="stat-label">Jobs Completed</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" data-target="45" data-suffix=" Min">0</div>
+        <div class="stat-label">Avg Response Time</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" data-target="13" data-suffix="">0</div>
+        <div class="stat-label">5-Star Reviews</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num" data-target="100" data-suffix="%">0</div>
+        <div class="stat-label">Satisfaction Guarantee</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. SERVICES -->
+<section class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">What We Fix</span>
+      <h2 class="section-title">Plumbing Services in McKinney</h2>
+      <p class="section-desc">From minor drips to full pipe failures, we handle it all — with same-day availability and upfront quotes on every call.</p>
+    </div>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20c4 0 4-2 8-2s4 2 8 2v-2c-4 0-4-2-8-2-1.13 0-1.9.16-2.53.33C14.2 13 16.88 10.5 21 10V8h-4z"/></svg>
+        </div>
+        <h3 class="service-name">Drain Cleaning</h3>
+        <p class="service-desc">Slow drains and stubborn clogs are costing you time every morning. We clear blockages fast — kitchen grease, hair traps, root intrusion — and restore full flow the same day.</p>
+        <a href="tel:9727796274" class="service-link">
+          Get It Fixed
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2v2h1v14a4 4 0 0 0 8 0V4h1V2H7zm4 14H9v-2h2v2zm0-4H9v-2h2v2zm0-4H9V6h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V6h2v2z"/></svg>
+        </div>
+        <h3 class="service-name">Water Heater Repair</h3>
+        <p class="service-desc">Cold showers and no hot water stop your household cold. We diagnose both tank and tankless units, source parts same-day, and get your hot water back before bedtime.</p>
+        <a href="tel:9727796274" class="service-link">
+          Get It Fixed
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 3H3v18h2V3m15.2 9L12 3 5.8 12l6.2 9 6.2-9z"/></svg>
+        </div>
+        <h3 class="service-name">Pipe Repair</h3>
+        <p class="service-desc">That crack in your supply line is getting worse every hour. We locate, isolate, and repair burst or corroded pipes — copper, PVC, PEX — minimizing wall damage and drying out fast.</p>
+        <a href="tel:9727796274" class="service-link">
+          Get It Fixed
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <h3 class="service-name">Leak Detection</h3>
+        <p class="service-desc">A hidden slab or wall leak can destroy flooring and spike your water bill for months. We use professional detection equipment to pinpoint exactly where water is escaping — no guesswork, no unnecessary cutting.</p>
+        <a href="tel:9727796274" class="service-link">
+          Get It Fixed
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4S4 11.21 4 9m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4z"/></svg>
+        </div>
+        <h3 class="service-name">Sewer Line Service</h3>
+        <p class="service-desc">Sewage backup in your McKinney home is a health hazard that can't wait. We camera-inspect sewer mains, hydro-jet blockages, and repair or replace damaged lines — fully permitted and up to code.</p>
+        <a href="tel:9727796274" class="service-link">
+          Get It Fixed
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 2.05V4.07C16.95 4.56 20 7.92 20 12C20 14.96 18.5 17.61 16.22 19.17L14.83 17.77C16.66 16.56 17.9 14.43 17.9 12C17.9 8.95 15.69 6.35 12.8 5.74L13 2.05M11 2.05L11.2 5.74C8.31 6.35 6.1 8.95 6.1 12C6.1 14.43 7.34 16.56 9.17 17.77L7.78 19.17C5.5 17.61 4 14.96 4 12C4 7.92 7.05 4.56 11 4.07V2.05M12 20C13.1 20 14 19.1 14 18S13.1 16 12 16 10 16.9 10 18 10.9 20 12 20Z"/></svg>
+        </div>
+        <h3 class="service-name">Emergency Plumbing</h3>
+        <p class="service-desc">Floods, burst mains, or a water heater explosion at 2am — we dispatch immediately. No overtime charges, no "emergency surcharge" surprises. One flat quote before the wrench turns.</p>
+        <a href="tel:9727796274" class="service-link">
+          Call Now 24/7
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. WHY CHOOSE US -->
+<section class="why-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow" style="color:var(--accent)">Why McKinney Calls Us First</span>
+      <h2 class="section-title" style="color:var(--t1)">Built for Emergencies. Ready for Anything.</h2>
+    </div>
+    <div class="why-stats grid-4 why-stats" style="margin-bottom:56px">
+      <div class="why-stat-card">
+        <div class="why-stat-num" data-target="8" data-suffix=" Yrs">0</div>
+        <div class="why-stat-label">In Business</div>
+      </div>
+      <div class="why-stat-card">
+        <div class="why-stat-num" data-target="24" data-suffix="/7">0</div>
+        <div class="why-stat-label">Availability</div>
+      </div>
+      <div class="why-stat-card">
+        <div class="why-stat-num" data-target="500" data-suffix="+">0</div>
+        <div class="why-stat-label">Homes Served</div>
+      </div>
+      <div class="why-stat-card">
+        <div class="why-stat-num" data-target="5" data-suffix=" Star">0</div>
+        <div class="why-stat-label">Average Rating</div>
+      </div>
+    </div>
+    <div class="differentiators">
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        </div>
+        <h3 class="diff-title">Same-Day Dispatch</h3>
+        <p class="diff-text">We route the nearest available tech to your address immediately — average arrival under 60 minutes across McKinney.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 2C6.81 2 3 5.81 3 10.5S6.81 19 11.5 19h.5v3c4.86-2.34 8-7 8-11.5C20 5.81 16.19 2 11.5 2zm1 14.5h-2v-2h2v2zm0-4h-2c0-3.25 3-3 3-5 0-1.1-.9-2-2-2s-2 .9-2 2h-2c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.5-3 2.75-3 5z"/></svg>
+        </div>
+        <h3 class="diff-title">No Hidden Fees</h3>
+        <p class="diff-text">You get a written quote before we start. What we quote is what you pay — zero surprise line items when the invoice arrives.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"/></svg>
+        </div>
+        <h3 class="diff-title">Licensed &amp; Insured</h3>
+        <p class="diff-text">Every technician is state-licensed, fully insured, and background-checked. Your home and family are protected on every call.</p>
+      </div>
+      <div class="diff-card">
+        <div class="diff-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 11C17.66 11 18.99 9.66 18.99 8S17.66 5 16 5C14.34 5 13 6.34 13 8S14.34 11 16 11M8 11C9.66 11 10.99 9.66 10.99 8S9.66 5 8 5C6.34 5 5 6.34 5 8S6.34 11 8 11M8 13C5.67 13 1 14.17 1 16.5V18H15V16.5C15 14.17 10.33 13 8 13M16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V18H23V16.5C23 14.17 18.33 13 16 13Z"/></svg>
+        </div>
+        <h3 class="diff-title">Local McKinney Crew</h3>
+        <p class="diff-text">We live and work here. No out-of-town dispatch centers — local plumbers who know McKinney's neighborhoods and infrastructure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. HOW IT WORKS -->
+<section class="how-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow" style="color:var(--accent)">The Process</span>
+      <h2 class="section-title" style="color:var(--t1)">Fixed in Three Steps</h2>
+      <p class="section-desc" style="color:var(--t2)">No lengthy intake forms, no guessing games. From your call to a dry, working pipe — here is exactly how it goes.</p>
+    </div>
+    <div class="steps" style="position:relative">
+      <div class="steps-connector"></div>
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3 class="step-title">Call or Click</h3>
+        <p class="step-desc" style="color:var(--t2)">Call us at (972) 779-6274 or submit the online form. A real person answers every time — no hold music, no automated menus.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3 class="step-title">We Diagnose &amp; Quote</h3>
+        <p class="step-desc" style="color:var(--t2)">Our tech arrives, assesses the problem, and gives you a firm written price. You approve it — only then do we pick up a single tool.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3 class="step-title">Problem Solved</h3>
+        <p class="step-desc" style="color:var(--t2)">We fix it right the first time and clean up completely before leaving. Our work is guaranteed — if it comes back, we come back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. REVIEWS -->
+<section class="reviews-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-eyebrow">Real McKinney Customers</span>
+      <h2 class="section-title">What Neighbors Are Saying</h2>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <div class="review-quote-icon">
+          <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V17.5C0 12.8333 1.16667 9.08333 3.5 6.25C5.83333 3.41667 9.16667 1.41667 13.5 0.25L15 3.25C12.1667 4.08333 10 5.33333 8.5 7C7 8.58333 6.16667 10.75 6 13.5H12V28H0ZM20 28V17.5C20 12.8333 21.1667 9.08333 23.5 6.25C25.8333 3.41667 29.1667 1.41667 33.5 0.25L35 3.25C32.1667 4.08333 30 5.33333 28.5 7C27 8.58333 26.1667 10.75 26 13.5H32V28H20Z" fill="#e85d0a" opacity="0.25"/>
+          </svg>
+        </div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <p class="review-text">Had a burst pipe under my kitchen sink at 11pm on a Sunday. Called Plumber On Call and they showed up in 45 minutes flat. Tech gave me a fair price right there — no hidden fees — and had the pipe repaired in under an hour. I was blown away.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">M</div>
+          <div>
+            <div class="reviewer-name">Marcus T.</div>
+            <div class="reviewer-loc">McKinney, TX — Verified Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <div class="review-quote-icon">
+          <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V17.5C0 12.8333 1.16667 9.08333 3.5 6.25C5.83333 3.41667 9.16667 1.41667 13.5 0.25L15 3.25C12.1667 4.08333 10 5.33333 8.5 7C7 8.58333 6.16667 10.75 6 13.5H12V28H0ZM20 28V17.5C20 12.8333 21.1667 9.08333 23.5 6.25C25.8333 3.41667 29.1667 1.41667 33.5 0.25L35 3.25C32.1667 4.08333 30 5.33333 28.5 7C27 8.58333 26.1667 10.75 26 13.5H32V28H20Z" fill="#e85d0a" opacity="0.25"/>
+          </svg>
+        </div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <p class="review-text">My water heater completely died on a Friday afternoon. Called three plumbers — only Plumber On Call actually picked up. They were at my house within an hour, installed a new water heater the same evening, and the price was exactly what they quoted. Fantastic service.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">J</div>
+          <div>
+            <div class="reviewer-name">Jennifer R.</div>
+            <div class="reviewer-loc">McKinney, TX — Verified Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <div class="review-quote-icon">
+          <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 28V17.5C0 12.8333 1.16667 9.08333 3.5 6.25C5.83333 3.41667 9.16667 1.41667 13.5 0.25L15 3.25C12.1667 4.08333 10 5.33333 8.5 7C7 8.58333 6.16667 10.75 6 13.5H12V28H0ZM20 28V17.5C20 12.8333 21.1667 9.08333 23.5 6.25C25.8333 3.41667 29.1667 1.41667 33.5 0.25L35 3.25C32.1667 4.08333 30 5.33333 28.5 7C27 8.58333 26.1667 10.75 26 13.5H32V28H20Z" fill="#e85d0a" opacity="0.25"/>
+          </svg>
+        </div>
+        <div class="review-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        </div>
+        <p class="review-text">Used them for a slow drain that turned out to be a partial sewer line blockage. They were honest about what it was, showed me camera footage, and fixed the whole thing same-day. No upsell, no drama. Showed up in 50 minutes and the price was totally fair.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">D</div>
+          <div>
+            <div class="reviewer-name">Derek S.</div>
+            <div class="reviewer-loc">McKinney, TX — Verified Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. SERVICE AREAS -->
+<section class="areas-section">
+  <div class="container">
+    <div class="areas-inner">
+      <div class="areas-text">
+        <span class="section-eyebrow" style="color:var(--accent)">Where We Serve</span>
+        <h2 class="areas-title">McKinney &amp; Surrounding Communities</h2>
+        <p class="areas-desc">We cover all of McKinney — from the historic downtown square to newer communities near Stonebridge Ranch and Craig Ranch. Fast response guaranteed across the entire service zone.</p>
+        <a href="tel:9727796274" class="area-cta">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          Check My Address
+        </a>
+      </div>
+      <div>
+        <div class="neighborhoods">
+          <span class="neighborhood-chip">Adriatica Village</span>
+          <span class="neighborhood-chip">Stonebridge Ranch</span>
+          <span class="neighborhood-chip">Craig Ranch</span>
+          <span class="neighborhood-chip">Trinity Falls</span>
+          <span class="neighborhood-chip">Waterford Crossing</span>
+          <span class="neighborhood-chip">Heritage Ranch</span>
+          <span class="neighborhood-chip">Eldorado Pkwy Corridor</span>
+          <span class="neighborhood-chip">McKinney Historic Square</span>
+          <span class="neighborhood-chip">Frisco (nearby)</span>
+          <span class="neighborhood-chip">Allen</span>
+          <span class="neighborhood-chip">Prosper</span>
+          <span class="neighborhood-chip">Fairview</span>
+          <span class="neighborhood-chip">Melissa</span>
+          <span class="neighborhood-chip">Anna</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. CONTACT / BOOKING -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-form-wrap">
+        <h2 class="contact-form-title">Request Service</h2>
+        <p class="contact-form-sub">Fill out the form below and we will call you back within 15 minutes to confirm your appointment.</p>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" placeholder="John">
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" placeholder="Smith">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="(972) 555-0000">
+          </div>
+          <div class="form-group">
+            <label for="address">Service Address</label>
+            <input type="text" id="address" placeholder="123 Main St, McKinney, TX">
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service">
+              <option value="">-- Select a service --</option>
+              <option>Emergency Plumbing</option>
+              <option>Drain Cleaning</option>
+              <option>Water Heater Repair</option>
+              <option>Pipe Repair</option>
+              <option>Leak Detection</option>
+              <option>Sewer Line Service</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Describe the Problem</label>
+            <textarea id="message" placeholder="Tell us what's happening so we can send the right tech with the right parts..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Request Service — We Respond in 15 Min</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h3 class="contact-info-title">Contact Information</h3>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-val"><a href="tel:9727796274">(972) 779-6274</a></div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Location</div>
+            <div class="info-val">6577 Henneman Way, McKinney, TX 75070</div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Hours</div>
+            <div class="info-val">24 Hours / 7 Days a Week</div>
+          </div>
+        </div>
+        <div class="emergency-notice">
+          <strong>Emergency Line — Always Open</strong>
+          <p>For burst pipes, flooding, or sewage backup, call immediately. We dispatch within minutes — no answering service, no voicemail.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2 class="cta-band-title">Plumbing Emergency? Don't Wait.</h2>
+    <p class="cta-band-sub">Every minute a pipe is leaking costs you more. Call now and have a licensed plumber at your McKinney home within the hour.</p>
+    <div class="cta-band-btns">
+      <a href="tel:9727796274" class="btn-white">Call (972) 779-6274</a>
+      <a href="#contact" class="btn-outline-white">Book Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Plumber On Call of McKinney</div>
+        <p class="footer-brand-desc">McKinney's 24/7 emergency plumbing specialists. Licensed, insured, and always available when a plumbing crisis hits.</p>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:9727796274">(972) 779-6274</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          McKinney, TX 75070
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">Drain Cleaning</a></li>
+          <li><a href="#">Water Heater Repair</a></li>
+          <li><a href="#">Pipe Repair</a></li>
+          <li><a href="#">Leak Detection</a></li>
+          <li><a href="#">Sewer Line Service</a></li>
+          <li><a href="#">Emergency Plumbing</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#">McKinney, TX</a></li>
+          <li><a href="#">Allen, TX</a></li>
+          <li><a href="#">Frisco, TX</a></li>
+          <li><a href="#">Prosper, TX</a></li>
+          <li><a href="#">Fairview, TX</a></li>
+          <li><a href="#">Melissa, TX</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">About Us</div>
+        <ul class="footer-links">
+          <li><a href="#">Why Choose Us</a></li>
+          <li><a href="#">Our Process</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#contact">Get a Quote</a></li>
+          <li><a href="tel:9727796274">Emergency Line</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 Plumber On Call of McKinney. All rights reserved. | McKinney, TX | Licensed &amp; Insured</span>
+      <div class="footer-badge">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 2.05V4.07C16.95 4.56 20 7.92 20 12C20 14.96 18.5 17.61 16.22 19.17L14.83 17.77C16.66 16.56 17.9 14.43 17.9 12C17.9 8.95 15.69 6.35 12.8 5.74L13 2.05M11 2.05L11.2 5.74C8.31 6.35 6.1 8.95 6.1 12C6.1 14.43 7.34 16.56 9.17 17.77L7.78 19.17C5.5 17.61 4 14.96 4 12C4 7.92 7.05 4.56 11 4.07V2.05M12 20C13.1 20 14 19.1 14 18S13.1 16 12 16 10 16.9 10 18 10.9 20 12 20Z"/></svg>
+        <span>24/7 Emergency Service</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function animateCount(el) {
+  const raw = el.dataset.target;
+  const suffix = el.dataset.suffix || '';
+  if (isNaN(raw)) return;
+  const target = parseInt(raw);
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const statObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { animateCount(e.target); statObs.unobserve(e.target); }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-num[data-target], .why-stat-num[data-target]').forEach(el => statObs.observe(el));
+
+const cardObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); cardObs.unobserve(e.target); }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.card').forEach(c => cardObs.observe(c));
+
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Thank you! We will call you back within 15 minutes to confirm your appointment.');
+});
+</script>
+</body>
+</html>
