@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ferguson &amp; Son's Services | Killeen, TX | Family Plumbers | (254) 233-2113</title>
+<meta name="description" content="Ferguson &amp; Son's Services — Killeen's family-owned father &amp; son plumbing team. Serving Fort Cavazos families, Harker Heights &amp; surrounding communities. Licensed &amp; insured. Free estimates. Call (254) 233-2113.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap');
+:root {
+  --primary: #0a2e1a;
+  --primary-dark: #041508;
+  --accent: #e07b39;
+  --accent-dark: #b85e25;
+  --accent-rgb: 224,123,57;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #e8edf5;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--dark-text);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+
+/* ─── STICKY HEADER ─── */
+.site-header{
+  position:sticky;top:0;z-index:1000;
+  background:var(--primary);
+  padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  height:68px;
+  box-shadow:0 2px 20px rgba(0,0,0,0.4);
+}
+.header-brand{
+  display:flex;align-items:center;gap:14px;
+}
+.header-logo-mark{
+  width:40px;height:40px;flex-shrink:0;
+}
+.header-name{
+  font-family:var(--font-display);
+  font-size:1.6rem;letter-spacing:0.05em;
+  color:var(--t1);line-height:1;
+}
+.header-name span{color:var(--accent);}
+.header-tagline{
+  font-size:0.68rem;font-weight:600;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--t3);
+  margin-top:2px;
+}
+.header-nav{
+  display:flex;align-items:center;gap:26px;
+}
+.header-nav a{
+  font-size:0.8rem;font-weight:600;
+  color:var(--t2);letter-spacing:0.07em;text-transform:uppercase;
+  transition:color 0.2s;
+}
+.header-nav a:hover{color:var(--t1);}
+.header-cta{
+  display:flex;align-items:center;gap:9px;
+  background:var(--accent);color:var(--t1);
+  padding:10px 22px;border-radius:7px;
+  font-size:0.88rem;font-weight:600;
+  letter-spacing:0.03em;
+  transition:background 0.2s,transform 0.15s;
+  white-space:nowrap;
+}
+.header-cta:hover{background:var(--accent-dark);transform:translateY(-1px);}
+.header-cta svg{flex-shrink:0;}
+
+/* ─── HERO ─── */
+.hero{
+  background:linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #0f3d22 100%);
+  position:relative;overflow:hidden;
+  padding:100px 5% 90px;
+}
+.hero-grain{
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;
+}
+.hero-inner{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;
+  max-width:1200px;margin:0 auto;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(224,123,57,0.15);
+  border:1px solid rgba(224,123,57,0.35);
+  border-radius:100px;
+  padding:6px 16px;
+  font-size:0.76rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:20px;
+  width:fit-content;
+  opacity:0;transform:translateY(24px);
+}
+.hero-badge svg{flex-shrink:0;}
+.hero-headline{
+  font-family:var(--font-display);
+  font-size:clamp(3.2rem,6vw,5.2rem);
+  line-height:0.95;letter-spacing:0.03em;
+  color:var(--t1);
+  margin-bottom:22px;
+  opacity:0;transform:translateY(24px);
+}
+.hero-headline span{color:var(--accent);}
+.hero-sub{
+  font-size:1.05rem;color:var(--t2);line-height:1.7;
+  max-width:520px;margin-bottom:34px;
+  opacity:0;transform:translateY(24px);
+}
+.hero-ctas{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  margin-bottom:40px;
+  opacity:0;transform:translateY(24px);
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--accent);color:var(--t1);
+  padding:14px 28px;border-radius:8px;
+  font-size:0.95rem;font-weight:600;letter-spacing:0.02em;
+  transition:background 0.2s,transform 0.15s,box-shadow 0.2s;
+  box-shadow:0 4px 20px rgba(224,123,57,0.4);
+}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 6px 28px rgba(224,123,57,0.5);}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;
+  border:2px solid rgba(255,255,255,0.3);color:var(--t1);
+  padding:13px 26px;border-radius:8px;
+  font-size:0.93rem;font-weight:600;letter-spacing:0.02em;
+  transition:border-color 0.2s,background 0.2s,transform 0.15s;
+}
+.btn-ghost:hover{border-color:var(--accent);background:rgba(224,123,57,0.08);transform:translateY(-2px);}
+.hero-trust{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  opacity:0;transform:translateY(24px);
+}
+.trust-stars{
+  display:flex;align-items:center;gap:5px;
+}
+.trust-stars svg{color:var(--accent);}
+.trust-score{
+  font-size:0.88rem;font-weight:600;color:var(--t1);
+  margin-left:2px;
+}
+.trust-divider{
+  width:1px;height:20px;background:rgba(255,255,255,0.2);
+}
+.trust-pill{
+  font-size:0.78rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;
+  color:var(--t2);
+}
+/* Hero right card */
+.hero-card{
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.12);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-radius:16px;
+  padding:36px 30px;
+  opacity:0;transform:translateY(24px);
+}
+.hero-card-title{
+  font-family:var(--font-display);
+  font-size:1.5rem;letter-spacing:0.06em;
+  color:var(--t1);margin-bottom:8px;
+}
+.hero-card-sub{
+  font-size:0.8rem;color:var(--t3);letter-spacing:0.06em;text-transform:uppercase;font-weight:600;
+  margin-bottom:26px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.1);
+}
+.hero-prop{
+  display:flex;align-items:flex-start;gap:14px;
+  margin-bottom:20px;
+}
+.hero-prop:last-child{margin-bottom:0;}
+.hero-prop-icon{
+  width:42px;height:42px;flex-shrink:0;
+  background:rgba(224,123,57,0.15);
+  border:1px solid rgba(224,123,57,0.25);
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--accent);
+}
+.hero-prop-label{
+  font-size:0.82rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:3px;
+}
+.hero-prop-text{
+  font-size:0.9rem;color:var(--t2);line-height:1.5;
+}
+
+/* ─── STATS ROW ─── */
+.stats-row{
+  background:var(--primary);
+  padding:22px 5%;
+}
+.stats-inner{
+  display:flex;align-items:center;justify-content:center;gap:0;
+  max-width:1000px;margin:0 auto;
+  flex-wrap:wrap;
+}
+.stat-item{
+  display:flex;align-items:center;gap:12px;
+  padding:10px 32px;
+  border-right:1px solid rgba(255,255,255,0.1);
+  flex:1;min-width:180px;justify-content:center;
+}
+.stat-item:last-child{border-right:none;}
+.stat-icon{color:var(--accent);}
+.stat-text{
+  font-size:0.88rem;font-weight:600;letter-spacing:0.04em;
+  color:var(--t2);white-space:nowrap;
+}
+.stat-num{
+  font-family:var(--font-display);
+  font-size:1.5rem;letter-spacing:0.04em;
+  color:var(--t1);line-height:1;
+}
+
+/* ─── SERVICES ─── */
+.services-section{
+  background:var(--bg);
+  padding:90px 5%;
+}
+.section-eyebrow{
+  font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:10px;
+}
+.section-title{
+  font-family:var(--font-display);
+  font-size:clamp(2.4rem,4vw,3.6rem);
+  letter-spacing:0.04em;line-height:1;
+  color:var(--dark-text);margin-bottom:14px;
+}
+.section-sub{
+  font-size:1rem;color:var(--grey-text);max-width:560px;line-height:1.7;
+}
+.section-header{margin-bottom:52px;}
+.services-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  max-width:1200px;margin:0 auto;
+}
+.service-card{
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  padding:32px 28px;
+  transition:border-color 0.25s,box-shadow 0.25s,transform 0.25s;
+  opacity:0;transform:translateY(30px);
+  position:relative;overflow:hidden;
+}
+.service-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--accent-dark));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.3s;
+}
+.service-card:hover{
+  border-color:rgba(224,123,57,0.3);
+  box-shadow:var(--shadow);
+  transform:translateY(-4px);
+}
+.service-card:hover::before{transform:scaleX(1);}
+.service-icon{
+  width:52px;height:52px;
+  background:rgba(10,46,26,0.08);
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;
+  color:var(--primary);
+  transition:background 0.2s;
+}
+.service-card:hover .service-icon{background:rgba(224,123,57,0.12);color:var(--accent);}
+.service-name{
+  font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.05em;
+  color:var(--dark-text);margin-bottom:8px;
+}
+.service-desc{
+  font-size:0.88rem;color:var(--grey-text);line-height:1.6;
+}
+
+/* ─── WHY CHOOSE US ─── */
+.why-section{
+  background:var(--primary);
+  position:relative;overflow:hidden;
+  padding:90px 5%;
+}
+.why-grain{
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;
+}
+.why-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;}
+.why-top{
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;
+  margin-bottom:64px;
+}
+.why-section .section-eyebrow{color:rgba(224,123,57,0.9);}
+.why-section .section-title{color:var(--t1);}
+.why-section .section-sub{color:var(--t2);max-width:100%;}
+.stats-cards{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;
+}
+.stat-card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:var(--radius);
+  padding:24px 20px;
+  text-align:center;
+  opacity:0;transform:translateY(20px);
+}
+.stat-card-num{
+  font-family:var(--font-display);
+  font-size:2.6rem;letter-spacing:0.04em;
+  color:var(--accent);line-height:1;margin-bottom:6px;
+}
+.stat-card-label{
+  font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--t3);
+}
+.diff-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:20px;
+}
+.diff-item{
+  display:flex;gap:16px;align-items:flex-start;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:var(--radius);padding:22px 20px;
+  opacity:0;transform:translateY(20px);
+}
+.diff-icon{
+  width:44px;height:44px;flex-shrink:0;
+  background:rgba(224,123,57,0.15);
+  border:1px solid rgba(224,123,57,0.2);
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--accent);
+}
+.diff-title{
+  font-size:0.88rem;font-weight:600;color:var(--t1);margin-bottom:5px;
+}
+.diff-text{font-size:0.82rem;color:var(--t2);line-height:1.5;}
+
+/* ─── HOW IT WORKS ─── */
+.how-section{
+  background:var(--primary-dark);
+  padding:90px 5%;
+}
+.how-inner{max-width:1100px;margin:0 auto;}
+.how-section .section-eyebrow{color:rgba(224,123,57,0.9);}
+.how-section .section-title{color:var(--t1);}
+.how-section .section-sub{color:var(--t2);}
+.steps-row{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  position:relative;margin-top:56px;
+}
+.steps-row::before{
+  content:'';
+  position:absolute;top:44px;left:calc(16.66% + 22px);right:calc(16.66% + 22px);
+  height:2px;
+  background:repeating-linear-gradient(90deg,rgba(224,123,57,0.4) 0,rgba(224,123,57,0.4) 8px,transparent 8px,transparent 18px);
+}
+.step{
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  padding:0 28px;
+  opacity:0;transform:translateY(24px);
+}
+.step-num{
+  width:88px;height:88px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-size:2.2rem;letter-spacing:0.05em;
+  color:var(--t1);margin-bottom:24px;
+  box-shadow:0 6px 28px rgba(224,123,57,0.45);
+  position:relative;z-index:1;
+}
+.step-title{
+  font-family:var(--font-display);font-size:1.4rem;letter-spacing:0.06em;
+  color:var(--t1);margin-bottom:10px;
+}
+.step-text{font-size:0.88rem;color:var(--t2);line-height:1.6;}
+
+/* ─── REVIEWS ─── */
+.reviews-section{
+  background:var(--bg-off);
+  padding:90px 5%;
+}
+.reviews-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  max-width:1200px;margin:52px auto 0;
+}
+.review-card{
+  background:var(--bg);
+  border:1.5px solid var(--border);
+  border-radius:var(--radius);
+  padding:30px 26px;
+  box-shadow:var(--shadow);
+  opacity:0;transform:translateY(28px);
+}
+.review-stars{display:flex;gap:3px;margin-bottom:14px;}
+.review-stars svg{color:var(--accent);}
+.review-text{
+  font-size:0.92rem;color:var(--grey-text);line-height:1.7;margin-bottom:22px;
+  font-style:italic;
+}
+.review-author{
+  display:flex;align-items:center;gap:12px;
+  padding-top:18px;border-top:1px solid var(--border);
+}
+.review-avatar{
+  width:42px;height:42px;border-radius:50%;
+  background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-size:1.1rem;color:var(--t1);flex-shrink:0;
+}
+.review-name{font-size:0.88rem;font-weight:600;color:var(--dark-text);}
+.review-location{font-size:0.78rem;color:var(--grey-text);}
+.review-source{
+  margin-left:auto;
+  font-size:0.72rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;
+  color:var(--grey-text);opacity:0.7;
+}
+
+/* ─── SERVICE AREAS ─── */
+.areas-section{
+  background:var(--primary);
+  padding:90px 5%;
+  position:relative;overflow:hidden;
+}
+.areas-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;
+}
+.areas-section .section-eyebrow{color:rgba(224,123,57,0.9);}
+.areas-section .section-title{color:var(--t1);}
+.areas-section .section-sub{color:var(--t2);margin-bottom:32px;}
+.areas-map-placeholder{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:16px;
+  padding:48px 32px;
+  text-align:center;
+  position:relative;
+}
+.areas-map-placeholder svg{color:rgba(224,123,57,0.3);margin-bottom:14px;}
+.areas-map-label{
+  font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.06em;
+  color:var(--t2);margin-bottom:8px;
+}
+.areas-map-sub{font-size:0.82rem;color:var(--t3);}
+.area-chips{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;
+}
+.area-chip{
+  display:flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:100px;
+  padding:8px 16px;
+  font-size:0.82rem;font-weight:600;color:var(--t2);
+  transition:background 0.2s,border-color 0.2s,color 0.2s;
+  cursor:default;
+}
+.area-chip svg{color:var(--accent);flex-shrink:0;}
+.area-chip:hover{background:rgba(224,123,57,0.12);border-color:rgba(224,123,57,0.3);color:var(--t1);}
+.areas-note{
+  font-size:0.8rem;color:var(--t3);margin-top:20px;line-height:1.5;
+}
+
+/* ─── CONTACT FORM ─── */
+.contact-section{
+  background:var(--bg);
+  padding:90px 5%;
+}
+.contact-inner{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;
+}
+.contact-info-block{margin-bottom:32px;}
+.contact-info-item{
+  display:flex;align-items:flex-start;gap:14px;margin-bottom:22px;
+}
+.contact-info-icon{
+  width:44px;height:44px;flex-shrink:0;
+  background:rgba(10,46,26,0.07);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--primary);
+}
+.contact-info-label{
+  font-size:0.76rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;
+  color:var(--grey-text);margin-bottom:3px;
+}
+.contact-info-value{font-size:0.95rem;font-weight:600;color:var(--dark-text);}
+.contact-form{
+  background:var(--bg-off);
+  border:1.5px solid var(--border);
+  border-radius:16px;
+  padding:36px 32px;
+}
+.form-title{
+  font-family:var(--font-display);font-size:1.7rem;letter-spacing:0.05em;
+  color:var(--dark-text);margin-bottom:6px;
+}
+.form-sub{font-size:0.85rem;color:var(--grey-text);margin-bottom:28px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+.form-group{margin-bottom:14px;}
+label{
+  display:block;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--dark-text);margin-bottom:6px;
+}
+input,select,textarea{
+  width:100%;padding:12px 14px;
+  border:1.5px solid var(--border);border-radius:8px;
+  font-family:var(--font-body);font-size:0.9rem;color:var(--dark-text);
+  background:var(--bg);
+  transition:border-color 0.2s,box-shadow 0.2s;
+  outline:none;
+}
+input:focus,select:focus,textarea:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(224,123,57,0.12);
+}
+textarea{resize:vertical;min-height:100px;}
+.form-submit{
+  width:100%;padding:14px;
+  background:var(--accent);color:var(--t1);
+  border:none;border-radius:8px;cursor:pointer;
+  font-family:var(--font-body);font-size:0.95rem;font-weight:600;letter-spacing:0.03em;
+  transition:background 0.2s,transform 0.15s;
+  margin-top:4px;
+}
+.form-submit:hover{background:var(--accent-dark);transform:translateY(-1px);}
+.ssl-notice{
+  display:flex;align-items:center;gap:7px;
+  margin-top:14px;font-size:0.78rem;color:var(--grey-text);
+}
+.ssl-notice svg{color:var(--accent);flex-shrink:0;}
+
+/* ─── CTA BAND ─── */
+.cta-band{
+  background:linear-gradient(135deg, var(--accent-dark), var(--accent));
+  position:relative;overflow:hidden;
+  padding:80px 5%;text-align:center;
+}
+.cta-band-grain{
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;
+}
+.cta-band-inner{position:relative;z-index:1;max-width:700px;margin:0 auto;}
+.cta-band-eyebrow{
+  font-size:0.76rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.7);margin-bottom:12px;
+}
+.cta-band-title{
+  font-family:var(--font-display);
+  font-size:clamp(2.4rem,5vw,4rem);letter-spacing:0.04em;line-height:1;
+  color:var(--t1);margin-bottom:16px;
+}
+.cta-band-sub{
+  font-size:1rem;color:rgba(255,255,255,0.85);line-height:1.6;margin-bottom:36px;
+}
+.cta-band-btns{
+  display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;
+}
+.btn-white{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--t1);color:var(--accent-dark);
+  padding:14px 30px;border-radius:8px;
+  font-size:0.95rem;font-weight:600;
+  transition:background 0.2s,transform 0.15s;
+}
+.btn-white:hover{background:rgba(255,255,255,0.9);transform:translateY(-2px);}
+.btn-outline-white{
+  display:inline-flex;align-items:center;gap:8px;
+  border:2px solid rgba(255,255,255,0.5);color:var(--t1);
+  padding:13px 28px;border-radius:8px;
+  font-size:0.93rem;font-weight:600;
+  transition:border-color 0.2s,background 0.2s,transform 0.15s;
+}
+.btn-outline-white:hover{border-color:rgba(255,255,255,0.9);background:rgba(255,255,255,0.1);transform:translateY(-2px);}
+
+/* ─── FOOTER ─── */
+.site-footer{
+  background:var(--primary-dark);
+  padding:70px 5% 32px;
+}
+.footer-grid{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;
+  max-width:1200px;margin:0 auto;
+  padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.footer-brand-name{
+  font-family:var(--font-display);font-size:1.5rem;letter-spacing:0.05em;
+  color:var(--t1);margin-bottom:4px;
+}
+.footer-brand-name span{color:var(--accent);}
+.footer-brand-tag{
+  font-size:0.76rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;
+  color:var(--t3);margin-bottom:16px;
+}
+.footer-brand-desc{
+  font-size:0.85rem;color:var(--t3);line-height:1.7;margin-bottom:22px;max-width:300px;
+}
+.footer-socials{display:flex;gap:10px;}
+.social-btn{
+  width:36px;height:36px;
+  background:rgba(255,255,255,0.07);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--t3);
+  transition:background 0.2s,color 0.2s;
+}
+.social-btn:hover{background:rgba(224,123,57,0.2);color:var(--accent);}
+.footer-col-title{
+  font-size:0.76rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:18px;
+}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:10px;}
+.footer-links a{
+  font-size:0.84rem;color:var(--t3);
+  transition:color 0.2s;
+}
+.footer-links a:hover{color:var(--t1);}
+.footer-contact-item{
+  display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;
+}
+.footer-contact-item svg{color:var(--accent);flex-shrink:0;margin-top:2px;}
+.footer-contact-text{font-size:0.84rem;color:var(--t3);line-height:1.4;}
+.footer-bottom{
+  max-width:1200px;margin:28px auto 0;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
+}
+.footer-copy{font-size:0.78rem;color:var(--t3);}
+.footer-copy a{color:var(--t3);transition:color 0.2s;}
+.footer-copy a:hover{color:var(--accent);}
+.footer-badges{display:flex;align-items:center;gap:14px;}
+.footer-badge{
+  display:flex;align-items:center;gap:6px;
+  font-size:0.72rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;
+  color:var(--t3);
+}
+.footer-badge svg{color:var(--accent);}
+
+/* ─── ANIMATIONS ─── */
+@keyframes heroFadeUp{
+  to{opacity:1;transform:translateY(0);}
+}
+.anim-ready{animation:heroFadeUp 0.7s cubic-bezier(0.22,1,0.36,1) forwards;}
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.6s cubic-bezier(0.22,1,0.36,1),transform 0.6s cubic-bezier(0.22,1,0.36,1);}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:40px;}
+  .hero-card{display:none;}
+  .services-grid{grid-template-columns:repeat(2,1fr);}
+  .reviews-grid{grid-template-columns:repeat(2,1fr);}
+  .why-top{grid-template-columns:1fr;gap:40px;}
+  .diff-grid{grid-template-columns:1fr 1fr;}
+  .areas-inner{grid-template-columns:1fr;gap:36px;}
+  .contact-inner{grid-template-columns:1fr;gap:44px;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px;}
+  .header-nav{display:none;}
+  .steps-row{grid-template-columns:1fr;gap:40px;}
+  .steps-row::before{display:none;}
+  .stats-inner{gap:0;}
+  .stat-item{min-width:140px;padding:10px 18px;}
+}
+@media(max-width:600px){
+  .hero{padding:72px 5% 64px;}
+  .hero-ctas{flex-direction:column;align-items:flex-start;}
+  .services-grid{grid-template-columns:1fr;}
+  .reviews-grid{grid-template-columns:1fr;}
+  .diff-grid{grid-template-columns:1fr;}
+  .stats-cards{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;}
+  .form-row{grid-template-columns:1fr;}
+  .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08);padding:12px 20px;}
+  .stat-item:last-child{border-bottom:none;}
+  .stats-inner{flex-direction:column;align-items:stretch;}
+  .cta-band-btns{flex-direction:column;align-items:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-brand">
+    <svg class="header-logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="20" fill="rgba(255,255,255,0.06)"/>
+      <path d="M20 8 C14 8 10 12 10 17 C10 21 12 24 16 26 L16 32 L24 32 L24 26 C28 24 30 21 30 17 C30 12 26 8 20 8Z" fill="none" stroke="#e07b39" stroke-width="1.8"/>
+      <circle cx="20" cy="17" r="4" fill="#e07b39" opacity="0.9"/>
+      <line x1="20" y1="21" x2="20" y2="26" stroke="#e07b39" stroke-width="2" stroke-linecap="round"/>
+      <line x1="16" y1="28" x2="24" y2="28" stroke="#e07b39" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="17" y1="31" x2="23" y2="31" stroke="#e07b39" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+    <div>
+      <div class="header-name">Ferguson &amp; <span>Son's</span></div>
+      <div class="header-tagline">Plumbing · Killeen, TX</div>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <a href="#services">Services</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#areas">Service Areas</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="tel:2542332113" class="header-cta">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 011 2.18 2 2 0 012.98 0H6a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+    (254) 233-2113
+  </a>
+</header>
+
+<!-- ═══════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge" id="heroBadge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+        Family-Owned Since Day One
+      </div>
+      <h1 class="hero-headline" id="heroHeadline">
+        Killeen's Family<br><span>Plumbers</span>
+      </h1>
+      <p class="hero-sub" id="heroSub">
+        Father and son. Not a franchise, not a call center — a local family that's been taking care of Fort Cavazos families, Harker Heights neighborhoods, and Killeen homes the right way. We're your neighbors, and we stand behind every job with our name.
+      </p>
+      <div class="hero-ctas" id="heroCtas">
+        <a href="tel:2542332113" class="btn-primary">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 011 2.18 2 2 0 012.98 0H6a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+          Call (254) 233-2113
+        </a>
+        <a href="#contact" class="btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          Get a Free Estimate
+        </a>
+      </div>
+      <div class="hero-trust" id="heroTrust">
+        <div class="trust-stars">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--accent)"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <span class="trust-score">4.2</span>
+        </div>
+        <div class="trust-divider"></div>
+        <span class="trust-pill">186 Reviews</span>
+        <div class="trust-divider"></div>
+        <span class="trust-pill">Family-Owned</span>
+        <div class="trust-divider"></div>
+        <span class="trust-pill">Licensed &amp; Insured</span>
+      </div>
+    </div>
+    <div class="hero-card" id="heroCard">
+      <div class="hero-card-title">Why Killeen Families Choose Us</div>
+      <div class="hero-card-sub">Father &amp; Son · Every Job · Every Time</div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div>
+          <div class="hero-prop-label">Multi-Generational Trust</div>
+          <div class="hero-prop-text">Father and son built this business on a handshake and a guarantee. Your job is personal to us — it has our family name on it.</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="hero-prop-label">Licensed &amp; Insured</div>
+          <div class="hero-prop-text">Fully licensed plumbers in the state of Texas. Every job done right, protected, and standing behind our work.</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+        </div>
+        <div>
+          <div class="hero-prop-label">Fast, Honest Response</div>
+          <div class="hero-prop-text">When there's water where it shouldn't be, you call a neighbor — not a dispatcher 500 miles away. We pick up.</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-prop-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div>
+          <div class="hero-prop-label">Free Estimates</div>
+          <div class="hero-prop-text">No surprises, no pressure. We come out, assess the job honestly, and tell you exactly what it takes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     STATS ROW
+════════════════════════════════════════════════ -->
+<div class="stats-row">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+      <div>
+        <div class="stat-num" data-target="186">0</div>
+        <div class="stat-text">Google Reviews</div>
+      </div>
+    </div>
+    <div class="stat-item">
+      <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      <div class="stat-text">Father &amp; Son Team</div>
+    </div>
+    <div class="stat-item">
+      <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div class="stat-text">Licensed &amp; Insured</div>
+    </div>
+    <div class="stat-item">
+      <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+      <div class="stat-text">Free Estimates</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════════ -->
+<section class="services-section" id="services">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="section-header">
+      <p class="section-eyebrow">What We Handle</p>
+      <h2 class="section-title">Plumbing Services<br>Killeen Relies On</h2>
+      <p class="section-sub">From a dripping faucet to a burst pipe at 2am — we've seen it all and we fix it right. One call to a real family team.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <h3 class="service-name">Leak Detection &amp; Repair</h3>
+        <p class="service-desc">Slab leaks, hidden pipe leaks, and yard line breaks. We find it fast and fix it right — no guesswork, no unnecessary demo.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        </div>
+        <h3 class="service-name">Drain Cleaning</h3>
+        <p class="service-desc">Slow or completely backed-up drains — kitchen, bathroom, or main line. We clear it properly so it doesn't come back next month.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <h3 class="service-name">Water Heater Services</h3>
+        <p class="service-desc">Replacement, installation, and repair on traditional tank and tankless water heaters. We stock the most common units to get your hot water back same day.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg>
+        </div>
+        <h3 class="service-name">Pipe Repair &amp; Replacement</h3>
+        <p class="service-desc">Aging galvanized pipes, corroded lines, and freeze damage. We repipe sections or full homes and leave the job site clean.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <h3 class="service-name">Toilet &amp; Fixture Repair</h3>
+        <p class="service-desc">Running toilets, faucet replacements, shower valves, and garbage disposals. Small fixes done right the first time — no parts-store guesswork.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+        </div>
+        <h3 class="service-name">New Construction &amp; Remodels</h3>
+        <p class="service-desc">Rough-in and finish plumbing for room additions, kitchen and bath remodels. We work with your contractor or manage the whole project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     WHY CHOOSE US
+════════════════════════════════════════════════ -->
+<section class="why-section">
+  <div class="why-grain"></div>
+  <div class="why-inner">
+    <div class="why-top">
+      <div>
+        <p class="section-eyebrow">Why Ferguson &amp; Son's</p>
+        <h2 class="section-title" style="color:var(--t1);margin-bottom:16px;">Father &amp; Son.<br>Killeen Family Trust,<br>Proven Across Generations.</h2>
+        <p class="section-sub">There's a difference between a company that says they care and a family that actually does. When you call Ferguson &amp; Son's, you're calling someone whose reputation lives in this community — and that changes everything about how the work gets done.</p>
+      </div>
+      <div class="stats-cards">
+        <div class="stat-card fade-up">
+          <div class="stat-card-num" data-target="186">0</div>
+          <div class="stat-card-label">Customer Reviews</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-card-num">4.2<span style="font-size:1.4rem;">★</span></div>
+          <div class="stat-card-label">Average Rating</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-card-num">2</div>
+          <div class="stat-card-label">Generations on the Job</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-card-num">100<span style="font-size:1.2rem;">%</span></div>
+          <div class="stat-card-label">Local Killeen Owned</div>
+        </div>
+      </div>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-item fade-up">
+        <div class="diff-icon">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">Our Name Is Our Guarantee</div>
+          <div class="diff-text">When "Ferguson" is on the truck and "Son" is in the name, both generations are on the line. We don't cut corners on a neighbor's home.</div>
+        </div>
+      </div>
+      <div class="diff-item fade-up">
+        <div class="diff-icon">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">Community Rooted</div>
+          <div class="diff-text">We're not a franchise. We live here, our kids go to school here, and we'll see you at the grocery store. That accountability matters.</div>
+        </div>
+      </div>
+      <div class="diff-item fade-up">
+        <div class="diff-icon">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">Upfront Pricing, No Surprises</div>
+          <div class="diff-text">We give you a real number before we start. No "trip fees" that double after the door opens. Just honest, fair pricing like a neighbor would offer.</div>
+        </div>
+      </div>
+      <div class="diff-item fade-up">
+        <div class="diff-icon">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="diff-title">Fully Licensed &amp; Insured</div>
+          <div class="diff-text">Every job is covered. Texas-licensed plumbers, fully insured work — so you're protected from the first wrench turn to cleanup.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     HOW IT WORKS
+════════════════════════════════════════════════ -->
+<section class="how-section">
+  <div class="how-inner">
+    <div class="section-header" style="text-align:center;max-width:600px;margin:0 auto 0;">
+      <p class="section-eyebrow">Simple Process</p>
+      <h2 class="section-title">Getting Your Plumbing<br>Fixed Is Easy</h2>
+      <p class="section-sub" style="margin:0 auto;">No runaround, no dispatch queues. You call a family, a family shows up.</p>
+    </div>
+    <div class="steps-row">
+      <div class="step fade-up">
+        <div class="step-num">01</div>
+        <h3 class="step-title">Call or Send a Message</h3>
+        <p class="step-text">Reach us directly at (254) 233-2113 or fill out our quick contact form. You'll talk to a real person — not a call center — who knows what questions to ask.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num">02</div>
+        <h3 class="step-title">We Come Assess the Job</h3>
+        <p class="step-text">We show up on time, take a proper look, and give you a straight estimate — no pressure, no inflated numbers, no guesswork repairs billed by the hour.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num">03</div>
+        <h3 class="step-title">Problem Solved, Guaranteed</h3>
+        <p class="step-text">We fix it right and we stand behind our work. The job isn't done until you're satisfied and your plumbing is running the way it should.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     REVIEWS
+════════════════════════════════════════════════ -->
+<section class="reviews-section" id="reviews">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="section-header" style="text-align:center;max-width:600px;margin:0 auto;">
+      <p class="section-eyebrow">What Killeen Says</p>
+      <h2 class="section-title">Real Neighbors,<br>Real Reviews</h2>
+      <p class="section-sub" style="margin:0 auto;">4.2 stars across 186 reviews. Here's what families in Killeen and Harker Heights have to say.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <p class="review-text">"Our water heater went out in January — worst possible timing with a house full of family. I called Ferguson and Son's on a Saturday morning and they came out same day. The son explained what failed, gave me options at different price points, and had us back in hot water by early afternoon. No pressure, no upsell. Just solid work."</p>
+        <div class="review-author">
+          <div class="review-avatar">DM</div>
+          <div>
+            <div class="review-name">Deborah M.</div>
+            <div class="review-location">Fort Cavazos Area, Killeen TX</div>
+          </div>
+          <div class="review-source">Google</div>
+        </div>
+      </div>
+      <div class="review-card fade-up">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <p class="review-text">"Kitchen drain had been backing up for weeks. I tried everything from the hardware store and nothing stuck. Called Ferguson and Son's — the father came out, snaked it deep, explained what was causing it, and charged a fair price. It's been three months and zero issues. Would have saved money just calling them first."</p>
+        <div class="review-author">
+          <div class="review-avatar">TR</div>
+          <div>
+            <div class="review-name">Tony R.</div>
+            <div class="review-location">Harker Heights, TX</div>
+          </div>
+          <div class="review-source">Google</div>
+        </div>
+      </div>
+      <div class="review-card fade-up">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <p class="review-text">"Had a yard leak I noticed from the unusually high water bill — wet spot in the grass near the meter. Ferguson and Son's located the break, dug it up cleanly, and repaired it without tearing up half my yard. The son did the work while the father kept me informed step by step. Solid family outfit. I'll use them again."</p>
+        <div class="review-author">
+          <div class="review-avatar">LK</div>
+          <div>
+            <div class="review-name">Linda K.</div>
+            <div class="review-location">Nolanville, TX</div>
+          </div>
+          <div class="review-source">Google</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SERVICE AREAS
+════════════════════════════════════════════════ -->
+<section class="areas-section" id="areas">
+  <div class="areas-inner">
+    <div>
+      <p class="section-eyebrow">Where We Work</p>
+      <h2 class="section-title">Serving the Heart<br>of Central Texas</h2>
+      <p class="section-sub">From Fort Cavazos housing to Copperas Cove neighborhoods — if you're in the Killeen area, you're our neighbor. We know these roads and we know these homes.</p>
+      <div class="area-chips">
+        <div class="area-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Killeen
+        </div>
+        <div class="area-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Harker Heights
+        </div>
+        <div class="area-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Copperas Cove
+        </div>
+        <div class="area-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Fort Cavazos
+        </div>
+        <div class="area-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Nolanville
+        </div>
+        <div class="area-chip">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Temple
+        </div>
+      </div>
+      <p class="areas-note">Not sure if we cover your area? Give us a call at (254) 233-2113 and we'll let you know. We try to accommodate anyone in the greater Killeen-Fort Hood metro.</p>
+    </div>
+    <div class="areas-map-placeholder">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3,6 9,3 15,6 21,3 21,18 15,21 9,18 3,21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+      <div class="areas-map-label">Central Texas Service Area</div>
+      <div class="areas-map-sub">Killeen · Harker Heights · Copperas Cove<br>Fort Cavazos · Nolanville · Temple</div>
+      <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);">
+        <div style="font-family:var(--font-display);font-size:2.2rem;letter-spacing:0.05em;color:var(--accent);line-height:1;margin-bottom:6px;">6+</div>
+        <div style="font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Communities Served</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CONTACT FORM
+════════════════════════════════════════════════ -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div>
+      <p class="section-eyebrow">Get in Touch</p>
+      <h2 class="section-title">Talk to a Real<br>Ferguson Today</h2>
+      <p class="section-sub" style="margin-bottom:36px;">No bots, no call centers. When you reach us, you're reaching the family directly. We'll give you an honest answer and a fair estimate — that's a promise.</p>
+      <div class="contact-info-block">
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 011 2.18 2 2 0 012.98 0H6a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Phone</div>
+            <div class="contact-info-value"><a href="tel:2542332113" style="color:var(--dark-text);">(254) 233-2113</a></div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Service Area</div>
+            <div class="contact-info-value">Killeen, TX &amp; Surrounding Communities</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Hours</div>
+            <div class="contact-info-value">Mon – Sat: 7:00 AM – 6:00 PM</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">License Status</div>
+            <div class="contact-info-value">Licensed &amp; Insured · State of Texas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-title">Free Estimate Request</div>
+      <div class="form-sub">We'll get back to you within a few hours — usually faster.</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" placeholder="Your first name">
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" placeholder="Your last name">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="(254) 000-0000">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@email.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="service">Service Needed</label>
+        <select id="service">
+          <option value="">Select a service...</option>
+          <option>Leak Detection &amp; Repair</option>
+          <option>Drain Cleaning</option>
+          <option>Water Heater Repair / Replacement</option>
+          <option>Pipe Repair &amp; Replacement</option>
+          <option>Toilet &amp; Fixture Repair</option>
+          <option>New Construction / Remodel</option>
+          <option>Other / Not Sure</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Tell Us What's Going On</label>
+        <textarea id="message" placeholder="Describe your plumbing issue — the more detail, the better we can help when we call."></textarea>
+      </div>
+      <button type="button" class="form-submit">Send Request — We'll Call You Back</button>
+      <div class="ssl-notice">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Your information is private and secure. We'll only use it to follow up on your request.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CTA BAND
+════════════════════════════════════════════════ -->
+<section class="cta-band">
+  <div class="cta-band-grain"></div>
+  <div class="cta-band-inner">
+    <p class="cta-band-eyebrow">Ready When You Are</p>
+    <h2 class="cta-band-title">Trust the Family Name<br>in Killeen</h2>
+    <p class="cta-band-sub">Father and son. Two generations. One promise: we'll treat your home like it's our own. Call us today for a free, no-pressure estimate.</p>
+    <div class="cta-band-btns">
+      <a href="tel:2542332113" class="btn-white">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 011 2.18 2 2 0 012.98 0H6a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+        Call (254) 233-2113
+      </a>
+      <a href="#contact" class="btn-outline-white">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Request Free Estimate
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">Ferguson &amp; <span>Son's</span> Services</div>
+      <div class="footer-brand-tag">Killeen, TX · Family Plumbers</div>
+      <p class="footer-brand-desc">A father-and-son plumbing team rooted in Killeen, Texas. We've built our reputation one honest job at a time, serving Fort Cavazos families, Harker Heights neighborhoods, and the entire Central Texas community.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="Google">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Leak Detection &amp; Repair</a></li>
+        <li><a href="#services">Drain Cleaning</a></li>
+        <li><a href="#services">Water Heater Services</a></li>
+        <li><a href="#services">Pipe Repair &amp; Replacement</a></li>
+        <li><a href="#services">Toilet &amp; Fixture Repair</a></li>
+        <li><a href="#services">Remodel Plumbing</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="#areas">Killeen, TX</a></li>
+        <li><a href="#areas">Harker Heights, TX</a></li>
+        <li><a href="#areas">Copperas Cove, TX</a></li>
+        <li><a href="#areas">Fort Cavazos</a></li>
+        <li><a href="#areas">Nolanville, TX</a></li>
+        <li><a href="#areas">Temple, TX</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 011 2.18 2 2 0 012.98 0H6a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+        <div class="footer-contact-text"><a href="tel:2542332113" style="color:inherit;">(254) 233-2113</a></div>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="footer-contact-text">Killeen, TX &amp; Surrounding Areas</div>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+        <div class="footer-contact-text">Mon – Sat: 7:00 AM – 6:00 PM</div>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="footer-contact-text">Licensed &amp; Insured · Texas</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">
+      &copy; 2025 Ferguson &amp; Son's Services · Killeen, TX · All rights reserved ·
+      <a href="#">Privacy Policy</a>
+    </div>
+    <div class="footer-badges">
+      <div class="footer-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Licensed &amp; Insured
+      </div>
+      <div class="footer-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20,6 9,17 4,12"/></svg>
+        Free Estimates
+      </div>
+      <div class="footer-badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        Family-Owned
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── HERO FADE-UP ANIMATIONS ───
+(function(){
+  var delays = {
+    heroBadge:    0,
+    heroHeadline: 120,
+    heroSub:      220,
+    heroCtas:     320,
+    heroTrust:    420,
+    heroCard:     180
+  };
+  Object.keys(delays).forEach(function(id){
+    var el = document.getElementById(id);
+    if(!el) return;
+    setTimeout(function(){
+      el.classList.add('anim-ready');
+    }, delays[id] + 80);
+  });
+})();
+
+// ─── INTERSECTION OBSERVER STAGGER ───
+(function(){
+  if(!window.IntersectionObserver) return;
+  var cards = document.querySelectorAll('.fade-up');
+  var groups = {};
+
+  cards.forEach(function(card){
+    var parent = card.parentElement;
+    if(!groups[parent]) groups[parent] = [];
+    groups[parent].push(card);
+  });
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting) return;
+      var el = entry.target;
+      var parent = el.parentElement;
+      var siblings = groups[parent] || [];
+      var idx = siblings.indexOf(el);
+      setTimeout(function(){
+        el.classList.add('visible');
+      }, idx * 100);
+      observer.unobserve(el);
+    });
+  }, {threshold: 0.12, rootMargin: '0px 0px -40px 0px'});
+
+  cards.forEach(function(card){ observer.observe(card); });
+})();
+
+// ─── ANIMATED COUNTERS ───
+(function(){
+  if(!window.IntersectionObserver) return;
+  var counters = document.querySelectorAll('[data-target]');
+  var counterObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting) return;
+      var el = entry.target;
+      var target = parseInt(el.getAttribute('data-target'), 10);
+      var duration = 1400;
+      var start = performance.now();
+      function tick(now){
+        var elapsed = now - start;
+        var progress = Math.min(elapsed / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target);
+        if(progress < 1) requestAnimationFrame(tick);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(tick);
+      counterObserver.unobserve(el);
+    });
+  }, {threshold: 0.5});
+  counters.forEach(function(c){ counterObserver.observe(c); });
+})();
+
+// ─── SMOOTH SCROLL FOR ANCHOR LINKS ───
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    var id = this.getAttribute('href').slice(1);
+    var target = document.getElementById(id);
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+});
+
+// ─── FORM SUBMIT HANDLER ───
+var submitBtn = document.querySelector('.form-submit');
+if(submitBtn){
+  submitBtn.addEventListener('click', function(){
+    this.textContent = 'Request Sent — We\'ll Be in Touch Soon';
+    this.style.background = 'var(--primary)';
+    this.disabled = true;
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phantom Plumbing | Expert Plumbers in Frisco & Dallas, TX</title>
+<meta name="description" content="Phantom Plumbing — Frisco's most precise plumbing service. 4.9-star rated, licensed & insured. Serving Frisco, Dallas, Plano & surrounding areas. Call (469) 416-1055.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap');
+:root {
+  --primary: #001f42;
+  --primary-dark: #000f21;
+  --accent: #f5a623;
+  --accent-dark: #c4811a;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #e8edf5;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark-text);
+  background: var(--bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── GRAIN OVERLAY ── */
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── STICKY HEADER ── */
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: var(--primary);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.35);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.logo-main {
+  font-family: var(--font-display);
+  font-size: 26px;
+  letter-spacing: 2px;
+  color: var(--t1);
+}
+
+.logo-sub {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 2px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-nav a {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--t2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.header-nav a:hover { color: var(--accent); }
+
+.btn-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--primary-dark);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.btn-header:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+/* ── HERO ── */
+#hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  padding: 90px 24px 100px;
+  overflow: hidden;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: center;
+}
+
+/* hero fade-up animation */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-el {
+  opacity: 0;
+  animation: heroFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-el:nth-child(1) { animation-delay: 0.1s; }
+.hero-el:nth-child(2) { animation-delay: 0.22s; }
+.hero-el:nth-child(3) { animation-delay: 0.34s; }
+.hero-el:nth-child(4) { animation-delay: 0.46s; }
+.hero-el:nth-child(5) { animation-delay: 0.58s; }
+.hero-el:nth-child(6) { animation-delay: 0.70s; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245,166,35,0.15);
+  border: 1px solid rgba(245,166,35,0.35);
+  border-radius: 100px;
+  padding: 7px 16px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.hero-badge-dot {
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 7vw, 86px);
+  line-height: 0.95;
+  letter-spacing: 3px;
+  color: var(--t1);
+  text-transform: uppercase;
+}
+
+.hero-headline span {
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: var(--t2);
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--primary-dark);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(245,166,35,0.35);
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(245,166,35,0.45);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--t1);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trust-stars {
+  display: flex;
+  gap: 3px;
+}
+
+.trust-stars svg {
+  fill: var(--accent);
+}
+
+.trust-text {
+  font-size: 13px;
+  color: var(--t3);
+}
+
+.trust-text strong {
+  color: var(--t2);
+  font-weight: 600;
+}
+
+/* Frosted glass card */
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.14);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.hero-card-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: var(--t1);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hero-card-title span {
+  color: var(--accent);
+}
+
+.value-prop {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.value-prop:last-child { border-bottom: none; }
+
+.value-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: rgba(245,166,35,0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-icon svg {
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.value-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--t1);
+  line-height: 1.3;
+}
+
+.value-desc {
+  font-size: 12px;
+  color: var(--t3);
+  margin-top: 2px;
+}
+
+/* ── STATS ROW ── */
+#stats {
+  background: var(--accent);
+  padding: 0;
+}
+
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-item {
+  padding: 28px 20px;
+  text-align: center;
+  border-right: 1px solid rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.stat-item:last-child { border-right: none; }
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: var(--primary-dark);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(0,15,33,0.65);
+  margin-top: 4px;
+}
+
+/* ── SERVICES ── */
+#services {
+  background: var(--bg);
+  padding: 90px 24px;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 54px);
+  letter-spacing: 2px;
+  color: var(--dark-text);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.section-title.light { color: var(--t1); }
+
+.section-sub {
+  font-size: 16px;
+  color: var(--grey-text);
+  max-width: 560px;
+  margin-bottom: 52px;
+}
+
+.section-sub.light { color: var(--t2); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--bg-off);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.service-card.visible {
+  animation: fadeUpIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fadeUpIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(245,166,35,0.3);
+}
+
+.service-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(0,31,66,0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: background 0.2s;
+}
+
+.service-card:hover .service-icon {
+  background: rgba(245,166,35,0.12);
+}
+
+.service-icon svg {
+  stroke: var(--primary);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.2s;
+}
+
+.service-card:hover .service-icon svg {
+  stroke: var(--accent-dark);
+}
+
+.service-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  color: var(--dark-text);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 14px;
+  color: var(--grey-text);
+  line-height: 1.65;
+}
+
+/* ── WHY CHOOSE US ── */
+#why {
+  position: relative;
+  background: var(--primary);
+  padding: 90px 24px;
+  overflow: hidden;
+}
+
+.why-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.why-stat {
+  background: var(--primary-dark);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.2s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.why-stat.visible {
+  animation: fadeUpIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.why-stat:hover {
+  transform: translateY(-3px);
+  border-color: rgba(245,166,35,0.25);
+}
+
+.why-stat-num {
+  font-family: var(--font-display);
+  font-size: 48px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.why-stat-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--t3);
+  margin-top: 6px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.why-item {
+  display: flex;
+  gap: 18px;
+  padding: 28px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  transition: background 0.2s, border-color 0.2s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.why-item.visible {
+  animation: fadeUpIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.why-item:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(245,166,35,0.2);
+}
+
+.why-num {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: rgba(245,166,35,0.12);
+  border: 1px solid rgba(245,166,35,0.25);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: var(--accent);
+}
+
+.why-content h4 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  color: var(--t1);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.why-content p {
+  font-size: 14px;
+  color: var(--t2);
+  line-height: 1.65;
+}
+
+/* ── HOW IT WORKS ── */
+#how {
+  background: var(--primary-dark);
+  padding: 90px 24px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+  margin-top: 56px;
+}
+
+.steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: calc(16.666% + 12px);
+  right: calc(16.666% + 12px);
+  height: 2px;
+  background: repeating-linear-gradient(
+    to right,
+    rgba(245,166,35,0.35) 0px,
+    rgba(245,166,35,0.35) 8px,
+    transparent 8px,
+    transparent 20px
+  );
+}
+
+.step {
+  padding: 0 32px;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.step.visible {
+  animation: fadeUpIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.step-circle {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: var(--primary-dark);
+  margin: 0 auto 28px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 0 8px rgba(245,166,35,0.1), 0 0 0 16px rgba(245,166,35,0.04);
+}
+
+.step-name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: var(--t1);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.step-desc {
+  font-size: 14px;
+  color: var(--t2);
+  line-height: 1.7;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* ── REVIEWS ── */
+#reviews {
+  background: var(--bg-off);
+  padding: 90px 24px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 52px;
+}
+
+.review-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.review-card.visible {
+  animation: fadeUpIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.review-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 16px;
+}
+
+.review-stars svg { fill: var(--accent); }
+
+.review-text {
+  font-size: 14px;
+  color: var(--grey-text);
+  line-height: 1.75;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-avatar {
+  width: 42px;
+  height: 42px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.review-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dark-text);
+}
+
+.review-location {
+  font-size: 12px;
+  color: var(--grey-text);
+}
+
+/* ── SERVICE AREAS ── */
+#areas {
+  background: var(--primary);
+  padding: 90px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.areas-layout {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 64px;
+  align-items: start;
+  position: relative;
+  z-index: 2;
+}
+
+.areas-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.area-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 100px;
+  padding: 9px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--t2);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  cursor: default;
+}
+
+.area-chip:hover {
+  background: rgba(245,166,35,0.12);
+  border-color: rgba(245,166,35,0.3);
+  color: var(--accent);
+}
+
+.area-chip-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.areas-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 36px 32px;
+}
+
+.areas-card-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: var(--t1);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.location-item {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.location-item:last-child { border-bottom: none; }
+
+.location-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--t1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.location-name::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.location-addr {
+  font-size: 12px;
+  color: var(--t3);
+  padding-left: 14px;
+}
+
+/* ── CONTACT FORM ── */
+#contact {
+  background: var(--bg);
+  padding: 90px 24px;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 48px;
+  align-items: start;
+}
+
+.form-title {
+  font-family: var(--font-display);
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: var(--dark-text);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.form-sub {
+  font-size: 15px;
+  color: var(--grey-text);
+  margin-bottom: 32px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group.full { grid-column: 1 / -1; }
+
+.form-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--dark-text);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--dark-text);
+  background: var(--bg-off);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  appearance: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(245,166,35,0.15);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: var(--t1);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 32px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.btn-submit:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.contact-info-card {
+  background: var(--primary);
+  border-radius: 16px;
+  padding: 36px 32px;
+  color: var(--t1);
+}
+
+.info-card-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  color: var(--t1);
+}
+
+.info-item {
+  display: flex;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.info-item:last-child { border-bottom: none; }
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(245,166,35,0.12);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-icon svg {
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.info-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--t3);
+  margin-bottom: 3px;
+}
+
+.info-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--t1);
+}
+
+.info-value a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.info-value a:hover { text-decoration: underline; }
+
+/* ── CTA BAND ── */
+#cta-band {
+  position: relative;
+  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+  padding: 80px 24px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta-band-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-band-title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5.5vw, 64px);
+  letter-spacing: 3px;
+  color: var(--primary-dark);
+  text-transform: uppercase;
+  line-height: 0.95;
+  margin-bottom: 16px;
+}
+
+.cta-band-sub {
+  font-size: 16px;
+  color: rgba(0,15,33,0.7);
+  margin-bottom: 36px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-band-btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-dark);
+  color: var(--t1);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-dark:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--primary-dark);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid rgba(0,15,33,0.3);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-outline-dark:hover {
+  background: rgba(0,15,33,0.08);
+  border-color: rgba(0,15,33,0.5);
+}
+
+/* ── FOOTER ── */
+#footer {
+  background: var(--primary-dark);
+  padding: 64px 24px 32px;
+}
+
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.footer-brand p {
+  font-size: 13px;
+  color: var(--t3);
+  line-height: 1.75;
+  margin-top: 14px;
+  max-width: 280px;
+}
+
+.footer-phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  letter-spacing: 1.5px;
+  margin-top: 16px;
+  transition: opacity 0.2s;
+}
+
+.footer-phone-link:hover { opacity: 0.8; }
+
+.footer-col-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--t1);
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: var(--t3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--accent); }
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 28px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: var(--t3);
+}
+
+.footer-copy span { color: var(--accent); }
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal a {
+  font-size: 12px;
+  color: var(--t3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-legal a:hover { color: var(--t2); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .why-stats,
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+
+  .stat-item { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.1); }
+  .stat-item:last-child, .stat-item:nth-child(even) { border-right: none; }
+  .stat-item:nth-last-child(-n+2) { border-bottom: none; }
+
+  .why-grid { grid-template-columns: 1fr; }
+
+  .steps-grid::before { display: none; }
+  .steps-grid { gap: 32px; }
+
+  .areas-layout { grid-template-columns: 1fr; gap: 40px; }
+
+  .contact-layout { grid-template-columns: 1fr; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 600px) {
+  .header-nav { display: none; }
+
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+
+  .services-grid,
+  .reviews-grid { grid-template-columns: 1fr; }
+
+  .why-stats { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid { grid-template-columns: 1fr; }
+
+  .form-row { grid-template-columns: 1fr; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+
+  .cta-band-btns { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     1. STICKY HEADER
+════════════════════════════════════════ -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <span class="logo-main">Phantom Plumbing</span>
+      <span class="logo-sub">Frisco &amp; Dallas, TX</span>
+    </a>
+    <nav class="header-nav">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:4694161055" class="btn-header">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .9h3a2 2 0 012 1.72c.13.96.36 1.9.69 2.81a2 2 0 01-.45 2.11L6.09 8.69a16 16 0 006.22 6.22l1.06-1.15a2 2 0 012.11-.45c.91.33 1.85.56 2.81.69a2 2 0 011.71 2.02z"/></svg>
+      (469) 416-1055
+    </a>
+  </div>
+</header>
+
+<!-- ════════════════════════════════════════
+     2. HERO
+════════════════════════════════════════ -->
+<section id="hero" class="grain">
+  <!-- decorative glow -->
+  <div style="position:absolute;top:-120px;right:-80px;width:600px;height:600px;background:radial-gradient(circle, rgba(245,166,35,0.07) 0%, transparent 70%);pointer-events:none;z-index:1;"></div>
+  <div style="position:absolute;bottom:-100px;left:-60px;width:500px;height:500px;background:radial-gradient(circle, rgba(0,31,66,0.6) 0%, transparent 70%);pointer-events:none;z-index:1;"></div>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+
+      <!-- El 1 -->
+      <div class="hero-el" style="margin-bottom:20px;">
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          4.9-Star Expert Plumbing Service
+        </div>
+      </div>
+
+      <!-- El 2 -->
+      <div class="hero-el" style="margin-bottom:20px;">
+        <h1 class="hero-headline">
+          Frisco's Most<br>Precise<br><span>Plumbers</span>
+        </h1>
+      </div>
+
+      <!-- El 3 -->
+      <div class="hero-el" style="margin-bottom:28px;">
+        <p class="hero-sub">Serving the Warren Parkway corridor, Stonebriar, and all of North Dallas with the quiet precision of expert craftsmen. We show up. We fix it. We disappear.</p>
+      </div>
+
+      <!-- El 4 -->
+      <div class="hero-el" style="margin-bottom:28px;">
+        <div class="hero-ctas">
+          <a href="tel:4694161055" class="btn-primary">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .9h3a2 2 0 012 1.72c.13.96.36 1.9.69 2.81a2 2 0 01-.45 2.11L6.09 8.69a16 16 0 006.22 6.22l1.06-1.15a2 2 0 012.11-.45c.91.33 1.85.56 2.81.69a2 2 0 011.71 2.02z"/></svg>
+            Call Now
+          </a>
+          <a href="#contact" class="btn-ghost">
+            Get a Free Estimate
+          </a>
+        </div>
+      </div>
+
+      <!-- El 5 -->
+      <div class="hero-el">
+        <div class="hero-trust">
+          <div class="trust-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="trust-text"><strong>4.9 stars</strong> from verified Frisco &amp; Dallas customers</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- El 6 — Frosted Glass Card -->
+    <div class="hero-el">
+      <div class="hero-card">
+        <div class="hero-card-title">Why <span>Phantom</span> Plumbing?</div>
+
+        <div class="value-prop">
+          <div class="value-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <div class="value-label">On Time, Every Time</div>
+            <div class="value-desc">We arrive on schedule and get the job done right the first time, guaranteed.</div>
+          </div>
+        </div>
+
+        <div class="value-prop">
+          <div class="value-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <div class="value-label">Licensed &amp; Fully Insured</div>
+            <div class="value-desc">All technicians are state-licensed and covered. Zero liability for you.</div>
+          </div>
+        </div>
+
+        <div class="value-prop">
+          <div class="value-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="value-label">2 Locations Serving You</div>
+            <div class="value-desc">Frisco &amp; Dallas — fast response times across the entire metro corridor.</div>
+          </div>
+        </div>
+
+        <div class="value-prop">
+          <div class="value-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="value-label">No Mess, No Drama</div>
+            <div class="value-desc">We work clean. When the phantom leaves, the only thing that changed is the problem is gone.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     3. STATS ROW
+════════════════════════════════════════ -->
+<section id="stats">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-number" data-count="4.9" data-suffix="">4.9</div>
+      <div class="stat-label">Star Rating</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-count="9" data-suffix="+">9+</div>
+      <div class="stat-label">Verified Reviews</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number" data-count="2" data-suffix="">2</div>
+      <div class="stat-label">Locations</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Licensed &amp; Insured</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     4. SERVICES
+════════════════════════════════════════ -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-tag">What We Do</div>
+    <h2 class="section-title">Expert Plumbing Services</h2>
+    <p class="section-sub">From routine maintenance to complex repairs, our licensed technicians handle every job with precision and discretion.</p>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="service-name">Drain Cleaning</div>
+        <p class="service-desc">Slow drains, recurring clogs, or full blockages — we clear it thoroughly. Hydro-jetting and camera inspection available to get to the root cause fast.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18"/><rect x="2" y="3" width="20" height="18" rx="2"/></svg>
+        </div>
+        <div class="service-name">Water Heater Install &amp; Repair</div>
+        <p class="service-desc">Traditional and tankless water heater installation, repair, and replacement. We work with all major brands and handle proper disposal of the old unit.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v3m0 0v3m0-3h3m-3 0H8"/></svg>
+        </div>
+        <div class="service-name">Leak Detection &amp; Repair</div>
+        <p class="service-desc">Hidden leaks waste water and destroy walls silently. We use non-invasive detection technology to pinpoint the source and resolve it with minimal disruption.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="service-name">Pipe Replacement</div>
+        <p class="service-desc">Aging, corroded, or burst pipes replaced with durable modern materials. Full repiping services for older Frisco and Dallas homes built before 2000.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+        </div>
+        <div class="service-name">Sewer Services</div>
+        <p class="service-desc">Sewer line inspection, repair, and replacement. Camera-guided diagnostics identify cracks, root intrusion, and offset joints before they become catastrophes.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <div class="service-name">Emergency Plumbing</div>
+        <p class="service-desc">Plumbing emergencies do not wait for business hours. Call us when pipes burst, sewage backs up, or water will not stop. Fast response, no panic pricing.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     5. WHY CHOOSE US
+════════════════════════════════════════ -->
+<section id="why" class="grain">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%, rgba(245,166,35,0.05) 0%, transparent 60%);pointer-events:none;z-index:1;"></div>
+  <div class="section-inner" style="position:relative;z-index:2;">
+    <div class="section-tag">The Phantom Standard</div>
+    <h2 class="section-title light">Why Frisco Trusts Us</h2>
+    <p class="section-sub light">Expert plumbers who work like ghosts — in, done, gone. No mess, no drama. Just perfect results every single time.</p>
+
+    <div class="why-stats">
+      <div class="why-stat">
+        <div class="why-stat-num">4.9</div>
+        <div class="why-stat-label">Avg. Star Rating</div>
+      </div>
+      <div class="why-stat">
+        <div class="why-stat-num">100%</div>
+        <div class="why-stat-label">Jobs Completed Right</div>
+      </div>
+      <div class="why-stat">
+        <div class="why-stat-num">2</div>
+        <div class="why-stat-label">DFW Locations</div>
+      </div>
+      <div class="why-stat">
+        <div class="why-stat-num">0</div>
+        <div class="why-stat-label">Mess Left Behind</div>
+      </div>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <div class="why-content">
+          <h4>Precision Diagnostics First</h4>
+          <p>We identify the real problem before we quote a single dollar. No guesswork, no upselling work you do not need. Just an accurate assessment and a fair price.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <div class="why-content">
+          <h4>State-Licensed Technicians</h4>
+          <p>Every technician on our crew holds a current Texas plumber's license and is fully insured. You will never wonder if the work will pass inspection — it will.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <div class="why-content">
+          <h4>We Work Clean</h4>
+          <p>The phantom metaphor is not just branding. We put down drop cloths, wear boot covers, and leave every work area cleaner than we found it. Your home is treated like ours.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <div class="why-content">
+          <h4>Upfront Pricing, Always</h4>
+          <p>You approve the price before a single wrench turns. No surprise fees, no after-job add-ons. What we quote is what you pay. That is the Phantom standard.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     6. HOW IT WORKS
+════════════════════════════════════════ -->
+<section id="how">
+  <div class="section-inner">
+    <div style="text-align:center;">
+      <div class="section-tag">The Process</div>
+      <h2 class="section-title light">How It Works</h2>
+      <p class="section-sub light" style="margin-left:auto;margin-right:auto;text-align:center;">Three precise steps from your call to a perfectly solved problem. No waiting, no confusion, no callbacks.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-circle">1</div>
+        <div class="step-name">Call or Book</div>
+        <p class="step-desc">Reach us at (469) 416-1055 or submit the contact form. We respond within the hour — often faster. Describe the issue and we will set a time that works for you.</p>
+      </div>
+      <div class="step">
+        <div class="step-circle">2</div>
+        <div class="step-name">Diagnose &amp; Quote</div>
+        <p class="step-desc">A licensed Phantom technician arrives on time, assesses the full scope, and gives you an upfront written estimate before any work begins. You choose whether to proceed.</p>
+      </div>
+      <div class="step">
+        <div class="step-circle">3</div>
+        <div class="step-name">Fixed &amp; Clean</div>
+        <p class="step-desc">We complete the repair with precision. We test everything twice. Then we pack up completely, leaving your home exactly as we found it — except the problem is gone for good.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     7. REVIEWS
+════════════════════════════════════════ -->
+<section id="reviews">
+  <div class="section-inner">
+    <div class="section-tag">Verified Reviews</div>
+    <h2 class="section-title">What Customers Say</h2>
+    <p class="section-sub">Real feedback from real Frisco and Dallas homeowners who trusted us with their homes.</p>
+
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">Called Phantom about a slab leak near my Warren Pkwy home. They showed up the next morning, located it without tearing up half my floor, and had it repaired the same day. My neighbor paid another company double and waited a week.</p>
+        <div class="review-author">
+          <div class="review-avatar">MR</div>
+          <div>
+            <div class="review-name">Marcus R.</div>
+            <div class="review-location">Frisco, TX — Verified Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">Replaced a water heater at our Dallas location off Douglas Ave. Clean installation, got the old unit hauled off, and the tech explained everything clearly. Professional from start to finish — exactly what the name implies.</p>
+        <div class="review-author">
+          <div class="review-avatar">TL</div>
+          <div>
+            <div class="review-name">Tanya L.</div>
+            <div class="review-location">Dallas, TX — Verified Google Review</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">Had a sewer backup on a Sunday. Most places quoted me Monday at the earliest. Phantom was there within two hours, cleared the line, ran a camera to confirm, and left my utility room spotless. I tell everyone in Stonebriar to use them.</p>
+        <div class="review-author">
+          <div class="review-avatar">JW</div>
+          <div>
+            <div class="review-name">James W.</div>
+            <div class="review-location">Frisco, TX — Verified Google Review</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     8. SERVICE AREAS
+════════════════════════════════════════ -->
+<section id="areas">
+  <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 60%, rgba(245,166,35,0.04) 0%, transparent 60%);pointer-events:none;z-index:1;"></div>
+  <div class="section-inner" style="position:relative;z-index:2;">
+    <div class="areas-layout">
+      <div>
+        <div class="section-tag">Coverage</div>
+        <h2 class="section-title light">Service Areas</h2>
+        <p class="section-sub light">With two locations in Frisco and Dallas, we provide fast response times across the entire North Texas corridor. No long drives, no inflated travel fees.</p>
+
+        <div class="areas-chips">
+          <div class="area-chip"><span class="area-chip-dot"></span>Frisco</div>
+          <div class="area-chip"><span class="area-chip-dot"></span>Dallas</div>
+          <div class="area-chip"><span class="area-chip-dot"></span>Plano</div>
+          <div class="area-chip"><span class="area-chip-dot"></span>McKinney</div>
+          <div class="area-chip"><span class="area-chip-dot"></span>Allen</div>
+          <div class="area-chip"><span class="area-chip-dot"></span>Richardson</div>
+          <div class="area-chip"><span class="area-chip-dot"></span>The Colony</div>
+          <div class="area-chip"><span class="area-chip-dot"></span>Prosper</div>
+          <div class="area-chip"><span class="area-chip-dot"></span>Little Elm</div>
+          <div class="area-chip"><span class="area-chip-dot"></span>Carrollton</div>
+          <div class="area-chip"><span class="area-chip-dot"></span>Addison</div>
+          <div class="area-chip"><span class="area-chip-dot"></span>Farmers Branch</div>
+        </div>
+
+        <p style="font-size:13px;color:var(--t3);margin-top:20px;">Don't see your city? Call us — we likely cover it.</p>
+      </div>
+
+      <div class="areas-card">
+        <div class="areas-card-title">Our Locations</div>
+
+        <div class="location-item">
+          <div class="location-name">Frisco, TX</div>
+          <div class="location-addr">6160 Warren Pkwy, Frisco, TX 75034</div>
+        </div>
+
+        <div class="location-item">
+          <div class="location-name">Dallas, TX</div>
+          <div class="location-addr">8300 Douglas Ave, Dallas, TX 75225</div>
+        </div>
+
+        <div style="margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--t3);margin-bottom:8px;">Call Anytime</div>
+          <a href="tel:4694161055" style="font-family:var(--font-display);font-size:26px;letter-spacing:2px;color:var(--accent);text-decoration:none;display:block;">(469) 416-1055</a>
+          <p style="font-size:12px;color:var(--t3);margin-top:6px;">Available for emergency calls 7 days a week.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     9. CONTACT FORM
+════════════════════════════════════════ -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-layout">
+      <div>
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="form-title">Request a Free Estimate</h2>
+        <p class="form-sub">Describe your plumbing issue and we will respond within the hour. No obligation, no pressure.</p>
+
+        <form onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="first-name">First Name</label>
+              <input class="form-input" type="text" id="first-name" placeholder="Michael">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="last-name">Last Name</label>
+              <input class="form-input" type="text" id="last-name" placeholder="Thompson">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="phone-field">Phone Number</label>
+              <input class="form-input" type="tel" id="phone-field" placeholder="(469) 555-0100">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email-field">Email Address</label>
+              <input class="form-input" type="email" id="email-field" placeholder="michael@email.com">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="city-field">Your City</label>
+              <input class="form-input" type="text" id="city-field" placeholder="Frisco">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="service-type">Service Needed</label>
+              <select class="form-select" id="service-type">
+                <option value="">Select a service</option>
+                <option>Drain Cleaning</option>
+                <option>Water Heater Install / Repair</option>
+                <option>Leak Detection &amp; Repair</option>
+                <option>Pipe Replacement</option>
+                <option>Sewer Services</option>
+                <option>Emergency Plumbing</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message-field">Tell Us About the Problem</label>
+            <textarea class="form-textarea" id="message-field" placeholder="Describe what you're experiencing — the more detail, the faster we can help..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send My Request
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-info-card">
+        <div class="info-card-title">Contact Info</div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .9h3a2 2 0 012 1.72c.13.96.36 1.9.69 2.81a2 2 0 01-.45 2.11L6.09 8.69a16 16 0 006.22 6.22l1.06-1.15a2 2 0 012.11-.45c.91.33 1.85.56 2.81.69a2 2 0 011.71 2.02z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-value"><a href="tel:4694161055">(469) 416-1055</a></div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Frisco Location</div>
+            <div class="info-value">6160 Warren Pkwy<br>Frisco, TX 75034</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Dallas Location</div>
+            <div class="info-value">8300 Douglas Ave<br>Dallas, TX 75225</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Hours</div>
+            <div class="info-value">Mon–Sat: 7am–7pm<br>Emergency: 7 Days</div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);">
+          <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--t3);margin-bottom:10px;">Need Help Now?</div>
+          <a href="tel:4694161055" class="btn-primary" style="width:100%;justify-content:center;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .9h3a2 2 0 012 1.72c.13.96.36 1.9.69 2.81a2 2 0 01-.45 2.11L6.09 8.69a16 16 0 006.22 6.22l1.06-1.15a2 2 0 012.11-.45c.91.33 1.85.56 2.81.69a2 2 0 011.71 2.02z"/></svg>
+            Call (469) 416-1055
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     10. CTA BAND
+════════════════════════════════════════ -->
+<section id="cta-band" class="grain">
+  <div class="cta-band-inner">
+    <div class="cta-band-title">Ready to Call<br>the Phantom?</div>
+    <p class="cta-band-sub">Precise, professional, and gone before you know it — with your problem solved permanently. Frisco and Dallas trust us for a reason.</p>
+    <div class="cta-band-btns">
+      <a href="tel:4694161055" class="btn-dark">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .9h3a2 2 0 012 1.72c.13.96.36 1.9.69 2.81a2 2 0 01-.45 2.11L6.09 8.69a16 16 0 006.22 6.22l1.06-1.15a2 2 0 012.11-.45c.91.33 1.85.56 2.81.69a2 2 0 011.71 2.02z"/></svg>
+        Call (469) 416-1055
+      </a>
+      <a href="#contact" class="btn-outline-dark">
+        Request a Free Estimate
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════
+     11. FOOTER
+════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="footer-grid">
+
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <span class="logo-main" style="font-size:24px;">Phantom Plumbing</span>
+        <span class="logo-sub">Frisco &amp; Dallas, TX</span>
+      </a>
+      <p>Expert plumbers who work like ghosts. We arrive, solve the problem with precision, and disappear — leaving your home exactly as we found it, except everything works.</p>
+      <a href="tel:4694161055" class="footer-phone-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .9h3a2 2 0 012 1.72c.13.96.36 1.9.69 2.81a2 2 0 01-.45 2.11L6.09 8.69a16 16 0 006.22 6.22l1.06-1.15a2 2 0 012.11-.45c.91.33 1.85.56 2.81.69a2 2 0 011.71 2.02z"/></svg>
+        (469) 416-1055
+      </a>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Drain Cleaning</a></li>
+        <li><a href="#services">Water Heater Services</a></li>
+        <li><a href="#services">Leak Detection</a></li>
+        <li><a href="#services">Pipe Replacement</a></li>
+        <li><a href="#services">Sewer Services</a></li>
+        <li><a href="#services">Emergency Plumbing</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="#areas">Frisco, TX</a></li>
+        <li><a href="#areas">Dallas, TX</a></li>
+        <li><a href="#areas">Plano, TX</a></li>
+        <li><a href="#areas">McKinney, TX</a></li>
+        <li><a href="#areas">Allen, TX</a></li>
+        <li><a href="#areas">Richardson, TX</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="#why">Why Phantom</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#contact">Free Estimate</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-copy">
+      &copy; 2025 Phantom Plumbing. All rights reserved. Licensed &amp; Insured in <span>Texas</span>.
+    </div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── INTERSECTION OBSERVER — stagger animations ──
+(function() {
+  var delay = 0;
+
+  function observeGroup(selector, staggerMs) {
+    var els = document.querySelectorAll(selector);
+    if (!els.length) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          var idx = parseInt(el.dataset.idx || 0, 10);
+          el.style.animationDelay = (idx * staggerMs) + 'ms';
+          el.classList.add('visible');
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    els.forEach(function(el, i) {
+      el.dataset.idx = i;
+      observer.observe(el);
+    });
+  }
+
+  observeGroup('.service-card', 90);
+  observeGroup('.review-card', 110);
+  observeGroup('.why-stat', 80);
+  observeGroup('.why-item', 90);
+  observeGroup('.step', 120);
+
+  // ── ANIMATE COUNT for stats ──
+  function animateCount(el) {
+    var raw = el.textContent;
+    var num = parseFloat(raw);
+    if (isNaN(num)) return;
+    var suffix = el.dataset.suffix || '';
+    var decimals = (raw.indexOf('.') > -1) ? 1 : 0;
+    var duration = 1200;
+    var start = null;
+
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var ease = 1 - Math.pow(1 - progress, 3);
+      var current = (ease * num).toFixed(decimals);
+      el.textContent = current + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  var statsObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var nums = entry.target.querySelectorAll('[data-count]');
+        nums.forEach(animateCount);
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  var statsRow = document.getElementById('stats');
+  if (statsRow) statsObserver.observe(statsRow);
+
+  // ── STICKY HEADER shrink on scroll ──
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 60) {
+      header.style.borderBottomColor = 'rgba(255,255,255,0.12)';
+    } else {
+      header.style.borderBottomColor = 'rgba(255,255,255,0.08)';
+    }
+  }, { passive: true });
+
+  // ── SMOOTH ANCHOR — offset for sticky header ──
+  document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+    a.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      var offset = 68;
+      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

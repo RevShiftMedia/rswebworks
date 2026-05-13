@@ -1,0 +1,2337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trust N Us Services | Killeen's Most Trusted Plumbers | (254) 432-6464</title>
+<meta name="description" content="Trust N Us Services — Killeen, TX's most trusted plumbers. 4.8 stars, 123 reviews. Licensed & insured. Upfront pricing. Call (254) 432-6464.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --primary: #0f1729;
+  --primary-dark: #060810;
+  --accent: #06b6d4;
+  --accent-dark: #0585a0;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #e8edf5;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark-text);
+  background: var(--bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+
+img { max-width: 100%; display: block; }
+
+/* ─── GRAIN OVERLAY ─── */
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.045'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── BUTTONS ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #000;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 28px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  letter-spacing: 0.01em;
+}
+.btn-primary:hover {
+  background: #07cef0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(6,182,212,0.35);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--t1);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 13px 28px;
+  border-radius: 8px;
+  border: 2px solid rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  letter-spacing: 0.01em;
+}
+.btn-ghost:hover {
+  border-color: var(--accent);
+  background: rgba(6,182,212,0.08);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════
+   1. HEADER
+═══════════════════════════════════════ */
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--primary);
+  border-bottom: 1px solid rgba(6,182,212,0.15);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.35);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo-lockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-name {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  color: var(--t1);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.logo-tagline {
+  font-size: 0.68rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header-nav a {
+  color: var(--t2);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.header-nav a:hover { color: var(--accent); }
+
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--t1);
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.header-phone svg { color: var(--accent); flex-shrink: 0; }
+
+.header-btn {
+  background: var(--accent);
+  color: #000;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 10px 20px;
+  border-radius: 7px;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.header-btn:hover {
+  background: #07cef0;
+  transform: translateY(-1px);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-direction: column;
+  gap: 5px;
+}
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--t1);
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+
+/* ═══════════════════════════════════════
+   2. HERO
+═══════════════════════════════════════ */
+#hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, #0d2035 100%);
+  overflow: hidden;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 64px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Glow orb */
+.hero-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6,182,212,0.12) 0%, transparent 70%);
+  top: -200px;
+  right: -100px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(6,182,212,0.18);
+  border: 1px solid rgba(6,182,212,0.4);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 100px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  animation: heroFadeUp 0.7s ease 0.1s both;
+}
+
+.hero-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.3); }
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 6vw, 5.2rem);
+  line-height: 1;
+  color: var(--t1);
+  letter-spacing: 0.02em;
+  animation: heroFadeUp 0.7s ease 0.22s both;
+  margin-top: 20px;
+}
+
+.hero-headline span {
+  color: var(--accent);
+  display: block;
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--t2);
+  line-height: 1.7;
+  max-width: 500px;
+  animation: heroFadeUp 0.7s ease 0.36s both;
+  margin-top: 18px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: heroFadeUp 0.7s ease 0.5s both;
+  margin-top: 32px;
+}
+
+.hero-trust-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: heroFadeUp 0.7s ease 0.62s both;
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--t2);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.trust-item svg { color: var(--accent); flex-shrink: 0; }
+
+.trust-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255,255,255,0.2);
+}
+
+/* Hero card */
+.hero-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 36px 32px;
+  animation: heroFadeUp 0.7s ease 0.42s both;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.hero-card-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.hero-card-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--t1);
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+}
+
+.hero-card-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.hero-card-row:last-of-type { border-bottom: none; }
+
+.hero-card-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(6,182,212,0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-card-info {
+  display: flex;
+  flex-direction: column;
+}
+.hero-card-info strong {
+  font-size: 0.88rem;
+  color: var(--t1);
+  font-weight: 600;
+}
+.hero-card-info span {
+  font-size: 0.78rem;
+  color: var(--t3);
+}
+
+.hero-card-cta {
+  display: block;
+  margin-top: 24px;
+  background: var(--accent);
+  color: #000;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 14px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.15s;
+}
+.hero-card-cta:hover {
+  background: #07cef0;
+  transform: translateY(-2px);
+}
+
+.stars-row {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 6px;
+}
+
+.star-icon { color: #f59e0b; }
+
+.rating-meta {
+  font-size: 0.82rem;
+  color: var(--t3);
+  margin-bottom: 18px;
+}
+
+/* ═══════════════════════════════════════
+   3. STATS ROW
+═══════════════════════════════════════ */
+#stats {
+  background: var(--primary);
+  border-top: 1px solid rgba(6,182,212,0.12);
+  border-bottom: 1px solid rgba(6,182,212,0.12);
+}
+
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  text-align: center;
+  position: relative;
+}
+.stat-item:last-child { border-right: none; }
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: 0.03em;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--t3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 6px;
+}
+
+.stat-sub {
+  font-size: 0.75rem;
+  color: var(--t3);
+  margin-top: 3px;
+}
+
+/* ═══════════════════════════════════════
+   4. SERVICES
+═══════════════════════════════════════ */
+#services {
+  background: var(--bg);
+  padding: 96px 24px;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+.section-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  color: var(--dark-text);
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+
+.section-headline.light { color: var(--t1); }
+
+.section-sub {
+  font-size: 1rem;
+  color: var(--grey-text);
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: 56px;
+}
+
+.section-sub.light { color: var(--t2); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--bg-off);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(6,182,212,0.3);
+}
+.service-card:hover::after { transform: scaleX(1); }
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(6,182,212,0.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.service-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--dark-text);
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  font-size: 0.875rem;
+  color: var(--grey-text);
+  line-height: 1.65;
+}
+
+/* ═══════════════════════════════════════
+   5. WHY CHOOSE US
+═══════════════════════════════════════ */
+#why {
+  position: relative;
+  background: var(--primary);
+  overflow: hidden;
+  padding: 96px 24px;
+}
+
+.why-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.why-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  margin-bottom: 64px;
+}
+
+.why-promise {
+  background: rgba(6,182,212,0.08);
+  border: 1px solid rgba(6,182,212,0.2);
+  border-radius: var(--radius);
+  padding: 32px;
+  position: relative;
+}
+
+.why-promise::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.why-promise-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.why-promise-text {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  color: var(--t1);
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+}
+
+.why-promise-sub {
+  font-size: 0.875rem;
+  color: var(--t2);
+  line-height: 1.65;
+  margin-top: 14px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.why-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.why-card:hover {
+  background: rgba(6,182,212,0.07);
+  border-color: rgba(6,182,212,0.25);
+}
+
+.why-card-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(6,182,212,0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.why-card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--t1);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.why-card-desc {
+  font-size: 0.85rem;
+  color: var(--t3);
+  line-height: 1.65;
+}
+
+/* ═══════════════════════════════════════
+   6. HOW IT WORKS
+═══════════════════════════════════════ */
+#how {
+  background: var(--primary-dark);
+  padding: 96px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.how-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+  margin-top: 64px;
+}
+
+/* Dashed connector line */
+.how-steps::before {
+  content: '';
+  position: absolute;
+  top: 34px;
+  left: calc(16.666% + 17px);
+  right: calc(16.666% + 17px);
+  height: 2px;
+  border-top: 2px dashed rgba(6,182,212,0.3);
+  z-index: 0;
+}
+
+.how-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.step-number {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: rgba(6,182,212,0.12);
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+  flex-shrink: 0;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.how-step:hover .step-number {
+  background: rgba(6,182,212,0.22);
+  transform: scale(1.08);
+}
+
+.step-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--t1);
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+
+.step-desc {
+  font-size: 0.87rem;
+  color: var(--t3);
+  line-height: 1.65;
+}
+
+/* ═══════════════════════════════════════
+   7. REVIEWS
+═══════════════════════════════════════ */
+#reviews {
+  background: var(--bg-off);
+  padding: 96px 24px;
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.reviews-header .section-label {
+  justify-content: center;
+}
+.reviews-header .section-label::before { display: none; }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.review-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 6px;
+}
+
+.review-text {
+  font-size: 0.9rem;
+  color: var(--grey-text);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.reviewer-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+.reviewer-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--dark-text);
+}
+
+.reviewer-location {
+  font-size: 0.78rem;
+  color: var(--grey-text);
+}
+
+.reviews-summary {
+  text-align: center;
+  margin-top: 48px;
+  padding: 28px 32px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.reviews-summary-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews-summary-value {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--dark-text);
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.reviews-summary-label {
+  font-size: 0.78rem;
+  color: var(--grey-text);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-top: 4px;
+}
+
+.reviews-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+}
+
+.google-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--grey-text);
+}
+
+/* ═══════════════════════════════════════
+   8. SERVICE AREAS
+═══════════════════════════════════════ */
+#areas {
+  background: var(--primary);
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.areas-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.areas-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.area-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--t2);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  cursor: default;
+}
+
+.area-chip svg { color: var(--accent); flex-shrink: 0; }
+
+.area-chip:hover {
+  background: rgba(6,182,212,0.1);
+  border-color: rgba(6,182,212,0.3);
+  color: var(--t1);
+}
+
+.area-chip.primary-area {
+  background: rgba(6,182,212,0.12);
+  border-color: rgba(6,182,212,0.3);
+  color: var(--t1);
+}
+
+.areas-cta-block {
+  background: rgba(6,182,212,0.07);
+  border: 1px solid rgba(6,182,212,0.2);
+  border-radius: 16px;
+  padding: 40px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.areas-cta-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.areas-cta-heading {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  color: var(--t1);
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+
+.areas-cta-sub {
+  font-size: 0.9rem;
+  color: var(--t2);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.areas-phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+
+/* ═══════════════════════════════════════
+   9. CONTACT FORM
+═══════════════════════════════════════ */
+#contact {
+  background: var(--bg);
+  padding: 96px 24px;
+}
+
+.contact-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.contact-info {
+  padding-top: 8px;
+}
+
+.contact-detail {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.contact-detail-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(6,182,212,0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-detail-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--grey-text);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: 4px;
+}
+
+.contact-detail-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.contact-detail-sub {
+  font-size: 0.82rem;
+  color: var(--grey-text);
+  margin-top: 2px;
+}
+
+.contact-form {
+  background: var(--bg-off);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 36px 32px;
+}
+
+.form-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--dark-text);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.form-sub {
+  font-size: 0.85rem;
+  color: var(--grey-text);
+  margin-bottom: 28px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  letter-spacing: 0.03em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--dark-text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(6,182,212,0.12);
+}
+
+.form-group textarea { resize: vertical; min-height: 110px; }
+
+.form-submit {
+  width: 100%;
+  background: var(--accent);
+  color: #000;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  letter-spacing: 0.02em;
+  margin-top: 4px;
+}
+.form-submit:hover {
+  background: #07cef0;
+  transform: translateY(-2px);
+}
+
+.form-disclaimer {
+  font-size: 0.75rem;
+  color: var(--grey-text);
+  text-align: center;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* ═══════════════════════════════════════
+   10. CTA BAND
+═══════════════════════════════════════ */
+#cta-band {
+  position: relative;
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  overflow: hidden;
+  padding: 80px 24px;
+}
+
+.cta-band-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-band-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  color: #000;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+
+.cta-band-sub {
+  font-size: 1.05rem;
+  color: rgba(0,0,0,0.7);
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+.cta-band-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta-band-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #000;
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 15px 32px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.15s;
+}
+.cta-band-btn:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+.cta-band-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #000;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: 2px solid rgba(0,0,0,0.3);
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+.cta-band-btn-ghost:hover {
+  border-color: #000;
+  background: rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.cta-band-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+.cta-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(0,0,0,0.7);
+}
+
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+#footer {
+  background: var(--primary-dark);
+  padding: 64px 24px 32px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.footer-brand .logo-name { font-size: 1.6rem; }
+
+.footer-brand-desc {
+  font-size: 0.875rem;
+  color: var(--t3);
+  line-height: 1.65;
+  margin-top: 14px;
+  margin-bottom: 20px;
+  max-width: 260px;
+}
+
+.footer-col-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--t1);
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 0.875rem;
+  color: var(--t3);
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--accent); }
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.footer-contact-item svg { color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+
+.footer-contact-item span {
+  font-size: 0.875rem;
+  color: var(--t3);
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 28px;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--t3);
+}
+
+.footer-copy a { color: var(--accent); }
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal a {
+  font-size: 0.8rem;
+  color: var(--t3);
+  transition: color 0.2s;
+}
+.footer-legal a:hover { color: var(--accent); }
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .hero-inner { min-height: auto; padding: 60px 24px; }
+  .why-header { grid-template-columns: 1fr; gap: 32px; }
+  .areas-layout { grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+
+@media (max-width: 900px) {
+  .header-nav { display: none; }
+  .menu-toggle { display: flex; }
+
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .why-grid { grid-template-columns: 1fr; }
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .how-steps { grid-template-columns: 1fr; gap: 40px; }
+  .how-steps::before { display: none; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .hero-trust-bar { gap: 12px; }
+  .trust-divider { display: none; }
+  .form-row { grid-template-columns: 1fr; }
+  .areas-grid { grid-template-columns: 1fr 1fr; }
+  .reviews-summary { flex-direction: column; gap: 16px; }
+  .reviews-divider { display: none; }
+  .cta-band-actions { flex-direction: column; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .header-cta .header-phone { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     1. HEADER
+═══════════════════════════════════════ -->
+<header id="site-header">
+  <div class="header-inner">
+    <!-- Logo -->
+    <a href="#" class="logo-lockup">
+      <div class="logo-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Trust N Us Services</span>
+        <span class="logo-tagline">Killeen, TX · Licensed &amp; Insured</span>
+      </div>
+    </a>
+
+    <!-- Nav -->
+    <nav class="header-nav">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- CTA -->
+    <div class="header-cta">
+      <span class="header-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (254) 432-6464
+      </span>
+      <a href="tel:2544326464" class="header-btn">Get a Free Quote</a>
+      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" style="display:none; background:var(--primary); border-top:1px solid rgba(6,182,212,0.15); padding:20px 24px;">
+    <nav style="display:flex;flex-direction:column;gap:14px;">
+      <a href="#services" style="color:var(--t2);font-weight:600;font-size:0.95rem;" onclick="document.getElementById('mobile-menu').style.display='none'">Services</a>
+      <a href="#why" style="color:var(--t2);font-weight:600;font-size:0.95rem;" onclick="document.getElementById('mobile-menu').style.display='none'">Why Us</a>
+      <a href="#reviews" style="color:var(--t2);font-weight:600;font-size:0.95rem;" onclick="document.getElementById('mobile-menu').style.display='none'">Reviews</a>
+      <a href="#areas" style="color:var(--t2);font-weight:600;font-size:0.95rem;" onclick="document.getElementById('mobile-menu').style.display='none'">Service Areas</a>
+      <a href="#contact" style="color:var(--t2);font-weight:600;font-size:0.95rem;" onclick="document.getElementById('mobile-menu').style.display='none'">Contact</a>
+      <a href="tel:2544326464" style="display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-weight:600;font-size:1rem;margin-top:4px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (254) 432-6464
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+// Mobile menu toggle fix
+const btn = document.querySelector('.menu-toggle');
+const menu = document.getElementById('mobile-menu');
+btn.addEventListener('click', () => {
+  menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+});
+</script>
+
+<!-- ═══════════════════════════════════════
+     2. HERO
+═══════════════════════════════════════ -->
+<section id="hero" class="grain">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <!-- Left column -->
+    <div class="hero-left">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        123 Reviews &nbsp;·&nbsp; 4.8 Stars
+      </div>
+
+      <h1 class="hero-headline">
+        Killeen's Most Trusted
+        <span>Plumbers</span>
+      </h1>
+
+      <p class="hero-sub">
+        Serving Yowell Ranch, Harker Heights, and neighborhoods across the Killeen–Fort Cavazos area. When a pipe bursts or a drain backs up, we show up — on time, upfront, and accountable to our name.
+      </p>
+
+      <div class="hero-actions">
+        <a href="tel:2544326464" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call (254) 432-6464
+        </a>
+        <a href="#contact" class="btn-ghost">
+          Request a Free Quote
+        </a>
+      </div>
+
+      <div class="hero-trust-bar">
+        <div class="trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          4.8 Stars
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          123 Reviews
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <div class="trust-divider"></div>
+        <div class="trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          Upfront Pricing
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Frosted glass card -->
+    <div class="hero-card">
+      <div class="hero-card-label">Why Killeen Calls Us First</div>
+      <div class="hero-card-title">Trust is Our Name. It's Also Our Standard.</div>
+
+      <div class="stars-row">
+        <svg class="star-icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star-icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star-icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star-icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg class="star-icon" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div class="rating-meta">4.8 out of 5 · 123 verified reviews</div>
+
+      <div class="hero-card-row">
+        <div class="hero-card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="hero-card-info">
+          <strong>No-Surprise Quotes</strong>
+          <span>Price agreed before any work begins</span>
+        </div>
+      </div>
+
+      <div class="hero-card-row">
+        <div class="hero-card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="hero-card-info">
+          <strong>Same-Day &amp; Emergency Service</strong>
+          <span>Available when you need us most</span>
+        </div>
+      </div>
+
+      <div class="hero-card-row">
+        <div class="hero-card-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="hero-card-info">
+          <strong>Licensed, Bonded &amp; Insured</strong>
+          <span>Full protection on every job</span>
+        </div>
+      </div>
+
+      <a href="tel:2544326464" class="hero-card-cta">
+        Call Now — (254) 432-6464
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     3. STATS ROW
+═══════════════════════════════════════ -->
+<section id="stats">
+  <div class="stats-inner">
+    <div class="stat-item fade-up">
+      <div class="stat-value">
+        <span data-target="4.8" data-decimals="1">4.8</span>
+      </div>
+      <div class="stat-label">Star Rating</div>
+      <div class="stat-sub">Google Reviews</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-value">
+        <span data-target="123" data-decimals="0">123</span>+
+      </div>
+      <div class="stat-label">Reviews</div>
+      <div class="stat-sub">Verified customers</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-value" style="font-size:1.7rem; padding-top:6px;">Licensed</div>
+      <div class="stat-label">&amp; Insured</div>
+      <div class="stat-sub">TX State Certified</div>
+    </div>
+    <div class="stat-item fade-up">
+      <div class="stat-value" style="font-size:1.7rem; padding-top:6px;">Upfront</div>
+      <div class="stat-label">Pricing</div>
+      <div class="stat-sub">No hidden fees</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     4. SERVICES
+═══════════════════════════════════════ -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-label fade-up">What We Do</div>
+    <h2 class="section-headline fade-up">Expert Plumbing Services<br>Across Killeen</h2>
+    <p class="section-sub fade-up">From routine drain cleaning to emergency pipe repairs — we handle every job with the same standard of care that's earned us 123 five-star reviews.</p>
+
+    <div class="services-grid">
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/></svg>
+        </div>
+        <h3 class="service-title">Drain Cleaning</h3>
+        <p class="service-desc">Slow drains, stubborn clogs, and buildup don't stand a chance. We clear it completely — no band-aids, no return trips for the same problem.</p>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10"/><path d="M12 22c-5.52 0-10-4.48-10-10"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3 class="service-title">Water Heater Repair</h3>
+        <p class="service-desc">Cold showers aren't a Killeen lifestyle. We diagnose and repair water heater issues fast — and install new units when it's time to upgrade.</p>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3 class="service-title">Leak Detection</h3>
+        <p class="service-desc">Hidden leaks destroy homes from the inside out. Our detection process locates the source accurately — protecting your property before the damage compounds.</p>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3 class="service-title">Pipe Repair &amp; Replacement</h3>
+        <p class="service-desc">Burst, cracked, or corroded pipes repaired right the first time. We use quality materials built to last in the Texas heat — not temporary fixes.</p>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v4H3zM3 10h18v4H3zM3 17h18v4H3z"/></svg>
+        </div>
+        <h3 class="service-title">Sewer Services</h3>
+        <p class="service-desc">Sewer backups are a health hazard and a homeowner nightmare. We handle line cleaning, repair, and replacement with full camera inspection available.</p>
+      </div>
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3 class="service-title">Emergency Plumbing</h3>
+        <p class="service-desc">Plumbing emergencies don't wait for business hours. We're available when the situation demands it — because a trusted plumber has to show up when it matters most.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     5. WHY CHOOSE US
+═══════════════════════════════════════ -->
+<section id="why" class="grain">
+  <div class="why-inner">
+    <div class="why-header">
+      <div>
+        <div class="section-label fade-up" style="color:var(--accent);">Why Trust N Us</div>
+        <h2 class="section-headline light fade-up">Trust Isn't Earned Once.<br>It's Proven on Every Call.</h2>
+        <p class="section-sub light fade-up">
+          Our name is a promise — and 123 customers have put it to the test. Here's what sets us apart from every other plumber in Killeen.
+        </p>
+      </div>
+
+      <div class="why-promise fade-up">
+        <div class="why-promise-label">Our Standard</div>
+        <div class="why-promise-text">
+          "We earn your trust on every single visit — not just the first one."
+        </div>
+        <p class="why-promise-sub">
+          4.8 stars across 123 reviews isn't luck. It's the result of showing up prepared, communicating clearly, and treating every home in Killeen like it's our own.
+        </p>
+      </div>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div class="why-card-title">Upfront, Honest Pricing</div>
+        <p class="why-card-desc">You'll know the price before we touch a single pipe. No hidden fees, no bill shock after the fact — just transparent quotes you can count on.</p>
+      </div>
+
+      <div class="why-card fade-up">
+        <div class="why-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="why-card-title">Licensed &amp; Fully Insured</div>
+        <p class="why-card-desc">Every technician is state-certified and covered. Your home is protected from the moment we walk in — that's not a perk, it's a baseline.</p>
+      </div>
+
+      <div class="why-card fade-up">
+        <div class="why-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="why-card-title">On-Time, Every Time</div>
+        <p class="why-card-desc">We respect your schedule. When we say we'll be there, we'll be there — because a plumber who shows up late is a plumber who doesn't value your time.</p>
+      </div>
+
+      <div class="why-card fade-up">
+        <div class="why-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="why-card-title">123 Reviews Speak for Themselves</div>
+        <p class="why-card-desc">A 4.8-star rating across 123 Killeen homeowners isn't marketing copy — it's the track record of a team that does what it says, every single time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     6. HOW IT WORKS
+═══════════════════════════════════════ -->
+<section id="how">
+  <div class="how-inner">
+    <div class="section-label fade-up" style="justify-content:center;">
+      The Process
+    </div>
+    <h2 class="section-headline light fade-up" style="text-align:center;">Simple. Straightforward. Trustworthy.</h2>
+    <p class="section-sub light fade-up" style="text-align:center; margin:14px auto 0; max-width:520px;">Getting your plumbing fixed shouldn't be complicated. Here's exactly what to expect when you call Trust N Us Services.</p>
+
+    <div class="how-steps">
+      <div class="how-step fade-up">
+        <div class="step-number">01</div>
+        <h3 class="step-title">You Call. We Listen.</h3>
+        <p class="step-desc">Tell us what's going on. We ask the right questions, give you an honest assessment over the phone, and schedule a same-day visit whenever possible.</p>
+      </div>
+
+      <div class="how-step fade-up">
+        <div class="step-number">02</div>
+        <h3 class="step-title">We Quote. Upfront.</h3>
+        <p class="step-desc">Our tech arrives on time, diagnoses the problem, and gives you a clear price before any work begins. No pressure. No surprises. You decide.</p>
+      </div>
+
+      <div class="how-step fade-up">
+        <div class="step-number">03</div>
+        <h3 class="step-title">Fixed Right. Guaranteed.</h3>
+        <p class="step-desc">We do the work, clean up, and make sure you're completely satisfied. Our job isn't done until you're confident the problem is solved for good.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     7. REVIEWS
+═══════════════════════════════════════ -->
+<section id="reviews">
+  <div class="section-inner">
+    <div class="reviews-header">
+      <div class="section-label fade-up">Customer Reviews</div>
+      <h2 class="section-headline fade-up">4.8 Stars Across 123 Reviews</h2>
+      <p class="section-sub fade-up" style="margin:12px auto 0; text-align:center;">Killeen homeowners don't just call us once — they call us back. Here's what they say.</p>
+    </div>
+
+    <div class="reviews-grid">
+
+      <div class="review-card fade-up">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"They came out the same day I called about a burst pipe. Gave me the price before starting and didn't add a single dollar at the end. The name says it all — I actually trust these guys now. Won't call anyone else."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">MR</div>
+          <div>
+            <div class="reviewer-name">Marcus R.</div>
+            <div class="reviewer-location">Yowell Ranch, Killeen TX</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Had a major sewer backup over the weekend. Most places wouldn't even pick up. Trust N Us answered immediately, showed up within two hours, and fixed the whole thing. Reliable doesn't begin to cover it. These are our plumbers for life."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">DT</div>
+          <div>
+            <div class="reviewer-name">Denise T.</div>
+            <div class="reviewer-location">Harker Heights, TX</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="star-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"I was skeptical after a bad experience with another Killeen plumber. But Trust N Us showed up exactly when they said they would, quoted me honestly, and the water heater replacement was done clean and fast. The trust is 100% earned."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">JW</div>
+          <div>
+            <div class="reviewer-name">James W.</div>
+            <div class="reviewer-location">Copperas Cove, TX</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="reviews-summary fade-up">
+      <div class="reviews-summary-stat">
+        <div class="reviews-summary-value">4.8</div>
+        <div class="reviews-summary-label">Avg. Rating</div>
+      </div>
+      <div class="reviews-divider"></div>
+      <div class="reviews-summary-stat">
+        <div class="reviews-summary-value">123</div>
+        <div class="reviews-summary-label">Total Reviews</div>
+      </div>
+      <div class="reviews-divider"></div>
+      <div class="reviews-summary-stat">
+        <div class="reviews-summary-value">98%</div>
+        <div class="reviews-summary-label">Recommend Us</div>
+      </div>
+      <div class="reviews-divider"></div>
+      <div class="google-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        Verified on Google
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     8. SERVICE AREAS
+═══════════════════════════════════════ -->
+<section id="areas" class="grain">
+  <div class="areas-inner">
+    <div class="areas-layout">
+      <div>
+        <div class="section-label fade-up">Service Areas</div>
+        <h2 class="section-headline light fade-up">Serving Killeen &amp; the Surrounding Communities</h2>
+        <p class="section-sub light fade-up">From the neighborhoods of Yowell Ranch to the communities around Fort Cavazos — if you need a plumber in Central Texas, Trust N Us has you covered.</p>
+
+        <div class="areas-grid fade-up">
+          <div class="area-chip primary-area">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Killeen
+          </div>
+          <div class="area-chip">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Harker Heights
+          </div>
+          <div class="area-chip">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Copperas Cove
+          </div>
+          <div class="area-chip">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Fort Cavazos
+          </div>
+          <div class="area-chip">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Nolanville
+          </div>
+          <div class="area-chip">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Temple
+          </div>
+        </div>
+      </div>
+
+      <div class="areas-cta-block fade-up">
+        <div class="why-promise-label">Not Sure? Just Call.</div>
+        <div class="areas-cta-heading">We Probably Cover Your Area</div>
+        <p class="areas-cta-sub">Don't see your neighborhood listed? Give us a call — our service radius is growing and we may already have a tech near you. We'll never leave you stranded for a plumbing emergency.</p>
+        <div class="areas-phone">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (254) 432-6464
+        </div>
+        <a href="tel:2544326464" class="btn-primary" style="width:100%; justify-content:center;">Call Now — Free Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     9. CONTACT FORM
+═══════════════════════════════════════ -->
+<section id="contact">
+  <div class="contact-inner">
+    <!-- Info column -->
+    <div class="contact-info">
+      <div class="section-label fade-up">Get in Touch</div>
+      <h2 class="section-headline fade-up">Let's Fix It Together</h2>
+      <p class="section-sub fade-up">Fill out the form and we'll get back to you within the hour during business hours. For emergencies, call us directly — we answer.</p>
+
+      <div class="contact-detail fade-up">
+        <div class="contact-detail-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="contact-detail-label">Phone</div>
+          <div class="contact-detail-value">(254) 432-6464</div>
+          <div class="contact-detail-sub">Available for emergencies anytime</div>
+        </div>
+      </div>
+
+      <div class="contact-detail fade-up">
+        <div class="contact-detail-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="contact-detail-label">Service Area</div>
+          <div class="contact-detail-value">Killeen, TX &amp; Surrounding</div>
+          <div class="contact-detail-sub">Harker Heights, Copperas Cove, Fort Cavazos, Nolanville, Temple</div>
+        </div>
+      </div>
+
+      <div class="contact-detail fade-up">
+        <div class="contact-detail-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="contact-detail-label">Hours</div>
+          <div class="contact-detail-value">Mon–Sat: 7AM–7PM</div>
+          <div class="contact-detail-sub">Emergency service available 24/7</div>
+        </div>
+      </div>
+
+      <div class="contact-detail fade-up">
+        <div class="contact-detail-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="contact-detail-label">Credentials</div>
+          <div class="contact-detail-value">Licensed &amp; Fully Insured</div>
+          <div class="contact-detail-sub">Texas State Certified Plumbing Technicians</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="contact-form fade-up">
+      <div class="form-title">Request a Free Quote</div>
+      <p class="form-sub">We'll respond within the hour. No commitment, no pressure.</p>
+
+      <form onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="John" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Smith" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(254) 555-0000" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@email.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service...</option>
+            <option value="drain">Drain Cleaning</option>
+            <option value="water-heater">Water Heater Repair / Replacement</option>
+            <option value="leak">Leak Detection</option>
+            <option value="pipe">Pipe Repair or Replacement</option>
+            <option value="sewer">Sewer Services</option>
+            <option value="emergency">Emergency Plumbing</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell Us More</label>
+          <textarea id="message" name="message" placeholder="Describe the issue and your address or neighborhood..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Send My Free Quote Request</button>
+        <p class="form-disclaimer">By submitting, you agree to be contacted by Trust N Us Services regarding your plumbing inquiry. We never share your information.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     10. CTA BAND
+═══════════════════════════════════════ -->
+<section id="cta-band" class="grain">
+  <div class="cta-band-inner">
+    <h2 class="cta-band-headline">Ready to Call a Plumber You Can Actually Trust?</h2>
+    <p class="cta-band-sub">123 Killeen homeowners already have. Upfront pricing, on-time arrival, work done right — that's the Trust N Us standard on every single call.</p>
+
+    <div class="cta-band-actions">
+      <a href="tel:2544326464" class="cta-band-btn">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call (254) 432-6464
+      </a>
+      <a href="#contact" class="cta-band-btn-ghost">
+        Request a Free Quote
+      </a>
+    </div>
+
+    <div class="cta-band-trust">
+      <div class="cta-trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="rgba(0,0,0,0.5)" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        4.8-Star Rating
+      </div>
+      <div class="cta-trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.5)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Licensed &amp; Insured
+      </div>
+      <div class="cta-trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.5)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        Upfront Pricing
+      </div>
+      <div class="cta-trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(0,0,0,0.5)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        No Hidden Fees
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="logo-lockup" style="margin-bottom:0;">
+          <div class="logo-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Trust N Us Services</span>
+            <span class="logo-tagline">Killeen, TX · Licensed &amp; Insured</span>
+          </div>
+        </div>
+        <p class="footer-brand-desc">Killeen's most trusted plumbing team. 4.8 stars, 123 reviews, and a commitment to earning your confidence on every single call.</p>
+        <div style="display:flex; gap:8px; margin-top:16px; flex-wrap:wrap;">
+          <div style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.25);border-radius:6px;padding:6px 12px;font-size:0.75rem;font-weight:600;color:var(--accent);">Licensed</div>
+          <div style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.25);border-radius:6px;padding:6px 12px;font-size:0.75rem;font-weight:600;color:var(--accent);">Insured</div>
+          <div style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.25);border-radius:6px;padding:6px 12px;font-size:0.75rem;font-weight:600;color:var(--accent);">4.8 Stars</div>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Drain Cleaning</a></li>
+          <li><a href="#services">Water Heater Repair</a></li>
+          <li><a href="#services">Leak Detection</a></li>
+          <li><a href="#services">Pipe Repair</a></li>
+          <li><a href="#services">Sewer Services</a></li>
+          <li><a href="#services">Emergency Plumbing</a></li>
+        </ul>
+      </div>
+
+      <!-- Areas -->
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#areas">Killeen, TX</a></li>
+          <li><a href="#areas">Harker Heights</a></li>
+          <li><a href="#areas">Copperas Cove</a></li>
+          <li><a href="#areas">Fort Cavazos</a></li>
+          <li><a href="#areas">Nolanville</a></li>
+          <li><a href="#areas">Temple, TX</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span>(254) 432-6464</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Killeen, TX &amp; Surrounding Areas</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon–Sat: 7AM–7PM<br>Emergency: 24/7</span>
+        </div>
+        <a href="tel:2544326464" style="display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#000;font-weight:600;font-size:0.85rem;padding:10px 18px;border-radius:7px;margin-top:14px;transition:background 0.2s;" onmouseover="this.style.background='#07cef0'" onmouseout="this.style.background='var(--accent)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Trust N Us Services · Killeen, TX · All Rights Reserved · Site by <a href="#">RevShift Media</a></p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════ -->
+<script>
+/* ── IntersectionObserver: staggered fadeUp ── */
+(function() {
+  const els = document.querySelectorAll('.fade-up');
+  if (!els.length) return;
+
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const siblings = Array.from(el.parentElement.querySelectorAll('.fade-up'));
+        const idx = siblings.indexOf(el);
+        const delay = Math.min(idx * 80, 400);
+        setTimeout(function() {
+          el.classList.add('visible');
+        }, delay);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  els.forEach(function(el) { observer.observe(el); });
+})();
+
+/* ── Animated counters ── */
+(function() {
+  const counters = document.querySelectorAll('[data-target]');
+  if (!counters.length) return;
+
+  const counterObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseFloat(el.getAttribute('data-target'));
+      const decimals = parseInt(el.getAttribute('data-decimals') || '0');
+      const duration = 1600;
+      const start = performance.now();
+
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = eased * target;
+        el.textContent = decimals > 0 ? current.toFixed(decimals) : Math.round(current).toString();
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = decimals > 0 ? target.toFixed(decimals) : target.toString();
+      }
+
+      requestAnimationFrame(update);
+      counterObserver.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+
+  counters.forEach(function(el) { counterObserver.observe(el); });
+})();
+
+/* ── Smooth scroll for anchor links ── */
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+/* ── Sticky header shadow on scroll ── */
+(function() {
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 10) {
+      header.style.boxShadow = '0 4px 30px rgba(0,0,0,0.5)';
+    } else {
+      header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.35)';
+    }
+  }, { passive: true });
+})();
+
+/* ── Form handler ── */
+function handleFormSubmit(e) {
+  e.preventDefault();
+  var btn = e.target.querySelector('.form-submit');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  setTimeout(function() {
+    btn.textContent = 'Request Sent! We\'ll be in touch shortly.';
+    btn.style.background = '#059669';
+    btn.style.color = '#fff';
+  }, 1200);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Killeen Handyman — one call, every repair. Serving Killeen TX, Harker Heights, Fort Cavazos and surrounding areas. Carpentry, drywall, plumbing, electrical, painting and more. Call (254) 206-2009.">
+<title>The Killeen Handyman | (254) 206-2009 | Killeen, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Nunito:wght@400;600&display=swap');
+
+:root {
+  --primary: #1e242b;
+  --primary-dark: #0d1014;
+  --accent: #d4a017;
+  --accent-dark: #a67b0a;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #e8edf5;
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark-text);
+  background: var(--bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ─── HEADER ─────────────────────────────────────────────────────────── */
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--primary);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.15rem;
+  color: var(--t1);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.logo-text span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+nav a {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--t2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a:hover { color: var(--t1); }
+
+.header-cta {
+  background: var(--accent);
+  color: var(--primary-dark) !important;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-weight: 700 !important;
+  font-family: var(--font-display) !important;
+  font-size: 0.9rem !important;
+  transition: background 0.2s, transform 0.15s !important;
+  white-space: nowrap;
+}
+
+.header-cta:hover {
+  background: #e6b520 !important;
+  transform: translateY(-1px);
+  color: var(--primary-dark) !important;
+}
+
+.header-phone {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--t2);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.header-phone svg { color: var(--accent); }
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  color: var(--t1);
+}
+
+/* ─── HERO ────────────────────────────────────────────────────────────── */
+#hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #242e38 60%, #1a2028 100%);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px 80px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 64px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Hero fade-up animations */
+.hero-fade {
+  opacity: 0;
+  transform: translateY(32px);
+  animation: heroFadeUp 0.7s ease forwards;
+}
+
+.hero-fade:nth-child(1) { animation-delay: 0.1s; }
+.hero-fade:nth-child(2) { animation-delay: 0.25s; }
+.hero-fade:nth-child(3) { animation-delay: 0.4s; }
+.hero-fade:nth-child(4) { animation-delay: 0.55s; }
+.hero-fade:nth-child(5) { animation-delay: 0.7s; }
+.hero-fade:nth-child(6) { animation-delay: 0.85s; }
+
+@keyframes heroFadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212,160,23,0.15);
+  border: 1px solid rgba(212,160,23,0.35);
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  border-radius: 100px;
+}
+
+.hero-badge svg { flex-shrink: 0; }
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  line-height: 1.08;
+  color: var(--t1);
+  letter-spacing: -0.02em;
+  margin-top: 20px;
+}
+
+.hero-headline span {
+  color: var(--accent);
+  display: block;
+}
+
+.hero-sub {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--t2);
+  line-height: 1.7;
+  margin-top: 18px;
+  max-width: 520px;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: var(--primary-dark);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 18px rgba(212,160,23,0.35);
+}
+
+.btn-primary:hover {
+  background: #e6b520;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(212,160,23,0.45);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--t1);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 13px 26px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.btn-ghost:hover {
+  border-color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-2px);
+}
+
+.trust-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--t3);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.trust-item svg { color: var(--accent); flex-shrink: 0; }
+.trust-dot { color: var(--t3); font-size: 0.6rem; }
+
+/* Hero right card */
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 36px 32px;
+  opacity: 0;
+  transform: translateY(28px);
+  animation: heroFadeUp 0.7s ease 0.9s forwards;
+}
+
+.hero-card-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.value-prop {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.value-prop:last-child { border-bottom: none; padding-bottom: 0; }
+.value-prop:first-of-type { padding-top: 0; }
+
+.value-prop-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(212,160,23,0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.value-prop-text h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--t1);
+  margin-bottom: 3px;
+}
+
+.value-prop-text p {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--t2);
+  line-height: 1.5;
+}
+
+/* ─── STATS ROW ───────────────────────────────────────────────────────── */
+#stats {
+  background: var(--primary);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 28px 20px;
+  border-right: 1px solid rgba(255,255,255,0.07);
+}
+
+.stat-item:last-child { border-right: none; }
+
+.stat-icon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.stat-content {
+  text-align: left;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.35rem;
+  color: var(--t1);
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.stat-value .counter { font-variant-numeric: tabular-nums; }
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--t3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+/* ─── SERVICES ────────────────────────────────────────────────────────── */
+#services {
+  background: var(--bg);
+  padding: 96px 24px;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  color: var(--dark-text);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.section-sub {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--grey-text);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 56px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--bg-off);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 28px;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s, border-color 0.25s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(212,160,23,0.3);
+}
+
+.service-icon {
+  width: 54px;
+  height: 54px;
+  background: var(--accent);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--primary-dark);
+  box-shadow: 0 4px 14px rgba(212,160,23,0.35);
+}
+
+.service-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--dark-text);
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--grey-text);
+  line-height: 1.65;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--accent-dark);
+  text-decoration: none;
+  margin-top: 16px;
+  transition: gap 0.2s, color 0.2s;
+}
+
+.service-link:hover { gap: 10px; color: var(--accent); }
+
+/* ─── WHY CHOOSE ──────────────────────────────────────────────────────── */
+#why {
+  background: var(--primary);
+  padding: 96px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+#why .grain-overlay { opacity: 0.035; }
+
+.why-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.why-header .section-label { color: var(--accent); }
+.why-header .section-title { color: var(--t1); }
+.why-header .section-sub { color: var(--t2); }
+
+.why-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 56px;
+}
+
+.why-stat-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.why-stat-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.why-stat-num {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 2.4rem;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.why-stat-num sup {
+  font-size: 1.2rem;
+  vertical-align: super;
+  margin-left: 1px;
+}
+
+.why-stat-label {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--t3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.differentiators {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.diff-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 24px 22px;
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.diff-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.diff-icon {
+  width: 46px;
+  height: 46px;
+  background: rgba(212,160,23,0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.diff-text h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--t1);
+  margin-bottom: 5px;
+}
+
+.diff-text p {
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  color: var(--t2);
+  line-height: 1.6;
+}
+
+/* ─── HOW IT WORKS ────────────────────────────────────────────────────── */
+#how {
+  background: var(--primary-dark);
+  padding: 96px 24px;
+}
+
+.how-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.how-header .section-label { color: var(--accent); }
+.how-header .section-title { color: var(--t1); }
+.how-header .section-sub { color: var(--t2); }
+
+.steps-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.steps-row::before {
+  content: '';
+  position: absolute;
+  top: 38px;
+  left: calc(16.67% + 20px);
+  right: calc(16.67% + 20px);
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent) 0,
+    var(--accent) 8px,
+    transparent 8px,
+    transparent 18px
+  );
+  opacity: 0.4;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 28px;
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.step.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.step-num {
+  width: 76px;
+  height: 76px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(212,160,23,0.35);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.step h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--t1);
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--t2);
+  line-height: 1.65;
+}
+
+/* ─── REVIEWS ─────────────────────────────────────────────────────────── */
+#reviews {
+  background: var(--bg-off);
+  padding: 96px 24px;
+}
+
+.reviews-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 0;
+}
+
+.review-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.review-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.review-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+
+.review-stars svg { color: var(--accent); }
+
+.review-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--grey-text);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviewer-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.reviewer-info h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--dark-text);
+}
+
+.reviewer-info span {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--grey-text);
+}
+
+.reviews-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 48px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 32px;
+  flex-wrap: wrap;
+}
+
+.reviews-rating {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rating-big {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 3rem;
+  color: var(--dark-text);
+  line-height: 1;
+}
+
+.rating-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.rating-stars-row {
+  display: flex;
+  gap: 3px;
+}
+
+.rating-count {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--grey-text);
+}
+
+.reviews-divider {
+  width: 1px;
+  height: 48px;
+  background: var(--border);
+}
+
+.reviews-source {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--grey-text);
+  text-align: center;
+}
+
+.reviews-source strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--dark-text);
+  margin-bottom: 2px;
+}
+
+/* ─── SERVICE AREAS ───────────────────────────────────────────────────── */
+#areas {
+  background: var(--primary);
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+#areas .grain-overlay { opacity: 0.035; }
+
+.areas-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.areas-text .section-label { color: var(--accent); }
+.areas-text .section-title { color: var(--t1); margin-bottom: 14px; }
+.areas-text .section-sub { color: var(--t2); margin-bottom: 0; }
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.area-chip {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, border-color 0.2s;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.area-chip.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease, background 0.2s, border-color 0.2s;
+}
+
+.area-chip:hover {
+  background: rgba(212,160,23,0.1);
+  border-color: rgba(212,160,23,0.3);
+}
+
+.area-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+.area-chip span {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--t1);
+}
+
+/* ─── CONTACT FORM ────────────────────────────────────────────────────── */
+#contact {
+  background: var(--bg);
+  padding: 96px 24px;
+}
+
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.contact-left .section-label { color: var(--accent); }
+
+.contact-info-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.contact-info-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--bg-off);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.contact-info-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.contact-info-block h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--grey-text);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 3px;
+}
+
+.contact-info-block p, .contact-info-block a {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--dark-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-info-block a:hover { color: var(--accent-dark); }
+
+.contact-form {
+  background: var(--bg-off);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px 36px;
+}
+
+.form-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--dark-text);
+  margin-bottom: 6px;
+}
+
+.form-sub {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--grey-text);
+  margin-bottom: 28px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group:last-of-type { margin-bottom: 0; }
+
+.form-group label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--dark-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--dark-text);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212,160,23,0.15);
+}
+
+.form-group textarea { resize: vertical; min-height: 110px; }
+
+.form-submit {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 24px;
+  font-size: 1.05rem;
+  border-radius: 12px;
+  justify-content: center;
+}
+
+.form-disclaimer {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--grey-text);
+  text-align: center;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* ─── CTA BAND ────────────────────────────────────────────────────────── */
+#cta-band {
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+#cta-band .grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.06;
+}
+
+.cta-band-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-band-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(13,16,20,0.65);
+  margin-bottom: 16px;
+}
+
+.cta-band-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--primary-dark);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+
+.cta-band-sub {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: rgba(13,16,20,0.7);
+  line-height: 1.65;
+  margin-bottom: 36px;
+}
+
+.cta-band-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-dark);
+  color: var(--t1);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-dark:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+.btn-outline-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--primary-dark);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 13px 26px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: 2px solid rgba(13,16,20,0.3);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.btn-outline-dark:hover {
+  border-color: rgba(13,16,20,0.6);
+  background: rgba(13,16,20,0.07);
+  transform: translateY(-2px);
+}
+
+/* ─── FOOTER ──────────────────────────────────────────────────────────── */
+#footer {
+  background: var(--primary-dark);
+  padding: 72px 24px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+.footer-brand .logo { margin-bottom: 16px; }
+
+.footer-tagline {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--t3);
+  line-height: 1.65;
+  margin-bottom: 20px;
+  max-width: 260px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.social-btn {
+  width: 38px;
+  height: 38px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--t2);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.social-btn:hover { background: var(--accent); color: var(--primary-dark); }
+
+.footer-col h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--t3);
+  margin-bottom: 18px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--t2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--accent); }
+
+.footer-contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--t2);
+  line-height: 1.5;
+}
+
+.footer-contact-list svg { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+
+.footer-contact-list a {
+  color: var(--t2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-contact-list a:hover { color: var(--accent); }
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 48px auto 0;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--t3);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom-links a {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--t3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-bottom-links a:hover { color: var(--t2); }
+
+/* ─── ANIMATIONS ──────────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  nav { display: none; }
+  .header-phone { display: none; }
+  .mobile-menu-btn { display: block; }
+
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; padding-top: 60px; padding-bottom: 60px; }
+  .hero-card { animation-delay: 0.5s; }
+
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.07); }
+  .stat-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.07); }
+
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .why-stats { grid-template-columns: repeat(2, 1fr); }
+
+  .steps-row::before { display: none; }
+  .steps-row { grid-template-columns: 1fr; gap: 40px; }
+
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .areas-inner { grid-template-columns: 1fr; gap: 40px; }
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .why-stats { grid-template-columns: 1fr 1fr; }
+  .differentiators { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-grid { grid-template-columns: 1fr 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .reviews-summary { flex-direction: column; gap: 16px; }
+  .reviews-divider { width: 60px; height: 1px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════════════════════ -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1e242b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        The Killeen Handyman
+        <span>Killeen, TX</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-phone">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.28 2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      (254) 206-2009
+    </div>
+    <a href="tel:2542062009" class="header-cta">Call Now</a>
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="grain-overlay"></div>
+  <div class="hero-inner">
+
+    <!-- Left col -->
+    <div class="hero-left">
+      <div class="hero-badge hero-fade">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        Killeen's Go-To Handyman Since Day One
+      </div>
+
+      <h1 class="hero-headline hero-fade">
+        One Call.<br>
+        <span>Every Repair.</span>
+        Fixed Right.
+      </h1>
+
+      <p class="hero-sub hero-fade">
+        Killeen residents and Fort Cavazos families count on us for every home repair — big or small. One number, all trades, no hassle. We show up, we fix it, you move on.
+      </p>
+
+      <div class="hero-ctas hero-fade">
+        <a href="tel:2542062009" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.28 2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Call (254) 206-2009
+        </a>
+        <a href="#contact" class="btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          Free Estimate
+        </a>
+      </div>
+
+      <div class="trust-bar hero-fade">
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          4.2 Stars
+        </div>
+        <span class="trust-dot">·</span>
+        <div class="trust-item">35 Reviews</div>
+        <span class="trust-dot">·</span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+          All Trades
+        </div>
+        <span class="trust-dot">·</span>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          Licensed &amp; Insured
+        </div>
+      </div>
+    </div>
+
+    <!-- Right col — frosted glass card -->
+    <div class="hero-card">
+      <div class="hero-card-title">Why Killeen Calls Us First</div>
+
+      <div class="value-prop">
+        <div class="value-prop-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <div class="value-prop-text">
+          <h4>Every Trade, One Call</h4>
+          <p>Carpentry, drywall, plumbing, electrical — we handle it all so you don't need five different numbers.</p>
+        </div>
+      </div>
+
+      <div class="value-prop">
+        <div class="value-prop-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="value-prop-text">
+          <h4>Prompt &amp; Reliable</h4>
+          <p>Mon–Fri 8–5. We schedule around your life, show up on time, and get the job done right the first time.</p>
+        </div>
+      </div>
+
+      <div class="value-prop">
+        <div class="value-prop-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <div class="value-prop-text">
+          <h4>Fair, Affordable Pricing</h4>
+          <p>Transparent quotes before work starts. No surprise invoices. Local rates for local families.</p>
+        </div>
+      </div>
+
+      <div class="value-prop">
+        <div class="value-prop-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="value-prop-text">
+          <h4>Licensed &amp; Insured</h4>
+          <p>Work done properly, every time. You're protected and your home is in good hands.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     STATS ROW
+═══════════════════════════════════════════════════════════ -->
+<section id="stats">
+  <div class="stats-inner">
+
+    <div class="stat-item">
+      <div class="stat-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </div>
+      <div class="stat-content">
+        <div class="stat-value">
+          <span class="counter" data-target="35">0</span>&nbsp;Reviews
+        </div>
+        <div class="stat-label">4.2-Star Rating</div>
+      </div>
+    </div>
+
+    <div class="stat-item">
+      <div class="stat-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+        </svg>
+      </div>
+      <div class="stat-content">
+        <div class="stat-value">All Trades</div>
+        <div class="stat-label">One Call Solution</div>
+      </div>
+    </div>
+
+    <div class="stat-item">
+      <div class="stat-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+      </div>
+      <div class="stat-content">
+        <div class="stat-value">Mon–Fri 8–5</div>
+        <div class="stat-label">Consistent Hours</div>
+      </div>
+    </div>
+
+    <div class="stat-item">
+      <div class="stat-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="1" x2="12" y2="23"/>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+        </svg>
+      </div>
+      <div class="stat-content">
+        <div class="stat-value">Free Estimates</div>
+        <div class="stat-label">No Obligation</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICES
+═══════════════════════════════════════════════════════════ -->
+<section id="services">
+  <div class="section-inner">
+    <div class="section-label">What We Fix</div>
+    <h2 class="section-title">Full-Service Handyman.<br>Every Trade Covered.</h2>
+    <p class="section-sub">No project too small, no list too long. From a dripping faucet to a fresh coat of paint — we've got every room in your home covered.</p>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 20h20"/>
+            <path d="M5 20V8l7-6 7 6v12"/>
+            <path d="M9 20v-5h6v5"/>
+          </svg>
+        </div>
+        <h3>Carpentry &amp; Woodwork</h3>
+        <p>Shelving, trim, doors, cabinets, and structural repairs. Quality cuts and clean finishes — built to last in the Central Texas heat.</p>
+        <a href="#contact" class="service-link">
+          Get an estimate
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <path d="M3 9h18"/>
+            <path d="M9 21V9"/>
+          </svg>
+        </div>
+        <h3>Drywall Repair</h3>
+        <p>Holes, cracks, water damage, popped nails — we patch, texture, and blend so the repair disappears completely.</p>
+        <a href="#contact" class="service-link">
+          Get an estimate
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3>Plumbing Repairs</h3>
+        <p>Leaky faucets, running toilets, clogged drains, shut-off valves, and fixture replacements. Fast fixes that stick.</p>
+        <a href="#contact" class="service-link">
+          Get an estimate
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </div>
+        <h3>Electrical Repairs</h3>
+        <p>Outlets, switches, light fixtures, ceiling fans, GFCI replacements. Safe, code-compliant work by a pro you can trust.</p>
+        <a href="#contact" class="service-link">
+          Get an estimate
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="4"/>
+            <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/>
+            <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/>
+            <line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/>
+            <line x1="14.83" y1="9.17" x2="18.36" y2="5.64"/>
+            <line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/>
+          </svg>
+        </div>
+        <h3>Painting &amp; Touch-up</h3>
+        <p>Interior walls, ceilings, trim, and touch-up work. We prep properly so paint lasts — and we clean up behind ourselves.</p>
+        <a href="#contact" class="service-link">
+          Get an estimate
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+            <path d="M4.93 4.93a10 10 0 0 0 0 14.14"/>
+          </svg>
+        </div>
+        <h3>General Maintenance</h3>
+        <p>Weather-stripping, caulking, door adjustments, gutter cleaning, fence repairs — your home's annual punch list, all in one visit.</p>
+        <a href="#contact" class="service-link">
+          Get an estimate
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     WHY CHOOSE US
+═══════════════════════════════════════════════════════════ -->
+<section id="why">
+  <div class="grain-overlay"></div>
+  <div class="why-inner">
+
+    <div class="why-header" style="max-width:640px; margin-bottom: 52px;">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">One Call. All Trades.<br>No Runaround.</h2>
+      <p class="section-sub">Most Killeen homeowners waste hours calling three different contractors. We solve that problem. Every trade, one phone number, one professional relationship.</p>
+    </div>
+
+    <div class="why-stats">
+      <div class="why-stat-card fade-up-target">
+        <div class="why-stat-num"><span class="counter" data-target="35">0</span></div>
+        <div class="why-stat-label">Verified Reviews</div>
+      </div>
+      <div class="why-stat-card fade-up-target">
+        <div class="why-stat-num">4.2<svg width="20" height="20" viewBox="0 0 24 24" fill="#d4a017" style="vertical-align:middle; margin-left:3px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="why-stat-label">Average Rating</div>
+      </div>
+      <div class="why-stat-card fade-up-target">
+        <div class="why-stat-num"><span class="counter" data-target="6">0</span><sup>+</sup></div>
+        <div class="why-stat-label">Trade Services</div>
+      </div>
+      <div class="why-stat-card fade-up-target">
+        <div class="why-stat-num"><span class="counter" data-target="100">0</span><sup>%</sup></div>
+        <div class="why-stat-label">Free Estimates</div>
+      </div>
+    </div>
+
+    <div class="differentiators">
+      <div class="diff-item fade-up-target">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <div class="diff-text">
+          <h4>The Only Call You Need</h4>
+          <p>Carpentry, plumbing, drywall, electrical — we handle the full list in one visit. No juggling contractors, no scheduling headaches.</p>
+        </div>
+      </div>
+      <div class="diff-item fade-up-target">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div class="diff-text">
+          <h4>Truly Local to Killeen</h4>
+          <p>Based right here on Tallwood Drive. We know the neighborhoods, the housing stock, and what it takes to keep Central Texas homes in shape.</p>
+        </div>
+      </div>
+      <div class="diff-item fade-up-target">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <div class="diff-text">
+          <h4>No-Surprise Pricing</h4>
+          <p>We quote you before we touch a tool. What we say is what you pay. Transparent, fair, and sized for real Killeen budgets — not contractor markups.</p>
+        </div>
+      </div>
+      <div class="diff-item fade-up-target">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <div class="diff-text">
+          <h4>Done Right the First Time</h4>
+          <p>We don't leave until the job is right. Proper materials, clean work, and enough care that you'd feel comfortable recommending us to your neighbor.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HOW IT WORKS
+═══════════════════════════════════════════════════════════ -->
+<section id="how">
+  <div class="how-inner">
+
+    <div class="how-header" style="max-width:600px; margin-bottom: 64px;">
+      <div class="section-label">The Process</div>
+      <h2 class="section-title">Simple as Three Steps</h2>
+      <p class="section-sub">We make it easy to go from broken to fixed. No lengthy sign-ups, no waiting weeks for a callback.</p>
+    </div>
+
+    <div class="steps-row">
+
+      <div class="step fade-up-target">
+        <div class="step-num">1</div>
+        <h3>Call or Message Us</h3>
+        <p>Tell us what's broken, where you're located in Killeen, and when works for you. We'll give you a free estimate right on the phone — no commitment required.</p>
+      </div>
+
+      <div class="step fade-up-target">
+        <div class="step-num">2</div>
+        <h3>We Show Up &amp; Assess</h3>
+        <p>A skilled handyman arrives on time with the right tools. We take a look at everything on your list, confirm the quote, and get your approval before any work starts.</p>
+      </div>
+
+      <div class="step fade-up-target">
+        <div class="step-num">3</div>
+        <h3>Fixed. Clean. Done.</h3>
+        <p>We complete the work properly, clean up the job site, and walk you through what was done. You only pay when you're satisfied with the result.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     REVIEWS
+═══════════════════════════════════════════════════════════ -->
+<section id="reviews">
+  <div class="reviews-inner">
+
+    <div style="max-width:600px; margin-bottom: 44px;">
+      <div class="section-label">Customer Reviews</div>
+      <h2 class="section-title">Killeen Homeowners Trust Us</h2>
+      <p class="section-sub">Real reviews from real neighbors. No project too small, no homeowner left waiting.</p>
+    </div>
+
+    <div class="reviews-summary">
+      <div class="reviews-rating">
+        <div class="rating-big">4.2</div>
+        <div class="rating-details">
+          <div class="rating-stars-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a017"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a017"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a017"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a017"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4a017" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="rating-count">Based on 35 reviews</div>
+        </div>
+      </div>
+      <div class="reviews-divider"></div>
+      <div class="reviews-source">
+        <strong>Google Reviews</strong>
+        Killeen, TX
+      </div>
+      <div class="reviews-divider"></div>
+      <div class="reviews-source">
+        <strong>The Killeen Handyman</strong>
+        4.2 out of 5 stars
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+
+      <div class="review-card fade-up-target">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"We just moved into our house near Skylark and the previous owners left a bunch of drywall holes from TV mounts and anchors. He came out, patched everything perfectly, and matched the texture better than I expected. You honestly can't tell where the patches are. Will definitely call again when we're ready to paint."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">MR</div>
+          <div class="reviewer-info">
+            <h4>Marcus R.</h4>
+            <span>Killeen, TX &mdash; Homeowner</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up-target">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"I needed some built-in shelving in my garage and a new towel bar setup in the master bath — two completely different jobs. He came out the same week, handled both on the same visit, and didn't charge me extra for combining them. Solid workmanship, very fair pricing, and no mess left behind. That's how it should work."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">DL</div>
+          <div class="reviewer-info">
+            <h4>Denise L.</h4>
+            <span>Harker Heights, TX &mdash; Homeowner</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up-target">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Kitchen faucet had been dripping for months and I kept putting it off. Called The Killeen Handyman on a Monday, they were out Wednesday morning. Faucet replaced, under-sink plumbing tightened up, and he caught a slow drip under the garbage disposal I didn't even know about. Quick, professional, reasonably priced."</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">TW</div>
+          <div class="reviewer-info">
+            <h4>Tanya W.</h4>
+            <span>Killeen, TX &mdash; Fort Cavazos Area</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICE AREAS
+═══════════════════════════════════════════════════════════ -->
+<section id="areas">
+  <div class="grain-overlay"></div>
+  <div class="areas-inner">
+
+    <div class="areas-text">
+      <div class="section-label">Where We Work</div>
+      <h2 class="section-title">Serving the Heart of Central Texas</h2>
+      <p class="section-sub">Based in Killeen, we serve the communities surrounding Fort Cavazos and the greater Bell County area. If you're not sure whether we cover your neighborhood — just call. Odds are we do.</p>
+    </div>
+
+    <div class="areas-grid">
+      <div class="area-chip fade-up-target">
+        <div class="area-dot"></div>
+        <span>Killeen</span>
+      </div>
+      <div class="area-chip fade-up-target">
+        <div class="area-dot"></div>
+        <span>Harker Heights</span>
+      </div>
+      <div class="area-chip fade-up-target">
+        <div class="area-dot"></div>
+        <span>Copperas Cove</span>
+      </div>
+      <div class="area-chip fade-up-target">
+        <div class="area-dot"></div>
+        <span>Fort Cavazos</span>
+      </div>
+      <div class="area-chip fade-up-target">
+        <div class="area-dot"></div>
+        <span>Nolanville</span>
+      </div>
+      <div class="area-chip fade-up-target">
+        <div class="area-dot"></div>
+        <span>Temple</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONTACT FORM
+═══════════════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="contact-inner">
+
+    <div class="contact-left">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Ready to Fix It?<br>We're Ready to Help.</h2>
+      <p class="section-sub">Call us directly for a free estimate or fill out the form and we'll get back to you within one business day. No job too small, no list too long.</p>
+
+      <div class="contact-info-blocks">
+
+        <div class="contact-info-block">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.28 2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:2542062009">(254) 206-2009</a>
+          </div>
+        </div>
+
+        <div class="contact-info-block">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Address</h4>
+            <p>3806 Tallwood Drive STE C, Killeen TX 76549</p>
+          </div>
+        </div>
+
+        <div class="contact-info-block">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Hours</h4>
+            <p>Mon – Fri &nbsp;8:00 AM – 5:00 PM</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <div class="form-title">Request a Free Estimate</div>
+      <p class="form-sub">Tell us what needs fixing and we'll reach out promptly.</p>
+
+      <form onsubmit="handleFormSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="John" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Smith" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(254) 555-0000" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@email.com">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="service">What Needs Fixing?</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service type</option>
+            <option value="carpentry">Carpentry &amp; Woodwork</option>
+            <option value="drywall">Drywall Repair</option>
+            <option value="plumbing">Plumbing Repairs</option>
+            <option value="electrical">Electrical Repairs</option>
+            <option value="painting">Painting &amp; Touch-up</option>
+            <option value="maintenance">General Maintenance</option>
+            <option value="multiple">Multiple Items / Punch List</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Your Address (Killeen Area)</label>
+          <input type="text" id="address" name="address" placeholder="Street address, Killeen TX">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Describe the Job</label>
+          <textarea id="message" name="message" placeholder="Tell us what's broken, how long it's been an issue, and any other details that help us quote accurately..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary form-submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"/>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+          Send My Request
+        </button>
+        <p class="form-disclaimer">We respect your privacy. Your info is never sold or shared. Expect a call or email within one business day.</p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CTA BAND
+═══════════════════════════════════════════════════════════ -->
+<section id="cta-band">
+  <div class="grain-overlay"></div>
+  <div class="cta-band-inner">
+    <div class="cta-band-label">Killeen's Most Versatile Handyman</div>
+    <h2 class="cta-band-title">One call. Every repair.<br>Your home, taken care of.</h2>
+    <p class="cta-band-sub">Stop putting off the repairs on your list. From a squeaky door to a full punch list, we handle it all — affordably, reliably, and locally. Killeen's go-to handyman is one phone call away.</p>
+    <div class="cta-band-buttons">
+      <a href="tel:2542062009" class="btn-dark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.28 2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        Call (254) 206-2009
+      </a>
+      <a href="#contact" class="btn-outline-dark">
+        Free Estimate
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="footer-inner">
+
+    <!-- Brand col -->
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1e242b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          The Killeen Handyman
+          <span>Killeen, TX</span>
+        </div>
+      </a>
+      <p class="footer-tagline">One call, every repair. Serving Killeen and Central Texas families since day one — carpentry, drywall, plumbing, electrical, and more.</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="Google">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="Nextdoor">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Services col -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><a href="#services">Carpentry &amp; Woodwork</a></li>
+        <li><a href="#services">Drywall Repair</a></li>
+        <li><a href="#services">Plumbing Repairs</a></li>
+        <li><a href="#services">Electrical Repairs</a></li>
+        <li><a href="#services">Painting &amp; Touch-up</a></li>
+        <li><a href="#services">General Maintenance</a></li>
+      </ul>
+    </div>
+
+    <!-- Areas col -->
+    <div class="footer-col">
+      <h4>Service Areas</h4>
+      <ul class="footer-links">
+        <li><a href="#areas">Killeen, TX</a></li>
+        <li><a href="#areas">Harker Heights</a></li>
+        <li><a href="#areas">Copperas Cove</a></li>
+        <li><a href="#areas">Fort Cavazos</a></li>
+        <li><a href="#areas">Nolanville</a></li>
+        <li><a href="#areas">Temple, TX</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact col -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul class="footer-contact-list">
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.28 2 2 0 0 1 3.56 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:2542062009">(254) 206-2009</a>
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          3806 Tallwood Drive STE C<br>Killeen, TX 76549
+        </li>
+        <li>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Mon – Fri: 8:00 AM – 5:00 PM
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 The Killeen Handyman. All rights reserved. Killeen, TX 76549.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════ -->
+<script>
+// ── Counter animation ──────────────────────────────────────
+function animateCount(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const duration = 1400;
+  const start = performance.now();
+  function step(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(eased * target);
+    if (progress < 1) requestAnimationFrame(step);
+    else el.textContent = target;
+  }
+  requestAnimationFrame(step);
+}
+
+// ── IntersectionObserver stagger fadeUp ───────────────────
+const fadeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const siblings = el.closest('.services-grid, .why-stats, .differentiators, .steps-row, .reviews-grid, .areas-grid')
+        ? Array.from(el.parentElement.querySelectorAll('.service-card, .why-stat-card, .diff-item, .step, .review-card, .area-chip'))
+        : null;
+
+      if (siblings) {
+        const idx = siblings.indexOf(el);
+        setTimeout(() => {
+          el.classList.add('visible');
+          // trigger counters inside this card
+          el.querySelectorAll('.counter[data-target]').forEach(animateCount);
+        }, idx * 100);
+      } else {
+        el.classList.add('visible');
+        el.querySelectorAll('.counter[data-target]').forEach(animateCount);
+      }
+      fadeObserver.unobserve(el);
+    });
+  },
+  { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+);
+
+document.querySelectorAll('.fade-up-target, .service-card, .why-stat-card, .diff-item, .step, .review-card, .area-chip').forEach((el) => {
+  fadeObserver.observe(el);
+});
+
+// Counters in stats row (visible on load)
+const statsObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.querySelectorAll('.counter[data-target]').forEach(animateCount);
+      statsObserver.unobserve(entry.target);
+    });
+  },
+  { threshold: 0.3 }
+);
+
+document.querySelectorAll('#stats').forEach((el) => statsObserver.observe(el));
+
+// ── Header scroll effect ───────────────────────────────────
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) {
+    header.style.boxShadow = '0 2px 30px rgba(0,0,0,0.55)';
+  } else {
+    header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.4)';
+  }
+}, { passive: true });
+
+// ── Form submission ────────────────────────────────────────
+function handleFormSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  const original = btn.innerHTML;
+  btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Request Sent!';
+  btn.style.background = '#2a7a4b';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.innerHTML = original;
+    btn.style.background = '';
+    btn.disabled = false;
+    e.target.reset();
+  }, 4000);
+}
+
+// ── Smooth scroll for anchor links ────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', (e) => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>

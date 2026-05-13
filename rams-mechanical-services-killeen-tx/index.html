@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAMS Mechanical Services | Killeen, TX Plumbing & HVAC</title>
+  <meta name="description" content="RAMS Mechanical Services — Killeen's trusted plumbing and HVAC team serving Fort Cavazos, Harker Heights, Copperas Cove and surrounding areas. Licensed & Insured. Call (254) 773-9300.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap');
+
+    :root {
+      --primary: #0d2b4e;
+      --primary-dark: #061726;
+      --accent: #dc2626;
+      --accent-dark: #991b1b;
+      --accent-rgb: 220,38,38;
+      --bg: #ffffff;
+      --bg-off: #f7f8fc;
+      --t1: #ffffff;
+      --t2: rgba(255,255,255,0.75);
+      --t3: rgba(255,255,255,0.5);
+      --dark-text: #1a1a2e;
+      --grey-text: #6b7280;
+      --border: #e8edf5;
+      --font-display: 'Bebas Neue', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+      --radius: 12px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.12);
+      --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--dark-text);
+      background: var(--bg);
+      overflow-x: hidden;
+    }
+
+    /* ── GRAIN OVERLAY ── */
+    .grain {
+      position: relative;
+    }
+    .grain::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+    .grain > * { position: relative; z-index: 2; }
+
+    /* ── TYPOGRAPHY ── */
+    h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.05; letter-spacing: 0.02em; }
+    p { font-family: var(--font-body); }
+
+    /* ── UTILITIES ── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(220,38,38,0.12);
+      border: 1px solid rgba(220,38,38,0.28);
+      border-radius: 100px;
+      padding: 4px 14px;
+      margin-bottom: 16px;
+    }
+    .section-label.light {
+      color: rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.2);
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 19px;
+      letter-spacing: 0.06em;
+      padding: 14px 32px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(var(--accent-rgb),0.38);
+    }
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(var(--accent-rgb),0.45); }
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--t1);
+      font-family: var(--font-display);
+      font-size: 19px;
+      letter-spacing: 0.06em;
+      padding: 13px 30px;
+      border-radius: var(--radius);
+      border: 2px solid rgba(255,255,255,0.35);
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.08); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes heroFadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-child {
+      opacity: 0;
+      animation: heroFadeUp 0.72s cubic-bezier(0.22,1,0.36,1) forwards;
+    }
+    .hero-child:nth-child(1) { animation-delay: 0.08s; }
+    .hero-child:nth-child(2) { animation-delay: 0.18s; }
+    .hero-child:nth-child(3) { animation-delay: 0.28s; }
+    .hero-child:nth-child(4) { animation-delay: 0.38s; }
+    .hero-child:nth-child(5) { animation-delay: 0.48s; }
+    .hero-child:nth-child(6) { animation-delay: 0.58s; }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.62s cubic-bezier(0.22,1,0.36,1), transform 0.62s cubic-bezier(0.22,1,0.36,1);
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ──────────────────────────────────────────────
+       1. HEADER
+    ────────────────────────────────────────────── */
+    #site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--primary);
+      border-bottom: 2px solid rgba(220,38,38,0.4);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.35);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      height: 68px;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+    .logo-block { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .logo-icon {
+      width: 42px; height: 42px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-text { display: flex; flex-direction: column; line-height: 1; }
+    .logo-name {
+      font-family: var(--font-display);
+      font-size: 22px;
+      letter-spacing: 0.08em;
+      color: var(--t1);
+    }
+    .logo-sub {
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--t2);
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .header-nav a {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--t2);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .header-nav a:hover { color: var(--t1); }
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 17px;
+      letter-spacing: 0.06em;
+      padding: 10px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .header-cta:hover { background: var(--accent-dark); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--t1); border-radius: 2px; }
+
+    @media (max-width: 768px) {
+      .header-nav { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    /* ──────────────────────────────────────────────
+       2. HERO
+    ────────────────────────────────────────────── */
+    #hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #102d4f 100%);
+      padding: 96px 0 80px;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(220,38,38,0.15);
+      border: 1px solid rgba(220,38,38,0.4);
+      border-radius: 100px;
+      padding: 7px 16px;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #f87171;
+      width: fit-content;
+    }
+    .badge-dot {
+      width: 7px; height: 7px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.7); }
+    }
+    .hero-headline {
+      font-size: clamp(52px, 7vw, 88px);
+      color: var(--t1);
+      line-height: 0.95;
+      margin: 16px 0 20px;
+    }
+    .hero-headline span { color: var(--accent); }
+    .hero-subhead {
+      font-size: 17px;
+      color: var(--t2);
+      line-height: 1.65;
+      max-width: 480px;
+      margin-bottom: 32px;
+    }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--t2);
+    }
+    .trust-sep { color: rgba(255,255,255,0.25); font-size: 18px; }
+    .trust-stars { color: #fbbf24; letter-spacing: -1px; }
+
+    /* Hero right card */
+    .hero-card {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 36px 32px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .hero-card-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      letter-spacing: 0.06em;
+      color: var(--t1);
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+    .value-props { display: flex; flex-direction: column; gap: 18px; }
+    .vp-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .vp-icon {
+      width: 42px; height: 42px;
+      background: rgba(220,38,38,0.18);
+      border: 1px solid rgba(220,38,38,0.3);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .vp-text h4 {
+      font-family: var(--font-display);
+      font-size: 17px;
+      letter-spacing: 0.04em;
+      color: var(--t1);
+      margin-bottom: 2px;
+    }
+    .vp-text p {
+      font-size: 13px;
+      color: var(--t3);
+      line-height: 1.5;
+    }
+    .hero-card-footer {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+    }
+    .hero-card-footer a {
+      font-family: var(--font-display);
+      font-size: 20px;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .hero-card-footer a:hover { color: #f87171; }
+    .hero-card-footer p {
+      font-size: 12px;
+      color: var(--t3);
+      margin-top: 4px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+    }
+
+    /* ──────────────────────────────────────────────
+       3. STATS ROW
+    ────────────────────────────────────────────── */
+    #stats-row {
+      background: var(--primary);
+      border-top: 2px solid rgba(220,38,38,0.3);
+      border-bottom: 2px solid rgba(220,38,38,0.3);
+      padding: 22px 0;
+    }
+    .stats-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px 40px;
+      border-right: 1px solid rgba(255,255,255,0.14);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 36px;
+      letter-spacing: 0.04em;
+      color: var(--t1);
+      line-height: 1;
+    }
+    .stat-number .star-color { color: #fbbf24; }
+    .stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--t3);
+      margin-top: 3px;
+    }
+    @media (max-width: 600px) {
+      .stat-item { padding: 10px 20px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .stat-item:last-child { border-bottom: none; }
+    }
+
+    /* ──────────────────────────────────────────────
+       4. SERVICES
+    ────────────────────────────────────────────── */
+    #services {
+      background: var(--bg);
+      padding: 96px 0;
+    }
+    .section-header { text-align: center; margin-bottom: 60px; }
+    .section-header h2 {
+      font-size: clamp(40px, 5vw, 62px);
+      color: var(--dark-text);
+      margin-bottom: 14px;
+    }
+    .section-header p {
+      font-size: 17px;
+      color: var(--grey-text);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--bg-off);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(220,38,38,0.3);
+    }
+    .service-icon {
+      width: 54px; height: 54px;
+      background: var(--accent);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(var(--accent-rgb),0.3);
+    }
+    .service-card h3 {
+      font-size: 22px;
+      letter-spacing: 0.04em;
+      color: var(--dark-text);
+      margin-bottom: 10px;
+    }
+    .service-card p { font-size: 14px; color: var(--grey-text); line-height: 1.65; }
+    .service-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      margin-top: 18px;
+      letter-spacing: 0.04em;
+      transition: gap 0.2s;
+    }
+    .service-link:hover { gap: 10px; }
+
+    @media (max-width: 900px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
+
+    /* ──────────────────────────────────────────────
+       5. WHY CHOOSE US
+    ────────────────────────────────────────────── */
+    #why-us {
+      background: var(--primary);
+      padding: 96px 0;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .why-left h2 {
+      font-size: clamp(40px, 5vw, 64px);
+      color: var(--t1);
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+    .why-left h2 span { color: var(--accent); }
+    .why-left p {
+      font-size: 16px;
+      color: var(--t2);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .why-features {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .why-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .why-feature-icon {
+      width: 44px; height: 44px;
+      background: rgba(220,38,38,0.18);
+      border: 1px solid rgba(220,38,38,0.35);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .why-feature-text h4 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      color: var(--t1);
+      margin-bottom: 3px;
+    }
+    .why-feature-text p { font-size: 14px; color: var(--t3); line-height: 1.55; }
+    .why-right-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .why-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: background 0.25s, border-color 0.25s;
+    }
+    .why-card:hover {
+      background: rgba(255,255,255,0.09);
+      border-color: rgba(220,38,38,0.35);
+    }
+    .why-card-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .why-card-num {
+      font-family: var(--font-display);
+      font-size: 28px;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .why-card-top h3 {
+      font-size: 20px;
+      letter-spacing: 0.04em;
+      color: var(--t1);
+    }
+    .why-card p { font-size: 14px; color: var(--t3); line-height: 1.6; }
+
+    @media (max-width: 900px) {
+      .why-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    /* ──────────────────────────────────────────────
+       6. HOW IT WORKS
+    ────────────────────────────────────────────── */
+    #how-it-works {
+      background: var(--primary-dark);
+      padding: 96px 0;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      position: relative;
+      margin-top: 60px;
+    }
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 34px;
+      left: calc(16.66% + 16px);
+      right: calc(16.66% + 16px);
+      height: 2px;
+      background: repeating-linear-gradient(90deg, rgba(220,38,38,0.45) 0, rgba(220,38,38,0.45) 10px, transparent 10px, transparent 20px);
+    }
+    .step-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 28px;
+    }
+    .step-num {
+      width: 68px; height: 68px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display);
+      font-size: 30px;
+      color: #fff;
+      margin-bottom: 24px;
+      flex-shrink: 0;
+      box-shadow: 0 6px 24px rgba(var(--accent-rgb),0.4);
+      position: relative;
+      z-index: 2;
+    }
+    .step-item h3 {
+      font-size: 22px;
+      letter-spacing: 0.04em;
+      color: var(--t1);
+      margin-bottom: 10px;
+    }
+    .step-item p { font-size: 14px; color: var(--t3); line-height: 1.65; }
+
+    @media (max-width: 600px) {
+      .steps-grid { grid-template-columns: 1fr; }
+      .steps-grid::before { display: none; }
+      .step-item { padding: 0 0 36px; }
+      .step-item:last-child { padding-bottom: 0; }
+    }
+
+    /* ──────────────────────────────────────────────
+       7. REVIEWS
+    ────────────────────────────────────────────── */
+    #reviews {
+      background: var(--bg-off);
+      padding: 96px 0;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+    .review-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .review-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .review-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 14px;
+    }
+    .review-stars svg { color: #fbbf24; }
+    .review-text {
+      font-size: 15px;
+      color: var(--dark-text);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .reviewer-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: var(--t1);
+      flex-shrink: 0;
+    }
+    .reviewer-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--dark-text);
+    }
+    .reviewer-meta { font-size: 12px; color: var(--grey-text); }
+
+    @media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr; } }
+
+    /* ──────────────────────────────────────────────
+       8. SERVICE AREAS
+    ────────────────────────────────────────────── */
+    #service-areas {
+      background: var(--primary);
+      padding: 80px 0;
+    }
+    .areas-header { text-align: center; margin-bottom: 48px; }
+    .areas-header h2 {
+      font-size: clamp(36px, 5vw, 56px);
+      color: var(--t1);
+      margin-bottom: 12px;
+    }
+    .areas-header p { font-size: 16px; color: var(--t2); }
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .area-chip {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      transition: background 0.22s, border-color 0.22s;
+    }
+    .area-chip:hover {
+      background: rgba(255,255,255,0.11);
+      border-color: rgba(220,38,38,0.4);
+    }
+    .area-dot {
+      width: 10px; height: 10px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .area-name {
+      font-family: var(--font-display);
+      font-size: 20px;
+      letter-spacing: 0.06em;
+      color: var(--t1);
+    }
+    .area-sub { font-size: 12px; color: var(--t3); }
+
+    @media (max-width: 900px) { .areas-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .areas-grid { grid-template-columns: 1fr; } }
+
+    /* ──────────────────────────────────────────────
+       9. CONTACT FORM
+    ────────────────────────────────────────────── */
+    #contact {
+      background: var(--bg);
+      padding: 96px 0;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .contact-info h2 {
+      font-size: clamp(36px, 5vw, 58px);
+      color: var(--dark-text);
+      margin-bottom: 18px;
+    }
+    .contact-info h2 span { color: var(--accent); }
+    .contact-info p { font-size: 16px; color: var(--grey-text); line-height: 1.7; margin-bottom: 36px; }
+    .contact-details { display: flex; flex-direction: column; gap: 20px; }
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .detail-icon {
+      width: 48px; height: 48px;
+      background: var(--primary);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .detail-text h4 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      letter-spacing: 0.04em;
+      color: var(--dark-text);
+      margin-bottom: 2px;
+    }
+    .detail-text p, .detail-text a {
+      font-size: 15px;
+      color: var(--grey-text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .detail-text a:hover { color: var(--accent); }
+    .contact-form-wrap {
+      background: var(--bg-off);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 36px;
+    }
+    .form-title {
+      font-family: var(--font-display);
+      font-size: 26px;
+      letter-spacing: 0.04em;
+      color: var(--dark-text);
+      margin-bottom: 24px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--dark-text);
+      letter-spacing: 0.04em;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--dark-text);
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(var(--accent-rgb),0.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-submit {
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 20px;
+      letter-spacing: 0.08em;
+      border: none;
+      border-radius: var(--radius);
+      padding: 16px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 16px rgba(var(--accent-rgb),0.35);
+    }
+    .form-submit:hover { background: var(--accent-dark); transform: translateY(-2px); }
+    .form-note { font-size: 12px; color: var(--grey-text); text-align: center; margin-top: 12px; }
+
+    @media (max-width: 900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    /* ──────────────────────────────────────────────
+       10. CTA BAND
+    ────────────────────────────────────────────── */
+    #cta-band {
+      background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+      padding: 80px 0;
+    }
+    .cta-inner {
+      text-align: center;
+    }
+    .cta-inner h2 {
+      font-size: clamp(42px, 6vw, 80px);
+      color: var(--t1);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+    .cta-inner p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.85);
+      max-width: 560px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+    .cta-band-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--accent-dark);
+      font-family: var(--font-display);
+      font-size: 20px;
+      letter-spacing: 0.06em;
+      padding: 16px 36px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+    .btn-white:hover { background: rgba(255,255,255,0.9); transform: translateY(-2px); }
+    .btn-cta-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 20px;
+      letter-spacing: 0.06em;
+      padding: 15px 34px;
+      border-radius: var(--radius);
+      border: 2px solid rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .btn-cta-ghost:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.9); }
+
+    /* ──────────────────────────────────────────────
+       11. FOOTER
+    ────────────────────────────────────────────── */
+    #footer {
+      background: var(--primary-dark);
+      padding: 72px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-brand .logo-block { margin-bottom: 16px; }
+    .footer-brand p { font-size: 14px; color: var(--t3); line-height: 1.7; margin-bottom: 24px; }
+    .footer-social { display: flex; gap: 10px; }
+    .social-btn {
+      width: 38px; height: 38px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .social-btn:hover { background: rgba(220,38,38,0.25); border-color: rgba(220,38,38,0.4); }
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      color: var(--t1);
+      margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a {
+      font-size: 14px;
+      color: var(--t3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--t1); }
+    .footer-bottom {
+      padding: 22px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p { font-size: 13px; color: var(--t3); }
+    .footer-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+    .footer-badge-dot {
+      width: 6px; height: 6px;
+      background: #22c55e;
+      border-radius: 50%;
+    }
+
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; } }
+
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       1. HEADER
+  ══════════════════════════════════════════ -->
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo-block">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L3 7v10l9 5 9-5V7L12 2z"/>
+            <path d="M12 22V12"/>
+            <path d="M3 7l9 5 9-5"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">RAMS Mechanical</span>
+          <span class="logo-sub">Killeen's Strength In Service</span>
+        </div>
+      </a>
+      <nav class="header-nav">
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#service-areas">Areas</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="tel:2547739300" class="header-cta">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+        (254) 773-9300
+      </a>
+      <div class="hamburger" onclick="document.querySelector('.header-nav').style.display = document.querySelector('.header-nav').style.display === 'flex' ? 'none' : 'flex'">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       2. HERO
+  ══════════════════════════════════════════ -->
+  <section id="hero" class="grain">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-left">
+
+          <div class="hero-child hero-badge">
+            <span class="badge-dot"></span>
+            Fort Cavazos Community Trusted
+          </div>
+
+          <h1 class="hero-child hero-headline">
+            Killeen's<br>Strongest<br><span>Mechanical</span><br>Team
+          </h1>
+
+          <p class="hero-child hero-subhead">
+            Serving Fort Cavazos families, Harker Heights residents, and the entire Killeen area with elite plumbing and HVAC — no shortcuts, no excuses. Built for the toughest Texas jobs.
+          </p>
+
+          <div class="hero-child hero-ctas">
+            <a href="tel:2547739300" class="btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+              Call Now
+            </a>
+            <a href="#contact" class="btn-ghost">Get a Free Quote</a>
+          </div>
+
+          <div class="hero-child hero-trust">
+            <span class="trust-item">
+              <span class="trust-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              4.9 Stars
+            </span>
+            <span class="trust-sep">·</span>
+            <span class="trust-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              12 Reviews
+            </span>
+            <span class="trust-sep">·</span>
+            <span class="trust-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Licensed &amp; Insured
+            </span>
+            <span class="trust-sep">·</span>
+            <span class="trust-item">Plumbing &amp; HVAC</span>
+          </div>
+
+        </div>
+
+        <div class="hero-child hero-card">
+          <div class="hero-card-title">Fort Cavazos' Trusted Mechanical Team</div>
+          <div class="value-props">
+            <div class="vp-item">
+              <div class="vp-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="vp-text">
+                <h4>Same-Day Response</h4>
+                <p>Emergency calls answered fast — 24/7 availability for urgent plumbing and HVAC failures.</p>
+              </div>
+            </div>
+            <div class="vp-item">
+              <div class="vp-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="vp-text">
+                <h4>Military Community Focus</h4>
+                <p>Fort Cavazos families are our neighbors. We treat every home with the care it deserves.</p>
+              </div>
+            </div>
+            <div class="vp-item">
+              <div class="vp-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div class="vp-text">
+                <h4>Dual-Trade Capability</h4>
+                <p>Full plumbing and HVAC services under one roof — one call covers it all.</p>
+              </div>
+            </div>
+            <div class="vp-item">
+              <div class="vp-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div class="vp-text">
+                <h4>4.9-Star Rated</h4>
+                <p>Consistently top-rated across Killeen and surrounding communities — results that speak.</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card-footer">
+            <a href="tel:2547739300">(254) 773-9300</a>
+            <p>Available for emergency calls</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       3. STATS ROW
+  ══════════════════════════════════════════ -->
+  <section id="stats-row">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-number"><span class="star-color">4.9</span></div>
+        <div class="stat-label">Star Rating</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><span data-target="12">0</span></div>
+        <div class="stat-label">Verified Reviews</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Licensed &amp; Insured</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">2</div>
+        <div class="stat-label">Trade Specialties</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Emergency Service</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       4. SERVICES
+  ══════════════════════════════════════════ -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">What We Do</span>
+        <h2>Complete Mechanical Services</h2>
+        <p>From emergency plumbing to full HVAC replacement — RAMS handles every job with precision and no wasted time.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Plumbing Repair</h3>
+          <p>Leaking pipes, burst lines, fixture replacement, valve repair — fast diagnosis and durable fixes that hold up in Texas weather extremes.</p>
+          <a href="#contact" class="service-link">
+            Request Service
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 19H5a2 2 0 01-2-2V7a2 2 0 012-2h3m8 0h3a2 2 0 012 2v10a2 2 0 01-2 2h-3m-8-5h8M12 3v5m0 8v5"/></svg>
+          </div>
+          <h3>HVAC Services</h3>
+          <p>AC repair, heating service, system tune-ups and full replacements. Central Texas summers don't forgive — neither do we when it comes to comfort.</p>
+          <a href="#contact" class="service-link">
+            Request Service
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9l-7 2-7-2V5a2 2 0 014 0v2l3-1 3 1V5a2 2 0 014 0z"/><path d="M5 9v10a2 2 0 002 2h10a2 2 0 002-2V9"/></svg>
+          </div>
+          <h3>Water Heater Services</h3>
+          <p>Tank and tankless water heater installation, repair, and replacement. Get your hot water back the same day with RAMS on the job.</p>
+          <a href="#contact" class="service-link">
+            Request Service
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3>Drain &amp; Sewer</h3>
+          <p>Stubborn clogs, sewer line inspections, hydro-jetting and cleanouts. We get to the root of the problem — literally — with camera diagnostics.</p>
+          <a href="#contact" class="service-link">
+            Request Service
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <h3>Gas Lines</h3>
+          <p>Gas line installation, repairs, and safety inspections for residential and light commercial. Code-compliant work you can trust — no compromises on safety.</p>
+          <a href="#contact" class="service-link">
+            Request Service
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Emergency Response</h3>
+          <p>Pipes burst at 2am. HVAC fails on the hottest day of the year. RAMS shows up — day or night — because Fort Cavazos families can't wait.</p>
+          <a href="#contact" class="service-link">
+            Request Service
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       5. WHY CHOOSE US
+  ══════════════════════════════════════════ -->
+  <section id="why-us" class="grain">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-left fade-up">
+          <span class="section-label light">Why RAMS</span>
+          <h2>Built For The<br><span>Toughest</span><br>Jobs In Texas</h2>
+          <p>Fort Cavazos' trusted mechanical team doesn't cut corners. Military families need contractors who show up on time, do the job right the first time, and stand behind their work — that's the RAMS standard.</p>
+          <div class="why-features">
+            <div class="why-feature">
+              <div class="why-feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="why-feature-text">
+                <h4>Military Community Trust</h4>
+                <p>Deep roots in Killeen and the Fort Cavazos community. We understand the demands of military family life — deployment schedules, tight timelines, zero tolerance for excuses.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              </div>
+              <div class="why-feature-text">
+                <h4>One Contractor, Two Trades</h4>
+                <p>Plumbing and HVAC handled by one team means no finger-pointing between contractors, faster scheduling, and a single point of accountability.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div class="why-feature-text">
+                <h4>Fully Licensed &amp; Insured</h4>
+                <p>Every technician is properly licensed in the state of Texas. You're protected, your home is covered, and the work is done to code — every single time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why-right-cards fade-up">
+          <div class="why-card">
+            <div class="why-card-top">
+              <span class="why-card-num">01</span>
+              <h3>Precision Diagnostics</h3>
+            </div>
+            <p>We don't guess. Camera inspections, pressure tests, and systematic diagnostics identify the real problem before a single tool is pulled — saving time and money.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-top">
+              <span class="why-card-num">02</span>
+              <h3>Transparent Pricing</h3>
+            </div>
+            <p>Upfront estimates before work begins. No surprise invoices, no "we found something else" upsells. Military families deserve straight talk — and that's what they get with RAMS.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-top">
+              <span class="why-card-num">03</span>
+              <h3>Workmanship Guarantee</h3>
+            </div>
+            <p>We stand behind every repair and installation. If something isn't right, we come back and make it right — period. That's the RAMS commitment to the Killeen community.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-top">
+              <span class="why-card-num">04</span>
+              <h3>Rapid Response Times</h3>
+            </div>
+            <p>Strategically located in Killeen to reach Fort Cavazos, Harker Heights, and surrounding areas fast. When your HVAC dies in a Texas summer, response time matters.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       6. HOW IT WORKS
+  ══════════════════════════════════════════ -->
+  <section id="how-it-works">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label light">Simple Process</span>
+        <h2 style="color: var(--t1);">How It Works</h2>
+        <p style="color: var(--t2);">Getting RAMS on the job is straightforward — because when you have a plumbing or HVAC problem, the last thing you need is a complicated booking process.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-item fade-up">
+          <div class="step-num">1</div>
+          <h3>Call or Request Online</h3>
+          <p>Reach us at (254) 773-9300 or submit the contact form. Describe the issue — we'll gather the details needed to dispatch the right technician with the right equipment.</p>
+        </div>
+        <div class="step-item fade-up">
+          <div class="step-num">2</div>
+          <h3>Diagnosis &amp; Estimate</h3>
+          <p>Our tech arrives, assesses the problem thoroughly, and delivers a clear upfront estimate. No work begins until you've approved the scope and price — full transparency.</p>
+        </div>
+        <div class="step-item fade-up">
+          <div class="step-num">3</div>
+          <h3>Fixed Right, Guaranteed</h3>
+          <p>Work gets done with precision, your home is left clean, and every repair is backed by our workmanship guarantee. One call, one team, job done right.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       7. REVIEWS
+  ══════════════════════════════════════════ -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-label">Customer Reviews</span>
+        <h2>What Killeen Is Saying</h2>
+        <p>4.9 stars earned one satisfied customer at a time — across Killeen, Harker Heights, and the Fort Cavazos community.</p>
+      </div>
+      <div class="reviews-grid">
+
+        <div class="review-card fade-up">
+          <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+          <div class="review-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="review-text">"Our AC died on a Saturday in July — 104 degrees outside. I called RAMS and they had a tech at our house off post within two hours. He found the failed capacitor and had us running again before dinner. I've called a lot of HVAC companies in the Killeen area and nobody moves that fast."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">MR</div>
+            <div>
+              <div class="reviewer-name">Marcus R.</div>
+              <div class="reviewer-meta">Fort Cavazos Resident · AC Emergency Repair</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card fade-up">
+          <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+          <div class="review-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="review-text">"My husband was deployed and I had a major plumbing backup in our Harker Heights home — water coming up in the shower and kitchen sink both. RAMS came out the next morning, ran a camera through the line, and cleared a serious root intrusion. They explained everything, showed me the footage, and didn't try to oversell. Real professionals."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">JT</div>
+            <div>
+              <div class="reviewer-name">Jennifer T.</div>
+              <div class="reviewer-meta">Harker Heights · Sewer Line Repair</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card fade-up">
+          <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+          <div class="review-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="review-text">"Called RAMS on a Sunday evening when our water heater started leaking into the garage. They picked up, quoted me over the phone, and had a tech there Monday morning with the right unit already on the truck. Installed and tested in under three hours. Would have taken the big chains two weeks. RAMS is who you call in Killeen."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">DW</div>
+            <div>
+              <div class="reviewer-name">DeShawn W.</div>
+              <div class="reviewer-meta">Killeen, TX · Water Heater Replacement</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       8. SERVICE AREAS
+  ══════════════════════════════════════════ -->
+  <section id="service-areas">
+    <div class="container">
+      <div class="areas-header fade-up">
+        <span class="section-label light">Coverage</span>
+        <h2>Service Areas</h2>
+        <p>RAMS Mechanical Services covers the greater Killeen area — including the communities surrounding Fort Cavazos and beyond.</p>
+      </div>
+      <div class="areas-grid">
+        <div class="area-chip fade-up">
+          <span class="area-dot"></span>
+          <div>
+            <div class="area-name">Killeen</div>
+            <div class="area-sub">Primary Service Area</div>
+          </div>
+        </div>
+        <div class="area-chip fade-up">
+          <span class="area-dot"></span>
+          <div>
+            <div class="area-name">Fort Cavazos</div>
+            <div class="area-sub">On-Post &amp; Surrounding</div>
+          </div>
+        </div>
+        <div class="area-chip fade-up">
+          <span class="area-dot"></span>
+          <div>
+            <div class="area-name">Harker Heights</div>
+            <div class="area-sub">Full Coverage</div>
+          </div>
+        </div>
+        <div class="area-chip fade-up">
+          <span class="area-dot"></span>
+          <div>
+            <div class="area-name">Copperas Cove</div>
+            <div class="area-sub">Full Coverage</div>
+          </div>
+        </div>
+        <div class="area-chip fade-up">
+          <span class="area-dot"></span>
+          <div>
+            <div class="area-name">Nolanville</div>
+            <div class="area-sub">Full Coverage</div>
+          </div>
+        </div>
+        <div class="area-chip fade-up">
+          <span class="area-dot"></span>
+          <div>
+            <div class="area-name">Temple</div>
+            <div class="area-sub">Extended Coverage</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       9. CONTACT FORM
+  ══════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-up">
+          <span class="section-label">Get In Touch</span>
+          <h2>Request Your<br><span>Free Quote</span></h2>
+          <p>Ready to get the job done right? Contact RAMS Mechanical Services today. We'll respond promptly, assess your needs, and get you a clear estimate — no runaround.</p>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+              </div>
+              <div class="detail-text">
+                <h4>Phone</h4>
+                <a href="tel:2547739300">(254) 773-9300</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="detail-text">
+                <h4>Service Area</h4>
+                <p>Killeen, TX &amp; Surrounding Communities</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="detail-text">
+                <h4>Hours</h4>
+                <p>Mon–Fri: 7am–6pm · Emergency: 24/7</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="detail-text">
+                <h4>Licensed &amp; Insured</h4>
+                <p>Fully licensed in the State of Texas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap fade-up">
+          <div class="form-title">Tell Us About Your Project</div>
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="John" autocomplete="given-name">
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Smith" autocomplete="family-name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(254) 555-0000" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@email.com" autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service">
+                <option value="" disabled selected>Select a service...</option>
+                <option>Plumbing Repair</option>
+                <option>HVAC Services</option>
+                <option>Water Heater</option>
+                <option>Drain &amp; Sewer</option>
+                <option>Gas Lines</option>
+                <option>Emergency Service</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Describe the Issue</label>
+              <textarea id="message" name="message" placeholder="Tell us what's happening — the more detail, the better we can help..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Send My Request
+            </button>
+            <p class="form-note">We'll respond within 2 business hours. For emergencies, call (254) 773-9300 directly.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       10. CTA BAND
+  ══════════════════════════════════════════ -->
+  <section id="cta-band" class="grain">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <h2>Don't Wait On A<br>Broken System</h2>
+        <p>Fort Cavazos' trusted mechanical team is ready. Whether it's an emergency or a planned upgrade — RAMS shows up and gets it done.</p>
+        <div class="cta-band-btns">
+          <a href="tel:2547739300" class="btn-white">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            Call (254) 773-9300
+          </a>
+          <a href="#contact" class="btn-cta-ghost">Get a Free Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       11. FOOTER
+  ══════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo-block" style="margin-bottom: 16px; display: inline-flex;">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L3 7v10l9 5 9-5V7L12 2z"/>
+                <path d="M12 22V12"/>
+                <path d="M3 7l9 5 9-5"/>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">RAMS Mechanical</span>
+              <span class="logo-sub">Killeen's Strength In Service</span>
+            </div>
+          </a>
+          <p>Killeen's trusted plumbing and HVAC team — serving Fort Cavazos families and the surrounding Central Texas community with precision, reliability, and no excuses.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-btn" aria-label="Google">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Plumbing Repair</a></li>
+            <li><a href="#services">HVAC Services</a></li>
+            <li><a href="#services">Water Heaters</a></li>
+            <li><a href="#services">Drain &amp; Sewer</a></li>
+            <li><a href="#services">Gas Lines</a></li>
+            <li><a href="#services">Emergency Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <ul>
+            <li><a href="#service-areas">Killeen, TX</a></li>
+            <li><a href="#service-areas">Fort Cavazos</a></li>
+            <li><a href="#service-areas">Harker Heights</a></li>
+            <li><a href="#service-areas">Copperas Cove</a></li>
+            <li><a href="#service-areas">Nolanville</a></li>
+            <li><a href="#service-areas">Temple, TX</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <a href="tel:2547739300">(254) 773-9300</a>
+            </li>
+            <li>
+              <a href="#contact">Request a Quote</a>
+            </li>
+            <li>
+              <a href="#contact">Emergency Service</a>
+            </li>
+            <li style="color: rgba(255,255,255,0.3); pointer-events: none;">Mon–Fri: 7am–6pm</a></li>
+            <li style="color: rgba(255,255,255,0.3); pointer-events: none;">Emergency: 24/7</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 RAMS Mechanical Services. All rights reserved. Killeen, TX · Licensed &amp; Insured.</p>
+        <div class="footer-badge">
+          <span class="footer-badge-dot"></span>
+          Licensed in the State of Texas
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── IntersectionObserver fade-up
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const delay = el.dataset.delay || 0;
+          setTimeout(() => el.classList.add('visible'), delay);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    // staggered delays for grid children
+    document.querySelectorAll('.services-grid .fade-up, .reviews-grid .fade-up, .areas-grid .fade-up, .steps-grid .fade-up').forEach((el, i) => {
+      el.dataset.delay = i * 90;
+    });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+    // ── animateCount
+    function animateCount(el, target, duration) {
+      let start = 0;
+      const step = Math.ceil(target / (duration / 16));
+      const timer = setInterval(() => {
+        start += step;
+        if (start >= target) { el.textContent = target; clearInterval(timer); }
+        else { el.textContent = start; }
+      }, 16);
+    }
+
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target, 10);
+          animateCount(el, target, 1200);
+          countObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('[data-target]').forEach(el => countObserver.observe(el));
+
+    // ── Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ── Form submit intercept
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('.form-submit');
+      btn.textContent = 'Request Sent — We\'ll Be In Touch';
+      btn.style.background = '#16a34a';
+      btn.disabled = true;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Hulse Plumbing | Frisco's Personal Plumber | (214) 542-1276</title>
+<meta name="description" content="John Hulse Plumbing — Frisco, TX's trusted local plumber. Quality workmanship, fair pricing, personal service. Serving Frisco, McKinney, Allen, Plano and surrounding areas. Call (214) 542-1276.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --primary: #0c1f35;
+  --primary-dark: #060e1a;
+  --accent: #00b4d8;
+  --accent-dark: #0088a3;
+  --accent-rgb: 0,180,216;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #e8edf5;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: 0.01em; }
+
+/* ===== GRAIN OVERLAY ===== */
+.grain-overlay { position: relative; overflow: hidden; }
+.grain-overlay::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.grain-overlay > * { position: relative; z-index: 1; }
+
+/* ===== HERO ANIMATIONS ===== */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.22s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.36s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.64s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.42s both; }
+
+/* ===== CARD ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.anim-card { opacity: 0; }
+.anim-card.visible { animation: fadeUp 0.45s ease-out forwards; }
+.anim-card.visible:nth-child(1) { animation-delay: 0.05s; }
+.anim-card.visible:nth-child(2) { animation-delay: 0.15s; }
+.anim-card.visible:nth-child(3) { animation-delay: 0.25s; }
+.anim-card.visible:nth-child(4) { animation-delay: 0.35s; }
+.anim-card.visible:nth-child(5) { animation-delay: 0.45s; }
+.anim-card.visible:nth-child(6) { animation-delay: 0.55s; }
+
+/* ===== UTILITIES ===== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section-label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 8px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  text-decoration: none; border: none; cursor: pointer;
+  transition: all 0.2s ease; white-space: nowrap;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); box-shadow: 0 6px 24px rgba(var(--accent-rgb),0.4); }
+.btn-ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.55); }
+.btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: #fff; transform: translateY(-2px); }
+.btn-dark { background: var(--primary); color: #fff; }
+.btn-dark:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: var(--shadow); }
+.stars { display: inline-flex; gap: 2px; }
+.stars svg { width: 15px; height: 15px; fill: #f59e0b; }
+
+/* ===== SECTION 1: STICKY HEADER ===== */
+header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--primary);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  padding: 0 24px;
+}
+.header-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px; gap: 16px;
+}
+.header-brand {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+}
+.header-brand-icon {
+  width: 36px; height: 36px; flex-shrink: 0;
+}
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--t1);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.brand-name span { color: var(--accent); }
+.header-nav {
+  display: flex; align-items: center; gap: 24px;
+}
+.header-nav a {
+  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+  color: var(--t2); text-decoration: none;
+  transition: color 0.2s;
+}
+.header-nav a:hover { color: var(--accent); }
+.header-phone {
+  display: flex; align-items: center; gap: 8px;
+  text-decoration: none; color: var(--t1);
+  font-family: var(--font-body); font-size: 15px; font-weight: 600;
+}
+.header-phone:hover { color: var(--accent); }
+.header-cta {
+  background: var(--accent); color: #fff;
+  padding: 10px 20px; border-radius: 7px;
+  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+  text-decoration: none; transition: background 0.2s, transform 0.2s;
+}
+.header-cta:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+/* ===== SECTION 2: HERO ===== */
+.hero {
+  background: linear-gradient(145deg, var(--primary-dark) 0%, #0e2540 55%, var(--primary) 100%);
+  padding: 90px 24px 80px;
+}
+.hero-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 440px;
+  gap: 56px; align-items: center;
+}
+.hero-badge-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,180,216,0.15);
+  border: 1px solid rgba(0,180,216,0.35);
+  padding: 7px 16px; border-radius: 100px;
+  font-family: var(--font-body); font-size: 13px; font-weight: 600;
+  color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase;
+}
+.badge-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.75); }
+}
+.hero-headline {
+  font-size: clamp(52px, 7vw, 88px);
+  color: var(--t1); line-height: 0.95;
+  margin-top: 20px; letter-spacing: 0.02em;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-size: 17px; color: var(--t2); margin-top: 20px; max-width: 520px;
+  line-height: 1.7;
+}
+.hero-ctas {
+  display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px;
+}
+.hero-trust {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 20px;
+  margin-top: 32px; padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.trust-item {
+  display: flex; align-items: center; gap: 7px;
+  font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--t2);
+}
+.trust-item svg { width: 16px; height: 16px; flex-shrink: 0; }
+.trust-divider { color: var(--t3); font-size: 18px; }
+
+/* FROSTED GLASS CARD */
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 18px;
+  padding: 36px 32px;
+  box-shadow: 0 16px 64px rgba(0,0,0,0.35);
+}
+.card-icon-ring {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: rgba(0,180,216,0.15);
+  border: 1.5px solid rgba(0,180,216,0.35);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.card-icon-ring svg { width: 26px; height: 26px; }
+.hero-card-title {
+  font-family: var(--font-display); font-size: 28px; color: var(--t1);
+  letter-spacing: 0.03em; margin-bottom: 6px;
+}
+.hero-card-sub {
+  font-size: 13px; color: var(--t3); margin-bottom: 24px; line-height: 1.5;
+}
+.hero-card-props { display: flex; flex-direction: column; gap: 14px; }
+.card-prop {
+  display: flex; align-items: flex-start; gap: 12px;
+}
+.card-prop-icon {
+  width: 32px; height: 32px; flex-shrink: 0;
+  background: rgba(0,180,216,0.12);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.card-prop-icon svg { width: 16px; height: 16px; }
+.card-prop-text strong {
+  display: block; font-size: 13px; font-weight: 600; color: var(--t1);
+  margin-bottom: 1px;
+}
+.card-prop-text span { font-size: 12px; color: var(--t3); }
+.hero-card-cta {
+  width: 100%; margin-top: 24px; padding: 14px;
+  background: var(--accent); color: #fff;
+  border-radius: 9px; border: none; cursor: pointer;
+  font-family: var(--font-body); font-size: 15px; font-weight: 600;
+  text-decoration: none; display: block; text-align: center;
+  transition: background 0.2s, transform 0.2s;
+}
+.hero-card-cta:hover { background: var(--accent-dark); transform: translateY(-2px); }
+
+/* ===== SECTION 3: STATS ROW ===== */
+.stats-row {
+  background: var(--accent);
+  padding: 22px 24px;
+}
+.stats-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 0; align-items: center;
+}
+.stat-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 6px 36px;
+  border-right: 1px solid rgba(255,255,255,0.3);
+}
+.stat-item:last-child { border-right: none; }
+.stat-icon { width: 22px; height: 22px; flex-shrink: 0; }
+.stat-icon svg { width: 22px; height: 22px; fill: rgba(255,255,255,0.85); }
+.stat-number {
+  font-family: var(--font-display); font-size: 28px;
+  color: #fff; line-height: 1; letter-spacing: 0.02em;
+}
+.stat-label {
+  font-family: var(--font-body); font-size: 12px; font-weight: 600;
+  color: rgba(255,255,255,0.8); text-transform: uppercase;
+  letter-spacing: 0.08em; line-height: 1.2;
+}
+
+/* ===== SECTION 4: SERVICES ===== */
+.services-section {
+  background: var(--bg);
+  padding: 96px 24px;
+}
+.section-header {
+  text-align: center; margin-bottom: 64px;
+}
+.section-header h2 {
+  font-size: clamp(36px, 5vw, 54px);
+  color: var(--dark-text); margin-top: 8px;
+  line-height: 1.05;
+}
+.section-header p {
+  font-size: 16px; color: var(--grey-text);
+  max-width: 520px; margin: 14px auto 0;
+}
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.service-card {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex; align-items: flex-start; gap: 18px;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  background: #fff;
+}
+.service-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(var(--accent-rgb), 0.12);
+  transform: translateY(-3px);
+}
+.service-icon {
+  width: 48px; height: 48px; flex-shrink: 0;
+  background: rgba(0,180,216,0.08);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.25s;
+}
+.service-card:hover .service-icon { background: rgba(0,180,216,0.16); }
+.service-icon svg { width: 24px; height: 24px; }
+.service-text {}
+.service-text h3 {
+  font-size: 22px; color: var(--dark-text);
+  letter-spacing: 0.02em; margin-bottom: 6px;
+}
+.service-text p { font-size: 14px; color: var(--grey-text); line-height: 1.6; }
+
+/* ===== SECTION 5: WHY CHOOSE US ===== */
+.why-section {
+  background: var(--primary);
+  padding: 96px 24px;
+}
+.why-section .section-header h2 { color: var(--t1); }
+.why-section .section-header p { color: var(--t2); }
+.why-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 28px; max-width: 900px; margin: 0 auto;
+}
+.why-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  transition: background 0.25s, border-color 0.25s;
+}
+.why-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(0,180,216,0.35);
+}
+.why-icon-row {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 18px;
+}
+.why-num {
+  font-family: var(--font-display); font-size: 42px;
+  color: rgba(0,180,216,0.2); line-height: 1; letter-spacing: 0.01em;
+}
+.why-icon {
+  width: 44px; height: 44px;
+  background: rgba(0,180,216,0.12);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.why-icon svg { width: 22px; height: 22px; }
+.why-card h3 {
+  font-size: 24px; color: var(--t1);
+  margin-bottom: 10px; letter-spacing: 0.02em;
+}
+.why-card p { font-size: 14px; color: var(--t2); line-height: 1.7; }
+
+/* ===== SECTION 6: HOW IT WORKS ===== */
+.how-section {
+  background: var(--primary-dark);
+  padding: 96px 24px;
+}
+.how-section .section-header h2 { color: var(--t1); }
+.how-section .section-header p { color: var(--t2); }
+.steps-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 32px; position: relative;
+}
+.steps-grid::before {
+  content: '';
+  position: absolute; top: 36px; left: calc(16.66% + 24px); right: calc(16.66% + 24px);
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0,180,216,0.15), rgba(0,180,216,0.4), rgba(0,180,216,0.15));
+}
+.step-card {
+  text-align: center; padding: 40px 28px 36px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  position: relative;
+}
+.step-number {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: rgba(0,180,216,0.1);
+  border: 2px solid rgba(0,180,216,0.35);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+  position: relative; z-index: 1;
+}
+.step-number span {
+  font-family: var(--font-display); font-size: 30px;
+  color: var(--accent); letter-spacing: 0.03em;
+}
+.step-card h3 {
+  font-size: 24px; color: var(--t1);
+  letter-spacing: 0.03em; margin-bottom: 12px;
+}
+.step-card p { font-size: 14px; color: var(--t2); line-height: 1.7; }
+
+/* ===== SECTION 7: REVIEWS ===== */
+.reviews-section {
+  background: var(--bg-off);
+  padding: 96px 24px;
+}
+.reviews-section .section-header h2 { color: var(--dark-text); }
+.reviews-section .section-header p { color: var(--grey-text); }
+.reviews-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.review-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.review-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+.review-stars { display: flex; gap: 3px; margin-bottom: 6px; }
+.review-stars svg { width: 15px; height: 15px; fill: #f59e0b; }
+.review-date { font-size: 12px; color: var(--grey-text); margin-bottom: 16px; }
+.review-text {
+  font-size: 14px; color: var(--dark-text); line-height: 1.75;
+  margin-bottom: 22px;
+}
+.review-author { display: flex; align-items: center; gap: 12px; }
+.review-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(var(--accent-rgb), 0.12);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.review-avatar span {
+  font-family: var(--font-display); font-size: 18px;
+  color: var(--accent); letter-spacing: 0.02em;
+}
+.review-author-info strong {
+  display: block; font-size: 14px; font-weight: 600;
+  color: var(--dark-text);
+}
+.review-author-info span { font-size: 12px; color: var(--grey-text); }
+
+/* ===== SECTION 8: SERVICE AREAS ===== */
+.areas-section {
+  background: var(--primary);
+  padding: 80px 24px;
+}
+.areas-section .section-header h2 { color: var(--t1); }
+.areas-section .section-header p { color: var(--t2); }
+.areas-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; max-width: 840px; margin: 0 auto;
+}
+.area-chip {
+  display: flex; align-items: center; gap: 10px;
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  transition: background 0.2s, border-color 0.2s;
+}
+.area-chip:hover {
+  background: rgba(0,180,216,0.1);
+  border-color: rgba(0,180,216,0.3);
+}
+.area-pin { width: 18px; height: 18px; flex-shrink: 0; }
+.area-pin svg { width: 18px; height: 18px; fill: var(--accent); }
+.area-chip span {
+  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+  color: var(--t2);
+}
+.area-note {
+  text-align: center; margin-top: 36px;
+  font-size: 14px; color: var(--t3);
+}
+.area-note a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.area-note a:hover { text-decoration: underline; }
+
+/* ===== SECTION 9: CONTACT FORM ===== */
+.contact-section {
+  background: var(--bg);
+  padding: 96px 24px;
+}
+.contact-inner {
+  max-width: 1000px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: start;
+}
+.contact-info {}
+.contact-info h2 {
+  font-size: clamp(32px, 4vw, 48px); color: var(--dark-text);
+  letter-spacing: 0.02em; line-height: 1.05;
+  margin-bottom: 16px;
+}
+.contact-info p { font-size: 15px; color: var(--grey-text); line-height: 1.7; margin-bottom: 28px; }
+.contact-detail {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 16px; text-decoration: none;
+  color: var(--dark-text);
+}
+.contact-detail:hover .c-detail-label { color: var(--accent); }
+.c-detail-icon {
+  width: 40px; height: 40px; flex-shrink: 0;
+  border-radius: 10px;
+  background: rgba(var(--accent-rgb), 0.08);
+  display: flex; align-items: center; justify-content: center;
+}
+.c-detail-icon svg { width: 18px; height: 18px; }
+.c-detail-label {
+  font-size: 14px; font-weight: 600; color: var(--dark-text);
+  transition: color 0.2s;
+}
+.c-detail-sub { font-size: 12px; color: var(--grey-text); }
+.contact-form { }
+.form-group { margin-bottom: 18px; }
+.form-group label {
+  display: block; font-size: 13px; font-weight: 600;
+  color: var(--dark-text); margin-bottom: 7px; letter-spacing: 0.02em;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: 12px 14px;
+  border: 1.5px solid var(--border); border-radius: 8px;
+  font-family: var(--font-body); font-size: 14px; color: var(--dark-text);
+  background: #fff; outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.12);
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-submit {
+  width: 100%; padding: 15px;
+  background: var(--accent); color: #fff;
+  border: none; border-radius: 8px; cursor: pointer;
+  font-family: var(--font-body); font-size: 16px; font-weight: 600;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.form-submit:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(var(--accent-rgb), 0.35);
+}
+.form-note {
+  text-align: center; font-size: 12px; color: var(--grey-text);
+  margin-top: 10px;
+}
+
+/* ===== SECTION 10: CTA BAND ===== */
+.cta-band {
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  padding: 72px 24px;
+}
+.cta-band-inner {
+  max-width: 900px; margin: 0 auto;
+  text-align: center;
+}
+.cta-band h2 {
+  font-size: clamp(36px, 5.5vw, 64px);
+  color: #fff; letter-spacing: 0.03em; line-height: 1.0;
+  margin-bottom: 14px;
+}
+.cta-band p {
+  font-size: 17px; color: rgba(255,255,255,0.85);
+  margin-bottom: 36px; line-height: 1.6;
+}
+.cta-band-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+.btn-white { background: #fff; color: var(--accent-dark); font-weight: 600; }
+.btn-white:hover { background: #f0fbff; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.15); }
+.btn-outline-white { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.6); font-weight: 600; }
+.btn-outline-white:hover { background: rgba(255,255,255,0.12); border-color: #fff; transform: translateY(-2px); }
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--primary-dark);
+  padding: 64px 24px 32px;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.footer-brand h3 {
+  font-family: var(--font-display); font-size: 22px;
+  color: var(--t1); letter-spacing: 0.04em; margin-bottom: 10px;
+}
+.footer-brand h3 span { color: var(--accent); }
+.footer-brand p { font-size: 13px; color: var(--t3); line-height: 1.7; }
+.footer-phone-link {
+  display: inline-block; margin-top: 16px;
+  font-size: 17px; font-weight: 600; color: var(--accent);
+  text-decoration: none;
+}
+.footer-phone-link:hover { color: #fff; }
+.footer-col h4 {
+  font-family: var(--font-display); font-size: 16px;
+  color: var(--t1); letter-spacing: 0.06em;
+  margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 9px; }
+.footer-col ul li a {
+  font-size: 13px; color: var(--t3); text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-col ul li a:hover { color: var(--accent); }
+.footer-col address {
+  font-style: normal; font-size: 13px; color: var(--t3);
+  line-height: 1.8;
+}
+.footer-col address a { color: var(--accent); text-decoration: none; }
+.footer-col address a:hover { text-decoration: underline; }
+.footer-bottom {
+  max-width: 1200px; margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex; flex-wrap: wrap; justify-content: space-between;
+  align-items: center; gap: 12px;
+}
+.footer-bottom p { font-size: 12px; color: var(--t3); }
+.footer-bottom a { color: var(--accent); text-decoration: none; }
+.footer-bottom a:hover { text-decoration: underline; }
+.footer-legal { display: flex; gap: 20px; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-card { max-width: 480px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; max-width: 560px; }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid::before { display: none; }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer-inner { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .header-nav { display: none; }
+}
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+  .stat-item { padding: 6px 18px; }
+  .stats-inner { gap: 8px; }
+  .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.2); width: 100%; justify-content: center; padding: 10px; }
+  .stat-item:last-child { border-bottom: none; }
+  .hero-badge-pill { font-size: 11px; }
+  .hero-ctas { flex-direction: column; }
+  .hero-ctas .btn { justify-content: center; }
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== SECTION 1: STICKY HEADER ===== -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="header-brand" aria-label="John Hulse Plumbing home">
+      <svg class="header-brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="20" fill="rgba(0,180,216,0.12)"/>
+        <path d="M20 8C20 8 12 12 12 20C12 24.4183 15.5817 28 20 28C24.4183 28 28 24.4183 28 20C28 12 20 8 20 8Z" fill="rgba(0,180,216,0.3)" stroke="#00b4d8" stroke-width="1.5"/>
+        <path d="M17 22L19 17L23 21" stroke="#00b4d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="20" cy="20" r="2" fill="#00b4d8"/>
+        <path d="M20 28V33" stroke="#00b4d8" stroke-width="2" stroke-linecap="round"/>
+        <path d="M17 32H23" stroke="#00b4d8" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">John Hulse <span>Plumbing</span></span>
+    </a>
+    <nav class="header-nav" aria-label="Primary navigation">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:2145421276" class="header-phone" aria-label="Call us at (214) 542-1276">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (214) 542-1276
+    </a>
+    <a href="tel:2145421276" class="header-cta">Free Estimate</a>
+  </div>
+</header>
+
+<!-- ===== SECTION 2: HERO ===== -->
+<section class="hero grain-overlay" aria-label="Hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="hero-badge-pill">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Frisco's Personal Plumber
+        </span>
+      </div>
+      <h1 class="hero-headline">
+        Quality<br><span>Plumbing</span><br>Every Time
+      </h1>
+      <p class="hero-sub">You call. John answers. No call centers, no dispatch queues — just an experienced local plumber who shows up on time, fixes it right, and treats your home near <em>Legacy West</em> or anywhere in Frisco like his own.</p>
+      <div class="hero-ctas">
+        <a href="tel:2145421276" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (214) 542-1276
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get a Free Estimate</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>4.8 Stars</span>
+        </div>
+        <span class="trust-divider" aria-hidden="true">|</span>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>19 Reviews</span>
+        </div>
+        <span class="trust-divider" aria-hidden="true">|</span>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Licensed &amp; Insured</span>
+        </div>
+        <span class="trust-divider" aria-hidden="true">|</span>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Same-Day Available</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-card hero-card" aria-label="Why hire John Hulse">
+      <div class="card-icon-ring">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <div class="hero-card-title">Done Right, Every Time</div>
+      <div class="hero-card-sub">What you get when you call John Hulse</div>
+      <div class="hero-card-props">
+        <div class="card-prop">
+          <div class="card-prop-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="card-prop-text">
+            <strong>You Get John — Not a Stranger</strong>
+            <span>The owner shows up every time. Personal accountability.</span>
+          </div>
+        </div>
+        <div class="card-prop">
+          <div class="card-prop-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="card-prop-text">
+            <strong>Quality Workmanship Guaranteed</strong>
+            <span>Code-compliant work with materials that last.</span>
+          </div>
+        </div>
+        <div class="card-prop">
+          <div class="card-prop-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="card-prop-text">
+            <strong>Fair, Upfront Pricing</strong>
+            <span>No hidden fees. You know the cost before work begins.</span>
+          </div>
+        </div>
+        <div class="card-prop">
+          <div class="card-prop-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="card-prop-text">
+            <strong>Same-Day Response</strong>
+            <span>Call in the morning, fixed by evening in most cases.</span>
+          </div>
+        </div>
+      </div>
+      <a href="tel:2145421276" class="hero-card-cta">Call Now — (214) 542-1276</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: STATS ROW ===== -->
+<div class="stats-row" role="region" aria-label="Key stats">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div>
+        <div class="stat-number"><span data-target="4.8" data-decimal="1">4.8</span></div>
+        <div class="stat-label">Star Rating</div>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div>
+        <div class="stat-number"><span data-target="19">0</span></div>
+        <div class="stat-label">Verified Reviews</div>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div>
+        <div class="stat-number">Licensed</div>
+        <div class="stat-label">&amp; Insured</div>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div>
+        <div class="stat-number">Same-Day</div>
+        <div class="stat-label">Service Available</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 4: SERVICES ===== -->
+<section class="services-section" id="services" aria-label="Services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What We Fix</span>
+      <h2>Full-Service Plumbing<br>For Frisco Homes</h2>
+      <p>From a dripping faucet to a full re-pipe, John handles it all with precision and care.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card anim-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a5 5 0 0 1 5 5c0 4-5 11-5 11S7 11 7 7a5 5 0 0 1 5-5z"/><circle cx="12" cy="7" r="2"/></svg>
+        </div>
+        <div class="service-text">
+          <h3>Leak Detection &amp; Repair</h3>
+          <p>Slab leaks, pipe leaks, fixture leaks — diagnosed fast and fixed right the first time to protect your home and your water bill.</p>
+        </div>
+      </div>
+
+      <div class="service-card anim-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="5"/></svg>
+        </div>
+        <div class="service-text">
+          <h3>Water Heater Service</h3>
+          <p>Traditional tank and tankless water heater installation, repair, and replacement. Hot water restored quickly with quality brands.</p>
+        </div>
+      </div>
+
+      <div class="service-card anim-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
+        </div>
+        <div class="service-text">
+          <h3>Drain Cleaning</h3>
+          <p>Slow drains and stubborn clogs cleared with professional equipment — kitchen, bathroom, main line, and everything in between.</p>
+        </div>
+      </div>
+
+      <div class="service-card anim-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="service-text">
+          <h3>Toilet Repair &amp; Replacement</h3>
+          <p>Running toilets, broken flush valves, rocking bases, and full replacement. Done cleanly, done correctly, no mess left behind.</p>
+        </div>
+      </div>
+
+      <div class="service-card anim-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h18M3 15h18"/></svg>
+        </div>
+        <div class="service-text">
+          <h3>Faucet &amp; Fixture Install</h3>
+          <p>Kitchen faucets, bathroom faucets, shower fixtures, and outdoor hose bibs. Upgrade your hardware with professional installation.</p>
+        </div>
+      </div>
+
+      <div class="service-card anim-card">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="service-text">
+          <h3>Re-Pipe &amp; Water Line</h3>
+          <p>Whole-home re-piping, water service line replacement, and main shutoff upgrades. Built to last with proper materials and code-compliant work.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: WHY CHOOSE US ===== -->
+<section class="why-section" id="why" aria-label="Why choose John Hulse Plumbing">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">The John Hulse Difference</span>
+      <h2>A Plumber Who Takes It Personally</h2>
+      <p>Not a franchise. Not a call center. A local family plumber who stakes his reputation on every job.</p>
+    </div>
+    <div class="why-grid">
+
+      <div class="why-card anim-card">
+        <div class="why-icon-row">
+          <div class="why-num" aria-hidden="true">01</div>
+          <div class="why-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+        </div>
+        <h3>You Get John</h3>
+        <p>When you call, John picks up. When the truck pulls up, John gets out. No subcontractors, no surprises. You get the owner's expertise and personal investment on every single job — whether it's a dripping faucet or a water heater emergency.</p>
+      </div>
+
+      <div class="why-card anim-card">
+        <div class="why-icon-row">
+          <div class="why-num" aria-hidden="true">02</div>
+          <div class="why-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+        </div>
+        <h3>Quality Workmanship</h3>
+        <p>Proper technique, quality parts, and code-compliant installs. John does the job right the first time — because a callback is a failure, not a revenue opportunity. Your home is treated with the same care he'd give his own.</p>
+      </div>
+
+      <div class="why-card anim-card">
+        <div class="why-icon-row">
+          <div class="why-num" aria-hidden="true">03</div>
+          <div class="why-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+        </div>
+        <h3>Fair, Honest Pricing</h3>
+        <p>You know the price before a single wrench turns. No bait-and-switch, no upsells, no inflated diagnostics. Small business overhead means competitive rates — and a plumber who values your referral more than a padded invoice.</p>
+      </div>
+
+      <div class="why-card anim-card">
+        <div class="why-icon-row">
+          <div class="why-num" aria-hidden="true">04</div>
+          <div class="why-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+        </div>
+        <h3>Frisco Local</h3>
+        <p>John lives and works in this community. He knows the neighborhoods, the builder-grade plumbing common in newer Frisco construction, and the clay soil that stresses underground lines. Local knowledge makes a real difference in diagnosis and repair.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: HOW IT WORKS ===== -->
+<section class="how-section" aria-label="How it works">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Simple Process</span>
+      <h2>Three Steps To Fixed</h2>
+      <p>No complicated scheduling systems. No hold music. Just a straightforward path to a working plumbing system.</p>
+    </div>
+    <div class="steps-grid">
+
+      <div class="step-card anim-card">
+        <div class="step-number" aria-hidden="true"><span>01</span></div>
+        <h3>You Call John</h3>
+        <p>Dial (214) 542-1276 and John picks up. Describe the issue — he'll ask the right questions, give you a straight answer, and schedule a time that works for you. Same-day appointments available in most cases.</p>
+      </div>
+
+      <div class="step-card anim-card">
+        <div class="step-number" aria-hidden="true"><span>02</span></div>
+        <h3>John Shows Up</h3>
+        <p>John arrives on time, assesses the problem, and gives you a clear upfront price before any work begins. No pressure, no surprises. You decide — and if you proceed, he gets to work immediately.</p>
+      </div>
+
+      <div class="step-card anim-card">
+        <div class="step-number" aria-hidden="true"><span>03</span></div>
+        <h3>Done Right</h3>
+        <p>The job is completed with quality parts and professional technique. John cleans up after himself, walks you through the work, and ensures you're satisfied before he leaves. That's the whole promise.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 7: REVIEWS ===== -->
+<section class="reviews-section" id="reviews" aria-label="Customer reviews">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">What Frisco Homeowners Say</span>
+      <h2>4.8 Stars Across 19 Reviews</h2>
+      <p>Real feedback from real neighbors — no filter, no cherry-picking.</p>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card anim-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;" aria-hidden="true"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="review-date">3 weeks ago</div>
+        <p class="review-text">"My water heater gave out on a Thursday morning. I called John, he answered right away, gave me a straightforward quote over the phone, and had it replaced by early afternoon. No runaround, no inflated price — just showed up, did the job, and left everything clean. Will call him for everything plumbing-related going forward."</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true"><span>MB</span></div>
+          <div class="review-author-info">
+            <strong>Mark B.</strong>
+            <span>Frisco, TX — Water Heater Replacement</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card anim-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;" aria-hidden="true"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars" aria-label="5 out of 5 stars">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="review-date">2 months ago</div>
+        <p class="review-text">"Had a stubborn kitchen drain that two other plumbers couldn't fully clear. John came out, diagnosed the real issue — a partial blockage further down the line than anyone had checked — and fixed it properly. He explained everything as he went, charged a fair price, and has been my go-to plumber ever since. Highly recommend to anyone in the Frisco area."</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true"><span>SC</span></div>
+          <div class="review-author-info">
+            <strong>Sarah C.</strong>
+            <span>Frisco, TX — Drain Cleaning</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card anim-card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;" aria-hidden="true"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars" aria-label="4 out of 5 stars">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="review-date">4 months ago</div>
+        <p class="review-text">"Found a slow leak under my bathroom vanity that had been quietly damaging the cabinet. John found the source in about ten minutes — a pinhole I never would have spotted — and had it patched and tested within an hour. Very knowledgeable, professional, and no upsell pressure whatsoever. Refreshing compared to the big companies I've dealt with before."</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true"><span>TR</span></div>
+          <div class="review-author-info">
+            <strong>Tom R.</strong>
+            <span>Frisco, TX — Leak Detection &amp; Repair</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 8: SERVICE AREAS ===== -->
+<section class="areas-section" id="areas" aria-label="Service areas">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Where We Work</span>
+      <h2>Serving Frisco &amp; Surrounding Cities</h2>
+      <p>Based in Frisco, serving the entire North Dallas corridor with the same personal service.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-chip">
+        <div class="area-pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+        <span>Frisco, TX</span>
+      </div>
+      <div class="area-chip">
+        <div class="area-pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+        <span>McKinney, TX</span>
+      </div>
+      <div class="area-chip">
+        <div class="area-pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+        <span>Allen, TX</span>
+      </div>
+      <div class="area-chip">
+        <div class="area-pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+        <span>Plano, TX</span>
+      </div>
+      <div class="area-chip">
+        <div class="area-pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+        <span>Prosper, TX</span>
+      </div>
+      <div class="area-chip">
+        <div class="area-pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+        <span>Celina, TX</span>
+      </div>
+    </div>
+    <p class="area-note">Not sure if we serve your area? <a href="tel:2145421276">Call us</a> — we'll let you know right away.</p>
+  </div>
+</section>
+
+<!-- ===== SECTION 9: CONTACT FORM ===== -->
+<section class="contact-section" id="contact" aria-label="Contact us">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <span class="section-label">Get In Touch</span>
+        <h2>Request A Free Estimate</h2>
+        <p>No commitment, no pressure. Describe your plumbing problem and John will follow up promptly with a straight answer and fair price.</p>
+
+        <a href="tel:2145421276" class="contact-detail">
+          <div class="c-detail-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="c-detail-label">(214) 542-1276</div>
+            <div class="c-detail-sub">Call or text anytime</div>
+          </div>
+        </a>
+
+        <div class="contact-detail">
+          <div class="c-detail-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div>
+            <div class="c-detail-label">Frisco, TX &amp; Surrounding Areas</div>
+            <div class="c-detail-sub">Frisco, McKinney, Allen, Plano, Prosper, Celina</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="c-detail-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00b4d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="c-detail-label">Mon – Sat: 7am – 7pm</div>
+            <div class="c-detail-sub">Same-day appointments often available</div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" name="contact" onsubmit="handleSubmit(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" placeholder="John" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(214) 555-0100" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@email.com">
+        </div>
+        <div class="form-group">
+          <label for="service-type">Service Needed</label>
+          <select id="service-type" name="service_type">
+            <option value="" disabled selected>Select a service...</option>
+            <option>Leak Detection &amp; Repair</option>
+            <option>Water Heater Service</option>
+            <option>Drain Cleaning</option>
+            <option>Toilet Repair &amp; Replacement</option>
+            <option>Faucet &amp; Fixture Install</option>
+            <option>Re-Pipe &amp; Water Line</option>
+            <option>Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Describe Your Issue</label>
+          <textarea id="message" name="message" placeholder="Tell John what's going on — as much detail as you have..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send My Request</button>
+        <p class="form-note">John typically responds within 1-2 hours during business hours.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="cta-band grain-overlay" aria-label="Call to action">
+  <div class="cta-band-inner">
+    <h2>Ready To Get It Fixed?</h2>
+    <p>You call. John answers. Done right, every time. No franchises, no call centers — just a local plumber who takes pride in his work and stands behind every job.</p>
+    <div class="cta-band-btns">
+      <a href="tel:2145421276" class="btn btn-white">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 5.49 5.49l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (214) 542-1276
+      </a>
+      <a href="#contact" class="btn btn-outline-white">Free Estimate Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer aria-label="Site footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>John Hulse <span>Plumbing</span></h3>
+      <p>Frisco's trusted local plumber. Quality workmanship, fair pricing, and personal service on every job — because your home deserves better than a call center.</p>
+      <a href="tel:2145421276" class="footer-phone-link">(214) 542-1276</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Leak Detection &amp; Repair</a></li>
+        <li><a href="#services">Water Heater Service</a></li>
+        <li><a href="#services">Drain Cleaning</a></li>
+        <li><a href="#services">Toilet Repair &amp; Replacement</a></li>
+        <li><a href="#services">Faucet &amp; Fixture Install</a></li>
+        <li><a href="#services">Re-Pipe &amp; Water Line</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Service Areas</h4>
+      <ul>
+        <li><a href="#areas">Frisco, TX</a></li>
+        <li><a href="#areas">McKinney, TX</a></li>
+        <li><a href="#areas">Allen, TX</a></li>
+        <li><a href="#areas">Plano, TX</a></li>
+        <li><a href="#areas">Prosper, TX</a></li>
+        <li><a href="#areas">Celina, TX</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <address>
+        <strong style="color: rgba(255,255,255,0.6); font-size: 13px;">John Hulse Plumbing</strong><br>
+        Frisco, TX 75033<br><br>
+        <a href="tel:2145421276">(214) 542-1276</a><br><br>
+        Mon – Sat: 7am – 7pm<br>
+        Same-day service available
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Copyright 2026 John Hulse Plumbing. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== INTERSECTION OBSERVER — CARD FADE UP ===== */
+(function() {
+  var cards = document.querySelectorAll('.anim-card');
+  if (!cards.length) return;
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  cards.forEach(function(card) { io.observe(card); });
+})();
+
+/* ===== ANIMATE COUNT ===== */
+(function() {
+  var els = document.querySelectorAll('[data-target]');
+  if (!els.length) return;
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      var el = entry.target;
+      var target = parseFloat(el.getAttribute('data-target'));
+      var isDecimal = el.hasAttribute('data-decimal');
+      var decimals = isDecimal ? parseInt(el.getAttribute('data-decimal')) : 0;
+      var duration = 1200;
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var ease = 1 - Math.pow(1 - progress, 3);
+        var val = target * ease;
+        el.textContent = val.toFixed(decimals);
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = target.toFixed(decimals);
+      }
+      requestAnimationFrame(step);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  els.forEach(function(el) { io.observe(el); });
+})();
+
+/* ===== SMOOTH SCROLL ===== */
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var id = a.getAttribute('href');
+    if (id === '#') return;
+    var target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+/* ===== FORM SUBMIT ===== */
+function handleSubmit(e) {
+  e.preventDefault();
+  var btn = e.target.querySelector('.form-submit');
+  btn.textContent = 'Request Sent!';
+  btn.style.background = '#0088a3';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>

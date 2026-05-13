@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Garrison Plumbing Services | Frisco, TX | Licensed Plumber | Free Estimates</title>
+<meta name="description" content="Garrison Plumbing Services — Frisco's honest licensed plumber. Free estimates, no hidden fees, fast response. Serving Frisco, McKinney, Allen, Plano &amp; surrounding areas. Call (972) 987-4255.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap');
+:root {
+  --primary: #0d1b2e;
+  --primary-dark: #070f1a;
+  --accent: #e63946;
+  --accent-dark: #b52a35;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #e8edf5;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--bg);color:var(--dark-text);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%}
+
+/* ─── STICKY HEADER ─── */
+.site-header{
+  position:sticky;top:0;z-index:1000;
+  background:var(--primary);
+  padding:0 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  height:68px;
+  box-shadow:0 2px 16px rgba(0,0,0,0.35);
+}
+.header-brand{
+  display:flex;align-items:center;gap:12px;
+}
+.header-logo-mark{
+  width:38px;height:38px;flex-shrink:0;
+}
+.header-name{
+  font-family:var(--font-display);
+  font-size:1.55rem;letter-spacing:0.04em;
+  color:var(--t1);line-height:1;
+}
+.header-name span{color:var(--accent);}
+.header-nav{
+  display:flex;align-items:center;gap:28px;
+}
+.header-nav a{
+  font-family:var(--font-body);font-size:0.82rem;font-weight:600;
+  color:var(--t2);letter-spacing:0.06em;text-transform:uppercase;
+  transition:color 0.2s;
+}
+.header-nav a:hover{color:var(--t1);}
+.header-cta{
+  display:flex;align-items:center;gap:10px;
+  background:var(--accent);color:var(--t1);
+  padding:9px 20px;border-radius:6px;
+  font-family:var(--font-body);font-size:0.88rem;font-weight:600;
+  letter-spacing:0.03em;
+  transition:background 0.2s,transform 0.15s;
+  white-space:nowrap;
+}
+.header-cta:hover{background:var(--accent-dark);transform:translateY(-1px);}
+.header-cta svg{flex-shrink:0;}
+
+/* ─── HERO ─── */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#070f1a 0%,#0d1b2e 55%,#102340 100%);
+  min-height:88vh;
+  display:flex;align-items:center;
+  padding:80px 5%;
+}
+.hero-grain{
+  position:absolute;inset:0;pointer-events:none;opacity:0.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.hero-inner{
+  position:relative;z-index:2;
+  width:100%;max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(230,57,70,0.15);border:1px solid rgba(230,57,70,0.4);
+  color:var(--accent);
+  padding:7px 16px;border-radius:100px;
+  font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+  margin-bottom:22px;
+  opacity:0;transform:translateY(24px);
+}
+.hero-badge svg{flex-shrink:0;}
+.hero-headline{
+  font-family:var(--font-display);
+  font-size:clamp(3.2rem,6.5vw,5.2rem);
+  line-height:1;letter-spacing:0.02em;
+  color:var(--t1);
+  margin-bottom:20px;
+  opacity:0;transform:translateY(24px);
+}
+.hero-headline span{color:var(--accent);}
+.hero-sub{
+  font-size:1.05rem;font-weight:400;
+  color:var(--t2);
+  max-width:520px;line-height:1.7;
+  margin-bottom:34px;
+  opacity:0;transform:translateY(24px);
+}
+.hero-ctas{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  margin-bottom:44px;
+  opacity:0;transform:translateY(24px);
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--accent);color:var(--t1);
+  padding:14px 28px;border-radius:8px;
+  font-weight:600;font-size:0.95rem;letter-spacing:0.02em;
+  transition:background 0.2s,transform 0.15s,box-shadow 0.2s;
+  box-shadow:0 4px 18px rgba(230,57,70,0.35);
+}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 6px 24px rgba(230,57,70,0.45);}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:9px;
+  border:2px solid rgba(255,255,255,0.45);color:var(--t1);
+  padding:13px 26px;border-radius:8px;
+  font-weight:600;font-size:0.95rem;letter-spacing:0.02em;
+  transition:border-color 0.2s,background 0.2s,transform 0.15s;
+}
+.btn-ghost:hover{border-color:var(--t1);background:rgba(255,255,255,0.07);transform:translateY(-2px);}
+.hero-trust{
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+  opacity:0;transform:translateY(24px);
+}
+.trust-item{
+  display:flex;align-items:center;gap:7px;
+  font-size:0.82rem;font-weight:600;color:var(--t2);letter-spacing:0.04em;
+}
+.trust-item svg{color:var(--accent);flex-shrink:0;}
+.trust-sep{width:1px;height:18px;background:rgba(255,255,255,0.18);}
+
+/* Hero card */
+.hero-card{
+  background:rgba(255,255,255,0.07);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,0.14);
+  border-radius:16px;
+  padding:36px 32px;
+  box-shadow:0 8px 40px rgba(0,0,0,0.3);
+  opacity:0;transform:translateY(24px);
+}
+.hero-card-headline{
+  font-family:var(--font-display);
+  font-size:1.7rem;letter-spacing:0.04em;
+  color:var(--t1);margin-bottom:6px;
+}
+.hero-card-sub{
+  font-size:0.82rem;color:var(--t3);margin-bottom:26px;
+  font-weight:400;
+}
+.hero-card-props{
+  display:flex;flex-direction:column;gap:16px;
+}
+.hero-prop{
+  display:flex;align-items:flex-start;gap:14px;
+}
+.hero-prop-icon{
+  width:42px;height:42px;flex-shrink:0;
+  background:rgba(230,57,70,0.15);border:1px solid rgba(230,57,70,0.25);
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--accent);
+}
+.hero-prop-text strong{
+  display:block;font-size:0.9rem;font-weight:600;color:var(--t1);margin-bottom:1px;
+}
+.hero-prop-text span{font-size:0.8rem;color:var(--t3);}
+
+/* ─── STATS ROW ─── */
+.stats-row{
+  background:var(--primary);
+  padding:28px 5%;
+  border-top:1px solid rgba(255,255,255,0.06);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.stats-inner{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+}
+.stat-item{
+  display:flex;flex-direction:column;align-items:center;
+  padding:18px 12px;
+  border-right:1px solid rgba(255,255,255,0.1);
+}
+.stat-item:last-child{border-right:none;}
+.stat-number{
+  font-family:var(--font-display);font-size:2.6rem;letter-spacing:0.03em;
+  color:var(--accent);line-height:1;
+}
+.stat-label{
+  font-size:0.78rem;font-weight:600;color:var(--t2);
+  text-align:center;letter-spacing:0.05em;text-transform:uppercase;
+  margin-top:4px;
+}
+
+/* ─── SERVICES ─── */
+.services{
+  background:var(--bg);
+  padding:90px 5%;
+}
+.section-label{
+  font-size:0.78rem;font-weight:600;color:var(--accent);
+  letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;
+}
+.section-title{
+  font-family:var(--font-display);
+  font-size:clamp(2.2rem,4vw,3rem);letter-spacing:0.03em;
+  color:var(--dark-text);margin-bottom:12px;
+}
+.section-title.light{color:var(--t1);}
+.section-sub{
+  font-size:1rem;color:var(--grey-text);max-width:540px;line-height:1.7;
+  margin-bottom:52px;
+}
+.section-sub.light{color:var(--t2);}
+.services-grid{
+  max-width:1160px;margin:0 auto;
+}
+.services-header{max-width:1160px;margin:0 auto 0 auto;}
+.svc-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  max-width:1160px;margin:0 auto;
+}
+.svc-card{
+  background:var(--bg-off);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:32px 28px;
+  transition:transform 0.25s,box-shadow 0.25s,border-color 0.25s;
+  opacity:0;transform:translateY(30px);
+}
+.svc-card.visible{opacity:1;transform:translateY(0);}
+.svc-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-lg);
+  border-color:rgba(230,57,70,0.25);
+}
+.svc-icon{
+  width:52px;height:52px;
+  background:rgba(230,57,70,0.1);border:1px solid rgba(230,57,70,0.2);
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--accent);
+  margin-bottom:20px;
+}
+.svc-title{
+  font-family:var(--font-display);font-size:1.35rem;letter-spacing:0.04em;
+  color:var(--dark-text);margin-bottom:8px;
+}
+.svc-desc{
+  font-size:0.88rem;color:var(--grey-text);line-height:1.65;
+}
+
+/* ─── WHY CHOOSE US ─── */
+.why{
+  background:var(--primary);
+  position:relative;overflow:hidden;
+  padding:90px 5%;
+}
+.why-grain{
+  position:absolute;inset:0;pointer-events:none;opacity:0.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.why-inner{position:relative;z-index:2;max-width:1160px;margin:0 auto;}
+.why-stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  margin-bottom:60px;
+}
+.why-stat{
+  background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);
+  border-radius:var(--radius);
+  padding:28px 20px;text-align:center;
+  transition:border-color 0.2s;
+  opacity:0;transform:translateY(30px);
+}
+.why-stat.visible{opacity:1;transform:translateY(0);}
+.why-stat:hover{border-color:rgba(230,57,70,0.35);}
+.why-stat-num{
+  font-family:var(--font-display);font-size:2.8rem;letter-spacing:0.03em;
+  color:var(--accent);line-height:1;margin-bottom:6px;
+}
+.why-stat-label{font-size:0.8rem;font-weight:600;color:var(--t2);letter-spacing:0.05em;text-transform:uppercase;}
+.why-diffs{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:24px;
+}
+.why-diff{
+  display:flex;align-items:flex-start;gap:18px;
+  background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);
+  border-radius:var(--radius);
+  padding:28px 24px;
+  transition:border-color 0.2s,background 0.2s;
+  opacity:0;transform:translateY(30px);
+}
+.why-diff.visible{opacity:1;transform:translateY(0);}
+.why-diff:hover{border-color:rgba(230,57,70,0.3);background:rgba(255,255,255,0.06);}
+.why-diff-icon{
+  width:48px;height:48px;flex-shrink:0;
+  background:rgba(230,57,70,0.15);border:1px solid rgba(230,57,70,0.25);
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--accent);
+}
+.why-diff-text strong{
+  display:block;font-size:1rem;font-weight:600;color:var(--t1);margin-bottom:4px;
+}
+.why-diff-text p{font-size:0.87rem;color:var(--t2);line-height:1.6;}
+
+/* ─── HOW IT WORKS ─── */
+.how{
+  background:var(--primary-dark);
+  padding:90px 5%;
+}
+.how-inner{max-width:1160px;margin:0 auto;}
+.how-steps{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  position:relative;
+  margin-top:52px;
+}
+.how-connector{
+  position:absolute;top:36px;left:calc(16.66% + 20px);right:calc(16.66% + 20px);
+  height:2px;
+  background:transparent;
+  border-top:2px dashed rgba(230,57,70,0.4);
+  z-index:0;
+}
+.how-step{
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;
+  padding:0 28px;
+}
+.how-num{
+  width:72px;height:72px;
+  background:var(--accent);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-size:1.8rem;letter-spacing:0.05em;
+  color:var(--t1);
+  margin-bottom:24px;
+  box-shadow:0 4px 20px rgba(230,57,70,0.4);
+  flex-shrink:0;
+}
+.how-step-title{
+  font-family:var(--font-display);font-size:1.4rem;letter-spacing:0.04em;
+  color:var(--t1);margin-bottom:10px;
+}
+.how-step-desc{font-size:0.88rem;color:var(--t2);line-height:1.65;}
+
+/* ─── REVIEWS ─── */
+.reviews{
+  background:var(--bg-off);
+  padding:90px 5%;
+}
+.reviews-inner{max-width:1160px;margin:0 auto;}
+.reviews-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  margin-top:52px;
+}
+.review-card{
+  background:var(--bg);border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:32px 28px;
+  transition:transform 0.25s,box-shadow 0.25s;
+  opacity:0;transform:translateY(30px);
+}
+.review-card.visible{opacity:1;transform:translateY(0);}
+.review-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);}
+.review-stars{
+  display:flex;gap:3px;margin-bottom:12px;
+}
+.review-stars svg{color:#f59e0b;}
+.review-text{
+  font-size:0.92rem;color:var(--dark-text);line-height:1.7;
+  margin-bottom:20px;
+}
+.review-author{
+  display:flex;align-items:center;gap:12px;
+  border-top:1px solid var(--border);padding-top:16px;
+}
+.review-avatar{
+  width:38px;height:38px;border-radius:50%;
+  background:var(--primary);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-size:1rem;color:var(--t1);
+  flex-shrink:0;
+}
+.review-name{font-size:0.88rem;font-weight:600;color:var(--dark-text);}
+.review-meta{font-size:0.78rem;color:var(--grey-text);}
+
+/* ─── SERVICE AREAS ─── */
+.areas{
+  background:var(--primary);
+  padding:90px 5%;
+}
+.areas-inner{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
+}
+.areas-copy .section-sub{margin-bottom:32px;}
+.areas-chip-card{
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);
+  border-radius:16px;padding:36px;
+}
+.areas-chip-title{
+  font-family:var(--font-display);font-size:1.3rem;letter-spacing:0.04em;
+  color:var(--t1);margin-bottom:20px;
+}
+.areas-chips{
+  display:flex;flex-wrap:wrap;gap:10px;
+}
+.area-chip{
+  display:flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);
+  border-radius:100px;
+  padding:8px 16px;
+  font-size:0.85rem;font-weight:600;color:var(--t1);
+  transition:background 0.2s,border-color 0.2s;
+}
+.area-chip:hover{background:rgba(230,57,70,0.2);border-color:rgba(230,57,70,0.4);}
+.area-chip svg{color:var(--accent);flex-shrink:0;}
+
+/* ─── CONTACT FORM ─── */
+.contact{
+  background:var(--bg);
+  padding:90px 5%;
+}
+.contact-inner{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 380px;gap:56px;align-items:start;
+}
+.contact-form-wrap .section-sub{margin-bottom:32px;}
+.form-row{
+  display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px;
+}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:18px;}
+.form-group label{
+  font-size:0.82rem;font-weight:600;color:var(--dark-text);letter-spacing:0.04em;text-transform:uppercase;
+}
+.form-group input,
+.form-group select,
+.form-group textarea{
+  padding:12px 16px;
+  border:1.5px solid var(--border);border-radius:8px;
+  font-family:var(--font-body);font-size:0.92rem;color:var(--dark-text);
+  background:var(--bg-off);
+  outline:none;
+  transition:border-color 0.2s,box-shadow 0.2s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(230,57,70,0.1);
+}
+.form-group textarea{resize:vertical;min-height:110px;}
+.form-submit{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--accent);color:var(--t1);
+  padding:15px 32px;border-radius:8px;
+  font-family:var(--font-body);font-weight:600;font-size:0.95rem;
+  border:none;cursor:pointer;
+  transition:background 0.2s,transform 0.15s,box-shadow 0.2s;
+  box-shadow:0 4px 16px rgba(230,57,70,0.3);
+}
+.form-submit:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 6px 22px rgba(230,57,70,0.4);}
+.contact-info-card{
+  background:var(--primary);border-radius:16px;
+  padding:36px 30px;
+  color:var(--t1);
+}
+.contact-info-title{
+  font-family:var(--font-display);font-size:1.6rem;letter-spacing:0.04em;
+  color:var(--t1);margin-bottom:6px;
+}
+.contact-info-sub{font-size:0.85rem;color:var(--t2);margin-bottom:28px;}
+.contact-info-items{display:flex;flex-direction:column;gap:18px;}
+.contact-info-item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.contact-info-item:last-child{border-bottom:none;padding-bottom:0;}
+.contact-info-icon{
+  width:42px;height:42px;flex-shrink:0;
+  background:rgba(230,57,70,0.15);border:1px solid rgba(230,57,70,0.25);
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--accent);
+}
+.contact-info-item strong{display:block;font-size:0.85rem;font-weight:600;color:var(--t1);margin-bottom:2px;}
+.contact-info-item span{font-size:0.82rem;color:var(--t2);}
+.contact-hours{
+  margin-top:24px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.08);
+}
+.contact-hours-title{
+  font-family:var(--font-display);font-size:1rem;letter-spacing:0.06em;
+  color:var(--t1);margin-bottom:12px;
+}
+.hours-row{
+  display:flex;justify-content:space-between;
+  font-size:0.82rem;color:var(--t2);margin-bottom:6px;
+}
+.hours-row span:last-child{color:var(--t1);font-weight:600;}
+
+/* ─── CTA BAND ─── */
+.cta-band{
+  background:linear-gradient(135deg,var(--accent-dark),var(--accent));
+  position:relative;overflow:hidden;
+  padding:72px 5%;
+  text-align:center;
+}
+.cta-grain{
+  position:absolute;inset:0;pointer-events:none;opacity:0.06;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+.cta-band-inner{position:relative;z-index:2;max-width:720px;margin:0 auto;}
+.cta-band-title{
+  font-family:var(--font-display);
+  font-size:clamp(2rem,4.5vw,3.2rem);letter-spacing:0.03em;
+  color:var(--t1);margin-bottom:12px;
+}
+.cta-band-sub{
+  font-size:1.05rem;color:rgba(255,255,255,0.85);line-height:1.65;
+  margin-bottom:34px;
+}
+.cta-band-btns{
+  display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+}
+.btn-white{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--t1);color:var(--accent-dark);
+  padding:15px 30px;border-radius:8px;
+  font-weight:600;font-size:0.95rem;letter-spacing:0.02em;
+  transition:background 0.2s,transform 0.15s,box-shadow 0.2s;
+  box-shadow:0 4px 18px rgba(0,0,0,0.2);
+}
+.btn-white:hover{background:#f0f4ff;transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.28);}
+.btn-outline-white{
+  display:inline-flex;align-items:center;gap:9px;
+  border:2px solid rgba(255,255,255,0.6);color:var(--t1);
+  padding:13px 28px;border-radius:8px;
+  font-weight:600;font-size:0.95rem;
+  transition:border-color 0.2s,background 0.2s,transform 0.15s;
+}
+.btn-outline-white:hover{border-color:var(--t1);background:rgba(255,255,255,0.12);transform:translateY(-2px);}
+
+/* ─── FOOTER ─── */
+.footer{
+  background:var(--primary-dark);
+  padding:68px 5% 36px;
+}
+.footer-inner{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;
+  padding-bottom:52px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.footer-brand-name{
+  font-family:var(--font-display);font-size:1.6rem;letter-spacing:0.04em;
+  color:var(--t1);margin-bottom:4px;
+}
+.footer-brand-name span{color:var(--accent);}
+.footer-brand-tagline{font-size:0.82rem;color:var(--t3);margin-bottom:18px;}
+.footer-brand-desc{font-size:0.85rem;color:var(--t2);line-height:1.65;margin-bottom:22px;}
+.footer-col-title{
+  font-family:var(--font-display);font-size:0.95rem;letter-spacing:0.08em;
+  color:var(--t1);text-transform:uppercase;margin-bottom:18px;
+}
+.footer-links{display:flex;flex-direction:column;gap:9px;}
+.footer-links a{font-size:0.85rem;color:var(--t2);transition:color 0.2s;}
+.footer-links a:hover{color:var(--accent);}
+.footer-contact-items{display:flex;flex-direction:column;gap:12px;}
+.footer-contact-item{
+  display:flex;align-items:center;gap:10px;
+  font-size:0.85rem;color:var(--t2);
+}
+.footer-contact-item svg{color:var(--accent);flex-shrink:0;}
+.footer-bottom{
+  max-width:1160px;margin:0 auto;
+  padding-top:24px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
+}
+.footer-copy{font-size:0.8rem;color:var(--t3);}
+.footer-badges{display:flex;align-items:center;gap:12px;}
+.footer-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
+  border-radius:100px;padding:5px 12px;
+  font-size:0.75rem;font-weight:600;color:var(--t2);letter-spacing:0.04em;
+}
+.footer-badge svg{color:var(--accent);}
+
+/* ─── TRANSITION UTILITIES ─── */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.55s ease,transform 0.55s ease;}
+.fade-up.visible{opacity:1;transform:translateY(0);}
+
+/* ─── ANIMATION KEYFRAMES ─── */
+@keyframes heroFadeUp{
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:40px;}
+  .how-steps{grid-template-columns:1fr;gap:36px;}
+  .how-connector{display:none;}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:32px;}
+  .contact-inner{grid-template-columns:1fr;}
+  .areas-inner{grid-template-columns:1fr;gap:36px;}
+}
+@media(max-width:640px){
+  .svc-grid{grid-template-columns:1fr;}
+  .reviews-grid{grid-template-columns:1fr;}
+  .stats-inner{grid-template-columns:repeat(2,1fr);}
+  .why-stats{grid-template-columns:repeat(2,1fr);}
+  .why-diffs{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr;}
+  .header-nav{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     STICKY HEADER
+═══════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-brand">
+    <svg class="header-logo-mark" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="38" height="38" rx="8" fill="#e63946" fill-opacity="0.15"/>
+      <path d="M22 8c0 0 4 2 4 7s-3 6-3 6l3 9H12l3-9s-3-1-3-6 4-7 4-7" stroke="#e63946" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <circle cx="19" cy="15" r="2.5" fill="#e63946"/>
+      <path d="M16 30h6" stroke="#e63946" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <div class="header-name">GARRISON <span>PLUMBING</span></div>
+  </div>
+  <nav class="header-nav">
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#areas">Service Areas</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="tel:9729874255" class="header-cta">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.5 2.38 2 2 0 012.47.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.81a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    (972) 987-4255
+  </a>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="hero-grain"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Free Estimates Always
+      </div>
+      <h1 class="hero-headline">
+        Frisco's Honest<br><span>Plumbers</span>
+      </h1>
+      <p class="hero-sub">
+        Serving the Stonebriar and Starwood corridors — and every Frisco neighborhood in between. Licensed. Insured. No hidden fees. Done right the first time.
+      </p>
+      <div class="hero-ctas">
+        <a href="tel:9729874255" class="btn-primary">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.5 2.38 2 2 0 012.47.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.81a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Call (972) 987-4255
+        </a>
+        <a href="#contact" class="btn-ghost">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+          Request Free Estimate
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Same-Day Service
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          No Hidden Fees
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Free Estimates
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-card-headline">Why Garrison?</div>
+      <div class="hero-card-sub">Plain talk. Straight prices. Quality work.</div>
+      <div class="hero-card-props">
+        <div class="hero-prop">
+          <div class="hero-prop-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="hero-prop-text">
+            <strong>Licensed Texas Plumber</strong>
+            <span>State-licensed, fully insured for every job</span>
+          </div>
+        </div>
+        <div class="hero-prop">
+          <div class="hero-prop-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <div class="hero-prop-text">
+            <strong>Free Estimates — No Surprises</strong>
+            <span>You know the price before we pick up a wrench</span>
+          </div>
+        </div>
+        <div class="hero-prop">
+          <div class="hero-prop-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="hero-prop-text">
+            <strong>Fast Response Time</strong>
+            <span>Most jobs scheduled within 24 hours</span>
+          </div>
+        </div>
+        <div class="hero-prop">
+          <div class="hero-prop-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="hero-prop-text">
+            <strong>Done Right the First Time</strong>
+            <span>4.5-star rated with 46 verified Frisco reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     STATS ROW
+═══════════════════════════════════════════ -->
+<section class="stats-row">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-number" data-target="46">0</div>
+      <div class="stat-label">Google Reviews</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">4.5<span style="font-size:1.4rem;color:rgba(230,57,70,0.7)">★</span></div>
+      <div class="stat-label">Star Rating</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">100<span style="font-size:1.6rem">%</span></div>
+      <div class="stat-label">Licensed &amp; Insured</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">$0</div>
+      <div class="stat-label">Hidden Fees — Ever</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SERVICES
+═══════════════════════════════════════════ -->
+<section class="services" id="services">
+  <div class="services-header">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Plumbing Services in Frisco, TX</h2>
+    <p class="section-sub">From clogged drains to full sewer replacements — licensed work, honest prices, and no drama. We handle it all so you don't have to worry.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card">
+      <div class="svc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <div class="svc-title">Drain Cleaning</div>
+      <p class="svc-desc">Slow or blocked drains cleared fast. Kitchen, bath, laundry, floor drains — we use professional equipment, not store-bought chemicals.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+      </div>
+      <div class="svc-title">Water Heater Services</div>
+      <p class="svc-desc">Repair, replacement, and installation of tank and tankless water heaters. Hot water when you need it — backed by manufacturer warranties.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h5M17 12h5M7 12a5 5 0 0110 0"/><circle cx="12" cy="12" r="1"/></svg>
+      </div>
+      <div class="svc-title">Pipe Repair</div>
+      <p class="svc-desc">Burst pipes, corroded supply lines, or aging cast iron — we diagnose and repair correctly the first time, with proper materials and permits when required.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <div class="svc-title">Leak Detection</div>
+      <p class="svc-desc">Hidden leaks in walls, slabs, or underground lines found without unnecessary demolition. Protect your Frisco home from water damage before it worsens.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <div class="svc-title">Sewer Services</div>
+      <p class="svc-desc">Camera inspections, hydro-jetting, and sewer line repair or replacement. We solve root intrusions, collapses, and chronic backups with lasting solutions.</p>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </div>
+      <div class="svc-title">Emergency Plumbing</div>
+      <p class="svc-desc">Plumbing emergencies don't wait — neither do we. Call now for fast response on burst pipes, sewage backups, and major leaks across Frisco and surrounding areas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     WHY CHOOSE US
+═══════════════════════════════════════════ -->
+<section class="why" id="why">
+  <div class="why-grain"></div>
+  <div class="why-inner">
+    <div style="max-width:540px;margin-bottom:48px;">
+      <div class="section-label">Why Garrison</div>
+      <h2 class="section-title light">No Drama. No Surprise Bills.</h2>
+      <p class="section-sub light">Other plumbers upsell. We just fix it. Every job comes with a straight estimate, clean work, and a plumber who actually shows up on time.</p>
+    </div>
+    <div class="why-stats">
+      <div class="why-stat fade-up">
+        <div class="why-stat-num" data-target="46">0</div>
+        <div class="why-stat-label">5-Star Reviews</div>
+      </div>
+      <div class="why-stat fade-up">
+        <div class="why-stat-num">100<span style="font-size:1.4rem">%</span></div>
+        <div class="why-stat-label">Licensed Work</div>
+      </div>
+      <div class="why-stat fade-up">
+        <div class="why-stat-num">$0</div>
+        <div class="why-stat-label">Hidden Fees</div>
+      </div>
+      <div class="why-stat fade-up">
+        <div class="why-stat-num">24<span style="font-size:1.4rem">hr</span></div>
+        <div class="why-stat-label">Response Window</div>
+      </div>
+    </div>
+    <div class="why-diffs">
+      <div class="why-diff fade-up">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="why-diff-text">
+          <strong>State-Licensed Plumber</strong>
+          <p>Fully licensed with the Texas State Board of Plumbing Examiners. Every job meets code — no shortcuts, no liability risk for you.</p>
+        </div>
+      </div>
+      <div class="why-diff fade-up">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div class="why-diff-text">
+          <strong>Free Estimates, Always</strong>
+          <p>We quote the job before we start. The number you hear on the phone is the number on the invoice. No add-ons after the fact.</p>
+        </div>
+      </div>
+      <div class="why-diff fade-up">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="why-diff-text">
+          <strong>Fast, Reliable Scheduling</strong>
+          <p>We respect your time. Show up on schedule, work efficiently, and leave your home cleaner than we found it. No all-day windows.</p>
+        </div>
+      </div>
+      <div class="why-diff fade-up">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="why-diff-text">
+          <strong>Done Right the First Time</strong>
+          <p>We stand behind every repair. If something isn't right, we come back and make it right — no runaround, no excuses.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     HOW IT WORKS
+═══════════════════════════════════════════ -->
+<section class="how" id="how">
+  <div class="how-inner">
+    <div style="max-width:540px;">
+      <div class="section-label">Our Process</div>
+      <h2 class="section-title light">Simple. Transparent. Done.</h2>
+      <p class="section-sub light">Three steps from phone call to finished job. No surprise visits, no vague scopes, no sticker shock at the end.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-connector"></div>
+      <div class="how-step">
+        <div class="how-num">1</div>
+        <div class="how-step-title">Call or Request Online</div>
+        <p class="how-step-desc">Reach us by phone at (972) 987-4255 or submit a request form. Describe the issue — we'll get back to you fast with availability and a free estimate.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">2</div>
+        <div class="how-step-title">We Diagnose and Quote</div>
+        <p class="how-step-desc">A licensed plumber arrives on time, inspects the issue, and gives you a flat-rate quote — no hidden line items. You approve before we do anything.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">3</div>
+        <div class="how-step-title">Work Done. Problem Solved.</div>
+        <p class="how-step-desc">We complete the job to code, clean up after ourselves, and walk you through exactly what was done. You pay the price we quoted — not a penny more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     REVIEWS
+═══════════════════════════════════════════ -->
+<section class="reviews" id="reviews">
+  <div class="reviews-inner">
+    <div class="section-label">Customer Reviews</div>
+    <h2 class="section-title">What Frisco Homeowners Say</h2>
+    <p class="section-sub">4.5 stars across 46 reviews. Real neighbors, real feedback — no fluff.</p>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Had a slab leak under my Stonebriar area home and was dreading the whole experience. Garrison came out the next morning, diagnosed the exact location without tearing up half my floor, and gave me a straight quote on the spot. Work was done in a day. No surprises on the invoice."</p>
+        <div class="review-author">
+          <div class="review-avatar">KM</div>
+          <div>
+            <div class="review-name">Karen M.</div>
+            <div class="review-meta">Frisco, TX &mdash; Slab Leak Repair</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-up">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" opacity="0.35"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Water heater died on a Friday. Called Garrison that afternoon and they had a new tankless unit installed by Saturday noon. The plumber walked me through everything, the price matched the quote exactly, and he answered every question I had. This is the kind of contractor you put on speed dial."</p>
+        <div class="review-author">
+          <div class="review-avatar">RT</div>
+          <div>
+            <div class="review-name">Ryan T.</div>
+            <div class="review-meta">Frisco, TX &mdash; Tankless Water Heater Install</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card fade-up">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Our main sewer line was backing up into the house. Most plumbers quoted me three to four times what Garrison charged — and they came out same day. Camera inspection showed root intrusion and they hydro-jetted the line and cleared it completely. Professional, fast, and genuinely honest."</p>
+        <div class="review-author">
+          <div class="review-avatar">JL</div>
+          <div>
+            <div class="review-name">James L.</div>
+            <div class="review-meta">The Colony, TX &mdash; Sewer Line Service</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     SERVICE AREAS
+═══════════════════════════════════════════ -->
+<section class="areas" id="areas">
+  <div class="areas-inner">
+    <div class="areas-copy">
+      <div class="section-label">Where We Work</div>
+      <h2 class="section-title light">Frisco and the Surrounding Dallas Suburbs</h2>
+      <p class="section-sub light">Based in Frisco, TX and serving the broader North Dallas corridor — the same honest pricing and licensed work no matter which city you're in.</p>
+      <a href="tel:9729874255" class="btn-primary" style="margin-top:4px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.5 2.38 2 2 0 012.47.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.81a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        Call (972) 987-4255
+      </a>
+    </div>
+    <div class="areas-chip-card">
+      <div class="areas-chip-title">Cities We Serve</div>
+      <div class="areas-chips">
+        <div class="area-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Frisco
+        </div>
+        <div class="area-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          McKinney
+        </div>
+        <div class="area-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Allen
+        </div>
+        <div class="area-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Plano
+        </div>
+        <div class="area-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          The Colony
+        </div>
+        <div class="area-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Little Elm
+        </div>
+        <div class="area-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Prosper
+        </div>
+      </div>
+      <p style="font-size:0.82rem;color:var(--t3);margin-top:22px;line-height:1.55;">Not sure if we cover your area? Call us — if we can't help, we'll point you to someone who can.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CONTACT FORM
+═══════════════════════════════════════════ -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-form-wrap">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">Request a Free Estimate</h2>
+      <p class="section-sub">Tell us about your plumbing issue and we'll get back to you fast — typically within a few hours during business hours. No commitment required.</p>
+      <form onsubmit="return false;">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(972) 555-0100">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@email.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Select a service...</option>
+            <option>Drain Cleaning</option>
+            <option>Water Heater Services</option>
+            <option>Pipe Repair</option>
+            <option>Leak Detection</option>
+            <option>Sewer Services</option>
+            <option>Emergency Plumbing</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="city">Your City</label>
+          <input type="text" id="city" name="city" placeholder="Frisco, TX">
+        </div>
+        <div class="form-group">
+          <label for="message">Describe the Issue</label>
+          <textarea id="message" name="message" placeholder="Tell us what's happening — as much or as little as you know. We'll handle the rest."></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send My Request
+        </button>
+      </form>
+    </div>
+    <div class="contact-info-card">
+      <div class="contact-info-title">Contact Garrison</div>
+      <div class="contact-info-sub">Reach us any way that works for you.</div>
+      <div class="contact-info-items">
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.5 2.38 2 2 0 012.47.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.81a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <strong>Phone</strong>
+            <span>(972) 987-4255</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <strong>Service Area</strong>
+            <span>Frisco, TX and North Dallas suburbs</span>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <strong>License Status</strong>
+            <span>Licensed &amp; Insured — Texas SBPE</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-hours">
+        <div class="contact-hours-title">Business Hours</div>
+        <div class="hours-row"><span>Monday – Friday</span><span>7:00 AM – 6:00 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span>8:00 AM – 4:00 PM</span></div>
+        <div class="hours-row"><span>Sunday</span><span>Emergency Only</span></div>
+        <p style="font-size:0.78rem;color:var(--t3);margin-top:14px;line-height:1.55;">For emergencies outside business hours, call (972) 987-4255. We'll answer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CTA BAND
+═══════════════════════════════════════════ -->
+<section class="cta-band">
+  <div class="cta-grain"></div>
+  <div class="cta-band-inner">
+    <h2 class="cta-band-title">Ready to Get It Fixed Right?</h2>
+    <p class="cta-band-sub">Free estimates. No hidden fees. Frisco's honest plumbers — available today. One call is all it takes to get a straight quote and a real solution.</p>
+    <div class="cta-band-btns">
+      <a href="tel:9729874255" class="btn-white">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.5 2.38 2 2 0 012.47.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.81a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        Call (972) 987-4255
+      </a>
+      <a href="#contact" class="btn-outline-white">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+        Request Free Estimate
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">GARRISON <span>PLUMBING</span></div>
+      <div class="footer-brand-tagline">Free Estimates. No Surprises. Frisco's Honest Plumbers.</div>
+      <p class="footer-brand-desc">Licensed and insured plumbing services for Frisco and the North Dallas suburbs. We do the job right the first time — and we stand behind every repair.</p>
+      <a href="tel:9729874255" class="header-cta" style="display:inline-flex;font-size:0.85rem;padding:9px 18px;margin-top:4px;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.5 2.38 2 2 0 012.47.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.81a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        (972) 987-4255
+      </a>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <div class="footer-links">
+        <a href="#services">Drain Cleaning</a>
+        <a href="#services">Water Heater Services</a>
+        <a href="#services">Pipe Repair</a>
+        <a href="#services">Leak Detection</a>
+        <a href="#services">Sewer Services</a>
+        <a href="#services">Emergency Plumbing</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <div class="footer-links">
+        <a href="#areas">Frisco, TX</a>
+        <a href="#areas">McKinney, TX</a>
+        <a href="#areas">Allen, TX</a>
+        <a href="#areas">Plano, TX</a>
+        <a href="#areas">The Colony, TX</a>
+        <a href="#areas">Little Elm, TX</a>
+        <a href="#areas">Prosper, TX</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact-items">
+        <div class="footer-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11 19.79 19.79 0 01.5 2.38 2 2 0 012.47.22h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.81a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          (972) 987-4255
+        </div>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Frisco, TX 75034
+        </div>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Mon–Fri: 7AM–6PM
+        </div>
+        <div class="footer-contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Emergency: 24/7 Available
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&copy; 2026 Garrison Plumbing Services &mdash; Frisco, TX. All rights reserved.</div>
+    <div class="footer-badges">
+      <div class="footer-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Licensed &amp; Insured
+      </div>
+      <div class="footer-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Free Estimates
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── HERO FADE-UP ANIMATION ───
+(function(){
+  var items=[
+    ['.hero-badge',0],
+    ['.hero-headline',120],
+    ['.hero-sub',240],
+    ['.hero-ctas',360],
+    ['.hero-trust',480],
+    ['.hero-card',200]
+  ];
+  items.forEach(function(pair){
+    var el=document.querySelector(pair[0]);
+    if(!el)return;
+    setTimeout(function(){
+      el.style.transition='opacity 0.65s ease, transform 0.65s ease';
+      el.style.opacity='1';
+      el.style.transform='translateY(0)';
+    },pair[1]);
+  });
+})();
+
+// ─── INTERSECTION OBSERVER FADE-UP ───
+(function(){
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var el=e.target;
+        var delay=el.dataset.delay||0;
+        setTimeout(function(){
+          el.classList.add('visible');
+        },parseInt(delay));
+        observer.unobserve(el);
+      }
+    });
+  },{threshold:0.12});
+
+  // Service cards
+  var svcCards=document.querySelectorAll('.svc-card');
+  svcCards.forEach(function(el,i){
+    el.dataset.delay=i*80;
+    observer.observe(el);
+  });
+
+  // Review cards
+  var revCards=document.querySelectorAll('.review-card');
+  revCards.forEach(function(el,i){
+    el.dataset.delay=i*100;
+    observer.observe(el);
+  });
+
+  // Why choose us cards
+  var whyStats=document.querySelectorAll('.why-stat');
+  whyStats.forEach(function(el,i){
+    el.dataset.delay=i*80;
+    observer.observe(el);
+  });
+  var whyDiffs=document.querySelectorAll('.why-diff');
+  whyDiffs.forEach(function(el,i){
+    el.dataset.delay=i*90;
+    observer.observe(el);
+  });
+
+  // Generic fade-up elements
+  document.querySelectorAll('.fade-up').forEach(function(el){
+    observer.observe(el);
+  });
+})();
+
+// ─── ANIMATE COUNT ───
+(function(){
+  function animateCount(el){
+    var target=parseInt(el.dataset.target)||0;
+    var duration=1400;
+    var start=null;
+    var startVal=0;
+    function step(ts){
+      if(!start)start=ts;
+      var progress=Math.min((ts-start)/duration,1);
+      var ease=1-Math.pow(1-progress,3);
+      el.textContent=Math.round(startVal+(target-startVal)*ease);
+      if(progress<1)requestAnimationFrame(step);
+      else el.textContent=target;
+    }
+    requestAnimationFrame(step);
+  }
+
+  var counterObserver=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        animateCount(e.target);
+        counterObserver.unobserve(e.target);
+      }
+    });
+  },{threshold:0.5});
+
+  document.querySelectorAll('[data-target]').forEach(function(el){
+    counterObserver.observe(el);
+  });
+})();
+
+// ─── SMOOTH SCROLL FOR ANCHOR LINKS ───
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var target=document.querySelector(this.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  });
+});
+</script>
+
+</body>
+</html>

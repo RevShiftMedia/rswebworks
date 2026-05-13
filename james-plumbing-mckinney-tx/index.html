@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="James Plumbing — McKinney's trusted plumber for 19 years. Flat-rate pricing, 24/7 emergency service, licensed & insured. Serving McKinney, Allen, Fairview, TX. Call (214) 315-7445.">
+<title>James Plumbing | McKinney, TX — 19 Years of Flat-Rate Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #1642a6;
+  --primary-dark: #0e2b78;
+  --accent: #e55c00;
+  --accent-dark: #b84a00;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #e8edf5;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--dark-text);
+  background: var(--bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ─── GRAIN OVERLAY ─── */
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ─── HEADER ─── */
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--primary);
+  padding: 0 2rem;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
+}
+#site-header.scrolled {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.header-logo-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.header-name {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  color: var(--t1);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.header-tagline {
+  font-size: 0.68rem;
+  color: var(--t3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.header-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--t1);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.header-phone:hover { color: var(--t2); }
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  line-height: 1;
+}
+.btn-accent:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.btn-accent:focus-visible { outline: 3px solid rgba(229,92,0,0.5); outline-offset: 3px; }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  line-height: 1;
+}
+.btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.1); transform: translateY(-1px); }
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  padding: 5rem 2rem 4rem;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: 3rem;
+  align-items: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1.4rem;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 0.1s forwards;
+}
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 6vw, 64px);
+  color: var(--t1);
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 0.2s forwards;
+}
+.hero-headline span.accent-text {
+  color: var(--accent);
+}
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--t2);
+  max-width: 480px;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 0.3s forwards;
+}
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 0.4s forwards;
+}
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 0.5s forwards;
+}
+.trust-stars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.trust-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--t2);
+}
+.trust-divider {
+  width: 1px;
+  height: 14px;
+  background: var(--t3);
+}
+
+/* Hero Card */
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 18px;
+  padding: 2rem;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 0.6s forwards;
+}
+.hero-card-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--t1);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hero-card-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.value-prop {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.value-prop:last-of-type { border-bottom: none; }
+.vp-icon {
+  width: 38px;
+  height: 38px;
+  background: rgba(229,92,0,0.18);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.vp-text strong {
+  display: block;
+  font-weight: 600;
+  color: var(--t1);
+  font-size: 0.92rem;
+  line-height: 1.3;
+}
+.vp-text span {
+  font-size: 0.8rem;
+  color: var(--t3);
+}
+.hero-card-phone {
+  margin-top: 1.5rem;
+  background: var(--accent);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.hero-card-phone:hover { background: var(--accent-dark); }
+.hero-card-phone span {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.hero-card-phone small {
+  display: block;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.8);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── STATS ROW ─── */
+.stats-row {
+  background: var(--primary-dark);
+  padding: 0;
+}
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.stat-item {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  color: var(--accent);
+  line-height: 1;
+  display: block;
+  letter-spacing: 0.02em;
+}
+.stat-suffix {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+.stat-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--t3);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.3rem;
+}
+
+/* ─── SECTION COMMONS ─── */
+.section-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
+}
+.section-title.light { color: var(--t1); }
+.section-title.dark { color: var(--dark-text); }
+.section-sub {
+  font-size: 1rem;
+  max-width: 560px;
+  margin-bottom: 3rem;
+}
+.section-sub.light { color: var(--t2); }
+.section-sub.dark { color: var(--grey-text); }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+/* ─── SERVICES ─── */
+.services { background: var(--bg); }
+.services-header { text-align: center; }
+.services-header .section-sub { margin-left: auto; margin-right: auto; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.service-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: box-shadow 0.25s, transform 0.25s;
+  opacity: 0;
+  transform: translateY(30px);
+}
+.service-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.25s, border-color 0.25s;
+}
+.service-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: rgba(229,92,0,0.3);
+}
+.service-icon-wrap {
+  width: 56px;
+  height: 56px;
+  background: rgba(229,92,0,0.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+.service-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--dark-text);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.6rem;
+}
+.service-desc {
+  font-size: 0.9rem;
+  color: var(--grey-text);
+  line-height: 1.65;
+}
+
+/* ─── WHY CHOOSE US ─── */
+.why-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--primary);
+}
+.why-section.grain::after { opacity: 1; }
+.why-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+.why-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.why-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.why-stat-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+}
+.why-stat-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.why-stat-num {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--accent);
+  line-height: 1;
+  display: block;
+}
+.why-stat-lbl {
+  font-size: 0.78rem;
+  color: var(--t3);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.3rem;
+  display: block;
+}
+.why-differentiators {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.diff-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  opacity: 0;
+  transform: translateY(30px);
+}
+.diff-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.diff-check {
+  width: 32px;
+  height: 32px;
+  background: rgba(229,92,0,0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.diff-text strong {
+  display: block;
+  color: var(--t1);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+.diff-text p {
+  font-size: 0.85rem;
+  color: var(--t2);
+  line-height: 1.55;
+}
+
+/* ─── HOW IT WORKS ─── */
+.how-section {
+  background: var(--primary-dark);
+  padding: 5rem 2rem;
+}
+.how-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.how-header { text-align: center; }
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+  margin-top: 3rem;
+}
+.how-steps::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: calc(16.66% + 32px);
+  right: calc(16.66% + 32px);
+  height: 2px;
+  border-top: 2px dashed rgba(255,255,255,0.2);
+  pointer-events: none;
+}
+.how-step {
+  text-align: center;
+  padding: 0 2rem;
+}
+.step-number {
+  width: 64px;
+  height: 64px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: #fff;
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 1;
+}
+.step-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--t1);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+}
+.step-desc {
+  font-size: 0.9rem;
+  color: var(--t2);
+  line-height: 1.65;
+}
+
+/* ─── REVIEWS ─── */
+.reviews-section {
+  background: var(--bg-off);
+  padding: 5rem 2rem;
+}
+.reviews-inner { max-width: 1200px; margin: 0 auto; }
+.reviews-header { text-align: center; }
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.review-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  position: relative;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(30px);
+}
+.review-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.review-quote-icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  opacity: 0.1;
+}
+.review-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 1rem;
+}
+.review-text {
+  font-size: 0.93rem;
+  color: var(--grey-text);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+.review-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--dark-text);
+  line-height: 1.2;
+}
+.review-location {
+  font-size: 0.78rem;
+  color: var(--grey-text);
+}
+
+/* ─── SERVICE AREAS ─── */
+.areas-section {
+  background: var(--primary);
+  padding: 5rem 2rem;
+}
+.areas-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  align-items: center;
+}
+.areas-left .section-sub { margin-bottom: 2rem; }
+.areas-card {
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px;
+  padding: 2rem;
+}
+.areas-card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--t2);
+  letter-spacing: 0.06em;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+.area-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.area-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--t1);
+  letter-spacing: 0.02em;
+}
+.area-chip.primary-chip {
+  background: rgba(229,92,0,0.2);
+  border-color: rgba(229,92,0,0.4);
+  color: #ffad7a;
+}
+
+/* ─── CONTACT ─── */
+.contact-section {
+  background: var(--bg);
+  padding: 5rem 2rem;
+}
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  align-items: start;
+}
+.contact-form-wrap { }
+.form-group { margin-bottom: 1.25rem; }
+.form-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.03em;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--dark-text);
+  background: var(--bg);
+  transition: border-color 0.2s;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(22,66,166,0.12);
+}
+.form-group textarea { resize: vertical; min-height: 110px; }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.btn-submit {
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-submit:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.btn-submit:focus-visible { outline: 3px solid rgba(229,92,0,0.5); outline-offset: 3px; }
+.contact-info-card {
+  background: var(--primary-dark);
+  border-radius: 18px;
+  padding: 2.5rem;
+  color: var(--t1);
+  box-shadow: var(--shadow-lg);
+}
+.contact-info-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+.contact-info-card .card-sub {
+  font-size: 0.9rem;
+  color: var(--t3);
+  margin-bottom: 2rem;
+}
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.info-row:last-of-type { border-bottom: none; }
+.info-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(229,92,0,0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.info-row strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--t3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.2rem;
+}
+.info-row span, .info-row a {
+  font-size: 0.95rem;
+  color: var(--t1);
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.4;
+}
+.info-row a:hover { color: var(--accent); }
+.emergency-badge {
+  margin-top: 1.5rem;
+  background: rgba(229,92,0,0.15);
+  border: 1px solid rgba(229,92,0,0.35);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.emergency-badge span {
+  font-size: 0.88rem;
+  color: #ffad7a;
+  font-weight: 600;
+}
+
+/* ─── CTA BAND ─── */
+.cta-band {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.cta-band.grain::after { background-size: 128px 128px; }
+.cta-band-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.cta-band .section-label { color: rgba(255,255,255,0.7); }
+.cta-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+.cta-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 2.5rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--accent-dark);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  line-height: 1;
+}
+.btn-white:hover { background: rgba(255,255,255,0.9); transform: translateY(-1px); }
+
+/* ─── FOOTER ─── */
+.footer {
+  background: var(--primary-dark);
+  padding: 4rem 2rem 2rem;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--t1);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-brand-desc {
+  font-size: 0.85rem;
+  color: var(--t3);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+.footer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(229,92,0,0.2);
+  border: 1px solid rgba(229,92,0,0.35);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffad7a;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.footer-col h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--t1);
+  letter-spacing: 0.06em;
+  margin-bottom: 1.1rem;
+  text-transform: uppercase;
+}
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.footer-col ul li a {
+  font-size: 0.85rem;
+  color: var(--t3);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-col ul li a:hover { color: var(--t1); }
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+.footer-contact-item span, .footer-contact-item a {
+  font-size: 0.85rem;
+  color: var(--t3);
+  text-decoration: none;
+  line-height: 1.5;
+  transition: color 0.2s;
+}
+.footer-contact-item a:hover { color: var(--t1); }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-copyright {
+  font-size: 0.8rem;
+  color: var(--t3);
+}
+.footer-lic {
+  font-size: 0.8rem;
+  color: var(--t3);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ─── BREAKPOINTS ─── */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .hero-card { max-width: 480px; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.08); }
+  .stat-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.08); border-right: none; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-stats-row { grid-template-columns: repeat(2, 1fr); }
+  .how-steps { grid-template-columns: 1fr; gap: 2.5rem; }
+  .how-steps::before { display: none; }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .areas-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  #site-header { padding: 0 1rem; height: 60px; }
+  .header-tagline { display: none; }
+  .header-phone { display: none; }
+  .services-grid { grid-template-columns: 1fr; }
+  .why-stats-row { grid-template-columns: repeat(2, 1fr); }
+  .why-differentiators { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .hero { min-height: auto; padding: 3rem 1rem 2.5rem; }
+  .container { padding: 3.5rem 1rem; }
+  .hero-ctas { flex-direction: column; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .footer-bottom { flex-direction: column; gap: 0.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ─────────────────────────────────────────
+     HEADER
+───────────────────────────────────────── -->
+<header id="site-header">
+  <a href="#" class="header-brand">
+    <div class="header-logo-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" opacity="0.2" fill="#fff"/>
+        <path d="M9 3.5C9 3.5 7 7 7 10a5 5 0 0010 0c0-3-2-6.5-2-6.5"/>
+        <line x1="12" y1="15" x2="12" y2="21"/>
+      </svg>
+    </div>
+    <div>
+      <div class="header-name">James Plumbing</div>
+      <div class="header-tagline">McKinney, TX &bull; Est. 2005</div>
+    </div>
+  </a>
+  <div class="header-right">
+    <a href="tel:2143157445" class="header-phone">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.14 1.22 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+      </svg>
+      (214) 315-7445
+    </a>
+    <a href="tel:2143157445" class="btn-accent">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+      </svg>
+      Call Now
+    </a>
+  </div>
+</header>
+
+<!-- ─────────────────────────────────────────
+     HERO
+───────────────────────────────────────── -->
+<section class="hero grain" aria-label="Hero">
+  <div class="hero-inner">
+    <!-- LEFT -->
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        19 Years Serving McKinney, TX
+      </div>
+      <h1 class="hero-headline">
+        McKinney's Trusted<br><span class="accent-text">Plumbers</span>
+      </h1>
+      <p class="hero-sub">From Stonebridge Ranch to Craig Ranch — when a pipe bursts, a water heater fails, or a drain backs up, James Plumbing answers the call. Flat-rate pricing. No surprises. Ever.</p>
+      <div class="hero-ctas">
+        <a href="tel:2143157445" class="btn-accent" style="font-size:1.2rem;padding:0.85rem 2rem;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.14 1.22 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+          </svg>
+          Call (214) 315-7445
+        </a>
+        <a href="#contact" class="btn-ghost" style="font-size:1.2rem;padding:0.85rem 2rem;">
+          Request a Quote
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-stars" aria-label="5 star rating">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <span class="trust-text">5.0</span>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <span class="trust-text">96 Reviews</span>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <span class="trust-text">Licensed &amp; Insured</span>
+        <div class="trust-divider" aria-hidden="true"></div>
+        <span class="trust-text">Flat-Rate Pricing</span>
+      </div>
+    </div>
+    <!-- RIGHT: FROSTED CARD -->
+    <div class="hero-card">
+      <div class="hero-card-title">Why McKinney Calls Us First</div>
+      <div class="value-prop">
+        <div class="vp-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="vp-text">
+          <strong>24/7 Emergency Response</strong>
+          <span>We pick up — nights, weekends, holidays</span>
+        </div>
+      </div>
+      <div class="value-prop">
+        <div class="vp-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+          </svg>
+        </div>
+        <div class="vp-text">
+          <strong>Flat-Rate Pricing</strong>
+          <span>You know the price before we touch a wrench</span>
+        </div>
+      </div>
+      <div class="value-prop">
+        <div class="vp-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="vp-text">
+          <strong>Licensed &amp; Fully Insured</strong>
+          <span>State-licensed master plumber since 2005</span>
+        </div>
+      </div>
+      <div class="value-prop">
+        <div class="vp-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <div class="vp-text">
+          <strong>5.0 Stars · 96 Reviews</strong>
+          <span>Real McKinney families — not paid testimonials</span>
+        </div>
+      </div>
+      <a href="tel:2143157445" class="hero-card-phone">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.14 1.22 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+        </svg>
+        <div>
+          <small>Call Anytime — 24/7</small>
+          <span>(214) 315-7445</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     STATS ROW
+───────────────────────────────────────── -->
+<section class="stats-row" aria-label="Key stats">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-num"><span data-target="19" data-suffix="+" class="counter">19</span><span class="stat-suffix">+</span></span>
+      <span class="stat-label">Years in McKinney</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num"><span data-target="96" class="counter">96</span></span>
+      <span class="stat-label">5-Star Reviews</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">24<span class="stat-suffix">/7</span></span>
+      <span class="stat-label">Emergency Available</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">$<span data-target="0" class="counter">0</span></span>
+      <span class="stat-label">Hidden Fees — Ever</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     SERVICES
+───────────────────────────────────────── -->
+<section class="services" id="services" aria-label="Services">
+  <div class="container">
+    <div class="services-header">
+      <span class="section-label">What We Fix</span>
+      <h2 class="section-title dark">Full-Service Plumbing<br>for McKinney Homes</h2>
+      <p class="section-sub dark">Every job is done right the first time. No callbacks, no upsells, no surprises. That's 19 years of the same promise.</p>
+    </div>
+    <div class="services-grid" id="services-grid">
+      <!-- Card 1 -->
+      <div class="service-card" data-delay="0">
+        <div class="service-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/>
+            <path d="M12 6v6l4 2"/>
+            <path d="M12 22V18M2 12H6M18 12h4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M9 12c0-1.2.8-2.2 1.9-2.5" opacity="0.5"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Drain Cleaning</h3>
+        <p class="service-desc">Slow drain or full blockage driving you crazy? We clear grease build-up, tree roots, and debris from kitchen, bathroom, and main sewer lines — fast, clean, and guaranteed.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="service-card" data-delay="100">
+        <div class="service-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="5" y="2" width="14" height="18" rx="2"/>
+            <line x1="9" y1="6" x2="15" y2="6"/>
+            <line x1="9" y1="10" x2="15" y2="10"/>
+            <path d="M12 20v-4M9 16h6"/>
+            <circle cx="12" cy="14" r="1" fill="var(--accent)"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Water Heater Repair</h3>
+        <p class="service-desc">No hot water on a cold McKinney morning? We repair and replace tank and tankless water heaters — same-day service available for most brands and models.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="service-card" data-delay="200">
+        <div class="service-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12H2M22 12h-3"/>
+            <path d="M12 5V2M12 22v-3"/>
+            <path d="M7.05 7.05L4.93 4.93M19.07 19.07l-2.12-2.12M7.05 16.95l-2.12 2.12M19.07 4.93l-2.12 2.12"/>
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M8 12a4 4 0 014-4"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Pipe Repair &amp; Replacement</h3>
+        <p class="service-desc">Burst pipe, corroded copper, or aging galvanized lines? We locate, diagnose, and repair pipe damage — from a single joint to a full repipe — with minimal drywall disruption.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="service-card" data-delay="0">
+        <div class="service-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+            <circle cx="12" cy="8" r="1.5" fill="var(--accent)" stroke="none"/>
+            <path d="M12 9.5c0 2-3 3.5-3 5.5" opacity="0.4"/>
+            <path d="M12 9.5c0 2 3 3.5 3 5.5" opacity="0.4"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Leak Detection</h3>
+        <p class="service-desc">Hearing water you can't see? Our non-invasive leak detection technology finds slab leaks, hidden wall leaks, and under-slab breaks before they destroy your foundation or flooring.</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="service-card" data-delay="100">
+        <div class="service-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 16.58A5 5 0 0018 7h-1.26A8 8 0 104 15.25"/>
+            <polyline points="16 22 12 18 8 22"/>
+            <line x1="12" y1="18" x2="12" y2="22"/>
+            <circle cx="12" cy="13" r="2"/>
+            <path d="M12 11V7"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Sewer Line Services</h3>
+        <p class="service-desc">Sewage backing up into your home? We handle camera inspections, hydrojetting, trenchless sewer repair, and full line replacement — with upfront pricing before any work begins.</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="service-card" data-delay="200">
+        <div class="service-icon-wrap">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <h3 class="service-title">Emergency Plumbing</h3>
+        <p class="service-desc">Plumbing emergencies don't wait for business hours. James Plumbing is on call 24 hours a day, 7 days a week — including holidays. Call now, we answer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     WHY CHOOSE US
+───────────────────────────────────────── -->
+<section class="why-section grain" aria-label="Why choose James Plumbing">
+  <div class="why-inner">
+    <div class="why-header">
+      <span class="section-label">The James Plumbing Standard</span>
+      <h2 class="section-title light">The Difference 19 Years Makes</h2>
+      <p class="section-sub light" style="margin:0 auto 0;">We've fixed the same drain backup in Craig Ranch three times — for three different homeowners who went with the cheap guy first. We don't do cheap. We do right.</p>
+    </div>
+    <div class="why-stats-row" id="why-stats">
+      <div class="why-stat-card">
+        <span class="why-stat-num">19+</span>
+        <span class="why-stat-lbl">Years Experience</span>
+      </div>
+      <div class="why-stat-card">
+        <span class="why-stat-num">1,200+</span>
+        <span class="why-stat-lbl">Jobs Completed</span>
+      </div>
+      <div class="why-stat-card">
+        <span class="why-stat-num">96</span>
+        <span class="why-stat-lbl">5-Star Reviews</span>
+      </div>
+      <div class="why-stat-card">
+        <span class="why-stat-num">100%</span>
+        <span class="why-stat-lbl">Satisfaction Guarantee</span>
+      </div>
+    </div>
+    <div class="why-differentiators" id="why-diff">
+      <div class="diff-item">
+        <div class="diff-check">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <div class="diff-text">
+          <strong>Flat-Rate Pricing — Always</strong>
+          <p>You get a firm number before we start. The price you're quoted is the price you pay. Period. No hourly surprises, no add-ons at the end.</p>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-check">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <div class="diff-text">
+          <strong>Same Licensed Plumber, Every Time</strong>
+          <p>You're not getting a rotating crew of subcontractors. James — a licensed master plumber — is on every job personally or directly supervising it.</p>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-check">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <div class="diff-text">
+          <strong>Guaranteed 24/7 Emergency Response</strong>
+          <p>We don't send you to voicemail at 2 AM. If you have a burst pipe or sewer backup, call us. Someone picks up every single time — guaranteed.</p>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-check">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <div class="diff-text">
+          <strong>We Leave It Cleaner Than We Found It</strong>
+          <p>Booties go on at the door. Tarps go down before tools come out. Your home is respected. Every job site is cleaned before we leave.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     HOW IT WORKS
+───────────────────────────────────────── -->
+<section class="how-section" aria-label="How it works">
+  <div class="how-inner">
+    <div class="how-header">
+      <span class="section-label">Simple Process</span>
+      <h2 class="section-title light">Fixed in 3 Steps</h2>
+      <p class="section-sub light" style="margin:0 auto 1rem;max-width:500px;">We've simplified plumbing service so there are no surprises from first call to final fix.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="step-number">1</div>
+        <h3 class="step-title">Call or Request Online</h3>
+        <p class="step-desc">Call (214) 315-7445 or submit the form below. We'll ask a few quick questions and schedule your visit — often same-day for McKinney and surrounding areas.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-number">2</div>
+        <h3 class="step-title">Get a Flat-Rate Quote</h3>
+        <p class="step-desc">A licensed plumber arrives on time, assesses the problem, and gives you a firm quote. You approve before any work begins. No pressure, no surprises on the invoice.</p>
+      </div>
+      <div class="how-step">
+        <div class="step-number">3</div>
+        <h3 class="step-title">Problem Solved, Guaranteed</h3>
+        <p class="step-desc">We fix it right the first time — backed by a workmanship guarantee. We clean up, walk you through what was done, and hand you a receipt that matches the original quote exactly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     REVIEWS
+───────────────────────────────────────── -->
+<section class="reviews-section" aria-label="Customer reviews">
+  <div class="reviews-inner">
+    <div class="reviews-header">
+      <span class="section-label">Real McKinney Homeowners</span>
+      <h2 class="section-title dark">96 Five-Star Reviews<br>and Counting</h2>
+      <p class="section-sub dark" style="margin:0 auto 3rem;">We don't ask for reviews. Customers leave them because they feel the difference.</p>
+    </div>
+    <div class="reviews-grid" id="reviews-grid">
+      <!-- Review 1 -->
+      <div class="review-card">
+        <svg class="review-quote-icon" width="60" height="60" viewBox="0 0 24 24" fill="var(--primary)" aria-hidden="true">
+          <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+        </svg>
+        <div class="review-stars" aria-label="5 stars">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"We had a burst pipe under the slab at our Stonebridge Ranch home at 11 PM on a Sunday. James answered on the first ring, was at our door within 45 minutes, and had the water back on by 1 AM. The price he quoted before starting was the exact price on the invoice. Absolutely incredible service."</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">MH</div>
+          <div>
+            <div class="review-name">Mike H.</div>
+            <div class="review-location">Stonebridge Ranch, McKinney</div>
+          </div>
+        </div>
+      </div>
+      <!-- Review 2 -->
+      <div class="review-card">
+        <svg class="review-quote-icon" width="60" height="60" viewBox="0 0 24 24" fill="var(--primary)" aria-hidden="true">
+          <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+        </svg>
+        <div class="review-stars" aria-label="5 stars">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Our water heater died on Christmas Eve. I called three plumbers — two didn't answer and one wanted $1,800. James quoted me $650, showed up that afternoon, and had hot water running before my in-laws arrived. He even cleaned up the utility closet before leaving. That's the kind of person you want working in your house."</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">SR</div>
+          <div>
+            <div class="review-name">Sarah R.</div>
+            <div class="review-location">Craig Ranch, McKinney</div>
+          </div>
+        </div>
+      </div>
+      <!-- Review 3 -->
+      <div class="review-card">
+        <svg class="review-quote-icon" width="60" height="60" viewBox="0 0 24 24" fill="var(--primary)" aria-hidden="true">
+          <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+        </svg>
+        <div class="review-stars" aria-label="5 stars">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#fbbf24" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"I had a main drain backup affecting every fixture in my house — pure misery. James was out the same morning, ran a camera, found a root intrusion, hydrojetting cleared it in under two hours. He showed me the before-and-after footage on his camera monitor. Completely transparent. Won't ever call anyone else in Allen."</p>
+        <div class="review-author">
+          <div class="review-avatar" aria-hidden="true">DT</div>
+          <div>
+            <div class="review-name">David T.</div>
+            <div class="review-location">Allen, TX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     SERVICE AREAS
+───────────────────────────────────────── -->
+<section class="areas-section" aria-label="Service areas">
+  <div class="areas-inner">
+    <div class="areas-left">
+      <span class="section-label">Where We Work</span>
+      <h2 class="section-title light">Serving McKinney<br>and Surrounding Cities</h2>
+      <p class="section-sub light">We're McKinney-based and stay close to home. That means faster response times and a plumber who knows the local water quality, pipe ages, and neighborhood quirks.</p>
+      <a href="tel:2143157445" class="btn-accent" style="font-size:1.1rem;padding:0.8rem 1.8rem;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.14 1.22 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+        </svg>
+        Check If We Serve Your Area
+      </a>
+    </div>
+    <div class="areas-right">
+      <div class="areas-card">
+        <div class="areas-card-title">Coverage Area</div>
+        <div class="area-chips">
+          <span class="area-chip primary-chip">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><circle cx="12" cy="12" r="8"/></svg>
+            McKinney (HQ)
+          </span>
+          <span class="area-chip">Allen, TX</span>
+          <span class="area-chip">Fairview, TX</span>
+          <span class="area-chip">Frisco, TX</span>
+          <span class="area-chip">Plano, TX</span>
+          <span class="area-chip">Richardson, TX</span>
+          <span class="area-chip">Prosper, TX</span>
+          <span class="area-chip">Stonebridge Ranch</span>
+          <span class="area-chip">Craig Ranch</span>
+          <span class="area-chip">Eldorado Pkwy Area</span>
+          <span class="area-chip">Wilmeth Rd Area</span>
+        </div>
+        <div style="margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,0.08);">
+          <p style="font-size:0.82rem;color:var(--t3);line-height:1.6;">Not sure if we cover your area? Call us at <a href="tel:2143157445" style="color:var(--accent);font-weight:600;text-decoration:none;">(214) 315-7445</a> — we'll tell you straight.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     CONTACT FORM
+───────────────────────────────────────── -->
+<section class="contact-section" id="contact" aria-label="Contact and booking">
+  <div class="contact-inner">
+    <div class="contact-form-wrap">
+      <span class="section-label">Get in Touch</span>
+      <h2 class="section-title dark" style="margin-bottom:0.5rem;">Request Service<br>or a Free Quote</h2>
+      <p style="font-size:0.9rem;color:var(--grey-text);margin-bottom:2rem;">Fill out the form and we'll call you back within the hour during business hours — or immediately for emergencies.</p>
+      <form action="#" method="post" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(214) 555-0100" autocomplete="tel" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="john@email.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service...</option>
+            <option value="drain">Drain Cleaning</option>
+            <option value="water-heater">Water Heater Repair / Replacement</option>
+            <option value="pipe">Pipe Repair &amp; Replacement</option>
+            <option value="leak">Leak Detection</option>
+            <option value="sewer">Sewer Line Services</option>
+            <option value="emergency">Emergency Plumbing</option>
+            <option value="gas">Gas Line Services</option>
+            <option value="other">Other / Not Sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Describe the Problem</label>
+          <textarea id="message" name="message" placeholder="Brief description of what's going on — when it started, what you've noticed, etc."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+          Send My Request
+        </button>
+      </form>
+    </div>
+    <div>
+      <div class="contact-info-card">
+        <h3>James Plumbing</h3>
+        <p class="card-sub">McKinney, TX — Serving DFW North Since 2005</p>
+        <div class="info-row">
+          <div class="info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.14 1.22 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Phone</strong>
+            <a href="tel:2143157445">(214) 315-7445</a>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Service Area</strong>
+            <span>McKinney, Allen, Fairview &amp; surrounding cities</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Business Hours</strong>
+            <span>Mon–Fri: 7AM–7PM<br>Sat: 8AM–5PM<br>Emergency: 24/7</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div>
+            <strong>License &amp; Insurance</strong>
+            <span>Texas Master Plumber License<br>Fully Bonded &amp; Insured</span>
+          </div>
+        </div>
+        <div class="emergency-badge">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+          <span>Plumbing emergency? Call now — we answer 24/7, no voicemail.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     CTA BAND
+───────────────────────────────────────── -->
+<section class="cta-band grain" aria-label="Call to action">
+  <div class="cta-band-inner">
+    <span class="section-label">Ready to Fix It?</span>
+    <h2 class="cta-headline">Zero Surprises. Zero Shortcuts.</h2>
+    <p class="cta-sub">19 years. Flat-rate pricing. A licensed plumber who picks up the phone. McKinney's choice — and the last plumber you'll need to call.</p>
+    <div class="cta-buttons">
+      <a href="tel:2143157445" class="btn-white">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.14 1.22 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+        </svg>
+        Call (214) 315-7445
+      </a>
+      <a href="#contact" class="btn-ghost">
+        Request a Quote
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────
+     FOOTER
+───────────────────────────────────────── -->
+<footer class="footer" aria-label="Site footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div>
+        <div class="footer-brand-name">
+          <div class="header-logo-icon" style="width:30px;height:30px;border-radius:6px;" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 3.5C9 3.5 7 7 7 10a5 5 0 0010 0c0-3-2-6.5-2-6.5"/>
+              <line x1="12" y1="15" x2="12" y2="21"/>
+            </svg>
+          </div>
+          James Plumbing
+        </div>
+        <p class="footer-brand-desc">McKinney's trusted plumber since 2005. Flat-rate pricing, licensed professionals, and 24/7 emergency service for North Dallas homeowners.</p>
+        <div class="footer-badge">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          5.0 — 96 Reviews
+        </div>
+      </div>
+      <!-- Services -->
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Drain Cleaning</a></li>
+          <li><a href="#services">Water Heater Repair</a></li>
+          <li><a href="#services">Pipe Repair &amp; Replacement</a></li>
+          <li><a href="#services">Leak Detection</a></li>
+          <li><a href="#services">Sewer Line Services</a></li>
+          <li><a href="#services">Gas Line Services</a></li>
+          <li><a href="#services">Emergency Plumbing</a></li>
+        </ul>
+      </div>
+      <!-- Areas -->
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="#">McKinney, TX</a></li>
+          <li><a href="#">Allen, TX</a></li>
+          <li><a href="#">Fairview, TX</a></li>
+          <li><a href="#">Frisco, TX</a></li>
+          <li><a href="#">Plano, TX</a></li>
+          <li><a href="#">Prosper, TX</a></li>
+          <li><a href="#">Richardson, TX</a></li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--t3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.14 1.22 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+          </svg>
+          <a href="tel:2143157445">(214) 315-7445</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--t3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span>Mon–Fri: 7AM–7PM<br>Sat: 8AM–5PM<br>Emergency: 24/7</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--t3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:3px" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>McKinney, TX 75070<br>Serving all of DFW North</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 James Plumbing. All rights reserved. McKinney, TX.</p>
+      <p class="footer-lic">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--t3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        Texas Master Plumber License &bull; Fully Bonded &amp; Insured
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ─────────────────────────────────────────
+     JAVASCRIPT
+───────────────────────────────────────── -->
+<script>
+(function() {
+  'use strict';
+
+  /* ── Header scroll shadow ── */
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  /* ── Counter animation ── */
+  function animateCount(el) {
+    var target = parseInt(el.getAttribute('data-target'), 10);
+    if (isNaN(target)) return;
+    var duration = 1600;
+    var startTime = null;
+    var startVal = 0;
+    function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var elapsed = timestamp - startTime;
+      var progress = Math.min(elapsed / duration, 1);
+      var current = Math.round(startVal + (target - startVal) * easeOutQuart(progress));
+      el.textContent = current;
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = target;
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ── IntersectionObserver for fadeUp ── */
+  var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var delay = el.getAttribute('data-delay') || 0;
+        setTimeout(function() {
+          el.classList.add('visible');
+        }, parseInt(delay, 10));
+        fadeObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  /* ── Counter observer ── */
+  var counterObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  /* ── Init on DOMContentLoaded ── */
+  document.addEventListener('DOMContentLoaded', function() {
+
+    /* Observe fade elements */
+    var fadeTargets = document.querySelectorAll(
+      '.service-card, .review-card, .why-stat-card, .diff-item'
+    );
+    fadeTargets.forEach(function(el) {
+      fadeObserver.observe(el);
+    });
+
+    /* Stagger delays for service cards */
+    var serviceCards = document.querySelectorAll('#services-grid .service-card');
+    serviceCards.forEach(function(card, i) {
+      var col = i % 3;
+      card.setAttribute('data-delay', col * 100);
+    });
+
+    /* Stagger delays for review cards */
+    var reviewCards = document.querySelectorAll('#reviews-grid .review-card');
+    reviewCards.forEach(function(card, i) {
+      card.setAttribute('data-delay', i * 120);
+    });
+
+    /* Stagger delays for why stats */
+    var whyStats = document.querySelectorAll('#why-stats .why-stat-card');
+    whyStats.forEach(function(card, i) {
+      card.setAttribute('data-delay', i * 80);
+    });
+
+    /* Stagger delays for differentiators */
+    var diffItems = document.querySelectorAll('#why-diff .diff-item');
+    diffItems.forEach(function(item, i) {
+      item.setAttribute('data-delay', i * 100);
+    });
+
+    /* Observe counters */
+    var counters = document.querySelectorAll('.counter');
+    counters.forEach(function(el) {
+      counterObserver.observe(el);
+    });
+
+    /* Re-observe after delays set */
+    fadeTargets.forEach(function(el) {
+      fadeObserver.unobserve(el);
+      fadeObserver.observe(el);
+    });
+
+  });
+
+  /* ── Contact form placeholder submit ── */
+  var form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = form.querySelector('.btn-submit');
+      var original = btn.innerHTML;
+      btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Message Sent!';
+      btn.style.background = '#16a34a';
+      setTimeout(function() {
+        btn.innerHTML = original;
+        btn.style.background = '';
+        form.reset();
+      }, 4000);
+    });
+  }
+
+})();
+</script>
+
+</body>
+</html>

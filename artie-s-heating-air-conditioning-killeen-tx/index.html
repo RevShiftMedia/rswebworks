@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artie's Heating & Air Conditioning | Killeen, TX HVAC</title>
+<meta name="description" content="Killeen's most trusted HVAC company. 4.8 stars, 473 reviews. AC repair, heating, system replacement & emergency service. Serving Killeen, Harker Heights, Fort Cavazos & Central Texas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#0f1a2e;
+  --primary-dark:#060a12;
+  --accent:#0891b2;
+  --accent-dark:#066d88;
+  --bg:#ffffff;
+  --bg-off:#f7f8fc;
+  --t1:#ffffff;
+  --t2:rgba(255,255,255,0.75);
+  --t3:rgba(255,255,255,0.5);
+  --dark-text:#1a1a2e;
+  --grey-text:#6b7280;
+  --border:#e8edf5;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-body:'Open Sans',sans-serif;
+  --radius:12px;
+  --shadow:0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg:0 8px 40px rgba(0,0,0,0.2);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--dark-text);background:var(--bg);line-height:1.6;overflow-x:hidden}
+
+/* ─── UTILITIES ─── */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;font-family:var(--font-body);font-size:15px;font-weight:600;padding:14px 28px;border-radius:var(--radius);border:none;cursor:pointer;text-decoration:none;transition:background .2s,transform .15s,box-shadow .2s;white-space:nowrap}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 6px 24px rgba(8,145,178,0.35)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-family:var(--font-body);font-size:15px;font-weight:600;padding:13px 27px;border-radius:var(--radius);border:2px solid rgba(255,255,255,0.35);cursor:pointer;text-decoration:none;transition:border-color .2s,background .2s,transform .15s;white-space:nowrap}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,0.08);transform:translateY(-2px)}
+.section-label{font-family:var(--font-body);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.section-title{font-family:var(--font-display);font-size:clamp(36px,5vw,56px);line-height:1.05;margin-bottom:16px}
+.section-sub{font-size:17px;line-height:1.65;color:var(--grey-text);max-width:560px}
+
+/* grain overlay */
+.grain::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1}
+
+/* fade-up animation */
+.fade-up{opacity:0;transform:translateY(32px);transition:opacity .65s ease,transform .65s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* ─── HEADER ─── */
+#site-header{position:sticky;top:0;z-index:100;background:var(--primary);border-bottom:1px solid rgba(255,255,255,0.06)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
+.logo{display:flex;flex-direction:column;text-decoration:none;line-height:1}
+.logo-name{font-family:var(--font-display);font-size:22px;color:#fff;letter-spacing:.04em}
+.logo-tag{font-family:var(--font-body);font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-top:1px}
+.header-nav{display:flex;align-items:center;gap:28px}
+.header-nav a{font-family:var(--font-body);font-size:14px;font-weight:600;color:var(--t2);text-decoration:none;transition:color .2s}
+.header-nav a:hover{color:#fff}
+.header-cta{display:flex;align-items:center;gap:16px}
+.header-phone{font-family:var(--font-body);font-size:15px;font-weight:600;color:#fff;text-decoration:none;letter-spacing:.01em}
+.header-phone:hover{color:var(--accent)}
+@media(max-width:900px){.header-nav{display:none}.logo-tag{display:none}}
+@media(max-width:600px){.header-inner{height:60px}.logo-name{font-size:18px}.header-phone{font-size:13px}}
+
+/* ─── HERO ─── */
+#hero{position:relative;background:linear-gradient(135deg,var(--primary-dark) 0%,#0d1e3a 55%,#091626 100%);overflow:hidden;padding:100px 0 80px}
+#hero::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");pointer-events:none;z-index:1}
+.hero-glow{position:absolute;top:-120px;right:-80px;width:600px;height:600px;background:radial-gradient(circle,rgba(8,145,178,0.18) 0%,transparent 70%);pointer-events:none;z-index:1}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(8,145,178,0.18);border:1px solid rgba(8,145,178,0.4);color:var(--accent);font-family:var(--font-body);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:100px;margin-bottom:22px}
+.hero-badge svg{flex-shrink:0}
+.hero-title{font-family:var(--font-display);font-size:clamp(52px,7vw,88px);line-height:1;color:#fff;margin-bottom:20px;letter-spacing:.01em}
+.hero-title span{color:var(--accent)}
+.hero-sub{font-size:17px;line-height:1.7;color:var(--t2);max-width:520px;margin-bottom:32px}
+.hero-ctas{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.hero-trust{display:flex;align-items:center;gap:0;border-top:1px solid rgba(255,255,255,0.1);padding-top:28px;flex-wrap:wrap;gap:20px}
+.trust-item{display:flex;align-items:center;gap:8px;font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--t2)}
+.trust-item svg{color:var(--accent);flex-shrink:0}
+.trust-sep{width:1px;height:18px;background:rgba(255,255,255,0.15)}
+
+/* hero card */
+.hero-card{background:rgba(255,255,255,0.05);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:36px 32px;display:flex;flex-direction:column;gap:0}
+.hero-card-title{font-family:var(--font-display);font-size:22px;color:#fff;margin-bottom:24px;letter-spacing:.04em}
+.value-prop{display:flex;align-items:flex-start;gap:14px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,0.07)}
+.value-prop:last-of-type{border-bottom:none;padding-bottom:0}
+.vp-icon{width:40px;height:40px;border-radius:10px;background:rgba(8,145,178,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.vp-icon svg{color:var(--accent)}
+.vp-text strong{display:block;font-size:14px;font-weight:600;color:#fff;margin-bottom:3px}
+.vp-text span{font-size:13px;color:var(--t3)}
+.hero-card-cta{margin-top:24px;display:flex;align-items:center;gap:10px;background:var(--accent);border:none;border-radius:var(--radius);padding:14px 20px;cursor:pointer;text-decoration:none;transition:background .2s,transform .15s}
+.hero-card-cta:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.hero-card-cta span{font-family:var(--font-body);font-size:14px;font-weight:600;color:#fff}
+.hero-card-cta .cta-label{flex:1}
+
+@media(max-width:1000px){.hero-inner{grid-template-columns:1fr 380px;gap:40px}}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-card{display:none}#hero{padding:80px 0 64px}}
+@media(max-width:600px){#hero{padding:60px 0 48px}.hero-ctas{flex-direction:column;align-items:flex-start}}
+
+/* hero init animations */
+.hero-el{opacity:0;transform:translateY(28px)}
+.hero-el.anim{opacity:1;transform:translateY(0);transition:opacity .7s ease,transform .7s ease}
+
+/* ─── STATS ROW ─── */
+#stats{background:var(--primary);border-top:1px solid rgba(255,255,255,0.06);border-bottom:1px solid rgba(255,255,255,0.06)}
+.stats-inner{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-block{padding:32px 24px;text-align:center;border-right:1px solid rgba(255,255,255,0.07);position:relative}
+.stat-block:last-child{border-right:none}
+.stat-num{font-family:var(--font-display);font-size:clamp(36px,4vw,52px);color:#fff;line-height:1;margin-bottom:6px;letter-spacing:.02em}
+.stat-num span{color:var(--accent)}
+.stat-label{font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--t3);letter-spacing:.06em;text-transform:uppercase}
+@media(max-width:900px){.stats-inner{grid-template-columns:repeat(2,1fr)}.stat-block:nth-child(2){border-right:none}.stat-block:nth-child(3){border-top:1px solid rgba(255,255,255,0.07)}.stat-block:nth-child(4){border-top:1px solid rgba(255,255,255,0.07);border-right:none}}
+@media(max-width:600px){.stats-inner{grid-template-columns:1fr 1fr}.stat-block{padding:24px 16px}}
+
+/* ─── SERVICES ─── */
+#services{padding:100px 0;background:var(--bg)}
+.services-header{text-align:center;margin-bottom:60px}
+.services-header .section-sub{margin:0 auto}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.service-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:36px 28px;transition:box-shadow .25s,transform .25s,border-color .25s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-dark));transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.service-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:rgba(8,145,178,0.3)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{width:52px;height:52px;border-radius:14px;background:rgba(8,145,178,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:background .25s}
+.service-card:hover .service-icon{background:rgba(8,145,178,0.18)}
+.service-icon svg{color:var(--accent)}
+.service-name{font-family:var(--font-display);font-size:24px;color:var(--dark-text);margin-bottom:10px;letter-spacing:.02em}
+.service-desc{font-size:14px;line-height:1.65;color:var(--grey-text);margin-bottom:18px}
+.service-link{font-size:13px;font-weight:600;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+.service-link:hover{color:var(--accent-dark)}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr}}
+
+/* ─── WHY CHOOSE US ─── */
+#why{position:relative;background:var(--primary);padding:100px 0;overflow:hidden}
+#why::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1}
+.why-glow{position:absolute;bottom:-200px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(8,145,178,0.12) 0%,transparent 70%);pointer-events:none;z-index:1}
+.why-inner{position:relative;z-index:2}
+.why-header{text-align:center;margin-bottom:60px}
+.why-header .section-title{color:#fff}
+.why-header .section-sub{color:var(--t2);margin:0 auto}
+.why-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:52px}
+.why-stat-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:28px 20px;text-align:center}
+.why-stat-num{font-family:var(--font-display);font-size:clamp(36px,4vw,48px);color:var(--accent);line-height:1;margin-bottom:6px}
+.why-stat-label{font-size:13px;font-weight:600;color:var(--t2);line-height:1.4}
+.why-diffs{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.diff-item{display:flex;align-items:flex-start;gap:16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:24px 22px;transition:border-color .25s,background .25s}
+.diff-item:hover{border-color:rgba(8,145,178,0.3);background:rgba(8,145,178,0.06)}
+.diff-icon{width:44px;height:44px;border-radius:12px;background:rgba(8,145,178,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.diff-icon svg{color:var(--accent)}
+.diff-text strong{display:block;font-size:15px;font-weight:600;color:#fff;margin-bottom:5px}
+.diff-text span{font-size:13px;color:var(--t3);line-height:1.55}
+@media(max-width:900px){.why-stats{grid-template-columns:repeat(2,1fr)}.why-diffs{grid-template-columns:1fr}}
+@media(max-width:600px){.why-stats{grid-template-columns:1fr 1fr}}
+
+/* ─── HOW IT WORKS ─── */
+#how{background:var(--primary-dark);padding:100px 0}
+.how-header{text-align:center;margin-bottom:64px}
+.how-header .section-title{color:#fff}
+.how-header .section-sub{color:var(--t2);margin:0 auto}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative}
+.how-steps::before{content:'';position:absolute;top:44px;left:calc(16.66% + 22px);right:calc(16.66% + 22px);height:2px;background:repeating-linear-gradient(90deg,var(--accent) 0,var(--accent) 12px,transparent 12px,transparent 24px);z-index:0}
+.how-step{text-align:center;padding:0 24px;position:relative;z-index:1}
+.step-num{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,var(--accent-dark),var(--accent));display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-family:var(--font-display);font-size:38px;color:#fff;box-shadow:0 0 0 8px rgba(8,145,178,0.12)}
+.step-title{font-family:var(--font-display);font-size:26px;color:#fff;margin-bottom:12px;letter-spacing:.03em}
+.step-desc{font-size:14px;line-height:1.65;color:var(--t2)}
+@media(max-width:900px){.how-steps{grid-template-columns:1fr;gap:40px}.how-steps::before{display:none}.how-step{padding:0}}
+
+/* ─── REVIEWS ─── */
+#reviews{padding:100px 0;background:var(--bg-off)}
+.reviews-header{text-align:center;margin-bottom:60px}
+.reviews-header .section-sub{margin:0 auto}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.review-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:32px 28px;box-shadow:var(--shadow);transition:box-shadow .25s,transform .25s}
+.review-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.review-stars{display:flex;align-items:center;gap:3px;margin-bottom:16px}
+.review-stars svg{color:#f59e0b}
+.review-body{font-size:14px;line-height:1.72;color:#374151;margin-bottom:22px;font-style:italic}
+.review-author{display:flex;align-items:center;gap:12px;border-top:1px solid var(--border);padding-top:18px}
+.review-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--accent-dark),var(--accent));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:18px;color:#fff;flex-shrink:0}
+.review-name{font-size:14px;font-weight:600;color:var(--dark-text)}
+.review-meta{font-size:12px;color:var(--grey-text);margin-top:2px}
+.reviews-cta{text-align:center;margin-top:48px}
+.reviews-total{display:inline-flex;align-items:center;gap:10px;background:var(--primary);color:#fff;font-size:14px;font-weight:600;padding:13px 24px;border-radius:100px}
+.reviews-total svg{color:var(--accent)}
+@media(max-width:900px){.reviews-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.reviews-grid{grid-template-columns:1fr}}
+
+/* ─── SERVICE AREAS ─── */
+#areas{background:var(--primary);padding:80px 0}
+.areas-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.areas-left .section-title{color:#fff}
+.areas-left .section-sub{color:var(--t2)}
+.areas-left .btn-primary{margin-top:28px}
+.areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.area-chip{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:16px 18px;transition:background .2s,border-color .2s}
+.area-chip:hover{background:rgba(8,145,178,0.15);border-color:rgba(8,145,178,0.4)}
+.area-chip-name{font-family:var(--font-body);font-size:14px;font-weight:600;color:#fff;margin-bottom:3px}
+.area-chip-note{font-size:11px;color:var(--t3)}
+@media(max-width:900px){.areas-inner{grid-template-columns:1fr;gap:40px}.areas-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.areas-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ─── CONTACT ─── */
+#contact{padding:100px 0;background:var(--bg)}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-info .section-title{color:var(--dark-text)}
+.contact-info .section-sub{color:var(--grey-text);margin-bottom:36px}
+.contact-detail{display:flex;align-items:flex-start;gap:14px;margin-bottom:22px}
+.contact-detail-icon{width:44px;height:44px;border-radius:12px;background:rgba(8,145,178,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-detail-icon svg{color:var(--accent)}
+.contact-detail strong{display:block;font-size:14px;font-weight:600;color:var(--dark-text);margin-bottom:2px}
+.contact-detail span{font-size:14px;color:var(--grey-text)}
+.contact-detail a{color:var(--accent);text-decoration:none;font-size:14px}
+.contact-form-card{background:var(--bg-off);border:1px solid var(--border);border-radius:20px;padding:40px 36px}
+.form-title{font-family:var(--font-display);font-size:30px;color:var(--dark-text);margin-bottom:24px;letter-spacing:.03em}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-group{margin-bottom:16px;display:flex;flex-direction:column;gap:6px}
+.form-group label{font-size:13px;font-weight:600;color:var(--dark-text)}
+.form-group input,.form-group select,.form-group textarea{font-family:var(--font-body);font-size:14px;color:var(--dark-text);background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 14px;outline:none;transition:border-color .2s,box-shadow .2s;width:100%}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(8,145,178,0.12)}
+.form-group textarea{min-height:110px;resize:vertical}
+.form-submit{width:100%;background:var(--accent);color:#fff;font-family:var(--font-body);font-size:15px;font-weight:600;padding:15px 24px;border:none;border-radius:var(--radius);cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s}
+.form-submit:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 6px 24px rgba(8,145,178,0.35)}
+.form-note{font-size:12px;color:var(--grey-text);text-align:center;margin-top:12px}
+@media(max-width:900px){.contact-inner{grid-template-columns:1fr;gap:48px}.form-row{grid-template-columns:1fr}}
+@media(max-width:600px){.contact-form-card{padding:28px 22px}}
+
+/* ─── CTA BAND ─── */
+#cta-band{position:relative;background:linear-gradient(135deg,var(--accent-dark),var(--accent));padding:90px 0;overflow:hidden;text-align:center}
+#cta-band::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");pointer-events:none;z-index:1}
+.cta-band-inner{position:relative;z-index:2}
+.cta-band-eyebrow{font-family:var(--font-body);font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,0.75);margin-bottom:14px}
+.cta-band-title{font-family:var(--font-display);font-size:clamp(48px,7vw,84px);color:#fff;line-height:1;margin-bottom:18px}
+.cta-band-sub{font-size:18px;color:rgba(255,255,255,0.85);margin-bottom:40px;max-width:560px;margin-left:auto;margin-right:auto}
+.cta-band-actions{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+.btn-white{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--accent-dark);font-family:var(--font-body);font-size:15px;font-weight:600;padding:15px 30px;border-radius:var(--radius);border:none;cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .2s}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,0.2)}
+.btn-outline-white{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-family:var(--font-body);font-size:15px;font-weight:600;padding:14px 29px;border-radius:var(--radius);border:2px solid rgba(255,255,255,0.5);cursor:pointer;text-decoration:none;transition:border-color .2s,background .2s,transform .15s}
+.btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,0.12);transform:translateY(-2px)}
+.cta-trust-row{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:36px;flex-wrap:wrap}
+.cta-trust-item{font-size:13px;font-weight:600;color:rgba(255,255,255,0.8);display:flex;align-items:center;gap:6px}
+@media(max-width:600px){.cta-band-actions{flex-direction:column;align-items:stretch;max-width:300px;margin:0 auto}}
+
+/* ─── FOOTER ─── */
+#footer{background:var(--primary-dark);padding:72px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,0.08)}
+.footer-brand .logo-name{font-family:var(--font-display);font-size:24px;color:#fff;letter-spacing:.04em}
+.footer-brand .logo-tag{font-family:var(--font-body);font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-top:4px;margin-bottom:16px}
+.footer-tagline{font-size:14px;line-height:1.65;color:var(--t3);margin-bottom:22px;max-width:260px}
+.footer-phone{display:inline-flex;align-items:center;gap:8px;font-size:18px;font-weight:600;color:#fff;text-decoration:none;margin-bottom:8px}
+.footer-phone:hover{color:var(--accent)}
+.footer-hours{font-size:12px;color:var(--t3)}
+.footer-col-title{font-family:var(--font-body);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:14px;color:var(--t3);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:#fff}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding:20px 0;flex-wrap:wrap;gap:12px}
+.footer-copy{font-size:13px;color:var(--t3)}
+.footer-lic{font-size:12px;color:var(--t3)}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header id="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-name">Artie's Heating &amp; Air</span>
+        <span class="logo-tag">Killeen, TX — HVAC Specialists</span>
+      </a>
+      <nav class="header-nav">
+        <a href="#services">Services</a>
+        <a href="#why">Why Artie's</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#areas">Service Areas</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a href="tel:+12545547250" class="header-phone">(254) 554-7250</a>
+        <a href="#contact" class="btn-primary" style="padding:10px 20px;font-size:13px">Free Estimate</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <!-- Left -->
+      <div class="hero-left">
+        <div class="hero-el" style="transition-delay:.08s">
+          <div class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Killeen's Top-Rated HVAC Service &nbsp;·&nbsp; 473 Reviews
+          </div>
+        </div>
+        <div class="hero-el" style="transition-delay:.18s">
+          <h1 class="hero-title">Killeen's<br>Most Trusted<br><span>HVAC</span> Team</h1>
+        </div>
+        <div class="hero-el" style="transition-delay:.28s">
+          <p class="hero-sub">When Killeen hits 108° in July, your AC can't wait. Artie's delivers fast, reliable heating and cooling service — backed by 473 five-star reviews from your Central Texas neighbors.</p>
+        </div>
+        <div class="hero-el hero-ctas" style="transition-delay:.38s">
+          <a href="tel:+12545547250" class="btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call (254) 554-7250
+          </a>
+          <a href="#contact" class="btn-ghost">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Free Estimate
+          </a>
+        </div>
+        <div class="hero-el" style="transition-delay:.48s">
+          <div class="hero-trust">
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              4.8 Stars
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              473 Reviews
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              Heating &amp; Cooling
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Licensed &amp; Insured
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right card -->
+      <div class="hero-el hero-card" style="transition-delay:.32s">
+        <div class="hero-card-title">Why Killeen Chooses Artie's</div>
+        <div class="value-prop">
+          <div class="vp-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="vp-text">
+            <strong>Same-Day Emergency Service</strong>
+            <span>AC down in a Texas July? We respond fast — day or night.</span>
+          </div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="vp-text">
+            <strong>Licensed HVAC Specialists</strong>
+            <span>Dedicated to heating and cooling — not a jack-of-all-trades shop.</span>
+          </div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div class="vp-text">
+            <strong>473 Five-Star Reviews</strong>
+            <span>The most-reviewed HVAC company in Killeen. Your neighbors trust us.</span>
+          </div>
+        </div>
+        <div class="value-prop">
+          <div class="vp-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <div class="vp-text">
+            <strong>Upfront, Honest Pricing</strong>
+            <span>No surprise fees. Clear estimates before any work begins.</span>
+          </div>
+        </div>
+        <a href="tel:+12545547250" class="hero-card-cta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span class="cta-label">Call Now — (254) 554-7250</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STATS ROW ─── -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-block fade-up">
+        <div class="stat-num"><span data-target="4.8">4.8</span><span style="color:var(--accent)">★</span></div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+      <div class="stat-block fade-up" style="transition-delay:.1s">
+        <div class="stat-num" data-target="473" data-suffix="">473</div>
+        <div class="stat-label">Verified Reviews</div>
+      </div>
+      <div class="stat-block fade-up" style="transition-delay:.2s">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Heating &amp; Cooling</div>
+      </div>
+      <div class="stat-block fade-up" style="transition-delay:.3s">
+        <div class="stat-num" style="font-size:clamp(22px,3vw,32px);padding-top:8px">Licensed<br><span>&amp; Insured</span></div>
+        <div class="stat-label">Fully Covered</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVICES ─── -->
+<section id="services" style="padding:100px 0">
+  <div class="container">
+    <div class="services-header">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title" style="color:var(--dark-text)">Complete HVAC Services<br>for Killeen &amp; Central Texas</h2>
+      <p class="section-sub">From emergency AC repair to full system replacements — Artie's handles every heating and cooling need with the expertise and speed that 108° Texas summers demand.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card fade-up">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.59 4.59A2 2 0 1111 8H2m10.59 11.41A2 2 0 1014 16H2m15.73-8.27A2.5 2.5 0 1119.5 12H2"/></svg>
+        </div>
+        <div class="service-name">AC Repair &amp; Installation</div>
+        <p class="service-desc">Fast, accurate air conditioning repairs and new system installations for homes and businesses across Killeen. We diagnose fast and fix it right the first time.</p>
+        <a href="#contact" class="service-link">
+          Schedule Service
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card fade-up" style="transition-delay:.1s">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V12m0 0l-3-3m3 3l3-3"/><path d="M20 16.58A5 5 0 0018 7h-1.26A8 8 0 104 15.25"/></svg>
+        </div>
+        <div class="service-name">Heating Repair</div>
+        <p class="service-desc">When a Central Texas cold front hits, your furnace needs to work. Artie's repairs all makes and models of heating systems — quickly, reliably, and at fair prices.</p>
+        <a href="#contact" class="service-link">
+          Schedule Service
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card fade-up" style="transition-delay:.2s">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="service-name">System Replacement</div>
+        <p class="service-desc">Aging unit costing you money? We'll assess your home or business and install a right-sized, energy-efficient system built for Central Texas conditions.</p>
+        <a href="#contact" class="service-link">
+          Get Free Estimate
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card fade-up" style="transition-delay:.1s">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="service-name">Maintenance Plans</div>
+        <p class="service-desc">Seasonal tune-ups that keep your system running at peak efficiency — extending its life, improving comfort, and preventing costly breakdowns before they happen.</p>
+        <a href="#contact" class="service-link">
+          Learn More
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card fade-up" style="transition-delay:.2s">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="service-name">Emergency AC Service</div>
+        <p class="service-desc">AC failures at midnight in July aren't an option you can wait on. Artie's provides emergency HVAC service when Killeen's heat makes it a true emergency.</p>
+        <a href="tel:+12545547250" class="service-link">
+          Call Now
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+
+      <div class="service-card fade-up" style="transition-delay:.3s">
+        <div class="service-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="service-name">Duct Cleaning</div>
+        <p class="service-desc">Dirty ducts reduce airflow efficiency and circulate dust, allergens, and contaminants through your home. Our duct cleaning improves air quality and system performance.</p>
+        <a href="#contact" class="service-link">
+          Schedule Service
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHY CHOOSE US ─── -->
+<section id="why">
+  <div class="why-glow"></div>
+  <div class="container why-inner">
+    <div class="why-header fade-up">
+      <div class="section-label">Why Artie's</div>
+      <h2 class="section-title">473 Reviews.<br>Killeen's Answer<br>When It Matters Most.</h2>
+      <p class="section-sub">When temperatures hit triple digits, you need the HVAC company your neighbors already trust — not someone who shows up with a van and a guess.</p>
+    </div>
+    <div class="why-stats">
+      <div class="why-stat-card fade-up">
+        <div class="why-stat-num" data-target="473">473</div>
+        <div class="why-stat-label">Five-Star<br>Reviews</div>
+      </div>
+      <div class="why-stat-card fade-up" style="transition-delay:.1s">
+        <div class="why-stat-num">4.8</div>
+        <div class="why-stat-label">Average Star<br>Rating</div>
+      </div>
+      <div class="why-stat-card fade-up" style="transition-delay:.2s">
+        <div class="why-stat-num">24/7</div>
+        <div class="why-stat-label">Emergency<br>Response</div>
+      </div>
+      <div class="why-stat-card fade-up" style="transition-delay:.3s">
+        <div class="why-stat-num">100<span style="font-size:.5em">%</span></div>
+        <div class="why-stat-label">HVAC<br>Specialists</div>
+      </div>
+    </div>
+    <div class="why-diffs">
+      <div class="diff-item fade-up">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="diff-text">
+          <strong>HVAC-Only Expertise</strong>
+          <span>We do one thing and we do it exceptionally well — heating and cooling. No plumbing detours, no jack-of-all-trades guessing. Pure HVAC expertise, every call.</span>
+        </div>
+      </div>
+      <div class="diff-item fade-up" style="transition-delay:.1s">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="diff-text">
+          <strong>Fast Emergency Response</strong>
+          <span>A Texas summer breakdown is a health emergency. We treat it that way — with rapid dispatch, fast diagnostics, and same-day fixes when at all possible.</span>
+        </div>
+      </div>
+      <div class="diff-item fade-up" style="transition-delay:.1s">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="diff-text">
+          <strong>Killeen's Most-Reviewed HVAC</strong>
+          <span>473 reviews isn't luck — it's years of showing up, doing the work right, and earning the trust of Central Texas homeowners and businesses one service call at a time.</span>
+        </div>
+      </div>
+      <div class="diff-item fade-up" style="transition-delay:.2s">
+        <div class="diff-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div class="diff-text">
+          <strong>Honest, Upfront Pricing</strong>
+          <span>You'll know the cost before we start. No bait-and-switch pricing, no surprise add-ons. Straightforward quotes from technicians who respect your time and budget.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOW IT WORKS ─── -->
+<section id="how">
+  <div class="container">
+    <div class="how-header fade-up">
+      <div class="section-label">The Process</div>
+      <h2 class="section-title">Get Your HVAC Fixed<br>In 3 Simple Steps</h2>
+      <p class="section-sub">From your first call to a cool, comfortable home — we make the process simple, fast, and stress-free.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step fade-up">
+        <div class="step-num">1</div>
+        <div class="step-title">Call or Book Online</div>
+        <p class="step-desc">Reach us by phone at (254) 554-7250 or submit a request online. We'll confirm your appointment quickly — and for emergencies, we'll get a technician moving right away.</p>
+      </div>
+      <div class="how-step fade-up" style="transition-delay:.15s">
+        <div class="step-num">2</div>
+        <div class="step-title">Expert Diagnosis</div>
+        <p class="step-desc">Our licensed HVAC technician arrives on time, performs a thorough system diagnosis, and gives you a clear, honest quote — before any work begins. No pressure, no surprises.</p>
+      </div>
+      <div class="how-step fade-up" style="transition-delay:.3s">
+        <div class="step-num">3</div>
+        <div class="step-title">Cool &amp; Comfortable</div>
+        <p class="step-desc">We complete the repair or installation efficiently, clean up after ourselves, and make sure you're 100% satisfied before we leave. Your comfort is the job — and it's done right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── REVIEWS ─── -->
+<section id="reviews">
+  <div class="container">
+    <div class="reviews-header fade-up">
+      <div class="section-label">Customer Reviews</div>
+      <h2 class="section-title" style="color:var(--dark-text)">What Killeen Says<br>About Artie's</h2>
+      <p class="section-sub">473 reviews. Real Central Texas customers. Real results — from emergency midnight calls to annual tune-ups.</p>
+    </div>
+    <div class="reviews-grid">
+
+      <div class="review-card fade-up">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-body">"It was 11:30 at night in mid-July and our AC died with three kids in the house. I called Artie's not really expecting anyone to answer — they picked up immediately and had a tech at my door within 90 minutes. Fixed by 1am. I cannot say enough about these guys. Absolute lifesavers."</p>
+        <div class="review-author">
+          <div class="review-avatar">MR</div>
+          <div>
+            <div class="review-name">Marcus R.</div>
+            <div class="review-meta">Killeen, TX &nbsp;·&nbsp; July</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up" style="transition-delay:.12s">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-body">"A cold front came through and our furnace refused to start. With my mother-in-law visiting and temps dropping overnight, we were stressed. Artie's sent someone out the same afternoon, diagnosed a bad igniter, had the part on the truck, and had us warm by dinner. Honest pricing too — no upsell games."</p>
+        <div class="review-author">
+          <div class="review-avatar">DW</div>
+          <div>
+            <div class="review-name">Diane W.</div>
+            <div class="review-meta">Harker Heights, TX &nbsp;·&nbsp; December</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card fade-up" style="transition-delay:.24s">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-body">"Had them out for our annual spring maintenance before the heat really hit. The tech found a refrigerant issue we didn't even know about — said our system would've struggled badly by June. Got it fixed on the spot. This is why you get maintenance done. Artie's is the real deal and the only HVAC company I call."</p>
+        <div class="review-author">
+          <div class="review-avatar">TJ</div>
+          <div>
+            <div class="review-name">Tony J.</div>
+            <div class="review-meta">Copperas Cove, TX &nbsp;·&nbsp; April</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="reviews-cta fade-up">
+      <div class="reviews-total">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        4.8 Average · 473 Total Reviews on Google
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVICE AREAS ─── -->
+<section id="areas">
+  <div class="container">
+    <div class="areas-inner">
+      <div class="areas-left fade-up">
+        <div class="section-label">Service Areas</div>
+        <h2 class="section-title" style="color:#fff">Serving Killeen<br>&amp; Central Texas</h2>
+        <p class="section-sub" style="color:var(--t2)">Artie's serves homeowners and businesses throughout the greater Killeen area — including the communities around Fort Cavazos and beyond.</p>
+        <a href="tel:+12545547250" class="btn-primary" style="margin-top:28px">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call (254) 554-7250
+        </a>
+      </div>
+      <div class="areas-grid fade-up" style="transition-delay:.2s">
+        <div class="area-chip">
+          <div class="area-chip-name">Killeen</div>
+          <div class="area-chip-note">Primary Service Area</div>
+        </div>
+        <div class="area-chip">
+          <div class="area-chip-name">Harker Heights</div>
+          <div class="area-chip-note">Bell County</div>
+        </div>
+        <div class="area-chip">
+          <div class="area-chip-name">Copperas Cove</div>
+          <div class="area-chip-note">Coryell County</div>
+        </div>
+        <div class="area-chip">
+          <div class="area-chip-name">Fort Cavazos</div>
+          <div class="area-chip-note">Military Community</div>
+        </div>
+        <div class="area-chip">
+          <div class="area-chip-name">Nolanville</div>
+          <div class="area-chip-note">Bell County</div>
+        </div>
+        <div class="area-chip">
+          <div class="area-chip-name">Temple</div>
+          <div class="area-chip-note">Bell County</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info fade-up">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Request Service<br>or a Free Estimate</h2>
+        <p class="section-sub">Whether it's an emergency breakdown or a scheduled tune-up, we make it easy to connect. Fill out the form and we'll get back to you promptly — or call us directly for immediate assistance.</p>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <strong>Phone</strong>
+            <a href="tel:+12545547250">(254) 554-7250</a>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <strong>Service Area</strong>
+            <span>Killeen, Harker Heights, Copperas Cove &amp; surrounding Central Texas</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <strong>Hours</strong>
+            <span>Mon–Fri 8am–6pm &nbsp;·&nbsp; Sat 9am–4pm<br>Emergency service available 24/7</span>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <strong>Licensed &amp; Insured</strong>
+            <span>Fully licensed Texas HVAC contractor — every job covered.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up" style="transition-delay:.15s">
+        <div class="contact-form-card">
+          <div class="form-title">Request Service</div>
+          <form onsubmit="handleFormSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Smith" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(254) 555-0100" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@email.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service-type">Heating or Cooling?</label>
+              <select id="service-type" name="service-type" required>
+                <option value="" disabled selected>Select a service...</option>
+                <optgroup label="Cooling — Air Conditioning">
+                  <option value="ac-repair">AC Repair</option>
+                  <option value="ac-install">AC Installation / Replacement</option>
+                  <option value="ac-emergency">Emergency AC Service</option>
+                  <option value="ac-maintenance">AC Tune-Up / Maintenance</option>
+                </optgroup>
+                <optgroup label="Heating">
+                  <option value="heat-repair">Heating Repair</option>
+                  <option value="heat-install">Heating System Installation</option>
+                  <option value="heat-maintenance">Heating Tune-Up / Maintenance</option>
+                </optgroup>
+                <optgroup label="Other">
+                  <option value="duct-cleaning">Duct Cleaning</option>
+                  <option value="maintenance-plan">Maintenance Plan</option>
+                  <option value="estimate">Free Estimate / New System</option>
+                  <option value="other">Other / Not Sure</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="address">Service Address</label>
+              <input type="text" id="address" name="address" placeholder="123 Main St, Killeen, TX">
+            </div>
+            <div class="form-group">
+              <label for="message">Tell Us What's Going On</label>
+              <textarea id="message" name="message" placeholder="Describe the issue — when it started, what you've noticed, any error codes. The more detail, the faster we can help."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Service Request</button>
+            <p class="form-note">We typically respond within 1 business hour. For emergencies, please call (254) 554-7250 directly.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA BAND ─── -->
+<section id="cta-band">
+  <div class="container cta-band-inner">
+    <div class="cta-band-eyebrow fade-up">Killeen's HVAC Authority</div>
+    <h2 class="cta-band-title fade-up" style="transition-delay:.1s">Don't Sweat<br>The Heat.</h2>
+    <p class="cta-band-sub fade-up" style="transition-delay:.2s">When Killeen hits 108° and your AC goes down, there's one name everyone knows. 473 reviews don't lie — call Artie's and get it fixed today.</p>
+    <div class="cta-band-actions fade-up" style="transition-delay:.3s">
+      <a href="tel:+12545547250" class="btn-white">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call (254) 554-7250
+      </a>
+      <a href="#contact" class="btn-outline-white">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Request Service Online
+      </a>
+    </div>
+    <div class="cta-trust-row fade-up" style="transition-delay:.4s">
+      <div class="cta-trust-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        4.8 Stars
+      </div>
+      <div style="width:1px;height:14px;background:rgba(255,255,255,0.3)"></div>
+      <div class="cta-trust-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        473 Reviews
+      </div>
+      <div style="width:1px;height:14px;background:rgba(255,255,255,0.3)"></div>
+      <div class="cta-trust-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        24/7 Emergency Service
+      </div>
+      <div style="width:1px;height:14px;background:rgba(255,255,255,0.3)"></div>
+      <div class="cta-trust-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Licensed &amp; Insured
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-name">Artie's Heating &amp; Air</div>
+        <div class="logo-tag" style="display:block;margin-top:4px;margin-bottom:16px">HVAC Specialists — Killeen, TX</div>
+        <p class="footer-tagline">Killeen's most trusted HVAC company. Serving Central Texas homeowners and businesses with fast, honest heating and cooling service since day one.</p>
+        <a href="tel:+12545547250" class="footer-phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (254) 554-7250
+        </a>
+        <div class="footer-hours">Mon–Fri 8am–6pm &nbsp;·&nbsp; Sat 9am–4pm &nbsp;·&nbsp; 24/7 Emergency</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">AC Repair &amp; Installation</a></li>
+          <li><a href="#services">Heating Repair</a></li>
+          <li><a href="#services">System Replacement</a></li>
+          <li><a href="#services">Maintenance Plans</a></li>
+          <li><a href="#services">Emergency AC Service</a></li>
+          <li><a href="#services">Duct Cleaning</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#areas">Killeen</a></li>
+          <li><a href="#areas">Harker Heights</a></li>
+          <li><a href="#areas">Copperas Cove</a></li>
+          <li><a href="#areas">Fort Cavazos</a></li>
+          <li><a href="#areas">Nolanville</a></li>
+          <li><a href="#areas">Temple</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#why">Why Artie's</a></li>
+          <li><a href="#reviews">Customer Reviews</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="tel:+12545547250">Emergency Service</a></li>
+        </ul>
+        <div style="margin-top:28px">
+          <div class="footer-col-title">Trust</div>
+          <div style="font-size:13px;color:var(--t3);line-height:1.7">
+            4.8 Stars &nbsp;·&nbsp; 473 Reviews<br>
+            Licensed &amp; Insured<br>
+            Killeen, TX 76543
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2024 Artie's Heating &amp; Air Conditioning. All rights reserved.</div>
+      <div class="footer-lic">Licensed Texas HVAC Contractor &nbsp;·&nbsp; Serving Killeen &amp; Central Texas</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── Hero fade-up on load ───
+document.addEventListener('DOMContentLoaded', function() {
+  var heroEls = document.querySelectorAll('.hero-el');
+  heroEls.forEach(function(el, i) {
+    setTimeout(function() {
+      el.classList.add('anim');
+    }, 80 + i * 100);
+  });
+
+  // ─── IntersectionObserver stagger fadeUp ───
+  var fadeEls = document.querySelectorAll('.fade-up');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  fadeEls.forEach(function(el) {
+    observer.observe(el);
+  });
+
+  // ─── animateCount ───
+  function animateCount(el) {
+    var target = parseFloat(el.getAttribute('data-target'));
+    if (!target) return;
+    var isDecimal = String(target).indexOf('.') !== -1;
+    var duration = 1600;
+    var start = null;
+    var startVal = 0;
+    function step(ts) {
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var ease = 1 - Math.pow(1 - progress, 3);
+      var current = startVal + (target - startVal) * ease;
+      el.textContent = isDecimal ? current.toFixed(1) : Math.round(current).toLocaleString();
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = isDecimal ? target.toFixed(1) : target.toLocaleString();
+    }
+    requestAnimationFrame(step);
+  }
+
+  var countEls = document.querySelectorAll('[data-target]');
+  var countObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        countObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  countEls.forEach(function(el) {
+    countObserver.observe(el);
+  });
+
+  // ─── Header scroll shadow ───
+  var header = document.getElementById('site-header');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 20) {
+      header.style.boxShadow = '0 2px 24px rgba(0,0,0,0.35)';
+    } else {
+      header.style.boxShadow = 'none';
+    }
+  });
+});
+
+// ─── Form submit handler ───
+function handleFormSubmit(e) {
+  e.preventDefault();
+  var btn = e.target.querySelector('.form-submit');
+  var originalText = btn.textContent;
+  btn.textContent = 'Request Sent — We Will Be In Touch Shortly';
+  btn.style.background = '#059669';
+  btn.disabled = true;
+  setTimeout(function() {
+    btn.textContent = originalText;
+    btn.style.background = '';
+    btn.disabled = false;
+    e.target.reset();
+  }, 5000);
+}
+</script>
+</body>
+</html>
