@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deer Park Plumbing and Maintenance Inc. | Pasadena & Deer Park TX</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap');
+:root {
+  --primary: #0c4a6e;
+  --primary-dark: #082f4a;
+  --accent: #f97316;
+  --accent-dark: #c2410c;
+  --bg: #ffffff;
+  --bg-off: #f0f7ff;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.78);
+  --t3: rgba(255,255,255,0.48);
+  --dark-text: #0f172a;
+  --grey-text: #64748b;
+  --border: #e2e8f0;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: var(--dark-text); background: var(--bg); overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; }
+
+header {
+  background: var(--primary);
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+.logo-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--t1);
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.logo-tag {
+  font-size: 0.7rem;
+  color: var(--t3);
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+nav a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--t2);
+  letter-spacing: 0.3px;
+  transition: color 0.2s;
+}
+nav a:hover { color: var(--accent); }
+.header-cta {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: background 0.2s;
+}
+.header-cta:hover { background: var(--accent-dark); color: #fff; }
+
+.hero {
+  background: var(--primary-dark);
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.hero-geo {
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249,115,22,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(249,115,22,0.15);
+  border: 1px solid rgba(249,115,22,0.35);
+  border-radius: 50px;
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: heroFadeUp 0.6s ease both;
+}
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  color: var(--t1);
+  line-height: 1.0;
+  margin-top: 20px;
+  animation: heroFadeUp 0.6s 0.1s ease both;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--t2);
+  line-height: 1.7;
+  margin-top: 18px;
+  max-width: 520px;
+  animation: heroFadeUp 0.6s 0.2s ease both;
+}
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  animation: heroFadeUp 0.6s 0.3s ease both;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.btn-ghost {
+  background: transparent;
+  color: var(--t1);
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-ghost:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.07); }
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 24px;
+  animation: heroFadeUp 0.6s 0.4s ease both;
+}
+.hero-stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.hero-trust-text {
+  font-size: 0.8rem;
+  color: var(--t3);
+}
+.hero-trust-text strong { color: var(--t2); font-weight: 600; }
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 20px;
+  padding: 36px 30px;
+  animation: heroFadeUp 0.6s 0.25s ease both;
+}
+.hero-card-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--t1);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+.hero-card-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.hero-card-item:last-child { border-bottom: none; }
+.hero-card-icon {
+  width: 38px;
+  height: 38px;
+  background: rgba(249,115,22,0.18);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.hero-card-info { flex: 1; }
+.hero-card-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--t3);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.hero-card-value {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--t1);
+  margin-top: 2px;
+}
+.hero-card-value a { color: var(--t1); }
+
+.stats-bar {
+  background: var(--primary);
+  padding: 0;
+}
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 24px;
+}
+.stat-item {
+  padding: 28px 20px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--accent);
+  line-height: 1;
+  display: block;
+}
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--t2);
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.section { padding: 80px 24px; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--dark-text);
+  line-height: 1.05;
+  margin-top: 10px;
+}
+.section-sub {
+  font-size: 1rem;
+  color: var(--grey-text);
+  line-height: 1.7;
+  margin-top: 12px;
+  max-width: 580px;
+}
+.section-title-block { margin-bottom: 48px; }
+.bg-off { background: var(--bg-off); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.card {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s;
+}
+.card.visible { opacity: 1; transform: translateY(0); }
+.card:hover { box-shadow: var(--shadow-lg); }
+.card-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(12,74,110,0.1);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--dark-text);
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+.card-text {
+  font-size: 0.88rem;
+  color: var(--grey-text);
+  line-height: 1.65;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.why-card {
+  background: var(--primary);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.why-card.card { background: var(--primary); border: none; box-shadow: none; }
+.why-card.card:hover { box-shadow: var(--shadow-lg); }
+.why-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(249,115,22,0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.why-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--t1);
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.why-text {
+  font-size: 0.86rem;
+  color: var(--t2);
+  line-height: 1.65;
+}
+
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+}
+.how-step {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.how-step.card { background: transparent; box-shadow: none; border: none; padding: 0; }
+.step-number {
+  width: 56px;
+  height: 56px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0 auto 18px;
+}
+.step-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--dark-text);
+  margin-bottom: 10px;
+}
+.step-text {
+  font-size: 0.88rem;
+  color: var(--grey-text);
+  line-height: 1.65;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.review-card {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 28px 26px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  position: relative;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.review-card.card { padding: 28px 26px; }
+.review-quote {
+  position: absolute;
+  top: 20px;
+  right: 22px;
+}
+.review-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+.review-text {
+  font-size: 0.9rem;
+  color: var(--dark-text);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--t1);
+  flex-shrink: 0;
+}
+.review-name {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--dark-text);
+}
+.review-location {
+  font-size: 0.76rem;
+  color: var(--grey-text);
+  margin-top: 1px;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+.area-chip {
+  background: var(--bg-off);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.area-chip svg { color: var(--accent); flex-shrink: 0; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.contact-info { display: flex; flex-direction: column; gap: 20px; }
+.contact-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: var(--bg-off);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.contact-block-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.contact-block-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--grey-text);
+}
+.contact-block-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-top: 2px;
+}
+form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+input, select, textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--dark-text);
+  background: var(--bg);
+  transition: border-color 0.2s;
+  outline: none;
+}
+input:focus, select:focus, textarea:focus { border-color: var(--primary); }
+textarea { height: 120px; resize: vertical; }
+.form-submit {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 100%;
+}
+.form-submit:hover { background: var(--accent-dark); }
+
+.cta-band {
+  background: var(--primary);
+  padding: 72px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.cta-grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  color: var(--t1);
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+.cta-title span { color: var(--accent); }
+.cta-sub {
+  font-size: 1rem;
+  color: var(--t2);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+footer {
+  background: var(--primary-dark);
+  padding: 48px 24px 24px;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--t1);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.footer-brand-text {
+  font-size: 0.84rem;
+  color: var(--t3);
+  line-height: 1.65;
+  max-width: 260px;
+}
+.footer-col-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--t2);
+  margin-bottom: 14px;
+}
+.footer-links { display: flex; flex-direction: column; gap: 8px; }
+.footer-links a {
+  font-size: 0.85rem;
+  color: var(--t3);
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.footer-copy {
+  font-size: 0.78rem;
+  color: var(--t3);
+}
+.footer-license {
+  font-size: 0.78rem;
+  color: var(--t3);
+}
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+  .services-grid, .why-grid, .how-steps, .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .services-grid, .why-grid, .how-steps, .reviews-grid, .areas-grid, .stats-inner { grid-template-columns: 1fr; }
+  .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .form-row { grid-template-columns: 1fr; }
+  nav { display: none; }
+  .footer-top { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-name">Deer Park Plumbing</span>
+      <span class="logo-tag">Pasadena &amp; Deer Park, TX</span>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="header-cta">Get a Quote</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-geo"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        Industrial Corridor Specialists
+      </div>
+      <h1 class="hero-headline">Deer Park's <span>Maintenance</span> Plumbing Pros</h1>
+      <p class="hero-sub">From industrial Deer Park to residential La Porte — we handle every plumbing call with the precision of a facility-grade maintenance team. No drama, just done.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+          Request Service
+        </a>
+        <a href="#services" class="btn-ghost">View All Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-stars">
+          <svg width="16" height="16" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="hero-trust-text"><strong>4.8 stars</strong> — 19 verified reviews</p>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Contact Us Today</div>
+      <div class="hero-card-item">
+        <div class="hero-card-icon">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        </div>
+        <div class="hero-card-info">
+          <div class="hero-card-label">Main Line</div>
+          <div class="hero-card-value">(281) 998-8816</div>
+        </div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hero-card-icon">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <div class="hero-card-info">
+          <div class="hero-card-label">Service Area</div>
+          <div class="hero-card-value">Deer Park, Pasadena, La Porte &amp; Beyond</div>
+        </div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hero-card-icon">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div class="hero-card-info">
+          <div class="hero-card-label">Response Time</div>
+          <div class="hero-card-value">Same-Day Emergency Available</div>
+        </div>
+      </div>
+      <div class="hero-card-item">
+        <div class="hero-card-icon">
+          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        </div>
+        <div class="hero-card-info">
+          <div class="hero-card-label">Specialization</div>
+          <div class="hero-card-value">Maintenance Contracts Available</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-num" data-target="500" data-suffix="+">0</span>
+      <div class="stat-label">Jobs Completed</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="20" data-suffix=" Yrs">0</span>
+      <div class="stat-label">In Business</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">4.8</span>
+      <div class="stat-label">Star Rating</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">Same</span>
+      <div class="stat-label">Day Response</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="section-inner">
+    <div class="section-title-block">
+      <div class="section-label">Our Services</div>
+      <h2 class="section-title">Facility-Grade Plumbing<br>For Every Property</h2>
+      <p class="section-sub">From routine maintenance to emergency repair — we bring industrial-level precision to every job, residential or commercial.</p>
+    </div>
+    <div class="services-grid">
+      <div class="card">
+        <div class="card-icon">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#0c4a6e" stroke-width="2"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01"/></svg>
+        </div>
+        <div class="card-title">Drain Cleaning</div>
+        <p class="card-text">Stubborn clogs and slow drains cleared with professional-grade equipment — kitchen, bath, floor drains, and main lines.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#0c4a6e" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7"/></svg>
+        </div>
+        <div class="card-title">Pipe Maintenance</div>
+        <p class="card-text">Scheduled inspections, corrosion checks, and preventive repairs — maintenance plans for commercial and rental properties.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#0c4a6e" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+        </div>
+        <div class="card-title">Water Heater</div>
+        <p class="card-text">Tank and tankless water heater installation, repair, and replacement — including commercial unit servicing.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#0c4a6e" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        </div>
+        <div class="card-title">Emergency Repairs</div>
+        <p class="card-text">Burst pipes, flooding, or pressure loss — our emergency crews mobilize fast for Deer Park, Pasadena, and the surrounding area.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#0c4a6e" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+        <div class="card-title">Leak Detection</div>
+        <p class="card-text">Non-invasive leak location using advanced diagnostics — find hidden leaks before they become structural damage.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#0c4a6e" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/></svg>
+        </div>
+        <div class="card-title">Fixture Install</div>
+        <p class="card-text">Toilets, faucets, sinks, and shower systems installed correctly — once, right, with no callbacks needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-off" id="why-us">
+  <div class="section-inner">
+    <div class="section-title-block">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">We Maintain What<br>Others Abandon</h2>
+      <p class="section-sub">The industrial corridor demands reliability. So do Deer Park homeowners. We bring the same standards to both.</p>
+    </div>
+    <div class="why-grid">
+      <div class="card why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <div class="why-title">Same-Day Response</div>
+        <p class="why-text">When something fails, time matters. We dispatch the same day — because a dripping pipe doesn't wait for tomorrow's schedule.</p>
+      </div>
+      <div class="card why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        </div>
+        <div class="why-title">Maintenance Contracts</div>
+        <p class="why-text">Rental property owners and facility managers trust us for scheduled inspections and preventive upkeep that keeps costs predictable.</p>
+      </div>
+      <div class="card why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <div class="why-title">Licensed &amp; Insured</div>
+        <p class="why-text">Every technician is licensed in Texas — protecting you, your property, and your investment from start to finish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="section-inner">
+    <div class="section-title-block">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Three Steps to<br>Plumbing Peace</h2>
+    </div>
+    <div class="how-steps">
+      <div class="card how-step">
+        <div class="step-number">1</div>
+        <div class="step-title">Call or Request Online</div>
+        <p class="step-text">Contact us by phone at (281) 998-8816 or fill out the form below. We respond the same day — often within the hour.</p>
+      </div>
+      <div class="card how-step">
+        <div class="step-number">2</div>
+        <div class="step-title">We Assess &amp; Quote</div>
+        <p class="step-text">A licensed technician arrives on time, evaluates the issue, and gives you a clear price before any work begins. No surprises.</p>
+      </div>
+      <div class="card how-step">
+        <div class="step-number">3</div>
+        <div class="step-title">Job Done Right</div>
+        <p class="step-text">We complete the repair with facility-grade precision. You get a clean site, a clear invoice, and a job you can count on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-off" id="reviews">
+  <div class="section-inner">
+    <div class="section-title-block">
+      <div class="section-label">Customer Reviews</div>
+      <h2 class="section-title">4.8 Stars Across<br>19 Reviews</h2>
+      <p class="section-sub">Deer Park, La Porte, and Pasadena homeowners who've counted on us — in their own words.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="card review-card">
+        <div class="review-quote">
+          <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 24V14.4C0 10.08 1.28 6.56 3.84 3.84 6.4 1.12 9.92 0 14.4 0v4.8c-2.56 0-4.48.8-5.76 2.4C7.36 8.8 6.72 10.72 6.72 13.12H12V24H0zm18.4 0V14.4c0-4.32 1.28-7.84 3.84-10.56C24.8 1.12 28.32 0 32.8 0v4.8c-2.56 0-4.48.8-5.76 2.4-1.28 1.6-1.92 3.52-1.92 5.92H30.4V24H18.4z" fill="#0c4a6e" fill-opacity="0.12"/></svg>
+        </div>
+        <div class="review-stars">
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">Had a bathroom leak I thought would take days to fix. The tech found it, patched the pipe, and retiled around the fixture — all in one visit. I was honestly shocked. These guys know what they're doing.</p>
+        <div class="review-author">
+          <div class="review-avatar">C</div>
+          <div>
+            <div class="review-name">Carol W.</div>
+            <div class="review-location">Deer Park, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="card review-card">
+        <div class="review-quote">
+          <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 24V14.4C0 10.08 1.28 6.56 3.84 3.84 6.4 1.12 9.92 0 14.4 0v4.8c-2.56 0-4.48.8-5.76 2.4C7.36 8.8 6.72 10.72 6.72 13.12H12V24H0zm18.4 0V14.4c0-4.32 1.28-7.84 3.84-10.56C24.8 1.12 28.32 0 32.8 0v4.8c-2.56 0-4.48.8-5.76 2.4-1.28 1.6-1.92 3.52-1.92 5.92H30.4V24H18.4z" fill="#0c4a6e" fill-opacity="0.12"/></svg>
+        </div>
+        <div class="review-stars">
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">I manage three rental units in La Porte and these guys do my annual maintenance contracts. They show up when they say, document everything, and keep my costs predictable. Worth every dollar for peace of mind.</p>
+        <div class="review-author">
+          <div class="review-avatar">P</div>
+          <div>
+            <div class="review-name">Pedro A.</div>
+            <div class="review-location">La Porte, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="card review-card">
+        <div class="review-quote">
+          <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 24V14.4C0 10.08 1.28 6.56 3.84 3.84 6.4 1.12 9.92 0 14.4 0v4.8c-2.56 0-4.48.8-5.76 2.4C7.36 8.8 6.72 10.72 6.72 13.12H12V24H0zm18.4 0V14.4c0-4.32 1.28-7.84 3.84-10.56C24.8 1.12 28.32 0 32.8 0v4.8c-2.56 0-4.48.8-5.76 2.4-1.28 1.6-1.92 3.52-1.92 5.92H30.4V24H18.4z" fill="#0c4a6e" fill-opacity="0.12"/></svg>
+        </div>
+        <div class="review-stars">
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" fill="#f97316" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">Pipe burst in the wall behind my laundry room. Called Deer Park Plumbing at 7am and they were here by 10. Had water back on and the wall repaired before dinner. Emergency service that actually works.</p>
+        <div class="review-author">
+          <div class="review-avatar">K</div>
+          <div>
+            <div class="review-name">Kim S.</div>
+            <div class="review-location">Pasadena, TX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="areas">
+  <div class="section-inner">
+    <div class="section-title-block">
+      <div class="section-label">Service Areas</div>
+      <h2 class="section-title">Serving the Greater<br>Houston East Corridor</h2>
+      <p class="section-sub">From the industrial waterways of Deer Park to the residential neighborhoods of Pasadena — we cover the full region.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-chip">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        Deer Park
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        La Porte
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        Pasadena
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        Baytown
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        Channelview
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        Highlands
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        Cloverleaf
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        Galena Park
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        Jacinto City
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        Sheldon
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        Barrett
+      </div>
+      <div class="area-chip">
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+        South Houston
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-off" id="contact">
+  <div class="section-inner">
+    <div class="section-title-block">
+      <div class="section-label">Contact Us</div>
+      <h2 class="section-title">Ready to Get<br>the Job Done?</h2>
+      <p class="section-sub">Fill out the form and we'll respond same-day. For emergencies, use our main line and a technician will be dispatched promptly.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-block">
+          <div class="contact-block-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <div>
+            <div class="contact-block-label">Phone</div>
+            <div class="contact-block-value">(281) 998-8816</div>
+          </div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-block-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div>
+            <div class="contact-block-label">Location</div>
+            <div class="contact-block-value">Deer Park / Pasadena, TX</div>
+          </div>
+        </div>
+        <div class="contact-block">
+          <div class="contact-block-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <div class="contact-block-label">Hours</div>
+            <div class="contact-block-value">Mon–Sat 7am–6pm, Emergency 24/7</div>
+          </div>
+        </div>
+      </div>
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required>
+          <input type="tel" placeholder="Phone Number" required>
+        </div>
+        <input type="email" placeholder="Email Address">
+        <select>
+          <option value="" disabled selected>Select Service Needed</option>
+          <option>Drain Cleaning</option>
+          <option>Pipe Maintenance</option>
+          <option>Water Heater</option>
+          <option>Emergency Repairs</option>
+          <option>Leak Detection</option>
+          <option>Fixture Install</option>
+          <option>Other</option>
+        </select>
+        <textarea placeholder="Describe your plumbing issue..."></textarea>
+        <button type="submit" class="form-submit">Submit Service Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-grain"></div>
+  <div class="cta-inner">
+    <h2 class="cta-title">Precision Plumbing,<br><span>Same-Day</span> Service</h2>
+    <p class="cta-sub">Deer Park Plumbing and Maintenance Inc. is ready to respond. Call now or request service online — no drama, just done.</p>
+    <div class="cta-actions">
+      <a href="#contact" class="btn-primary">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        Request Service Now
+      </a>
+      <a href="#services" class="btn-ghost">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Deer Park Plumbing &amp; Maintenance Inc.</div>
+        <p class="footer-brand-text">Facility-grade plumbing precision for Deer Park, Pasadena, La Porte, and the greater Houston Ship Channel corridor. We maintain what others abandon.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links">
+          <a href="#services">Drain Cleaning</a>
+          <a href="#services">Pipe Maintenance</a>
+          <a href="#services">Water Heater</a>
+          <a href="#services">Emergency Repairs</a>
+          <a href="#services">Leak Detection</a>
+          <a href="#services">Fixture Install</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-links">
+          <a href="#contact">(281) 998-8816</a>
+          <a href="#contact">Request Service</a>
+          <a href="#areas">Service Areas</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Deer Park Plumbing and Maintenance Inc. All rights reserved.</div>
+      <div class="footer-license">Licensed Plumbing Contractor — Texas</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function animateCount(el) {
+  const target=parseInt(el.dataset.target), suffix=el.dataset.suffix||'', duration=1800, start=performance.now();
+  const update=(t)=>{const p=Math.min((t-start)/duration,1),e=1-Math.pow(1-p,3); el.textContent=Math.floor(e*target).toLocaleString()+suffix; if(p<1)requestAnimationFrame(update);};
+  requestAnimationFrame(update);
+}
+const statObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);statObs.unobserve(e.target);}}),{threshold:0.5});
+document.querySelectorAll('.stat-num[data-target]').forEach(el=>statObs.observe(el));
+const cardObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.15});
+document.querySelectorAll('.card').forEach(c=>cardObs.observe(c));
+</script>
+</body>
+</html>

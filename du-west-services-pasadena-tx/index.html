@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Du-West Services — Pasadena TX Plumbing & Home Services | (713) 473-7156</title>
+<meta name="description" content="Du-West Services is SE Houston's trusted name for plumbing, foundation repair, and HVAC. 185 Google reviews. Serving Pasadena TX since decades. Call (713) 473-7156.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap');
+:root {
+  --primary: #1a2535;
+  --primary-dark: #0d1520;
+  --accent: #e94f1f;
+  --accent-dark: #b83c18;
+  --bg: #ffffff;
+  --bg-off: #f4f6fb;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.78);
+  --t3: rgba(255,255,255,0.48);
+  --dark-text: #0f172a;
+  --grey-text: #64748b;
+  --border: #e2e8f0;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.01em; }
+section { padding: 88px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* HEADER */
+#site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: var(--primary);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  transition: box-shadow 0.3s;
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 68px;
+}
+.logo { font-family: var(--font-display); font-size: 1.55rem; color: var(--t1); letter-spacing: 0.04em; text-decoration: none; }
+.logo span { color: var(--accent); }
+nav { display: flex; gap: 28px; align-items: center; }
+nav a { color: var(--t2); text-decoration: none; font-size: 0.875rem; font-weight: 600; transition: color 0.2s; }
+nav a:hover { color: var(--t1); }
+.header-cta { background: var(--accent); color: #fff; font-weight: 700; font-size: 0.875rem; padding: 10px 22px; border-radius: 6px; text-decoration: none; transition: background 0.2s; }
+.header-cta:hover { background: var(--accent-dark); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, #243040 100%);
+  display: flex; align-items: center;
+  padding-top: 68px;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 30%, rgba(233,79,31,0.12) 0%, transparent 55%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; opacity: 0.6;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 60fr 40fr;
+  gap: 56px; align-items: center;
+  position: relative; z-index: 1;
+  padding: 80px 0;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(233,79,31,0.15);
+  border: 1px solid rgba(233,79,31,0.4);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 0.78rem; font-weight: 700; color: #ff8a6a;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 24px;
+  opacity: 0; animation: heroFadeUp 0.6s ease 0.1s forwards;
+}
+.hero-headline {
+  font-size: clamp(2.8rem, 5.5vw, 5rem);
+  line-height: 1.0; color: var(--t1);
+  margin-bottom: 22px;
+  opacity: 0; animation: heroFadeUp 0.6s ease 0.25s forwards;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-size: 1.05rem; color: var(--t2); max-width: 520px;
+  margin-bottom: 36px;
+  opacity: 0; animation: heroFadeUp 0.6s ease 0.4s forwards;
+}
+.hero-ctas {
+  display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px;
+  opacity: 0; animation: heroFadeUp 0.6s ease 0.55s forwards;
+}
+.btn-primary { background: var(--accent); color: #fff; font-weight: 700; font-size: 1rem; padding: 14px 30px; border-radius: 8px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.btn-secondary { border: 2px solid rgba(255,255,255,0.3); color: var(--t1); font-weight: 600; font-size: 1rem; padding: 14px 30px; border-radius: 8px; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+.btn-secondary:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.05); }
+.hero-trust {
+  display: flex; gap: 20px; flex-wrap: wrap;
+  opacity: 0; animation: heroFadeUp 0.6s ease 0.7s forwards;
+}
+.trust-item { display: flex; align-items: center; gap: 7px; font-size: 0.83rem; font-weight: 600; color: var(--t3); }
+.trust-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 16px; padding: 28px 32px;
+  opacity: 0; animation: heroFadeUp 0.6s ease 0.45s forwards;
+}
+.hero-card-label {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 6px;
+}
+.hero-review-score {
+  font-family: var(--font-display);
+  font-size: 4rem; color: var(--t1); line-height: 1;
+  margin-bottom: 4px;
+}
+.hero-review-stars { display: flex; gap: 3px; margin-bottom: 12px; }
+.hero-review-stars span { color: var(--accent); font-size: 1.1rem; }
+.hero-review-count { font-size: 0.85rem; color: var(--t2); margin-bottom: 20px; font-weight: 600; }
+.hero-card-divider { border: none; border-top: 1px solid rgba(255,255,255,0.12); margin: 18px 0; }
+.hero-services-mini { display: flex; flex-direction: column; gap: 8px; }
+.hero-services-mini span {
+  font-size: 0.85rem; color: var(--t2); font-weight: 500;
+  display: flex; align-items: center; gap: 8px;
+}
+.hero-services-mini span::before {
+  content: '';
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--accent); flex-shrink: 0;
+}
+.hero-card-cta {
+  display: block; margin-top: 20px;
+  background: var(--accent); color: #fff;
+  font-weight: 700; text-align: center;
+  padding: 13px; border-radius: 8px;
+  text-decoration: none; font-size: 0.95rem;
+  transition: background 0.2s;
+}
+.hero-card-cta:hover { background: var(--accent-dark); }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* STATS BAR */
+.stats-bar { background: var(--accent); padding: 0; }
+.stats-inner { display: grid; grid-template-columns: repeat(4, 1fr); border-left: 1px solid rgba(255,255,255,0.2); }
+.stat-item { padding: 36px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,0.2); }
+.stat-num { font-family: var(--font-display); font-size: 2.8rem; color: #fff; line-height: 1; display: block; }
+.stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.75); font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; margin-top: 6px; }
+
+/* SERVICES */
+.services { background: var(--bg); }
+.section-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-dark); margin-bottom: 10px; }
+.section-title { font-size: clamp(2rem, 4vw, 3rem); color: var(--dark-text); margin-bottom: 14px; }
+.section-sub { font-size: 1rem; color: var(--grey-text); max-width: 560px; margin-bottom: 52px; }
+.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card {
+  background: var(--bg-off);
+  border-radius: var(--radius); padding: 32px 28px;
+  border: 1px solid var(--border);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  opacity: 0; transform: translateY(20px);
+}
+.card.visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s, border-color 0.3s; }
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(233,79,31,0.25); }
+.card-icon { width: 48px; height: 48px; background: rgba(26,37,53,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.card-icon svg { width: 24px; height: 24px; stroke: var(--primary); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.card h3 { font-size: 1.3rem; color: var(--dark-text); margin-bottom: 10px; }
+.card p { font-size: 0.9rem; color: var(--grey-text); line-height: 1.6; }
+
+/* WHY US */
+.why-us { background: var(--primary); position: relative; overflow: hidden; }
+.why-us::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(233,79,31,0.1) 0%, transparent 55%);
+  pointer-events: none;
+}
+.why-us .section-label { color: var(--accent); }
+.why-us .section-title { color: var(--t1); }
+.why-us .section-sub { color: var(--t2); }
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; position: relative; z-index: 1; }
+.why-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius); padding: 28px 26px;
+}
+.why-card:hover { background: rgba(255,255,255,0.08); }
+.why-card h3 { font-size: 1.25rem; color: var(--t1); margin-bottom: 10px; }
+.why-card p { font-size: 0.88rem; color: var(--t2); line-height: 1.65; }
+.why-tag { display: inline-block; background: rgba(233,79,31,0.2); color: var(--accent); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; margin-bottom: 10px; }
+
+/* HOW IT WORKS */
+.how-it-works { background: var(--bg-off); }
+.steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; position: relative; }
+.steps-row::before { content: ''; position: absolute; top: 32px; left: calc(16.66% + 16px); right: calc(16.66% + 16px); height: 2px; background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary)); opacity: 0.2; }
+.step { text-align: center; position: relative; z-index: 1; opacity: 0; transform: translateY(20px); }
+.step.visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease, transform 0.5s ease; }
+.step-num { width: 64px; height: 64px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.6rem; color: var(--accent); margin: 0 auto 20px; box-shadow: 0 4px 16px rgba(26,37,53,0.3); }
+.step h3 { font-size: 1.3rem; color: var(--dark-text); margin-bottom: 10px; }
+.step p { font-size: 0.88rem; color: var(--grey-text); }
+
+/* REVIEWS */
+.reviews { background: #f0f2f7; }
+.reviews .section-label { color: var(--accent-dark); }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.review-card {
+  background: #ffffff; border-radius: var(--radius); padding: 28px 26px;
+  border-top: 3px solid var(--accent);
+  box-shadow: 0 2px 12px rgba(26,37,53,0.07);
+  opacity: 0; transform: translateY(20px);
+}
+.review-card.visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease, transform 0.5s ease; }
+.review-stars { display: flex; gap: 3px; margin-bottom: 6px; }
+.star { color: var(--accent); font-size: 1rem; }
+.review-text { font-size: 0.9rem; color: var(--grey-text); line-height: 1.7; margin-bottom: 18px; }
+.review-author { font-size: 0.85rem; font-weight: 700; color: var(--dark-text); }
+.review-location { font-size: 0.78rem; color: var(--grey-text); }
+
+/* SERVICE AREAS */
+.service-areas { background: var(--bg); }
+.areas-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.area-tag { background: var(--bg-off); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; font-size: 0.88rem; font-weight: 600; color: var(--dark-text); text-align: center; transition: border-color 0.2s, background 0.2s; }
+.area-tag:hover { border-color: rgba(233,79,31,0.3); background: rgba(233,79,31,0.04); }
+
+/* CONTACT */
+.contact-section { background: var(--bg-off); }
+.contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 56px; align-items: start; }
+.contact-info h2 { font-size: 2.5rem; color: var(--dark-text); margin-bottom: 14px; }
+.contact-info p { font-size: 0.95rem; color: var(--grey-text); margin-bottom: 28px; }
+.contact-details { display: flex; flex-direction: column; gap: 14px; }
+.contact-detail { display: flex; align-items: center; gap: 12px; font-size: 0.9rem; font-weight: 600; color: var(--dark-text); }
+.contact-detail-icon { width: 40px; height: 40px; background: var(--primary); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-detail-icon svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.contact-form { background: #ffffff; border-radius: var(--radius); padding: 36px; box-shadow: var(--shadow); border: 1px solid var(--border); }
+.form-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 0.82rem; font-weight: 700; color: var(--dark-text); }
+.form-group input, .form-group select, .form-group textarea { border: 1px solid var(--border); border-radius: 8px; padding: 11px 14px; font-family: var(--font-body); font-size: 0.9rem; color: var(--dark-text); background: var(--bg-off); transition: border-color 0.2s; outline: none; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-submit { width: 100%; background: var(--accent); color: #fff; font-weight: 700; font-size: 1rem; padding: 14px; border: none; border-radius: 8px; cursor: pointer; transition: background 0.2s; margin-top: 4px; }
+.form-submit:hover { background: var(--accent-dark); }
+
+/* CTA BAND */
+.cta-band { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%); padding: 72px 0; text-align: center; position: relative; overflow: hidden; }
+.cta-band::after { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; }
+.cta-band h2 { font-size: clamp(2rem, 4vw, 3.2rem); color: var(--t1); margin-bottom: 14px; position: relative; z-index: 1; }
+.cta-band p { color: var(--t2); font-size: 1.05rem; margin-bottom: 32px; position: relative; z-index: 1; }
+.cta-buttons { display: flex; gap: 16px; justify-content: center; position: relative; z-index: 1; }
+
+/* FOOTER */
+footer { background: var(--primary-dark); padding: 52px 0 28px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+.footer-brand .logo { display: inline-block; margin-bottom: 14px; }
+.footer-brand p { font-size: 0.85rem; color: var(--t3); line-height: 1.7; }
+.footer-col h4 { font-family: var(--font-display); font-size: 1rem; color: var(--accent); margin-bottom: 14px; letter-spacing: 0.06em; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-col ul li a { font-size: 0.85rem; color: var(--t3); text-decoration: none; transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--t1); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-bottom p { font-size: 0.78rem; color: var(--t3); }
+.footer-bottom a { color: var(--t3); text-decoration: none; }
+.footer-bottom a:hover { color: var(--t1); }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; }
+  .steps-row { grid-template-columns: 1fr; }
+  .steps-row::before { display: none; }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .areas-grid { grid-template-columns: repeat(3, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  nav { display: none; }
+}
+@media (max-width: 600px) {
+  .cards-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .form-row { grid-template-columns: 1fr; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero-ctas { flex-direction: column; }
+  .header-cta { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">Du-West <span>Services</span></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Du-West</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:7134737156" class="header-cta">(713) 473-7156</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-badge">185 Google Reviews &mdash; SE Houston's Most Trusted</div>
+        <h1 class="hero-headline">SE Houston's <span>Complete</span> Home Services</h1>
+        <p class="hero-sub">With 185 Google reviews and decades serving Pasadena, Du-West Services is the trusted name for plumbing, foundation repair, and HVAC across the entire southeast Houston area.</p>
+        <div class="hero-ctas">
+          <a href="tel:7134737156" class="btn-primary">Call (713) 473-7156</a>
+          <a href="#contact" class="btn-secondary">Get a Free Estimate</a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-item"><span class="trust-dot"></span> 4.5-Star Google Rating</span>
+          <span class="trust-item"><span class="trust-dot"></span> 30+ Years Experience</span>
+          <span class="trust-item"><span class="trust-dot"></span> Licensed TX</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-label">Google Rating</div>
+          <div class="hero-review-score">4.5</div>
+          <div class="hero-review-stars">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+          </div>
+          <div class="hero-review-count">Based on 185 verified reviews</div>
+          <hr class="hero-card-divider">
+          <div class="hero-services-mini">
+            <span>Plumbing Repair &amp; Drain Cleaning</span>
+            <span>Foundation Plumbing</span>
+            <span>Water Heater &amp; Sewer Line</span>
+            <span>Commercial Plumbing</span>
+            <span>HVAC Checks</span>
+          </div>
+          <a href="tel:7134737156" class="hero-card-cta">Call Now — (713) 473-7156</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-num" data-target="185" data-suffix="">0</span>
+      <span class="stat-label">Google Reviews</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">4.5★</span>
+      <span class="stat-label">Average Rating</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="30" data-suffix="+">0+</span>
+      <span class="stat-label">Years Serving SE Houston</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">TX</span>
+      <span class="stat-label">Licensed &amp; Insured</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-label">Full-Service Plumbing</div>
+    <h2 class="section-title">Everything Your Home Needs</h2>
+    <p class="section-sub">Du-West Services handles plumbing of every type — from routine repairs to complex foundation and commercial work.</p>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2v6m0 0c-3.314 0-6 1.343-6 3s2.686 3 6 3 6-1.343 6-3-2.686-3-6-3zm0 6v8m-6-5c0 1.657 2.686 3 6 3s6-1.343 6-3"/></svg></div>
+        <h3>Plumbing Repair</h3>
+        <p>Leaks, pressure problems, pipe failures — Du-West diagnoses and fixes the real issue, not just the symptom. Built to last.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2v6m-6 4c0 3.314 2.686 6 6 6s6-2.686 6-6"/></svg></div>
+        <h3>Drain Cleaning</h3>
+        <p>Slow drains and blockages cleared with professional equipment. We get to the source — not just push the problem down the line.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M9 17H5a2 2 0 01-2-2V9a2 2 0 012-2h4m6 10h4a2 2 0 002-2V9a2 2 0 00-2-2h-4m-6 0V5a2 2 0 014 0v2"/></svg></div>
+        <h3>Water Heater</h3>
+        <p>Repair or full replacement of water heaters. We carry common units and can have hot water restored the same visit.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6M9 8h6M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+        <h3>Sewer Line</h3>
+        <p>Full sewer line inspection, cleaning, and replacement. We handle the toughest sewer problems in SE Houston efficiently.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M9 8h6m-6 4h6m-6 4h6M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16"/></svg></div>
+        <h3>Foundation Plumbing</h3>
+        <p>Plumbing work related to slab and foundation issues — a Du-West specialty that most plumbers won't touch.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+        <h3>Commercial Plumbing</h3>
+        <p>Businesses across Pasadena and SE Houston rely on Du-West for commercial plumbing service they can count on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us" id="why-us">
+  <div class="container">
+    <div class="section-label">Why Du-West</div>
+    <h2 class="section-title" style="color:var(--t1);margin-bottom:14px;">The Name SE Houston Knows</h2>
+    <p class="section-sub">185 Google reviews and 30+ years of service don't happen by accident. They happen because we do the work right.</p>
+    <div class="why-grid">
+      <div class="why-card card">
+        <div class="why-tag">30+ Years</div>
+        <h3>Decades of Local Experience</h3>
+        <p>Du-West has been serving the Pasadena area for over three decades. We know the local plumbing, the soil conditions, and the homes inside and out.</p>
+      </div>
+      <div class="why-card card">
+        <div class="why-tag">185 Reviews</div>
+        <h3>Real Community Trust</h3>
+        <p>185 Google reviews is a number you build over years of showing up, doing the job, and leaving customers happy. That's the Du-West track record.</p>
+      </div>
+      <div class="why-card card">
+        <div class="why-tag">Multi-Service</div>
+        <h3>One Company, Multiple Trades</h3>
+        <p>Plumbing, foundation, HVAC — scheduling one visit for multiple issues saves you time and money. Du-West does it all under one roof.</p>
+      </div>
+      <div class="why-card card">
+        <div class="why-tag">Licensed TX</div>
+        <h3>Fully Licensed &amp; Insured</h3>
+        <p>Every Du-West tech is licensed and insured for the work they perform. Residential or commercial, you're covered by professionals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="container">
+    <div class="section-label">Our Process</div>
+    <h2 class="section-title">Simple. Reliable. Done Right.</h2>
+    <p class="section-sub" style="margin-bottom:56px;">Booking Du-West is easy, and getting your problem solved is even easier.</p>
+    <div class="steps-row">
+      <div class="step card">
+        <div class="step-num">1</div>
+        <h3>Call or Submit Online</h3>
+        <p>Reach Du-West by phone or online form. We respond quickly and get you scheduled at a time that works.</p>
+      </div>
+      <div class="step card">
+        <div class="step-num">2</div>
+        <h3>Diagnosis &amp; Honest Quote</h3>
+        <p>Our licensed tech arrives on time, assesses the full scope of the issue, and gives you a clear price before any work begins.</p>
+      </div>
+      <div class="step card">
+        <div class="step-num">3</div>
+        <h3>Quality Work, Clean Finish</h3>
+        <p>We complete the job with care, clean up the work area, and make sure you're satisfied before we leave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-label">Customer Reviews</div>
+    <h2 class="section-title" style="margin-bottom:12px;">185 Reasons to Call Du-West</h2>
+    <p class="section-sub">Here's what Pasadena homeowners say about their experience.</p>
+    <div class="reviews-grid">
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="review-text">We had major foundation plumbing work needed after a slab repair. Du-West came in, understood the scope immediately, and handled everything professionally. They coordinated with the foundation company and got the pipes re-routed without any drama. Excellent work.</p>
+        <div class="review-author">Patricia W.</div>
+        <div class="review-location">Pasadena, TX</div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="review-text">Du-West replaced our main sewer line. The job was big, but they did it cleanly and quickly — back in operation in less time than I expected. Their crew was communicative, the site was clean when they left, and the price was exactly what they quoted. No surprises.</p>
+        <div class="review-author">Steve H.</div>
+        <div class="review-location">South Houston, TX</div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="review-text">Had them out for a plumbing issue and ended up getting an HVAC check at the same time — saved me a separate service call. They were knowledgeable on both, honest about what needed attention vs. what could wait. This is exactly the kind of company you want on speed dial.</p>
+        <div class="review-author">Carmen R.</div>
+        <div class="review-location">Deer Park, TX</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="service-areas" id="areas">
+  <div class="container">
+    <div class="section-label">Where We Serve</div>
+    <h2 class="section-title" style="margin-bottom:12px;">Across Southeast Houston</h2>
+    <p class="section-sub">Du-West Services covers Pasadena and all major communities throughout the SE Houston area.</p>
+    <div class="areas-grid">
+      <div class="area-tag">Pasadena</div>
+      <div class="area-tag">South Houston</div>
+      <div class="area-tag">Deer Park</div>
+      <div class="area-tag">La Porte</div>
+      <div class="area-tag">Baytown</div>
+      <div class="area-tag">Pearland</div>
+      <div class="area-tag">Friendswood</div>
+      <div class="area-tag">League City</div>
+      <div class="area-tag">Webster</div>
+      <div class="area-tag">Clear Lake</div>
+      <div class="area-tag">Houston SE</div>
+      <div class="area-tag">Harris County</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-label">Get a Free Estimate</div>
+        <h2>Talk to a Du-West Expert</h2>
+        <p>Whether it's plumbing, foundation-related piping, or HVAC, our team will assess your situation and give you honest, upfront pricing.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.63 19.79 19.79 0 01.04 4.07 2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <span>(713) 473-7156</span>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <span>Pasadena, TX &amp; SE Houston</span>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <span>Fast Response — Local Team</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3 style="font-size:1.5rem;margin-bottom:22px;color:var(--dark-text);">Request an Estimate</h3>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="(713) 000-0000"></div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select>
+              <option value="">Select a service</option>
+              <option>Plumbing Repair</option>
+              <option>Drain Cleaning</option>
+              <option>Water Heater</option>
+              <option>Sewer Line</option>
+              <option>Foundation Plumbing</option>
+              <option>Commercial Plumbing</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:16px;">
+          <label>Describe Your Issue</label>
+          <textarea placeholder="What's happening? We'll come prepared to fix it."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send My Request</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2>SE Houston Trusts Du-West — So Can You</h2>
+    <p>185 Google reviews. 30+ years. Licensed Texas professionals. Call today.</p>
+    <div class="cta-buttons">
+      <a href="tel:7134737156" class="btn-primary">Call (713) 473-7156</a>
+      <a href="#contact" class="btn-secondary">Request Free Estimate</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">Du-West <span>Services</span></a>
+        <p>Du-West Services is Pasadena's trusted full-service home services company. With 30+ years of experience and 185 Google reviews, we're the name SE Houston homeowners and businesses rely on for plumbing, foundation, and HVAC work.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Plumbing Repair</a></li>
+          <li><a href="#services">Drain Cleaning</a></li>
+          <li><a href="#services">Water Heater</a></li>
+          <li><a href="#services">Sewer Line</a></li>
+          <li><a href="#services">Foundation Plumbing</a></li>
+          <li><a href="#services">Commercial Plumbing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="#areas">Pasadena</a></li>
+          <li><a href="#areas">South Houston</a></li>
+          <li><a href="#areas">Deer Park</a></li>
+          <li><a href="#areas">Pearland</a></li>
+          <li><a href="#areas">League City</a></li>
+          <li><a href="#areas">Harris County</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Du-West Services — Pasadena, TX | <a href="tel:7134737156">(713) 473-7156</a></p>
+      <p>Licensed Texas Plumber | 30+ Years Serving SE Houston</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{ document.getElementById('site-header').style.boxShadow=window.scrollY>50?'0 4px 24px rgba(0,0,0,0.5)':'0 2px 12px rgba(0,0,0,0.3)'; });
+function animateCount(el){const target=parseInt(el.dataset.target),suffix=el.dataset.suffix||'',duration=1800,start=performance.now();const update=(t)=>{const p=Math.min((t-start)/duration,1),e=1-Math.pow(1-p,3);el.textContent=Math.floor(e*target).toLocaleString()+suffix;if(p<1)requestAnimationFrame(update);};requestAnimationFrame(update);}
+const sO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);sO.unobserve(e.target);}}),{threshold:0.5});
+document.querySelectorAll('.stat-num[data-target]').forEach(el=>sO.observe(el));
+const cO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.15});
+document.querySelectorAll('.card').forEach(c=>cO.observe(c));
+</script>
+</body>
+</html>

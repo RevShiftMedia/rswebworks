@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parker Plumbing Services LLC — Mesquite TX | 5-Star Rated | (469) 562-1468</title>
+<meta name="description" content="Parker Plumbing Services LLC earns 5-star reviews one Mesquite job at a time. Licensed, insured, honest pricing. Call (469) 562-1468 for same-day service.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap');
+:root {
+  --primary: #0a2540;
+  --primary-dark: #051628;
+  --accent: #10b981;
+  --accent-dark: #059669;
+  --bg: #ffffff;
+  --bg-off: #f4f6fb;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.78);
+  --t3: rgba(255,255,255,0.48);
+  --dark-text: #0f172a;
+  --grey-text: #64748b;
+  --border: #e2e8f0;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.01em; }
+section { padding: 88px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* HEADER */
+#site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: var(--primary);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  transition: box-shadow 0.3s;
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 68px;
+}
+.logo { font-family: var(--font-display); font-size: 1.55rem; color: var(--t1); letter-spacing: 0.04em; text-decoration: none; }
+.logo span { color: var(--accent); }
+nav { display: flex; gap: 28px; align-items: center; }
+nav a { color: var(--t2); text-decoration: none; font-size: 0.875rem; font-weight: 600; transition: color 0.2s; }
+nav a:hover { color: var(--t1); }
+.header-cta { background: var(--accent); color: #fff; font-weight: 700; font-size: 0.875rem; padding: 10px 22px; border-radius: 6px; text-decoration: none; transition: background 0.2s; }
+.header-cta:hover { background: var(--accent-dark); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(145deg, var(--primary-dark) 0%, var(--primary) 55%, #0d3460 100%);
+  display: flex; align-items: center;
+  padding-top: 68px;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 85% 35%, rgba(16,185,129,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 5% 85%, rgba(16,185,129,0.06) 0%, transparent 40%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; opacity: 0.6;
+}
+.hero-grid {
+  display: grid; grid-template-columns: 60fr 40fr;
+  gap: 52px; align-items: center;
+  position: relative; z-index: 1;
+  padding: 80px 0;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(16,185,129,0.15);
+  border: 1px solid rgba(16,185,129,0.35);
+  border-radius: 100px; padding: 6px 16px;
+  font-size: 0.78rem; font-weight: 700; color: #6ee7b7;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 24px;
+  opacity: 0; animation: heroFadeUp 0.6s ease 0.1s forwards;
+}
+.hero-headline {
+  font-size: clamp(2.8rem, 5.5vw, 5rem);
+  line-height: 1.0; color: var(--t1);
+  margin-bottom: 22px;
+  opacity: 0; animation: heroFadeUp 0.6s ease 0.25s forwards;
+}
+.hero-headline span { color: var(--accent); }
+.hero-sub {
+  font-size: 1.05rem; color: var(--t2); max-width: 520px;
+  margin-bottom: 36px;
+  opacity: 0; animation: heroFadeUp 0.6s ease 0.4s forwards;
+}
+.hero-ctas {
+  display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px;
+  opacity: 0; animation: heroFadeUp 0.6s ease 0.55s forwards;
+}
+.btn-primary { background: var(--accent); color: #fff; font-weight: 700; font-size: 1rem; padding: 14px 30px; border-radius: 8px; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+.btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.btn-secondary { border: 2px solid rgba(255,255,255,0.3); color: var(--t1); font-weight: 600; font-size: 1rem; padding: 14px 30px; border-radius: 8px; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
+.btn-secondary:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.05); }
+.hero-trust {
+  display: flex; gap: 20px; flex-wrap: wrap;
+  opacity: 0; animation: heroFadeUp 0.6s ease 0.7s forwards;
+}
+.trust-item { display: flex; align-items: center; gap: 7px; font-size: 0.83rem; font-weight: 600; color: var(--t3); }
+.trust-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+
+/* HERO CARD */
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 16px; padding: 28px 32px;
+  opacity: 0; animation: heroFadeUp 0.6s ease 0.45s forwards;
+}
+.hero-card-title { font-family: var(--font-display); font-size: 1.15rem; color: var(--accent); margin-bottom: 20px; letter-spacing: 0.06em; }
+.five-star-display {
+  display: flex; align-items: baseline; gap: 10px;
+  margin-bottom: 10px;
+}
+.five-star-num { font-family: var(--font-display); font-size: 4rem; color: #fff; line-height: 1; }
+.five-star-label { font-size: 0.8rem; color: var(--t3); font-weight: 600; letter-spacing: 0.06em; }
+.five-star-row { display: flex; gap: 4px; margin-bottom: 16px; }
+.five-star-row span { color: var(--accent); font-size: 1.2rem; }
+.hero-promises { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.hero-promise {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.87rem; color: var(--t2); font-weight: 500;
+}
+.promise-check {
+  width: 22px; height: 22px; flex-shrink: 0;
+  background: rgba(16,185,129,0.2);
+  border: 1px solid rgba(16,185,129,0.4);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.promise-check svg { width: 12px; height: 12px; stroke: var(--accent); fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.hero-card-cta { display: block; background: var(--accent); color: #fff; font-weight: 700; text-align: center; padding: 13px; border-radius: 8px; text-decoration: none; font-size: 0.95rem; transition: background 0.2s; }
+.hero-card-cta:hover { background: var(--accent-dark); }
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* STATS BAR */
+.stats-bar { background: var(--accent); padding: 0; }
+.stats-inner { display: grid; grid-template-columns: repeat(4, 1fr); border-left: 1px solid rgba(255,255,255,0.2); }
+.stat-item { padding: 36px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,0.2); }
+.stat-num { font-family: var(--font-display); font-size: 2.8rem; color: #fff; line-height: 1; display: block; }
+.stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.8); font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; margin-top: 6px; }
+
+/* SERVICES */
+.services { background: var(--bg); }
+.section-label { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-dark); margin-bottom: 10px; }
+.section-title { font-size: clamp(2rem, 4vw, 3rem); color: var(--dark-text); margin-bottom: 14px; }
+.section-sub { font-size: 1rem; color: var(--grey-text); max-width: 560px; margin-bottom: 52px; }
+.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.card {
+  background: var(--bg-off); border-radius: var(--radius); padding: 32px 28px;
+  border: 1px solid var(--border);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  opacity: 0; transform: translateY(20px);
+}
+.card.visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s, border-color 0.3s; }
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: rgba(16,185,129,0.3); }
+.card-icon { width: 48px; height: 48px; background: rgba(10,37,64,0.07); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.card-icon svg { width: 24px; height: 24px; stroke: var(--primary); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.card h3 { font-size: 1.3rem; color: var(--dark-text); margin-bottom: 10px; }
+.card p { font-size: 0.9rem; color: var(--grey-text); line-height: 1.6; }
+.card-accent-tag { display: inline-block; background: rgba(16,185,129,0.1); color: var(--accent-dark); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; margin-bottom: 12px; border: 1px solid rgba(16,185,129,0.2); }
+
+/* WHY US */
+.why-us { background: var(--primary); position: relative; overflow: hidden; }
+.why-us::before {
+  content: '';
+  position: absolute; bottom: -100px; left: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(16,185,129,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.why-us .section-label { color: var(--accent); }
+.why-us .section-title { color: var(--t1); }
+.why-us .section-sub { color: var(--t2); }
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; position: relative; z-index: 1; }
+.why-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius); padding: 28px 26px;
+  position: relative; overflow: hidden;
+}
+.why-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+.why-card:hover { background: rgba(255,255,255,0.08); }
+.why-card h3 { font-size: 1.2rem; color: var(--t1); margin-bottom: 8px; }
+.why-card p { font-size: 0.87rem; color: var(--t2); line-height: 1.65; }
+.why-card-num { font-family: var(--font-display); font-size: 3rem; color: rgba(16,185,129,0.2); line-height: 1; margin-bottom: 8px; }
+
+/* HOW IT WORKS */
+.how-it-works { background: var(--bg-off); }
+.steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; position: relative; }
+.steps-row::before { content: ''; position: absolute; top: 32px; left: calc(16.66% + 16px); right: calc(16.66% + 16px); height: 2px; background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary)); opacity: 0.2; }
+.step { text-align: center; position: relative; z-index: 1; opacity: 0; transform: translateY(20px); }
+.step.visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease, transform 0.5s ease; }
+.step-num { width: 64px; height: 64px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.6rem; color: #fff; margin: 0 auto 20px; box-shadow: 0 4px 20px rgba(16,185,129,0.35); }
+.step h3 { font-size: 1.3rem; color: var(--dark-text); margin-bottom: 10px; }
+.step p { font-size: 0.88rem; color: var(--grey-text); }
+
+/* REVIEWS */
+.reviews { background: #edfaf5; }
+.reviews .section-label { color: var(--accent-dark); }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.review-card {
+  background: #ffffff; border-radius: var(--radius); padding: 28px 26px;
+  border: 1px solid rgba(16,185,129,0.15);
+  box-shadow: 0 2px 12px rgba(10,37,64,0.06);
+  opacity: 0; transform: translateY(20px);
+}
+.review-card.visible { opacity: 1; transform: translateY(0); transition: opacity 0.5s ease, transform 0.5s ease; }
+.review-stars { display: flex; gap: 3px; margin-bottom: 6px; }
+.star { color: var(--accent); font-size: 1rem; }
+.review-text { font-size: 0.9rem; color: var(--grey-text); line-height: 1.7; margin-bottom: 18px; }
+.review-author { font-size: 0.85rem; font-weight: 700; color: var(--dark-text); }
+.review-location { font-size: 0.78rem; color: var(--grey-text); }
+
+/* SERVICE AREAS */
+.service-areas { background: var(--bg); }
+.areas-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.area-tag { background: var(--bg-off); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; font-size: 0.88rem; font-weight: 600; color: var(--dark-text); text-align: center; transition: border-color 0.2s, background 0.2s; }
+.area-tag:hover { border-color: rgba(16,185,129,0.4); background: rgba(16,185,129,0.05); }
+
+/* CONTACT */
+.contact-section { background: var(--bg-off); }
+.contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 56px; align-items: start; }
+.contact-info h2 { font-size: 2.5rem; color: var(--dark-text); margin-bottom: 14px; }
+.contact-info p { font-size: 0.95rem; color: var(--grey-text); margin-bottom: 28px; }
+.contact-details { display: flex; flex-direction: column; gap: 14px; }
+.contact-detail { display: flex; align-items: center; gap: 12px; font-size: 0.9rem; font-weight: 600; color: var(--dark-text); }
+.contact-detail-icon { width: 40px; height: 40px; background: var(--primary); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-detail-icon svg { width: 18px; height: 18px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.contact-form { background: #ffffff; border-radius: var(--radius); padding: 36px; box-shadow: var(--shadow); border: 1px solid var(--border); }
+.form-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 16px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group label { font-size: 0.82rem; font-weight: 700; color: var(--dark-text); }
+.form-group input, .form-group select, .form-group textarea { border: 1px solid var(--border); border-radius: 8px; padding: 11px 14px; font-family: var(--font-body); font-size: 0.9rem; color: var(--dark-text); background: var(--bg-off); transition: border-color 0.2s; outline: none; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-submit { width: 100%; background: var(--accent); color: #fff; font-weight: 700; font-size: 1rem; padding: 14px; border: none; border-radius: 8px; cursor: pointer; transition: background 0.2s; margin-top: 4px; }
+.form-submit:hover { background: var(--accent-dark); }
+
+/* CTA BAND */
+.cta-band { background: linear-gradient(135deg, var(--primary) 0%, #0d3460 100%); padding: 72px 0; text-align: center; position: relative; overflow: hidden; }
+.cta-band::after { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; }
+.cta-band h2 { font-size: clamp(2rem, 4vw, 3.2rem); color: var(--t1); margin-bottom: 14px; position: relative; z-index: 1; }
+.cta-band p { color: var(--t2); font-size: 1.05rem; margin-bottom: 32px; position: relative; z-index: 1; }
+.cta-buttons { display: flex; gap: 16px; justify-content: center; position: relative; z-index: 1; }
+
+/* FOOTER */
+footer { background: var(--primary-dark); padding: 52px 0 28px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+.footer-brand .logo { display: inline-block; margin-bottom: 14px; }
+.footer-brand p { font-size: 0.85rem; color: var(--t3); line-height: 1.7; }
+.footer-col h4 { font-family: var(--font-display); font-size: 1rem; color: var(--accent); margin-bottom: 14px; letter-spacing: 0.06em; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-col ul li a { font-size: 0.85rem; color: var(--t3); text-decoration: none; transition: color 0.2s; }
+.footer-col ul li a:hover { color: var(--t1); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.footer-bottom p { font-size: 0.78rem; color: var(--t3); }
+.footer-bottom a { color: var(--t3); text-decoration: none; }
+.footer-bottom a:hover { color: var(--t1); }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; }
+  .steps-row { grid-template-columns: 1fr; }
+  .steps-row::before { display: none; }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .areas-grid { grid-template-columns: repeat(3, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  nav { display: none; }
+}
+@media (max-width: 600px) {
+  .cards-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .form-row { grid-template-columns: 1fr; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero-ctas { flex-direction: column; }
+  .header-cta { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">Parker <span>Plumbing</span></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Parker</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:4695621468" class="header-cta">(469) 562-1468</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-badge">5.0 Stars &mdash; Every Review, Every Time</div>
+        <h1 class="hero-headline">Mesquite's Rising <span>Plumbing</span> Specialists</h1>
+        <p class="hero-sub">Parker Plumbing Services is earning 5-star reviews one Mesquite job at a time. New name, old-school work ethic — licensed, insured, and showing up when it counts.</p>
+        <div class="hero-ctas">
+          <a href="tel:4695621468" class="btn-primary">Call (469) 562-1468</a>
+          <a href="#contact" class="btn-secondary">Free Estimate</a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-item"><span class="trust-dot"></span> 5.0-Star Rated</span>
+          <span class="trust-item"><span class="trust-dot"></span> Licensed &amp; Insured TX</span>
+          <span class="trust-item"><span class="trust-dot"></span> Mesquite &amp; Garland</span>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-title">Why Parker Plumbing</div>
+          <div class="five-star-display">
+            <span class="five-star-num">5.0</span>
+            <span class="five-star-label">Google<br>Rating</span>
+          </div>
+          <div class="five-star-row">
+            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+          </div>
+          <div class="hero-promises">
+            <div class="hero-promise">
+              <div class="promise-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+              <span>Licensed Texas Plumber</span>
+            </div>
+            <div class="hero-promise">
+              <div class="promise-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+              <span>Fully Insured — Every Job</span>
+            </div>
+            <div class="hero-promise">
+              <div class="promise-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+              <span>Upfront, Honest Pricing</span>
+            </div>
+            <div class="hero-promise">
+              <div class="promise-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
+              <span>Same-Day Availability</span>
+            </div>
+          </div>
+          <a href="tel:4695621468" class="hero-card-cta">Call Now — (469) 562-1468</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<section class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-num">5.0★</span>
+      <span class="stat-label">Google Rating</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="7" data-suffix="">0</span>
+      <span class="stat-label">Verified Reviews</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">TX</span>
+      <span class="stat-label">Licensed &amp; Insured</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">Same</span>
+      <span class="stat-label">Day Scheduling</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-label">What We Offer</div>
+    <h2 class="section-title">Full Plumbing Services in Mesquite</h2>
+    <p class="section-sub">From clogged drains to slab leaks — Parker Plumbing handles every job with the same care that earns 5-star reviews.</p>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-accent-tag">Most Common</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2v6m0 0c-3.314 0-6 1.343-6 3s2.686 3 6 3 6-1.343 6-3-2.686-3-6-3zm0 6v8m-6-5c0 1.657 2.686 3 6 3s6-1.343 6-3"/></svg></div>
+        <h3>Drain Cleaning</h3>
+        <p>Slow or blocked drains cleared fast. We go beyond the surface clog and make sure your line is flowing properly end-to-end.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M9 17H5a2 2 0 01-2-2V9a2 2 0 012-2h4m6 10h4a2 2 0 002-2V9a2 2 0 00-2-2h-4m-6 0V5a2 2 0 014 0v2"/></svg></div>
+        <h3>Water Heater</h3>
+        <p>Repair or replacement — we handle all water heater types and often complete the installation the same day you call.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M6 12h12M6 8l4 4-4 4m12-8l-4 4 4 4"/></svg></div>
+        <h3>Pipe Repair</h3>
+        <p>Leaking or damaged pipes fixed with proper materials and professional technique. We ensure a lasting repair, not a temporary patch.</p>
+      </div>
+      <div class="card">
+        <div class="card-accent-tag">Specialty</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0z"/></svg></div>
+        <h3>Leak Detection</h3>
+        <p>Slab leaks and hidden leaks located with precision. We find the problem before it becomes a much more expensive disaster.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M15 7a4 4 0 00-8 0v4m4-4v10m-4 0h8M7 17a5 5 0 0010 0"/></svg></div>
+        <h3>Toilet &amp; Fixture</h3>
+        <p>Running toilets, leaky faucets, shower fixtures — installed or repaired correctly so you're not calling us back next week.</p>
+      </div>
+      <div class="card">
+        <div class="card-accent-tag">24/7 Available</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.4L21 9l-5 4.4 1.6 6.6L12 17l-5.6 3 1.6-6.6L3 9l6.6-.6z"/></svg></div>
+        <h3>Emergency Service</h3>
+        <p>When a pipe bursts or a drain backs up at the worst moment, Parker Plumbing answers and responds. We're here when you need us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-us" id="why-us">
+  <div class="container">
+    <div class="section-label">The Parker Difference</div>
+    <h2 class="section-title" style="color:var(--t1);margin-bottom:14px;">New Company. Uncompromising Standards.</h2>
+    <p class="section-sub">Parker Plumbing may be newer to Mesquite — but the work ethic, the craftsmanship, and the integrity are the real deal.</p>
+    <div class="why-grid">
+      <div class="why-card card">
+        <div class="why-card-num">100</div>
+        <h3>Perfect Score — Every Review</h3>
+        <p>Seven reviews, seven five-star ratings. That's not luck — that's a team that genuinely cares about doing the job right and treating every customer with respect.</p>
+      </div>
+      <div class="why-card card">
+        <div class="why-card-num">TX</div>
+        <h3>Licensed &amp; Fully Insured</h3>
+        <p>We are licensed Texas plumbers. Every job we perform is covered by insurance. You're protected, and the work is done by someone qualified to do it.</p>
+      </div>
+      <div class="why-card card">
+        <div class="why-card-num">$</div>
+        <h3>Honest Pricing, No Surprises</h3>
+        <p>We quote before we start. What we tell you on the phone or in person is what appears on the invoice. No bait-and-switch, no inflated charges after the fact.</p>
+      </div>
+      <div class="why-card card">
+        <div class="why-card-num">On</div>
+        <h3>We Show Up On Time</h3>
+        <p>It sounds basic, but many plumbers don't do it. Parker Plumbing respects your schedule. We give you a window and we hit it — because your time matters.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+  <div class="container">
+    <div class="section-label">Simple Process</div>
+    <h2 class="section-title">From Call to Fixed in Three Steps</h2>
+    <p class="section-sub" style="margin-bottom:56px;">Parker Plumbing keeps it straightforward. No games, no runaround — just fast, professional service.</p>
+    <div class="steps-row">
+      <div class="step card">
+        <div class="step-num">1</div>
+        <h3>Call or Contact Us</h3>
+        <p>Reach Parker Plumbing at (469) 562-1468 or fill out the estimate form. We respond the same day.</p>
+      </div>
+      <div class="step card">
+        <div class="step-num">2</div>
+        <h3>We Diagnose &amp; Quote</h3>
+        <p>Your licensed plumber arrives on schedule, identifies the problem, and gives you a clear price before starting any work.</p>
+      </div>
+      <div class="step card">
+        <div class="step-num">3</div>
+        <h3>Fixed Right, Guaranteed</h3>
+        <p>We complete the job with care and precision, clean up completely, and make sure you're fully satisfied before we leave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-label">What Customers Say</div>
+    <h2 class="section-title" style="margin-bottom:12px;">5.0 Stars — Perfect Across the Board</h2>
+    <p class="section-sub">Parker Plumbing earns its reviews one great job at a time. Here are three of them.</p>
+    <div class="reviews-grid">
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="review-text">Called Parker for a toilet that had been running constantly and eventually just stopped flushing altogether. They came out same day, replaced the unit completely, and were done in under two hours. Clean, professional, and the price was exactly what they told me. Couldn't ask for more.</p>
+        <div class="review-author">Derrick W.</div>
+        <div class="review-location">Mesquite, TX</div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="review-text">I needed a water heater and got three quotes. Parker was the most honest — they told me exactly what I needed, didn't try to upsell me on a unit I didn't need, and came in at the best price. Installation was clean and fast. This is what every service call should feel like.</p>
+        <div class="review-author">April N.</div>
+        <div class="review-location">Garland, TX</div>
+      </div>
+      <div class="review-card card">
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:0.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars"><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+        <p class="review-text">Had a slab leak that two other companies couldn't pinpoint without major demolition. Parker came in, used proper detection methods, found the exact location, and fixed it with minimal disruption to my floor. Saved me thousands in unnecessary work. Absolutely recommend.</p>
+        <div class="review-author">Brandon H.</div>
+        <div class="review-location">Rowlett, TX</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="service-areas" id="areas">
+  <div class="container">
+    <div class="section-label">Where We Work</div>
+    <h2 class="section-title" style="margin-bottom:12px;">Mesquite, Garland &amp; Surrounding Areas</h2>
+    <p class="section-sub">Parker Plumbing serves Mesquite and the greater east Dallas area, including Kaufman County communities.</p>
+    <div class="areas-grid">
+      <div class="area-tag">Mesquite</div>
+      <div class="area-tag">Garland</div>
+      <div class="area-tag">Rowlett</div>
+      <div class="area-tag">Forney</div>
+      <div class="area-tag">Sunnyvale</div>
+      <div class="area-tag">Balch Springs</div>
+      <div class="area-tag">Seagoville</div>
+      <div class="area-tag">Rockwall</div>
+      <div class="area-tag">Fate</div>
+      <div class="area-tag">Heath</div>
+      <div class="area-tag">Dallas SE</div>
+      <div class="area-tag">Kaufman County</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="section-label">Get a Free Estimate</div>
+        <h2>Ready to Get Your Plumbing Fixed?</h2>
+        <p>Call Parker Plumbing or fill out the form below. We'll respond quickly, give you a fair quote, and get the work done right.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.63 19.79 19.79 0 01.04 4.07 2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <span>(469) 562-1468</span>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <span>Mesquite, TX &amp; East Dallas Area</span>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <span>Same-Day Response Available</span>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3 style="font-size:1.5rem;margin-bottom:22px;color:var(--dark-text);">Request Your Free Estimate</h3>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="(469) 000-0000"></div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select>
+              <option value="">Select a service</option>
+              <option>Drain Cleaning</option>
+              <option>Water Heater</option>
+              <option>Pipe Repair</option>
+              <option>Leak Detection</option>
+              <option>Toilet &amp; Fixture</option>
+              <option>Emergency Service</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:16px;">
+          <label>What's Going On?</label>
+          <textarea placeholder="Describe the problem — the more detail, the better prepared we'll be."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Request Free Estimate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2>5-Star Plumbing in Mesquite — Call Parker Today</h2>
+    <p>Licensed, insured, honest pricing, and a perfect track record. This is how plumbing should be done.</p>
+    <div class="cta-buttons">
+      <a href="tel:4695621468" class="btn-primary">Call (469) 562-1468</a>
+      <a href="#contact" class="btn-secondary">Free Estimate Online</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo">Parker <span>Plumbing</span></a>
+        <p>Parker Plumbing Services LLC is Mesquite's 5-star rated plumbing company — licensed, insured, and committed to honest work at a fair price. We're building our reputation one great job at a time across the east Dallas area.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Drain Cleaning</a></li>
+          <li><a href="#services">Water Heater</a></li>
+          <li><a href="#services">Pipe Repair</a></li>
+          <li><a href="#services">Leak Detection</a></li>
+          <li><a href="#services">Toilet &amp; Fixture</a></li>
+          <li><a href="#services">Emergency Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="#areas">Mesquite</a></li>
+          <li><a href="#areas">Garland</a></li>
+          <li><a href="#areas">Rowlett</a></li>
+          <li><a href="#areas">Forney</a></li>
+          <li><a href="#areas">Rockwall</a></li>
+          <li><a href="#areas">Kaufman County</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Parker Plumbing Services LLC — Mesquite, TX | <a href="tel:4695621468">(469) 562-1468</a></p>
+      <p>Licensed Texas Plumber | 5.0 Stars | Insured</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{ document.getElementById('site-header').style.boxShadow=window.scrollY>50?'0 4px 24px rgba(0,0,0,0.5)':'0 2px 12px rgba(0,0,0,0.3)'; });
+function animateCount(el){const target=parseInt(el.dataset.target),suffix=el.dataset.suffix||'',duration=1800,start=performance.now();const update=(t)=>{const p=Math.min((t-start)/duration,1),e=1-Math.pow(1-p,3);el.textContent=Math.floor(e*target).toLocaleString()+suffix;if(p<1)requestAnimationFrame(update);};requestAnimationFrame(update);}
+const sO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);sO.unobserve(e.target);}}),{threshold:0.5});
+document.querySelectorAll('.stat-num[data-target]').forEach(el=>sO.observe(el));
+const cO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.15});
+document.querySelectorAll('.card').forEach(c=>cO.observe(c));
+</script>
+</body>
+</html>
