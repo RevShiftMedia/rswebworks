@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swan Electric, Plumbing, Heating &amp; Air | Mesquite, TX | Full-Service Home Experts</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap');
+:root {
+  --primary: #0f172a;
+  --primary-dark: #060c1a;
+  --accent: #f5b700;
+  --accent-dark: #c49200;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #0f172a;
+  --grey-text: #64748b;
+  --border: #e2e8f0;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:var(--font-body); background:var(--bg); color:var(--dark-text); line-height:1.65; }
+h1,h2,h3,h4 { font-family:var(--font-display); letter-spacing:-0.02em; }
+section { padding:90px 0; }
+.container { max-width:1100px; margin:0 auto; padding:0 24px; }
+.btn-primary { display:inline-flex; align-items:center; gap:8px; background:var(--accent); color:var(--primary); font-family:var(--font-display); font-size:15px; letter-spacing:.05em; padding:14px 28px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 4px 16px rgba(245,183,0,0.35); transition:all .15s; text-decoration:none; font-weight:700; }
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(245,183,0,0.45); }
+.btn-primary:active { transform:scale(.97); }
+.btn-ghost { display:inline-flex; align-items:center; gap:8px; background:transparent; color:white; font-family:var(--font-display); font-size:15px; letter-spacing:.05em; padding:13px 28px; border-radius:8px; border:2px solid rgba(255,255,255,.6); cursor:pointer; transition:all .15s; text-decoration:none; }
+.btn-ghost:hover { border-color:white; background:rgba(255,255,255,.08); }
+.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.grid-4 { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:32px; }
+@media (max-width:900px) { .grid-3,.grid-4 { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:600px) { .grid-3,.grid-4,.grid-2 { grid-template-columns:1fr; } }
+@keyframes heroFadeUp { from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);} }
+.hero-badge{animation:heroFadeUp .5s ease-out .1s both;} .hero-headline{animation:heroFadeUp .5s ease-out .2s both;} .hero-sub{animation:heroFadeUp .5s ease-out .35s both;} .hero-ctas{animation:heroFadeUp .5s ease-out .5s both;} .hero-trust{animation:heroFadeUp .5s ease-out .65s both;} .hero-card{animation:heroFadeUp .5s ease-out .4s both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.card{opacity:0;transition:box-shadow .25s,transform .25s;} .card.visible{animation:fadeUp .4s ease-out forwards;}
+.card:nth-child(1).visible{animation-delay:.05s;} .card:nth-child(2).visible{animation-delay:.15s;} .card:nth-child(3).visible{animation-delay:.25s;} .card:nth-child(4).visible{animation-delay:.35s;} .card:nth-child(5).visible{animation-delay:.45s;} .card:nth-child(6).visible{animation-delay:.55s;}
+
+header { background:var(--primary); position:sticky; top:0; z-index:1000; box-shadow:0 2px 12px rgba(0,0,0,0.4); }
+header.scrolled { box-shadow:0 4px 24px rgba(0,0,0,0.6); }
+.header-inner { max-width:1100px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:68px; }
+.header-name { font-family:var(--font-display); font-size:19px; color:white; letter-spacing:.03em; }
+.header-tagline { font-family:var(--font-body); font-size:12px; color:var(--t2); margin-top:3px; }
+.header-cta { display:inline-flex; align-items:center; gap:8px; background:var(--accent); color:var(--primary); font-family:var(--font-display); font-size:14px; letter-spacing:.06em; font-weight:700; padding:10px 20px; border-radius:8px; text-decoration:none; transition:all .15s; }
+.header-cta:hover { transform:translateY(-1px); }
+
+.hero { background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%); padding:90px 0 80px; position:relative; overflow:hidden; }
+.hero::after { content:''; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity:.15; pointer-events:none; z-index:0; }
+.hero>*{position:relative;z-index:1;}
+.hero-inner { max-width:1100px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:60% 40%; gap:40px; align-items:center; }
+@media (max-width:900px) { .hero-inner{grid-template-columns:1fr;} .hero-card{display:none;} }
+.hero-badge { display:inline-flex; align-items:center; gap:8px; background:var(--accent); color:var(--primary); font-family:var(--font-display); font-size:11px; letter-spacing:.12em; font-weight:700; padding:6px 14px; border-radius:100px; width:fit-content; margin-bottom:20px; }
+.hero-headline { font-family:var(--font-display); font-size:clamp(42px,6vw,64px); color:white; line-height:1.05; margin-bottom:20px; }
+.hero-headline span { color:var(--accent); }
+.hero-sub { font-family:var(--font-body); font-size:18px; color:var(--t2); max-width:500px; margin-bottom:32px; }
+.hero-ctas { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:32px; }
+.hero-trust { display:flex; align-items:center; gap:16px; font-family:var(--font-body); font-size:13px; color:var(--t2); flex-wrap:wrap; }
+.trust-divider { width:1px; height:16px; background:rgba(255,255,255,.25); }
+.hero-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); box-shadow:0 8px 32px rgba(0,0,0,.4); backdrop-filter:blur(12px); border-radius:16px; padding:28px 32px; }
+.hero-card-title { font-family:var(--font-display); font-size:14px; color:var(--accent); letter-spacing:.12em; text-transform:uppercase; margin-bottom:18px; }
+.value-prop { display:flex; align-items:flex-start; gap:12px; margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid rgba(255,255,255,.07); }
+.value-prop:last-of-type { border-bottom:none; margin-bottom:18px; padding-bottom:0; }
+.value-check { width:22px; height:22px; border-radius:50%; background:rgba(245,183,0,.2); display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; color:var(--accent); }
+.value-title { font-family:var(--font-display); font-size:15px; color:white; letter-spacing:.03em; }
+.value-desc { font-family:var(--font-body); font-size:12px; color:var(--t2); margin-top:2px; }
+.hero-card-phone { font-family:var(--font-display); font-size:22px; color:white; letter-spacing:.05em; display:flex; align-items:center; gap:10px; padding:14px 18px; background:rgba(245,183,0,.12); border:1px solid rgba(245,183,0,.25); border-radius:10px; }
+
+.stats-bar { background:var(--primary); }
+.stats-inner { max-width:1100px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:repeat(4,1fr); }
+@media (max-width:600px) { .stats-inner{grid-template-columns:repeat(2,1fr);} }
+.stat-box { padding:32px 24px; text-align:center; border-right:1px solid rgba(255,255,255,.08); }
+.stat-box:last-child { border-right:none; }
+.stat-num { font-family:var(--font-display); font-size:clamp(32px,4vw,48px); color:var(--accent); display:block; }
+.stat-label { font-family:var(--font-body); font-size:13px; color:var(--t2); margin-top:4px; }
+
+.services { background:var(--bg); }
+.section-label { font-family:var(--font-display); font-size:10px; letter-spacing:.15em; color:var(--accent-dark); text-transform:uppercase; margin-bottom:12px; display:block; }
+.section-title { font-family:var(--font-display); font-size:36px; color:var(--dark-text); margin-bottom:12px; }
+.section-sub { font-family:var(--font-body); font-size:16px; color:var(--grey-text); margin-bottom:48px; max-width:540px; }
+.service-card { background:var(--bg); border:1px solid var(--border); border-top:3px solid transparent; border-radius:var(--radius); padding:28px 24px; box-shadow:var(--shadow); }
+.service-card:hover { border-top-color:var(--accent-dark); transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+.service-icon { width:48px; height:48px; border-radius:50%; background:rgba(196,146,0,0.1); display:flex; align-items:center; justify-content:center; margin-bottom:16px; color:var(--accent-dark); }
+.service-name { font-family:var(--font-display); font-size:17px; color:var(--dark-text); letter-spacing:.02em; margin-bottom:8px; }
+.service-desc { font-family:var(--font-body); font-size:14px; color:var(--grey-text); line-height:1.6; margin-bottom:14px; }
+.service-link { color:var(--accent-dark); font-size:13px; font-weight:600; text-decoration:none; display:flex; align-items:center; gap:4px; }
+
+.why { background:var(--primary); position:relative; overflow:hidden; }
+.why::after { content:''; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity:.1; pointer-events:none; z-index:0; }
+.why>*{position:relative;z-index:1;}
+.why-stat { background:var(--primary-dark); border-radius:var(--radius); padding:24px; text-align:center; margin-bottom:40px; }
+.why-stat-num { font-family:var(--font-display); font-size:36px; color:var(--accent); }
+.why-stat-label { font-family:var(--font-body); font-size:13px; color:var(--t2); margin-top:4px; }
+.why-diff { display:flex; align-items:flex-start; gap:16px; padding:20px; background:rgba(255,255,255,.04); border-radius:var(--radius); border:1px solid rgba(255,255,255,.07); }
+.diff-check { width:36px; height:36px; border-radius:50%; background:rgba(245,183,0,.15); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--accent); }
+.diff-title { font-family:var(--font-display); font-size:16px; color:white; letter-spacing:.03em; margin-bottom:4px; }
+.diff-desc { font-family:var(--font-body); font-size:13px; color:var(--t2); line-height:1.6; }
+
+.how { background:var(--primary-dark); }
+.steps-row { display:grid; grid-template-columns:repeat(3,1fr); margin-top:48px; }
+@media (max-width:600px) { .steps-row{grid-template-columns:1fr;} }
+.step { text-align:center; padding:32px 24px; position:relative; }
+.step:not(:last-child)::after { content:''; position:absolute; top:52px; right:0; border-right:2px dashed rgba(255,255,255,.12); height:40px; }
+.step-num { width:52px; height:52px; border-radius:50%; background:var(--accent); margin:0 auto 16px; display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:24px; color:var(--primary); font-weight:700; }
+.step-title { font-family:var(--font-display); font-size:18px; color:white; letter-spacing:.02em; margin-bottom:8px; }
+.step-desc { font-family:var(--font-body); font-size:14px; color:var(--t2); }
+
+.reviews { background:var(--bg-off); }
+.reviews-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:40px; flex-wrap:wrap; gap:16px; }
+.google-badge { display:flex; align-items:center; gap:8px; background:white; border:1px solid var(--border); border-radius:10px; padding:10px 16px; }
+.google-rating { font-family:var(--font-display); font-size:22px; color:var(--dark-text); }
+.google-stars { display:flex; gap:2px; color:#fbbf24; }
+.google-count { font-family:var(--font-body); font-size:12px; color:var(--grey-text); }
+.review-card { background:white; border:1px solid var(--border); border-radius:var(--radius); padding:28px; box-shadow:0 2px 16px rgba(0,0,0,.06); }
+.review-card:hover { box-shadow:0 8px 32px rgba(0,0,0,.12); transform:translateY(-3px); }
+.review-stars { display:flex; gap:2px; color:#fbbf24; margin-bottom:12px; }
+.review-text { font-family:var(--font-body); font-style:italic; font-size:15px; line-height:1.7; color:var(--dark-text); margin-bottom:16px; }
+.review-divider { height:1px; background:var(--border); margin-bottom:16px; }
+.reviewer { display:flex; align-items:center; gap:12px; }
+.reviewer-avatar { width:40px; height:40px; border-radius:50%; background:rgba(15,23,42,.12); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-size:16px; color:var(--primary); flex-shrink:0; }
+.reviewer-name { font-family:var(--font-display); font-size:15px; color:var(--dark-text); letter-spacing:.02em; }
+.reviewer-meta { font-family:var(--font-body); font-size:12px; color:var(--grey-text); }
+
+.areas { background:var(--primary); }
+.areas-inner { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+@media (max-width:700px) { .areas-inner{grid-template-columns:1fr;} }
+.chips-card { background:var(--primary-dark); border-radius:var(--radius); padding:28px; border:1px solid rgba(255,255,255,.1); }
+.chips-title { font-family:var(--font-display); font-size:14px; color:var(--accent); letter-spacing:.1em; text-transform:uppercase; margin-bottom:16px; }
+.chips { display:flex; flex-wrap:wrap; gap:10px; }
+.chip { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:100px; padding:6px 16px; font-family:var(--font-body); font-size:13px; color:var(--t2); cursor:pointer; transition:all .2s; }
+.chip:hover { background:var(--accent); color:var(--primary); border-color:var(--accent); font-weight:600; }
+
+.contact { background:white; }
+.contact-inner { display:grid; grid-template-columns:1fr 1fr; gap:48px; }
+@media (max-width:700px) { .contact-inner{grid-template-columns:1fr;} }
+.contact-form h3 { font-family:var(--font-display); font-size:28px; color:var(--dark-text); margin-bottom:8px; }
+.contact-form p { font-family:var(--font-body); font-size:15px; color:var(--grey-text); margin-bottom:28px; }
+.form-group { margin-bottom:18px; }
+.form-label { font-family:var(--font-body); font-size:13px; font-weight:600; color:var(--dark-text); margin-bottom:6px; display:block; }
+input,select,textarea { width:100%; background:var(--bg-off); border:1px solid var(--border); border-radius:8px; padding:12px 14px; font-family:var(--font-body); font-size:14px; color:var(--dark-text); transition:border-color .2s; }
+input:focus,select:focus,textarea:focus { outline:none; border-color:var(--accent-dark); box-shadow:0 0 0 3px rgba(196,146,0,.12); }
+textarea { height:120px; resize:vertical; }
+.submit-btn { width:100%; background:var(--accent); color:var(--primary); font-family:var(--font-display); font-size:16px; letter-spacing:.06em; font-weight:700; padding:16px; border-radius:8px; border:none; cursor:pointer; box-shadow:0 4px 16px rgba(245,183,0,.3); transition:all .15s; }
+.submit-btn:hover { transform:translateY(-2px); }
+.contact-info { background:var(--primary); border-radius:16px; padding:36px 32px; }
+.contact-info h3 { font-family:var(--font-display); font-size:24px; color:white; margin-bottom:8px; }
+.contact-info p { font-family:var(--font-body); font-size:14px; color:var(--t2); margin-bottom:28px; }
+.info-item { display:flex; align-items:flex-start; gap:14px; margin-bottom:20px; }
+.info-icon { width:40px; height:40px; border-radius:10px; background:rgba(255,255,255,.08); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--accent); }
+.info-label { font-family:var(--font-display); font-size:12px; letter-spacing:.08em; color:var(--accent); text-transform:uppercase; }
+.info-value { font-family:var(--font-body); font-size:15px; color:white; margin-top:2px; }
+
+.cta-band { background:linear-gradient(135deg,var(--accent-dark),var(--accent)); padding:80px 0; text-align:center; position:relative; overflow:hidden; }
+.cta-band::after { content:''; position:absolute; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity:.12; pointer-events:none; z-index:0; }
+.cta-band>*{position:relative;z-index:1;}
+.cta-band h2 { font-family:var(--font-display); font-size:clamp(28px,4vw,42px); color:var(--primary); margin-bottom:14px; }
+.cta-band p { font-family:var(--font-body); font-size:17px; color:rgba(15,23,42,.75); margin-bottom:32px; }
+.cta-btn-dark { display:inline-flex; align-items:center; gap:8px; background:var(--primary); color:white; font-family:var(--font-display); font-size:16px; letter-spacing:.06em; padding:16px 36px; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,.3); transition:all .15s; text-decoration:none; }
+.cta-btn-dark:hover { transform:translateY(-2px); }
+
+footer { background:var(--primary-dark); padding:64px 0 0; }
+.footer-grid { max-width:1100px; margin:0 auto; padding:0 24px; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; }
+@media (max-width:800px) { .footer-grid{grid-template-columns:1fr 1fr;} }
+@media (max-width:500px) { .footer-grid{grid-template-columns:1fr;} }
+.footer-brand-name { font-family:var(--font-display); font-size:20px; color:white; letter-spacing:.03em; margin-bottom:12px; }
+.footer-brand-desc { font-family:var(--font-body); font-size:14px; color:var(--t2); line-height:1.7; margin-bottom:20px; }
+.footer-col-title { font-family:var(--font-display); font-size:14px; color:white; letter-spacing:.08em; text-transform:uppercase; margin-bottom:16px; }
+.footer-col ul { list-style:none; }
+.footer-col ul li { margin-bottom:8px; }
+.footer-col ul li a { font-family:var(--font-body); font-size:14px; color:var(--t2); text-decoration:none; transition:color .2s; }
+.footer-col ul li a:hover { color:var(--accent); }
+.footer-bar { max-width:1100px; margin:40px auto 0; padding:20px 24px; border-top:1px solid rgba(255,255,255,.07); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
+.footer-copy,.footer-license { font-family:var(--font-body); font-size:13px; color:var(--t3); }
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="header-inner">
+    <div>
+      <div class="header-name">SWAN ELECTRIC, PLUMBING, HEATING &amp; AIR</div>
+      <div class="header-tagline">Mesquite's Full-Service Home Experts — 2,559 Reviews &amp; Counting</div>
+    </div>
+    <a href="tel:4692409295" class="header-cta">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (469) 240-9295
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        4.7 STARS &bull; 2,559 REVIEWS &bull; ONE CALL FOR EVERYTHING
+      </div>
+      <h1 class="hero-headline">Mesquite's Complete <span>Home Services</span> Team</h1>
+      <p class="hero-sub">Electric, plumbing, heating, and air conditioning — all under one roof, one phone number, one guarantee. Swan handles every system in your home so you never need to find a different contractor.</p>
+      <div class="hero-ctas">
+        <a href="tel:4692409295" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          CALL SWAN — ONE NUMBER
+        </a>
+        <a href="#contact" class="btn-ghost">SCHEDULE SERVICE</a>
+      </div>
+      <div class="hero-trust">
+        <span style="color:#fbbf24;display:flex;gap:3px;align-items:center;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="opacity:.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span style="color:white;margin-left:4px;">4.7</span>
+        </span>
+        <span>2,559 Reviews</span>
+        <span class="trust-divider"></span>
+        <span>4 Trades, 1 Call</span>
+        <span class="trust-divider"></span>
+        <span>Licensed &amp; Insured</span>
+      </div>
+    </div>
+    <div class="hero-card hero-card">
+      <div class="hero-card-title">FOUR TRADES. ONE COMPANY.</div>
+      <div class="value-prop">
+        <div class="value-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="value-title">Plumbing</div><div class="value-desc">Repairs, water heaters, drain cleaning, leak detection.</div></div>
+      </div>
+      <div class="value-prop">
+        <div class="value-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="value-title">Electrical</div><div class="value-desc">Panels, outlets, lighting, EV chargers, code compliance.</div></div>
+      </div>
+      <div class="value-prop">
+        <div class="value-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="value-title">Heating &amp; Cooling</div><div class="value-desc">AC repair, furnace service, system installs, maintenance.</div></div>
+      </div>
+      <div class="value-prop">
+        <div class="value-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="value-title">24/7 Emergency</div><div class="value-desc">Any trade, any hour, same flat-rate pricing.</div></div>
+      </div>
+      <div class="hero-card-phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (469) 240-9295
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-box"><span class="stat-num" data-target="2559" data-suffix="">0</span><div class="stat-label">Google Reviews</div></div>
+    <div class="stat-box"><span class="stat-num" data-target="4" data-suffix=" Trades">0</span><div class="stat-label">One Company</div></div>
+    <div class="stat-box"><span class="stat-num" data-target="24" data-suffix="/7">0</span><div class="stat-label">Emergency Available</div></div>
+    <div class="stat-box"><span class="stat-num" data-target="100" data-suffix="% Flat-Rate">0</span><div class="stat-label">Upfront Pricing</div></div>
+  </div>
+</div>
+
+<section class="services">
+  <div class="container">
+    <span class="section-label">Every Trade Covered</span>
+    <h2 class="section-title">One Call. Every Home System.</h2>
+    <p class="section-sub">No more juggling contractors. Swan's certified teams handle plumbing, electrical, heating, and cooling — each trade as specialized as a single-service company.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+        <div class="service-name">PLUMBING REPAIRS</div>
+        <p class="service-desc">Leaks, drains, water heaters, slab leaks, sewer lines — Swan's licensed plumbers handle every pipe in your home with flat-rate pricing.</p>
+        <a href="#contact" class="service-link">Schedule Service &#8594;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="service-name">ELECTRICAL SERVICES</div>
+        <p class="service-desc">Panel upgrades, outlet and switch repair, lighting installs, EV charger installation, and electrical safety inspections — all code-compliant.</p>
+        <a href="#contact" class="service-link">Schedule Service &#8594;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></div>
+        <div class="service-name">AIR CONDITIONING</div>
+        <p class="service-desc">AC repair, system replacement, refrigerant service — fast same-day response when a Mesquite summer heat wave hits hardest.</p>
+        <a href="#contact" class="service-link">Schedule Service &#8594;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="service-name">HEATING SERVICE</div>
+        <p class="service-desc">Furnace repair and replacement, heat pump service, thermostat upgrades — keep your family warm before the next cold snap hits North Texas.</p>
+        <a href="#contact" class="service-link">Schedule Service &#8594;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="service-name">MAINTENANCE PLANS</div>
+        <p class="service-desc">Annual tune-ups across all four systems — catch problems before they become emergencies and extend the life of every major appliance.</p>
+        <a href="#contact" class="service-link">Learn More &#8594;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="service-name">24/7 EMERGENCY</div>
+        <p class="service-desc">Any trade, any hour. Burst pipe, no heat, tripped panel, dead AC — Swan dispatches immediately with the same flat-rate pricing around the clock.</p>
+        <a href="tel:4692409295" class="service-link">Call Now &#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container">
+    <span class="section-label">Why Swan</span>
+    <h2 class="section-title" style="color:white;">2,559 Reviews. Four Trades. One Standard.</h2>
+    <p class="section-sub" style="color:var(--t2);">Every Swan technician — plumber, electrician, HVAC tech — is held to the same standard: arrive on time, diagnose accurately, quote flat-rate, and back it with a warranty.</p>
+    <div class="grid-4" style="margin-bottom:40px;">
+      <div class="why-stat card"><div class="why-stat-num" data-target="2559" data-suffix="">0</div><div class="why-stat-label">5-Star Reviews</div></div>
+      <div class="why-stat card"><div class="why-stat-num" data-target="4" data-suffix=" Trades">0</div><div class="why-stat-label">One Company</div></div>
+      <div class="why-stat card"><div class="why-stat-num" data-target="24" data-suffix="/7">0</div><div class="why-stat-label">All-Hours Emergency</div></div>
+      <div class="why-stat card"><div class="why-stat-num" data-target="0" data-suffix=" Hidden Fees">0</div><div class="why-stat-label">Flat-Rate Always</div></div>
+    </div>
+    <div class="grid-2">
+      <div class="why-diff card">
+        <div class="diff-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="diff-title">ALL FOUR TRADES, FULLY LICENSED</div><div class="diff-desc">Every Swan tech holds a Texas license for their specific trade — not a generalist who does a little of everything. Specialists in every discipline.</div></div>
+      </div>
+      <div class="why-diff card">
+        <div class="diff-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="diff-title">ONE CALL, ONE COMPANY</div><div class="diff-desc">No more managing four different contractors. One call to Swan covers every home system. Same standards, same pricing, same warranty.</div></div>
+      </div>
+      <div class="why-diff card">
+        <div class="diff-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="diff-title">FLAT RATE — EVERY JOB, EVERY TRADE</div><div class="diff-desc">Plumbing, electrical, HVAC — you get a complete flat price before any work begins. No hourly rate, no overtime, no surprises.</div></div>
+      </div>
+      <div class="why-diff card">
+        <div class="diff-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="diff-title">2,559 NEIGHBORS AGREE</div><div class="diff-desc">Over two thousand Mesquite-area homeowners have left Swan a review. That kind of volume doesn't happen by accident — it happens by earning it every single job.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent);">Simple Process</span>
+    <h2 class="section-title" style="color:white;">Service in Three Steps</h2>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div style="color:white;margin-bottom:14px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="step-title">ONE CALL TO SWAN</div>
+        <p class="step-desc">Describe the issue — plumbing, electrical, or HVAC. We route you to the right licensed technician and confirm your appointment fast.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div style="color:white;margin-bottom:14px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <div class="step-title">DIAGNOSE &amp; FLAT-RATE QUOTE</div>
+        <p class="step-desc">Your specialist diagnoses the problem and gives you a complete price upfront. You decide before any work begins.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div style="color:white;margin-bottom:14px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="step-title">FIXED &amp; BACKED</div>
+        <p class="step-desc">Work completed to code, site cleaned up, and all labor backed by Swan's warranty. One call. Done right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div>
+        <span class="section-label">Customer Reviews</span>
+        <h2 class="section-title">2,559 Reasons to Call Swan First</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div><div class="google-rating">4.7</div><div class="google-stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="opacity:.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="google-count">2,559 reviews</div></div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">AC went out in July and my house hit 91 degrees. Called Swan at 9am, tech was here by noon, had the capacitor replaced and cooling by 2pm. Flat price quoted before he touched anything — no surprises. I've used them for plumbing too and the standard is identical. Just save the number.</p>
+        <div class="review-divider"></div>
+        <div class="reviewer"><div class="reviewer-avatar">BN</div><div><div class="reviewer-name">BRETT N.</div><div class="reviewer-meta">Mesquite, TX &bull; Google Review</div></div></div>
+      </div>
+      <div class="review-card card">
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">Used Swan for a panel upgrade and then two months later called them for a water heater. Both experiences were identical — professional tech, flat-rate quote before starting, clean work, no mess left. The fact that it's the same company for both makes everything easier. I won't bother calling anyone else.</p>
+        <div class="review-divider"></div>
+        <div class="reviewer"><div class="reviewer-avatar">CF</div><div><div class="reviewer-name">CAROL F.</div><div class="reviewer-meta">Garland, TX &bull; Google Review</div></div></div>
+      </div>
+      <div class="review-card card">
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="opacity:.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-text">Furnace stopped working the night before a cold front. Called Swan after hours and got a real person. Tech was here by 8am, diagnosed a bad ignitor, had the part in the van, and my heat was on before I'd had breakfast. Flat rate quoted before any work — I appreciated that a lot.</p>
+        <div class="review-divider"></div>
+        <div class="reviewer"><div class="reviewer-avatar">PJ</div><div><div class="reviewer-name">PHILIP J.</div><div class="reviewer-meta">Mesquite, TX &bull; Google Review</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas">
+  <div class="container">
+    <div class="areas-inner">
+      <div>
+        <span class="section-label">Coverage</span>
+        <h2 class="section-title" style="color:white;">Serving the Dallas Metro Area</h2>
+        <p style="font-family:var(--font-body);font-size:16px;color:var(--t2);margin-bottom:28px;">Swan's teams cover Mesquite and the surrounding Dallas suburbs — four trades, one number, everywhere you need us.</p>
+        <a href="tel:4692409295" class="btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>CONFIRM YOUR AREA</a>
+      </div>
+      <div class="chips-card">
+        <div class="chips-title">Service Areas</div>
+        <div class="chips"><span class="chip">Mesquite</span><span class="chip">Garland</span><span class="chip">Rowlett</span><span class="chip">Sunnyvale</span><span class="chip">Balch Springs</span><span class="chip">Forney</span><span class="chip">Rockwall</span><span class="chip">Sachse</span><span class="chip">Wylie</span><span class="chip">Dallas</span><span class="chip">Heath</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-form">
+        <h3>SCHEDULE YOUR SERVICE</h3>
+        <p>Plumbing, electrical, heating, or cooling — tell us what you need and we'll get the right tech to your door fast.</p>
+        <div class="form-group"><label class="form-label">Your Name</label><input type="text" placeholder="First and last name"></div>
+        <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" placeholder="(469) 555-0000"></div>
+        <div class="form-group"><label class="form-label">Service Type</label><select><option>Plumbing</option><option>Electrical</option><option>Air Conditioning</option><option>Heating</option><option>Maintenance Plan</option><option>Emergency — Any Trade</option></select></div>
+        <div class="form-group"><label class="form-label">Describe the Issue</label><textarea placeholder="What system is having trouble? What are you seeing?"></textarea></div>
+        <button class="submit-btn">SEND REQUEST — FAST RESPONSE GUARANTEED</button>
+      </div>
+      <div class="contact-info">
+        <h3>CALL SWAN DIRECTLY</h3>
+        <p>One number for every home system — available 24/7 for emergencies, Mon–Sat 8am–6pm for standard service.</p>
+        <div class="info-item"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="info-label">One Number for All Trades</div><div class="info-value">(469) 240-9295</div></div></div>
+        <div class="info-item"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="info-label">Based In</div><div class="info-value">Mesquite, TX</div></div></div>
+        <div class="info-item"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="info-label">Hours</div><div class="info-value">24/7 Emergency &bull; Office Mon–Sat 8am–6pm</div></div></div>
+        <div class="info-item"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="info-label">Credentials</div><div class="info-value">Licensed &amp; Insured &bull; All 4 Trades &bull; Texas</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Every Home System. One Call.</h2>
+    <p>Plumbing, electrical, heating, air conditioning — Swan handles it all with licensed specialists and flat-rate pricing.</p>
+    <a href="tel:4692409295" class="cta-btn-dark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>CALL SWAN: (469) 240-9295</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <div class="footer-brand-name">SWAN ELECTRIC, PLUMBING, HEATING &amp; AIR</div>
+      <p class="footer-brand-desc">Mesquite's complete home services company — plumbing, electrical, HVAC, and emergency service under one roof. 2,559 five-star reviews and counting.</p>
+    </div>
+    <div class="footer-col"><div class="footer-col-title">Services</div><ul><li><a href="#contact">Plumbing</a></li><li><a href="#contact">Electrical</a></li><li><a href="#contact">Air Conditioning</a></li><li><a href="#contact">Heating</a></li><li><a href="#contact">Maintenance Plans</a></li><li><a href="tel:4692409295">24/7 Emergency</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-title">Areas</div><ul><li><a href="#contact">Mesquite</a></li><li><a href="#contact">Garland</a></li><li><a href="#contact">Rowlett</a></li><li><a href="#contact">Sunnyvale</a></li><li><a href="#contact">Forney</a></li><li><a href="#contact">Dallas</a></li></ul></div>
+    <div class="footer-col"><div class="footer-col-title">Contact</div><ul><li><a href="tel:4692409295">(469) 240-9295</a></li><li><a href="#contact">Schedule Service</a></li></ul></div>
+  </div>
+  <div class="footer-bar"><span class="footer-copy">&copy; 2025 Swan Electric, Plumbing, Heating &amp; Air. All rights reserved.</span><span class="footer-license">Licensed &amp; Insured &bull; All Trades &bull; Mesquite, TX</span></div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('site-header').classList.toggle('scrolled',window.scrollY>50);});
+function animateCount(el){const t=parseInt(el.dataset.target),s=el.dataset.suffix||'',d=1800,t0=performance.now();const u=n=>{const p=Math.min((n-t0)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.floor(e*t).toLocaleString()+s;if(p<1)requestAnimationFrame(u);};requestAnimationFrame(u);}
+const cO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');cO.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.card').forEach(el=>cO.observe(el));
+const sO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);sO.unobserve(e.target);}}),{threshold:.5});
+document.querySelectorAll('[data-target]').forEach(el=>sO.observe(el));
+</script>
+</body>
+</html>
