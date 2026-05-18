@@ -3,588 +3,613 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Xtreme Air Services — HVAC, Plumbing &amp; Electrical | Mesquite TX | (972) 288-2263</title>
-<meta name="description" content="Xtreme Air Services in Mesquite, TX handles HVAC, plumbing, and electrical under one roof. 4.8-star rated with 2,600+ reviews. Call (972) 288-2263 — available 24/7.">
+<title>Xtreme Air Services | HVAC, Plumbing &amp; Electrical | Mesquite, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap');
-
-:root {
-  --primary: #2d3a8c;
-  --primary-dark: #1c2560;
-  --accent: #f5a623;
-  --accent-dark: #c07a0d;
-  --text: #1a1a1a;
-  --text-light: #555;
-  --bg: #f7f8fc;
-  --white: #ffffff;
-  --radius: 10px;
-  --shadow: 0 4px 24px rgba(0,0,0,0.10);
-  --transition: 0.3s ease;
-}
-
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --primary:#005c27;
+  --primary-dark:#003d1a;
+  --primary-light:#007a35;
+  --accent:#ff6b00;
+  --accent-dark:#cc5500;
+  --white:#ffffff;
+  --gray-50:#f9fafb;
+  --gray-100:#f3f4f6;
+  --gray-200:#e5e7eb;
+  --gray-600:#4b5563;
+  --gray-700:#374151;
+  --text:#1f2937;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-body:'Open Sans',sans-serif;
+  --radius:8px;
+  --shadow:0 4px 24px rgba(0,0,0,0.10);
+  --shadow-lg:0 8px 40px rgba(0,0,0,0.18);
+}
 html{scroll-behavior:smooth;}
-body{font-family:'Open Sans',sans-serif;color:var(--text);background:var(--white);line-height:1.6;}
+body{font-family:var(--font-body);color:var(--text);background:var(--white);line-height:1.6;}
+a{color:inherit;text-decoration:none;}
 
-h1,h2,h3,h4{font-family:'Bebas Neue',sans-serif;letter-spacing:0.04em;line-height:1.1;}
-
-.container{max-width:1180px;margin:0 auto;padding:0 24px;}
-.section-label{display:inline-block;font-family:'Open Sans',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--primary);margin-bottom:10px;}
-.btn{display:inline-block;padding:14px 32px;border-radius:4px;font-family:'Open Sans',sans-serif;font-weight:700;font-size:0.95rem;text-decoration:none;cursor:pointer;border:none;transition:var(--transition);}
-.btn-primary{background:var(--accent);color:var(--primary);}
-.btn-primary:hover{background:var(--accent-dark);color:var(--white);}
-.btn-outline{background:transparent;color:var(--white);border:2px solid var(--white);}
-.btn-outline:hover{background:var(--white);color:var(--primary-dark);}
-
-@keyframes heroFadeUp{from{opacity:0;transform:translateY(36px);}to{opacity:1;transform:translateY(0);}}
-.card{opacity:0;transform:translateY(28px);transition:opacity 0.55s ease,transform 0.55s ease;}
-.card.visible{opacity:1;transform:translateY(0);}
-.card:nth-child(2){transition-delay:0.08s;}
-.card:nth-child(3){transition-delay:0.16s;}
-.card:nth-child(4){transition-delay:0.24s;}
-.card:nth-child(5){transition-delay:0.32s;}
-.card:nth-child(6){transition-delay:0.40s;}
-
-header{position:sticky;top:0;z-index:100;background:var(--primary-dark);box-shadow:0 2px 12px rgba(0,0,0,0.22);}
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
-.logo{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:0.06em;color:var(--white);text-decoration:none;}
+/* HEADER */
+.site-header{background:var(--primary-dark);padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.35);}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.logo{font-family:var(--font-display);font-size:1.7rem;color:var(--white);letter-spacing:0.03em;}
 .logo span{color:var(--accent);}
-nav{display:flex;gap:28px;align-items:center;}
-nav a{font-family:'Open Sans',sans-serif;font-size:0.88rem;font-weight:600;color:rgba(255,255,255,0.82);text-decoration:none;letter-spacing:0.04em;transition:var(--transition);}
-nav a:hover{color:var(--accent);}
-.header-cta{background:var(--accent);color:var(--primary-dark);padding:9px 22px;border-radius:4px;font-family:'Open Sans',sans-serif;font-size:0.88rem;font-weight:700;text-decoration:none;transition:var(--transition);}
-.header-cta:hover{background:var(--accent-dark);color:var(--white);}
+.nav{display:flex;align-items:center;gap:28px;}
+.nav a{color:rgba(255,255,255,0.82);font-size:0.875rem;font-weight:600;transition:color 0.2s;}
+.nav a:hover{color:var(--accent);}
+.btn-call{background:var(--accent);color:var(--white);font-weight:700;font-size:0.875rem;padding:10px 22px;border-radius:var(--radius);transition:background 0.2s;}
+.btn-call:hover{background:var(--accent-dark);}
 
-.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 65%,#3d4ea8 100%);min-height:580px;display:flex;align-items:center;}
-.hero::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px;}
-.hero-grid{display:grid;grid-template-columns:60fr 40fr;gap:56px;align-items:center;width:100%;}
-.hero-badge{display:inline-block;background:var(--accent);color:var(--primary-dark);font-family:'Open Sans',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 14px;border-radius:3px;margin-bottom:20px;animation:heroFadeUp 0.7s ease both;}
-.hero h1{font-size:clamp(2.8rem,5vw,4.4rem);color:var(--white);margin-bottom:18px;animation:heroFadeUp 0.7s ease 0.1s both;}
+/* HERO */
+.hero{position:relative;background:linear-gradient(140deg,var(--primary-dark) 0%,var(--primary) 60%,#006b2e 100%);min-height:620px;display:flex;align-items:center;overflow:hidden;padding:80px 24px;}
+.hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:0.11;pointer-events:none;z-index:0;}
+.hero::after{content:"";position:absolute;right:0;bottom:0;width:500px;height:500px;background:radial-gradient(circle,rgba(255,107,0,0.15) 0%,transparent 70%);pointer-events:none;z-index:0;}
+.hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:60fr 40fr;gap:60px;align-items:center;}
+.trade-badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px;opacity:0;animation:heroFadeUp 0.6s ease-out 0.05s forwards;}
+.trade-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.9);font-size:0.75rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:5px 12px;border-radius:20px;}
+.trade-badge svg{color:var(--accent);}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.8rem,5.5vw,4.5rem);line-height:1.02;color:var(--white);letter-spacing:0.02em;margin-bottom:20px;opacity:0;animation:heroFadeUp 0.7s ease-out 0.15s forwards;}
 .hero h1 em{color:var(--accent);font-style:normal;}
-.hero-sub{font-size:1.08rem;color:rgba(255,255,255,0.82);margin-bottom:30px;max-width:480px;animation:heroFadeUp 0.7s ease 0.2s both;}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:heroFadeUp 0.7s ease 0.3s both;}
-.hero-trust{display:flex;gap:24px;margin-top:28px;flex-wrap:wrap;animation:heroFadeUp 0.7s ease 0.4s both;}
-.trust-item{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,0.78);font-size:0.85rem;}
-.trust-item svg{width:16px;height:16px;fill:var(--accent);flex-shrink:0;}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.76);margin-bottom:32px;max-width:500px;opacity:0;animation:heroFadeUp 0.7s ease-out 0.3s forwards;}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:heroFadeUp 0.7s ease-out 0.45s forwards;}
+.btn-primary{background:var(--accent);color:var(--white);font-weight:700;font-size:1rem;padding:14px 32px;border-radius:var(--radius);border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;display:inline-block;}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);}
+.btn-outline{background:transparent;color:var(--white);font-weight:700;font-size:1rem;padding:14px 32px;border-radius:var(--radius);border:2px solid rgba(255,255,255,0.35);cursor:pointer;transition:border-color 0.2s,color 0.2s,transform 0.15s;display:inline-block;}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
+.hero-card{background:rgba(255,255,255,0.07);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:32px;opacity:0;animation:heroFadeUp 0.7s ease-out 0.35s forwards;}
+.hero-card-title{font-family:var(--font-display);font-size:1.2rem;color:var(--accent);letter-spacing:0.05em;margin-bottom:20px;}
+.hero-trade-list{display:flex;flex-direction:column;gap:14px;}
+.hero-trade{display:flex;align-items:center;gap:12px;}
+.hero-trade-icon{width:36px;height:36px;background:rgba(255,107,0,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.hero-trade-icon svg{color:var(--accent);}
+.hero-trade-info{flex:1;}
+.hero-trade-name{font-weight:700;color:var(--white);font-size:0.92rem;}
+.hero-trade-desc{font-size:0.78rem;color:rgba(255,255,255,0.55);}
+.hero-rating-strip{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;gap:10px;}
+.hero-rating-num{font-family:var(--font-display);font-size:2.4rem;color:var(--white);line-height:1;}
+.hero-rating-stars{color:var(--accent);font-size:1.05rem;}
+.hero-rating-meta{color:rgba(255,255,255,0.55);font-size:0.8rem;}
 
-.hero-card{background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.18);backdrop-filter:blur(12px);border-radius:var(--radius);padding:36px 30px;animation:heroFadeUp 0.7s ease 0.5s both;}
-.hero-card h3{font-size:1.5rem;color:var(--white);margin-bottom:6px;}
-.hero-card p{font-size:0.88rem;color:rgba(255,255,255,0.7);margin-bottom:20px;}
-.hero-card form{display:flex;flex-direction:column;gap:10px;}
-.hero-card input,.hero-card select{padding:11px 14px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.12);border-radius:4px;color:var(--white);font-family:'Open Sans',sans-serif;font-size:0.9rem;}
-.hero-card input::placeholder{color:rgba(255,255,255,0.5);}
-.hero-card input:focus,.hero-card select:focus{outline:none;border-color:var(--accent);}
-.hero-card select option{color:var(--text);background:var(--white);}
-.hero-card .btn-primary{width:100%;text-align:center;padding:13px;}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
 
-.stats-bar{background:var(--primary-dark);padding:36px 0;}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
-.stat-item{text-align:center;padding:10px 20px;border-right:1px solid rgba(255,255,255,0.1);}
-.stat-item:last-child{border-right:none;}
-.stat-number{font-family:'Bebas Neue',sans-serif;font-size:3.2rem;color:var(--accent);letter-spacing:0.04em;line-height:1;}
-.stat-label{font-size:0.82rem;color:rgba(255,255,255,0.65);margin-top:4px;letter-spacing:0.05em;text-transform:uppercase;}
+/* STATS */
+.stats-band{background:var(--primary);padding:44px 24px;}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.stat-item{text-align:center;padding:20px;}
+.stat-num{font-family:var(--font-display);font-size:2.8rem;color:var(--accent);line-height:1;display:block;}
+.stat-label{color:rgba(255,255,255,0.62);font-size:0.8rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;margin-top:6px;}
 
-.services{padding:88px 0;background:var(--bg);}
-.section-header{text-align:center;margin-bottom:52px;}
-.section-header h2{font-size:clamp(2rem,4vw,3rem);color:var(--primary);}
-.section-header p{font-size:1rem;color:var(--text-light);margin-top:10px;max-width:560px;margin-left:auto;margin-right:auto;}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-.service-card{background:var(--white);border-radius:var(--radius);padding:32px 26px;box-shadow:var(--shadow);border-top:4px solid var(--accent);transition:var(--transition);}
-.service-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(0,0,0,0.13);}
-.service-icon{width:54px;height:54px;background:var(--primary);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
-.service-icon svg{width:26px;height:26px;fill:var(--accent);}
-.service-card h3{font-size:1.4rem;color:var(--primary);margin-bottom:10px;}
-.service-card p{font-size:0.9rem;color:var(--text-light);}
-.trade-tag{display:inline-block;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--primary);background:rgba(45,58,140,0.1);padding:2px 8px;border-radius:3px;margin-bottom:10px;}
+/* SHARED */
+section{padding:80px 24px;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-tag{display:inline-block;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+.section-title{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,2.8rem);color:var(--primary-dark);letter-spacing:0.02em;margin-bottom:14px;}
+.section-sub{font-size:1rem;color:var(--gray-600);max-width:580px;margin-bottom:48px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
 
-.why{padding:88px 0;background:var(--white);}
-.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:36px;}
-.why-item{display:flex;gap:20px;align-items:flex-start;}
-.why-icon{width:50px;height:50px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.why-icon svg{width:22px;height:22px;fill:var(--primary-dark);}
-.why-item h3{font-size:1.25rem;color:var(--primary);margin-bottom:6px;}
-.why-item p{font-size:0.9rem;color:var(--text-light);}
+/* SERVICES — dark left-stripe cards */
+.services-section{background:var(--gray-50);}
+.service-card{background:var(--white);border-radius:var(--radius);padding:0;box-shadow:var(--shadow);overflow:hidden;display:flex;opacity:0;animation:fadeUp 0.4s ease-out forwards;animation-play-state:paused;transition:transform 0.2s,box-shadow 0.2s;}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.service-stripe{width:6px;background:var(--primary);flex-shrink:0;transition:background 0.2s;}
+.service-card:hover .service-stripe{background:var(--accent);}
+.service-body{padding:24px 20px;flex:1;}
+.service-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+.service-icon svg{color:var(--white);}
+.service-card h3{font-family:var(--font-display);font-size:1.2rem;color:var(--primary-dark);letter-spacing:0.02em;margin-bottom:8px;}
+.service-card p{font-size:0.88rem;color:var(--gray-600);line-height:1.65;}
+.service-tag{display:inline-block;margin-top:10px;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--primary);background:rgba(0,92,39,0.08);border-radius:4px;padding:3px 8px;}
 
-.how{padding:88px 0;background:var(--primary-dark);}
-.how .section-header h2{color:var(--white);}
-.how .section-header p{color:rgba(255,255,255,0.7);}
-.how .section-label{color:var(--accent);}
-.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
-.step-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius);padding:34px 26px;text-align:center;}
-.step-number{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;color:var(--accent);line-height:1;margin-bottom:14px;}
-.step-card h3{font-size:1.4rem;color:var(--white);margin-bottom:10px;}
-.step-card p{font-size:0.9rem;color:rgba(255,255,255,0.7);}
+/* WHY */
+.why-section{background:var(--white);}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.why-card{padding:28px;border-radius:var(--radius);background:var(--gray-50);border:1px solid var(--gray-200);opacity:0;animation:fadeUp 0.4s ease-out forwards;animation-play-state:paused;transition:border-color 0.2s,box-shadow 0.2s;}
+.why-card:hover{border-color:var(--accent);box-shadow:0 4px 20px rgba(255,107,0,0.1);}
+.why-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+.why-icon svg{color:var(--white);}
+.why-card h3{font-family:var(--font-display);font-size:1.15rem;color:var(--primary-dark);letter-spacing:0.02em;margin-bottom:8px;}
+.why-card p{font-size:0.88rem;color:var(--gray-600);}
 
-.reviews{padding:88px 0;background:var(--bg);}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-.review-card{background:var(--white);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow);}
-.stars{color:#f5a623;font-size:1.1rem;letter-spacing:2px;margin-bottom:14px;}
-.review-text{font-size:0.92rem;color:var(--text);font-style:italic;margin-bottom:18px;line-height:1.65;}
-.reviewer{font-family:'Open Sans',sans-serif;font-weight:700;font-size:0.88rem;color:var(--primary);}
-.reviewer span{font-weight:400;color:var(--text-light);}
+/* HOW IT WORKS */
+.how-section{background:var(--gray-50);}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+.step-card{text-align:center;opacity:0;animation:fadeUp 0.4s ease-out forwards;animation-play-state:paused;}
+.step-num{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-light));color:var(--white);font-family:var(--font-display);font-size:1.5rem;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+.step-card h3{font-family:var(--font-display);font-size:1.1rem;color:var(--primary-dark);letter-spacing:0.02em;margin-bottom:8px;}
+.step-card p{font-size:0.88rem;color:var(--gray-600);}
 
-.areas{padding:72px 0;background:var(--white);}
-.areas h2{text-align:center;font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--primary);margin-bottom:36px;}
+/* REVIEWS — white cards with star badge */
+.reviews-section{background:var(--primary-dark);padding:80px 24px;}
+.reviews-section .section-title{color:var(--white);}
+.reviews-section .section-sub{color:rgba(255,255,255,0.6);}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.review-card{background:var(--white);border-radius:var(--radius);padding:24px;position:relative;opacity:0;animation:fadeUp 0.4s ease-out forwards;animation-play-state:paused;box-shadow:0 4px 20px rgba(0,0,0,0.2);}
+.review-star-badge{position:absolute;top:20px;right:20px;background:var(--accent);color:var(--white);font-size:0.75rem;font-weight:700;padding:4px 8px;border-radius:4px;}
+.review-stars{color:var(--accent);font-size:1rem;letter-spacing:2px;margin-bottom:12px;}
+.review-text{font-size:0.9rem;color:var(--gray-700);line-height:1.65;font-style:italic;margin-bottom:16px;}
+.review-author{font-weight:700;color:var(--primary-dark);font-size:0.88rem;}
+.review-location{font-size:0.78rem;color:var(--gray-600);margin-top:2px;}
+
+/* AREAS */
+.areas-section{background:var(--white);}
 .areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
-.area-chip{background:var(--bg);border:1px solid #dde1ee;border-radius:6px;padding:14px 16px;text-align:center;font-family:'Open Sans',sans-serif;font-weight:600;font-size:0.9rem;color:var(--primary);transition:var(--transition);}
-.area-chip:hover{background:var(--primary);color:var(--white);border-color:var(--primary);}
+.area-chip{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px 16px;display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary-dark);transition:border-color 0.2s,background 0.2s;}
+.area-chip:hover{border-color:var(--accent);background:rgba(255,107,0,0.05);}
+.area-chip svg{color:var(--accent);flex-shrink:0;}
 
-.contact{padding:88px 0;background:var(--bg);}
-.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:56px;align-items:start;}
-.contact-info h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:var(--primary);margin-bottom:16px;}
-.contact-info p{font-size:0.95rem;color:var(--text-light);margin-bottom:28px;}
-.contact-detail{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
-.contact-detail svg{width:20px;height:20px;fill:var(--primary);flex-shrink:0;}
-.contact-detail span{font-size:0.95rem;color:var(--text);}
-.contact-detail a{color:var(--primary);text-decoration:none;font-weight:700;}
-.contact-detail a:hover{color:var(--accent-dark);}
-.contact-form{background:var(--white);border-radius:var(--radius);padding:36px 32px;box-shadow:var(--shadow);}
-.contact-form h3{font-size:1.6rem;color:var(--primary);margin-bottom:22px;}
-.form-row{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
-.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
-.form-group label{font-size:0.82rem;font-weight:700;color:var(--primary);letter-spacing:0.04em;text-transform:uppercase;}
-.form-group input,.form-group select,.form-group textarea{padding:11px 14px;border:1.5px solid #d0d6e8;border-radius:4px;font-family:'Open Sans',sans-serif;font-size:0.9rem;color:var(--text);transition:var(--transition);}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--primary);}
-.form-group textarea{resize:vertical;min-height:90px;}
+/* CONTACT */
+.contact-section{background:var(--gray-50);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.contact-info h3{font-family:var(--font-display);font-size:1.6rem;color:var(--primary-dark);letter-spacing:0.02em;margin-bottom:24px;}
+.contact-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;}
+.contact-item-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.contact-item-icon svg{color:var(--white);}
+.contact-item-label{font-size:0.78rem;font-weight:700;color:var(--gray-600);text-transform:uppercase;letter-spacing:0.06em;}
+.contact-item-value{font-size:0.95rem;font-weight:600;color:var(--primary-dark);}
+.contact-form{background:var(--white);border-radius:12px;padding:36px;box-shadow:var(--shadow);}
+.form-title{font-family:var(--font-display);font-size:1.4rem;color:var(--primary-dark);letter-spacing:0.02em;margin-bottom:20px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
+.form-group label{font-size:0.82rem;font-weight:700;color:var(--gray-700);text-transform:uppercase;letter-spacing:0.05em;}
+.form-group input,.form-group select,.form-group textarea{border:1.5px solid var(--gray-200);border-radius:var(--radius);padding:11px 14px;font-family:var(--font-body);font-size:0.93rem;color:var(--text);background:var(--white);transition:border-color 0.2s;outline:none;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);}
+.form-group textarea{resize:vertical;min-height:100px;}
+.btn-submit{width:100%;background:var(--accent);color:var(--white);font-family:var(--font-body);font-weight:700;font-size:1rem;padding:14px;border:none;border-radius:var(--radius);cursor:pointer;transition:background 0.2s;}
+.btn-submit:hover{background:var(--accent-dark);}
 
-.cta-band{position:relative;overflow:hidden;background:var(--primary-dark);padding:72px 0;text-align:center;}
-.cta-band::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:0.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px;}
-.cta-band h2{font-size:clamp(2rem,4vw,3.2rem);color:var(--white);margin-bottom:14px;position:relative;}
-.cta-band p{font-size:1.05rem;color:rgba(255,255,255,0.8);margin-bottom:30px;position:relative;}
-.cta-band .cta-accent{background:var(--accent);color:var(--primary-dark);position:relative;}
-.cta-band .cta-accent:hover{background:var(--accent-dark);color:var(--white);}
+/* CTA BAND */
+.cta-band{position:relative;background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%);padding:80px 24px;text-align:center;overflow:hidden;}
+.cta-band::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:0.09;pointer-events:none;z-index:0;}
+.cta-band-inner{position:relative;z-index:1;max-width:700px;margin:0 auto;}
+.cta-band h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);color:var(--white);letter-spacing:0.02em;margin-bottom:16px;}
+.cta-band p{color:rgba(255,255,255,0.7);font-size:1.05rem;margin-bottom:32px;}
+.cta-band-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
 
-footer{background:#111827;padding:56px 0 28px;}
-.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-bottom:40px;}
-.footer-col h4{font-size:1.1rem;color:var(--white);margin-bottom:14px;}
-.footer-col p,.footer-col a{font-size:0.88rem;color:rgba(255,255,255,0.55);text-decoration:none;display:block;margin-bottom:6px;transition:var(--transition);}
-.footer-col a:hover{color:var(--accent);}
-.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:0.06em;color:var(--white);margin-bottom:10px;}
-.footer-logo span{color:var(--accent);}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
-.footer-bottom p{font-size:0.82rem;color:rgba(255,255,255,0.35);}
+/* FOOTER */
+.site-footer{background:#001e0d;padding:48px 24px 32px;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-brand .logo{font-size:1.5rem;margin-bottom:12px;}
+.footer-brand p{color:rgba(255,255,255,0.45);font-size:0.88rem;line-height:1.65;max-width:260px;}
+.footer-col h4{font-family:var(--font-display);font-size:1.05rem;color:var(--accent);letter-spacing:0.05em;margin-bottom:14px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.footer-col ul li a{color:rgba(255,255,255,0.5);font-size:0.88rem;transition:color 0.2s;}
+.footer-col ul li a:hover{color:var(--accent);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-copy{color:rgba(255,255,255,0.3);font-size:0.82rem;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 
 @media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;}
+  .hero-inner{grid-template-columns:1fr;}
   .hero-card{display:none;}
-  .stats-grid{grid-template-columns:repeat(2,1fr);}
-  .stat-item:nth-child(2){border-right:none;}
-  .services-grid{grid-template-columns:repeat(2,1fr);}
-  .steps-grid{grid-template-columns:repeat(2,1fr);}
-  .steps-grid .card:last-child{grid-column:1/-1;max-width:340px;margin:0 auto;}
-  .reviews-grid{grid-template-columns:repeat(2,1fr);}
-  .reviews-grid .card:last-child{grid-column:1/-1;max-width:460px;margin:0 auto;}
-  .footer-grid{grid-template-columns:repeat(2,1fr);}
+  .stats-inner,.grid-3,.grid-4,.why-grid,.steps-grid,.reviews-grid,.areas-grid,.footer-grid{grid-template-columns:repeat(2,1fr);}
   .contact-grid{grid-template-columns:1fr;}
-  .why-grid{grid-template-columns:1fr;}
-  .areas-grid{grid-template-columns:repeat(2,1fr);}
 }
 @media(max-width:600px){
-  .stats-grid{grid-template-columns:1fr;}
-  .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);}
-  .stat-item:last-child{border-bottom:none;}
-  .services-grid{grid-template-columns:1fr;}
-  .steps-grid{grid-template-columns:1fr;}
-  .steps-grid .card:last-child{max-width:100%;}
-  .reviews-grid{grid-template-columns:1fr;}
-  .reviews-grid .card:last-child{max-width:100%;}
-  .footer-grid{grid-template-columns:1fr;}
-  .areas-grid{grid-template-columns:repeat(2,1fr);}
+  .nav{display:none;}
+  .stats-inner,.grid-3,.grid-4,.why-grid,.steps-grid,.reviews-grid,.areas-grid,.footer-grid{grid-template-columns:1fr;}
   .form-row{grid-template-columns:1fr;}
-  nav{display:none;}
 }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="container">
-    <div class="header-inner">
-      <a href="#" class="logo"><span>Xtreme</span> Air Services</a>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#areas">Service Areas</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a href="tel:9722882263" class="header-cta">Call (972) 288-2263</a>
-    </div>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">XTREME <span>AIR</span> SERVICES</div>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+      <a class="btn-call" href="tel:9722882263">(972) 288-2263</a>
+    </nav>
   </div>
 </header>
 
 <section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <span class="hero-badge">HVAC &middot; Plumbing &middot; Electrical &mdash; One Team</span>
-        <h1>Mesquite's Only<br><em>Triple-Trade</em> Service Team</h1>
-        <p class="hero-sub">HVAC, plumbing, and electrical — all handled by one certified crew. 2,600+ five-star reviews. One call does it all, and we're available 24/7.</p>
-        <div class="hero-actions">
-          <a href="tel:9722882263" class="btn btn-primary">Call (972) 288-2263</a>
-          <a href="#contact" class="btn btn-outline">Get a Free Estimate</a>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="trade-badges">
+        <span class="trade-badge"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg>HVAC</span>
+        <span class="trade-badge"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>Plumbing</span>
+        <span class="trade-badge"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Electrical</span>
+      </div>
+      <h1>Mesquite's <em>Total</em><br>Home Service Team</h1>
+      <p class="hero-sub">One call covers it all. Xtreme Air Services is your single source for HVAC, plumbing, and electrical — 4.8 stars across 2,621 reviews in the Dallas area.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="tel:9722882263">Call (972) 288-2263</a>
+        <a class="btn-outline" href="#contact">Schedule Service</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">Three Trades. One Team.</div>
+      <div class="hero-trade-list">
+        <div class="hero-trade">
+          <div class="hero-trade-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg></div>
+          <div class="hero-trade-info">
+            <div class="hero-trade-name">Heating &amp; Air Conditioning</div>
+            <div class="hero-trade-desc">Installation, repair &amp; maintenance</div>
+          </div>
         </div>
-        <div class="hero-trust">
-          <div class="trust-item">
-            <svg viewBox="0 0 24 24"><path d="M9 11.414L6.707 9.121 5.293 10.535 9 14.243l9.707-9.707-1.414-1.414z"/></svg>
-            <span>4.8&#9733; &bull; 2,600+ Reviews</span>
+        <div class="hero-trade">
+          <div class="hero-trade-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></div>
+          <div class="hero-trade-info">
+            <div class="hero-trade-name">Plumbing</div>
+            <div class="hero-trade-desc">Drains, water heaters, leak repair</div>
           </div>
-          <div class="trust-item">
-            <svg viewBox="0 0 24 24"><path d="M9 11.414L6.707 9.121 5.293 10.535 9 14.243l9.707-9.707-1.414-1.414z"/></svg>
-            <span>Licensed in All 3 Trades</span>
-          </div>
-          <div class="trust-item">
-            <svg viewBox="0 0 24 24"><path d="M9 11.414L6.707 9.121 5.293 10.535 9 14.243l9.707-9.707-1.414-1.414z"/></svg>
-            <span>Emergency 24/7</span>
+        </div>
+        <div class="hero-trade">
+          <div class="hero-trade-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+          <div class="hero-trade-info">
+            <div class="hero-trade-name">Electrical</div>
+            <div class="hero-trade-desc">Panel upgrades, wiring &amp; outlets</div>
           </div>
         </div>
       </div>
-      <div class="hero-card">
-        <h3>Request Service Now</h3>
-        <p>We respond within 30 minutes.</p>
-        <form onsubmit="return false;">
-          <input type="text" placeholder="Your Name">
-          <input type="tel" placeholder="Phone Number">
-          <select>
-            <option value="">Select Trade...</option>
-            <option>AC Repair or Replacement</option>
-            <option>Heating Service</option>
-            <option>Plumbing Repair</option>
-            <option>Water Heater</option>
-            <option>Electrical Service</option>
-            <option>Emergency — Any Trade</option>
-          </select>
-          <button type="submit" class="btn btn-primary">Get Help Now &#8594;</button>
-        </form>
+      <div class="hero-rating-strip">
+        <span class="hero-rating-num">4.8</span>
+        <div>
+          <div class="hero-rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="hero-rating-meta">2,621 Google Reviews</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="stats-bar">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-number" data-target="2621" data-suffix="+">0</div>
-        <div class="stat-label">5-Star Reviews</div>
+<section class="stats-band">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <span class="stat-num" data-target="2621" data-suffix="">0</span>
+      <span class="stat-label">Google Reviews</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="3" data-suffix=" Trades">0</span>
+      <span class="stat-label">In One Company</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="24" data-suffix="/7">0</span>
+      <span class="stat-label">Emergency Service</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="100" data-suffix="%">0%</span>
+      <span class="stat-label">Licensed &amp; Insured</span>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services-section">
+  <div class="section-inner">
+    <span class="section-tag">Our Services</span>
+    <h2 class="section-title">HVAC, Plumbing &amp; Electrical — All Under One Roof</h2>
+    <p class="section-sub">No need to call three different companies. Xtreme Air Services handles every system in your home with the same expert team.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-stripe"></div>
+        <div class="service-body">
+          <div class="service-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg></div>
+          <h3>AC &amp; Heating Repair</h3>
+          <p>Fast diagnosis and repair for all makes and models. We restore comfort to your home quickly, especially during extreme Texas temperatures.</p>
+          <span class="service-tag">HVAC</span>
+        </div>
       </div>
-      <div class="stat-item">
-        <div class="stat-number" data-target="3" data-suffix=" Trades">0</div>
-        <div class="stat-label">Under One Roof</div>
+      <div class="service-card card">
+        <div class="service-stripe"></div>
+        <div class="service-body">
+          <div class="service-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg></div>
+          <h3>System Installation</h3>
+          <p>New HVAC system installation, replacement, and sizing for homes and commercial properties. Top brands, full warranty.</p>
+          <span class="service-tag">HVAC</span>
+        </div>
       </div>
-      <div class="stat-item">
-        <div class="stat-number" data-target="24" data-suffix="/7">0</div>
-        <div class="stat-label">Emergency Service</div>
+      <div class="service-card card">
+        <div class="service-stripe"></div>
+        <div class="service-body">
+          <div class="service-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></div>
+          <h3>Plumbing Services</h3>
+          <p>Drain cleaning, water heater installation, leak detection, fixture upgrades, and emergency plumbing repairs throughout Mesquite.</p>
+          <span class="service-tag">Plumbing</span>
+        </div>
       </div>
-      <div class="stat-item">
-        <div class="stat-number" data-target="20" data-suffix="+ Yrs">0</div>
-        <div class="stat-label">Serving Mesquite</div>
+      <div class="service-card card">
+        <div class="service-stripe"></div>
+        <div class="service-body">
+          <div class="service-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+          <h3>Electrical Work</h3>
+          <p>Panel upgrades, circuit breaker replacement, outlet and switch installation, whole-home wiring, and safety inspections.</p>
+          <span class="service-tag">Electrical</span>
+        </div>
+      </div>
+      <div class="service-card card">
+        <div class="service-stripe"></div>
+        <div class="service-body">
+          <div class="service-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+          <h3>Maintenance Plans</h3>
+          <p>Seasonal maintenance keeps your systems running at peak efficiency and catches small problems before they become expensive repairs.</p>
+          <span class="service-tag">All Trades</span>
+        </div>
+      </div>
+      <div class="service-card card">
+        <div class="service-stripe"></div>
+        <div class="service-body">
+          <div class="service-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></div>
+          <h3>Emergency Response</h3>
+          <p>Home emergencies do not follow business hours. Our 24/7 emergency line covers all three trades — HVAC, plumbing, and electrical.</p>
+          <span class="service-tag">All Trades</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="services" id="services">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">What We Handle</span>
-      <h2>Every System in Your Home. Done Right.</h2>
-      <p>HVAC, plumbing, and electrical work from one certified team means faster service, one invoice, and zero coordination headaches.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20c4 0 4-2 8-2s4 2 8 2v-2c-4 0-4-2-8-2c-1.16 0-1.94.16-2.59.33C14.26 12.31 16 9.62 17 8z"/></svg>
-        </div>
-        <div class="trade-tag">HVAC</div>
-        <h3>AC Repair &amp; Replacement</h3>
-        <p>Fast diagnosis, honest recommendations. We repair what can be fixed and replace only when necessary — no upsell pressure.</p>
-      </div>
-      <div class="service-card card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-.34-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98 0 .33.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.58 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
-        </div>
-        <div class="trade-tag">HVAC</div>
-        <h3>Heating System Service</h3>
-        <p>Furnace repair, heat pump installation, and seasonal tune-ups to keep your family warm when Texas winters hit.</p>
-      </div>
-      <div class="service-card card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M19 7h-1V4a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v3H5a3 3 0 0 0-3 3v6a2 2 0 0 0 2 2h1v2h2v-2h10v2h2v-2h1a2 2 0 0 0 2-2v-6a3 3 0 0 0-3-3zm-3 0H8V5h8v2z"/></svg>
-        </div>
-        <div class="trade-tag">Plumbing</div>
-        <h3>Drain Cleaning &amp; Repair</h3>
-        <p>Hydro-jetting, snake clearing, and camera inspection for stubborn clogs and root-invaded drains.</p>
-      </div>
-      <div class="service-card card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7l5-8v4h4l-5 8z"/></svg>
-        </div>
-        <div class="trade-tag">Plumbing</div>
-        <h3>Water Heater Services</h3>
-        <p>Tank and tankless water heater installation, repair, and replacement. Hot water restored today.</p>
-      </div>
-      <div class="service-card card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
-        </div>
-        <div class="trade-tag">Electrical</div>
-        <h3>Electrical Panel &amp; Wiring</h3>
-        <p>Panel upgrades, outlet installation, circuit breaker replacement, and whole-home rewiring by licensed electricians.</p>
-      </div>
-      <div class="service-card card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4.59l5 2.22V11c0 3.5-2.33 6.79-5 7.93-2.67-1.14-5-4.43-5-7.93V7.81l5-2.22z"/></svg>
-        </div>
-        <div class="trade-tag">Any Trade</div>
-        <h3>24/7 Emergency Service</h3>
-        <p>AC out in August? Pipe burst at midnight? Electrical fault? Our crews are on-call and ready to roll — any hour, any trade.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="why" id="why">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Why Xtreme</span>
-      <h2>One Team. Three Trades. Zero Excuses.</h2>
-      <p>When HVAC, plumbing, and electrical service come from one trusted company, everything gets done faster, smarter, and cleaner.</p>
-    </div>
+<section class="why-section">
+  <div class="section-inner">
+    <span class="section-tag">Why Xtreme Air</span>
+    <h2 class="section-title">The Advantage of One Expert Team</h2>
+    <p class="section-sub">Stop juggling multiple contractors. Xtreme Air Services brings everything under one trusted roof.</p>
     <div class="why-grid">
-      <div class="why-item card">
-        <div class="why-icon">
-          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-        </div>
-        <div>
-          <h3>Three Trades, One Call</h3>
-          <p>No more scheduling three separate companies. Xtreme handles HVAC, plumbing, and electrical in a single visit — saving you time and money.</p>
-        </div>
+      <div class="why-card card">
+        <div class="why-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+        <h3>One Call Does It All</h3>
+        <p>HVAC, plumbing, and electrical handled by a single company. No scheduling three contractors or waiting for multiple estimates.</p>
       </div>
-      <div class="why-item card">
-        <div class="why-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        </div>
-        <div>
-          <h3>2,600+ Five-Star Reviews</h3>
-          <p>Mesquite's most-reviewed home services company. Our reputation is built on consistently excellent work, not just promises.</p>
-        </div>
+      <div class="why-card card">
+        <div class="why-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <h3>2,600+ 5-Star Reviews</h3>
+        <p>Our reputation is built on thousands of satisfied customers across Mesquite, Sunnyvale, Garland, and Dallas metro.</p>
       </div>
-      <div class="why-item card">
-        <div class="why-icon">
-          <svg viewBox="0 0 24 24"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.33 0-2.58-2.09-4.67-4.67-4.67-1.6 0-3 .8-3.87 2.02L8 3.99 6.54 2.02C5.67.8 4.27 0 2.67 0 .09 0-2 2.09-2 4.67c0 .45.11.89.18 1.33H-2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8h2V6z"/></svg>
-        </div>
-        <div>
-          <h3>Certified in All Three Trades</h3>
-          <p>Every technician holds the license their trade requires. You get trained, tested, and insured professionals — not subcontractors.</p>
-        </div>
+      <div class="why-card card">
+        <div class="why-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3>Upfront Pricing</h3>
+        <p>We quote before we start, for every trade. What you are told is what you pay — no hidden fees, no last-minute additions.</p>
       </div>
-      <div class="why-item card">
-        <div class="why-icon">
-          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
-        </div>
-        <div>
-          <h3>Xtreme Response Speed</h3>
-          <p>Most service requests are confirmed within 30 minutes. For emergencies, our average on-site response time is under 90 minutes.</p>
-        </div>
+      <div class="why-card card">
+        <div class="why-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3>Same-Day Available</h3>
+        <p>Fast response means you are not waiting days for a broken AC in July or a leaking pipe on a Sunday. We make it happen same day.</p>
+      </div>
+      <div class="why-card card">
+        <div class="why-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg></div>
+        <h3>Certified Technicians</h3>
+        <p>Every technician is certified, background-checked, and continuously trained. You get experts — not subcontractors — on every job.</p>
+      </div>
+      <div class="why-card card">
+        <div class="why-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <h3>100% Satisfaction Guarantee</h3>
+        <p>If you are not completely satisfied, we come back and make it right. No arguments, no excuses — we stand behind every job we do.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="how" id="how">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">How It Works</span>
-      <h2>Fast Service, Every Time</h2>
-      <p>Three steps from your call to a fixed home system — no confusion, no delays.</p>
-    </div>
+<section class="how-section">
+  <div class="section-inner">
+    <span class="section-tag">Simple Process</span>
+    <h2 class="section-title">How to Get Started</h2>
+    <p class="section-sub">Expert home service in four easy steps — from call to completed job.</p>
     <div class="steps-grid">
       <div class="step-card card">
-        <div class="step-number">01</div>
-        <h3>Call or Request Online</h3>
-        <p>Tell us what's wrong and which system — HVAC, plumbing, or electrical. We'll have the right tech to you fast.</p>
+        <div class="step-num">1</div>
+        <h3>Call or Book Online</h3>
+        <p>Tell us which trade you need or describe the issue. We handle HVAC, plumbing, and electrical.</p>
       </div>
       <div class="step-card card">
-        <div class="step-number">02</div>
-        <h3>Expert Arrives &amp; Diagnoses</h3>
-        <p>A certified technician inspects the issue, explains your options clearly, and gives you an upfront quote before touching anything.</p>
+        <div class="step-num">2</div>
+        <h3>Expert Arrives Fast</h3>
+        <p>A certified technician for your specific need arrives on time, fully equipped, ready to diagnose.</p>
       </div>
       <div class="step-card card">
-        <div class="step-number">03</div>
-        <h3>Problem Solved, Guaranteed</h3>
-        <p>Work is completed cleanly and efficiently. We back every repair with a satisfaction guarantee — your system works or we come back.</p>
+        <div class="step-num">3</div>
+        <h3>Clear Quote Given</h3>
+        <p>You receive an honest, upfront quote in writing before any work begins. No surprise charges.</p>
+      </div>
+      <div class="step-card card">
+        <div class="step-num">4</div>
+        <h3>Job Guaranteed Done</h3>
+        <p>Work is completed, tested, and backed by our 100% satisfaction guarantee. You are in good hands.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="reviews" id="reviews">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Customer Reviews</span>
-      <h2>2,600+ Reasons to Call Xtreme</h2>
-      <p>Mesquite homeowners across all three trades love the Xtreme difference — see what they're saying.</p>
-    </div>
+<section id="reviews" class="reviews-section">
+  <div class="section-inner">
+    <span class="section-tag" style="color:var(--accent)">What Customers Say</span>
+    <h2 class="section-title">4.8 Stars — 2,621 Reviews</h2>
+    <p class="section-sub">Mesquite and Dallas homeowners trust Xtreme Air Services for all three trades.</p>
     <div class="reviews-grid">
       <div class="review-card card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">"Called for AC repair but ended up having our water heater checked too. Both fixed the same day, one crew, one invoice. Xtreme is completely unbeatable."</p>
-        <div class="reviewer">James R. <span>&#8212; Mesquite, TX</span></div>
+        <span class="review-star-badge">5.0 &#9733;</span>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"I called Xtreme Air for an AC issue and ended up having them handle a plumbing problem in the same visit. Two different techs came, both were professional and efficient. No other company does that. Incredible service."</p>
+        <div class="review-author">Terri B.</div>
+        <div class="review-location">Mesquite, TX — Google Review</div>
       </div>
       <div class="review-card card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">"Had them upgrade our electrical panel AND fix a slab leak in the same week. One company, total confidence. I'm never calling anyone else."</p>
-        <div class="reviewer">Priya M. <span>&#8212; Garland, TX</span></div>
+        <span class="review-star-badge">5.0 &#9733;</span>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Had a water heater fail and needed it replaced fast. Xtreme Air came out same day, quoted a fair price, and had a new unit installed within hours. They also noticed a wiring issue while there and fixed it. Truly one-stop home service."</p>
+        <div class="review-author">Gary M.</div>
+        <div class="review-location">Sunnyvale, TX — Google Review</div>
       </div>
       <div class="review-card card">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">"2,600 reviews and they've earned every single one. Fastest response in Mesquite — AC died at 9pm, tech was here by 10:30. Fixed by midnight."</p>
-        <div class="reviewer">Tyler B. <span>&#8212; Rowlett, TX</span></div>
+        <span class="review-star-badge">5.0 &#9733;</span>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"I use Xtreme Air for my annual AC tune-up and whenever something comes up in my house. The team is always polite, the pricing is fair, and they actually show up when they say they will. Highly recommend."</p>
+        <div class="review-author">Carmen R.</div>
+        <div class="review-location">Garland, TX — Google Review</div>
+      </div>
+      <div class="review-card card">
+        <span class="review-star-badge">5.0 &#9733;</span>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Fantastic experience from scheduling to completion. The technician was thorough, explained everything in plain language, and did not try to upsell me on things I did not need. Exactly what home service should be."</p>
+        <div class="review-author">Dwayne K.</div>
+        <div class="review-location">Mesquite, TX — Google Review</div>
+      </div>
+      <div class="review-card card">
+        <span class="review-star-badge">5.0 &#9733;</span>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Called for an electrical panel issue on a Saturday. They came out, diagnosed the problem quickly, and had it repaired by noon. No weekend surcharge surprise, price was exactly as quoted. Outstanding."</p>
+        <div class="review-author">Maria L.</div>
+        <div class="review-location">Dallas, TX — Google Review</div>
+      </div>
+      <div class="review-card card">
+        <span class="review-star-badge">4.0 &#9733;</span>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p class="review-text">"Good overall experience. The plumbing repair was done well and the tech was friendly. Had to wait a bit longer than expected for the appointment but they called ahead to update me. Would use again."</p>
+        <div class="review-author">Steve H.</div>
+        <div class="review-location">Rowlett, TX — Google Review</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="areas" id="areas">
-  <div class="container">
-    <span class="section-label" style="display:block;text-align:center;">Service Areas</span>
-    <h2>Serving Mesquite &amp; the Greater Dallas Area</h2>
+<section id="areas" class="areas-section">
+  <div class="section-inner">
+    <span class="section-tag">Service Area</span>
+    <h2 class="section-title">Serving the Greater Dallas Area</h2>
+    <p class="section-sub">HVAC, plumbing, and electrical service across east and northeast Dallas metro.</p>
     <div class="areas-grid">
-      <div class="area-chip">Mesquite</div>
-      <div class="area-chip">Garland</div>
-      <div class="area-chip">Rowlett</div>
-      <div class="area-chip">Balch Springs</div>
-      <div class="area-chip">Sunnyvale</div>
-      <div class="area-chip">Forney</div>
-      <div class="area-chip">Rockwall</div>
-      <div class="area-chip">Dallas</div>
+      <div class="area-chip"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Mesquite, TX</div>
+      <div class="area-chip"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Sunnyvale, TX</div>
+      <div class="area-chip"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Garland, TX</div>
+      <div class="area-chip"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Rowlett, TX</div>
+      <div class="area-chip"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Rockwall, TX</div>
+      <div class="area-chip"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Forney, TX</div>
+      <div class="area-chip"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Balch Springs, TX</div>
+      <div class="area-chip"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Dallas, TX</div>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <div class="container">
+<section id="contact" class="contact-section">
+  <div class="section-inner">
     <div class="contact-grid">
       <div class="contact-info">
-        <span class="section-label">Get in Touch</span>
-        <h2>Any System. Any Time. We're Ready.</h2>
-        <p>Call now for immediate help or fill out the form and we'll respond within 30 minutes. Emergency service is always available.</p>
-        <div class="contact-detail">
-          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-          <span><a href="tel:9722882263">(972) 288-2263</a></span>
+        <span class="section-tag">Get In Touch</span>
+        <h3>Schedule Your Service</h3>
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+          <div>
+            <div class="contact-item-label">Phone</div>
+            <div class="contact-item-value">(972) 288-2263</div>
+          </div>
         </div>
-        <div class="contact-detail">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          <span>Mesquite, TX 75150</span>
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value">servicetoday@xtremeairservices.com</div>
+          </div>
         </div>
-        <div class="contact-detail">
-          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
-          <span>Mon&#8211;Sat 7am&#8211;9pm &middot; Emergency 24/7</span>
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div>
+            <div class="contact-item-label">Hours</div>
+            <div class="contact-item-value">Mon–Sat 7am–8pm | Emergency 24/7</div>
+          </div>
         </div>
       </div>
       <div class="contact-form">
-        <h3>Request a Free Estimate</h3>
-        <form onsubmit="return false;">
-          <div class="form-row">
-            <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
-            <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
-          </div>
-          <div class="form-row">
-            <div class="form-group"><label>Phone</label><input type="tel" placeholder="(972) 555-0100"></div>
-            <div class="form-group"><label>Email</label><input type="email" placeholder="john@email.com"></div>
-          </div>
-          <div class="form-group">
-            <label>Service Needed</label>
-            <select>
-              <option value="">Select a service...</option>
-              <option>AC Repair or Replacement</option>
-              <option>Heating Service</option>
-              <option>Plumbing Repair</option>
-              <option>Water Heater</option>
-              <option>Electrical Service</option>
-              <option>Emergency — Any Trade</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Tell Us More</label>
-            <textarea placeholder="Describe the issue — which system, what's happening..."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;">Send My Request &#8594;</button>
-        </form>
+        <div class="form-title">Book a Service Call</div>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+        </div>
+        <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="(972) 555-0100"></div>
+        <div class="form-group">
+          <label>Trade / Service Needed</label>
+          <select>
+            <option value="">Select a trade...</option>
+            <option>HVAC — AC Repair</option>
+            <option>HVAC — Heating Repair</option>
+            <option>HVAC — System Installation</option>
+            <option>Plumbing — Drain Cleaning</option>
+            <option>Plumbing — Water Heater</option>
+            <option>Plumbing — Leak Repair</option>
+            <option>Electrical — Panel / Wiring</option>
+            <option>Electrical — Outlets / Switches</option>
+            <option>Emergency Service</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Describe the Issue</label><textarea placeholder="Tell us what is going on and we will get you scheduled quickly..."></textarea></div>
+        <button class="btn-submit" type="button">Request Service</button>
       </div>
     </div>
   </div>
 </section>
 
 <section class="cta-band">
-  <div class="container">
-    <h2>HVAC, Plumbing or Electrical Issue? Call Xtreme.</h2>
-    <p>2,600+ five-star reviews &middot; Certified in all 3 trades &middot; Available 24/7</p>
-    <a href="tel:9722882263" class="btn cta-accent">Call (972) 288-2263</a>
+  <div class="cta-band-inner">
+    <h2>One Call. Three Trades. Done Right.</h2>
+    <p>HVAC, plumbing, and electrical — 4.8 stars, 2,621 reviews, same-day service across Mesquite and Dallas metro.</p>
+    <div class="cta-band-actions">
+      <a class="btn-primary" href="tel:9722882263">Call (972) 288-2263</a>
+      <a class="btn-outline" href="#contact">Schedule Online</a>
+    </div>
   </div>
 </section>
 
-<footer>
-  <div class="container">
+<footer class="site-footer">
+  <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-col">
-        <div class="footer-logo"><span>Xtreme</span> Air Services</div>
-        <p>Mesquite's premier HVAC, plumbing, and electrical company. One call for everything — licensed, insured, and highly rated.</p>
+      <div class="footer-brand">
+        <div class="logo">XTREME <span>AIR</span> SERVICES</div>
+        <p>Mesquite's total home service company — HVAC, plumbing, and electrical by one trusted team. Licensed, insured, and highly rated.</p>
       </div>
       <div class="footer-col">
-        <h4>Our Services</h4>
-        <a href="#services">AC Repair &amp; Replacement</a>
-        <a href="#services">Heating System Service</a>
-        <a href="#services">Drain Cleaning &amp; Repair</a>
-        <a href="#services">Electrical Panel Work</a>
-        <a href="#services">24/7 Emergency Service</a>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">HVAC Repair</a></li>
+          <li><a href="#services">Plumbing</a></li>
+          <li><a href="#services">Electrical</a></li>
+          <li><a href="#services">Maintenance Plans</a></li>
+          <li><a href="#services">Emergency</a></li>
+        </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact Us</h4>
-        <a href="tel:9722882263">(972) 288-2263</a>
-        <p>Mesquite, TX 75150</p>
-        <p>Mon&#8211;Sat: 7am&#8211;9pm</p>
-        <p>Emergency: 24/7</p>
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="#areas">Mesquite</a></li>
+          <li><a href="#areas">Sunnyvale</a></li>
+          <li><a href="#areas">Garland</a></li>
+          <li><a href="#areas">Rockwall</a></li>
+          <li><a href="#areas">Dallas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9722882263">(972) 288-2263</a></li>
+          <li><a href="mailto:servicetoday@xtremeairservices.com">Email Us</a></li>
+          <li><a href="#contact">Schedule Service</a></li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Xtreme Air Services. All rights reserved.</p>
-      <p>Serving Mesquite, TX &amp; Greater Dallas</p>
+      <div class="footer-copy">&copy; 2026 Xtreme Air Services. All rights reserved.</div>
+      <div class="footer-copy">Licensed &amp; Insured | HVAC, Plumbing &amp; Electrical | Mesquite, TX</div>
     </div>
   </div>
 </footer>
 
 <script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-}, { threshold: 0.12 });
-document.querySelectorAll('.card').forEach(el => observer.observe(el));
-
-function animateCount(el) {
-  const target = parseInt(el.dataset.target);
-  const suffix = el.dataset.suffix || '';
-  const duration = 1800;
-  const start = performance.now();
-  function step(now) {
-    const elapsed = now - start;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.floor(eased * target) + suffix;
-    if (progress < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
+function animateCount(el){
+  const t=parseInt(el.dataset.target);const s=el.dataset.suffix||"";
+  const d=1800;const st=performance.now();
+  const u=(ti)=>{const p=Math.min((ti-st)/d,1);const e=1-Math.pow(1-p,3);el.textContent=Math.floor(e*t).toLocaleString()+s;if(p<1)requestAnimationFrame(u);};
+  requestAnimationFrame(u);
 }
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('[data-target]').forEach(animateCount);
-      statsObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-const statsBar = document.querySelector('.stats-bar');
-if (statsBar) statsObserver.observe(statsBar);
+const so=new IntersectionObserver((entries)=>{entries.forEach(en=>{if(en.isIntersecting){animateCount(en.target);so.unobserve(en.target);}});},{threshold:0.5});
+document.querySelectorAll("[data-target]").forEach(el=>so.observe(el));
+const co=new IntersectionObserver((entries)=>{entries.forEach((en)=>{if(en.isIntersecting){const el=en.target;const delay=Array.from(el.parentElement.children).indexOf(el)*80;setTimeout(()=>{el.style.animationPlayState="running";},delay);co.unobserve(el);}});},{threshold:0.15});
+document.querySelectorAll(".card").forEach(el=>co.observe(el));
 </script>
 </body>
 </html>

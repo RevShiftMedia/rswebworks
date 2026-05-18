@@ -2,478 +2,672 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kretz Plumbing Services LLC | Mesquite, TX | 341 Reviews — Precision Plumbing</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kretz Plumbing Services LLC | Mesquite, TX Plumber</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap');
-:root {
-  --primary: #1e1a3a;
-  --primary-dark: #100e22;
-  --accent: #3b6cf7;
-  --accent-dark: #2550cc;
-  --bg: #ffffff;
-  --bg-off: #f6f7fc;
-  --t1: #ffffff;
-  --t2: rgba(255,255,255,0.75);
-  --t3: rgba(255,255,255,0.5);
-  --dark-text: #0f0e1a;
-  --grey-text: #6b7280;
-  --border: #e2e4f0;
-  --font-display: 'Bebas Neue', sans-serif;
-  --font-body: 'Open Sans', sans-serif;
-  --radius: 12px;
-  --shadow: 0 4px 20px rgba(0,0,0,0.1);
-  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --primary:#1c2e4a;
+  --primary-dark:#111d30;
+  --primary-light:#253d62;
+  --accent:#d97706;
+  --accent-dark:#b45309;
+  --white:#ffffff;
+  --gray-50:#f9fafb;
+  --gray-100:#f3f4f6;
+  --gray-200:#e5e7eb;
+  --gray-600:#4b5563;
+  --gray-700:#374151;
+  --gray-800:#1f2937;
+  --text:#1f2937;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-body:'Open Sans',sans-serif;
+  --radius:8px;
+  --shadow:0 4px 24px rgba(0,0,0,0.10);
+  --shadow-lg:0 8px 40px rgba(0,0,0,0.18);
 }
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:var(--font-body);background:var(--bg);color:var(--dark-text);line-height:1.65;}
-h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-0.02em;}
-section{padding:90px 0;}
-.container{max-width:1100px;margin:0 auto;padding:0 24px;}
-.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:white;font-family:var(--font-display);font-size:15px;letter-spacing:.05em;padding:14px 28px;border-radius:8px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(59,108,247,0.35);transition:all .15s;text-decoration:none;}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(59,108,247,.45);}
-.btn-primary:active{transform:scale(.97);}
-.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:white;font-family:var(--font-display);font-size:15px;letter-spacing:.05em;padding:13px 28px;border-radius:8px;border:2px solid rgba(255,255,255,.6);cursor:pointer;transition:all .15s;text-decoration:none;}
-.btn-ghost:hover{border-color:white;background:rgba(255,255,255,.08);}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;}
-@media(max-width:900px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:600px){.grid-3,.grid-4,.grid-2{grid-template-columns:1fr;}}
-@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
-.hero-badge{animation:heroFadeUp .5s ease-out .1s both;}.hero-headline{animation:heroFadeUp .5s ease-out .2s both;}.hero-sub{animation:heroFadeUp .5s ease-out .35s both;}.hero-ctas{animation:heroFadeUp .5s ease-out .5s both;}.hero-trust{animation:heroFadeUp .5s ease-out .65s both;}.hero-card{animation:heroFadeUp .5s ease-out .4s both;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-.card{opacity:0;transition:box-shadow .25s,transform .25s;}.card.visible{animation:fadeUp .4s ease-out forwards;}
-.card:nth-child(1).visible{animation-delay:.05s;}.card:nth-child(2).visible{animation-delay:.15s;}.card:nth-child(3).visible{animation-delay:.25s;}.card:nth-child(4).visible{animation-delay:.35s;}.card:nth-child(5).visible{animation-delay:.45s;}.card:nth-child(6).visible{animation-delay:.55s;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);color:var(--text);background:var(--white);line-height:1.6;}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
 
-header{background:var(--primary);position:sticky;top:0;z-index:1000;box-shadow:0 2px 12px rgba(0,0,0,0.35);}
-header.scrolled{box-shadow:0 4px 24px rgba(0,0,0,0.5);}
-.header-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:68px;}
-.header-name{font-family:var(--font-display);font-size:20px;color:white;letter-spacing:.04em;}
-.header-tagline{font-family:var(--font-body);font-size:12px;color:var(--t2);margin-top:3px;}
-.header-cta{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:white;font-family:var(--font-display);font-size:14px;letter-spacing:.06em;padding:10px 20px;border-radius:8px;text-decoration:none;transition:all .15s;}
-.header-cta:hover{transform:translateY(-1px);}
+/* HEADER */
+.site-header{background:var(--primary-dark);padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.3);}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;}
+.logo{font-family:var(--font-display);font-size:1.7rem;color:var(--white);letter-spacing:0.03em;}
+.logo span{color:var(--accent);}
+.nav{display:flex;align-items:center;gap:28px;}
+.nav a{color:rgba(255,255,255,0.82);font-size:0.875rem;font-weight:600;transition:color 0.2s;}
+.nav a:hover{color:var(--accent);}
+.btn-call{background:var(--accent);color:var(--white);font-weight:700;font-size:0.875rem;padding:10px 22px;border-radius:var(--radius);transition:background 0.2s;}
+.btn-call:hover{background:var(--accent-dark);}
 
-.hero{background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 100%);padding:90px 0 80px;position:relative;overflow:hidden;}
-.hero::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.14;pointer-events:none;z-index:0;}
-.hero>*{position:relative;z-index:1;}
-.hero-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:60% 40%;gap:40px;align-items:center;}
-@media(max-width:900px){.hero-inner{grid-template-columns:1fr;}.hero-card{display:none;}}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:white;font-family:var(--font-display);font-size:11px;letter-spacing:.12em;padding:6px 14px;border-radius:100px;width:fit-content;margin-bottom:20px;}
-.hero-headline{font-family:var(--font-display);font-size:clamp(42px,6vw,64px);color:white;line-height:1.05;margin-bottom:20px;letter-spacing:-0.02em;}
-.hero-headline span{color:var(--accent);}
-.hero-sub{font-family:var(--font-body);font-size:18px;color:var(--t2);max-width:500px;margin-bottom:32px;line-height:1.6;}
-.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px;}
-.hero-trust{display:flex;align-items:center;gap:16px;font-family:var(--font-body);font-size:13px;color:var(--t2);flex-wrap:wrap;}
-.trust-divider{width:1px;height:16px;background:rgba(255,255,255,.25);}
-.hero-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);box-shadow:0 8px 32px rgba(0,0,0,.35);backdrop-filter:blur(12px);border-radius:16px;padding:28px 32px;}
-.hero-card-title{font-family:var(--font-display);font-size:14px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px;}
-.value-prop{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.07);}
-.value-prop:last-of-type{border-bottom:none;margin-bottom:18px;padding-bottom:0;}
-.value-check{width:22px;height:22px;border-radius:50%;background:rgba(59,108,247,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;color:var(--accent);}
-.value-title{font-family:var(--font-display);font-size:15px;color:white;letter-spacing:.03em;}
-.value-desc{font-family:var(--font-body);font-size:12px;color:var(--t2);margin-top:2px;}
-.hero-card-phone{font-family:var(--font-display);font-size:22px;color:white;letter-spacing:.05em;display:flex;align-items:center;gap:10px;padding:14px 18px;background:rgba(59,108,247,.15);border:1px solid rgba(59,108,247,.3);border-radius:10px;}
+/* HERO */
+.hero{position:relative;background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 60%,var(--primary-light) 100%);min-height:600px;display:flex;align-items:center;overflow:hidden;padding:80px 24px;}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%,rgba(217,119,6,0.13) 0%,transparent 70%);pointer-events:none;}
+.hero::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:0.10;pointer-events:none;z-index:0;}
+.hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:60fr 40fr;gap:60px;align-items:center;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(217,119,6,0.18);border:1px solid rgba(217,119,6,0.4);color:var(--accent);font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:6px 14px;border-radius:20px;margin-bottom:20px;}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.8rem,5.5vw,4.4rem);line-height:1.02;color:var(--white);letter-spacing:0.02em;margin-bottom:20px;opacity:0;animation:heroFadeUp 0.7s ease-out 0.1s forwards;}
+.hero h1 em{color:var(--accent);font-style:normal;}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.78);margin-bottom:32px;max-width:480px;opacity:0;animation:heroFadeUp 0.7s ease-out 0.25s forwards;}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:heroFadeUp 0.7s ease-out 0.4s forwards;}
+.btn-primary{background:var(--accent);color:var(--white);font-weight:700;font-size:1rem;padding:14px 32px;border-radius:var(--radius);border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;display:inline-block;}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);}
+.btn-outline{background:transparent;color:var(--white);font-weight:700;font-size:1rem;padding:14px 32px;border-radius:var(--radius);border:2px solid rgba(255,255,255,0.4);cursor:pointer;transition:border-color 0.2s,transform 0.15s;display:inline-block;}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
+.hero-card{background:rgba(255,255,255,0.07);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.14);border-radius:16px;padding:32px;opacity:0;animation:heroFadeUp 0.7s ease-out 0.3s forwards;}
+.hero-card-title{font-family:var(--font-display);font-size:1.2rem;color:var(--accent);letter-spacing:0.05em;margin-bottom:16px;}
+.hero-trust-list{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.hero-trust-list li{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.88);font-size:0.92rem;}
+.hero-trust-list li svg{flex-shrink:0;color:var(--accent);}
+.hero-rating-box{margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;gap:12px;}
+.hero-rating-num{font-family:var(--font-display);font-size:2.4rem;color:var(--white);line-height:1;}
+.hero-rating-stars{color:var(--accent);font-size:1.1rem;line-height:1.2;}
+.hero-rating-label{color:rgba(255,255,255,0.65);font-size:0.82rem;}
 
-.stats-bar{background:var(--primary);}
-.stats-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr);}
-@media(max-width:600px){.stats-inner{grid-template-columns:repeat(2,1fr);}}
-.stat-box{padding:32px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.08);}
-.stat-box:last-child{border-right:none;}
-.stat-num{font-family:var(--font-display);font-size:clamp(32px,4vw,48px);color:var(--accent);display:block;}
-.stat-label{font-family:var(--font-body);font-size:13px;color:var(--t2);margin-top:4px;}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
 
-.services{background:var(--bg);}
-.section-label{font-family:var(--font-display);font-size:10px;letter-spacing:.15em;color:var(--accent);text-transform:uppercase;margin-bottom:12px;display:block;}
-.section-title{font-family:var(--font-display);font-size:36px;color:var(--dark-text);margin-bottom:12px;}
-.section-sub{font-family:var(--font-body);font-size:16px;color:var(--grey-text);margin-bottom:48px;max-width:540px;}
-.service-card{background:var(--bg);border:1px solid var(--border);border-top:3px solid transparent;border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);}
-.service-card:hover{border-top-color:var(--accent);transform:translateY(-4px);box-shadow:var(--shadow-lg);}
-.service-icon{width:48px;height:48px;border-radius:50%;background:rgba(59,108,247,.1);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--accent);}
-.service-name{font-family:var(--font-display);font-size:17px;color:var(--dark-text);letter-spacing:.02em;margin-bottom:8px;}
-.service-desc{font-family:var(--font-body);font-size:14px;color:var(--grey-text);line-height:1.6;margin-bottom:14px;}
-.service-link{color:var(--accent);font-size:13px;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:4px;}
+/* STATS */
+.stats-band{background:var(--primary-dark);padding:44px 24px;}
+.stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.stat-item{text-align:center;padding:20px 12px;}
+.stat-num{font-family:var(--font-display);font-size:2.8rem;color:var(--accent);line-height:1;display:block;}
+.stat-label{color:rgba(255,255,255,0.65);font-size:0.82rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-top:6px;}
 
-.why{background:var(--primary);position:relative;overflow:hidden;}
-.why::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.1;pointer-events:none;z-index:0;}
-.why>*{position:relative;z-index:1;}
-.why-stat{background:var(--primary-dark);border-radius:var(--radius);padding:24px;text-align:center;margin-bottom:40px;}
-.why-stat-num{font-family:var(--font-display);font-size:36px;color:var(--accent);}
-.why-stat-label{font-family:var(--font-body);font-size:13px;color:var(--t2);margin-top:4px;}
-.why-diff{display:flex;align-items:flex-start;gap:16px;padding:20px;background:rgba(255,255,255,.04);border-radius:var(--radius);border:1px solid rgba(255,255,255,.07);}
-.diff-check{width:36px;height:36px;border-radius:50%;background:rgba(59,108,247,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent);}
-.diff-title{font-family:var(--font-display);font-size:16px;color:white;letter-spacing:.03em;margin-bottom:4px;}
-.diff-desc{font-family:var(--font-body);font-size:13px;color:var(--t2);line-height:1.6;}
+/* SECTION SHARED */
+section{padding:80px 24px;}
+.section-inner{max-width:1200px;margin:0 auto;}
+.section-tag{display:inline-block;font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+.section-title{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,2.8rem);color:var(--primary-dark);letter-spacing:0.02em;margin-bottom:16px;}
+.section-sub{font-size:1rem;color:var(--gray-600);max-width:580px;margin-bottom:48px;}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
 
-.how{background:var(--primary-dark);}
-.steps-row{display:grid;grid-template-columns:repeat(3,1fr);margin-top:48px;}
-@media(max-width:600px){.steps-row{grid-template-columns:1fr;}}
-.step{text-align:center;padding:32px 24px;position:relative;}
-.step:not(:last-child)::after{content:'';position:absolute;top:52px;right:0;border-right:2px dashed rgba(255,255,255,.12);height:40px;}
-.step-num{width:52px;height:52px;border-radius:50%;background:var(--accent);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:24px;color:white;}
-.step-title{font-family:var(--font-display);font-size:18px;color:white;letter-spacing:.02em;margin-bottom:8px;}
-.step-desc{font-family:var(--font-body);font-size:14px;color:var(--t2);}
+/* SERVICES - numbered card layout */
+.services-section{background:var(--gray-50);}
+.service-card{background:var(--white);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);position:relative;overflow:hidden;opacity:0;animation:fadeUp 0.4s ease-out forwards;animation-play-state:paused;transition:transform 0.2s,box-shadow 0.2s;}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.service-card-num{position:absolute;top:16px;right:18px;font-family:var(--font-display);font-size:3.5rem;color:rgba(217,119,6,0.08);line-height:1;user-select:none;}
+.service-icon{width:48px;height:48px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.service-icon svg{color:var(--white);}
+.service-card h3{font-family:var(--font-display);font-size:1.3rem;color:var(--primary-dark);letter-spacing:0.02em;margin-bottom:8px;}
+.service-card p{font-size:0.9rem;color:var(--gray-600);line-height:1.6;}
 
-.reviews{background:var(--bg-off);}
-.reviews-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:40px;flex-wrap:wrap;gap:16px;}
-.google-badge{display:flex;align-items:center;gap:8px;background:white;border:1px solid var(--border);border-radius:10px;padding:10px 16px;}
-.google-rating{font-family:var(--font-display);font-size:22px;color:var(--dark-text);}
-.google-stars{display:flex;gap:2px;color:#fbbf24;}
-.google-count{font-family:var(--font-body);font-size:12px;color:var(--grey-text);}
-.review-card{background:white;border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:0 2px 16px rgba(0,0,0,.06);}
-.review-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.12);transform:translateY(-3px);}
-.review-stars{display:flex;gap:2px;color:#fbbf24;margin-bottom:12px;}
-.review-text{font-family:var(--font-body);font-style:italic;font-size:15px;line-height:1.7;color:var(--dark-text);margin-bottom:16px;}
-.review-divider{height:1px;background:var(--border);margin-bottom:16px;}
-.reviewer{display:flex;align-items:center;gap:12px;}
-.reviewer-avatar{width:40px;height:40px;border-radius:50%;background:rgba(30,26,58,.15);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:16px;color:var(--primary);flex-shrink:0;}
-.reviewer-name{font-family:var(--font-display);font-size:15px;color:var(--dark-text);letter-spacing:.02em;}
-.reviewer-meta{font-family:var(--font-body);font-size:12px;color:var(--grey-text);}
+/* WHY */
+.why-section{background:var(--white);}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.why-card{padding:28px;border-radius:var(--radius);border:1px solid var(--gray-200);background:var(--white);opacity:0;animation:fadeUp 0.4s ease-out forwards;animation-play-state:paused;transition:border-color 0.2s,box-shadow 0.2s;}
+.why-card:hover{border-color:var(--accent);box-shadow:0 4px 20px rgba(217,119,6,0.12);}
+.why-icon{width:44px;height:44px;background:rgba(217,119,6,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+.why-icon svg{color:var(--accent);}
+.why-card h3{font-family:var(--font-display);font-size:1.15rem;color:var(--primary-dark);letter-spacing:0.02em;margin-bottom:8px;}
+.why-card p{font-size:0.88rem;color:var(--gray-600);}
 
-.areas{background:var(--primary);}
-.areas-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
-@media(max-width:700px){.areas-inner{grid-template-columns:1fr;}}
-.chips-card{background:var(--primary-dark);border-radius:var(--radius);padding:28px;border:1px solid rgba(255,255,255,.1);}
-.chips-title{font-family:var(--font-display);font-size:14px;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;}
-.chips{display:flex;flex-wrap:wrap;gap:10px;}
-.chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:6px 16px;font-family:var(--font-body);font-size:13px;color:var(--t2);cursor:pointer;transition:all .2s;}
-.chip:hover{background:var(--accent);color:white;border-color:var(--accent);}
+/* HOW IT WORKS */
+.how-section{background:var(--gray-50);}
+.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+.step-card{text-align:center;opacity:0;animation:fadeUp 0.4s ease-out forwards;animation-play-state:paused;}
+.step-num{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-light));color:var(--white);font-family:var(--font-display);font-size:1.5rem;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+.step-card h3{font-family:var(--font-display);font-size:1.15rem;color:var(--primary-dark);letter-spacing:0.02em;margin-bottom:8px;}
+.step-card p{font-size:0.88rem;color:var(--gray-600);}
 
-.contact{background:white;}
-.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;}
-@media(max-width:700px){.contact-inner{grid-template-columns:1fr;}}
-.contact-form h3{font-family:var(--font-display);font-size:28px;color:var(--dark-text);margin-bottom:8px;}
-.contact-form p{font-family:var(--font-body);font-size:15px;color:var(--grey-text);margin-bottom:28px;}
-.form-group{margin-bottom:18px;}
-.form-label{font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--dark-text);margin-bottom:6px;display:block;}
-input,select,textarea{width:100%;background:var(--bg-off);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-family:var(--font-body);font-size:14px;color:var(--dark-text);transition:border-color .2s;}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(59,108,247,.1);}
-textarea{height:120px;resize:vertical;}
-.submit-btn{width:100%;background:var(--accent);color:white;font-family:var(--font-display);font-size:16px;letter-spacing:.06em;padding:16px;border-radius:8px;border:none;cursor:pointer;box-shadow:0 4px 16px rgba(59,108,247,.3);transition:all .15s;}
-.submit-btn:hover{transform:translateY(-2px);}
-.contact-info{background:var(--primary);border-radius:16px;padding:36px 32px;}
-.contact-info h3{font-family:var(--font-display);font-size:24px;color:white;margin-bottom:8px;}
-.contact-info p{font-family:var(--font-body);font-size:14px;color:var(--t2);margin-bottom:28px;}
-.info-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;}
-.info-icon{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent);}
-.info-label{font-family:var(--font-display);font-size:12px;letter-spacing:.08em;color:var(--accent);text-transform:uppercase;}
-.info-value{font-family:var(--font-body);font-size:15px;color:white;margin-top:2px;}
+/* REVIEWS - left accent border */
+.reviews-section{background:var(--primary-dark);padding:80px 24px;}
+.reviews-section .section-title{color:var(--white);}
+.reviews-section .section-sub{color:rgba(255,255,255,0.6);}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.review-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-left:4px solid var(--accent);border-radius:var(--radius);padding:28px;opacity:0;animation:fadeUp 0.4s ease-out forwards;animation-play-state:paused;}
+.review-stars{color:var(--accent);font-size:1rem;letter-spacing:2px;margin-bottom:12px;}
+.review-text{font-size:0.92rem;color:rgba(255,255,255,0.82);line-height:1.65;margin-bottom:16px;font-style:italic;}
+.review-author{font-weight:700;color:var(--white);font-size:0.88rem;}
+.review-source{color:rgba(255,255,255,0.45);font-size:0.78rem;margin-top:2px;}
 
-.cta-band{background:linear-gradient(135deg,var(--accent-dark),var(--accent));padding:80px 0;text-align:center;position:relative;overflow:hidden;}
-.cta-band::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.12;pointer-events:none;z-index:0;}
-.cta-band>*{position:relative;z-index:1;}
-.cta-band h2{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);color:white;margin-bottom:14px;}
-.cta-band p{font-family:var(--font-body);font-size:17px;color:rgba(255,255,255,.85);margin-bottom:32px;}
-.cta-btn-white{display:inline-flex;align-items:center;gap:8px;background:white;color:var(--accent-dark);font-family:var(--font-display);font-size:16px;letter-spacing:.06em;padding:16px 36px;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,.2);transition:all .15s;text-decoration:none;}
-.cta-btn-white:hover{transform:translateY(-2px);}
+/* SERVICE AREAS */
+.areas-section{background:var(--white);}
+.areas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.area-chip{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px 16px;display:flex;align-items:center;gap:10px;font-size:0.9rem;font-weight:600;color:var(--primary);transition:border-color 0.2s,background 0.2s;}
+.area-chip:hover{border-color:var(--accent);background:rgba(217,119,6,0.05);}
+.area-chip svg{color:var(--accent);flex-shrink:0;}
 
-footer{background:var(--primary-dark);padding:64px 0 0;}
-.footer-grid{max-width:1100px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
-@media(max-width:800px){.footer-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:500px){.footer-grid{grid-template-columns:1fr;}}
-.footer-brand-name{font-family:var(--font-display);font-size:22px;color:white;letter-spacing:.04em;margin-bottom:12px;}
-.footer-brand-desc{font-family:var(--font-body);font-size:14px;color:var(--t2);line-height:1.7;margin-bottom:20px;}
-.footer-col-title{font-family:var(--font-display);font-size:14px;color:white;letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px;}
-.footer-col ul{list-style:none;}
-.footer-col ul li{margin-bottom:8px;}
-.footer-col ul li a{font-family:var(--font-body);font-size:14px;color:var(--t2);text-decoration:none;transition:color .2s;}
+/* CONTACT */
+.contact-section{background:var(--gray-50);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+.contact-info h3{font-family:var(--font-display);font-size:1.6rem;color:var(--primary-dark);letter-spacing:0.02em;margin-bottom:24px;}
+.contact-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;}
+.contact-item-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.contact-item-icon svg{color:var(--white);}
+.contact-item-label{font-size:0.78rem;font-weight:700;color:var(--gray-600);text-transform:uppercase;letter-spacing:0.06em;}
+.contact-item-value{font-size:0.95rem;font-weight:600;color:var(--primary-dark);}
+.contact-form{background:var(--white);border-radius:12px;padding:36px;box-shadow:var(--shadow);}
+.form-title{font-family:var(--font-display);font-size:1.4rem;color:var(--primary-dark);letter-spacing:0.02em;margin-bottom:20px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
+.form-group label{font-size:0.82rem;font-weight:700;color:var(--gray-700);text-transform:uppercase;letter-spacing:0.05em;}
+.form-group input,.form-group select,.form-group textarea{border:1.5px solid var(--gray-200);border-radius:var(--radius);padding:11px 14px;font-family:var(--font-body);font-size:0.93rem;color:var(--text);background:var(--white);transition:border-color 0.2s;outline:none;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);}
+.form-group textarea{resize:vertical;min-height:100px;}
+.btn-submit{width:100%;background:var(--accent);color:var(--white);font-family:var(--font-body);font-weight:700;font-size:1rem;padding:14px;border:none;border-radius:var(--radius);cursor:pointer;transition:background 0.2s;}
+.btn-submit:hover{background:var(--accent-dark);}
+
+/* CTA BAND */
+.cta-band{position:relative;background:var(--primary-dark);padding:80px 24px;text-align:center;overflow:hidden;}
+.cta-band::after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:0.08;pointer-events:none;z-index:0;}
+.cta-band-inner{position:relative;z-index:1;max-width:700px;margin:0 auto;}
+.cta-band h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);color:var(--white);letter-spacing:0.02em;margin-bottom:16px;}
+.cta-band p{color:rgba(255,255,255,0.7);font-size:1.05rem;margin-bottom:32px;}
+.cta-band-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+
+/* FOOTER */
+.site-footer{background:#0a1220;padding:48px 24px 32px;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.footer-brand .logo{font-size:1.5rem;margin-bottom:12px;}
+.footer-brand p{color:rgba(255,255,255,0.5);font-size:0.88rem;line-height:1.65;max-width:260px;}
+.footer-col h4{font-family:var(--font-display);font-size:1.05rem;color:var(--accent);letter-spacing:0.05em;margin-bottom:14px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.footer-col ul li a{color:rgba(255,255,255,0.55);font-size:0.88rem;transition:color 0.2s;}
 .footer-col ul li a:hover{color:var(--accent);}
-.footer-bar{max-width:1100px;margin:40px auto 0;padding:20px 24px;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
-.footer-copy,.footer-license{font-family:var(--font-body);font-size:13px;color:var(--t3);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-copy{color:rgba(255,255,255,0.35);font-size:0.82rem;}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-card{display:none;}
+  .stats-inner,.grid-3,.grid-4,.why-grid,.steps-grid,.reviews-grid,.areas-grid,.footer-grid{grid-template-columns:repeat(2,1fr);}
+  .contact-grid{grid-template-columns:1fr;}
+}
+@media(max-width:600px){
+  .nav{display:none;}
+  .stats-inner,.grid-3,.grid-4,.why-grid,.steps-grid,.reviews-grid,.areas-grid,.footer-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
-<header id="site-header">
+
+<!-- HEADER -->
+<header class="site-header">
   <div class="header-inner">
-    <div>
-      <div class="header-name">KRETZ PLUMBING SERVICES LLC</div>
-      <div class="header-tagline">341 Reviews &bull; Precision Plumbing in Mesquite, TX</div>
-    </div>
-    <a href="tel:2146637808" class="header-cta">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      (214) 663-7808
-    </a>
+    <div class="logo">KRETZ <span>PLUMBING</span></div>
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact">Contact</a>
+      <a class="btn-call" href="tel:2146637808">(214) 663-7808</a>
+    </nav>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div>
+    <div class="hero-content">
       <div class="hero-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        4.8 STARS &bull; 341 REVIEWS &bull; LICENSED LLC
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        Family-Owned Since 2003
       </div>
-      <h1 class="hero-headline">Mesquite's <span>Precision</span> Plumbing Specialists</h1>
-      <p class="hero-sub">Kretz Plumbing doesn't guess. We diagnose with precision, quote flat-rate before we start, and complete the work correctly the first visit — every time. 341 reviews back that up.</p>
-      <div class="hero-ctas">
-        <a href="tel:2146637808" class="btn-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          CALL FOR FREE ESTIMATE
-        </a>
-        <a href="#contact" class="btn-ghost">BOOK ONLINE</a>
-      </div>
-      <div class="hero-trust">
-        <span style="color:#fbbf24;display:flex;gap:3px;align-items:center;">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="opacity:.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <span style="color:white;margin-left:4px;">4.8</span>
-        </span>
-        <span>341 Google Reviews</span>
-        <span class="trust-divider"></span>
-        <span>Licensed LLC</span>
-        <span class="trust-divider"></span>
-        <span>Flat-Rate Pricing</span>
+      <h1>Expert Plumbing.<br><em>Kretz Family</em> Price.</h1>
+      <p class="hero-sub">Three generations of trusted plumbing service in Mesquite and surrounding communities. Honest work, fair prices, and we treat your home like our own.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="tel:2146637808">Call (214) 663-7808</a>
+        <a class="btn-outline" href="#contact">Get Free Estimate</a>
       </div>
     </div>
-    <div class="hero-card hero-card">
-      <div class="hero-card-title">THE KRETZ STANDARD</div>
-      <div class="value-prop">
-        <div class="value-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div><div class="value-title">Diagnose First, Quote Second</div><div class="value-desc">We find the actual problem before quoting anything. No estimates based on guesses.</div></div>
-      </div>
-      <div class="value-prop">
-        <div class="value-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div><div class="value-title">First-Visit Fix Rate</div><div class="value-desc">We stock the parts and bring the tools. One visit, done right, no return trips.</div></div>
-      </div>
-      <div class="value-prop">
-        <div class="value-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div><div class="value-title">341 Reviews Can't Be Wrong</div><div class="value-desc">Our track record speaks for itself — consistent 4.8 stars across hundreds of jobs.</div></div>
-      </div>
-      <div class="value-prop">
-        <div class="value-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div><div class="value-title">Licensed, Bonded &amp; Insured</div><div class="value-desc">Kretz Plumbing LLC — properly structured, fully protected, fully accountable.</div></div>
-      </div>
-      <div class="hero-card-phone">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        (214) 663-7808
+    <div class="hero-card">
+      <div class="hero-card-title">Why Kretz Plumbing?</div>
+      <ul class="hero-trust-list">
+        <li>
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Licensed &amp; Fully Insured
+        </li>
+        <li>
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Same-Day Service Available
+        </li>
+        <li>
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          Upfront Pricing — No Surprises
+        </li>
+        <li>
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Residential &amp; Commercial
+        </li>
+      </ul>
+      <div class="hero-rating-box">
+        <span class="hero-rating-num">4.8</span>
+        <div>
+          <div class="hero-rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="hero-rating-label">Based on 341 Google Reviews</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="stats-bar">
+<!-- STATS -->
+<section class="stats-band">
   <div class="stats-inner">
-    <div class="stat-box"><span class="stat-num" data-target="341" data-suffix="">0</span><div class="stat-label">5-Star Reviews</div></div>
-    <div class="stat-box"><span class="stat-num" data-target="4" data-suffix=".8">0</span><div class="stat-label">Average Rating</div></div>
-    <div class="stat-box"><span class="stat-num" data-target="24" data-suffix="/7">0</span><div class="stat-label">Emergency Available</div></div>
-    <div class="stat-box"><span class="stat-num" data-target="100" data-suffix="% Flat">0</span><div class="stat-label">Upfront Pricing</div></div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="341" data-suffix="">0</span>
+      <span class="stat-label">Google Reviews</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="20" data-suffix="+">0+</span>
+      <span class="stat-label">Years in Business</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="5000" data-suffix="+">0+</span>
+      <span class="stat-label">Homes Served</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num" data-target="100" data-suffix="%">0%</span>
+      <span class="stat-label">Satisfaction Guaranteed</span>
+    </div>
   </div>
-</div>
+</section>
 
-<section class="services">
-  <div class="container">
-    <span class="section-label">What We Fix</span>
-    <h2 class="section-title">Precision Plumbing Services</h2>
-    <p class="section-sub">Every service delivered with the same disciplined process: accurate diagnosis, flat-rate quote, first-visit fix. No guesswork, no surprises.</p>
+<!-- SERVICES -->
+<section id="services" class="services-section">
+  <div class="section-inner">
+    <span class="section-tag">What We Do</span>
+    <h2 class="section-title">Complete Plumbing Solutions</h2>
+    <p class="section-sub">From a leaky faucet to full sewer line replacement, the Kretz team handles it all with skill and care.</p>
     <div class="grid-3">
       <div class="service-card card">
-        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
-        <div class="service-name">DRAIN CLEANING</div>
-        <p class="service-desc">We camera your lines before recommending any solution — so we clear the actual blockage, not just poke at it.</p>
-        <a href="#contact" class="service-link">Get a Quote &#8594;</a>
+        <span class="service-card-num">01</span>
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+        </div>
+        <h3>Drain Cleaning</h3>
+        <p>Slow or clogged drains cleared fast with hydro-jetting and professional snaking. Kitchen, bathroom, and main line service.</p>
       </div>
       <div class="service-card card">
-        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <div class="service-name">PIPE REPAIR</div>
-        <p class="service-desc">Pinhole leaks, burst pipes, corroded sections — we locate precisely, repair cleanly, and test before we leave.</p>
-        <a href="#contact" class="service-link">Get a Quote &#8594;</a>
+        <span class="service-card-num">02</span>
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        </div>
+        <h3>Water Heater Service</h3>
+        <p>Tank and tankless water heater installation, repair, and replacement. Same-day service available for no-hot-water emergencies.</p>
       </div>
       <div class="service-card card">
-        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <div class="service-name">WATER HEATER</div>
-        <p class="service-desc">Tank or tankless, repair or replace — we stock units and complete most installations same day.</p>
-        <a href="#contact" class="service-link">Get a Quote &#8594;</a>
+        <span class="service-card-num">03</span>
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
+        </div>
+        <h3>Leak Detection &amp; Repair</h3>
+        <p>Advanced leak detection technology to find hidden pipe problems before they become costly water damage.</p>
       </div>
       <div class="service-card card">
-        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-        <div class="service-name">LEAK DETECTION</div>
-        <p class="service-desc">Slab leaks, wall leaks, supply line failures — found with electronic detection equipment before a single wall is opened.</p>
-        <a href="#contact" class="service-link">Get a Quote &#8594;</a>
+        <span class="service-card-num">04</span>
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+        </div>
+        <h3>Fixture Installation</h3>
+        <p>Faucets, toilets, sinks, showers, and more. We install all major brands and handle full bathroom and kitchen upgrades.</p>
       </div>
       <div class="service-card card">
-        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <div class="service-name">SEWER LINE</div>
-        <p class="service-desc">Camera inspection before any recommendation. We show you the footage, explain the options, and quote flat-rate before touching anything.</p>
-        <a href="#contact" class="service-link">Get a Quote &#8594;</a>
+        <span class="service-card-num">05</span>
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+        </div>
+        <h3>Sewer Line Service</h3>
+        <p>Camera inspections, hydro-jetting, and full sewer line replacement. We diagnose before we dig — no guesswork, no extra charges.</p>
       </div>
       <div class="service-card card">
-        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <div class="service-name">24/7 EMERGENCY</div>
-        <p class="service-desc">Plumbing emergencies don't wait for business hours. We dispatch quickly with a flat rate — no premium for after-hours calls.</p>
-        <a href="tel:2146637808" class="service-link">Call Now &#8594;</a>
+        <span class="service-card-num">06</span>
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        </div>
+        <h3>Emergency Plumbing</h3>
+        <p>Burst pipes, severe leaks, and plumbing disasters handled 24/7. We answer when you need us most.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="why">
-  <div class="container">
-    <span class="section-label">The Kretz Difference</span>
-    <h2 class="section-title" style="color:white;">341 Reviews Built on Precision</h2>
-    <p class="section-sub" style="color:var(--t2);">Our reputation is built job by job — no shortcuts, no pressure upsells, no guesses. Every one of our 341 reviews reflects a homeowner who got exactly what we promised.</p>
-    <div class="grid-4" style="margin-bottom:40px;">
-      <div class="why-stat card"><div class="why-stat-num" data-target="341" data-suffix="">0</div><div class="why-stat-label">Reviews</div></div>
-      <div class="why-stat card"><div class="why-stat-num" data-target="4" data-suffix=".8 Stars">0</div><div class="why-stat-label">Avg Rating</div></div>
-      <div class="why-stat card"><div class="why-stat-num" data-target="1" data-suffix="-Visit Fix">0</div><div class="why-stat-label">Standard</div></div>
-      <div class="why-stat card"><div class="why-stat-num" data-target="0" data-suffix=" Guesses">0</div><div class="why-stat-label">Always Diagnose First</div></div>
-    </div>
-    <div class="grid-2">
-      <div class="why-diff card">
-        <div class="diff-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div><div class="diff-title">DIAGNOSE BEFORE QUOTING</div><div class="diff-desc">Most plumbers quote over the phone without seeing the problem. We find out exactly what's wrong first — so the price you approve is accurate.</div></div>
+<!-- WHY -->
+<section class="why-section">
+  <div class="section-inner">
+    <span class="section-tag">Our Difference</span>
+    <h2 class="section-title">The Kretz Plumbing Commitment</h2>
+    <p class="section-sub">We have built our reputation in Mesquite one honest job at a time. Here is what sets us apart.</p>
+    <div class="why-grid">
+      <div class="why-card card">
+        <div class="why-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <h3>Family-Owned &amp; Local</h3>
+        <p>We are your neighbors — not a franchise. The Kretz family has served this community for over two decades and we treat every customer like family.</p>
       </div>
-      <div class="why-diff card">
-        <div class="diff-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div><div class="diff-title">FLAT RATE — NO HOURLY TRAPS</div><div class="diff-desc">You approve a flat price. We finish the job. Whatever happens on our end — parts, time, complications — the number doesn't change.</div></div>
+      <div class="why-card card">
+        <div class="why-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3>Fully Licensed &amp; Insured</h3>
+        <p>All work performed by licensed master plumbers. You are protected from start to finish on every job, large or small.</p>
       </div>
-      <div class="why-diff card">
-        <div class="diff-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div><div class="diff-title">PROPERLY ORGANIZED LLC</div><div class="diff-desc">Kretz Plumbing is a licensed LLC — structured, insured, and professionally accountable. You're protected on every single job.</div></div>
+      <div class="why-card card">
+        <div class="why-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Upfront, Honest Pricing</h3>
+        <p>We quote before we start, not after. No hidden fees, no surprise add-ons. The price we tell you is the price you pay.</p>
       </div>
-      <div class="why-diff card">
-        <div class="diff-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div><div class="diff-title">NO UPSELLS, NO PRESSURE</div><div class="diff-desc">We fix what's broken. If we see something else worth knowing about, we'll mention it — but we won't inflate the ticket or push work you don't need.</div></div>
+      <div class="why-card card">
+        <div class="why-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Fast Response Times</h3>
+        <p>We show up on time, every time. Same-day appointments available for urgent issues so your home gets back to normal fast.</p>
+      </div>
+      <div class="why-card card">
+        <div class="why-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        </div>
+        <h3>Workmanship Warranty</h3>
+        <p>We stand behind every repair and installation with a full workmanship warranty. If something is not right, we make it right.</p>
+      </div>
+      <div class="why-card card">
+        <div class="why-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Serving All of DFW</h3>
+        <p>Based in the Mesquite area and serving all of Dallas-Fort Worth. Close enough to respond fast, experienced enough to handle any job.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="how">
-  <div class="container">
-    <span class="section-label" style="color:var(--accent);">Our Process</span>
-    <h2 class="section-title" style="color:white;">Precision in Three Steps</h2>
-    <div class="steps-row">
-      <div class="step">
+<!-- HOW IT WORKS -->
+<section class="how-section">
+  <div class="section-inner">
+    <span class="section-tag">Simple Process</span>
+    <h2 class="section-title">Getting Started Is Easy</h2>
+    <p class="section-sub">Four steps from your first call to a completed, guaranteed repair.</p>
+    <div class="steps-grid">
+      <div class="step-card card">
         <div class="step-num">1</div>
-        <div style="color:white;margin-bottom:14px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-        <div class="step-title">CALL OR BOOK</div>
-        <p class="step-desc">Describe the symptom. We schedule same-day or next-day, confirm the appointment, and show up on time.</p>
+        <h3>Call or Book Online</h3>
+        <p>Reach us by phone or submit a request on our site. We respond within the hour during business hours.</p>
       </div>
-      <div class="step">
+      <div class="step-card card">
         <div class="step-num">2</div>
-        <div style="color:white;margin-bottom:14px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-        <div class="step-title">ACCURATE DIAGNOSIS</div>
-        <p class="step-desc">We find the actual root cause — not just the visible symptom. Then we quote a flat price you approve before any work begins.</p>
+        <h3>Free Assessment</h3>
+        <p>A licensed plumber visits your property, diagnoses the problem, and gives you a clear, upfront quote.</p>
       </div>
-      <div class="step">
+      <div class="step-card card">
         <div class="step-num">3</div>
-        <div style="color:white;margin-bottom:14px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-        <div class="step-title">FIXED CORRECTLY</div>
-        <p class="step-desc">First-visit completion is our standard. We test, clean up, and back the work with our warranty. One trip, done right.</p>
+        <h3>Expert Repair</h3>
+        <p>We complete the work with quality parts and craftsmanship, keeping your home clean and your schedule in mind.</p>
+      </div>
+      <div class="step-card card">
+        <div class="step-num">4</div>
+        <h3>Guaranteed Done Right</h3>
+        <p>We verify every repair before we leave. Your satisfaction is backed by our written workmanship warranty.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="reviews">
-  <div class="container">
-    <div class="reviews-header">
-      <div>
-        <span class="section-label">Customer Reviews</span>
-        <h2 class="section-title">341 Jobs. 4.8 Stars. Consistent.</h2>
-      </div>
-      <div class="google-badge">
-        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        <div><div class="google-rating">4.8</div><div class="google-stars"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="opacity:.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="google-count">341 reviews</div></div>
-      </div>
-    </div>
-    <div class="grid-3">
+<!-- REVIEWS -->
+<section id="reviews" class="reviews-section">
+  <div class="section-inner">
+    <span class="section-tag" style="color:var(--accent)">Customer Reviews</span>
+    <h2 class="section-title">4.8 Stars Across 341 Reviews</h2>
+    <p class="section-sub">Real Mesquite homeowners sharing their Kretz Plumbing experience.</p>
+    <div class="reviews-grid">
       <div class="review-card card">
-        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
-        <p class="review-text">I had another plumber come out and quote me $1,800 to replace a section of pipe he "thought" was the problem. Kretz came the next day, ran a camera inspection, found the actual blockage was at a completely different spot, and fixed it for $340 flat. Saved me over a thousand dollars by diagnosing correctly first. I'm calling them for everything from now on.</p>
-        <div class="review-divider"></div>
-        <div class="reviewer"><div class="reviewer-avatar">HG</div><div><div class="reviewer-name">HAROLD G.</div><div class="reviewer-meta">Mesquite, TX &bull; Google Review</div></div></div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Kretz came out same day for a busted pipe under my kitchen sink. The tech was professional, had it fixed in under an hour, and the price was exactly what they quoted on the phone. Cannot ask for more than that."</p>
+        <div class="review-author">Michael T.</div>
+        <div class="review-source">Google Review — Mesquite, TX</div>
       </div>
       <div class="review-card card">
-        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
-        <p class="review-text">Tankless water heater stopped heating. Kretz came same day, diagnosed a failed flow sensor, gave me a flat price before touching anything, and had it fixed in 90 minutes. No upsell to replace the whole unit, no pressure — just the part that actually needed fixing. This is what professional plumbing looks like.</p>
-        <div class="review-divider"></div>
-        <div class="reviewer"><div class="reviewer-avatar">NR</div><div><div class="reviewer-name">NICOLE R.</div><div class="reviewer-meta">Garland, TX &bull; Google Review</div></div></div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"We have used Kretz for three different jobs over the years. Water heater replacement, drain cleaning, and a toilet rebuild. Every single time they have been on time, honest, and did excellent work. Family-owned and it shows."</p>
+        <div class="review-author">Sandra K.</div>
+        <div class="review-source">Google Review — Forney, TX</div>
       </div>
       <div class="review-card card">
-        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color:var(--accent);opacity:.5;margin-bottom:14px;display:block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
-        <p class="review-text">Used Kretz for a main sewer line cleaning. They showed me the camera footage, explained exactly what was causing the backup — grease and root intrusion — and quoted a flat price for the hydro-jet clean. Done in under 2 hours. Drains flowing perfectly. No drama, no games. Consistent with what everyone else says in the reviews.</p>
-        <div class="review-divider"></div>
-        <div class="reviewer"><div class="reviewer-avatar">WB</div><div><div class="reviewer-name">WAYNE B.</div><div class="reviewer-meta">Mesquite, TX &bull; Google Review</div></div></div>
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Got multiple quotes on a sewer line camera inspection. Kretz was the most transparent — they showed me the video, explained every option without pressure, and the price was fair. Hired them on the spot."</p>
+        <div class="review-author">David R.</div>
+        <div class="review-source">Google Review — Mesquite, TX</div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="areas">
-  <div class="container">
-    <div class="areas-inner">
-      <div>
-        <span class="section-label">Where We Work</span>
-        <h2 class="section-title" style="color:white;">Serving Mesquite &amp; Dallas Suburbs</h2>
-        <p style="font-family:var(--font-body);font-size:16px;color:var(--t2);margin-bottom:28px;">Same precision process wherever you are in the Dallas metro — accurate diagnosis, flat-rate pricing, first-visit completion.</p>
-        <a href="tel:2146637808" class="btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>CHECK YOUR AREA</a>
+      <div class="review-card card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"Called at 7am for an emergency leak. They had a plumber at my door by 9am. Stopped the leak, replaced the damaged section, and cleaned up after themselves. Outstanding service start to finish."</p>
+        <div class="review-author">Patricia L.</div>
+        <div class="review-source">Google Review — Garland, TX</div>
       </div>
-      <div class="chips-card">
-        <div class="chips-title">Service Areas</div>
-        <div class="chips"><span class="chip">Mesquite</span><span class="chip">Garland</span><span class="chip">Sunnyvale</span><span class="chip">Balch Springs</span><span class="chip">Rowlett</span><span class="chip">Forney</span><span class="chip">Sachse</span><span class="chip">Dallas</span><span class="chip">Wylie</span><span class="chip">Rockwall</span></div>
+      <div class="review-card card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="review-text">"I appreciate that they explain the issue before starting any work and never try to upsell you on things you don't need. Refreshing to work with a company that actually puts the customer first. Kretz has my business for life."</p>
+        <div class="review-author">James W.</div>
+        <div class="review-source">Google Review — Rockwall, TX</div>
+      </div>
+      <div class="review-card card">
+        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p class="review-text">"Very knowledgeable team. They installed a new tankless water heater for us and walked me through everything I needed to know about maintenance. Showed up on time and left the work area spotless."</p>
+        <div class="review-author">Karen M.</div>
+        <div class="review-source">Google Review — Mesquite, TX</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="contact-inner">
-      <div class="contact-form">
-        <h3>GET YOUR PRECISE ESTIMATE</h3>
-        <p>Tell us the symptom and we'll schedule a diagnostic visit. We diagnose first, quote flat-rate second — no guesses.</p>
-        <div class="form-group"><label class="form-label">Your Name</label><input type="text" placeholder="First and last name"></div>
-        <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" placeholder="(214) 555-0000"></div>
-        <div class="form-group"><label class="form-label">Service Needed</label><select><option>Drain Cleaning</option><option>Pipe Repair</option><option>Water Heater</option><option>Leak Detection</option><option>Sewer Line</option><option>Emergency</option><option>Other</option></select></div>
-        <div class="form-group"><label class="form-label">Describe the Symptom</label><textarea placeholder="What are you seeing or hearing? When did it start?"></textarea></div>
-        <button class="submit-btn">SEND REQUEST — ACCURATE QUOTE GUARANTEED</button>
+<!-- SERVICE AREAS -->
+<section id="areas" class="areas-section">
+  <div class="section-inner">
+    <span class="section-tag">Where We Work</span>
+    <h2 class="section-title">Serving Mesquite &amp; Surrounding Areas</h2>
+    <p class="section-sub">Licensed and ready to serve homeowners across the greater Dallas metro.</p>
+    <div class="areas-grid">
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Mesquite, TX
       </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Garland, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Forney, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Rockwall, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Balch Springs, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Sunnyvale, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Rowlett, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Dallas, TX
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-inner">
+    <div class="contact-grid">
       <div class="contact-info">
-        <h3>CALL KRETZ DIRECTLY</h3>
-        <p>We schedule same-day and next-day service. For emergencies, we dispatch immediately — same flat-rate pricing around the clock.</p>
-        <div class="info-item"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="info-label">Phone</div><div class="info-value">(214) 663-7808</div></div></div>
-        <div class="info-item"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="info-label">Location</div><div class="info-value">Mesquite, TX</div></div></div>
-        <div class="info-item"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="info-label">Hours</div><div class="info-value">Mon–Sat 8am–6pm &bull; 24/7 Emergency</div></div></div>
-        <div class="info-item"><div class="info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="info-label">License</div><div class="info-value">Licensed LLC &bull; Bonded &amp; Insured</div></div></div>
+        <span class="section-tag">Get In Touch</span>
+        <h3>Request Your Free Estimate</h3>
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Phone</div>
+            <div class="contact-item-value">(214) 663-7808</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Service Area</div>
+            <div class="contact-item-value">Mesquite &amp; Dallas Metro, TX</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <div class="contact-item-label">Hours</div>
+            <div class="contact-item-value">Mon–Sat: 7am–7pm | Emergency: 24/7</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-title">Schedule Service Today</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="(214) 555-0100">
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select>
+            <option value="">Select a service...</option>
+            <option>Drain Cleaning</option>
+            <option>Water Heater Service</option>
+            <option>Leak Detection &amp; Repair</option>
+            <option>Fixture Installation</option>
+            <option>Sewer Line Service</option>
+            <option>Emergency Plumbing</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Describe the Issue</label>
+          <textarea placeholder="Tell us what's going on and we'll get back to you quickly..."></textarea>
+        </div>
+        <button class="btn-submit" type="button">Send My Request</button>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CTA BAND -->
 <section class="cta-band">
-  <div class="container">
-    <h2>Precision Plumbing. Flat-Rate Price. Done Right.</h2>
-    <p>Kretz Plumbing — 341 reviews, 4.8 stars, and a process built on getting it right the first time.</p>
-    <a href="tel:2146637808" class="cta-btn-white"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>CALL (214) 663-7808</a>
+  <div class="cta-band-inner">
+    <h2>Plumbing Problem? Call Kretz Now.</h2>
+    <p>Family pricing, same-day availability, and 20+ years of trusted service in the Mesquite area.</p>
+    <div class="cta-band-actions">
+      <a class="btn-primary" href="tel:2146637808">Call (214) 663-7808</a>
+      <a class="btn-outline" href="#contact">Free Online Estimate</a>
+    </div>
   </div>
 </section>
 
-<footer>
-  <div class="footer-grid">
-    <div class="footer-col">
-      <div class="footer-brand-name">KRETZ PLUMBING SERVICES LLC</div>
-      <p class="footer-brand-desc">Licensed plumbing LLC serving Mesquite and the Dallas metro. 341 verified reviews, 4.8-star average, and a process built on accurate diagnosis and first-visit fixes.</p>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">KRETZ <span>PLUMBING</span></div>
+        <p>Family-owned plumbing services in Mesquite and the greater Dallas area. Licensed, insured, and committed to honest work since 2003.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Drain Cleaning</a></li>
+          <li><a href="#services">Water Heaters</a></li>
+          <li><a href="#services">Leak Repair</a></li>
+          <li><a href="#services">Fixture Install</a></li>
+          <li><a href="#services">Emergency</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="#areas">Mesquite</a></li>
+          <li><a href="#areas">Garland</a></li>
+          <li><a href="#areas">Forney</a></li>
+          <li><a href="#areas">Rockwall</a></li>
+          <li><a href="#areas">Dallas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:2146637808">(214) 663-7808</a></li>
+          <li><a href="#contact">Free Estimate</a></li>
+          <li><a href="#contact">Emergency Line</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-col"><div class="footer-col-title">Services</div><ul><li><a href="#contact">Drain Cleaning</a></li><li><a href="#contact">Pipe Repair</a></li><li><a href="#contact">Water Heater</a></li><li><a href="#contact">Leak Detection</a></li><li><a href="#contact">Sewer Line</a></li><li><a href="tel:2146637808">Emergency</a></li></ul></div>
-    <div class="footer-col"><div class="footer-col-title">Areas</div><ul><li><a href="#contact">Mesquite</a></li><li><a href="#contact">Garland</a></li><li><a href="#contact">Sunnyvale</a></li><li><a href="#contact">Rowlett</a></li><li><a href="#contact">Forney</a></li><li><a href="#contact">Dallas</a></li></ul></div>
-    <div class="footer-col"><div class="footer-col-title">Contact</div><ul><li><a href="tel:2146637808">(214) 663-7808</a></li><li><a href="#contact">Get Estimate</a></li></ul><div style="margin-top:16px;font-family:var(--font-body);font-size:13px;color:var(--t3);">Licensed LLC<br>Bonded &amp; Insured</div></div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2026 Kretz Plumbing Services LLC. All rights reserved.</div>
+      <div class="footer-copy">Licensed Plumber | Mesquite, TX | Serving Dallas Metro</div>
+    </div>
   </div>
-  <div class="footer-bar"><span class="footer-copy">&copy; 2025 Kretz Plumbing Services LLC. All rights reserved.</span><span class="footer-license">Licensed &bull; Bonded &bull; Insured &bull; Mesquite, TX</span></div>
 </footer>
+
 <script>
-window.addEventListener('scroll',()=>{document.getElementById('site-header').classList.toggle('scrolled',window.scrollY>50);});
-function animateCount(el){const t=parseInt(el.dataset.target),s=el.dataset.suffix||'',d=1800,t0=performance.now();const u=n=>{const p=Math.min((n-t0)/d,1),e=1-Math.pow(1-p,3);el.textContent=Math.floor(e*t).toLocaleString()+s;if(p<1)requestAnimationFrame(u);};requestAnimationFrame(u);}
-const cO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');cO.unobserve(e.target);}}),{threshold:.15});
-document.querySelectorAll('.card').forEach(el=>cO.observe(el));
-const sO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){animateCount(e.target);sO.unobserve(e.target);}}),{threshold:.5});
-document.querySelectorAll('[data-target]').forEach(el=>sO.observe(el));
+function animateCount(el){
+  const t=parseInt(el.dataset.target);
+  const s=el.dataset.suffix||"";
+  const d=1800;
+  const st=performance.now();
+  const u=(ti)=>{
+    const p=Math.min((ti-st)/d,1);
+    const e=1-Math.pow(1-p,3);
+    el.textContent=Math.floor(e*t).toLocaleString()+s;
+    if(p<1)requestAnimationFrame(u);
+  };
+  requestAnimationFrame(u);
+}
+const so=new IntersectionObserver((entries)=>{
+  entries.forEach(en=>{if(en.isIntersecting){animateCount(en.target);so.unobserve(en.target);}});
+},{threshold:0.5});
+document.querySelectorAll("[data-target]").forEach(el=>so.observe(el));
+
+const co=new IntersectionObserver((entries)=>{
+  entries.forEach((en,i)=>{
+    if(en.isIntersecting){
+      const el=en.target;
+      const delay=Array.from(el.parentElement.children).indexOf(el)*80;
+      setTimeout(()=>{el.style.animationPlayState="running";},delay);
+      co.unobserve(el);
+    }
+  });
+},{threshold:0.15});
+document.querySelectorAll(".card").forEach(el=>co.observe(el));
 </script>
 </body>
 </html>
