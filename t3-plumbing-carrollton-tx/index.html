@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T3 Plumbing | Affordable Carrollton Plumbers — Metroplex Service</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap');
+:root {
+  --primary: #1a2640;
+  --primary-dark: #0d1626;
+  --accent: #f59e0b;
+  --accent-dark: #b45309;
+  --bg: #ffffff;
+  --bg-off: #fafaf7;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #111827;
+  --grey-text: #6b7280;
+  --border: #e5e7eb;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: white; font-family: var(--font-display); font-size: 15px; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; box-shadow: 0 4px 16px rgba(245,158,11,0.4); transition: all 0.15s; text-decoration: none; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,158,11,0.5); }
+.btn-primary:active { transform: scale(0.97); }
+.btn-ghost { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: white; font-family: var(--font-display); font-size: 15px; padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6); cursor: pointer; transition: all 0.15s; text-decoration: none; }
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 32px; }
+@media (max-width:900px) { .grid-3,.grid-4 { grid-template-columns: repeat(2,1fr); } }
+@media (max-width:600px) { .grid-3,.grid-4,.grid-2 { grid-template-columns: 1fr; } }
+@keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+@keyframes heroFadeUp { from{opacity:0;transform:translateY(32px)} to{opacity:1;transform:translateY(0)} }
+.hero-badge{animation:heroFadeUp .5s ease-out .1s both}
+.hero-headline{animation:heroFadeUp .5s ease-out .2s both}
+.hero-sub{animation:heroFadeUp .5s ease-out .35s both}
+.hero-ctas{animation:heroFadeUp .5s ease-out .5s both}
+.hero-trust{animation:heroFadeUp .5s ease-out .65s both}
+.hero-card{animation:heroFadeUp .5s ease-out .4s both}
+.card{opacity:0}
+.card.visible{animation:fadeUp .4s ease-out forwards}
+.card:nth-child(1){animation-delay:.1s}.card:nth-child(2){animation-delay:.2s}
+.card:nth-child(3){animation-delay:.3s}.card:nth-child(4){animation-delay:.4s}
+.card:nth-child(5){animation-delay:.5s}.card:nth-child(6){animation-delay:.6s}
+
+.site-header{position:sticky;top:0;z-index:1000;background:var(--primary);box-shadow:0 2px 12px rgba(0,0,0,0.4);padding:0 24px}
+.header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.header-brand .name{font-family:var(--font-display);font-size:22px;color:white;letter-spacing:.06em}
+.header-brand .tag{font-family:var(--font-body);font-size:11px;color:var(--t2)}
+.header-nav{display:flex;gap:28px}
+.header-nav a{font-family:var(--font-body);font-size:13px;color:var(--t2);text-decoration:none;transition:color .15s}
+.header-nav a:hover{color:white}
+.header-cta{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:white;font-family:var(--font-display);font-size:14px;padding:10px 20px;border-radius:6px;text-decoration:none;transition:all .15s}
+.header-cta:hover{background:var(--accent-dark)}
+@media (max-width:768px){.header-nav{display:none}}
+
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 55%,#243050 100%);padding:100px 24px 80px}
+.hero::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.12;pointer-events:none;z-index:0}
+.hero>*{position:relative;z-index:1}
+.hero-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:60% 40%;gap:48px;align-items:center}
+@media (max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-card{display:none}}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:white;font-family:var(--font-display);font-size:11px;letter-spacing:.12em;padding:6px 14px;border-radius:100px;margin-bottom:20px}
+.hero-headline{font-family:var(--font-display);font-size:clamp(42px,6vw,64px);color:white;line-height:1.05;margin-bottom:20px}
+.hero-headline span{color:var(--accent)}
+.hero-sub{font-family:var(--font-body);font-size:18px;color:var(--t2);margin-bottom:32px;max-width:480px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px}
+.hero-trust{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding-top:24px;border-top:1px solid rgba(255,255,255,.1)}
+.trust-item{display:flex;align-items:center;gap:6px;font-family:var(--font-body);font-size:13px;color:var(--t2)}
+
+.hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);box-shadow:0 8px 32px rgba(0,0,0,.3);backdrop-filter:blur(12px);border-radius:16px;padding:30px}
+.hc-title{font-family:var(--font-display);font-size:20px;color:white;letter-spacing:.04em;margin-bottom:6px}
+.hc-sub{font-family:var(--font-body);font-size:13px;color:var(--t2);margin-bottom:20px}
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+.price-card{background:var(--primary-dark);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:14px;text-align:center}
+.price-service{font-family:var(--font-body);font-size:12px;color:var(--t2);margin-bottom:4px}
+.price-label{font-family:var(--font-display);font-size:16px;color:var(--accent);letter-spacing:.03em}
+.hc-divider{border:none;border-top:1px solid rgba(255,255,255,.12);margin:0 0 18px}
+.hc-phone{display:flex;align-items:center;gap:10px}
+.hc-phone-num{font-family:var(--font-display);font-size:22px;color:white}
+.hc-phone-sub{font-family:var(--font-body);font-size:11px;color:var(--t2);text-transform:uppercase;letter-spacing:.06em}
+
+.stats-bar{background:var(--primary)}
+.stats-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-box{padding:28px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}
+.stat-box:last-child{border-right:none}
+.stat-number{font-family:var(--font-display);font-size:clamp(32px,4vw,48px);color:var(--accent);line-height:1}
+.stat-label{font-family:var(--font-body);font-size:12px;color:var(--t2);margin-top:4px;text-transform:uppercase;letter-spacing:.05em}
+@media (max-width:600px){.stats-inner{grid-template-columns:repeat(2,1fr)}.stat-box{border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}}
+
+.services-section{background:var(--bg)}
+.section-label{font-family:var(--font-display);font-size:10px;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:12px}
+.section-title{font-family:var(--font-display);font-size:36px;color:var(--dark-text);margin-bottom:12px}
+.section-sub{font-family:var(--font-body);font-size:16px;color:var(--grey-text);margin-bottom:48px}
+.service-card{background:var(--bg);border:1px solid var(--border);border-top:3px solid transparent;border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);transition:all .25s ease}
+.service-card:hover{border-top-color:var(--accent);transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.service-icon{width:52px;height:52px;border-radius:12px;background:rgba(245,158,11,.12);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--accent)}
+.service-name{font-family:var(--font-display);font-size:18px;color:var(--dark-text);margin-bottom:8px;letter-spacing:.03em}
+.service-desc{font-family:var(--font-body);font-size:14px;color:var(--grey-text);line-height:1.6;margin-bottom:14px}
+.service-link{font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+
+.why-section{background:var(--primary);position:relative;overflow:hidden}
+.why-section::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.1;pointer-events:none;z-index:0}
+.why-section>.container{position:relative;z-index:1}
+.why-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:52px}
+.why-stat-card{background:var(--primary-dark);border-radius:var(--radius);padding:24px;text-align:center;border:1px solid rgba(255,255,255,.08)}
+.why-stat-num{font-family:var(--font-display);font-size:36px;color:var(--accent)}
+.why-stat-label{font-family:var(--font-body);font-size:12px;color:var(--t2);margin-top:4px}
+.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.why-item{display:flex;gap:16px;align-items:flex-start}
+.why-icon-wrap{width:44px;height:44px;border-radius:10px;flex-shrink:0;background:rgba(245,158,11,.15);display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.why-title{font-family:var(--font-display);font-size:17px;color:white;letter-spacing:.04em;margin-bottom:4px}
+.why-desc{font-family:var(--font-body);font-size:14px;color:var(--t2);line-height:1.6}
+@media (max-width:600px){.why-stats{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:1fr}}
+
+.how-section{background:var(--primary-dark)}
+.steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:48px;position:relative}
+.steps-row::before{content:'';position:absolute;top:32px;left:16.67%;right:16.67%;border-top:2px dashed rgba(255,255,255,.15);z-index:0}
+.step{text-align:center;padding:0 24px;position:relative;z-index:1}
+.step-num{width:64px;height:64px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:28px;color:white;margin:0 auto 20px}
+.step-icon{color:white;margin-bottom:14px}
+.step-title{font-family:var(--font-display);font-size:20px;color:white;letter-spacing:.04em;margin-bottom:8px}
+.step-desc{font-family:var(--font-body);font-size:14px;color:var(--t2);line-height:1.6}
+@media (max-width:600px){.steps-row{grid-template-columns:1fr}.steps-row::before{display:none}}
+
+.reviews-section{background:var(--bg-off)}
+.reviews-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:16px}
+.google-badge{display:flex;align-items:center;gap:10px;background:white;border:1px solid var(--border);border-radius:10px;padding:10px 16px;box-shadow:var(--shadow)}
+.google-rating{font-family:var(--font-display);font-size:22px;color:var(--dark-text)}
+.google-sub{font-family:var(--font-body);font-size:11px;color:var(--grey-text)}
+.review-card{background:white;border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:0 2px 16px rgba(0,0,0,.05);transition:all .25s ease}
+.review-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.10);transform:translateY(-3px)}
+.review-quote-mark{display:block;color:var(--accent);opacity:.5;margin-bottom:14px}
+.review-text{font-family:var(--font-body);font-style:italic;font-size:15px;line-height:1.7;color:var(--dark-text);margin-bottom:20px}
+.review-divider{border:none;border-top:1px solid var(--border);margin-bottom:16px}
+.review-footer{display:flex;align-items:center;gap:12px}
+.review-avatar{width:42px;height:42px;border-radius:50%;flex-shrink:0;background:rgba(245,158,11,.15);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:16px;color:var(--accent)}
+.review-name{font-family:var(--font-display);font-size:15px;color:var(--dark-text)}
+.review-meta{font-family:var(--font-body);font-size:12px;color:var(--grey-text)}
+.review-stars{display:flex;gap:2px;color:#f59e0b;margin-bottom:4px}
+
+.areas-section{background:var(--primary)}
+.areas-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@media (max-width:768px){.areas-inner{grid-template-columns:1fr}}
+.areas-body{font-family:var(--font-body);font-size:16px;color:var(--t2);line-height:1.7;margin-bottom:28px}
+.areas-card{background:var(--primary-dark);border-radius:var(--radius);border:1px solid rgba(255,255,255,.08);padding:28px}
+.areas-card-title{font-family:var(--font-display);font-size:13px;color:var(--t2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:var(--font-body);font-size:13px;color:var(--t2);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:6px 14px;transition:all .15s;cursor:default}
+.chip:hover{background:var(--accent);color:white;border-color:var(--accent)}
+
+.contact-section{background:var(--bg)}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@media (max-width:768px){.contact-inner{grid-template-columns:1fr}}
+.form-group{margin-bottom:16px}
+.form-label{font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--dark-text);margin-bottom:6px;display:block}
+input,select,textarea{width:100%;background:var(--bg-off);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-family:var(--font-body);font-size:14px;color:var(--dark-text);transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(245,158,11,.1)}
+textarea{resize:vertical;min-height:110px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:500px){.form-row{grid-template-columns:1fr}}
+.contact-info-card{background:var(--primary);border-radius:var(--radius);padding:32px}
+.contact-info-title{font-family:var(--font-display);font-size:24px;color:white;margin-bottom:24px}
+.contact-info-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
+.contact-info-icon{color:var(--accent);flex-shrink:0;margin-top:2px}
+.contact-info-label{font-family:var(--font-body);font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--t3);margin-bottom:2px}
+.contact-info-value{font-family:var(--font-body);font-size:15px;color:white;font-weight:500}
+
+.cta-band{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--accent-dark),var(--accent));padding:80px 24px;text-align:center}
+.cta-band::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");opacity:.15;pointer-events:none;z-index:0}
+.cta-band>*{position:relative;z-index:1}
+.cta-headline{font-family:var(--font-display);font-size:clamp(28px,4vw,42px);color:white;margin-bottom:12px}
+.cta-sub{font-family:var(--font-body);font-size:17px;color:rgba(255,255,255,.85);margin-bottom:32px}
+.btn-cta-dark{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:white;font-family:var(--font-display);font-size:16px;padding:15px 32px;border-radius:8px;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,.3);transition:all .15s}
+.btn-cta-dark:hover{background:var(--primary-dark);transform:translateY(-2px)}
+
+footer{background:var(--primary-dark);padding:64px 24px 0}
+.footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px}
+@media (max-width:768px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:500px){.footer-grid{grid-template-columns:1fr}}
+.fn{font-family:var(--font-display);font-size:20px;color:white;margin-bottom:10px}
+.fdesc{font-family:var(--font-body);font-size:14px;color:var(--t2);line-height:1.6}
+.fct{font-family:var(--font-display);font-size:14px;color:white;letter-spacing:.07em;text-transform:uppercase;margin-bottom:16px}
+.fl{list-style:none}
+.fl li{margin-bottom:10px}
+.fl a{font-family:var(--font-body);font-size:14px;color:var(--t2);text-decoration:none;transition:color .15s}
+.fl a:hover{color:var(--accent)}
+.footer-bottom{max-width:1100px;margin:0 auto;border-top:1px solid rgba(255,255,255,.08);padding:20px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-copy{font-family:var(--font-body);font-size:13px;color:var(--t3)}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <div class="name">T3 PLUMBING</div>
+      <div class="tag">Affordable Plumbing Solutions — Carrollton, TX</div>
+    </div>
+    <nav class="header-nav">
+      <a href="#services">Services</a><a href="#reviews">Reviews</a>
+      <a href="#areas">Areas</a><a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:4696690684" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (469) 669-0684
+    </a>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        AFFORDABLE &amp; RELIABLE · CARROLLTON TX
+      </div>
+      <h1 class="hero-headline">Metroplex <span>Plumbing</span><br>Done Right &amp; Affordable</h1>
+      <p class="hero-sub">T3 Plumbing delivers expert leak detection, sewer service, shower installation, and fixture upgrades across the Metroplex — fair prices, no drama.</p>
+      <div class="hero-ctas">
+        <a href="tel:4696690684" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          CALL (469) 669-0684
+        </a>
+        <a href="#contact" class="btn-ghost">Free Estimate</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Licensed &amp; Insured</div>
+        <div class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> 5-Star Rated</div>
+        <div class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Flat-Rate Pricing</div>
+        <div class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Metroplex-Wide</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hc-title">Flat-Rate Pricing</div>
+      <div class="hc-sub">Know your cost before we start — always.</div>
+      <div class="price-grid">
+        <div class="price-card"><div class="price-service">Drain Cleaning</div><div class="price-label">From $129</div></div>
+        <div class="price-card"><div class="price-service">Leak Detection</div><div class="price-label">From $149</div></div>
+        <div class="price-card"><div class="price-service">Toilet Repair</div><div class="price-label">From $99</div></div>
+        <div class="price-card"><div class="price-service">Faucet Install</div><div class="price-label">From $89</div></div>
+        <div class="price-card"><div class="price-service">Sewer Service</div><div class="price-label">Free Quote</div></div>
+        <div class="price-card"><div class="price-service">New Shower</div><div class="price-label">Free Quote</div></div>
+      </div>
+      <hr class="hc-divider">
+      <div class="hc-phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div><div class="hc-phone-sub">Call for exact quote</div><div class="hc-phone-num">(469) 669-0684</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-box"><div class="stat-number" data-target="24" data-suffix="+">0</div><div class="stat-label">5-Star Reviews</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="2021" data-suffix="">0</div><div class="stat-label">Est. Since</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="100" data-suffix="%">0</div><div class="stat-label">Satisfaction Rate</div></div>
+    <div class="stat-box"><div class="stat-number" data-target="0" data-suffix=" hidden fees">0</div><div class="stat-label">Surprise Charges</div></div>
+  </div>
+</div>
+
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Plumbing Services Done Right</h2>
+    <p class="section-sub">From leaky faucets to full sewer jobs — T3 Plumbing handles the Metroplex with quality work at prices that don't sting.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <div class="service-name">Leak Detection</div>
+        <p class="service-desc">Hidden leaks waste water and damage walls quietly. We locate them precisely with non-invasive tools and fix the source the same visit.</p>
+        <a href="#contact" class="service-link">Get Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="service-name">Sewer Service</div>
+        <p class="service-desc">Backup, bad smell, or slow drains throughout the house? Camera inspection finds the problem fast — no guessing, no unnecessary digging.</p>
+        <a href="#contact" class="service-link">Get Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+        <div class="service-name">Drain Cleaning</div>
+        <p class="service-desc">Clogged drains cleared fast with professional tools — no harsh chemicals, no damage to your pipes, no repeat visits needed.</p>
+        <a href="#contact" class="service-link">Get Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg></div>
+        <div class="service-name">New Shower Install</div>
+        <p class="service-desc">Upgrading your bathroom? We handle full shower plumbing installation — valve, drain, and supply lines — done right to code.</p>
+        <a href="#contact" class="service-link">Get Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="service-name">Toilet &amp; Sink Install</div>
+        <p class="service-desc">New toilet or sink going in? We handle the full installation cleanly — no leaks, no guesswork, tested before we leave.</p>
+        <a href="#contact" class="service-link">Get Quote &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="service-name">Faucet Upgrades</div>
+        <p class="service-desc">Old dripping faucet or a full kitchen upgrade — we install new faucets and fixture sets correctly with no leaks guaranteed.</p>
+        <a href="#contact" class="service-link">Get Quote &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section" id="why">
+  <div class="container">
+    <div class="section-label" style="color:var(--accent)">The T3 Difference</div>
+    <h2 class="section-title" style="color:white">Quality You Can Afford</h2>
+    <p class="section-sub" style="color:var(--t2)">We built T3 Plumbing to prove that "affordable" and "excellent" aren't opposites.</p>
+    <div class="why-stats">
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="24" data-suffix="+">0</div><div class="why-stat-label">5-Star Reviews</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="500" data-suffix="+">0</div><div class="why-stat-label">Jobs Completed</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="100" data-suffix="%">0</div><div class="why-stat-label">Satisfaction Rate</div></div>
+      <div class="why-stat-card card"><div class="why-stat-num" data-target="3" data-suffix=" yr warranty">0</div><div class="why-stat-label">Workmanship</div></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div><div class="why-title">Fair, Flat-Rate Pricing</div><div class="why-desc">We quote before we work. Straightforward pricing means no shocks when the invoice arrives — ever.</div></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><div class="why-title">Licensed &amp; Fully Insured</div><div class="why-desc">State-licensed, fully insured for every job. Your home is protected and the work is guaranteed to be code-compliant.</div></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><div class="why-title">Satisfaction Guarantee</div><div class="why-desc">If you're not satisfied with our work, we come back and make it right. That's our promise on every single job.</div></div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div><div class="why-title">Strong Customer Satisfaction</div><div class="why-desc">Over 24 five-star Google reviews from real Metroplex customers — our reputation is built job by job, every time.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section" id="how">
+  <div class="container">
+    <div class="section-label" style="color:var(--accent)">Our Process</div>
+    <h2 class="section-title" style="color:white">Simple, Straightforward Service</h2>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="step-title">Call or Request Online</div>
+        <p class="step-desc">Call (469) 669-0684 or submit the form. We'll schedule a visit quickly — often same day or next morning.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="step-title">Flat-Rate Quote</div>
+        <p class="step-desc">We assess the job and give you a firm price before any work begins. Affordable, clear, no surprise additions.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="step-title">Expert Work, Guaranteed</div>
+        <p class="step-desc">Quality repair done cleanly and to code. We test everything before leaving and back the work with our satisfaction guarantee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div><div class="section-label">Reviews</div><h2 class="section-title">What Customers Think</h2></div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div><div class="google-rating">5.0</div><div class="google-sub">24 Google Reviews</div></div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg class="review-quote-mark" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p class="review-text">"Found a slow leak under my kitchen sink that was starting to damage the cabinet. T3 Plumbing came the next morning, identified a bad supply line fitting, and replaced it cleanly. Price was very fair compared to two other quotes I got — and the quality was excellent."</p>
+        <hr class="review-divider">
+        <div class="review-footer"><div class="review-avatar">NP</div><div><div class="review-name">NINA P.</div><div class="review-meta">Carrollton, TX · Google Review</div></div></div>
+      </div>
+      <div class="review-card card">
+        <svg class="review-quote-mark" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p class="review-text">"Had a new faucet I bought that I wanted installed but was nervous about doing it myself. T3 came out, installed it in under an hour, and also replaced a worn shutoff valve while they were under the sink. Friendly, fast, and not overpriced. Highly recommend."</p>
+        <hr class="review-divider">
+        <div class="review-footer"><div class="review-avatar">BK</div><div><div class="review-name">BRANDON K.</div><div class="review-meta">Plano, TX · Google Review</div></div></div>
+      </div>
+      <div class="review-card card">
+        <svg class="review-quote-mark" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <p class="review-text">"Sewer smell from the master bath drain had been driving us crazy for months. T3 ran a camera and found a cracked cleanout fitting. Fixed it same day, smell gone immediately. They didn't charge extra for the camera inspection — just the repair. Real value."</p>
+        <hr class="review-divider">
+        <div class="review-footer"><div class="review-avatar">VR</div><div><div class="review-name">VERONICA R.</div><div class="review-meta">Irving, TX · Google Review</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas-section" id="areas">
+  <div class="container">
+    <div class="areas-inner">
+      <div>
+        <div class="section-label" style="color:var(--accent)">Service Area</div>
+        <h2 class="section-title" style="color:white">Serving the DFW Metroplex</h2>
+        <p class="areas-body">Based in Carrollton, T3 Plumbing travels throughout the Dallas-Fort Worth Metroplex. No matter which suburb you're in, we bring the same quality work and honest pricing to your door.</p>
+        <a href="tel:4696690684" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Check Your Area
+        </a>
+      </div>
+      <div class="areas-card">
+        <div class="areas-card-title">We Cover</div>
+        <div class="chips">
+          <span class="chip">Carrollton</span><span class="chip">Plano</span><span class="chip">Irving</span>
+          <span class="chip">Addison</span><span class="chip">Lewisville</span><span class="chip">Coppell</span>
+          <span class="chip">Farmers Branch</span><span class="chip">Richardson</span><span class="chip">Garland</span>
+          <span class="chip">Dallas</span><span class="chip">Allen</span><span class="chip">Frisco</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-label">Get Started</div>
+    <h2 class="section-title">Request a Free Estimate</h2>
+    <p class="section-sub">Describe your plumbing issue and we'll get back to you with a flat-rate quote — fast.</p>
+    <div class="contact-inner">
+      <form>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Name</label><input type="text" placeholder="Your name"></div>
+          <div class="form-group"><label class="form-label">Phone</label><input type="tel" placeholder="(469) 000-0000"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">Email</label><input type="email" placeholder="your@email.com"></div>
+          <div class="form-group"><label class="form-label">City</label><input type="text" placeholder="Carrollton"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Service</label>
+          <select><option>Select...</option><option>Leak Detection</option><option>Sewer Service</option><option>Drain Cleaning</option><option>New Shower Install</option><option>Toilet/Sink Install</option><option>Faucet Upgrade</option><option>Other</option></select>
+        </div>
+        <div class="form-group"><label class="form-label">Details</label><textarea placeholder="Describe the issue — the more detail, the better."></textarea></div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px;">Get My Free Flat-Rate Quote</button>
+      </form>
+      <div class="contact-info-card">
+        <div class="contact-info-title">CONTACT T3</div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="contact-info-label">Call</div><div class="contact-info-value">(469) 669-0684</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="contact-info-label">Hours</div><div class="contact-info-value">Mon–Sat 7AM–8PM</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="contact-info-label">Coverage</div><div class="contact-info-value">DFW Metroplex-Wide</div></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><div class="contact-info-label">License</div><div class="contact-info-value">Licensed &amp; Insured · TX</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2 class="cta-headline">Quality Plumbing — Fair Price</h2>
+  <p class="cta-sub">T3 Plumbing serves the entire DFW Metroplex with flat-rate, guaranteed work.</p>
+  <a href="tel:4696690684" class="btn-cta-dark">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    (469) 669-0684
+  </a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="fn">T3 PLUMBING</div><p class="fdesc">Affordable, licensed plumbing for the DFW Metroplex. Flat-rate pricing, guaranteed quality work, zero hidden fees. Est. 2021 — built on customer satisfaction.</p></div>
+    <div><div class="fct">Services</div><ul class="fl"><li><a href="#services">Leak Detection</a></li><li><a href="#services">Sewer Service</a></li><li><a href="#services">Drain Cleaning</a></li><li><a href="#services">Shower Install</a></li><li><a href="#services">Fixture Install</a></li></ul></div>
+    <div><div class="fct">Areas</div><ul class="fl"><li><a href="#areas">Carrollton</a></li><li><a href="#areas">Plano</a></li><li><a href="#areas">Irving</a></li><li><a href="#areas">Lewisville</a></li><li><a href="#areas">Frisco</a></li></ul></div>
+    <div><div class="fct">Contact</div><ul class="fl"><li><a href="tel:4696690684">(469) 669-0684</a></li><li><a href="#contact">Free Estimate</a></li><li><a href="#contact">Request Service</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2025 T3 Plumbing. All rights reserved.</span>
+    <span style="font-family:var(--font-body);font-size:12px;color:var(--t3)">Licensed &amp; Insured · Carrollton, TX</span>
+  </div>
+</footer>
+
+<script>
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.15 });
+document.querySelectorAll('.card').forEach(el => obs.observe(el));
+const sObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); sObs.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => sObs.observe(el));
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header').style.boxShadow = window.scrollY > 50 ? '0 2px 24px rgba(0,0,0,.6)' : '0 2px 12px rgba(0,0,0,.4)';
+});
+</script>
+</body>
+</html>

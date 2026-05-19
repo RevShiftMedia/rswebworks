@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HER Plumbing Co. | Carrollton's Honest, Experienced, Reliable Plumbers</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #0d1117;
+  --primary-dark: #060a0f;
+  --accent: #e07b39;
+  --accent-dark: #b5612d;
+  --bg: #ffffff;
+  --bg-off: #f7f8fc;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a2e;
+  --grey-text: #6b7280;
+  --border: #e8edf5;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.2);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 700;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(224,123,57,0.4); transition: all 0.15s ease; text-decoration: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(224,123,57,0.5); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: white;
+  font-family: var(--font-display); font-size: 15px; font-weight: 600;
+  padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.15s ease; text-decoration: none;
+}
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+
+@media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; } }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+
+.card { opacity: 0; }
+.card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+/* HEADER */
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--primary);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  padding: 0 24px;
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.header-brand { display: flex; flex-direction: column; }
+.header-brand .name { font-family: var(--font-display); font-size: 22px; color: white; letter-spacing: 0.05em; }
+.header-brand .tag { font-family: var(--font-body); font-size: 11px; color: var(--t2); letter-spacing: 0.08em; text-transform: uppercase; }
+.header-nav { display: flex; align-items: center; gap: 32px; }
+.header-nav a { font-family: var(--font-body); font-size: 13px; color: var(--t2); text-decoration: none; transition: color 0.15s; }
+.header-nav a:hover { color: white; }
+.header-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: white; font-family: var(--font-display); font-size: 14px; padding: 10px 20px; border-radius: 6px; text-decoration: none; transition: all 0.15s ease; }
+.header-cta:hover { background: var(--accent-dark); }
+@media (max-width: 768px) { .header-nav { display: none; } }
+
+/* HERO */
+.hero {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #1a2030 100%);
+  padding: 100px 24px 80px;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.12; pointer-events: none; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 60% 40%; gap: 48px; align-items: center; }
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-card { display: none; } }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: white;
+  font-family: var(--font-display); font-size: 11px; letter-spacing: 0.12em;
+  padding: 6px 14px; border-radius: 100px; margin-bottom: 20px;
+}
+.hero-headline { font-family: var(--font-display); font-size: clamp(42px, 6vw, 64px); color: white; line-height: 1.05; margin-bottom: 20px; }
+.hero-headline span { color: var(--accent); }
+.hero-sub { font-family: var(--font-body); font-size: 18px; color: var(--t2); margin-bottom: 32px; line-height: 1.6; max-width: 480px; }
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+
+.hero-trust {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);
+}
+.trust-item { display: flex; align-items: center; gap: 6px; font-family: var(--font-body); font-size: 13px; color: var(--t2); }
+.trust-stars { display: flex; gap: 2px; color: var(--accent); }
+
+.hero-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 16px; padding: 32px;
+}
+.her-acronym { display: flex; flex-direction: column; gap: 20px; margin-bottom: 28px; }
+.her-row { display: flex; align-items: flex-start; gap: 16px; }
+.her-letter {
+  font-family: var(--font-display); font-size: 36px; color: var(--accent);
+  line-height: 1; min-width: 36px;
+}
+.her-row-text {}
+.her-row-title { font-family: var(--font-display); font-size: 18px; color: white; letter-spacing: 0.05em; }
+.her-row-desc { font-family: var(--font-body); font-size: 13px; color: var(--t2); margin-top: 2px; }
+.hero-card-divider { border: none; border-top: 1px solid rgba(255,255,255,0.12); margin: 0 0 20px; }
+.hero-phone { display: flex; align-items: center; gap: 10px; color: white; text-decoration: none; }
+.hero-phone-number { font-family: var(--font-display); font-size: 22px; color: white; letter-spacing: 0.04em; }
+.hero-phone-label { font-family: var(--font-body); font-size: 11px; color: var(--t2); text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* STATS ROW */
+.stats-bar { background: var(--primary); padding: 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.stats-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat-box {
+  padding: 28px 24px; text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.stat-box:last-child { border-right: none; }
+.stat-number { font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px); color: var(--accent); line-height: 1; }
+.stat-label { font-family: var(--font-body); font-size: 12px; color: var(--t2); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+@media (max-width: 600px) { .stats-inner { grid-template-columns: repeat(2, 1fr); } .stat-box { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); } }
+
+/* SERVICES */
+.services-section { background: var(--bg); }
+.section-label { font-family: var(--font-display); font-size: 10px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; margin-bottom: 12px; }
+.section-title { font-family: var(--font-display); font-size: 36px; color: var(--dark-text); margin-bottom: 12px; }
+.section-sub { font-family: var(--font-body); font-size: 16px; color: var(--grey-text); margin-bottom: 48px; }
+
+.service-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-top: 3px solid transparent; border-radius: var(--radius);
+  padding: 28px 24px; box-shadow: var(--shadow); transition: all 0.25s ease;
+}
+.service-card:hover { border-top-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.service-icon {
+  width: 52px; height: 52px; border-radius: 12px;
+  background: rgba(224,123,57,0.12); display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px; color: var(--accent);
+}
+.service-name { font-family: var(--font-display); font-size: 18px; color: var(--dark-text); margin-bottom: 8px; letter-spacing: 0.03em; }
+.service-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 14px; }
+.service-link { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; }
+.service-link:hover { text-decoration: underline; }
+
+/* WHY CHOOSE US */
+.why-section { background: var(--primary); position: relative; overflow: hidden; }
+.why-section::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.1; pointer-events: none; z-index: 0;
+}
+.why-section > .container { position: relative; z-index: 1; }
+.why-section .section-title { color: white; }
+.why-section .section-sub { color: var(--t2); }
+
+.why-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 52px; }
+.why-stat-card {
+  background: var(--primary-dark); border-radius: var(--radius);
+  padding: 24px; text-align: center;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.why-stat-num { font-family: var(--font-display); font-size: 36px; color: var(--accent); }
+.why-stat-label { font-family: var(--font-body); font-size: 12px; color: var(--t2); margin-top: 4px; }
+
+.why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+.why-item { display: flex; gap: 16px; align-items: flex-start; }
+.why-icon-wrap {
+  width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;
+  background: rgba(224,123,57,0.15); display: flex; align-items: center; justify-content: center; color: var(--accent);
+}
+.why-title { font-family: var(--font-display); font-size: 17px; color: white; letter-spacing: 0.04em; margin-bottom: 4px; }
+.why-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.6; }
+
+@media (max-width: 600px) { .why-stats { grid-template-columns: repeat(2, 1fr); } .why-grid { grid-template-columns: 1fr; } }
+
+/* HOW IT WORKS */
+.how-section { background: var(--primary-dark); }
+.how-section .section-title { color: white; }
+.steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 48px; position: relative; }
+.steps-row::before {
+  content: ''; position: absolute; top: 32px; left: 16.67%; right: 16.67%;
+  border-top: 2px dashed rgba(255,255,255,0.15); z-index: 0;
+}
+.step { text-align: center; padding: 0 24px; position: relative; z-index: 1; }
+.step-num {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--accent); display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 28px; color: white;
+  margin: 0 auto 20px;
+}
+.step-icon { color: white; margin-bottom: 14px; }
+.step-title { font-family: var(--font-display); font-size: 20px; color: white; letter-spacing: 0.04em; margin-bottom: 8px; }
+.step-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.6; }
+@media (max-width: 600px) { .steps-row { grid-template-columns: 1fr; } .steps-row::before { display: none; } }
+
+/* REVIEWS */
+.reviews-section { background: var(--bg-off); }
+.reviews-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 16px; }
+.google-badge { display: flex; align-items: center; gap: 10px; background: white; border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px; }
+.google-rating { font-family: var(--font-display); font-size: 22px; color: var(--dark-text); }
+.google-sub { font-family: var(--font-body); font-size: 11px; color: var(--grey-text); }
+
+.review-card {
+  background: white; border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); transition: all 0.25s ease;
+}
+.review-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); transform: translateY(-3px); }
+.review-quote-mark { display: block; color: var(--accent); opacity: 0.5; margin-bottom: 14px; }
+.review-text { font-family: var(--font-body); font-style: italic; font-size: 15px; line-height: 1.7; color: var(--dark-text); margin-bottom: 20px; }
+.review-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 16px; }
+.review-footer { display: flex; align-items: center; gap: 12px; }
+.review-avatar {
+  width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+  background: rgba(224,123,57,0.15); display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 16px; color: var(--accent);
+}
+.review-name { font-family: var(--font-display); font-size: 15px; color: var(--dark-text); letter-spacing: 0.03em; }
+.review-meta { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); }
+.review-stars { display: flex; gap: 2px; color: #f59e0b; margin-bottom: 4px; }
+
+/* SERVICE AREAS */
+.areas-section { background: var(--primary); }
+.areas-section .section-title { color: white; }
+.areas-section .section-sub { color: var(--t2); }
+.areas-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+@media (max-width: 768px) { .areas-inner { grid-template-columns: 1fr; } }
+.areas-left .body-text { font-family: var(--font-body); font-size: 16px; color: var(--t2); line-height: 1.7; margin-bottom: 28px; }
+.areas-card {
+  background: var(--primary-dark); border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.08); padding: 28px;
+}
+.areas-card-title { font-family: var(--font-display); font-size: 14px; color: var(--t2); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font-family: var(--font-body); font-size: 13px; color: var(--t2);
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 100px; padding: 6px 14px; transition: all 0.15s ease; cursor: default;
+}
+.chip:hover { background: var(--accent); color: white; border-color: var(--accent); }
+
+/* CONTACT */
+.contact-section { background: var(--bg); }
+.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+@media (max-width: 768px) { .contact-inner { grid-template-columns: 1fr; } }
+.form-group { margin-bottom: 16px; }
+.form-label { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; display: block; }
+input, select, textarea {
+  width: 100%; background: var(--bg-off); border: 1px solid var(--border);
+  border-radius: 8px; padding: 12px 14px; font-family: var(--font-body);
+  font-size: 14px; color: var(--dark-text); transition: border-color 0.2s;
+}
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(224,123,57,0.1); }
+textarea { resize: vertical; min-height: 110px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+
+.contact-info-card {
+  background: var(--primary); border-radius: var(--radius); padding: 32px;
+}
+.contact-info-title { font-family: var(--font-display); font-size: 24px; color: white; margin-bottom: 24px; letter-spacing: 0.03em; }
+.contact-info-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
+.contact-info-icon { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.contact-info-label { font-family: var(--font-body); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--t3); margin-bottom: 2px; }
+.contact-info-value { font-family: var(--font-body); font-size: 15px; color: white; font-weight: 500; }
+
+/* CTA BAND */
+.cta-band {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+  padding: 80px 24px; text-align: center;
+}
+.cta-band::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.15; pointer-events: none; z-index: 0;
+}
+.cta-band > * { position: relative; z-index: 1; }
+.cta-headline { font-family: var(--font-display); font-size: clamp(28px, 4vw, 42px); color: white; margin-bottom: 12px; }
+.cta-sub { font-family: var(--font-body); font-size: 17px; color: rgba(255,255,255,0.85); margin-bottom: 32px; }
+.btn-cta-dark {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--primary); color: white;
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  padding: 15px 32px; border-radius: 8px; text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: all 0.15s ease;
+}
+.btn-cta-dark:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+/* FOOTER */
+footer {
+  background: var(--primary-dark); padding: 64px 24px 0;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
+@media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+.footer-brand .name { font-family: var(--font-display); font-size: 22px; color: white; letter-spacing: 0.05em; margin-bottom: 10px; }
+.footer-brand .desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.6; margin-bottom: 16px; }
+.footer-col-title { font-family: var(--font-display); font-size: 14px; color: white; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 16px; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { font-family: var(--font-body); font-size: 14px; color: var(--t2); text-decoration: none; transition: color 0.15s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom {
+  max-width: 1100px; margin: 0 auto;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 0; display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.footer-copy { font-family: var(--font-body); font-size: 13px; color: var(--t3); }
+.footer-license { font-family: var(--font-body); font-size: 12px; color: var(--t3); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <span class="name">HER PLUMBING CO.</span>
+      <span class="tag">Honest · Experienced · Reliable</span>
+    </div>
+    <nav class="header-nav">
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Service Areas</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:4697707555" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (469) 770-7555
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        5-STAR RATED · CARROLLTON, TX
+      </div>
+      <h1 class="hero-headline">Carrollton's<br><span>Honest</span> Plumbing<br>Experts</h1>
+      <p class="hero-sub">Serving homeowners across Carrollton and the DFW Metroplex with 24/7 emergency plumbing — no surprise charges, no runaround, just results.</p>
+      <div class="hero-ctas">
+        <a href="tel:4697707555" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          CALL (469) 770-7555
+        </a>
+        <a href="#contact" class="btn-ghost">Free Estimate</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <div class="trust-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          5.0 · 30 Reviews
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Licensed &amp; Insured
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          24/7 Emergency
+        </div>
+        <div class="trust-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Upfront Pricing
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="her-acronym">
+        <div class="her-row">
+          <span class="her-letter">H</span>
+          <div class="her-row-text">
+            <div class="her-row-title">HONEST</div>
+            <div class="her-row-desc">Upfront quotes before any work begins. No hidden fees, ever.</div>
+          </div>
+        </div>
+        <div class="her-row">
+          <span class="her-letter">E</span>
+          <div class="her-row-text">
+            <div class="her-row-title">EXPERIENCED</div>
+            <div class="her-row-desc">Decade-tested on DFW's toughest residential plumbing jobs.</div>
+          </div>
+        </div>
+        <div class="her-row">
+          <span class="her-letter">R</span>
+          <div class="her-row-text">
+            <div class="her-row-title">RELIABLE</div>
+            <div class="her-row-desc">We show up on time, every time — or we make it right.</div>
+          </div>
+        </div>
+      </div>
+      <hr class="hero-card-divider">
+      <a href="tel:4697707555" class="hero-phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div>
+          <div class="hero-phone-label">Call or Text Anytime</div>
+          <div class="hero-phone-number">(469) 770-7555</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS ROW -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-box">
+      <div class="stat-number" data-target="30" data-suffix="+">0</div>
+      <div class="stat-label">Google Reviews</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" data-target="24" data-suffix="/7">0</div>
+      <div class="stat-label">Emergency Service</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" data-target="10" data-suffix="+ yrs">0</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-number" data-target="100" data-suffix="%">0</div>
+      <div class="stat-label">Satisfaction Guaranteed</div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Complete Plumbing Services</h2>
+    <p class="section-sub">From dripping faucets to full sewer lines — one call handles it all across the Carrollton area.</p>
+    <div class="grid-3">
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+        </div>
+        <div class="service-name">Drain Cleaning</div>
+        <p class="service-desc">Slow or backed-up drains stop your day cold. We clear clogs fast with professional-grade equipment so your home runs smoothly again.</p>
+        <a href="#contact" class="service-link">Get Free Estimate &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="service-name">Pipe Repair &amp; Replacement</div>
+        <p class="service-desc">Burst, cracked, or corroded pipes need immediate attention. We diagnose the root issue and fix it right the first time — no patchwork.</p>
+        <a href="#contact" class="service-link">Get Free Estimate &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <div class="service-name">Water Heater Services</div>
+        <p class="service-desc">No hot water is an emergency. We repair, replace, and install both tank and tankless systems — same-day service available throughout Carrollton.</p>
+        <a href="#contact" class="service-link">Get Free Estimate &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <div class="service-name">Leak Detection</div>
+        <p class="service-desc">Hidden leaks destroy walls and spike water bills silently. We pinpoint every leak with non-invasive detection tools — protecting your home from the inside out.</p>
+        <a href="#contact" class="service-link">Get Free Estimate &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="service-name">Sewer Line Services</div>
+        <p class="service-desc">Sewage backup is the most urgent plumbing emergency. Our camera inspections and trenchless repairs solve the problem quickly with minimal disruption to your yard.</p>
+        <a href="#contact" class="service-link">Get Free Estimate &rarr;</a>
+      </div>
+      <div class="service-card card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div class="service-name">Emergency Plumbing</div>
+        <p class="service-desc">Plumbing doesn't wait for business hours. We're available 24/7 — nights, weekends, and holidays — to handle any urgent plumbing crisis across DFW.</p>
+        <a href="#contact" class="service-link">Call Now &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-section" id="why">
+  <div class="container">
+    <div class="section-label" style="color:var(--accent)">Why HER Plumbing</div>
+    <h2 class="section-title">The H.E.R. Difference</h2>
+    <p class="section-sub">We built this company on three values — and we prove them on every single call.</p>
+
+    <div class="why-stats">
+      <div class="why-stat-card card">
+        <div class="why-stat-num" data-target="30" data-suffix="+">0</div>
+        <div class="why-stat-label">5-Star Reviews</div>
+      </div>
+      <div class="why-stat-card card">
+        <div class="why-stat-num" data-target="1500" data-suffix="+">0</div>
+        <div class="why-stat-label">Jobs Completed</div>
+      </div>
+      <div class="why-stat-card card">
+        <div class="why-stat-num" data-target="10" data-suffix="+ yrs">0</div>
+        <div class="why-stat-label">In Business</div>
+      </div>
+      <div class="why-stat-card card">
+        <div class="why-stat-num" data-target="60" data-suffix=" min">0</div>
+        <div class="why-stat-label">Avg Response Time</div>
+      </div>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="why-title">Upfront, Flat-Rate Pricing</div>
+          <div class="why-desc">You know the cost before we turn a wrench. No hourly billing surprises — just one honest number that doesn't change.</div>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="why-title">Licensed &amp; Fully Insured</div>
+          <div class="why-desc">Every technician is state-licensed and our work is fully insured. Your home and family are protected from start to finish.</div>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="why-title">24/7 Emergency Response</div>
+          <div class="why-desc">Burst pipe at midnight? Sewage backup on a Sunday? We answer the phone and dispatch immediately — no voicemail runaround.</div>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div>
+          <div class="why-title">Locally Owned &amp; Operated</div>
+          <div class="why-desc">We live and work in the Carrollton community. Our reputation depends on every job — we treat your home like our own.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="container">
+    <div class="section-label" style="color:var(--accent)">Our Process</div>
+    <h2 class="section-title" style="color:white">Three Steps to Fixed</h2>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div class="step-title">Call or Text Us</div>
+        <p class="step-desc">Reach us anytime at (469) 770-7555. Describe the problem and we'll set up a visit — often same day or next morning.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <div class="step-title">Diagnose &amp; Quote</div>
+        <p class="step-desc">We inspect the problem, explain exactly what's happening, and give you a flat-rate price before any work starts — no obligation.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="step-title">Fixed — Guaranteed</div>
+        <p class="step-desc">We complete the repair cleanly and completely. Every job is backed by our workmanship guarantee — if it's not right, we come back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div>
+        <div class="section-label">Customer Reviews</div>
+        <h2 class="section-title">What Carrollton Says</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div>
+          <div class="google-rating">5.0</div>
+          <div class="google-sub">30 Google Reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="review-card card">
+        <svg class="review-quote-mark" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Had a pipe burst in my kitchen wall at 10 PM on a Thursday. Called HER Plumbing and they were at my house in under 45 minutes. Marcus found the problem immediately, gave me a straight price, and had it fixed before midnight. No drama, no upcharge — exactly what you want in a crisis."</p>
+        <hr class="review-divider">
+        <div class="review-footer">
+          <div class="review-avatar">DT</div>
+          <div>
+            <div class="review-name">DAVID T.</div>
+            <div class="review-meta">Old Town Carrollton · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg class="review-quote-mark" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"I've used three different plumbers in Carrollton over the years and HER is the only one that didn't try to upsell me on work I didn't need. They diagnosed our slow drain, cleared it in about 2 hours, and charged exactly what they quoted. Honest company — the name fits."</p>
+        <hr class="review-divider">
+        <div class="review-footer">
+          <div class="review-avatar">SL</div>
+          <div>
+            <div class="review-name">SARAH L.</div>
+            <div class="review-meta">Carrollton, TX · Google Review</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card card">
+        <svg class="review-quote-mark" width="32" height="24" viewBox="0 0 32 24" fill="currentColor"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <div class="review-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <p class="review-text">"Water heater died the week before Thanksgiving with a house full of family coming. HER Plumbing squeezed me in same day, replaced the unit in about 3 hours, and cleaned up completely before they left. Worth every penny — and the price was fair. These are the plumbers you want on speed dial."</p>
+        <hr class="review-divider">
+        <div class="review-footer">
+          <div class="review-avatar">RM</div>
+          <div>
+            <div class="review-name">ROBERTO M.</div>
+            <div class="review-meta">Hebron Parkway area · Google Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="areas-section" id="areas">
+  <div class="container">
+    <div class="areas-inner">
+      <div class="areas-left">
+        <div class="section-label" style="color:var(--accent)">Where We Work</div>
+        <h2 class="section-title">Serving Carrollton &amp; All of DFW</h2>
+        <p class="body-text">Based in Carrollton, we cover the full Dallas-Fort Worth Metroplex. Whether you're in a neighborhood near Hebron Parkway or across the county line in Addison, our team is close and ready.</p>
+        <a href="tel:4697707555" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Check Your Area
+        </a>
+      </div>
+      <div>
+        <div class="areas-card">
+          <div class="areas-card-title">Service Coverage</div>
+          <div class="chips">
+            <span class="chip">Carrollton</span>
+            <span class="chip">Addison</span>
+            <span class="chip">Farmers Branch</span>
+            <span class="chip">Coppell</span>
+            <span class="chip">Lewisville</span>
+            <span class="chip">Irving</span>
+            <span class="chip">Plano</span>
+            <span class="chip">Richardson</span>
+            <span class="chip">Garland</span>
+            <span class="chip">The Colony</span>
+            <span class="chip">Allen</span>
+            <span class="chip">Dallas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Request a Free Estimate</h2>
+    <p class="section-sub">Fill out the form and we'll call you back within 30 minutes — or call us directly for immediate help.</p>
+    <div class="contact-inner">
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name</label>
+            <input type="text" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name</label>
+            <input type="text" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" placeholder="(469) 000-0000">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" placeholder="john@email.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Service Needed</label>
+          <select>
+            <option>Select a service...</option>
+            <option>Drain Cleaning</option>
+            <option>Pipe Repair</option>
+            <option>Water Heater</option>
+            <option>Leak Detection</option>
+            <option>Sewer Line</option>
+            <option>Emergency Service</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Describe the Problem</label>
+          <textarea placeholder="Tell us what's happening — the more detail, the better we can help."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px;">
+          Send My Request — We'll Call Within 30 Min
+        </button>
+      </form>
+      <div class="contact-info-card">
+        <div class="contact-info-title">REACH US DIRECTLY</div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Phone &amp; Text</div>
+            <div class="contact-info-value">(469) 770-7555</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Hours</div>
+            <div class="contact-info-value">24/7 Emergency Available</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">Service Area</div>
+            <div class="contact-info-value">Carrollton &amp; DFW Metroplex</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="contact-info-label">License Status</div>
+            <div class="contact-info-value">Licensed &amp; Insured · TX</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <h2 class="cta-headline">Plumbing Problem? Call Now.</h2>
+  <p class="cta-sub">Available 24/7 — no voicemail, no waiting. Real help from real plumbers.</p>
+  <a href="tel:4697707555" class="btn-cta-dark">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    (469) 770-7555
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="name">HER PLUMBING CO.</div>
+      <p class="desc">Carrollton's honest, experienced, and reliable plumbing team. Serving the DFW Metroplex with upfront pricing, 24/7 emergency response, and guaranteed workmanship.</p>
+      <div style="display:flex;gap:8px;color:var(--accent)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span style="font-family:var(--font-body);font-size:12px;color:var(--t3);margin-left:4px">5.0 · 30 Reviews</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Drain Cleaning</a></li>
+        <li><a href="#services">Pipe Repair</a></li>
+        <li><a href="#services">Water Heaters</a></li>
+        <li><a href="#services">Leak Detection</a></li>
+        <li><a href="#services">Sewer Lines</a></li>
+        <li><a href="#services">Emergency</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Areas</div>
+      <ul class="footer-links">
+        <li><a href="#areas">Carrollton</a></li>
+        <li><a href="#areas">Addison</a></li>
+        <li><a href="#areas">Farmers Branch</a></li>
+        <li><a href="#areas">Coppell</a></li>
+        <li><a href="#areas">Lewisville</a></li>
+        <li><a href="#areas">Irving</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:4697707555">(469) 770-7555</a></li>
+        <li><a href="#contact">Free Estimate</a></li>
+        <li><a href="#contact">Emergency Line</a></li>
+        <li><a href="#contact">Request Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2025 HER Plumbing Co. All rights reserved.</span>
+    <span class="footer-license">Licensed &amp; Insured · Carrollton, TX · TSBPE Licensed</span>
+  </div>
+</footer>
+
+<script>
+// Stat counter
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+
+// Intersection observer for cards and stats
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.card').forEach(el => observer.observe(el));
+
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateCount(e.target);
+      statObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-target]').forEach(el => statObserver.observe(el));
+
+// Header scroll shadow
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('site-header');
+  if (window.scrollY > 50) {
+    header.style.boxShadow = '0 2px 24px rgba(0,0,0,0.7)';
+  } else {
+    header.style.boxShadow = '0 2px 12px rgba(0,0,0,0.5)';
+  }
+});
+</script>
+</body>
+</html>

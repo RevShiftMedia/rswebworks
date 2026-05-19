@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lewisville Plumbing Service | Trusted Since 1992 | (972) 317-5619</title>
+<meta name="description" content="Lewisville Plumbing Service — family-owned since 1992. Expert plumbing repairs, installations, and 24/7 emergency service in Lewisville, TX. Call (972) 317-5619.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#0d2040;
+  --primary-dark:#08162d;
+  --accent:#0050a3;
+  --accent-dark:#003d7a;
+  --accent-light:#3b82f6;
+  --text:#1e293b;
+  --muted:#64748b;
+  --surface:#f1f5f9;
+  --white:#ffffff;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-body:'Open Sans',sans-serif;
+  --radius:10px;
+  --shadow:0 4px 24px rgba(0,0,0,.11);
+  --transition:all .3s ease;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text);background:var(--white);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--radius);font-family:var(--font-body);font-weight:700;font-size:1rem;cursor:pointer;border:none;transition:var(--transition)}
+.btn-primary{background:var(--accent);color:var(--white)}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.7)}
+.btn-outline:hover{background:rgba(255,255,255,.12)}
+.section-label{font-family:var(--font-display);font-size:1rem;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:8px}
+.section-title{font-family:var(--font-display);font-size:2.6rem;line-height:1.05;color:var(--primary);margin-bottom:16px}
+.section-sub{color:var(--muted);font-size:1.05rem;max-width:560px}
+/* HEADER */
+#site-header{position:sticky;top:0;z-index:999;background:var(--primary);box-shadow:0 2px 16px rgba(0,0,0,.3)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1140px;margin:0 auto}
+.logo{font-family:var(--font-display);font-size:1.55rem;color:var(--white);letter-spacing:.04em;line-height:1.1}
+.logo span{color:var(--accent-light)}
+.logo small{display:block;font-family:var(--font-body);font-size:.65rem;letter-spacing:.14em;color:rgba(255,255,255,.45);text-transform:uppercase;font-weight:600}
+.header-phone{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--white);font-size:1.05rem}
+.header-phone svg{color:var(--accent-light)}
+.header-cta{background:var(--accent);color:var(--white);padding:10px 22px;border-radius:8px;font-weight:700;font-size:.95rem;transition:var(--transition)}
+.header-cta:hover{background:var(--accent-dark)}
+/* HERO */
+#hero{background:var(--primary);min-height:640px;display:flex;align-items:center;position:relative;overflow:hidden;padding:72px 0 64px}
+.hero-grain{position:absolute;inset:0;opacity:.04;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px}
+.hero-lines{position:absolute;inset:0;pointer-events:none;opacity:.06;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.5) 0,rgba(255,255,255,.5) 1px,transparent 1px,transparent 80px);background-size:80px 80px}
+.hero-grid{display:grid;grid-template-columns:60fr 40fr;gap:56px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,80,163,.2);border:1px solid rgba(0,80,163,.4);color:var(--accent-light);padding:6px 14px;border-radius:20px;font-size:.85rem;font-weight:600;margin-bottom:22px}
+.hero-title{font-family:var(--font-display);font-size:clamp(2.8rem,5vw,4.2rem);line-height:1.02;color:var(--white);margin-bottom:18px}
+.hero-title .hl{color:var(--accent-light)}
+.hero-sub{color:rgba(255,255,255,.72);font-size:1.1rem;margin-bottom:32px;max-width:500px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.hero-trust{display:flex;gap:20px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.65);font-size:.85rem;font-weight:600}
+.trust-item svg{color:var(--accent-light)}
+/* LEGACY CARD */
+.hero-card{background:rgba(255,255,255,.06);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.11);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:0}
+.legacy-header{text-align:center;padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid rgba(255,255,255,.1)}
+.legacy-since{font-family:var(--font-display);font-size:4.5rem;line-height:1;color:var(--accent-light);letter-spacing:.02em}
+.legacy-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.16em;color:rgba(255,255,255,.45);font-weight:600;margin-top:4px}
+.legacy-headline{font-family:var(--font-display);font-size:1.1rem;color:var(--white);letter-spacing:.04em;margin-top:6px}
+.legacy-milestones{display:flex;flex-direction:column;gap:12px}
+.milestone{display:flex;align-items:center;gap:12px}
+.milestone-year{font-family:var(--font-display);font-size:1rem;color:var(--accent-light);min-width:40px;letter-spacing:.04em}
+.milestone-bar{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.08);position:relative;overflow:hidden}
+.milestone-bar-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--accent-light))}
+.milestone-text{font-size:.8rem;color:rgba(255,255,255,.55);min-width:80px;text-align:right}
+.legacy-footer{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:space-between}
+.legacy-stat{text-align:center}
+.legacy-stat .num{font-family:var(--font-display);font-size:1.6rem;color:var(--white);line-height:1}
+.legacy-stat .lbl{font-size:.7rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.1em}
+.legacy-divider{width:1px;height:36px;background:rgba(255,255,255,.1)}
+/* STATS */
+#stats{background:var(--accent);padding:52px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.stat-item{text-align:center;padding:8px 24px;border-right:1px solid rgba(255,255,255,.2)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:var(--font-display);font-size:3rem;color:var(--white);line-height:1}
+.stat-label{color:rgba(255,255,255,.85);font-size:.9rem;font-weight:600;margin-top:4px;text-transform:uppercase;letter-spacing:.06em}
+/* SERVICES */
+#services{padding:88px 0;background:var(--surface)}
+.section-head{margin-bottom:52px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--white);border-radius:var(--radius);padding:26px 22px;border:1px solid #e2e8f0;transition:var(--transition)}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--accent)}
+.sc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.sc-head h3{font-weight:700;font-size:1rem;color:var(--primary)}
+.sc-head .sc-icon{width:38px;height:38px;background:rgba(0,80,163,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sc-head .sc-icon svg{color:var(--accent)}
+.service-card p{font-size:.88rem;color:var(--muted);line-height:1.6}
+/* WHY */
+#why{padding:88px 0}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px}
+.why-card{padding:30px 24px;border-radius:var(--radius);background:var(--surface);border-top:4px solid var(--accent);transition:var(--transition)}
+.why-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.why-icon{width:48px;height:48px;background:rgba(0,80,163,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.why-icon svg{color:var(--accent)}
+.why-card h3{font-weight:700;font-size:1.05rem;color:var(--primary);margin-bottom:8px}
+.why-card p{font-size:.9rem;color:var(--muted);line-height:1.6}
+/* HOW IT WORKS */
+#how{padding:88px 0;background:var(--primary)}
+#how .section-title{color:var(--white)}
+#how .section-sub{color:rgba(255,255,255,.6)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px;position:relative}
+.steps-grid::before{content:'';position:absolute;top:36px;left:16.5%;right:16.5%;height:2px;background:rgba(0,80,163,.4)}
+.step-card{text-align:center;padding:28px 20px;position:relative}
+.step-num{width:72px;height:72px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.8rem;color:var(--white);margin:0 auto 18px;position:relative;z-index:1}
+.step-card h3{font-weight:700;color:var(--white);font-size:1.05rem;margin-bottom:8px}
+.step-card p{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.65}
+/* REVIEWS */
+#reviews{padding:88px 0;background:var(--white)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.review-card{background:var(--surface);border-radius:var(--radius);padding:28px;border:1px solid #e2e8f0;position:relative;transition:var(--transition)}
+.review-card:hover{box-shadow:var(--shadow)}
+.review-quote{position:absolute;top:18px;right:20px;opacity:.1}
+.review-stars{display:flex;gap:3px;margin-bottom:12px}
+.review-stars svg{color:#f59e0b}
+.review-text{font-size:.92rem;color:var(--text);line-height:1.65;margin-bottom:16px;font-style:italic}
+.reviewer-info{display:flex;align-items:center;gap:10px}
+.reviewer-avatar{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.2rem;color:var(--white)}
+.reviewer-name{font-weight:700;font-size:.9rem;color:var(--primary)}
+.reviewer-location{font-size:.8rem;color:var(--muted)}
+/* SERVICE AREAS */
+#areas{padding:72px 0;background:var(--surface)}
+.areas-wrap{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;margin-top:40px}
+.areas-list{display:flex;flex-wrap:wrap;gap:10px}
+.area-chip{background:var(--white);border:1px solid #e2e8f0;border-radius:20px;padding:8px 18px;font-size:.88rem;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px;transition:var(--transition)}
+.area-chip:hover{border-color:var(--accent);color:var(--accent)}
+.area-chip svg{color:var(--accent)}
+.areas-callout{background:var(--primary);border-radius:14px;padding:36px 28px;color:var(--white)}
+.areas-callout h3{font-family:var(--font-display);font-size:1.6rem;margin-bottom:12px}
+.areas-callout p{color:rgba(255,255,255,.65);font-size:.95rem;margin-bottom:20px}
+/* CONTACT */
+#contact{padding:88px 0}
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact-info h2{font-family:var(--font-display);font-size:2.4rem;color:var(--primary);margin-bottom:14px}
+.contact-info p{color:var(--muted);font-size:1rem;margin-bottom:28px}
+.contact-details{display:flex;flex-direction:column;gap:14px}
+.contact-row{display:flex;align-items:center;gap:12px}
+.c-icon{width:42px;height:42px;background:rgba(0,80,163,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.c-icon svg{color:var(--accent)}
+.c-label{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.c-val{font-weight:700;color:var(--primary);font-size:.95rem}
+.contact-form{background:var(--surface);border-radius:14px;padding:36px 30px;border:1px solid #e2e8f0}
+.contact-form h3{font-family:var(--font-display);font-size:1.6rem;color:var(--primary);margin-bottom:6px}
+.contact-form .form-sub{color:var(--muted);font-size:.9rem;margin-bottom:22px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.form-group label{font-size:.82rem;font-weight:600;color:var(--text);text-transform:uppercase;letter-spacing:.06em}
+.form-group input,.form-group select,.form-group textarea{border:1.5px solid #e2e8f0;border-radius:8px;padding:11px 14px;font-family:var(--font-body);font-size:.95rem;color:var(--text);outline:none;transition:var(--transition);background:var(--white)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent);background:var(--white)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-submit{width:100%;background:var(--accent);color:var(--white);border:none;padding:14px;border-radius:8px;font-family:var(--font-body);font-weight:700;font-size:1rem;cursor:pointer;transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:8px}
+.form-submit:hover{background:var(--accent-dark)}
+/* CTA BAND */
+#cta{background:var(--accent);padding:72px 0;position:relative;overflow:hidden}
+.cta-grain{position:absolute;inset:0;opacity:.04;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px}
+.cta-inner{text-align:center;position:relative}
+.cta-inner h2{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.2rem);color:var(--white);margin-bottom:14px}
+.cta-inner p{color:rgba(255,255,255,.82);font-size:1.1rem;margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto}
+.cta-actions{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+/* FOOTER */
+footer{background:var(--primary-dark);padding:52px 0 28px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand .logo{margin-bottom:12px}
+.footer-brand p{color:rgba(255,255,255,.5);font-size:.88rem;line-height:1.65;max-width:280px}
+.footer-col h4{font-family:var(--font-display);font-size:1rem;letter-spacing:.06em;color:var(--white);margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{color:rgba(255,255,255,.5);font-size:.88rem;transition:var(--transition)}
+.footer-col ul li a:hover{color:var(--accent-light)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{color:rgba(255,255,255,.35);font-size:.82rem}
+/* ANIMATIONS */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{animation:heroFadeUp .55s ease both;animation-delay:.1s}
+.hero-title{animation:heroFadeUp .55s ease both;animation-delay:.22s}
+.hero-sub{animation:heroFadeUp .55s ease both;animation-delay:.34s}
+.hero-actions{animation:heroFadeUp .55s ease both;animation-delay:.44s}
+.hero-trust{animation:heroFadeUp .55s ease both;animation-delay:.54s}
+.hero-card{animation:heroFadeUp .6s ease both;animation-delay:.28s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0}
+.reveal.visible{animation:fadeUp .5s ease both}
+@keyframes barGrow{from{width:0}to{width:var(--w)}}
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-grid,.why-grid,.steps-grid,.contact-wrap,.areas-wrap{grid-template-columns:1fr}
+  .services-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-grid::before{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .services-grid,.reviews-grid,.stats-grid,.form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column}
+  .cta-actions{flex-direction:column;align-items:center}
+  .header-phone{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-inner">
+    <div class="logo">Lewisville Plumbing Service<small>Trusted Since 1992</small></div>
+    <div class="header-phone">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9a16 16 0 006.72 6.72l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      (972) 317-5619
+    </div>
+    <a href="#contact" class="header-cta">Get a Free Quote</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-lines"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          30+ Years Serving Lewisville
+        </div>
+        <h1 class="hero-title">Lewisville's <span class="hl">Legacy</span><br>Plumbing Company</h1>
+        <p class="hero-sub">Family-owned since 1992, Lewisville Plumbing Service has built its reputation one honest job at a time. When it matters most, trust the company your neighbors have trusted for three decades.</p>
+        <div class="hero-actions">
+          <a href="tel:9723175619" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9a16 16 0 006.72 6.72l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call (972) 317-5619
+          </a>
+          <a href="#contact" class="btn btn-outline">Schedule Service</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Family-Owned &amp; Operated</div>
+          <div class="trust-item"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Licensed &amp; Insured</div>
+          <div class="trust-item"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>24/7 Emergency</div>
+        </div>
+      </div>
+      <!-- SINCE 1992 LEGACY CARD -->
+      <div class="hero-card">
+        <div class="legacy-header">
+          <div class="legacy-since">1992</div>
+          <div class="legacy-label">Year Founded</div>
+          <div class="legacy-headline">Three Decades of Trusted Service</div>
+        </div>
+        <div class="legacy-milestones">
+          <div class="milestone">
+            <div class="milestone-year">1992</div>
+            <div class="milestone-bar"><div class="milestone-bar-fill" style="--w:20%;width:20%"></div></div>
+            <div class="milestone-text">Founded</div>
+          </div>
+          <div class="milestone">
+            <div class="milestone-year">2000</div>
+            <div class="milestone-bar"><div class="milestone-bar-fill" style="--w:38%;width:38%"></div></div>
+            <div class="milestone-text">Expanded DFW</div>
+          </div>
+          <div class="milestone">
+            <div class="milestone-year">2010</div>
+            <div class="milestone-bar"><div class="milestone-bar-fill" style="--w:60%;width:60%"></div></div>
+            <div class="milestone-text">1,000+ Customers</div>
+          </div>
+          <div class="milestone">
+            <div class="milestone-year">2020</div>
+            <div class="milestone-bar"><div class="milestone-bar-fill" style="--w:82%;width:82%"></div></div>
+            <div class="milestone-text">2nd Generation</div>
+          </div>
+          <div class="milestone">
+            <div class="milestone-year">2025</div>
+            <div class="milestone-bar"><div class="milestone-bar-fill" style="--w:100%;width:100%"></div></div>
+            <div class="milestone-text">Still Going Strong</div>
+          </div>
+        </div>
+        <div class="legacy-footer">
+          <div class="legacy-stat">
+            <div class="num">30+</div>
+            <div class="lbl">Years</div>
+          </div>
+          <div class="legacy-divider"></div>
+          <div class="legacy-stat">
+            <div class="num">5,000+</div>
+            <div class="lbl">Jobs Done</div>
+          </div>
+          <div class="legacy-divider"></div>
+          <div class="legacy-stat">
+            <div class="num">4.7★</div>
+            <div class="lbl">Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num" data-target="32" data-suffix=" yrs">0 yrs</div>
+        <div class="stat-label">In Business</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="5000" data-suffix="+">0+</div>
+        <div class="stat-label">Jobs Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="24" data-suffix="/7">0/7</div>
+        <div class="stat-label">Emergency Service</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Services</div>
+      <h2 class="section-title">Complete Plumbing Solutions<br>From a Name You Know</h2>
+      <p class="section-sub">Three decades of experience means we've seen — and fixed — everything. No job is too big or too small for our veteran team.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="sc-head">
+          <h3>Leak Detection &amp; Repair</h3>
+          <div class="sc-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 8v4l3 3"/></svg></div>
+        </div>
+        <p>Advanced detection equipment pinpoints leaks behind walls, under slabs, and in your yard — without destructive guessing.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sc-head">
+          <h3>Drain Cleaning</h3>
+          <div class="sc-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+        </div>
+        <p>Hydro-jetting and professional snaking clears even the toughest blockages in kitchen, bath, and main sewer lines.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sc-head">
+          <h3>Water Heater Service</h3>
+          <div class="sc-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22V12m0 0l-4-4m4 4l4-4"/><circle cx="12" cy="5" r="3"/></svg></div>
+        </div>
+        <p>Repairs and replacements on all makes and models. We install energy-efficient tank and tankless systems with same-day availability.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sc-head">
+          <h3>Pipe Repair &amp; Repiping</h3>
+          <div class="sc-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        </div>
+        <p>From a single cracked pipe to full copper or PEX repiping projects — we've completed thousands of pipe repairs across DFW.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sc-head">
+          <h3>Sewer Line Services</h3>
+          <div class="sc-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+        </div>
+        <p>Video inspections, root clearing, and trenchless sewer repairs protect your home and landscaping from unnecessary excavation.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sc-head">
+          <h3>Fixtures &amp; Remodels</h3>
+          <div class="sc-icon"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        </div>
+        <p>Faucet replacements, toilet installs, full bath and kitchen plumbing upgrades — done right the first time, every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">Experience You Can<br>Actually Feel</h2>
+      <p class="section-sub">Thirty years in business isn't just a number — it's tens of thousands of homeowners who trusted us and came back.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3>Family-Owned Values</h3>
+        <p>We treat your home like our own. When you call us, you get the same care and honesty we'd give a family member — no upselling, no shortcuts.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+        <h3>Deep Local Knowledge</h3>
+        <p>We know Lewisville's soil, water quality, and the plumbing quirks of every neighborhood. That context saves you time and money on every job.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Fully Licensed &amp; Insured</h3>
+        <p>Every technician on our team is TSBPE licensed and insured. Your home is protected from the moment we walk in the door.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <div class="section-label">Our Process</div>
+    <h2 class="section-title">Simple Process,<br>Reliable Results</h2>
+    <p class="section-sub">Three decades of fine-tuning our process means you get consistent, professional service every single time.</p>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <h3>Call or Book Online</h3>
+        <p>Reach us at (972) 317-5619 or submit our quick form. Emergency calls are answered around the clock.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">2</div>
+        <h3>We Assess &amp; Quote</h3>
+        <p>A licensed technician arrives, fully assesses the issue, and gives you a written upfront price before any work begins.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">3</div>
+        <h3>Done Right, Guaranteed</h3>
+        <p>We complete the job cleanly and back every repair with our workmanship warranty. No return visits needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Reviews</div>
+      <h2 class="section-title">What Lewisville<br>Families Say</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <svg class="review-quote" width="52" height="52" fill="var(--accent)" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <div class="review-stars">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="review-text">"My parents used Lewisville Plumbing Service back in the '90s and now I use them too. Same quality, same honesty. The tech explained everything before starting and the bill matched the quote exactly."</p>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">K</div>
+          <div><div class="reviewer-name">Karen M.</div><div class="reviewer-location">Lewisville, TX</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <svg class="review-quote" width="52" height="52" fill="var(--accent)" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <div class="review-stars">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="review-text">"2am pipe burst, water pouring into my kitchen. Called Lewisville Plumbing Service and they were here in 45 minutes. Stopped the leak fast and came back the next morning to finish the repair properly."</p>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">J</div>
+          <div><div class="reviewer-name">James F.</div><div class="reviewer-location">Lewisville, TX</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <svg class="review-quote" width="52" height="52" fill="var(--accent)" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <div class="review-stars">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="review-text">"Used them for a bathroom remodel — three new toilets, two showers, all new supply lines. The team was on-time every day, cleaned up after themselves, and the work passed inspection on the first visit."</p>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">S</div>
+          <div><div class="reviewer-name">Sandra L.</div><div class="reviewer-location">Highland Village, TX</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section id="areas">
+  <div class="container">
+    <div class="section-label">Where We Work</div>
+    <h2 class="section-title">Serving Lewisville<br>&amp; Surrounding Communities</h2>
+    <div class="areas-wrap">
+      <div class="areas-list">
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Lewisville</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Highland Village</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Flower Mound</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Carrollton</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Coppell</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Denton</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>The Colony</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Frisco</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Irving</div>
+      </div>
+      <div class="areas-callout">
+        <h3>Serving DFW for 30+ Years</h3>
+        <p>From Lewisville to the surrounding metroplex — if you're in North Texas, there's a good chance we've already worked in your neighborhood.</p>
+        <a href="tel:9723175619" class="btn btn-primary">Call (972) 317-5619</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <div class="section-label">Contact Us</div>
+        <h2>Get Your Free<br>Estimate Today</h2>
+        <p>No high-pressure sales tactics — just an honest assessment and a fair price from a plumber who's been serving Lewisville for over 30 years.</p>
+        <div class="contact-details">
+          <div class="contact-row">
+            <div class="c-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9a16 16 0 006.72 6.72l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><div class="c-label">Phone</div><div class="c-val">(972) 317-5619</div></div>
+          </div>
+          <div class="contact-row">
+            <div class="c-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg></div>
+            <div><div class="c-label">Service Area</div><div class="c-val">Lewisville &amp; DFW Metroplex</div></div>
+          </div>
+          <div class="contact-row">
+            <div class="c-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="c-label">Hours</div><div class="c-val">Mon–Sat 7am–7pm · Emergency 24/7</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Request Service</h3>
+        <p class="form-sub">We'll call you back within the hour.</p>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="(972) 555-0100"></div>
+          <div class="form-group"><label>Email</label><input type="email" placeholder="john@email.com"></div>
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select>
+            <option value="">Select a service…</option>
+            <option>Leak Detection</option>
+            <option>Drain Cleaning</option>
+            <option>Water Heater</option>
+            <option>Pipe Repair / Repiping</option>
+            <option>Sewer Line</option>
+            <option>Fixture / Remodel</option>
+            <option>Emergency</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Describe the Issue</label>
+          <textarea placeholder="What's going on? We'll get right to it…"></textarea>
+        </div>
+        <button class="form-submit" type="button">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send Request
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section id="cta">
+  <div class="cta-grain"></div>
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Lewisville's Most Trusted Plumber</h2>
+      <p>Over 30 years of honest work, fair prices, and reliable results. Call us today and see why Lewisville families have trusted us since 1992.</p>
+      <div class="cta-actions">
+        <a href="tel:9723175619" class="btn btn-outline">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9a16 16 0 006.72 6.72l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (972) 317-5619
+        </a>
+        <a href="#contact" class="btn" style="background:rgba(255,255,255,.15);color:#fff;border:2px solid rgba(255,255,255,.4)">Schedule Online</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Lewisville Plumbing Service</div>
+        <p>Family-owned since 1992. Serving Lewisville and the DFW metroplex with honest, expert plumbing service for over three decades.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Leak Detection</a></li>
+          <li><a href="#services">Drain Cleaning</a></li>
+          <li><a href="#services">Water Heaters</a></li>
+          <li><a href="#services">Pipe Repair</a></li>
+          <li><a href="#services">Sewer Line</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9723175619">(972) 317-5619</a></li>
+          <li><a href="#areas">Lewisville, TX</a></li>
+          <li><a href="#contact">Free Estimate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Lewisville Plumbing Service · Est. 1992 · TSBPE Licensed</p>
+      <p>This is a website preview generated for demonstration purposes.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const counters=document.querySelectorAll('[data-target]');
+  let counted=false;
+  function animateCount(el){
+    const target=parseInt(el.dataset.target);
+    const suffix=el.dataset.suffix||'';
+    const duration=1800;
+    const start=performance.now();
+    const update=(time)=>{
+      const progress=Math.min((time-start)/duration,1);
+      const ease=1-Math.pow(1-progress,3);
+      el.textContent=Math.floor(ease*target).toLocaleString()+suffix;
+      if(progress<1)requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  }
+  const observer=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        const siblings=Array.from(entry.target.parentElement?.children||[]);
+        const delay=siblings.indexOf(entry.target)*80;
+        entry.target.style.animationDelay=delay+'ms';
+      }
+    });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  const statsObserver=new IntersectionObserver((entries)=>{
+    if(entries[0].isIntersecting&&!counted){counted=true;counters.forEach(animateCount);}
+  },{threshold:0.3});
+  const statsSection=document.querySelector('#stats');
+  if(statsSection)statsObserver.observe(statsSection);
+  const btn=document.querySelector('.form-submit');
+  if(btn)btn.addEventListener('click',function(){
+    this.textContent='Request Sent!';this.style.background='#16a34a';
+    setTimeout(()=>{this.innerHTML='<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Request';this.style.background='';},3000);
+  });
+})();
+</script>
+</body>
+</html>

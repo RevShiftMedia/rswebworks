@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Haltex Plumbing | Denton's Award-Winning Plumber | (940) 999-7742</title>
+<meta name="description" content="Haltex Plumbing — Denton's award-winning plumbing company. 148 five-star reviews. Expert repairs, installations, and 24/7 emergency service. Call (940) 999-7742.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --primary:#111827;
+  --primary-dark:#060b14;
+  --accent:#0052a3;
+  --accent-dark:#003d7a;
+  --accent-bright:#3b82f6;
+  --text:#1e293b;
+  --muted:#64748b;
+  --surface:#f8fafc;
+  --white:#ffffff;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-body:'Open Sans',sans-serif;
+  --radius:10px;
+  --shadow:0 4px 24px rgba(0,0,0,.11);
+  --transition:all .3s ease;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text);background:var(--white);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:var(--radius);font-family:var(--font-body);font-weight:700;font-size:1rem;cursor:pointer;border:none;transition:var(--transition)}
+.btn-primary{background:var(--accent);color:var(--white)}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.65)}
+.btn-outline:hover{background:rgba(255,255,255,.1)}
+.section-label{font-family:var(--font-display);font-size:1rem;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:8px}
+.section-title{font-family:var(--font-display);font-size:2.6rem;line-height:1.05;color:var(--primary);margin-bottom:16px}
+.section-sub{color:var(--muted);font-size:1.05rem;max-width:560px}
+/* HEADER */
+#site-header{position:sticky;top:0;z-index:999;background:var(--primary);box-shadow:0 2px 16px rgba(0,0,0,.4)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1140px;margin:0 auto}
+.logo{font-family:var(--font-display);font-size:1.7rem;color:var(--white);letter-spacing:.06em}
+.logo span{color:var(--accent-bright)}
+.header-phone{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--white);font-size:1.05rem}
+.header-phone svg{color:var(--accent-bright)}
+.header-cta{background:var(--accent);color:var(--white);padding:10px 22px;border-radius:8px;font-weight:700;font-size:.95rem;transition:var(--transition)}
+.header-cta:hover{background:var(--accent-dark)}
+/* HERO */
+#hero{background:var(--primary);min-height:640px;display:flex;align-items:center;position:relative;overflow:hidden;padding:72px 0 64px}
+.hero-grain{position:absolute;inset:0;opacity:.04;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px}
+.hero-glow{position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(0,82,163,.22) 0%,transparent 70%);top:-100px;right:-140px;pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:60fr 40fr;gap:56px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:var(--accent-bright);padding:6px 14px;border-radius:20px;font-size:.85rem;font-weight:600;margin-bottom:22px}
+.hero-title{font-family:var(--font-display);font-size:clamp(2.8rem,5vw,4.2rem);line-height:1.02;color:var(--white);margin-bottom:18px}
+.hero-title .hl{color:var(--accent-bright)}
+.hero-sub{color:rgba(255,255,255,.72);font-size:1.1rem;margin-bottom:32px;max-width:500px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.hero-trust{display:flex;gap:20px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.65);font-size:.85rem;font-weight:600}
+.trust-item svg{color:var(--accent-bright)}
+/* AWARD CARD */
+.hero-card{background:rgba(255,255,255,.06);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.11);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:16px}
+.award-header{display:flex;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.1)}
+.award-trophy{width:52px;height:52px;background:linear-gradient(135deg,#f59e0b,#d97706);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.award-trophy svg{color:#fff}
+.award-header-text h3{font-family:var(--font-display);font-size:1.2rem;color:var(--white);letter-spacing:.04em;line-height:1.1}
+.award-header-text p{font-size:.78rem;color:rgba(255,255,255,.5);margin-top:3px}
+.award-badges{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.award-badge{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:12px;text-align:center}
+.badge-icon{width:32px;height:32px;background:rgba(0,82,163,.25);border-radius:8px;display:flex;align-items:center;justify-content:center;margin:0 auto 8px}
+.badge-icon svg{color:var(--accent-bright)}
+.badge-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.45);margin-bottom:2px}
+.badge-value{font-weight:700;color:var(--white);font-size:.88rem}
+.award-rating{background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.25);border-radius:10px;padding:14px 16px;display:flex;align-items:center;justify-content:space-between}
+.rating-stars{display:flex;gap:3px}
+.rating-stars svg{color:#fbbf24}
+.rating-score{text-align:right}
+.rating-score strong{display:block;font-family:var(--font-display);font-size:1.6rem;color:var(--white);line-height:1}
+.rating-score span{font-size:.75rem;color:rgba(255,255,255,.5)}
+/* STATS */
+#stats{background:var(--accent);padding:52px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.stat-item{text-align:center;padding:8px 24px;border-right:1px solid rgba(255,255,255,.2)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:var(--font-display);font-size:3rem;color:var(--white);line-height:1}
+.stat-label{color:rgba(255,255,255,.88);font-size:.9rem;font-weight:600;margin-top:4px;text-transform:uppercase;letter-spacing:.06em}
+/* SERVICES */
+#services{padding:88px 0;background:var(--surface)}
+.section-head{margin-bottom:52px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--white);border-radius:var(--radius);padding:28px 22px;border:1px solid #e2e8f0;transition:var(--transition)}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--accent)}
+.sc-icon{width:50px;height:50px;background:rgba(0,82,163,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.sc-icon svg{color:var(--accent)}
+.service-card h3{font-weight:700;font-size:1.05rem;color:var(--primary);margin-bottom:8px}
+.service-card p{font-size:.88rem;color:var(--muted);line-height:1.6}
+/* WHY */
+#why{padding:88px 0}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px}
+.why-card{padding:30px 24px;border-radius:var(--radius);background:var(--surface);border:1px solid #e2e8f0;transition:var(--transition)}
+.why-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.why-icon{width:48px;height:48px;background:rgba(0,82,163,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.why-icon svg{color:var(--accent)}
+.why-card h3{font-weight:700;font-size:1.05rem;color:var(--primary);margin-bottom:8px}
+.why-card p{font-size:.9rem;color:var(--muted);line-height:1.6}
+/* HOW IT WORKS */
+#how{padding:88px 0;background:var(--primary)}
+#how .section-title{color:var(--white)}
+#how .section-sub{color:rgba(255,255,255,.6)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px;position:relative}
+.steps-grid::before{content:'';position:absolute;top:36px;left:16.5%;right:16.5%;height:2px;background:rgba(0,82,163,.4)}
+.step-card{text-align:center;padding:28px 20px;position:relative}
+.step-num{width:72px;height:72px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.8rem;color:var(--white);margin:0 auto 18px;position:relative;z-index:1}
+.step-card h3{font-weight:700;color:var(--white);font-size:1.05rem;margin-bottom:8px}
+.step-card p{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.65}
+/* REVIEWS */
+#reviews{padding:88px 0;background:var(--primary)}
+#reviews .section-label{color:var(--accent-bright)}
+#reviews .section-title{color:var(--white)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.review-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:28px;position:relative;transition:var(--transition)}
+.review-card:hover{background:rgba(255,255,255,.1)}
+.review-quote{position:absolute;top:18px;right:20px;opacity:.12}
+.review-stars{display:flex;gap:3px;margin-bottom:12px}
+.review-stars svg{color:#fbbf24}
+.review-text{font-size:.92rem;color:rgba(255,255,255,.75);line-height:1.65;margin-bottom:16px;font-style:italic}
+.reviewer-info{display:flex;align-items:center;gap:10px}
+.reviewer-avatar{width:40px;height:40px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.2rem;color:var(--white)}
+.reviewer-name{font-weight:700;font-size:.9rem;color:var(--white)}
+.reviewer-location{font-size:.8rem;color:rgba(255,255,255,.45)}
+/* SERVICE AREAS */
+#areas{padding:72px 0;background:var(--surface)}
+.areas-wrap{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;margin-top:40px}
+.areas-list{display:flex;flex-wrap:wrap;gap:10px}
+.area-chip{background:var(--white);border:1px solid #e2e8f0;border-radius:20px;padding:8px 18px;font-size:.88rem;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px;transition:var(--transition)}
+.area-chip:hover{border-color:var(--accent);color:var(--accent)}
+.area-chip svg{color:var(--accent)}
+.areas-callout{background:var(--primary);border-radius:14px;padding:36px 28px;color:var(--white)}
+.areas-callout h3{font-family:var(--font-display);font-size:1.6rem;margin-bottom:12px}
+.areas-callout p{color:rgba(255,255,255,.65);font-size:.95rem;margin-bottom:20px}
+/* CONTACT */
+#contact{padding:88px 0}
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact-info h2{font-family:var(--font-display);font-size:2.4rem;color:var(--primary);margin-bottom:14px}
+.contact-info p{color:var(--muted);font-size:1rem;margin-bottom:28px}
+.contact-details{display:flex;flex-direction:column;gap:14px}
+.contact-row{display:flex;align-items:center;gap:12px}
+.c-icon{width:42px;height:42px;background:rgba(0,82,163,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.c-icon svg{color:var(--accent)}
+.c-label{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.c-val{font-weight:700;color:var(--primary);font-size:.95rem}
+.contact-form{background:var(--surface);border-radius:14px;padding:36px 30px;border:1px solid #e2e8f0;box-shadow:var(--shadow)}
+.contact-form h3{font-family:var(--font-display);font-size:1.6rem;color:var(--primary);margin-bottom:6px}
+.contact-form .form-sub{color:var(--muted);font-size:.9rem;margin-bottom:22px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.form-group label{font-size:.82rem;font-weight:600;color:var(--text);text-transform:uppercase;letter-spacing:.06em}
+.form-group input,.form-group select,.form-group textarea{border:1.5px solid #e2e8f0;border-radius:8px;padding:11px 14px;font-family:var(--font-body);font-size:.95rem;color:var(--text);outline:none;transition:var(--transition);background:var(--white)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--accent)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-submit{width:100%;background:var(--accent);color:var(--white);border:none;padding:14px;border-radius:8px;font-family:var(--font-body);font-weight:700;font-size:1rem;cursor:pointer;transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:8px}
+.form-submit:hover{background:var(--accent-dark)}
+/* CTA BAND */
+#cta{background:var(--accent);padding:72px 0;position:relative;overflow:hidden}
+.cta-grain{position:absolute;inset:0;opacity:.04;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");background-size:300px 300px}
+.cta-inner{text-align:center;position:relative}
+.cta-inner h2{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.2rem);color:var(--white);margin-bottom:14px}
+.cta-inner p{color:rgba(255,255,255,.85);font-size:1.1rem;margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto}
+.cta-actions{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+/* FOOTER */
+footer{background:var(--primary-dark);padding:52px 0 28px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand .logo{margin-bottom:12px}
+.footer-brand p{color:rgba(255,255,255,.5);font-size:.88rem;line-height:1.65;max-width:280px}
+.footer-col h4{font-family:var(--font-display);font-size:1rem;letter-spacing:.06em;color:var(--white);margin-bottom:14px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.footer-col ul li a{color:rgba(255,255,255,.5);font-size:.88rem;transition:var(--transition)}
+.footer-col ul li a:hover{color:var(--accent-bright)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer-bottom p{color:rgba(255,255,255,.35);font-size:.82rem}
+/* ANIMATIONS */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{animation:heroFadeUp .55s ease both;animation-delay:.1s}
+.hero-title{animation:heroFadeUp .55s ease both;animation-delay:.22s}
+.hero-sub{animation:heroFadeUp .55s ease both;animation-delay:.34s}
+.hero-actions{animation:heroFadeUp .55s ease both;animation-delay:.44s}
+.hero-trust{animation:heroFadeUp .55s ease both;animation-delay:.54s}
+.hero-card{animation:heroFadeUp .6s ease both;animation-delay:.28s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0}
+.reveal.visible{animation:fadeUp .5s ease both}
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-grid,.why-grid,.steps-grid,.contact-wrap,.areas-wrap{grid-template-columns:1fr}
+  .services-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-grid::before{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .services-grid,.reviews-grid,.stats-grid,.form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column}
+  .cta-actions{flex-direction:column;align-items:center}
+  .header-phone{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-inner">
+    <div class="logo">Haltex <span>Plumbing</span></div>
+    <div class="header-phone">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9a16 16 0 006.72 6.72l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      (940) 999-7742
+    </div>
+    <a href="#contact" class="header-cta">Free Estimate</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          148 Five-Star Reviews in Denton
+        </div>
+        <h1 class="hero-title">Denton's <span class="hl">Award-Winning</span><br>Plumbing Company</h1>
+        <p class="hero-sub">Haltex Plumbing has earned the trust of Denton homeowners through consistent excellence, fair pricing, and the kind of craftsmanship that earns 148 five-star reviews and counting.</p>
+        <div class="hero-actions">
+          <a href="tel:9409997742" class="btn btn-primary">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9a16 16 0 006.72 6.72l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call (940) 999-7742
+          </a>
+          <a href="#contact" class="btn btn-outline">Free Estimate</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>148 Google Reviews</div>
+          <div class="trust-item"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Licensed &amp; Insured</div>
+          <div class="trust-item"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Emergency 24/7</div>
+        </div>
+      </div>
+      <!-- AWARD CARD -->
+      <div class="hero-card">
+        <div class="award-header">
+          <div class="award-trophy">
+            <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0012 0V2z"/></svg>
+          </div>
+          <div class="award-header-text">
+            <h3>Recognition &amp; Awards</h3>
+            <p>Denton's most decorated plumber</p>
+          </div>
+        </div>
+        <div class="award-badges">
+          <div class="award-badge">
+            <div class="badge-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="badge-label">Certification</div>
+            <div class="badge-value">TSBPE Master</div>
+          </div>
+          <div class="award-badge">
+            <div class="badge-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+            <div class="badge-label">Recognition</div>
+            <div class="badge-value">Best of Denton</div>
+          </div>
+          <div class="award-badge">
+            <div class="badge-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <div class="badge-label">Status</div>
+            <div class="badge-value">Fully Insured</div>
+          </div>
+          <div class="award-badge">
+            <div class="badge-icon"><svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg></div>
+            <div class="badge-label">Google</div>
+            <div class="badge-value">Top Rated</div>
+          </div>
+        </div>
+        <div class="award-rating">
+          <div>
+            <div class="rating-stars">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <div style="font-size:.75rem;color:rgba(255,255,255,.5);margin-top:4px">148 verified Google reviews</div>
+          </div>
+          <div class="rating-score"><strong>4.9</strong><span>out of 5</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num" data-target="148" data-suffix="">0</div>
+        <div class="stat-label">5-Star Reviews</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="4000" data-suffix="+">0+</div>
+        <div class="stat-label">Jobs Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="24" data-suffix="/7">0/7</div>
+        <div class="stat-label">Emergency Service</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Services</div>
+      <h2 class="section-title">Award-Winning Plumbing<br>For Every Situation</h2>
+      <p class="section-sub">From routine maintenance to complex emergencies, Haltex Plumbing delivers the same award-winning quality on every job in Denton.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="sc-icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+        <h3>Slab Leak Detection</h3>
+        <p>Electronic and acoustic detection locates slab leaks precisely — minimizing repair scope and protecting your foundation.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sc-icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+        <h3>Drain Cleaning</h3>
+        <p>Professional hydro-jetting and snaking for kitchen, bath, and main sewer lines — thorough cleaning that prevents re-clogging.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sc-icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22V12m0 0c0-4-6-6-6-10a6 6 0 0112 0c0 4-6 6-6 10z"/></svg></div>
+        <h3>Water Heater Service</h3>
+        <p>Repairs and replacements on all makes — tank and tankless. Same-day availability with upfront pricing.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sc-icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        <h3>Pipe Repair &amp; Repiping</h3>
+        <p>Emergency burst pipe response and full-home repiping in PEX or copper, done cleanly with minimal disruption.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sc-icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>Toilet Repair &amp; Install</h3>
+        <p>Running toilets, leaking seals, complete installs — fast, affordable fixes for every toilet problem.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="sc-icon"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Sewer Line Camera &amp; Repair</h3>
+        <p>Video inspection reveals exactly what's in your sewer line. Trenchless repair options protect your landscaping.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Why Haltex</div>
+      <h2 class="section-title">148 Reviews Don't Lie —<br>We Deliver Results</h2>
+      <p class="section-sub">Every five-star review we've earned represents a promise kept. Here's what sets Haltex Plumbing apart in Denton.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h3>Proven Track Record</h3>
+        <p>148 five-star Google reviews represent real Denton homeowners who experienced our quality firsthand. We're not just claiming excellence — we've proven it.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+        <h3>Transparent, Flat-Rate Pricing</h3>
+        <p>We provide written quotes before any work begins. No surprise charges, no inflated invoices — the price we quote is the price you pay.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <h3>Workmanship Guaranteed</h3>
+        <p>Every repair is backed by our written workmanship warranty. If a covered repair fails, we come back and fix it at zero cost to you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="container">
+    <div class="section-label">Our Process</div>
+    <h2 class="section-title">Plumbing Help in<br>3 Easy Steps</h2>
+    <p class="section-sub">We've made getting expert plumbing service as simple as possible — because a plumbing problem is stressful enough without a complicated process.</p>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <h3>Call or Book Online</h3>
+        <p>Call (940) 999-7742 anytime or fill out our quick form. Emergency calls are answered around the clock.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">2</div>
+        <h3>Upfront Quote</h3>
+        <p>Your licensed plumber diagnoses the issue and gives you a flat-rate price in writing before starting any work.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">3</div>
+        <h3>Quality Work, Guaranteed</h3>
+        <p>We complete the repair or installation to our award-winning standard, then back it with our workmanship guarantee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-label">Reviews</div>
+      <h2 class="section-title">148 Reasons to<br>Choose Haltex</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <svg class="review-quote" width="52" height="52" fill="var(--accent-bright)" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <div class="review-stars">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="review-text">"Haltex found a slab leak two other plumbers missed. They used detection equipment, found it in 30 minutes, repaired it with minimal concrete damage. Exceptional. Now I understand the reviews."</p>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">B</div>
+          <div><div class="reviewer-name">Brian H.</div><div class="reviewer-location">Denton, TX</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <svg class="review-quote" width="52" height="52" fill="var(--accent-bright)" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <div class="review-stars">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="review-text">"Water heater failed on a Sunday morning. Called Haltex and they had a tech at my door by noon. New unit installed and running hot water by 3pm. Professional, fast, and fair priced. Exactly what you hope for."</p>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">L</div>
+          <div><div class="reviewer-name">Lisa M.</div><div class="reviewer-location">Denton, TX</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal">
+        <svg class="review-quote" width="52" height="52" fill="var(--accent-bright)" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <div class="review-stars">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p class="review-text">"Repipe of our entire 1970s home. Three days of work, entire team was respectful, punctual, and cleaned up every evening. New pipes passed city inspection first visit. This is why they have 148 reviews."</p>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">C</div>
+          <div><div class="reviewer-name">Charles D.</div><div class="reviewer-location">Denton, TX</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section id="areas">
+  <div class="container">
+    <div class="section-label">Coverage</div>
+    <h2 class="section-title">Proudly Serving<br>Denton County</h2>
+    <div class="areas-wrap">
+      <div class="areas-list">
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Denton</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Lewisville</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Flower Mound</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Highland Village</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Corinth</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Little Elm</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Argyle</div>
+        <div class="area-chip"><svg width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>Sanger</div>
+      </div>
+      <div class="areas-callout">
+        <h3>Denton County's Most Trusted Plumber</h3>
+        <p>148 reviews across Denton and the surrounding area tell the story. Wherever you are in Denton County, Haltex is ready to help.</p>
+        <a href="tel:9409997742" class="btn btn-primary">Call (940) 999-7742</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <div class="section-label">Get in Touch</div>
+        <h2>Request Your<br>Free Estimate</h2>
+        <p>Join 148 satisfied Denton homeowners. Get an honest assessment and upfront price from Denton's most-reviewed plumber.</p>
+        <div class="contact-details">
+          <div class="contact-row">
+            <div class="c-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9a16 16 0 006.72 6.72l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><div class="c-label">Phone</div><div class="c-val">(940) 999-7742</div></div>
+          </div>
+          <div class="contact-row">
+            <div class="c-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg></div>
+            <div><div class="c-label">Service Area</div><div class="c-val">Denton, TX &amp; Surrounding Cities</div></div>
+          </div>
+          <div class="contact-row">
+            <div class="c-icon"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="c-label">Hours</div><div class="c-val">Mon–Sat 7am–7pm · Emergency 24/7</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Schedule Service</h3>
+        <p class="form-sub">We respond within 60 minutes. Guaranteed.</p>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="John"></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Phone</label><input type="tel" placeholder="(940) 555-0100"></div>
+          <div class="form-group"><label>Email</label><input type="email" placeholder="john@email.com"></div>
+        </div>
+        <div class="form-group">
+          <label>Service Needed</label>
+          <select>
+            <option value="">Select a service…</option>
+            <option>Slab Leak Detection</option>
+            <option>Drain Cleaning</option>
+            <option>Water Heater</option>
+            <option>Pipe Repair / Repiping</option>
+            <option>Toilet Repair</option>
+            <option>Sewer Camera / Repair</option>
+            <option>Emergency</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Describe the Issue</label>
+          <textarea placeholder="What's happening? We'll be prepared before we arrive…"></textarea>
+        </div>
+        <button class="form-submit" type="button">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send Request
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section id="cta">
+  <div class="cta-grain"></div>
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Denton's Most Reviewed Plumber</h2>
+      <p>148 five-star reviews. Award-winning service. Upfront pricing. Call Haltex Plumbing today and see why Denton trusts us above all others.</p>
+      <div class="cta-actions">
+        <a href="tel:9409997742" class="btn btn-outline">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 12a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9a16 16 0 006.72 6.72l1.18-1.18a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          (940) 999-7742
+        </a>
+        <a href="#contact" class="btn" style="background:rgba(255,255,255,.15);color:#fff;border:2px solid rgba(255,255,255,.35)">Free Estimate Online</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">Haltex <span>Plumbing</span></div>
+        <p>Award-winning, licensed plumbing service in Denton, TX. 148 five-star reviews and counting. Your satisfaction is our standard.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Slab Leak Detection</a></li>
+          <li><a href="#services">Drain Cleaning</a></li>
+          <li><a href="#services">Water Heater</a></li>
+          <li><a href="#services">Pipe Repair</a></li>
+          <li><a href="#services">Sewer Line</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9409997742">(940) 999-7742</a></li>
+          <li><a href="#areas">Denton, TX</a></li>
+          <li><a href="#contact">Free Estimate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Haltex Plumbing · Denton, TX · TSBPE Licensed</p>
+      <p>This is a website preview generated for demonstration purposes.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const counters=document.querySelectorAll('[data-target]');
+  let counted=false;
+  function animateCount(el){
+    const target=parseInt(el.dataset.target);
+    const suffix=el.dataset.suffix||'';
+    const duration=1800;
+    const start=performance.now();
+    const update=(time)=>{
+      const progress=Math.min((time-start)/duration,1);
+      const ease=1-Math.pow(1-progress,3);
+      el.textContent=Math.floor(ease*target).toLocaleString()+suffix;
+      if(progress<1)requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  }
+  const observer=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        const siblings=Array.from(entry.target.parentElement?.children||[]);
+        const delay=siblings.indexOf(entry.target)*80;
+        entry.target.style.animationDelay=delay+'ms';
+      }
+    });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  const statsObserver=new IntersectionObserver((entries)=>{
+    if(entries[0].isIntersecting&&!counted){counted=true;counters.forEach(animateCount);}
+  },{threshold:0.3});
+  const statsSection=document.querySelector('#stats');
+  if(statsSection)statsObserver.observe(statsSection);
+  const btn=document.querySelector('.form-submit');
+  if(btn)btn.addEventListener('click',function(){
+    this.textContent='Request Sent!';this.style.background='#16a34a';
+    setTimeout(()=>{this.innerHTML='<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Send Request';this.style.background='';},3000);
+  });
+})();
+</script>
+</body>
+</html>
