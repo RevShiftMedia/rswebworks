@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tide Turners Plumbing | Richardson TX Licensed Plumbers</title>
+<meta name="description" content="Tide Turners Plumbing — Richardson TX plumbers who turn plumbing problems around. 4.9 stars, 208 reviews. Water heaters, drains, leak repair &amp; more. (972) 521-1701.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Design tokens ── */
+:root {
+  --primary:       #1a0a38;
+  --primary-dark:  #0d0520;
+  --accent:        #0090a1;
+  --accent-dark:   #006b78;
+  --accent-light:  #22d3ee;
+  --text-light:    #f0f4ff;
+  --text-muted:    #a5b4c8;
+  --surface:       #22104a;
+  --surface-alt:   #160830;
+  --border:        rgba(0,144,161,0.18);
+  --white:         #ffffff;
+  --radius:        10px;
+  --shadow:        0 4px 24px rgba(0,0,0,0.55);
+  --transition:    0.3s ease;
+}
+
+/* ── Reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:var(--primary);color:var(--text-light);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* ── Typography ── */
+h1,h2,h3,.font-display{font-family:'Bebas Neue',sans-serif;letter-spacing:0.04em;line-height:1.05}
+h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:0.5rem}
+h3{font-size:1.2rem;margin-bottom:0.4rem}
+p{font-size:1rem;color:var(--text-muted)}
+
+/* ── Utility ── */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.accent-text{color:var(--accent)}
+.section-label{font-family:'Bebas Neue',sans-serif;letter-spacing:0.18em;font-size:0.85rem;color:var(--accent);text-transform:uppercase;margin-bottom:0.6rem}
+.btn-primary{display:inline-block;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:14px 32px;border-radius:var(--radius);border:none;cursor:pointer;transition:background var(--transition),transform var(--transition);text-align:center}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-outline{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:12px 30px;border-radius:var(--radius);cursor:pointer;transition:all var(--transition);text-align:center}
+.btn-outline:hover{background:var(--accent);color:var(--white)}
+
+/* ── Grain overlay ── */
+.grain{position:relative}
+.grain::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");opacity:0.55;pointer-events:none;z-index:1}
+.grain>*{position:relative;z-index:2}
+
+/* ── Animations ── */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(0,144,161,0.5)}70%{box-shadow:0 0 0 14px rgba(0,144,161,0)}100%{box-shadow:0 0 0 0 rgba(0,144,161,0)}}
+@keyframes wave{0%,100%{transform:scaleX(1) translateY(0)}50%{transform:scaleX(1.04) translateY(-3px)}}
+
+.animate-hero{animation:heroFadeUp 0.85s cubic-bezier(0.22,1,0.36,1) both}
+.animate-hero-d1{animation-delay:0.15s}
+.animate-hero-d2{animation-delay:0.3s}
+.animate-hero-d3{animation-delay:0.45s}
+.animate-hero-d4{animation-delay:0.6s}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* ══════════════════════════════════════
+   1. HEADER
+══════════════════════════════════════ */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,5,32,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo-wrap{display:flex;align-items:center;gap:12px}
+.logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-icon svg{width:21px;height:21px;fill:none;stroke:var(--white);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:0.06em;color:var(--white);line-height:1.1}
+.logo-text span{color:var(--accent-light)}
+.logo-sub{font-family:'Open Sans',sans-serif;font-size:0.67rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase}
+.header-badge{display:flex;align-items:center;gap:6px;background:rgba(0,144,161,0.1);border:1px solid rgba(0,144,161,0.25);border-radius:8px;padding:5px 12px}
+.hb-stars{color:#f59e0b;font-size:0.8rem;letter-spacing:1px}
+.hb-text{font-size:0.72rem;font-weight:700;color:var(--accent-light)}
+.header-cta{background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:0.95rem;padding:10px 22px;border-radius:var(--radius);white-space:nowrap;transition:background var(--transition)}
+.header-cta:hover{background:var(--accent-dark)}
+
+/* ══════════════════════════════════════
+   2. HERO — purple gradient + teal pop
+══════════════════════════════════════ */
+.hero{min-height:100vh;background:linear-gradient(150deg,var(--primary-dark) 0%,#180840 40%,#12063a 100%);display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.eyebrow-tag{font-family:'Open Sans',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-light);background:rgba(0,144,161,0.1);border:1px solid rgba(0,144,161,0.3);padding:5px 14px;border-radius:20px}
+.hero h1{font-size:clamp(3rem,6.5vw,5.2rem);color:var(--white);margin-bottom:20px}
+.hero h1 .line2{color:var(--accent-light)}
+.hero-sub{font-size:1.08rem;color:var(--text-muted);max-width:480px;margin-bottom:32px;line-height:1.7}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:32px}
+.hero-trust-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.stars-row{display:flex;gap:3px}
+.star{color:#f59e0b;font-size:1.1rem}
+.trust-text{font-family:'Open Sans',sans-serif;font-size:0.85rem;color:var(--text-muted)}
+.trust-text strong{color:var(--white)}
+.trust-sep{width:1px;height:24px;background:var(--border)}
+
+/* Hero wave accent element */
+.hero-wave{position:absolute;bottom:0;left:0;right:0;height:80px;overflow:hidden;pointer-events:none;z-index:0}
+.hero-wave svg{width:100%;height:100%;animation:wave 6s ease-in-out infinite}
+
+/* Hero panel — purple glazed */
+.hero-panel{background:rgba(13,5,32,0.78);border:1px solid rgba(0,144,161,0.22);border-radius:16px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:30px;box-shadow:0 4px 32px rgba(0,144,161,0.12),var(--shadow)}
+.panel-heading{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.05em;color:var(--white);margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.ph-icon{width:28px;height:28px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.ph-icon svg{width:15px;height:15px;fill:none;stroke:var(--white);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.panel-sub{font-size:0.82rem;color:var(--text-muted);margin-bottom:18px}
+.panel-service-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.panel-svc{display:flex;align-items:center;gap:8px;padding:9px 12px;background:rgba(0,144,161,0.07);border:1px solid rgba(0,144,161,0.14);border-radius:8px;font-size:0.84rem;color:var(--text-muted)}
+.psi-dot{width:7px;height:7px;background:var(--accent-light);border-radius:50%;flex-shrink:0}
+.panel-phone-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:13px;border-radius:var(--radius);width:100%;transition:background var(--transition)}
+.panel-phone-btn:hover{background:var(--accent-dark)}
+.panel-phone-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.panel-note{text-align:center;font-size:0.77rem;color:var(--text-muted);margin-top:9px}
+
+/* ══════════════════════════════════════
+   3. TRUST BAR
+══════════════════════════════════════ */
+.trust-bar{background:var(--surface-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0}
+.trust-bar-inner{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px}
+.trust-item-icon{width:34px;height:34px;background:rgba(0,144,161,0.12);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-item-icon svg{width:17px;height:17px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.trust-item-label{font-family:'Open Sans',sans-serif;font-size:0.82rem;font-weight:700;color:var(--white);letter-spacing:0.04em}
+.trust-bar-sep{width:1px;height:30px;background:var(--border)}
+
+/* ══════════════════════════════════════
+   4. SERVICES — 3-col icon-top cards
+══════════════════════════════════════ */
+.services{padding:100px 0;background:var(--primary)}
+.section-header{margin-bottom:52px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px;transition:border-color var(--transition),transform var(--transition),box-shadow var(--transition)}
+.service-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,144,161,0.2)}
+.sc-icon{width:48px;height:48px;background:linear-gradient(135deg,rgba(0,144,161,0.2),rgba(0,144,161,0.05));border:1px solid rgba(0,144,161,0.25);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.sc-icon svg{width:24px;height:24px;fill:none;stroke:var(--accent-light);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sc-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.05em;color:var(--white);margin-bottom:8px}
+.sc-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.6}
+
+/* ══════════════════════════════════════
+   5. BRAND STORY — "Tide Turners" narrative
+══════════════════════════════════════ */
+.brand-story{padding:100px 0;background:var(--surface-alt)}
+.brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.brand-text .section-label{display:block;margin-bottom:8px}
+.brand-text h2{margin-bottom:16px}
+.brand-text p{margin-bottom:16px;font-size:1.05rem;line-height:1.75}
+.brand-text p:last-of-type{margin-bottom:32px}
+.brand-features{display:flex;flex-direction:column;gap:16px}
+.brand-feature{display:flex;align-items:flex-start;gap:14px}
+.bf-icon{width:40px;height:40px;background:linear-gradient(135deg,rgba(0,144,161,0.2),rgba(0,144,161,0.05));border:1px solid rgba(0,144,161,0.25);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.bf-icon svg{width:19px;height:19px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.bf-text strong{font-weight:700;color:var(--white);display:block;margin-bottom:3px}
+.bf-text span{font-size:0.88rem;color:var(--text-muted)}
+
+/* Brand right visual */
+.brand-visual{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px;position:relative;overflow:hidden}
+.brand-visual::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(0,144,161,0.15),transparent 70%);pointer-events:none}
+.bv-title{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.05em;color:var(--white);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.bv-title-icon{width:28px;height:28px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.bv-title-icon svg{width:14px;height:14px;fill:none;stroke:var(--white);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.bv-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
+.bv-stat{background:rgba(13,5,32,0.5);border:1px solid var(--border);border-radius:10px;padding:14px 8px;text-align:center}
+.bv-stat-num{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--accent-light);line-height:1}
+.bv-stat-label{font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:2px}
+.bv-pledge{background:rgba(0,144,161,0.07);border:1px solid rgba(0,144,161,0.18);border-radius:10px;padding:16px;margin-bottom:18px}
+.bv-pledge p{font-size:0.88rem;color:var(--text-muted);line-height:1.6;font-style:italic}
+.bv-cta{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:0.95rem;padding:13px;border-radius:var(--radius);width:100%;transition:background var(--transition)}
+.bv-cta:hover{background:var(--accent-dark)}
+.bv-cta svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ══════════════════════════════════════
+   6. STATS
+══════════════════════════════════════ */
+.stats-band{padding:80px 0;background:linear-gradient(135deg,var(--primary-dark),#160840);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,4.5rem);color:var(--accent-light);line-height:1;margin-bottom:6px}
+.stat-suffix{font-size:0.55em;vertical-align:middle}
+.stat-label{font-size:0.9rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em}
+
+/* ══════════════════════════════════════
+   7. REVIEWS
+══════════════════════════════════════ */
+.reviews{padding:100px 0;background:var(--primary)}
+.reviews-intro{max-width:600px;margin-bottom:52px}
+.google-badge{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 20px;margin-top:16px}
+.badge-text{font-size:0.82rem;color:var(--text-muted)}
+.badge-text strong{color:var(--white);display:block}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:26px;transition:border-color var(--transition)}
+.review-card:hover{border-color:rgba(0,144,161,0.45)}
+.rc-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.rc-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--white);flex-shrink:0}
+.rc-name{font-weight:700;color:var(--white);font-size:0.9rem}
+.rc-date{font-size:0.75rem;color:var(--text-muted)}
+.rc-stars{display:flex;gap:2px;margin-bottom:10px}
+.rc-star{color:#f59e0b;font-size:0.9rem}
+.rc-text{font-size:0.88rem;color:var(--text-muted);line-height:1.65;font-style:italic}
+
+/* ══════════════════════════════════════
+   8. PROCESS
+══════════════════════════════════════ */
+.process{padding:100px 0;background:var(--surface-alt)}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:52px;position:relative}
+.process-steps::before{content:'';position:absolute;top:40px;left:calc(16.67% + 20px);right:calc(16.67% + 20px);height:2px;background:linear-gradient(90deg,var(--accent),rgba(0,144,161,0.12));z-index:0}
+.step-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px 24px;text-align:center;position:relative;z-index:1}
+.step-num{width:52px;height:52px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--white);margin:0 auto 20px}
+.step-num.pulse{animation:pulse-ring 2.5s ease-out infinite}
+.step-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.05em;color:var(--white);margin-bottom:10px}
+.step-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.6}
+
+/* ══════════════════════════════════════
+   9. CTA BAND — purple+teal gradient
+══════════════════════════════════════ */
+.cta-band{padding:100px 0;background:linear-gradient(135deg,var(--accent-dark) 0%,var(--accent) 50%,#00b8d4 100%);text-align:center}
+.cta-band::after{opacity:0.3}
+.cta-band h2{font-size:clamp(2.2rem,5vw,3.8rem);color:var(--white);margin-bottom:16px}
+.cta-band p{font-size:1.1rem;color:rgba(255,255,255,0.85);max-width:560px;margin:0 auto 36px}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-phone-btn{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--accent-dark);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:16px 36px;border-radius:var(--radius);transition:transform var(--transition),box-shadow var(--transition)}
+.cta-phone-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.25)}
+.cta-phone-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.cta-secondary{display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(255,255,255,0.7);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:14px 32px;border-radius:var(--radius);transition:all var(--transition)}
+.cta-secondary:hover{background:rgba(255,255,255,0.15)}
+.cta-note{margin-top:20px;font-size:0.82rem;color:rgba(255,255,255,0.7);letter-spacing:0.04em}
+
+/* ══════════════════════════════════════
+   10. FOOTER
+══════════════════════════════════════ */
+.site-footer{background:var(--primary-dark);border-top:1px solid var(--border);padding:60px 0 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand .logo-wrap{margin-bottom:14px}
+.footer-brand p{font-size:0.85rem;color:var(--text-muted);line-height:1.65;max-width:280px;margin-bottom:18px}
+.footer-social{display:flex;gap:10px}
+.social-btn{width:36px;height:36px;background:var(--surface);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:border-color var(--transition)}
+.social-btn:hover{border-color:var(--accent)}
+.social-btn svg{width:16px;height:16px;fill:none;stroke:var(--text-muted);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.footer-col h4{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;color:var(--white);margin-bottom:16px;text-transform:uppercase}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:0.85rem;color:var(--text-muted);transition:color var(--transition)}
+.footer-links a:hover{color:var(--accent)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:8px;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px}
+.footer-contact-item svg{width:15px;height:15px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:0.78rem;color:var(--text-muted)}
+.footer-bottom a{color:var(--accent)}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .brand-grid{grid-template-columns:1fr;gap:40px}
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:20px}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .process-steps{grid-template-columns:repeat(2,1fr)}
+  .process-steps::before{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .header-badge{display:none}
+  .services-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr;gap:24px}
+  .trust-bar-inner{gap:20px}
+  .trust-bar-sep{display:none}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  .cta-actions{flex-direction:column;align-items:center}
+  .panel-service-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ 1. HEADER ══ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-wrap">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
+      <div>
+        <div class="logo-text">Tide Turners <span>Plumbing</span></div>
+        <div class="logo-sub">Richardson, TX — Licensed Plumbers</div>
+      </div>
+    </div>
+    <div class="header-badge">
+      <span class="hb-stars">★★★★★</span>
+      <span class="hb-text">4.9 · 208 Reviews</span>
+    </div>
+    <a href="tel:9725211701" class="header-cta">📞 (972) 521-1701</a>
+  </div>
+</header>
+
+<!-- ══ 2. HERO ══ -->
+<section class="hero grain">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow animate-hero">
+          <span class="eyebrow-tag">Richardson's Standout Plumber</span>
+        </div>
+        <h1 class="animate-hero animate-hero-d1">We Turn the <span class="line2">TIDE</span><br>on Plumbing</h1>
+        <p class="hero-sub animate-hero animate-hero-d2">Tide Turners Plumbing doesn't just fix your plumbing — we change the outcome. Licensed pros, upfront pricing, and 4.9-star results that speak for themselves across 208 Richardson reviews.</p>
+        <div class="hero-actions animate-hero animate-hero-d3">
+          <a href="tel:9725211701" class="btn-primary">Call (972) 521-1701</a>
+          <a href="#services" class="btn-outline">Our Services</a>
+        </div>
+        <div class="hero-trust-row animate-hero animate-hero-d4">
+          <div class="stars-row">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <span class="trust-text"><strong>4.9</strong> — 208 Google Reviews</span>
+          <div class="trust-sep"></div>
+          <span class="trust-text">Serving <strong>Richardson &amp; North Dallas</strong></span>
+        </div>
+      </div>
+      <div class="hero-panel animate-hero animate-hero-d2">
+        <div class="panel-heading">
+          <div class="ph-icon"><svg viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></div>
+          Schedule Plumbing Service
+        </div>
+        <p class="panel-sub">Same-day appointments available — Richardson TX</p>
+        <div class="panel-service-grid">
+          <div class="panel-svc"><div class="psi-dot"></div>Drain Cleaning</div>
+          <div class="panel-svc"><div class="psi-dot"></div>Water Heater Service</div>
+          <div class="panel-svc"><div class="psi-dot"></div>Leak Detection</div>
+          <div class="panel-svc"><div class="psi-dot"></div>Sewer Line Repair</div>
+          <div class="panel-svc"><div class="psi-dot"></div>Toilet Repair</div>
+          <div class="panel-svc"><div class="psi-dot"></div>Whole-Home Repipe</div>
+        </div>
+        <a href="tel:9725211701" class="panel-phone-btn">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now: (972) 521-1701
+        </a>
+        <p class="panel-note">Free Estimates · Upfront Pricing · Licensed &amp; Insured</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3. TRUST BAR ══ -->
+<div class="trust-bar">
+  <div class="container trust-bar-inner">
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <span class="trust-item-label">Texas Licensed</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <span class="trust-item-label">4.9★ — 208 Reviews</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <span class="trust-item-label">Same-Day Service</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+      <span class="trust-item-label">Upfront Flat-Rate</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <span class="trust-item-label">Work Guaranteed</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 4. SERVICES ══ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">What We Do</div>
+      <h2>Full-Service Plumbing <span class="accent-text">Richardson TX</span></h2>
+      <p style="max-width:520px;margin-top:10px">From clogged drains to whole-home repiping — Tide Turners handles every plumbing challenge with licensed expertise and the same 4.9-star standard every time.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="sc-title">Drain Cleaning &amp; Hydro-Jetting</div>
+        <p class="sc-desc">Kitchen drains, bathroom clogs, main sewer lines — cleared completely with professional-grade equipment, not a temporary fix.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div class="sc-title">Water Heater Repair &amp; Install</div>
+        <p class="sc-desc">Tank and tankless water heater service. Same-day repairs on most issues, full replacements with quality parts and lasting workmanship.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 0-5 5c0 5.25 5 13 5 13s5-7.75 5-13a5 5 0 0 0-5-5z"/><circle cx="12" cy="7" r="2"/></svg></div>
+        <div class="sc-title">Leak Detection &amp; Repair</div>
+        <p class="sc-desc">Underground, slab, and hidden leaks located with non-invasive technology before they cause major damage. Fast, precise repair follows.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <div class="sc-title">Sewer Line Service</div>
+        <p class="sc-desc">Camera inspection, root clearing, sewer line repair and replacement — full sewer service from the cleanout to the main.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="sc-title">Toilet &amp; Fixture Repair</div>
+        <p class="sc-desc">Running toilets, wobbly bases, leaking supply lines, faucet repairs — same-day solutions with parts on the truck.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="sc-title">Whole-Home Repiping</div>
+        <p class="sc-desc">Old galvanized or poly-b pipes? We repipe your home with PEX for permanent reliability, backed by a full workmanship warranty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 5. BRAND STORY ══ -->
+<section class="brand-story">
+  <div class="container">
+    <div class="brand-grid">
+      <div class="brand-text fade-up">
+        <span class="section-label">The Tide Turners Story</span>
+        <h2>Plumbing That <span class="accent-text">Changes</span><br>the Outcome</h2>
+        <p>Tide Turners Plumbing was built on a simple belief: most homeowners dread calling a plumber because they expect bad news, vague pricing, and work they can't verify. We set out to change that.</p>
+        <p>Every call gets upfront pricing, a licensed technician, and results backed by our workmanship guarantee. That's how we've earned 4.9 stars across 208 Richardson neighbors — one turned tide at a time.</p>
+        <div class="brand-features">
+          <div class="brand-feature">
+            <div class="bf-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="bf-text"><strong>Licensed Texas Plumbers Only</strong><span>No subs, no helpers — every tech is a licensed plumber who owns the result.</span></div>
+          </div>
+          <div class="brand-feature">
+            <div class="bf-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="bf-text"><strong>Zero Surprises on the Invoice</strong><span>Flat-rate pricing quoted and approved before work begins — every time, no exceptions.</span></div>
+          </div>
+          <div class="brand-feature">
+            <div class="bf-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="bf-text"><strong>Workmanship Guarantee</strong><span>If a repair fails under normal use, we come back and make it right at no charge.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="brand-visual fade-up">
+        <div class="bv-title">
+          <div class="bv-title-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          By the Numbers
+        </div>
+        <div class="bv-stats">
+          <div class="bv-stat">
+            <div class="bv-stat-num" data-target="208">0</div>
+            <div class="bv-stat-label">Reviews</div>
+          </div>
+          <div class="bv-stat">
+            <div class="bv-stat-num">4.9★</div>
+            <div class="bv-stat-label">Rating</div>
+          </div>
+          <div class="bv-stat">
+            <div class="bv-stat-num" data-target="100" data-suffix="%">0</div>
+            <div class="bv-stat-label">Licensed</div>
+          </div>
+        </div>
+        <div class="bv-pledge">
+          <p>"We don't just fix plumbing problems — we turn the tide. Every customer leaves with confidence that the job was done right, at the price quoted, by a licensed professional."</p>
+        </div>
+        <a href="tel:9725211701" class="bv-cta">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (972) 521-1701
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 6. STATS ══ -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="208">0</span></div>
+        <div class="stat-label">5-Star Reviews</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-num">4.9<span class="stat-suffix">★</span></div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="100">0</span><span class="stat-suffix">%</span></div>
+        <div class="stat-label">Upfront Pricing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 7. REVIEWS ══ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-intro fade-up">
+      <div class="section-label">What Customers Say</div>
+      <h2>208 Reviews that <span class="accent-text">Say It All</span></h2>
+      <div class="google-badge">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div class="badge-text"><strong>4.9 / 5.0 Rating</strong>208 verified Google reviews — Richardson, TX</div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar">NW</div>
+          <div><div class="rc-name">Nicole W.</div><div class="rc-date">2 weeks ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Tide Turners is the real deal. Had a slab leak detected and repaired — minimal drywall damage, done in one day, price matched the quote exactly. Phenomenal team."</p>
+      </div>
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar" style="background:linear-gradient(135deg,#006b78,#0090a1)">PL</div>
+          <div><div class="rc-name">Paul L.</div><div class="rc-date">1 month ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Called about a backed-up sewer line on a Sunday. Tech arrived within 2 hours, ran a camera, hydro-jetted the blockage, and had us back to normal before dinner. Unreal service."</p>
+      </div>
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar" style="background:linear-gradient(135deg,#003d46,#006b78)">KA</div>
+          <div><div class="rc-name">Karen A.</div><div class="rc-date">7 weeks ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"The name really fits. I had a plumbing nightmare — three separate issues discovered at once. They prioritized, quoted everything upfront, and fixed it all. My tide has turned."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 8. PROCESS ══ -->
+<section class="process">
+  <div class="container">
+    <div class="section-header fade-up" style="text-align:center">
+      <div class="section-label">How We Work</div>
+      <h2>Three Steps to <span class="accent-text">Turned Tides</span></h2>
+      <p style="max-width:480px;margin:10px auto 0">Simple, honest, and no surprises — that's the Tide Turners way.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step-card fade-up">
+        <div class="step-num pulse">1</div>
+        <div class="step-title">Call for Service</div>
+        <p class="step-desc">Describe the problem. We schedule same-day or next-day in Richardson and surrounding North Dallas areas.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">2</div>
+        <div class="step-title">Upfront Quote</div>
+        <p class="step-desc">Your licensed plumber diagnoses, explains clearly, and presents a flat-rate price you approve before work begins.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">3</div>
+        <div class="step-title">Tide Turned</div>
+        <p class="step-desc">Job completed correctly, site cleaned, workmanship guaranteed. Invoice matches the quote — the tide has officially turned.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 9. CTA BAND ══ -->
+<section class="cta-band grain">
+  <div class="container">
+    <h2>Ready to Turn the Tide<br>on Your Plumbing?</h2>
+    <p>Call Tide Turners Plumbing — Richardson's 4.9-star choice for upfront pricing, licensed techs, and work that's guaranteed every time.</p>
+    <div class="cta-actions">
+      <a href="tel:9725211701" class="cta-phone-btn">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (972) 521-1701
+      </a>
+      <a href="#services" class="cta-secondary">See All Services</a>
+    </div>
+    <p class="cta-note">Richardson · Plano · Allen · Garland · Rowlett · North Dallas</p>
+  </div>
+</section>
+
+<!-- ══ 10. FOOTER ══ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div>
+            <div class="logo-text">Tide Turners <span>Plumbing</span></div>
+            <div class="logo-sub">Richardson, TX</div>
+          </div>
+        </div>
+        <p>Richardson's standout plumbing company — distinctive, dependable, and 4.9-star rated. We turn the tide on every plumbing problem.</p>
+        <div class="footer-social">
+          <div class="social-btn"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+          <div class="social-btn"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="#services">Drain Cleaning</a>
+          <a href="#services">Water Heater Service</a>
+          <a href="#services">Leak Detection</a>
+          <a href="#services">Sewer Line Service</a>
+          <a href="#services">Toilet &amp; Fixture Repair</a>
+          <a href="#services">Whole-Home Repiping</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:9725211701" style="color:var(--accent)">(972) 521-1701</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Richardson, TX &amp; North Dallas</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon–Sat: 7am–7pm</span>
+        </div>
+        <div style="margin-top:16px">
+          <a href="tel:9725211701" class="btn-primary" style="font-size:0.88rem;padding:10px 20px">Call Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Tide Turners Plumbing. All rights reserved. | <a href="#">Privacy Policy</a></p>
+      <span style="font-size:0.78rem;color:var(--text-muted)">Texas Licensed Plumber · Richardson, TX 75080</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Scroll animations ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ── Stat counters ──
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - elapsed, 3);
+    el.textContent = Math.round(ease * target) + suffix;
+    if (elapsed < 1) requestAnimationFrame(update);
+    else el.textContent = target + suffix;
+  }
+  requestAnimationFrame(update);
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      if (e.target.dataset.target !== undefined) animateCounter(e.target);
+      counterObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.counter, [data-target]').forEach(el => counterObserver.observe(el));
+
+// ── Header scroll ──
+window.addEventListener('scroll', () => {
+  document.querySelector('.site-header').style.background =
+    window.scrollY > 40 ? 'rgba(13,5,32,0.98)' : 'rgba(13,5,32,0.92)';
+}, { passive: true });
+</script>
+</body>
+</html>

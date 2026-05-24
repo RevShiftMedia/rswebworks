@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L&amp;S Mechanical | Richardson TX HVAC &amp; Mechanical Contractors</title>
+<meta name="description" content="L&amp;S Mechanical — Richardson TX's most-reviewed HVAC company. 4.9 stars, 2,099+ reviews. AC, heating, commercial HVAC &amp; more. Call (877) 577-5862.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Design tokens ── */
+:root {
+  --primary:       #152231;
+  --primary-dark:  #0a1420;
+  --accent:        #d4950a;
+  --accent-dark:   #a87308;
+  --accent-light:  #f5b93a;
+  --text-light:    #f0f6ff;
+  --text-muted:    #94a3b8;
+  --surface:       #1c2e40;
+  --surface-alt:   #101e2c;
+  --border:        rgba(212,149,10,0.18);
+  --white:         #ffffff;
+  --radius:        10px;
+  --shadow:        0 4px 24px rgba(0,0,0,0.45);
+  --transition:    0.3s ease;
+}
+
+/* ── Reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:var(--primary);color:var(--text-light);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* ── Typography ── */
+h1,h2,h3,.font-display{font-family:'Bebas Neue',sans-serif;letter-spacing:0.04em;line-height:1.05}
+h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:0.5rem}
+h3{font-size:1.2rem;margin-bottom:0.4rem}
+p{font-size:1rem;color:var(--text-muted)}
+
+/* ── Utility ── */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.accent-text{color:var(--accent)}
+.section-label{font-family:'Bebas Neue',sans-serif;letter-spacing:0.18em;font-size:0.85rem;color:var(--accent);text-transform:uppercase;margin-bottom:0.6rem}
+.btn-primary{display:inline-block;background:var(--accent);color:var(--primary-dark);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:14px 32px;border-radius:var(--radius);border:none;cursor:pointer;transition:background var(--transition),transform var(--transition);text-align:center}
+.btn-primary:hover{background:var(--accent-light);transform:translateY(-2px)}
+.btn-outline{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:12px 30px;border-radius:var(--radius);cursor:pointer;transition:all var(--transition);text-align:center}
+.btn-outline:hover{background:var(--accent);color:var(--primary-dark)}
+
+/* ── Grain overlay ── */
+.grain{position:relative}
+.grain::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");opacity:0.5;pointer-events:none;z-index:1}
+.grain>*{position:relative;z-index:2}
+
+/* ── Animations ── */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(212,149,10,0.45)}70%{box-shadow:0 0 0 14px rgba(212,149,10,0)}100%{box-shadow:0 0 0 0 rgba(212,149,10,0)}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+
+.animate-hero{animation:heroFadeUp 0.85s cubic-bezier(0.22,1,0.36,1) both}
+.animate-hero-d1{animation-delay:0.15s}
+.animate-hero-d2{animation-delay:0.3s}
+.animate-hero-d3{animation-delay:0.45s}
+.animate-hero-d4{animation-delay:0.6s}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* ══════════════════════════════════════
+   1. HEADER
+══════════════════════════════════════ */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,20,32,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo-wrap{display:flex;align-items:center;gap:12px}
+.logo-icon{width:38px;height:38px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-icon svg{width:21px;height:21px;fill:none;stroke:var(--primary-dark);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.06em;color:var(--white);line-height:1.1}
+.logo-text span{color:var(--accent)}
+.logo-sub{font-family:'Open Sans',sans-serif;font-size:0.67rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase}
+.header-review-badge{display:flex;align-items:center;gap:8px;background:rgba(212,149,10,0.1);border:1px solid rgba(212,149,10,0.25);border-radius:8px;padding:6px 14px}
+.hrb-stars{color:#f59e0b;font-size:0.85rem;letter-spacing:1px}
+.hrb-text{font-size:0.75rem;font-weight:700;color:var(--accent-light)}
+.header-cta{background:var(--accent);color:var(--primary-dark);font-family:'Open Sans',sans-serif;font-weight:700;font-size:0.95rem;padding:10px 22px;border-radius:var(--radius);white-space:nowrap;transition:background var(--transition)}
+.header-cta:hover{background:var(--accent-light)}
+
+/* ══════════════════════════════════════
+   2. HERO — credibility-first layout
+══════════════════════════════════════ */
+.hero{min-height:100vh;background:linear-gradient(150deg,var(--primary-dark) 0%,#112030 45%,#0e1a28 100%);display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.eyebrow-tag{font-family:'Open Sans',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);background:rgba(212,149,10,0.1);border:1px solid rgba(212,149,10,0.3);padding:5px 14px;border-radius:20px}
+.hero h1{font-size:clamp(3rem,6.5vw,5.4rem);color:var(--white);margin-bottom:20px}
+.hero h1 .line2{color:var(--accent)}
+.hero-sub{font-size:1.08rem;color:var(--text-muted);max-width:480px;margin-bottom:28px;line-height:1.7}
+
+/* Big review count in hero */
+.hero-review-block{background:linear-gradient(135deg,rgba(212,149,10,0.12),rgba(212,149,10,0.04));border:1px solid rgba(212,149,10,0.28);border-radius:14px;padding:20px 24px;margin-bottom:28px;display:flex;align-items:center;gap:20px}
+.hrb-big-num{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;color:var(--accent);line-height:1;flex-shrink:0}
+.hrb-divider{width:1px;height:48px;background:rgba(212,149,10,0.3)}
+.hrb-details{flex:1}
+.hrb-stars-lg{display:flex;gap:3px;margin-bottom:4px}
+.hrb-star{color:#f59e0b;font-size:1.05rem}
+.hrb-rating{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--accent);line-height:1;margin-bottom:2px}
+.hrb-label{font-size:0.78rem;color:var(--text-muted)}
+
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:28px}
+.hero-service-pills{display:flex;gap:8px;flex-wrap:wrap}
+.sp{font-size:0.76rem;font-weight:700;letter-spacing:0.05em;color:var(--text-muted);background:rgba(21,34,49,0.8);border:1px solid rgba(212,149,10,0.14);padding:5px 12px;border-radius:20px}
+
+/* Hero right panel */
+.hero-panel{background:rgba(10,20,32,0.8);border:1px solid var(--border);border-radius:16px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:30px;box-shadow:var(--shadow)}
+.panel-gold-header{background:linear-gradient(135deg,rgba(212,149,10,0.15),rgba(212,149,10,0.05));border:1px solid rgba(212,149,10,0.22);border-radius:10px;padding:16px 18px;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.pgh-icon{width:36px;height:36px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pgh-icon svg{width:18px;height:18px;fill:none;stroke:var(--primary-dark);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.pgh-title{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:0.05em;color:var(--white)}
+.pgh-sub{font-size:0.75rem;color:var(--text-muted)}
+.panel-service-list{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.panel-svc-item{display:flex;align-items:center;gap:10px;padding:9px 12px;background:rgba(10,20,32,0.5);border:1px solid rgba(212,149,10,0.1);border-radius:8px;font-size:0.87rem;color:var(--text-muted)}
+.psi-dot{width:7px;height:7px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.panel-phone-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--primary-dark);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:14px;border-radius:var(--radius);width:100%;transition:background var(--transition)}
+.panel-phone-btn:hover{background:var(--accent-light)}
+.panel-phone-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.panel-note{text-align:center;font-size:0.77rem;color:var(--text-muted);margin-top:9px}
+
+/* ══════════════════════════════════════
+   3. CREDIBILITY BAND — social proof strip
+══════════════════════════════════════ */
+.cred-band{background:var(--surface-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0}
+.cred-inner{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.cred-item{display:flex;align-items:center;gap:10px}
+.cred-item-icon{width:34px;height:34px;background:rgba(212,149,10,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cred-item-icon svg{width:17px;height:17px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cred-item-label{font-family:'Open Sans',sans-serif;font-size:0.82rem;font-weight:700;color:var(--white);letter-spacing:0.04em}
+.cred-sep{width:1px;height:30px;background:var(--border)}
+
+/* ══════════════════════════════════════
+   4. SERVICES
+══════════════════════════════════════ */
+.services{padding:100px 0;background:var(--primary)}
+.section-header{margin-bottom:52px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px;transition:border-color var(--transition),transform var(--transition),box-shadow var(--transition)}
+.service-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 8px 28px rgba(212,149,10,0.15)}
+.sc-icon{width:48px;height:48px;background:linear-gradient(135deg,rgba(212,149,10,0.18),rgba(212,149,10,0.06));border:1px solid rgba(212,149,10,0.22);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.sc-icon svg{width:24px;height:24px;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sc-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.05em;color:var(--white);margin-bottom:8px}
+.sc-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.6;margin-bottom:12px}
+.sc-tag{display:inline-block;font-size:0.72rem;font-weight:700;color:var(--accent);letter-spacing:0.07em;text-transform:uppercase;background:rgba(212,149,10,0.08);border:1px solid rgba(212,149,10,0.2);padding:3px 10px;border-radius:20px}
+
+/* ══════════════════════════════════════
+   5. WHY US
+══════════════════════════════════════ */
+.why-us{padding:100px 0;background:var(--surface-alt)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.why-content .section-label{display:block;margin-bottom:8px}
+.why-content h2{margin-bottom:16px}
+.why-content>p{margin-bottom:36px;font-size:1.05rem;line-height:1.75}
+.why-points{display:flex;flex-direction:column;gap:20px}
+.why-point{display:flex;align-items:flex-start;gap:14px}
+.wp-icon{width:40px;height:40px;background:linear-gradient(135deg,rgba(212,149,10,0.18),rgba(212,149,10,0.05));border:1px solid rgba(212,149,10,0.22);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.wp-icon svg{width:19px;height:19px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wp-text strong{font-weight:700;color:var(--white);display:block;margin-bottom:3px}
+.wp-text span{font-size:0.88rem;color:var(--text-muted)}
+
+/* Proof panel */
+.proof-panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px;position:sticky;top:100px}
+.pp-review-mega{text-align:center;padding:24px;background:linear-gradient(135deg,rgba(212,149,10,0.12),rgba(212,149,10,0.04));border:1px solid rgba(212,149,10,0.25);border-radius:12px;margin-bottom:22px}
+.pp-review-num{font-family:'Bebas Neue',sans-serif;font-size:4.2rem;color:var(--accent);line-height:1;letter-spacing:0.02em}
+.pp-review-label{font-size:0.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px}
+.pp-stars{display:flex;justify-content:center;gap:4px;margin-bottom:4px}
+.pp-star{color:#f59e0b;font-size:1.1rem}
+.pp-rating{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--accent-light)}
+.pp-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+.pp-metric{background:rgba(10,20,32,0.5);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center}
+.pp-metric-num{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--accent);line-height:1}
+.pp-metric-label{font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:2px}
+.pp-cta{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--primary-dark);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:14px;border-radius:var(--radius);width:100%;transition:background var(--transition)}
+.pp-cta:hover{background:var(--accent-light)}
+.pp-cta svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ══════════════════════════════════════
+   6. STATS — hero-scale counters
+══════════════════════════════════════ */
+.stats-band{padding:80px 0;background:linear-gradient(135deg,var(--primary-dark),#101e2c);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,4.8rem);color:var(--accent);line-height:1;margin-bottom:6px}
+.stat-suffix{font-size:0.55em;vertical-align:middle}
+.stat-label{font-size:0.9rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em}
+
+/* ══════════════════════════════════════
+   7. REVIEWS — curated from 2099
+══════════════════════════════════════ */
+.reviews{padding:100px 0;background:var(--primary)}
+.reviews-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:20px}
+.reviews-intro .section-label{display:block;margin-bottom:8px}
+.reviews-intro h2{margin-bottom:0}
+.reviews-summary{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 24px;display:flex;align-items:center;gap:16px;white-space:nowrap}
+.rs-num{font-family:'Bebas Neue',sans-serif;font-size:2.4rem;color:var(--accent);line-height:1}
+.rs-stars{display:flex;gap:2px;margin-bottom:3px}
+.rs-star{color:#f59e0b;font-size:0.85rem}
+.rs-label{font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:26px;transition:border-color var(--transition)}
+.review-card:hover{border-color:rgba(212,149,10,0.4)}
+.rc-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.rc-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--primary-dark);flex-shrink:0}
+.rc-name{font-weight:700;color:var(--white);font-size:0.9rem}
+.rc-date{font-size:0.75rem;color:var(--text-muted)}
+.rc-stars{display:flex;gap:2px;margin-bottom:10px}
+.rc-star{color:#f59e0b;font-size:0.9rem}
+.rc-text{font-size:0.88rem;color:var(--text-muted);line-height:1.65;font-style:italic}
+
+/* ══════════════════════════════════════
+   8. PROCESS
+══════════════════════════════════════ */
+.process{padding:100px 0;background:var(--surface-alt)}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:52px;position:relative}
+.process-steps::before{content:'';position:absolute;top:40px;left:calc(16.67% + 20px);right:calc(16.67% + 20px);height:2px;background:linear-gradient(90deg,var(--accent),rgba(212,149,10,0.15));z-index:0}
+.step-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px 24px;text-align:center;position:relative;z-index:1}
+.step-num{width:52px;height:52px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--primary-dark);margin:0 auto 20px}
+.step-num.pulse{animation:pulse-ring 2.5s ease-out infinite}
+.step-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.05em;color:var(--white);margin-bottom:10px}
+.step-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.6}
+
+/* ══════════════════════════════════════
+   9. CTA BAND
+══════════════════════════════════════ */
+.cta-band{padding:100px 0;background:linear-gradient(135deg,#0a1420 0%,#152231 40%,#1a2d40 100%);text-align:center;border-top:2px solid var(--accent)}
+.cta-band::after{opacity:0.3}
+.cta-band h2{font-size:clamp(2.2rem,5vw,3.8rem);color:var(--white);margin-bottom:16px}
+.cta-band .accent-text{background:linear-gradient(90deg,var(--accent),var(--accent-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cta-band p{font-size:1.1rem;color:var(--text-muted);max-width:580px;margin:0 auto 36px}
+.cta-review-bar{display:inline-flex;align-items:center;gap:12px;background:rgba(212,149,10,0.1);border:1px solid rgba(212,149,10,0.25);border-radius:10px;padding:12px 24px;margin-bottom:36px}
+.crb-stars{color:#f59e0b;font-size:1rem;letter-spacing:2px}
+.crb-text{font-family:'Open Sans',sans-serif;font-size:0.85rem;font-weight:700;color:var(--accent-light)}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-phone-btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--primary-dark);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:16px 36px;border-radius:var(--radius);transition:background var(--transition),transform var(--transition)}
+.cta-phone-btn:hover{background:var(--accent-light);transform:translateY(-2px)}
+.cta-phone-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.cta-secondary{display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(212,149,10,0.5);color:var(--accent);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:14px 32px;border-radius:var(--radius);transition:all var(--transition)}
+.cta-secondary:hover{background:rgba(212,149,10,0.1)}
+.cta-note{margin-top:20px;font-size:0.82rem;color:var(--text-muted);letter-spacing:0.04em}
+
+/* ══════════════════════════════════════
+   10. FOOTER
+══════════════════════════════════════ */
+.site-footer{background:var(--primary-dark);border-top:1px solid var(--border);padding:60px 0 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand .logo-wrap{margin-bottom:14px}
+.footer-brand p{font-size:0.85rem;color:var(--text-muted);line-height:1.65;max-width:280px;margin-bottom:18px}
+.footer-social{display:flex;gap:10px}
+.social-btn{width:36px;height:36px;background:var(--surface);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:border-color var(--transition)}
+.social-btn:hover{border-color:var(--accent)}
+.social-btn svg{width:16px;height:16px;fill:none;stroke:var(--text-muted);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.footer-col h4{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;color:var(--white);margin-bottom:16px;text-transform:uppercase}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:0.85rem;color:var(--text-muted);transition:color var(--transition)}
+.footer-links a:hover{color:var(--accent)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:8px;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px}
+.footer-contact-item svg{width:15px;height:15px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:0.78rem;color:var(--text-muted)}
+.footer-bottom a{color:var(--accent)}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:1fr;gap:40px}
+  .proof-panel{position:static}
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:20px}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .reviews-header{flex-direction:column;align-items:flex-start}
+  .process-steps{grid-template-columns:repeat(2,1fr)}
+  .process-steps::before{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .header-review-badge{display:none}
+  .services-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr;gap:24px}
+  .cred-inner{gap:20px}
+  .cred-sep{display:none}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  .cta-actions{flex-direction:column;align-items:center}
+  .hero-service-pills{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ 1. HEADER ══ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-wrap">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+      </div>
+      <div>
+        <div class="logo-text">L<span>&amp;</span>S Mechanical</div>
+        <div class="logo-sub">Richardson, TX — HVAC &amp; Mechanical</div>
+      </div>
+    </div>
+    <div class="header-review-badge">
+      <span class="hrb-stars">★★★★★</span>
+      <span class="hrb-text">4.9 · 2,099 Reviews</span>
+    </div>
+    <a href="tel:8775775862" class="header-cta">📞 (877) 577-5862</a>
+  </div>
+</header>
+
+<!-- ══ 2. HERO ══ -->
+<section class="hero grain">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow animate-hero">
+          <span class="eyebrow-tag">Richardson's Most-Reviewed HVAC Co.</span>
+        </div>
+        <h1 class="animate-hero animate-hero-d1">Richardson's <span class="line2">Most Trusted</span><br>Mechanical</h1>
+        <p class="hero-sub animate-hero animate-hero-d2">When over 2,000 neighbors have reviewed a service company with 4.9 stars, that's not luck — it's a standard. L&amp;S Mechanical delivers exceptional HVAC and mechanical service every single call.</p>
+        <div class="hero-review-block animate-hero animate-hero-d3">
+          <div class="hrb-big-num"><span class="counter" data-target="2099">0</span></div>
+          <div class="hrb-divider"></div>
+          <div class="hrb-details">
+            <div class="hrb-stars-lg">
+              <span class="hrb-star">★</span><span class="hrb-star">★</span><span class="hrb-star">★</span><span class="hrb-star">★</span><span class="hrb-star">★</span>
+            </div>
+            <div class="hrb-rating">4.9 Stars</div>
+            <div class="hrb-label">Verified Google Reviews — Richardson TX</div>
+          </div>
+        </div>
+        <div class="hero-actions animate-hero animate-hero-d4">
+          <a href="tel:8775775862" class="btn-primary">Call (877) 577-5862</a>
+          <a href="#services" class="btn-outline">Our Services</a>
+        </div>
+        <div class="hero-service-pills animate-hero animate-hero-d4">
+          <span class="sp">AC Repair</span>
+          <span class="sp">Heating</span>
+          <span class="sp">Commercial HVAC</span>
+          <span class="sp">Maintenance</span>
+        </div>
+      </div>
+      <div class="hero-panel animate-hero animate-hero-d2">
+        <div class="panel-gold-header">
+          <div class="pgh-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <div class="pgh-title">Request Service Today</div>
+            <div class="pgh-sub">Residential &amp; Commercial · Richardson TX</div>
+          </div>
+        </div>
+        <div class="panel-service-list">
+          <div class="panel-svc-item"><div class="psi-dot"></div>AC Repair &amp; Emergency Service</div>
+          <div class="panel-svc-item"><div class="psi-dot"></div>Heating &amp; Furnace Repair</div>
+          <div class="panel-svc-item"><div class="psi-dot"></div>New System Installation</div>
+          <div class="panel-svc-item"><div class="psi-dot"></div>Commercial HVAC Service</div>
+          <div class="panel-svc-item"><div class="psi-dot"></div>Preventive Maintenance Plans</div>
+          <div class="panel-svc-item"><div class="psi-dot"></div>Indoor Air Quality Solutions</div>
+        </div>
+        <a href="tel:8775775862" class="panel-phone-btn">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now: (877) 577-5862
+        </a>
+        <p class="panel-note">Same-Day Service · Commercial &amp; Residential</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3. CREDIBILITY BAR ══ -->
+<div class="cred-band">
+  <div class="container cred-inner">
+    <div class="cred-item">
+      <div class="cred-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <span class="cred-item-label">4.9★ — 2,099 Reviews</span>
+    </div>
+    <div class="cred-sep"></div>
+    <div class="cred-item">
+      <div class="cred-item-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <span class="cred-item-label">Licensed &amp; Insured</span>
+    </div>
+    <div class="cred-sep"></div>
+    <div class="cred-item">
+      <div class="cred-item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <span class="cred-item-label">Same-Day Available</span>
+    </div>
+    <div class="cred-sep"></div>
+    <div class="cred-item">
+      <div class="cred-item-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+      <span class="cred-item-label">Commercial &amp; Residential</span>
+    </div>
+    <div class="cred-sep"></div>
+    <div class="cred-item">
+      <div class="cred-item-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+      <span class="cred-item-label">Upfront Pricing</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 4. SERVICES ══ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Our Services</div>
+      <h2>HVAC &amp; Mechanical Solutions <span class="accent-text">Built to Last</span></h2>
+      <p style="max-width:520px;margin-top:10px">Residential and commercial HVAC service backed by 2,099 five-star reviews and decades of Richardson TX experience.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83"/></svg></div>
+        <div class="sc-title">AC Repair &amp; Diagnostics</div>
+        <p class="sc-desc">Fast, accurate diagnosis from NATE-certified technicians. Refrigerant issues, capacitor failures, compressor problems — resolved same day when possible.</p>
+        <span class="sc-tag">Most Reviewed</span>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <div class="sc-title">New HVAC Installation</div>
+        <p class="sc-desc">Properly sized, high-efficiency systems installed right. We carry all major brands and provide detailed load calculations for every home.</p>
+        <span class="sc-tag">Free Estimate</span>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M12 2c0 0-4 6-4 10a4 4 0 0 0 8 0c0-4-4-10-4-10z"/></svg></div>
+        <div class="sc-title">Heating &amp; Furnace</div>
+        <p class="sc-desc">Furnace repair, heat pump service, full replacement — we keep your home warm when temperatures drop unexpectedly.</p>
+        <span class="sc-tag">Winter-Ready</span>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="sc-title">Commercial HVAC</div>
+        <p class="sc-desc">RTUs, split systems, VRF, chiller service — L&amp;S handles commercial buildings, offices, retail, and industrial facilities across DFW.</p>
+        <span class="sc-tag">Commercial Experts</span>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <div class="sc-title">Preventive Maintenance</div>
+        <p class="sc-desc">Annual and semi-annual maintenance plans that extend equipment life, lower energy bills, and catch issues before they become emergencies.</p>
+        <span class="sc-tag">Save Money</span>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="sc-title">Indoor Air Quality</div>
+        <p class="sc-desc">Air purifiers, UV systems, humidity control, HEPA filtration — we improve what you breathe, not just how cool or warm your home is.</p>
+        <span class="sc-tag">Whole-Home Health</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 5. WHY US ══ -->
+<section class="why-us">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-content fade-up">
+        <span class="section-label">Why L&amp;S Mechanical</span>
+        <h2>2,099 Customers <span class="accent-text">Can't Be Wrong</span></h2>
+        <p>When a company accumulates over 2,000 reviews with a 4.9-star average, it reflects a system — not a streak of luck. L&amp;S Mechanical built that reputation through consistent professionalism, honest pricing, and technical excellence.</p>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <div class="wp-text"><strong>4.9 Stars Across 2,099 Reviews</strong><span>The most-reviewed HVAC company in Richardson — earned one satisfied customer at a time.</span></div>
+          </div>
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="wp-text"><strong>NATE-Certified Technicians</strong><span>Our team holds North American Technician Excellence certification — the gold standard in HVAC.</span></div>
+          </div>
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+            <div class="wp-text"><strong>Commercial &amp; Residential</strong><span>Full-scale commercial service alongside residential — no job too small, no building too large.</span></div>
+          </div>
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="wp-text"><strong>Flat-Rate Upfront Pricing</strong><span>Every service call includes a complete diagnosis and flat-rate quote before work begins.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="proof-panel fade-up">
+        <div class="pp-review-mega">
+          <div class="pp-review-label">Verified Google Reviews</div>
+          <div class="pp-review-num" data-target="2099">0</div>
+          <div class="pp-stars">
+            <span class="pp-star">★</span><span class="pp-star">★</span><span class="pp-star">★</span><span class="pp-star">★</span><span class="pp-star">★</span>
+          </div>
+          <div class="pp-rating">4.9 / 5.0 Rating</div>
+        </div>
+        <div class="pp-metrics">
+          <div class="pp-metric">
+            <div class="pp-metric-num">NATE</div>
+            <div class="pp-metric-label">Certified Techs</div>
+          </div>
+          <div class="pp-metric">
+            <div class="pp-metric-num">Same</div>
+            <div class="pp-metric-label">Day Service</div>
+          </div>
+          <div class="pp-metric">
+            <div class="pp-metric-num">Res +</div>
+            <div class="pp-metric-label">Commercial</div>
+          </div>
+          <div class="pp-metric">
+            <div class="pp-metric-num">0</div>
+            <div class="pp-metric-label">Hidden Fees</div>
+          </div>
+        </div>
+        <a href="tel:8775775862" class="pp-cta">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (877) 577-5862
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 6. STATS ══ -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="2099">0</span></div>
+        <div class="stat-label">Google Reviews</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-num">4.9<span class="stat-suffix">★</span></div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="20">0</span><span class="stat-suffix">+</span></div>
+        <div class="stat-label">Years in Richardson TX</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 7. REVIEWS ══ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div class="reviews-intro fade-up">
+        <div class="section-label">From Our 2,099 Reviews</div>
+        <h2>What Richardson Customers <span class="accent-text">Keep Saying</span></h2>
+      </div>
+      <div class="reviews-summary fade-up">
+        <div class="rs-num">2,099</div>
+        <div>
+          <div class="rs-stars"><span class="rs-star">★</span><span class="rs-star">★</span><span class="rs-star">★</span><span class="rs-star">★</span><span class="rs-star">★</span></div>
+          <div class="rs-label">4.9 avg · Google Reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar">DM</div>
+          <div><div class="rc-name">Daniel M.</div><div class="rc-date">1 week ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"AC failed on a 102° Saturday. L&amp;S had a tech here by 2pm, diagnosed a bad capacitor, and had it running in 45 minutes. Incredible response. This is who you call."</p>
+      </div>
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar" style="background:linear-gradient(135deg,#a87308,#d4950a)">CR</div>
+          <div><div class="rc-name">Carol R.</div><div class="rc-date">3 weeks ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"I've been using L&amp;S for 6 years on our commercial building. They're prompt, always honest about what's needed and what isn't. That trust is why I keep calling them."</p>
+      </div>
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar" style="background:linear-gradient(135deg,#5c3e00,#a87308)">JF</div>
+          <div><div class="rc-name">James F.</div><div class="rc-date">1 month ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Replaced our entire HVAC system — 3 quotes, L&amp;S was mid-range in price but far superior in what they included. Installation was flawless. Energy bill dropped 18%."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 8. PROCESS ══ -->
+<section class="process">
+  <div class="container">
+    <div class="section-header fade-up" style="text-align:center">
+      <div class="section-label">How We Work</div>
+      <h2>Service as Good as <span class="accent-text">Our Reviews</span></h2>
+      <p style="max-width:480px;margin:10px auto 0">The system that earned 2,099 five-star reviews — consistent, professional, every time.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step-card fade-up">
+        <div class="step-num pulse">1</div>
+        <div class="step-title">Call or Schedule</div>
+        <p class="step-desc">Reach us by phone — residential and commercial calls handled the same day when possible.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">2</div>
+        <div class="step-title">Expert Diagnosis</div>
+        <p class="step-desc">NATE-certified tech arrives, performs thorough diagnosis, and provides flat-rate quote with no pressure.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">3</div>
+        <div class="step-title">Fixed Right</div>
+        <p class="step-desc">Work completed to manufacturer specs, system tested thoroughly — and you'll understand exactly what was done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 9. CTA BAND ══ -->
+<section class="cta-band grain">
+  <div class="container">
+    <h2>Join 2,099 Satisfied<br><span class="accent-text">L&amp;S Customers</span></h2>
+    <div class="cta-review-bar">
+      <span class="crb-stars">★★★★★</span>
+      <span class="crb-text">4.9 Stars — 2,099 Google Reviews — Richardson TX</span>
+    </div>
+    <p>For HVAC service you can actually trust — residential or commercial — call L&amp;S Mechanical. Same-day availability, upfront pricing, and work that earns 5-star reviews.</p>
+    <div class="cta-actions">
+      <a href="tel:8775775862" class="cta-phone-btn">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (877) 577-5862
+      </a>
+      <a href="#services" class="cta-secondary">All Services</a>
+    </div>
+    <p class="cta-note">Richardson · Plano · Allen · Garland · Dallas · All of DFW</p>
+  </div>
+</section>
+
+<!-- ══ 10. FOOTER ══ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="#0a1420" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+          </div>
+          <div>
+            <div class="logo-text">L<span>&amp;</span>S Mechanical</div>
+            <div class="logo-sub">Richardson, TX</div>
+          </div>
+        </div>
+        <p>Richardson's most-reviewed HVAC company — 4.9 stars across 2,099 reviews. Residential and commercial service you can trust.</p>
+        <div class="footer-social">
+          <div class="social-btn"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+          <div class="social-btn"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="#services">AC Repair &amp; Diagnostics</a>
+          <a href="#services">New HVAC Installation</a>
+          <a href="#services">Heating &amp; Furnace</a>
+          <a href="#services">Commercial HVAC</a>
+          <a href="#services">Preventive Maintenance</a>
+          <a href="#services">Indoor Air Quality</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:8775775862" style="color:var(--accent)">(877) 577-5862</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Richardson, TX &amp; All of DFW</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon–Sat: 7am–7pm</span>
+        </div>
+        <div style="margin-top:16px">
+          <a href="tel:8775775862" class="btn-primary" style="font-size:0.88rem;padding:10px 20px">Call Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 L&amp;S Mechanical. All rights reserved. | <a href="#">Privacy Policy</a></p>
+      <span style="font-size:0.78rem;color:var(--text-muted)">Texas HVAC Contractor · Richardson, TX 75080</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Scroll animations ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ── Stat counters ──
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const suffix = el.dataset.suffix || '';
+  const duration = target > 1000 ? 2200 : 1600;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - elapsed, 3);
+    const val = Math.round(ease * target);
+    el.textContent = val.toLocaleString() + suffix;
+    if (elapsed < 1) requestAnimationFrame(update);
+    else el.textContent = target.toLocaleString() + suffix;
+  }
+  requestAnimationFrame(update);
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      if (e.target.dataset.target !== undefined) animateCounter(e.target);
+      counterObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.counter, [data-target]').forEach(el => counterObserver.observe(el));
+
+// ── Header scroll ──
+window.addEventListener('scroll', () => {
+  document.querySelector('.site-header').style.background =
+    window.scrollY > 40 ? 'rgba(10,20,32,0.98)' : 'rgba(10,20,32,0.92)';
+}, { passive: true });
+</script>
+</body>
+</html>

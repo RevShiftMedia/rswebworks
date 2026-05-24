@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lambright Electric Allen TX | Licensed Electricians in Allen, Texas</title>
+<meta name="description" content="Lambright Electric — Allen's trusted licensed electricians. Panel upgrades, EV charger installs, outlet repair & more. 5-star rated. Call (214) 815-6745.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Design tokens ── */
+:root {
+  --primary:       #111827;
+  --primary-dark:  #080d14;
+  --accent:        #2563eb;
+  --accent-dark:   #1a4dc4;
+  --text-light:    #f1f5f9;
+  --text-muted:    #94a3b8;
+  --surface:       #1e2a3a;
+  --surface-alt:   #162030;
+  --border:        rgba(37,99,235,0.18);
+  --white:         #ffffff;
+  --radius:        10px;
+  --shadow:        0 4px 24px rgba(0,0,0,0.45);
+  --transition:    0.3s ease;
+}
+
+/* ── Reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:var(--primary);color:var(--text-light);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* ── Typography ── */
+h1,h2,h3,.font-display{font-family:'Bebas Neue',sans-serif;letter-spacing:0.04em;line-height:1.05}
+h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:0.5rem}
+h3{font-size:1.25rem;margin-bottom:0.5rem}
+p{font-size:1rem;color:var(--text-muted)}
+
+/* ── Utility ── */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.accent-text{color:var(--accent)}
+.section-label{font-family:'Bebas Neue',sans-serif;letter-spacing:0.18em;font-size:0.85rem;color:var(--accent);text-transform:uppercase;margin-bottom:0.6rem}
+.btn-primary{display:inline-block;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:14px 32px;border-radius:var(--radius);border:none;cursor:pointer;transition:background var(--transition),transform var(--transition);text-align:center}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-outline{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:12px 30px;border-radius:var(--radius);cursor:pointer;transition:all var(--transition);text-align:center}
+.btn-outline:hover{background:var(--accent);color:var(--white)}
+
+/* ── Grain overlay mixin ── */
+.grain{position:relative}
+.grain::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");opacity:0.55;pointer-events:none;z-index:1}
+.grain>*{position:relative;z-index:2}
+
+/* ── Animations ── */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:0.4}70%{transform:scale(1.35);opacity:0}100%{transform:scale(1.35);opacity:0}}
+@keyframes flicker{0%,100%{opacity:1}50%{opacity:0.8}}
+
+.animate-hero{animation:heroFadeUp 0.85s cubic-bezier(0.22,1,0.36,1) both}
+.animate-hero-d1{animation-delay:0.15s}
+.animate-hero-d2{animation-delay:0.3s}
+.animate-hero-d3{animation-delay:0.45s}
+.animate-hero-d4{animation-delay:0.6s}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* ══════════════════════════════════════
+   1. HEADER
+══════════════════════════════════════ */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,13,20,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo-wrap{display:flex;align-items:center;gap:12px}
+.logo-bolt{width:36px;height:36px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-bolt svg{width:20px;height:20px;fill:none;stroke:var(--white);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.06em;color:var(--white);line-height:1.1}
+.logo-text span{color:var(--accent)}
+.logo-sub{font-family:'Open Sans',sans-serif;font-size:0.68rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase}
+.header-badge{background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-size:0.7rem;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap}
+.header-cta{background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:0.95rem;padding:10px 22px;border-radius:var(--radius);white-space:nowrap;transition:background var(--transition)}
+.header-cta:hover{background:var(--accent-dark)}
+
+/* ══════════════════════════════════════
+   2. HERO
+══════════════════════════════════════ */
+.hero{min-height:100vh;background:linear-gradient(145deg,var(--primary-dark) 0%,#0f1e3a 50%,#0a1528 100%);display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.eyebrow-tag{font-family:'Open Sans',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);background:rgba(37,99,235,0.12);border:1px solid rgba(37,99,235,0.3);padding:5px 14px;border-radius:20px}
+.hero h1{font-size:clamp(3.2rem,7vw,5.5rem);color:var(--white);margin-bottom:20px}
+.hero h1 .line2{color:var(--accent)}
+.hero-sub{font-size:1.1rem;color:var(--text-muted);max-width:480px;margin-bottom:32px;line-height:1.7}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:36px}
+.hero-trust{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.trust-stars{display:flex;align-items:center;gap:6px}
+.stars-row{display:flex;gap:3px}
+.star{color:#f59e0b;font-size:1.1rem}
+.trust-text{font-family:'Open Sans',sans-serif;font-size:0.85rem;color:var(--text-muted)}
+.trust-text strong{color:var(--white)}
+.trust-sep{width:1px;height:24px;background:var(--border)}
+
+/* Hero panel */
+.hero-panel{background:rgba(14,22,40,0.7);border:1px solid var(--border);border-radius:16px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:32px;box-shadow:var(--shadow)}
+.panel-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:0.06em;color:var(--white);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.panel-title-icon{width:28px;height:28px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.panel-title-icon svg{width:15px;height:15px;fill:none;stroke:var(--white);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.panel-services{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
+.panel-svc{display:flex;align-items:center;gap:8px;font-size:0.88rem;color:var(--text-muted)}
+.panel-svc-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.panel-cta-row{display:flex;flex-direction:column;gap:10px}
+.panel-phone{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.1rem;padding:14px;border-radius:var(--radius);transition:background var(--transition)}
+.panel-phone:hover{background:var(--accent-dark)}
+.panel-phone svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.panel-note{text-align:center;font-size:0.78rem;color:var(--text-muted)}
+
+/* Hero bg elements */
+.hero-bg-bolt{position:absolute;right:-80px;top:50%;transform:translateY(-50%);width:420px;height:420px;opacity:0.03;pointer-events:none}
+.hero-bg-bolt svg{width:100%;height:100%}
+
+/* ══════════════════════════════════════
+   3. TRUST BAR
+══════════════════════════════════════ */
+.trust-bar{background:var(--surface-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0}
+.trust-bar-inner{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px}
+.trust-item-icon{width:34px;height:34px;background:rgba(37,99,235,0.12);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-item-icon svg{width:18px;height:18px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.trust-item-label{font-family:'Open Sans',sans-serif;font-size:0.82rem;font-weight:700;color:var(--white);letter-spacing:0.04em}
+.trust-bar-sep{width:1px;height:30px;background:var(--border)}
+
+/* ══════════════════════════════════════
+   4. SERVICES
+══════════════════════════════════════ */
+.services{padding:100px 0;background:var(--primary)}
+.section-header{margin-bottom:52px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px;transition:border-color var(--transition),transform var(--transition),box-shadow var(--transition)}
+.service-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 8px 32px rgba(37,99,235,0.18)}
+.sc-icon-row{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.sc-icon{width:48px;height:48px;background:linear-gradient(135deg,rgba(37,99,235,0.2),rgba(37,99,235,0.08));border:1px solid rgba(37,99,235,0.25);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sc-icon svg{width:24px;height:24px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sc-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.05em;color:var(--white)}
+.sc-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.6;margin-bottom:14px}
+.sc-link{font-size:0.82rem;font-weight:700;color:var(--accent);letter-spacing:0.04em;display:flex;align-items:center;gap:5px}
+.sc-link svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform var(--transition)}
+.service-card:hover .sc-link svg{transform:translateX(4px)}
+
+/* ══════════════════════════════════════
+   5. WHY US
+══════════════════════════════════════ */
+.why-us{padding:100px 0;background:var(--surface-alt)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-content .section-label{display:block;margin-bottom:8px}
+.why-content h2{margin-bottom:16px}
+.why-content>p{margin-bottom:36px;font-size:1.05rem;line-height:1.75}
+.why-points{display:flex;flex-direction:column;gap:18px}
+.why-point{display:flex;align-items:flex-start;gap:14px}
+.wp-icon{width:40px;height:40px;background:linear-gradient(135deg,rgba(37,99,235,0.22),rgba(37,99,235,0.08));border:1px solid rgba(37,99,235,0.3);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.wp-icon svg{width:20px;height:20px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wp-text strong{font-weight:700;color:var(--white);display:block;margin-bottom:3px}
+.wp-text span{font-size:0.88rem;color:var(--text-muted)}
+
+/* Why right panel */
+.why-visual{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:36px;text-align:center}
+.wv-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(37,99,235,0.15),rgba(37,99,235,0.05));border:1px solid rgba(37,99,235,0.3);border-radius:12px;padding:18px 24px;margin-bottom:28px;width:100%}
+.wv-badge-icon{width:44px;height:44px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wv-badge-icon svg{width:22px;height:22px;fill:none;stroke:var(--white);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wv-badge-text{text-align:left}
+.wv-badge-text strong{font-weight:700;color:var(--white);display:block;font-size:0.95rem}
+.wv-badge-text span{font-size:0.78rem;color:var(--text-muted)}
+.wv-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+.wv-stat{text-align:center;padding:16px 8px;background:rgba(8,13,20,0.4);border-radius:10px;border:1px solid var(--border)}
+.wv-stat-num{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;color:var(--accent);line-height:1}
+.wv-stat-label{font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:3px}
+.wv-phone-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:14px;border-radius:var(--radius);width:100%;transition:background var(--transition)}
+.wv-phone-btn:hover{background:var(--accent-dark)}
+.wv-phone-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ══════════════════════════════════════
+   6. STATS
+══════════════════════════════════════ */
+.stats-band{padding:80px 0;background:linear-gradient(135deg,var(--primary-dark),#0c1a30);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+.stat-item{}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,4.5rem);color:var(--accent);line-height:1;margin-bottom:6px}
+.stat-suffix{font-size:0.55em;vertical-align:middle}
+.stat-label{font-size:0.9rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em}
+
+/* ══════════════════════════════════════
+   7. REVIEWS
+══════════════════════════════════════ */
+.reviews{padding:100px 0;background:var(--primary)}
+.reviews-intro{max-width:600px;margin-bottom:52px}
+.google-badge{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 20px;margin-bottom:28px}
+.google-g{width:22px;height:22px;fill:none}
+.badge-text{font-size:0.82rem;color:var(--text-muted)}
+.badge-text strong{color:var(--white);display:block}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:26px;transition:border-color var(--transition)}
+.review-card:hover{border-color:rgba(37,99,235,0.35)}
+.rc-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.rc-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--white);flex-shrink:0}
+.rc-name{font-weight:700;color:var(--white);font-size:0.9rem}
+.rc-date{font-size:0.75rem;color:var(--text-muted)}
+.rc-stars{display:flex;gap:2px;margin-bottom:10px}
+.rc-star{color:#f59e0b;font-size:0.9rem}
+.rc-text{font-size:0.88rem;color:var(--text-muted);line-height:1.65;font-style:italic}
+
+/* ══════════════════════════════════════
+   8. PROCESS
+══════════════════════════════════════ */
+.process{padding:100px 0;background:var(--surface-alt)}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:52px;position:relative}
+.process-steps::before{content:'';position:absolute;top:40px;left:calc(16.67% + 20px);right:calc(16.67% + 20px);height:2px;background:linear-gradient(90deg,var(--accent),rgba(37,99,235,0.2));z-index:0}
+.step-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px 24px;text-align:center;position:relative;z-index:1}
+.step-num{width:52px;height:52px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--white);margin:0 auto 20px;box-shadow:0 0 0 0 rgba(37,99,235,0.4)}
+.step-num.pulse{animation:pulse-ring 2.5s ease-out infinite}
+.step-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.05em;color:var(--white);margin-bottom:10px}
+.step-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.6}
+
+/* ══════════════════════════════════════
+   9. CTA BAND
+══════════════════════════════════════ */
+.cta-band{padding:100px 0;background:linear-gradient(135deg,var(--accent-dark) 0%,var(--accent) 50%,#3b82f6 100%);text-align:center}
+.cta-band::after{opacity:0.35}
+.cta-band h2{font-size:clamp(2.2rem,5vw,3.8rem);color:var(--white);margin-bottom:16px}
+.cta-band p{font-size:1.1rem;color:rgba(255,255,255,0.82);max-width:560px;margin:0 auto 36px}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-phone-btn{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--accent-dark);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:16px 36px;border-radius:var(--radius);transition:transform var(--transition),box-shadow var(--transition)}
+.cta-phone-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.25)}
+.cta-phone-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.cta-secondary{display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(255,255,255,0.7);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:14px 32px;border-radius:var(--radius);transition:all var(--transition)}
+.cta-secondary:hover{background:rgba(255,255,255,0.15)}
+.cta-urgency{margin-top:20px;font-size:0.82rem;color:rgba(255,255,255,0.7);letter-spacing:0.04em}
+
+/* ══════════════════════════════════════
+   10. FOOTER
+══════════════════════════════════════ */
+.site-footer{background:var(--primary-dark);border-top:1px solid var(--border);padding:60px 0 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand .logo-wrap{margin-bottom:14px}
+.footer-brand p{font-size:0.85rem;color:var(--text-muted);line-height:1.65;max-width:280px;margin-bottom:18px}
+.footer-social{display:flex;gap:10px}
+.social-btn{width:36px;height:36px;background:var(--surface);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:border-color var(--transition)}
+.social-btn:hover{border-color:var(--accent)}
+.social-btn svg{width:16px;height:16px;fill:none;stroke:var(--text-muted);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.footer-col h4{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;color:var(--white);margin-bottom:16px;text-transform:uppercase}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:0.85rem;color:var(--text-muted);transition:color var(--transition)}
+.footer-links a:hover{color:var(--accent)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:8px;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px}
+.footer-contact-item svg{width:15px;height:15px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:0.78rem;color:var(--text-muted)}
+.footer-bottom a{color:var(--accent)}
+.footer-lic{font-size:0.78rem;color:var(--text-muted)}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:1fr;gap:40px}
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:20px}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .process-steps{grid-template-columns:repeat(2,1fr)}
+  .process-steps::before{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .header-badge{display:none}
+  .services-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr;gap:24px}
+  .wv-stats{grid-template-columns:repeat(3,1fr)}
+  .panel-services{grid-template-columns:1fr}
+  .trust-bar-inner{gap:20px}
+  .trust-bar-sep{display:none}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  .cta-actions{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ 1. HEADER ══ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-wrap">
+      <div class="logo-bolt">
+        <svg viewBox="0 0 24 24"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </div>
+      <div>
+        <div class="logo-text">Lambright <span>Electric</span></div>
+        <div class="logo-sub">Allen, TX — Licensed Electricians</div>
+      </div>
+    </div>
+    <div class="header-badge">⚡ Licensed &amp; Insured</div>
+    <a href="tel:2148156745" class="header-cta">📞 (214) 815-6745</a>
+  </div>
+</header>
+
+<!-- ══ 2. HERO ══ -->
+<section class="hero grain">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow animate-hero">
+          <span class="eyebrow-tag">Allen's #1 Electrician</span>
+        </div>
+        <h1 class="animate-hero animate-hero-d1">Allen's Licensed <span class="line2">ELECTRICIANS</span></h1>
+        <p class="hero-sub animate-hero animate-hero-d2">Licensed. Safe. Correct. From panel upgrades to EV charger installs — Lambright Electric handles every job with precision and code compliance, the first time.</p>
+        <div class="hero-actions animate-hero animate-hero-d3">
+          <a href="tel:2148156745" class="btn-primary">Call (214) 815-6745</a>
+          <a href="#services" class="btn-outline">See Our Services</a>
+        </div>
+        <div class="hero-trust animate-hero animate-hero-d4">
+          <div class="trust-stars">
+            <div class="stars-row">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+            </div>
+            <span class="trust-text"><strong>5.0</strong> — 203 Google Reviews</span>
+          </div>
+          <div class="trust-sep"></div>
+          <span class="trust-text">Serving <strong>Allen &amp; Collin County</strong></span>
+        </div>
+      </div>
+      <div class="hero-panel animate-hero animate-hero-d2">
+        <div class="panel-title">
+          <div class="panel-title-icon"><svg viewBox="0 0 24 24"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          Request Electrical Service
+        </div>
+        <div class="panel-services">
+          <div class="panel-svc"><div class="panel-svc-dot"></div>Panel Upgrades</div>
+          <div class="panel-svc"><div class="panel-svc-dot"></div>EV Charger Install</div>
+          <div class="panel-svc"><div class="panel-svc-dot"></div>Outlet &amp; Switch Repair</div>
+          <div class="panel-svc"><div class="panel-svc-dot"></div>Ceiling Fan Install</div>
+          <div class="panel-svc"><div class="panel-svc-dot"></div>Lighting Install</div>
+          <div class="panel-svc"><div class="panel-svc-dot"></div>Emergency Electrical</div>
+        </div>
+        <div class="panel-cta-row">
+          <a href="tel:2148156745" class="panel-phone">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Now: (214) 815-6745
+          </a>
+          <p class="panel-note">Available Monday–Saturday · Fast Response · Free Estimates</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3. TRUST BAR ══ -->
+<div class="trust-bar">
+  <div class="container trust-bar-inner">
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <span class="trust-item-label">Texas Licensed</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <span class="trust-item-label">Same-Day Service</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <span class="trust-item-label">Code-Compliant Work</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+      <span class="trust-item-label">Upfront Pricing</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+      <span class="trust-item-label">5-Star Rated</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 4. SERVICES ══ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">What We Do</div>
+      <h2>Electrical Services <span class="accent-text">Done Right</span></h2>
+      <p style="max-width:520px;margin-top:10px">From routine repairs to full panel replacements — every job is done to code by licensed electricians you can trust.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="sc-icon-row">
+          <div class="sc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <div class="sc-title">Panel Upgrades</div>
+        </div>
+        <p class="sc-desc">Outdated breaker panels are a fire hazard. We install modern 200-amp panels that safely handle today's electrical demands.</p>
+        <div class="sc-link">Learn More <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon-row">
+          <div class="sc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <div class="sc-title">Outlet &amp; Switch Repair</div>
+        </div>
+        <p class="sc-desc">Dead outlets, faulty switches, GFCI failures — we diagnose and repair fast with same-day availability for most calls.</p>
+        <div class="sc-link">Learn More <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon-row">
+          <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
+          <div class="sc-title">EV Charger Install</div>
+        </div>
+        <p class="sc-desc">Level 2 EV charger installation for all makes. Proper wiring, dedicated circuit, and permit-ready work from a licensed pro.</p>
+        <div class="sc-link">Learn More <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon-row">
+          <div class="sc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+          <div class="sc-title">Lighting Installation</div>
+        </div>
+        <p class="sc-desc">Recessed cans, pendant lights, under-cabinet LEDs, or landscape lighting — we install with clean wiring and perfect placement.</p>
+        <div class="sc-link">Learn More <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon-row">
+          <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 1 5 5c0 5-5 13-5 13S7 12 7 7a5 5 0 0 1 5-5z"/><circle cx="12" cy="7" r="2"/></svg></div>
+          <div class="sc-title">Ceiling Fan Install</div>
+        </div>
+        <p class="sc-desc">We install ceiling fans with proper box support, balanced blades, and clean wiring — no wobble, no exposed wire mess.</p>
+        <div class="sc-link">Learn More <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon-row">
+          <div class="sc-icon"><svg viewBox="0 0 24 24"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="sc-title">Emergency Electrical</div>
+        </div>
+        <p class="sc-desc">Sparking outlets, tripped breakers that won't reset, burning smells — don't wait. Call us for fast emergency electrical response.</p>
+        <div class="sc-link">Learn More <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 5. WHY US ══ -->
+<section class="why-us">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-content fade-up">
+        <span class="section-label">Why Lambright Electric</span>
+        <h2>Licensed. Safe. <span class="accent-text">Correct.</span></h2>
+        <p>We're not a general handyman with a multimeter. Every technician at Lambright Electric holds a Texas electrical license — meaning your work is done to code, every permit is pulled, and your family's safety isn't left to chance.</p>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="wp-text"><strong>State-Licensed Electricians</strong><span>All technicians hold valid Texas electrical contractor licenses — not just certificates.</span></div>
+          </div>
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+            <div class="wp-text"><strong>Permit-Ready Work</strong><span>We pull permits when required so your home sale or insurance claim never hits a snag.</span></div>
+          </div>
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="wp-text"><strong>Flat-Rate, Upfront Pricing</strong><span>You approve the price before a single wire is touched. No surprises on the invoice.</span></div>
+          </div>
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="wp-text"><strong>Same-Day Response</strong><span>Most service calls are scheduled same-day or next-day — because waiting isn't always an option.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual fade-up">
+        <div class="wv-badge">
+          <div class="wv-badge-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="wv-badge-text">
+            <strong>Perfect 5.0 Rating</strong>
+            <span>203 Verified Google Reviews — Allen, TX</span>
+          </div>
+        </div>
+        <div class="wv-stats">
+          <div class="wv-stat">
+            <div class="wv-stat-num" data-target="203">0</div>
+            <div class="wv-stat-label">Reviews</div>
+          </div>
+          <div class="wv-stat">
+            <div class="wv-stat-num" data-target="5" data-suffix=".0★">0</div>
+            <div class="wv-stat-label">Rating</div>
+          </div>
+          <div class="wv-stat">
+            <div class="wv-stat-num" data-target="100" data-suffix="%">0</div>
+            <div class="wv-stat-label">Licensed</div>
+          </div>
+        </div>
+        <a href="tel:2148156745" class="wv-phone-btn">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Schedule Service: (214) 815-6745
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 6. STATS ══ -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="203">0</span></div>
+        <div class="stat-label">5-Star Reviews</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="100">0</span><span class="stat-suffix">%</span></div>
+        <div class="stat-label">Licensed Technicians</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="10">0</span><span class="stat-suffix">+</span></div>
+        <div class="stat-label">Years Serving Allen TX</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 7. REVIEWS ══ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-intro fade-up">
+      <div class="section-label">What Customers Say</div>
+      <h2>203 Reasons to <span class="accent-text">Call Lambright</span></h2>
+      <div class="google-badge" style="margin-top:16px">
+        <svg class="google-g" viewBox="0 0 24 24" width="22" height="22"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div class="badge-text"><strong>4.9 / 5.0 Rating</strong>203 verified Google reviews — Allen, TX</div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar">MR</div>
+          <div><div class="rc-name">Marcus R.</div><div class="rc-date">2 weeks ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Lambright installed a Level 2 EV charger in my garage. Clean install, pulled the permit, passed inspection first try. These guys know what they're doing."</p>
+      </div>
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar" style="background:linear-gradient(135deg,#1a4dc4,#2563eb)">ST</div>
+          <div><div class="rc-name">Sarah T.</div><div class="rc-date">1 month ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Upgraded our panel from 100A to 200A. They were on time, explained everything, and left the area spotless. Already referred them to two neighbors."</p>
+      </div>
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar" style="background:linear-gradient(135deg,#0f3580,#1a4dc4)">DK</div>
+          <div><div class="rc-name">David K.</div><div class="rc-date">6 weeks ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Called about a burning smell from an outlet. They came out same day, found a loose neutral in the panel, and fixed it before dinner. True emergency response."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 8. PROCESS ══ -->
+<section class="process">
+  <div class="container">
+    <div class="section-header fade-up" style="text-align:center">
+      <div class="section-label">How It Works</div>
+      <h2>Simple, Stress-Free <span class="accent-text">Electrical Service</span></h2>
+      <p style="max-width:480px;margin:10px auto 0">Three steps from problem to fixed — no runaround, no guesswork.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step-card fade-up">
+        <div class="step-num pulse">1</div>
+        <div class="step-title">Call or Book Online</div>
+        <p class="step-desc">Describe your issue. We'll schedule same-day or next-day and confirm your appointment window.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">2</div>
+        <div class="step-title">Get a Flat-Rate Quote</div>
+        <p class="step-desc">Your licensed electrician arrives, diagnoses, and gives you an upfront flat-rate price. No hidden fees.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">3</div>
+        <div class="step-title">Done Right, First Time</div>
+        <p class="step-desc">Work is completed to code, inspections passed, and your home is left clean. One call, done right.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 9. CTA BAND ══ -->
+<section class="cta-band grain">
+  <div class="container">
+    <h2>Ready for Electrical Work <br>Done the Right Way?</h2>
+    <p>Licensed. Insured. Code-compliant. Call Lambright Electric for same-day service in Allen and Collin County.</p>
+    <div class="cta-actions">
+      <a href="tel:2148156745" class="cta-phone-btn">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (214) 815-6745
+      </a>
+      <a href="#services" class="cta-secondary">View All Services</a>
+    </div>
+    <p class="cta-urgency">Serving Allen · Plano · McKinney · Frisco · Richardson · Collin County</p>
+  </div>
+</section>
+
+<!-- ══ 10. FOOTER ══ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-bolt">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div>
+            <div class="logo-text">Lambright <span>Electric</span></div>
+            <div class="logo-sub">Allen, TX</div>
+          </div>
+        </div>
+        <p>Licensed electricians serving Allen and Collin County. Every job done to code, first time — that's the Lambright standard.</p>
+        <div class="footer-social">
+          <div class="social-btn"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+          <div class="social-btn"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="#services">Panel Upgrades</a>
+          <a href="#services">Outlet &amp; Switch Repair</a>
+          <a href="#services">EV Charger Install</a>
+          <a href="#services">Ceiling Fan Install</a>
+          <a href="#services">Lighting Installation</a>
+          <a href="#services">Emergency Electrical</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:2148156745" style="color:var(--accent)">(214) 815-6745</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Allen, TX &amp; Collin County</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon–Sat: 7am–7pm</span>
+        </div>
+        <div style="margin-top:16px">
+          <a href="tel:2148156745" class="btn-primary" style="font-size:0.88rem;padding:10px 20px">Call Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lambright Electric. All rights reserved. | <a href="#">Privacy Policy</a></p>
+      <span class="footer-lic">Texas Electrical Contractor · Allen, TX 75002</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Scroll animations ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ── Stat counters ──
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - elapsed, 3);
+    const val = Math.round(ease * target);
+    el.textContent = val + suffix;
+    if (elapsed < 1) requestAnimationFrame(update);
+    else el.textContent = target + suffix;
+  }
+  requestAnimationFrame(update);
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const counters = e.target.querySelectorAll ? e.target.querySelectorAll('[data-target]') : [];
+      counters.forEach(animateCounter);
+      if (e.target.dataset && e.target.dataset.target) animateCounter(e.target);
+      counterObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.counter, .wv-stat-num').forEach(el => {
+  if (el.dataset.target) counterObserver.observe(el);
+});
+
+// ── Header scroll shrink ──
+window.addEventListener('scroll', () => {
+  document.querySelector('.site-header').style.background =
+    window.scrollY > 40 ? 'rgba(8,13,20,0.98)' : 'rgba(8,13,20,0.92)';
+}, { passive: true });
+</script>
+</body>
+</html>

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urban Service | Local Specialized Handyman &amp; Home Services</title>
+<meta name="description" content="Urban Service — your local specialized handyman. Furniture assembly, TV mounting, drywall repair, painting &amp; more. 5-star rated. Book online today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Design tokens ── */
+:root {
+  --primary:       #111520;
+  --primary-dark:  #080b12;
+  --accent:        #16a34a;
+  --accent-dark:   #14532d;
+  --accent-light:  #4ade80;
+  --text-light:    #f1f5f9;
+  --text-muted:    #94a3b8;
+  --surface:       #181d2a;
+  --surface-alt:   #0f1320;
+  --border:        rgba(22,163,74,0.16);
+  --white:         #ffffff;
+  --radius:        10px;
+  --shadow:        0 4px 24px rgba(0,0,0,0.5);
+  --transition:    0.3s ease;
+}
+
+/* ── Reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:var(--primary);color:var(--text-light);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* ── Typography ── */
+h1,h2,h3,.font-display{font-family:'Bebas Neue',sans-serif;letter-spacing:0.04em;line-height:1.05}
+h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:0.5rem}
+h3{font-size:1.2rem;margin-bottom:0.4rem}
+p{font-size:1rem;color:var(--text-muted)}
+
+/* ── Utility ── */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.accent-text{color:var(--accent)}
+.section-label{font-family:'Bebas Neue',sans-serif;letter-spacing:0.18em;font-size:0.85rem;color:var(--accent);text-transform:uppercase;margin-bottom:0.6rem}
+.btn-primary{display:inline-block;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:14px 32px;border-radius:var(--radius);border:none;cursor:pointer;transition:background var(--transition),transform var(--transition);text-align:center}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-outline{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:12px 30px;border-radius:var(--radius);cursor:pointer;transition:all var(--transition);text-align:center}
+.btn-outline:hover{background:var(--accent);color:var(--white)}
+
+/* ── Grain overlay ── */
+.grain{position:relative}
+.grain::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");opacity:0.5;pointer-events:none;z-index:1}
+.grain>*{position:relative;z-index:2}
+
+/* ── Animations ── */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(22,163,74,0.45)}70%{box-shadow:0 0 0 14px rgba(22,163,74,0)}100%{box-shadow:0 0 0 0 rgba(22,163,74,0)}}
+
+.animate-hero{animation:heroFadeUp 0.85s cubic-bezier(0.22,1,0.36,1) both}
+.animate-hero-d1{animation-delay:0.15s}
+.animate-hero-d2{animation-delay:0.3s}
+.animate-hero-d3{animation-delay:0.45s}
+.animate-hero-d4{animation-delay:0.6s}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* ══════════════════════════════════════
+   1. HEADER
+══════════════════════════════════════ */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,11,18,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo-wrap{display:flex;align-items:center;gap:12px}
+.logo-icon{width:38px;height:38px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-icon svg{width:21px;height:21px;fill:none;stroke:var(--white);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.06em;color:var(--white);line-height:1.1}
+.logo-text span{color:var(--accent)}
+.logo-sub{font-family:'Open Sans',sans-serif;font-size:0.67rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase}
+.header-badge{background:rgba(22,163,74,0.15);color:var(--accent-light);border:1px solid rgba(22,163,74,0.3);font-family:'Open Sans',sans-serif;font-size:0.7rem;font-weight:700;padding:4px 12px;border-radius:20px;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap}
+.header-cta{background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:0.95rem;padding:10px 22px;border-radius:var(--radius);white-space:nowrap;transition:background var(--transition)}
+.header-cta:hover{background:var(--accent-dark)}
+
+/* ══════════════════════════════════════
+   2. HERO
+══════════════════════════════════════ */
+.hero{min-height:100vh;background:linear-gradient(150deg,var(--primary-dark) 0%,#0d1220 45%,#0a1018 100%);display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.eyebrow-tag{font-family:'Open Sans',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);background:rgba(22,163,74,0.1);border:1px solid rgba(22,163,74,0.3);padding:5px 14px;border-radius:20px}
+.hero h1{font-size:clamp(3rem,6.5vw,5.2rem);color:var(--white);margin-bottom:20px}
+.hero h1 .line2{color:var(--accent)}
+.hero-sub{font-size:1.08rem;color:var(--text-muted);max-width:480px;margin-bottom:32px;line-height:1.7}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:36px}
+.hero-trust{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.stars-row{display:flex;gap:3px}
+.star{color:#f59e0b;font-size:1.1rem}
+.trust-text{font-family:'Open Sans',sans-serif;font-size:0.85rem;color:var(--text-muted)}
+.trust-text strong{color:var(--white)}
+.trust-sep{width:1px;height:24px;background:var(--border)}
+
+/* Hero quote form panel */
+.hero-panel{background:rgba(15,19,32,0.82);border:1px solid var(--border);border-radius:16px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:30px;box-shadow:var(--shadow)}
+.panel-heading{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.05em;color:var(--white);margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.ph-icon{width:28px;height:28px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.ph-icon svg{width:15px;height:15px;fill:none;stroke:var(--white);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.panel-sub{font-size:0.82rem;color:var(--text-muted);margin-bottom:20px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:0.78rem;font-weight:700;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:5px}
+.form-group input,
+.form-group select,
+.form-group textarea{width:100%;background:rgba(8,11,18,0.6);border:1px solid rgba(22,163,74,0.2);border-radius:8px;padding:10px 14px;font-family:'Open Sans',sans-serif;font-size:0.9rem;color:var(--text-light);outline:none;transition:border-color var(--transition)}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{border-color:var(--accent)}
+.form-group select option{background:var(--primary-dark)}
+.form-group textarea{resize:none;height:72px}
+.form-submit{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:13px;border-radius:var(--radius);border:none;cursor:pointer;transition:background var(--transition)}
+.form-submit:hover{background:var(--accent-dark)}
+.form-submit svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.panel-note{text-align:center;font-size:0.75rem;color:var(--text-muted);margin-top:8px}
+
+/* ══════════════════════════════════════
+   3. TRUST BAR
+══════════════════════════════════════ */
+.trust-bar{background:var(--surface-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0}
+.trust-bar-inner{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px}
+.trust-item-icon{width:34px;height:34px;background:rgba(22,163,74,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-item-icon svg{width:17px;height:17px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.trust-item-label{font-family:'Open Sans',sans-serif;font-size:0.82rem;font-weight:700;color:var(--white);letter-spacing:0.04em}
+.trust-bar-sep{width:1px;height:30px;background:var(--border)}
+
+/* ══════════════════════════════════════
+   4. SERVICES — 2-col with feature ribbon
+══════════════════════════════════════ */
+.services{padding:100px 0;background:var(--primary)}
+.section-header{margin-bottom:52px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:26px;transition:border-color var(--transition),transform var(--transition),box-shadow var(--transition)}
+.service-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 8px 28px rgba(22,163,74,0.14)}
+.sc-icon{width:46px;height:46px;background:linear-gradient(135deg,rgba(22,163,74,0.2),rgba(22,163,74,0.06));border:1px solid rgba(22,163,74,0.22);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.sc-icon svg{width:23px;height:23px;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sc-title{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:0.05em;color:var(--white);margin-bottom:8px}
+.sc-desc{font-size:0.87rem;color:var(--text-muted);line-height:1.6;margin-bottom:12px}
+.sc-price{font-family:'Open Sans',sans-serif;font-size:0.78rem;font-weight:700;color:var(--accent);letter-spacing:0.06em;text-transform:uppercase}
+
+/* ══════════════════════════════════════
+   5. HOW IT WORKS — app-style numbered flow
+══════════════════════════════════════ */
+.how-it-works{padding:100px 0;background:var(--surface-alt)}
+.hiw-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hiw-content .section-label{display:block;margin-bottom:8px}
+.hiw-content h2{margin-bottom:16px}
+.hiw-content>p{margin-bottom:36px;font-size:1.05rem;line-height:1.75}
+.hiw-steps{display:flex;flex-direction:column;gap:20px}
+.hiw-step{display:flex;align-items:flex-start;gap:16px}
+.hs-num{width:42px;height:42px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:var(--white);flex-shrink:0}
+.hs-text strong{font-weight:700;color:var(--white);display:block;margin-bottom:3px}
+.hs-text span{font-size:0.88rem;color:var(--text-muted)}
+
+/* App preview panel */
+.app-panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px}
+.ap-header{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.ap-icon{width:44px;height:44px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.ap-icon svg{width:22px;height:22px;fill:none;stroke:var(--white);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ap-title{font-family:'Bebas Neue',sans-serif;font-size:1.25rem;letter-spacing:0.04em;color:var(--white)}
+.ap-sub{font-size:0.78rem;color:var(--text-muted)}
+.ap-features{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.ap-feature{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(8,11,18,0.5);border:1px solid rgba(22,163,74,0.12);border-radius:8px}
+.ap-feature-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.ap-feature-text{font-size:0.86rem;color:var(--text-muted)}
+.ap-feature-text strong{color:var(--white)}
+.ap-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:22px}
+.ap-stat{background:rgba(8,11,18,0.5);border:1px solid var(--border);border-radius:10px;padding:14px 8px;text-align:center}
+.ap-stat-num{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;color:var(--accent);line-height:1}
+.ap-stat-label{font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:2px}
+.ap-cta{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:13px;border-radius:var(--radius);width:100%;transition:background var(--transition)}
+.ap-cta:hover{background:var(--accent-dark)}
+.ap-cta svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ══════════════════════════════════════
+   6. STATS
+══════════════════════════════════════ */
+.stats-band{padding:80px 0;background:linear-gradient(135deg,var(--primary-dark),#0c1018);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,4.5rem);color:var(--accent);line-height:1;margin-bottom:6px}
+.stat-suffix{font-size:0.55em;vertical-align:middle}
+.stat-label{font-size:0.9rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em}
+
+/* ══════════════════════════════════════
+   7. REVIEWS
+══════════════════════════════════════ */
+.reviews{padding:100px 0;background:var(--primary)}
+.reviews-intro{max-width:600px;margin-bottom:52px}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:26px;transition:border-color var(--transition)}
+.review-card:hover{border-color:rgba(22,163,74,0.4)}
+.rc-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.rc-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--white);flex-shrink:0}
+.rc-name{font-weight:700;color:var(--white);font-size:0.9rem}
+.rc-date{font-size:0.75rem;color:var(--text-muted)}
+.rc-stars{display:flex;gap:2px;margin-bottom:10px}
+.rc-star{color:#f59e0b;font-size:0.9rem}
+.rc-text{font-size:0.88rem;color:var(--text-muted);line-height:1.65;font-style:italic}
+.rc-service-tag{display:inline-block;margin-top:10px;font-size:0.72rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--accent);background:rgba(22,163,74,0.1);border:1px solid rgba(22,163,74,0.2);padding:3px 10px;border-radius:20px}
+
+/* ══════════════════════════════════════
+   8. PROCESS
+══════════════════════════════════════ */
+.process{padding:100px 0;background:var(--surface-alt)}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:52px;position:relative}
+.process-steps::before{content:'';position:absolute;top:40px;left:calc(16.67% + 20px);right:calc(16.67% + 20px);height:2px;background:linear-gradient(90deg,var(--accent),rgba(22,163,74,0.15));z-index:0}
+.step-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px 24px;text-align:center;position:relative;z-index:1}
+.step-num{width:52px;height:52px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--white);margin:0 auto 20px}
+.step-num.pulse{animation:pulse-ring 2.5s ease-out infinite}
+.step-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.05em;color:var(--white);margin-bottom:10px}
+.step-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.6}
+
+/* ══════════════════════════════════════
+   9. CTA BAND
+══════════════════════════════════════ */
+.cta-band{padding:100px 0;background:linear-gradient(135deg,#0d3320 0%,var(--accent-dark) 40%,#14713a 100%);text-align:center}
+.cta-band::after{opacity:0.3}
+.cta-band h2{font-size:clamp(2.2rem,5vw,3.8rem);color:var(--white);margin-bottom:16px}
+.cta-band p{font-size:1.1rem;color:rgba(255,255,255,0.82);max-width:560px;margin:0 auto 36px}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-book-btn{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--accent-dark);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:16px 36px;border-radius:var(--radius);transition:transform var(--transition),box-shadow var(--transition)}
+.cta-book-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.25)}
+.cta-book-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.cta-secondary{display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(255,255,255,0.65);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:14px 32px;border-radius:var(--radius);transition:all var(--transition)}
+.cta-secondary:hover{background:rgba(255,255,255,0.15)}
+.cta-note{margin-top:20px;font-size:0.82rem;color:rgba(255,255,255,0.65);letter-spacing:0.04em}
+
+/* ══════════════════════════════════════
+   10. FOOTER
+══════════════════════════════════════ */
+.site-footer{background:var(--primary-dark);border-top:1px solid var(--border);padding:60px 0 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand .logo-wrap{margin-bottom:14px}
+.footer-brand p{font-size:0.85rem;color:var(--text-muted);line-height:1.65;max-width:280px;margin-bottom:18px}
+.footer-social{display:flex;gap:10px}
+.social-btn{width:36px;height:36px;background:var(--surface);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:border-color var(--transition)}
+.social-btn:hover{border-color:var(--accent)}
+.social-btn svg{width:16px;height:16px;fill:none;stroke:var(--text-muted);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.footer-col h4{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;color:var(--white);margin-bottom:16px;text-transform:uppercase}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:0.85rem;color:var(--text-muted);transition:color var(--transition)}
+.footer-links a:hover{color:var(--accent)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:8px;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px}
+.footer-contact-item svg{width:15px;height:15px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:0.78rem;color:var(--text-muted)}
+.footer-bottom a{color:var(--accent)}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .hiw-grid{grid-template-columns:1fr;gap:40px}
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:20px}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .process-steps{grid-template-columns:repeat(2,1fr)}
+  .process-steps::before{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .header-badge{display:none}
+  .services-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr;gap:24px}
+  .trust-bar-inner{gap:20px}
+  .trust-bar-sep{display:none}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  .cta-actions{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ 1. HEADER ══ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-wrap">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <div>
+        <div class="logo-text">Urban <span>Service</span></div>
+        <div class="logo-sub">Local Specialized Handyman</div>
+      </div>
+    </div>
+    <div class="header-badge">⭐ 5-Star Rated</div>
+    <a href="#contact" class="header-cta">Get a Free Quote</a>
+  </div>
+</header>
+
+<!-- ══ 2. HERO ══ -->
+<section class="hero grain">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow animate-hero">
+          <span class="eyebrow-tag">Specialized Home Services</span>
+        </div>
+        <h1 class="animate-hero animate-hero-d1">Your <span class="line2">Handyman</span><br>Done Right</h1>
+        <p class="hero-sub animate-hero animate-hero-d2">Urban Service connects you with skilled, vetted local handymen for every home task — furniture assembly, TV mounting, drywall repair, painting, and more. Book in minutes. Results you'll love.</p>
+        <div class="hero-actions animate-hero animate-hero-d3">
+          <a href="#contact" class="btn-primary">Get a Free Quote</a>
+          <a href="#services" class="btn-outline">See Services</a>
+        </div>
+        <div class="hero-trust animate-hero animate-hero-d4">
+          <div class="stars-row">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <span class="trust-text"><strong>5.0</strong> — Perfect Rating</span>
+          <div class="trust-sep"></div>
+          <span class="trust-text">Serving <strong>Allen &amp; DFW Area</strong></span>
+        </div>
+      </div>
+      <div class="hero-panel animate-hero animate-hero-d2" id="contact">
+        <div class="panel-heading">
+          <div class="ph-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          Request a Free Quote
+        </div>
+        <p class="panel-sub">Tell us what you need — we'll respond within 24 hours.</p>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="John Smith">
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service">
+            <option value="">Select a service…</option>
+            <option>Furniture Assembly</option>
+            <option>TV / Monitor Mounting</option>
+            <option>Drywall Repair</option>
+            <option>Interior Painting</option>
+            <option>Deck / Fence Repair</option>
+            <option>Flooring Installation</option>
+            <option>General Handyman</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Brief Description</label>
+          <textarea id="message" placeholder="Describe what needs to be done…"></textarea>
+        </div>
+        <button class="form-submit" type="button">
+          <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send Request
+        </button>
+        <p class="panel-note">Fast response · No obligation · Free estimates</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3. TRUST BAR ══ -->
+<div class="trust-bar">
+  <div class="container trust-bar-inner">
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <span class="trust-item-label">Vetted Professionals</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+      <span class="trust-item-label">5-Star Rated</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <span class="trust-item-label">Fast Scheduling</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+      <span class="trust-item-label">Transparent Pricing</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <span class="trust-item-label">Insured Service</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 4. SERVICES ══ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">What We Do</div>
+      <h2>Specialized Home Services <span class="accent-text">On Demand</span></h2>
+      <p style="max-width:520px;margin-top:10px">From one-time fixes to multi-room projects — skilled handymen ready for any task, any size.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <div class="sc-title">Furniture Assembly</div>
+        <p class="sc-desc">IKEA, Wayfair, Ashley — we assemble all brands correctly so you don't spend your weekend on instructions.</p>
+        <span class="sc-price">Most Popular</span>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="sc-title">TV &amp; Monitor Mounting</div>
+        <p class="sc-desc">Secure wall mounts, hidden cable management, perfect viewing angle. Any wall type including brick and tile.</p>
+        <span class="sc-price">Same-Day Available</span>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="sc-title">Drywall Repair</div>
+        <p class="sc-desc">Holes, cracks, water damage — we patch, texture-match, and paint so you can't tell anything was ever there.</p>
+        <span class="sc-price">Seamless Finish</span>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div>
+        <div class="sc-title">Interior Painting</div>
+        <p class="sc-desc">Rooms, trim, accent walls — clean prep, clean lines, and no mess left behind. Color consulting available.</p>
+        <span class="sc-price">Free Color Consult</span>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="sc-title">Flooring Installation</div>
+        <p class="sc-desc">Laminate, LVP, hardwood, tile — we handle subfloor prep, precise cuts, and professional finishing for every room.</p>
+        <span class="sc-price">All Floor Types</span>
+      </div>
+      <div class="service-card fade-up">
+        <div class="sc-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="sc-title">General Handyman</div>
+        <p class="sc-desc">Door hardware, caulking, weatherstripping, shelving, minor plumbing fixtures — the to-do list items you never get to.</p>
+        <span class="sc-price">Hourly Rates</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 5. HOW IT WORKS ══ -->
+<section class="how-it-works">
+  <div class="container">
+    <div class="hiw-grid">
+      <div class="hiw-content fade-up">
+        <span class="section-label">How Urban Service Works</span>
+        <h2>Book a Pro in <span class="accent-text">Minutes</span></h2>
+        <p>Urban Service takes the frustration out of finding reliable help for your home. No cold calls, no waiting on hold — describe your project, get matched, and get it done.</p>
+        <div class="hiw-steps">
+          <div class="hiw-step">
+            <div class="hs-num">1</div>
+            <div class="hs-text"><strong>Describe Your Project</strong><span>Fill out the quick form above or send us a message with what needs to be done and when.</span></div>
+          </div>
+          <div class="hiw-step">
+            <div class="hs-num">2</div>
+            <div class="hs-text"><strong>Get a Free Estimate</strong><span>We review your request and send a transparent, flat-rate quote within 24 hours — no surprises.</span></div>
+          </div>
+          <div class="hiw-step">
+            <div class="hs-num">3</div>
+            <div class="hs-text"><strong>Confirm &amp; Schedule</strong><span>Approve the quote and pick a time that works. Your pro arrives on time, prepared, and ready.</span></div>
+          </div>
+          <div class="hiw-step">
+            <div class="hs-num">4</div>
+            <div class="hs-text"><strong>Enjoy the Results</strong><span>The job is done right, your space is clean, and you'll get a follow-up to confirm your satisfaction.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="app-panel fade-up">
+        <div class="ap-header">
+          <div class="ap-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div>
+            <div class="ap-title">Why Choose Urban Service</div>
+            <div class="ap-sub">Every job is backed by our satisfaction guarantee</div>
+          </div>
+        </div>
+        <div class="ap-features">
+          <div class="ap-feature"><div class="ap-feature-dot"></div><div class="ap-feature-text"><strong>Background-Checked Pros</strong> — every technician is vetted before joining our team</div></div>
+          <div class="ap-feature"><div class="ap-feature-dot"></div><div class="ap-feature-text"><strong>Insured &amp; Bonded</strong> — your home and belongings are protected on every job</div></div>
+          <div class="ap-feature"><div class="ap-feature-dot"></div><div class="ap-feature-text"><strong>Flat-Rate Quotes</strong> — the price you see is the price you pay, always</div></div>
+          <div class="ap-feature"><div class="ap-feature-dot"></div><div class="ap-feature-text"><strong>Satisfaction Guaranteed</strong> — if you're not happy, we make it right</div></div>
+          <div class="ap-feature"><div class="ap-feature-dot"></div><div class="ap-feature-text"><strong>Local Specialists</strong> — pros who live and work in Allen and DFW</div></div>
+        </div>
+        <div class="ap-stats">
+          <div class="ap-stat">
+            <div class="ap-stat-num">5.0</div>
+            <div class="ap-stat-label">Avg Rating</div>
+          </div>
+          <div class="ap-stat">
+            <div class="ap-stat-num" data-target="100" data-suffix="%">0%</div>
+            <div class="ap-stat-label">Satisfaction</div>
+          </div>
+          <div class="ap-stat">
+            <div class="ap-stat-num">24h</div>
+            <div class="ap-stat-label">Response</div>
+          </div>
+        </div>
+        <a href="#contact" class="ap-cta">
+          <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Request a Free Quote
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 6. STATS ══ -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-up">
+        <div class="stat-num">5.0<span class="stat-suffix">★</span></div>
+        <div class="stat-label">Perfect Rating</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="100">0</span><span class="stat-suffix">%</span></div>
+        <div class="stat-label">Satisfaction Rate</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="24">0</span><span class="stat-suffix">h</span></div>
+        <div class="stat-label">Quote Response Time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 7. REVIEWS ══ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-intro fade-up">
+      <div class="section-label">What Customers Say</div>
+      <h2>A Perfect 5-Star <span class="accent-text">Track Record</span></h2>
+      <p style="margin-top:10px">Every job completed to satisfaction. Here's what recent customers shared about Urban Service.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar">AL</div>
+          <div><div class="rc-name">Amanda L.</div><div class="rc-date">2 weeks ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Assembled an entire bedroom set — bed frame, dresser, two nightstands. Done in 3 hours. Clean, professional, and they even swept up after. Highly recommend."</p>
+        <span class="rc-service-tag">Furniture Assembly</span>
+      </div>
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar" style="background:linear-gradient(135deg,#14532d,#16a34a)">TG</div>
+          <div><div class="rc-name">Tom G.</div><div class="rc-date">1 month ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Mounted two TVs and ran cables through the wall. Looks like it was done by a professional installer. Completely clean, no visible wires. Worth every dollar."</p>
+        <span class="rc-service-tag">TV Mounting</span>
+      </div>
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar" style="background:linear-gradient(135deg,#0a2e16,#14532d)">SP</div>
+          <div><div class="rc-name">Sarah P.</div><div class="rc-date">6 weeks ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Had a large drywall patch repaired and painted. You literally cannot tell where the hole was. Texture match was perfect. Will call Urban Service for everything."</p>
+        <span class="rc-service-tag">Drywall Repair</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 8. PROCESS ══ -->
+<section class="process">
+  <div class="container">
+    <div class="section-header fade-up" style="text-align:center">
+      <div class="section-label">Getting Started</div>
+      <h2>Simple Booking, <span class="accent-text">Expert Results</span></h2>
+      <p style="max-width:480px;margin:10px auto 0">From first request to finished project — we make it easy.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step-card fade-up">
+        <div class="step-num pulse">1</div>
+        <div class="step-title">Submit Your Request</div>
+        <p class="step-desc">Use the form above or send us a message. Describe the task, your address, and your preferred timing.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">2</div>
+        <div class="step-title">Receive Your Quote</div>
+        <p class="step-desc">We send a flat-rate, no-obligation quote within 24 hours. Approve it at your convenience — no pressure.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">3</div>
+        <div class="step-title">Enjoy the Job Done</div>
+        <p class="step-desc">A skilled, vetted professional arrives at your door, completes the work cleanly, and you verify you're happy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 9. CTA BAND ══ -->
+<section class="cta-band grain">
+  <div class="container">
+    <h2>Home Projects Waiting<br>on the To-Do List?</h2>
+    <p>Urban Service gets them done — vetted pros, flat-rate pricing, and satisfaction guaranteed. Request a free quote today.</p>
+    <div class="cta-actions">
+      <a href="#contact" class="cta-book-btn">
+        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Get a Free Quote
+      </a>
+      <a href="#services" class="cta-secondary">Browse Services</a>
+    </div>
+    <p class="cta-note">Serving Allen · Plano · McKinney · Frisco · Richardson · All of DFW</p>
+  </div>
+</section>
+
+<!-- ══ 10. FOOTER ══ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <div>
+            <div class="logo-text">Urban <span>Service</span></div>
+            <div class="logo-sub">Allen &amp; DFW</div>
+          </div>
+        </div>
+        <p>Local specialized handyman services for Allen and the DFW area. Vetted pros, flat-rate quotes, perfect 5-star results.</p>
+        <div class="footer-social">
+          <div class="social-btn"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+          <div class="social-btn"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="#services">Furniture Assembly</a>
+          <a href="#services">TV &amp; Monitor Mounting</a>
+          <a href="#services">Drywall Repair</a>
+          <a href="#services">Interior Painting</a>
+          <a href="#services">Flooring Installation</a>
+          <a href="#services">General Handyman</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Allen, TX &amp; DFW Area</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Quote requests via form above</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Response within 24 hours</span>
+        </div>
+        <div style="margin-top:16px">
+          <a href="#contact" class="btn-primary" style="font-size:0.88rem;padding:10px 20px">Get a Quote</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Urban Service. All rights reserved. | <a href="#">Privacy Policy</a></p>
+      <span style="font-size:0.78rem;color:var(--text-muted)">Local Handyman Services · Allen, TX &amp; DFW</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Scroll animations ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ── Stat counters ──
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1600;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - elapsed, 3);
+    el.textContent = Math.round(ease * target) + suffix;
+    if (elapsed < 1) requestAnimationFrame(update);
+    else el.textContent = target + suffix;
+  }
+  requestAnimationFrame(update);
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      if (e.target.dataset.target !== undefined) animateCounter(e.target);
+      counterObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.counter, [data-target]').forEach(el => counterObserver.observe(el));
+
+// ── Form submit feedback ──
+document.querySelector('.form-submit').addEventListener('click', function() {
+  this.textContent = '✓ Request Sent! We\'ll be in touch within 24 hours.';
+  this.style.background = '#14532d';
+  this.disabled = true;
+});
+
+// ── Header scroll ──
+window.addEventListener('scroll', () => {
+  document.querySelector('.site-header').style.background =
+    window.scrollY > 40 ? 'rgba(8,11,18,0.98)' : 'rgba(8,11,18,0.92)';
+}, { passive: true });
+</script>
+</body>
+</html>

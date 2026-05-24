@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speake's Plumbing | Richardson TX Licensed Plumbers</title>
+<meta name="description" content="Speake's Plumbing — Richardson TX's trusted plumbing company since day one. 4.8 stars, 525 reviews. Water heaters, drain cleaning, leak repair &amp; more. (972) 271-9144.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Design tokens ── */
+:root {
+  --primary:       #1c3347;
+  --primary-dark:  #0e1e2e;
+  --accent:        #0ea5e9;
+  --accent-dark:   #0880c0;
+  --accent-light:  #38bdf8;
+  --text-light:    #f0f9ff;
+  --text-muted:    #94a3b8;
+  --surface:       #213d54;
+  --surface-alt:   #162e42;
+  --border:        rgba(14,165,233,0.16);
+  --white:         #ffffff;
+  --radius:        10px;
+  --shadow:        0 4px 24px rgba(0,0,0,0.45);
+  --transition:    0.3s ease;
+}
+
+/* ── Reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:var(--primary);color:var(--text-light);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* ── Typography ── */
+h1,h2,h3,.font-display{font-family:'Bebas Neue',sans-serif;letter-spacing:0.04em;line-height:1.05}
+h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:0.5rem}
+h3{font-size:1.2rem;margin-bottom:0.4rem}
+p{font-size:1rem;color:var(--text-muted)}
+
+/* ── Utility ── */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.accent-text{color:var(--accent)}
+.section-label{font-family:'Bebas Neue',sans-serif;letter-spacing:0.18em;font-size:0.85rem;color:var(--accent);text-transform:uppercase;margin-bottom:0.6rem}
+.btn-primary{display:inline-block;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:14px 32px;border-radius:var(--radius);border:none;cursor:pointer;transition:background var(--transition),transform var(--transition);text-align:center}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-outline{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:12px 30px;border-radius:var(--radius);cursor:pointer;transition:all var(--transition);text-align:center}
+.btn-outline:hover{background:var(--accent);color:var(--white)}
+
+/* ── Grain overlay ── */
+.grain{position:relative}
+.grain::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");opacity:0.5;pointer-events:none;z-index:1}
+.grain>*{position:relative;z-index:2}
+
+/* ── Animations ── */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(14,165,233,0.45)}70%{box-shadow:0 0 0 14px rgba(14,165,233,0)}100%{box-shadow:0 0 0 0 rgba(14,165,233,0)}}
+@keyframes drop{0%{transform:translateY(-4px) scaleY(0.8);opacity:0}100%{transform:translateY(0) scaleY(1);opacity:1}}
+
+.animate-hero{animation:heroFadeUp 0.85s cubic-bezier(0.22,1,0.36,1) both}
+.animate-hero-d1{animation-delay:0.15s}
+.animate-hero-d2{animation-delay:0.3s}
+.animate-hero-d3{animation-delay:0.45s}
+.animate-hero-d4{animation-delay:0.6s}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* ══════════════════════════════════════
+   1. HEADER
+══════════════════════════════════════ */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(14,30,46,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo-wrap{display:flex;align-items:center;gap:12px}
+.logo-icon{width:38px;height:38px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-icon svg{width:21px;height:21px;fill:none;stroke:var(--white);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:0.06em;color:var(--white);line-height:1.1}
+.logo-text span{color:var(--accent)}
+.logo-sub{font-family:'Open Sans',sans-serif;font-size:0.67rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase}
+.header-badge{display:flex;align-items:center;gap:6px;background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.25);border-radius:8px;padding:5px 12px}
+.hb-stars{color:#f59e0b;font-size:0.8rem;letter-spacing:1px}
+.hb-text{font-size:0.72rem;font-weight:700;color:var(--accent-light)}
+.header-cta{background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:0.95rem;padding:10px 22px;border-radius:var(--radius);white-space:nowrap;transition:background var(--transition)}
+.header-cta:hover{background:var(--accent-dark)}
+
+/* ══════════════════════════════════════
+   2. HERO
+══════════════════════════════════════ */
+.hero{min-height:100vh;background:linear-gradient(150deg,var(--primary-dark) 0%,#162d42 45%,#122538 100%);display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.eyebrow-tag{font-family:'Open Sans',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.3);padding:5px 14px;border-radius:20px}
+.hero h1{font-size:clamp(3rem,6.5vw,5.2rem);color:var(--white);margin-bottom:20px}
+.hero h1 .line2{color:var(--accent)}
+.hero-sub{font-size:1.08rem;color:var(--text-muted);max-width:480px;margin-bottom:30px;line-height:1.7}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:32px}
+.hero-trust-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.stars-row{display:flex;gap:3px}
+.star{color:#f59e0b;font-size:1.1rem}
+.trust-text{font-family:'Open Sans',sans-serif;font-size:0.85rem;color:var(--text-muted)}
+.trust-text strong{color:var(--white)}
+.trust-sep{width:1px;height:24px;background:var(--border)}
+
+/* Hero panel — service availability list */
+.hero-panel{background:rgba(14,30,46,0.8);border:1px solid var(--border);border-radius:16px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:28px;box-shadow:var(--shadow)}
+.panel-heading{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.05em;color:var(--white);margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.ph-icon{width:28px;height:28px;background:var(--accent);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.ph-icon svg{width:15px;height:15px;fill:none;stroke:var(--white);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.panel-sub{font-size:0.82rem;color:var(--text-muted);margin-bottom:18px}
+.avail-list{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.avail-row{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:rgba(28,51,71,0.6);border:1px solid rgba(14,165,233,0.1);border-radius:9px}
+.ar-service{font-size:0.87rem;color:var(--text-light);font-weight:600}
+.ar-badge{font-size:0.7rem;font-weight:700;letter-spacing:0.06em;padding:3px 10px;border-radius:20px}
+.ar-badge.avail{background:rgba(34,197,94,0.15);color:#86efac;border:1px solid rgba(34,197,94,0.25)}
+.ar-badge.fast{background:rgba(14,165,233,0.15);color:var(--accent-light);border:1px solid rgba(14,165,233,0.25)}
+.ar-badge.sched{background:rgba(148,163,184,0.12);color:var(--text-muted);border:1px solid rgba(148,163,184,0.2)}
+.panel-phone-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:13px;border-radius:var(--radius);width:100%;transition:background var(--transition)}
+.panel-phone-btn:hover{background:var(--accent-dark)}
+.panel-phone-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.panel-note{text-align:center;font-size:0.77rem;color:var(--text-muted);margin-top:9px}
+
+/* ══════════════════════════════════════
+   3. TRUST BAR
+══════════════════════════════════════ */
+.trust-bar{background:var(--surface-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0}
+.trust-bar-inner{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px}
+.trust-item-icon{width:34px;height:34px;background:rgba(14,165,233,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-item-icon svg{width:17px;height:17px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.trust-item-label{font-family:'Open Sans',sans-serif;font-size:0.82rem;font-weight:700;color:var(--white);letter-spacing:0.04em}
+.trust-bar-sep{width:1px;height:30px;background:var(--border)}
+
+/* ══════════════════════════════════════
+   4. SERVICES — full-width row cards
+══════════════════════════════════════ */
+.services{padding:100px 0;background:var(--primary)}
+.section-header{margin-bottom:52px}
+.services-full{display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.service-row-card{display:grid;grid-template-columns:56px 1fr auto;gap:20px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 24px;transition:border-color var(--transition),transform var(--transition),box-shadow var(--transition)}
+.service-row-card:hover{border-color:var(--accent);transform:translateX(4px);box-shadow:0 4px 20px rgba(14,165,233,0.14)}
+.src-icon{width:52px;height:52px;background:linear-gradient(135deg,rgba(14,165,233,0.18),rgba(14,165,233,0.05));border:1px solid rgba(14,165,233,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.src-icon svg{width:24px;height:24px;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.src-body{}
+.src-title{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:0.04em;color:var(--white);margin-bottom:4px}
+.src-desc{font-size:0.86rem;color:var(--text-muted);line-height:1.55}
+.src-badge{font-size:0.72rem;font-weight:700;letter-spacing:0.07em;padding:5px 14px;border-radius:20px;white-space:nowrap;flex-shrink:0}
+.src-badge.same-day{background:rgba(34,197,94,0.12);color:#86efac;border:1px solid rgba(34,197,94,0.22)}
+.src-badge.fast{background:rgba(14,165,233,0.12);color:var(--accent-light);border:1px solid rgba(14,165,233,0.22)}
+.src-badge.scheduled{background:rgba(148,163,184,0.1);color:var(--text-muted);border:1px solid rgba(148,163,184,0.18)}
+
+/* ══════════════════════════════════════
+   5. WHY US
+══════════════════════════════════════ */
+.why-us{padding:100px 0;background:var(--surface-alt)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-content .section-label{display:block;margin-bottom:8px}
+.why-content h2{margin-bottom:16px}
+.why-content>p{margin-bottom:36px;font-size:1.05rem;line-height:1.75}
+.why-points{display:flex;flex-direction:column;gap:18px}
+.why-point{display:flex;align-items:flex-start;gap:14px}
+.wp-icon{width:40px;height:40px;background:linear-gradient(135deg,rgba(14,165,233,0.18),rgba(14,165,233,0.05));border:1px solid rgba(14,165,233,0.22);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.wp-icon svg{width:19px;height:19px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wp-text strong{font-weight:700;color:var(--white);display:block;margin-bottom:3px}
+.wp-text span{font-size:0.88rem;color:var(--text-muted)}
+
+/* Review card panel */
+.why-panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px}
+.wp-review-header{display:flex;align-items:center;gap:12px;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--border)}
+.wprh-icon{width:44px;height:44px}
+.wprh-icon svg{width:44px;height:44px}
+.wprh-info strong{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--accent);display:block;line-height:1}
+.wprh-info span{font-size:0.78rem;color:var(--text-muted)}
+.wp-review-mini{background:rgba(14,30,46,0.5);border:1px solid rgba(14,165,233,0.1);border-radius:10px;padding:14px;margin-bottom:12px}
+.wprm-stars{display:flex;gap:2px;margin-bottom:8px}
+.wprm-star{color:#f59e0b;font-size:0.82rem}
+.wprm-text{font-size:0.84rem;color:var(--text-muted);line-height:1.5;font-style:italic;margin-bottom:8px}
+.wprm-author{font-size:0.75rem;font-weight:700;color:var(--white)}
+.wp-cta{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:0.95rem;padding:13px;border-radius:var(--radius);width:100%;transition:background var(--transition);margin-top:18px}
+.wp-cta:hover{background:var(--accent-dark)}
+.wp-cta svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ══════════════════════════════════════
+   6. STATS
+══════════════════════════════════════ */
+.stats-band{padding:80px 0;background:linear-gradient(135deg,var(--primary-dark),#142333);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,4.5rem);color:var(--accent);line-height:1;margin-bottom:6px}
+.stat-suffix{font-size:0.55em;vertical-align:middle}
+.stat-label{font-size:0.9rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em}
+
+/* ══════════════════════════════════════
+   7. REVIEWS
+══════════════════════════════════════ */
+.reviews{padding:100px 0;background:var(--primary)}
+.reviews-intro{max-width:600px;margin-bottom:52px}
+.google-badge{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 20px;margin-top:16px}
+.badge-text{font-size:0.82rem;color:var(--text-muted)}
+.badge-text strong{color:var(--white);display:block}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:26px;transition:border-color var(--transition)}
+.review-card:hover{border-color:rgba(14,165,233,0.4)}
+.rc-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.rc-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--white);flex-shrink:0}
+.rc-name{font-weight:700;color:var(--white);font-size:0.9rem}
+.rc-date{font-size:0.75rem;color:var(--text-muted)}
+.rc-stars{display:flex;gap:2px;margin-bottom:10px}
+.rc-star{color:#f59e0b;font-size:0.9rem}
+.rc-text{font-size:0.88rem;color:var(--text-muted);line-height:1.65;font-style:italic}
+
+/* ══════════════════════════════════════
+   8. PROCESS
+══════════════════════════════════════ */
+.process{padding:100px 0;background:var(--surface-alt)}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:52px;position:relative}
+.process-steps::before{content:'';position:absolute;top:40px;left:calc(16.67% + 20px);right:calc(16.67% + 20px);height:2px;background:linear-gradient(90deg,var(--accent),rgba(14,165,233,0.15));z-index:0}
+.step-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px 24px;text-align:center;position:relative;z-index:1}
+.step-num{width:52px;height:52px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--white);margin:0 auto 20px}
+.step-num.pulse{animation:pulse-ring 2.5s ease-out infinite}
+.step-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.05em;color:var(--white);margin-bottom:10px}
+.step-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.6}
+
+/* ══════════════════════════════════════
+   9. CTA BAND
+══════════════════════════════════════ */
+.cta-band{padding:100px 0;background:linear-gradient(135deg,var(--primary-dark) 0%,#1a3a52 50%,#1c4060 100%);text-align:center;border-top:2px solid var(--accent)}
+.cta-band::after{opacity:0.3}
+.cta-band h2{font-size:clamp(2.2rem,5vw,3.8rem);color:var(--white);margin-bottom:16px}
+.cta-band p{font-size:1.1rem;color:var(--text-muted);max-width:560px;margin:0 auto 36px}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-phone-btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:16px 36px;border-radius:var(--radius);transition:background var(--transition),transform var(--transition),box-shadow var(--transition)}
+.cta-phone-btn:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(14,165,233,0.35)}
+.cta-phone-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.cta-secondary{display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(14,165,233,0.5);color:var(--accent-light);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:14px 32px;border-radius:var(--radius);transition:all var(--transition)}
+.cta-secondary:hover{background:rgba(14,165,233,0.12)}
+.cta-note{margin-top:20px;font-size:0.82rem;color:var(--text-muted);letter-spacing:0.04em}
+
+/* ══════════════════════════════════════
+   10. FOOTER
+══════════════════════════════════════ */
+.site-footer{background:var(--primary-dark);border-top:1px solid var(--border);padding:60px 0 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand .logo-wrap{margin-bottom:14px}
+.footer-brand p{font-size:0.85rem;color:var(--text-muted);line-height:1.65;max-width:280px;margin-bottom:18px}
+.footer-social{display:flex;gap:10px}
+.social-btn{width:36px;height:36px;background:var(--surface);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:border-color var(--transition)}
+.social-btn:hover{border-color:var(--accent)}
+.social-btn svg{width:16px;height:16px;fill:none;stroke:var(--text-muted);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.footer-col h4{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;color:var(--white);margin-bottom:16px;text-transform:uppercase}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:0.85rem;color:var(--text-muted);transition:color var(--transition)}
+.footer-links a:hover{color:var(--accent)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:8px;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px}
+.footer-contact-item svg{width:15px;height:15px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:0.78rem;color:var(--text-muted)}
+.footer-bottom a{color:var(--accent)}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .service-row-card{grid-template-columns:52px 1fr}
+  .src-badge{display:none}
+  .why-grid{grid-template-columns:1fr;gap:40px}
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:20px}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .process-steps{grid-template-columns:repeat(2,1fr)}
+  .process-steps::before{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .header-badge{display:none}
+  .service-row-card{grid-template-columns:48px 1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr;gap:24px}
+  .trust-bar-inner{gap:20px}
+  .trust-bar-sep{display:none}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  .cta-actions{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ 1. HEADER ══ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-wrap">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+      </div>
+      <div>
+        <div class="logo-text">Speake's <span>Plumbing</span></div>
+        <div class="logo-sub">Richardson, TX — Licensed Plumbers</div>
+      </div>
+    </div>
+    <div class="header-badge">
+      <span class="hb-stars">★★★★★</span>
+      <span class="hb-text">4.8 · 525 Reviews</span>
+    </div>
+    <a href="tel:9722719144" class="header-cta">📞 (972) 271-9144</a>
+  </div>
+</header>
+
+<!-- ══ 2. HERO ══ -->
+<section class="hero grain">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow animate-hero">
+          <span class="eyebrow-tag">Richardson's Established Plumber</span>
+        </div>
+        <h1 class="animate-hero animate-hero-d1">Richardson TX <span class="line2">PLUMBING</span><br>You Can Trust</h1>
+        <p class="hero-sub animate-hero animate-hero-d2">With 525 five-star reviews and decades serving Richardson homeowners, Speake's Plumbing has earned its reputation — fast, honest, and done right every time.</p>
+        <div class="hero-actions animate-hero animate-hero-d3">
+          <a href="tel:9722719144" class="btn-primary">Call (972) 271-9144</a>
+          <a href="#services" class="btn-outline">All Services</a>
+        </div>
+        <div class="hero-trust-row animate-hero animate-hero-d4">
+          <div class="stars-row">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <span class="trust-text"><strong>4.8</strong> — 525 Google Reviews</span>
+          <div class="trust-sep"></div>
+          <span class="trust-text">Serving <strong>Richardson &amp; Collin County</strong></span>
+        </div>
+      </div>
+      <div class="hero-panel animate-hero animate-hero-d2">
+        <div class="panel-heading">
+          <div class="ph-icon"><svg viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg></div>
+          Services &amp; Availability
+        </div>
+        <p class="panel-sub">Most calls scheduled same-day in Richardson TX</p>
+        <div class="avail-list">
+          <div class="avail-row">
+            <span class="ar-service">Drain Cleaning</span>
+            <span class="ar-badge avail">Same-Day</span>
+          </div>
+          <div class="avail-row">
+            <span class="ar-service">Water Heater Repair</span>
+            <span class="ar-badge avail">Same-Day</span>
+          </div>
+          <div class="avail-row">
+            <span class="ar-service">Leak Detection &amp; Repair</span>
+            <span class="ar-badge fast">Fast Response</span>
+          </div>
+          <div class="avail-row">
+            <span class="ar-service">Toilet Repair &amp; Install</span>
+            <span class="ar-badge avail">Same-Day</span>
+          </div>
+          <div class="avail-row">
+            <span class="ar-service">Whole-Home Repiping</span>
+            <span class="ar-badge sched">Scheduled</span>
+          </div>
+        </div>
+        <a href="tel:9722719144" class="panel-phone-btn">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now: (972) 271-9144
+        </a>
+        <p class="panel-note">Free Estimates · Upfront Pricing · Licensed &amp; Insured</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3. TRUST BAR ══ -->
+<div class="trust-bar">
+  <div class="container trust-bar-inner">
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <span class="trust-item-label">Texas Licensed</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <span class="trust-item-label">4.8★ — 525 Reviews</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <span class="trust-item-label">Same-Day Service</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+      <span class="trust-item-label">Upfront Flat-Rate Pricing</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <span class="trust-item-label">Workmanship Guaranteed</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 4. SERVICES ══ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">What We Do</div>
+      <h2>Complete Plumbing Services <span class="accent-text">for Richardson TX</span></h2>
+      <p style="max-width:520px;margin-top:10px">From the simplest drain clog to a full repipe — Speake's Plumbing handles it all with the same licensed care and upfront pricing.</p>
+    </div>
+    <div class="services-full fade-up">
+      <div class="service-row-card">
+        <div class="src-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="src-body">
+          <div class="src-title">Drain Cleaning &amp; Hydro-Jetting</div>
+          <p class="src-desc">Slow drains, full clogs, backed-up main sewer lines — we clear them completely with professional snaking and hydro-jetting, not just a temporary fix.</p>
+        </div>
+        <span class="src-badge same-day">Same-Day</span>
+      </div>
+      <div class="service-row-card">
+        <div class="src-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div class="src-body">
+          <div class="src-title">Water Heater Repair &amp; Replacement</div>
+          <p class="src-desc">Tank and tankless water heater service — diagnostics, flush, element replacement, or full new unit installation. Most repairs same-day.</p>
+        </div>
+        <span class="src-badge same-day">Same-Day</span>
+      </div>
+      <div class="service-row-card">
+        <div class="src-icon"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 0-5 5c0 5.25 5 13 5 13s5-7.75 5-13a5 5 0 0 0-5-5z"/><circle cx="12" cy="7" r="2"/></svg></div>
+        <div class="src-body">
+          <div class="src-title">Leak Detection &amp; Repair</div>
+          <p class="src-desc">Slab leaks, underground leaks, pinhole pipe failures — non-invasive detection first, then precise repair. We find it before it becomes a flood.</p>
+        </div>
+        <span class="src-badge fast">Fast Response</span>
+      </div>
+      <div class="service-row-card">
+        <div class="src-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="src-body">
+          <div class="src-title">Toilet &amp; Fixture Repair</div>
+          <p class="src-desc">Running toilets, phantom flushes, broken flush valves, leaking supply lines — in-stock parts for same-day fix on most toilet issues.</p>
+        </div>
+        <span class="src-badge same-day">Same-Day</span>
+      </div>
+      <div class="service-row-card">
+        <div class="src-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="src-body">
+          <div class="src-title">Whole-Home Repiping</div>
+          <p class="src-desc">Galvanized, polybutylene, or aging copper causing constant problems? We repipe with PEX for a lasting solution backed by a full workmanship warranty.</p>
+        </div>
+        <span class="src-badge scheduled">Scheduled</span>
+      </div>
+      <div class="service-row-card">
+        <div class="src-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+        <div class="src-body">
+          <div class="src-title">New Construction &amp; Bathroom Remodels</div>
+          <p class="src-desc">Rough-in plumbing, fixture installation, bathroom and kitchen remodels. Permitted, code-compliant work ready for inspection.</p>
+        </div>
+        <span class="src-badge scheduled">Scheduled</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 5. WHY US ══ -->
+<section class="why-us">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-content fade-up">
+        <span class="section-label">Why Speake's Plumbing</span>
+        <h2>Richardson's <span class="accent-text">Trusted Name</span><br>in Plumbing</h2>
+        <p>When 525 Richardson homeowners leave 4.8-star reviews, it says something about how a company operates. Speake's Plumbing has built that trust through decades of honest, reliable service — one call at a time.</p>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="wp-text"><strong>Same-Day Scheduling</strong><span>Most Richardson-area calls get same-day or next-day appointments without the runaround.</span></div>
+          </div>
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="wp-text"><strong>Flat-Rate Upfront Pricing</strong><span>The price quoted before work begins is the price on the invoice. Zero exceptions.</span></div>
+          </div>
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="wp-text"><strong>Licensed Texas Plumbers</strong><span>State-licensed technicians on every job — not subcontractors, not helpers.</span></div>
+          </div>
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="wp-text"><strong>Workmanship Guaranteed</strong><span>Every repair and installation is backed by our workmanship guarantee — if it fails, we fix it.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="why-panel fade-up">
+        <div class="wp-review-header">
+          <div class="wprh-icon">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          </div>
+          <div class="wprh-info">
+            <strong>525 Reviews</strong>
+            <span>4.8 avg · Richardson TX</span>
+          </div>
+        </div>
+        <div class="wp-review-mini">
+          <div class="wprm-stars"><span class="wprm-star">★</span><span class="wprm-star">★</span><span class="wprm-star">★</span><span class="wprm-star">★</span><span class="wprm-star">★</span></div>
+          <p class="wprm-text">"Called about a water heater leak at 7am. They had a tech here by 10am, replaced the unit same day. Clean install, fair price. These are my plumbers for life."</p>
+          <span class="wprm-author">— Jennifer K., Richardson TX</span>
+        </div>
+        <div class="wp-review-mini">
+          <div class="wprm-stars"><span class="wprm-star">★</span><span class="wprm-star">★</span><span class="wprm-star">★</span><span class="wprm-star">★</span><span class="wprm-star">★</span></div>
+          <p class="wprm-text">"Speake's has done work at our house three times. Every time: on time, professional, no price surprises. That consistency is everything."</p>
+          <span class="wprm-author">— Mark T., Richardson TX</span>
+        </div>
+        <a href="tel:9722719144" class="wp-cta">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (972) 271-9144
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 6. STATS ══ -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="525">0</span></div>
+        <div class="stat-label">Google Reviews</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-num">4.8<span class="stat-suffix">★</span></div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="100">0</span><span class="stat-suffix">%</span></div>
+        <div class="stat-label">Upfront Pricing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 7. REVIEWS ══ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-intro fade-up">
+      <div class="section-label">What Customers Say</div>
+      <h2>525 Richardson Families <span class="accent-text">Recommend Us</span></h2>
+      <div class="google-badge">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div class="badge-text"><strong>4.8 / 5.0 Rating</strong>525 verified Google reviews — Richardson, TX</div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar">JK</div>
+          <div><div class="rc-name">Jennifer K.</div><div class="rc-date">2 weeks ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Called about a water heater leak at 7am. They had a tech here by 10am, replaced the unit same day. Clean install, fair price. These are my plumbers for life."</p>
+      </div>
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar" style="background:linear-gradient(135deg,#0880c0,#0ea5e9)">MT</div>
+          <div><div class="rc-name">Mark T.</div><div class="rc-date">1 month ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Speake's has done work at our house three times over the years. Every single time: on time, professional, no price surprises. That consistency is everything."</p>
+      </div>
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar" style="background:linear-gradient(135deg,#064e70,#0880c0)">RB</div>
+          <div><div class="rc-name">Rachel B.</div><div class="rc-date">5 weeks ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Slab leak under the foundation. Other companies wanted to jackhammer the whole floor. Speake's found a smarter access point and fixed it for half the price. Incredible."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 8. PROCESS ══ -->
+<section class="process">
+  <div class="container">
+    <div class="section-header fade-up" style="text-align:center">
+      <div class="section-label">How We Work</div>
+      <h2>Simple, Reliable <span class="accent-text">Plumbing Service</span></h2>
+      <p style="max-width:480px;margin:10px auto 0">No runarounds, no hidden steps — just fast, honest plumbing help.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step-card fade-up">
+        <div class="step-num pulse">1</div>
+        <div class="step-title">Call for Service</div>
+        <p class="step-desc">Tell us your issue and address. We'll schedule same-day or next-day in most of Richardson and Collin County.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">2</div>
+        <div class="step-title">Get a Flat Quote</div>
+        <p class="step-desc">Licensed tech diagnoses the problem and presents a flat-rate price. You approve before any wrench is turned.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">3</div>
+        <div class="step-title">Done Right</div>
+        <p class="step-desc">Repair completed cleanly, tested fully, workmanship guaranteed. Invoice matches the quote you approved — always.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 9. CTA BAND ══ -->
+<section class="cta-band grain">
+  <div class="container">
+    <h2>Richardson's Plumber<br><span class="accent-text">525 Families Trust</span></h2>
+    <p>Same-day scheduling, upfront pricing, and a workmanship guarantee on every job. Call Speake's Plumbing — Richardson's established choice.</p>
+    <div class="cta-actions">
+      <a href="tel:9722719144" class="cta-phone-btn">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (972) 271-9144
+      </a>
+      <a href="#services" class="cta-secondary">See All Services</a>
+    </div>
+    <p class="cta-note">Richardson · Plano · Allen · Garland · McKinney · Collin County</p>
+  </div>
+</section>
+
+<!-- ══ 10. FOOTER ══ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+          </div>
+          <div>
+            <div class="logo-text">Speake's <span>Plumbing</span></div>
+            <div class="logo-sub">Richardson, TX</div>
+          </div>
+        </div>
+        <p>Richardson's established plumbing company. 4.8 stars, 525 reviews, and decades of honest, reliable plumbing service.</p>
+        <div class="footer-social">
+          <div class="social-btn"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+          <div class="social-btn"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="#services">Drain Cleaning</a>
+          <a href="#services">Water Heater Repair</a>
+          <a href="#services">Leak Detection</a>
+          <a href="#services">Toilet &amp; Fixture Repair</a>
+          <a href="#services">Whole-Home Repiping</a>
+          <a href="#services">Remodel Plumbing</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:9722719144" style="color:var(--accent)">(972) 271-9144</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Richardson, TX &amp; Collin County</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon–Sat: 7am–7pm</span>
+        </div>
+        <div style="margin-top:16px">
+          <a href="tel:9722719144" class="btn-primary" style="font-size:0.88rem;padding:10px 20px">Call Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Speake's Plumbing. All rights reserved. | <a href="#">Privacy Policy</a></p>
+      <span style="font-size:0.78rem;color:var(--text-muted)">Texas Licensed Plumber · Richardson, TX 75080</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Scroll animations ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ── Stat counters ──
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - elapsed, 3);
+    el.textContent = Math.round(ease * target).toLocaleString() + suffix;
+    if (elapsed < 1) requestAnimationFrame(update);
+    else el.textContent = target.toLocaleString() + suffix;
+  }
+  requestAnimationFrame(update);
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      if (e.target.dataset.target !== undefined) animateCounter(e.target);
+      counterObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+// ── Header scroll ──
+window.addEventListener('scroll', () => {
+  document.querySelector('.site-header').style.background =
+    window.scrollY > 40 ? 'rgba(14,30,46,0.98)' : 'rgba(14,30,46,0.92)';
+}, { passive: true });
+</script>
+</body>
+</html>

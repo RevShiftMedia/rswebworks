@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JRV Heating &amp; Cooling LLC | Allen TX HVAC Contractor</title>
+<meta name="description" content="JRV Heating &amp; Cooling LLC — Allen TX's trusted HVAC company. AC repair, furnace install, tune-ups &amp; more. 4.9-star rated, 219 reviews. Call (214) 288-5984.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── Design tokens ── */
+:root {
+  --primary:       #0d1e3a;
+  --primary-dark:  #060f1e;
+  --accent:        #0891b2;
+  --accent-dark:   #0671a0;
+  --accent-light:  #22d3ee;
+  --text-light:    #f0f9ff;
+  --text-muted:    #94a3b8;
+  --surface:       #112238;
+  --surface-alt:   #0a1828;
+  --border:        rgba(8,145,178,0.18);
+  --white:         #ffffff;
+  --radius:        10px;
+  --shadow:        0 4px 24px rgba(0,0,0,0.45);
+  --transition:    0.3s ease;
+}
+
+/* ── Reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:var(--primary);color:var(--text-light);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* ── Typography ── */
+h1,h2,h3,.font-display{font-family:'Bebas Neue',sans-serif;letter-spacing:0.04em;line-height:1.05}
+h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:0.5rem}
+h3{font-size:1.2rem;margin-bottom:0.4rem}
+p{font-size:1rem;color:var(--text-muted)}
+
+/* ── Utility ── */
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.accent-text{color:var(--accent)}
+.section-label{font-family:'Bebas Neue',sans-serif;letter-spacing:0.18em;font-size:0.85rem;color:var(--accent);text-transform:uppercase;margin-bottom:0.6rem}
+.btn-primary{display:inline-block;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:14px 32px;border-radius:var(--radius);border:none;cursor:pointer;transition:background var(--transition),transform var(--transition);text-align:center}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-outline{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:12px 30px;border-radius:var(--radius);cursor:pointer;transition:all var(--transition);text-align:center}
+.btn-outline:hover{background:var(--accent);color:var(--white)}
+
+/* ── Grain overlay ── */
+.grain{position:relative}
+.grain::after{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.06'/%3E%3C/svg%3E");opacity:0.5;pointer-events:none;z-index:1}
+.grain>*{position:relative;z-index:2}
+
+/* ── Animations ── */
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:0.4}70%{transform:scale(1.35);opacity:0}100%{transform:scale(1.35);opacity:0}}
+@keyframes snowflake{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-8px) rotate(180deg)}}
+@keyframes flame{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.08)}}
+
+.animate-hero{animation:heroFadeUp 0.85s cubic-bezier(0.22,1,0.36,1) both}
+.animate-hero-d1{animation-delay:0.15s}
+.animate-hero-d2{animation-delay:0.3s}
+.animate-hero-d3{animation-delay:0.45s}
+.animate-hero-d4{animation-delay:0.6s}
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* ══════════════════════════════════════
+   1. HEADER
+══════════════════════════════════════ */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(6,15,30,0.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo-wrap{display:flex;align-items:center;gap:12px}
+.logo-icon{width:38px;height:38px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-icon svg{width:22px;height:22px;fill:none;stroke:var(--white);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;letter-spacing:0.06em;color:var(--white);line-height:1.1}
+.logo-text span{color:var(--accent)}
+.logo-sub{font-family:'Open Sans',sans-serif;font-size:0.67rem;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase}
+.header-temps{display:flex;gap:10px;align-items:center}
+.temp-badge{font-family:'Open Sans',sans-serif;font-size:0.7rem;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:0.05em}
+.temp-cool{background:rgba(8,145,178,0.2);color:var(--accent-light);border:1px solid rgba(8,145,178,0.3)}
+.temp-heat{background:rgba(239,68,68,0.15);color:#fca5a5;border:1px solid rgba(239,68,68,0.25)}
+.header-cta{background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:0.95rem;padding:10px 22px;border-radius:var(--radius);white-space:nowrap;transition:background var(--transition)}
+.header-cta:hover{background:var(--accent-dark)}
+
+/* ══════════════════════════════════════
+   2. HERO
+══════════════════════════════════════ */
+.hero{min-height:100vh;background:linear-gradient(150deg,var(--primary-dark) 0%,#091630 40%,#071222 100%);display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.eyebrow-tag{font-family:'Open Sans',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);background:rgba(8,145,178,0.1);border:1px solid rgba(8,145,178,0.3);padding:5px 14px;border-radius:20px}
+.hero h1{font-size:clamp(3rem,6.5vw,5.2rem);color:var(--white);margin-bottom:20px}
+.hero h1 .line2{color:var(--accent)}
+.hero-sub{font-size:1.08rem;color:var(--text-muted);max-width:480px;margin-bottom:32px;line-height:1.7}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:36px}
+.hero-trust{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.stars-row{display:flex;gap:3px}
+.star{color:#f59e0b;font-size:1.1rem}
+.trust-text{font-family:'Open Sans',sans-serif;font-size:0.85rem;color:var(--text-muted)}
+.trust-text strong{color:var(--white)}
+.trust-sep{width:1px;height:24px;background:var(--border)}
+
+/* Hero dual-mode panel */
+.hero-panel{background:rgba(9,22,48,0.75);border:1px solid var(--border);border-radius:16px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:28px;box-shadow:var(--shadow)}
+.panel-mode-tabs{display:grid;grid-template-columns:1fr 1fr;gap:0;background:rgba(6,15,30,0.6);border-radius:10px;overflow:hidden;margin-bottom:24px;border:1px solid var(--border)}
+.mode-tab{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;font-family:'Open Sans',sans-serif;font-size:0.82rem;font-weight:700;color:var(--text-muted);cursor:pointer;transition:all var(--transition);letter-spacing:0.04em}
+.mode-tab svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mode-tab.active-cool{background:rgba(8,145,178,0.15);color:var(--accent-light)}
+.mode-tab.active-heat{background:rgba(239,68,68,0.12);color:#fca5a5}
+.panel-service-list{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+.panel-svc-item{display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-muted);padding:8px 12px;background:rgba(8,145,178,0.06);border-radius:8px;border:1px solid rgba(8,145,178,0.1)}
+.psi-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;flex-shrink:0}
+.panel-phone-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:14px;border-radius:var(--radius);width:100%;transition:background var(--transition)}
+.panel-phone-btn:hover{background:var(--accent-dark)}
+.panel-phone-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.panel-note{text-align:center;font-size:0.77rem;color:var(--text-muted);margin-top:10px}
+
+/* ══════════════════════════════════════
+   3. TRUST BAR
+══════════════════════════════════════ */
+.trust-bar{background:var(--surface-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0}
+.trust-bar-inner{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px}
+.trust-item-icon{width:34px;height:34px;background:rgba(8,145,178,0.12);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-item-icon svg{width:17px;height:17px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.trust-item-label{font-family:'Open Sans',sans-serif;font-size:0.82rem;font-weight:700;color:var(--white);letter-spacing:0.04em}
+.trust-bar-sep{width:1px;height:30px;background:var(--border)}
+
+/* ══════════════════════════════════════
+   4. SERVICES — horizontal split layout
+══════════════════════════════════════ */
+.services{padding:100px 0;background:var(--primary)}
+.section-header{margin-bottom:52px}
+.services-split{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.services-col h3.col-heading{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.2em;color:var(--accent);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.col-heading-icon{width:28px;height:28px;background:rgba(8,145,178,0.15);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.col-heading-icon svg{width:15px;height:15px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.service-row{display:flex;align-items:flex-start;gap:14px;padding:18px;background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:14px;transition:border-color var(--transition),transform var(--transition)}
+.service-row:hover{border-color:var(--accent);transform:translateX(4px)}
+.sr-icon{width:42px;height:42px;background:linear-gradient(135deg,rgba(8,145,178,0.2),rgba(8,145,178,0.06));border:1px solid rgba(8,145,178,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sr-icon svg{width:21px;height:21px;fill:none;stroke:var(--accent);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sr-title{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;letter-spacing:0.04em;color:var(--white);margin-bottom:4px}
+.sr-desc{font-size:0.84rem;color:var(--text-muted);line-height:1.55}
+
+/* ══════════════════════════════════════
+   5. WHY US
+══════════════════════════════════════ */
+.why-us{padding:100px 0;background:var(--surface-alt)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why-content .section-label{display:block;margin-bottom:8px}
+.why-content h2{margin-bottom:16px}
+.why-content>p{margin-bottom:36px;font-size:1.05rem;line-height:1.75}
+.why-points{display:flex;flex-direction:column;gap:18px}
+.why-point{display:flex;align-items:flex-start;gap:14px}
+.wp-icon{width:40px;height:40px;background:linear-gradient(135deg,rgba(8,145,178,0.2),rgba(8,145,178,0.06));border:1px solid rgba(8,145,178,0.25);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.wp-icon svg{width:19px;height:19px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.wp-text strong{font-weight:700;color:var(--white);display:block;margin-bottom:3px}
+.wp-text span{font-size:0.88rem;color:var(--text-muted)}
+
+/* Why right card */
+.why-visual{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px}
+.wv-temp-display{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+.wv-temp-card{padding:20px;border-radius:12px;text-align:center;border:1px solid}
+.wv-temp-card.cool{background:rgba(8,145,178,0.08);border-color:rgba(8,145,178,0.25)}
+.wv-temp-card.heat{background:rgba(239,68,68,0.06);border-color:rgba(239,68,68,0.2)}
+.wv-temp-card .temp-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+.cool .temp-icon{background:rgba(8,145,178,0.2)}
+.heat .temp-icon{background:rgba(239,68,68,0.12)}
+.wv-temp-card svg{width:20px;height:20px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cool svg{stroke:var(--accent-light)}
+.heat svg{stroke:#fca5a5}
+.wv-temp-card strong{font-family:'Bebas Neue',sans-serif;font-size:1.35rem;letter-spacing:0.04em;display:block;margin-bottom:3px}
+.cool strong{color:var(--accent-light)}
+.heat strong{color:#fca5a5}
+.wv-temp-card span{font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em}
+.wv-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
+.wv-stat{background:rgba(6,15,30,0.5);border:1px solid var(--border);border-radius:10px;padding:14px 8px;text-align:center}
+.wv-stat-num{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--accent);line-height:1}
+.wv-stat-label{font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:2px}
+.wv-cta-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1rem;padding:14px;border-radius:var(--radius);width:100%;transition:background var(--transition)}
+.wv-cta-btn:hover{background:var(--accent-dark)}
+.wv-cta-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* ══════════════════════════════════════
+   6. STATS
+══════════════════════════════════════ */
+.stats-band{padding:80px 0;background:linear-gradient(135deg,var(--primary-dark),#081424);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:center}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,4.5rem);color:var(--accent);line-height:1;margin-bottom:6px}
+.stat-suffix{font-size:0.55em;vertical-align:middle}
+.stat-label{font-size:0.9rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em}
+
+/* ══════════════════════════════════════
+   7. REVIEWS
+══════════════════════════════════════ */
+.reviews{padding:100px 0;background:var(--primary)}
+.reviews-intro{max-width:600px;margin-bottom:52px}
+.google-badge{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 20px;margin-bottom:28px}
+.badge-text{font-size:0.82rem;color:var(--text-muted)}
+.badge-text strong{color:var(--white);display:block}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:26px;transition:border-color var(--transition)}
+.review-card:hover{border-color:rgba(8,145,178,0.4)}
+.rc-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.rc-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--white);flex-shrink:0}
+.rc-name{font-weight:700;color:var(--white);font-size:0.9rem}
+.rc-date{font-size:0.75rem;color:var(--text-muted)}
+.rc-stars{display:flex;gap:2px;margin-bottom:10px}
+.rc-star{color:#f59e0b;font-size:0.9rem}
+.rc-text{font-size:0.88rem;color:var(--text-muted);line-height:1.65;font-style:italic}
+
+/* ══════════════════════════════════════
+   8. PROCESS
+══════════════════════════════════════ */
+.process{padding:100px 0;background:var(--surface-alt)}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:52px;position:relative}
+.process-steps::before{content:'';position:absolute;top:40px;left:calc(16.67% + 20px);right:calc(16.67% + 20px);height:2px;background:linear-gradient(90deg,var(--accent),rgba(8,145,178,0.15));z-index:0}
+.step-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:32px 24px;text-align:center;position:relative;z-index:1}
+.step-num{width:52px;height:52px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--white);margin:0 auto 20px}
+.step-num.pulse{animation:pulse-ring 2.5s ease-out infinite;box-shadow:0 0 0 0 rgba(8,145,178,0.4)}
+@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(8,145,178,0.4)}70%{box-shadow:0 0 0 12px rgba(8,145,178,0)}100%{box-shadow:0 0 0 0 rgba(8,145,178,0)}}
+.step-title{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.05em;color:var(--white);margin-bottom:10px}
+.step-desc{font-size:0.88rem;color:var(--text-muted);line-height:1.6}
+
+/* ══════════════════════════════════════
+   9. CTA BAND
+══════════════════════════════════════ */
+.cta-band{padding:100px 0;background:linear-gradient(135deg,var(--primary-dark) 0%,#0c2a40 50%,#0d3050 100%);text-align:center;border-top:2px solid var(--accent)}
+.cta-band h2{font-size:clamp(2.2rem,5vw,3.8rem);color:var(--white);margin-bottom:16px}
+.cta-band p{font-size:1.1rem;color:rgba(240,249,255,0.75);max-width:560px;margin:0 auto 36px}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-phone-btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--white);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:16px 36px;border-radius:var(--radius);transition:background var(--transition),transform var(--transition),box-shadow var(--transition)}
+.cta-phone-btn:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(8,145,178,0.35)}
+.cta-phone-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.cta-secondary{display:inline-flex;align-items:center;gap:10px;border:2px solid rgba(8,145,178,0.6);color:var(--accent-light);font-family:'Open Sans',sans-serif;font-weight:700;font-size:1.05rem;padding:14px 32px;border-radius:var(--radius);transition:all var(--transition)}
+.cta-secondary:hover{background:rgba(8,145,178,0.15)}
+.cta-season-note{margin-top:20px;font-size:0.82rem;color:rgba(240,249,255,0.55);letter-spacing:0.04em}
+
+/* ══════════════════════════════════════
+   10. FOOTER
+══════════════════════════════════════ */
+.site-footer{background:var(--primary-dark);border-top:1px solid var(--border);padding:60px 0 30px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand .logo-wrap{margin-bottom:14px}
+.footer-brand p{font-size:0.85rem;color:var(--text-muted);line-height:1.65;max-width:280px;margin-bottom:18px}
+.footer-social{display:flex;gap:10px}
+.social-btn{width:36px;height:36px;background:var(--surface);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:border-color var(--transition)}
+.social-btn:hover{border-color:var(--accent)}
+.social-btn svg{width:16px;height:16px;fill:none;stroke:var(--text-muted);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.footer-col h4{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:0.1em;color:var(--white);margin-bottom:16px;text-transform:uppercase}
+.footer-links{display:flex;flex-direction:column;gap:8px}
+.footer-links a{font-size:0.85rem;color:var(--text-muted);transition:color var(--transition)}
+.footer-links a:hover{color:var(--accent)}
+.footer-contact-item{display:flex;align-items:flex-start;gap:8px;font-size:0.85rem;color:var(--text-muted);margin-bottom:10px}
+.footer-contact-item svg{width:15px;height:15px;fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
+.footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:0.78rem;color:var(--text-muted)}
+.footer-bottom a{color:var(--accent)}
+.footer-lic{font-size:0.78rem;color:var(--text-muted)}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .services-split{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr;gap:40px}
+  .stats-grid{grid-template-columns:repeat(3,1fr);gap:20px}
+  .reviews-grid{grid-template-columns:repeat(2,1fr)}
+  .process-steps{grid-template-columns:repeat(2,1fr)}
+  .process-steps::before{display:none}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .header-temps{display:none}
+  .reviews-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr;gap:24px}
+  .trust-bar-inner{gap:20px}
+  .trust-bar-sep{display:none}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  .cta-actions{flex-direction:column;align-items:center}
+  .wv-temp-display{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ 1. HEADER ══ -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo-wrap">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+      </div>
+      <div>
+        <div class="logo-text">JRV <span>Heating &amp; Cooling</span></div>
+        <div class="logo-sub">Allen, TX — Licensed HVAC</div>
+      </div>
+    </div>
+    <div class="header-temps">
+      <span class="temp-badge temp-cool">❄ AC Repair</span>
+      <span class="temp-badge temp-heat">🔥 Heating</span>
+    </div>
+    <a href="tel:2142885984" class="header-cta">📞 (214) 288-5984</a>
+  </div>
+</header>
+
+<!-- ══ 2. HERO ══ -->
+<section class="hero grain">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow animate-hero">
+          <span class="eyebrow-tag">Allen's Trusted HVAC Co.</span>
+        </div>
+        <h1 class="animate-hero animate-hero-d1">Allen's <span class="line2">HVAC Experts</span><br>Year-Round</h1>
+        <p class="hero-sub animate-hero animate-hero-d2">From brutal Texas summers to cold snaps that catch you off guard — JRV Heating &amp; Cooling keeps your home comfortable all year. Fast response, honest pricing, 4.9 stars.</p>
+        <div class="hero-actions animate-hero animate-hero-d3">
+          <a href="tel:2142885984" class="btn-primary">Call (214) 288-5984</a>
+          <a href="#services" class="btn-outline">See Our Services</a>
+        </div>
+        <div class="hero-trust animate-hero animate-hero-d4">
+          <div class="stars-row">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <span class="trust-text"><strong>4.9</strong> — 219 Google Reviews</span>
+          <div class="trust-sep"></div>
+          <span class="trust-text">Serving <strong>Allen &amp; Collin County</strong></span>
+        </div>
+      </div>
+      <div class="hero-panel animate-hero animate-hero-d2">
+        <div class="panel-mode-tabs">
+          <div class="mode-tab active-cool">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            AC / Cooling
+          </div>
+          <div class="mode-tab active-heat">
+            <svg viewBox="0 0 24 24"><path d="M12 2c0 0-4 6-4 10a4 4 0 0 0 8 0c0-4-4-10-4-10z"/></svg>
+            Heat / Furnace
+          </div>
+        </div>
+        <div class="panel-service-list">
+          <div class="panel-svc-item"><div class="psi-dot"></div>AC Repair &amp; Diagnostics</div>
+          <div class="panel-svc-item"><div class="psi-dot"></div>New AC &amp; Heat Pump Install</div>
+          <div class="panel-svc-item"><div class="psi-dot"></div>Furnace Repair &amp; Tune-Up</div>
+          <div class="panel-svc-item"><div class="psi-dot"></div>Air Duct Cleaning</div>
+          <div class="panel-svc-item"><div class="psi-dot"></div>Annual Maintenance Plans</div>
+        </div>
+        <a href="tel:2142885984" class="panel-phone-btn">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now: (214) 288-5984
+        </a>
+        <p class="panel-note">Same-Day &amp; Emergency Service Available</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3. TRUST BAR ══ -->
+<div class="trust-bar">
+  <div class="container trust-bar-inner">
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <span class="trust-item-label">NATE-Certified Techs</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <span class="trust-item-label">Same-Day Service</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+      <span class="trust-item-label">Upfront Pricing</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <span class="trust-item-label">All Brands Serviced</span>
+    </div>
+    <div class="trust-bar-sep"></div>
+    <div class="trust-item">
+      <div class="trust-item-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+      <span class="trust-item-label">4.9 Stars — 219 Reviews</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 4. SERVICES ══ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">What We Do</div>
+      <h2>Cooling &amp; Heating Services <span class="accent-text">in Allen TX</span></h2>
+      <p style="max-width:520px;margin-top:10px">Every season covered — from deep-summer AC emergencies to cold-night furnace failures. One call handles it all.</p>
+    </div>
+    <div class="services-split">
+      <div class="services-col">
+        <h3 class="col-heading">
+          <div class="col-heading-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          Cooling Services
+        </h3>
+        <div class="service-row fade-up">
+          <div class="sr-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83"/></svg></div>
+          <div>
+            <div class="sr-title">AC Repair &amp; Diagnostics</div>
+            <p class="sr-desc">Not blowing cold? We diagnose fast — refrigerant issues, compressor faults, capacitor failures — and fix same day when possible.</p>
+          </div>
+        </div>
+        <div class="service-row fade-up">
+          <div class="sr-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <div>
+            <div class="sr-title">New AC System Install</div>
+            <p class="sr-desc">We install high-efficiency systems from Carrier, Trane, Lennox, and more — sized correctly for your home's square footage.</p>
+          </div>
+        </div>
+        <div class="service-row fade-up">
+          <div class="sr-icon"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0H5m4 0h10m0 0V8m0 7v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3m14 0H9"/></svg></div>
+          <div>
+            <div class="sr-title">AC Tune-Up &amp; Maintenance</div>
+            <p class="sr-desc">Annual tune-ups catch problems before they become expensive. Extend equipment life and keep energy bills low.</p>
+          </div>
+        </div>
+      </div>
+      <div class="services-col">
+        <h3 class="col-heading" style="color:#fca5a5">
+          <div class="col-heading-icon" style="background:rgba(239,68,68,0.1)"><svg viewBox="0 0 24 24" style="stroke:#fca5a5"><path d="M12 2c0 0-4 6-4 10a4 4 0 0 0 8 0c0-4-4-10-4-10z"/></svg></div>
+          Heating Services
+        </h3>
+        <div class="service-row fade-up">
+          <div class="sr-icon" style="background:linear-gradient(135deg,rgba(239,68,68,0.12),rgba(239,68,68,0.04));border-color:rgba(239,68,68,0.18)"><svg viewBox="0 0 24 24" style="stroke:#fca5a5"><path d="M12 2c0 0-4 6-4 10a4 4 0 0 0 8 0c0-4-4-10-4-10z"/></svg></div>
+          <div>
+            <div class="sr-title">Furnace Repair &amp; Tune-Up</div>
+            <p class="sr-desc">Pilot issues, heat exchanger cracks, blower motor problems — we diagnose and repair all furnace brands quickly and safely.</p>
+          </div>
+        </div>
+        <div class="service-row fade-up">
+          <div class="sr-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div>
+            <div class="sr-title">Heat Pump Service</div>
+            <p class="sr-desc">Heat pumps provide both cooling and heating. We install, repair, and maintain all heat pump systems for year-round efficiency.</p>
+          </div>
+        </div>
+        <div class="service-row fade-up">
+          <div class="sr-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div>
+            <div class="sr-title">Air Duct Cleaning &amp; Sealing</div>
+            <p class="sr-desc">Dirty ducts reduce system efficiency and indoor air quality. We clean, seal, and optimize your ductwork for peak performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 5. WHY US ══ -->
+<section class="why-us">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-content fade-up">
+        <span class="section-label">Why JRV</span>
+        <h2>HVAC Done <span class="accent-text">Honestly</span></h2>
+        <p>JRV Heating &amp; Cooling built a 4.9-star reputation on one principle: do the job right, tell the truth about what's needed, and treat every home like it's your own. No upsells. No scare tactics. Just great HVAC work.</p>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="wp-text"><strong>Same-Day Emergency Service</strong><span>When your AC quits in July heat, you can't wait days. We prioritize urgent calls.</span></div>
+          </div>
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div class="wp-text"><strong>No Surprise Invoices</strong><span>You receive a flat-rate price before any work begins. What we quote is what you pay.</span></div>
+          </div>
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="wp-text"><strong>NATE-Certified Technicians</strong><span>Our techs hold North American Technician Excellence certification — the HVAC industry standard.</span></div>
+          </div>
+          <div class="why-point">
+            <div class="wp-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="wp-text"><strong>All Makes &amp; Models</strong><span>Carrier, Trane, Lennox, Rheem, York, Goodman — we service every brand on the market.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual fade-up">
+        <div class="wv-temp-display">
+          <div class="wv-temp-card cool">
+            <div class="temp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <strong>AC / Cooling</strong>
+            <span>Repair &amp; Install</span>
+          </div>
+          <div class="wv-temp-card heat">
+            <div class="temp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 0-4 6-4 10a4 4 0 0 0 8 0c0-4-4-10-4-10z"/></svg></div>
+            <strong>Heat / Furnace</strong>
+            <span>Repair &amp; Tune-Up</span>
+          </div>
+        </div>
+        <div class="wv-stats">
+          <div class="wv-stat">
+            <div class="wv-stat-num" data-target="219">0</div>
+            <div class="wv-stat-label">Reviews</div>
+          </div>
+          <div class="wv-stat">
+            <div class="wv-stat-num">4.9</div>
+            <div class="wv-stat-label">Stars</div>
+          </div>
+          <div class="wv-stat">
+            <div class="wv-stat-num" data-target="10" data-suffix="+">0</div>
+            <div class="wv-stat-label">Yrs Exp</div>
+          </div>
+        </div>
+        <a href="tel:2142885984" class="wv-cta-btn">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Schedule Service: (214) 288-5984
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 6. STATS ══ -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="219">0</span></div>
+        <div class="stat-label">5-Star Reviews</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="24">0</span><span class="stat-suffix">/7</span></div>
+        <div class="stat-label">Emergency Availability</div>
+      </div>
+      <div class="stat-item fade-up">
+        <div class="stat-num"><span class="counter" data-target="100">0</span><span class="stat-suffix">%</span></div>
+        <div class="stat-label">Upfront Pricing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 7. REVIEWS ══ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-intro fade-up">
+      <div class="section-label">Customer Reviews</div>
+      <h2>219 Neighbors Trust <span class="accent-text">JRV Heating</span></h2>
+      <div class="google-badge" style="margin-top:16px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div class="badge-text"><strong>4.9 / 5.0 Rating</strong>219 verified Google reviews — Allen, TX</div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar">JM</div>
+          <div><div class="rc-name">James M.</div><div class="rc-date">3 weeks ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"AC went out on a 103° Saturday. JRV had someone at my house by noon. Fixed a bad capacitor in under an hour. Fair price, no upsell. These are my HVAC guys from now on."</p>
+      </div>
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar" style="background:linear-gradient(135deg,#0671a0,#0891b2)">LP</div>
+          <div><div class="rc-name">Linda P.</div><div class="rc-date">5 weeks ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Had JRV replace our 20-year-old furnace. They explained every option, didn't push the most expensive unit, and the install was clean and done in one day. Highly recommend."</p>
+      </div>
+      <div class="review-card fade-up">
+        <div class="rc-header">
+          <div class="rc-avatar" style="background:linear-gradient(135deg,#064e70,#0671a0)">RN</div>
+          <div><div class="rc-name">Roberto N.</div><div class="rc-date">2 months ago</div></div>
+        </div>
+        <div class="rc-stars"><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span><span class="rc-star">★</span></div>
+        <p class="rc-text">"Signed up for their maintenance plan. Tech was thorough, found a small refrigerant leak early. That could've been a $3,000 compressor if we'd waited. Worth every penny."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 8. PROCESS ══ -->
+<section class="process">
+  <div class="container">
+    <div class="section-header fade-up" style="text-align:center">
+      <div class="section-label">How It Works</div>
+      <h2>HVAC Help in <span class="accent-text">3 Simple Steps</span></h2>
+      <p style="max-width:480px;margin:10px auto 0">Fast, honest, and no surprises — here's how we take care of you.</p>
+    </div>
+    <div class="process-steps">
+      <div class="step-card fade-up">
+        <div class="step-num pulse">1</div>
+        <div class="step-title">Call or Schedule</div>
+        <p class="step-desc">Tell us what's going on. We'll get you on the schedule same-day or next-day — or immediately for emergencies.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">2</div>
+        <div class="step-title">Honest Diagnosis</div>
+        <p class="step-desc">We inspect the system, explain exactly what's wrong in plain English, and give you a flat-rate price before any repair begins.</p>
+      </div>
+      <div class="step-card fade-up">
+        <div class="step-num">3</div>
+        <div class="step-title">Fixed &amp; Comfortable</div>
+        <p class="step-desc">System repaired or installed correctly, your home at the right temperature — you pay exactly what was quoted. Done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 9. CTA BAND ══ -->
+<section class="cta-band grain">
+  <div class="container">
+    <h2>Is Your AC or Furnace<br>Giving You Trouble?</h2>
+    <p>Don't sweat it out — JRV Heating &amp; Cooling offers same-day service in Allen and all of Collin County. Honest pricing guaranteed.</p>
+    <div class="cta-actions">
+      <a href="tel:2142885984" class="cta-phone-btn">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (214) 288-5984
+      </a>
+      <a href="#services" class="cta-secondary">See All Services</a>
+    </div>
+    <p class="cta-season-note">Allen · Plano · McKinney · Frisco · Richardson · All of Collin County</p>
+  </div>
+</section>
+
+<!-- ══ 10. FOOTER ══ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap" style="margin-bottom:14px">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+          </div>
+          <div>
+            <div class="logo-text">JRV <span>Heating &amp; Cooling</span></div>
+            <div class="logo-sub">Allen, TX</div>
+          </div>
+        </div>
+        <p>Allen's trusted HVAC company — serving Collin County with honest pricing, fast response, and 4.9-star service every time.</p>
+        <div class="footer-social">
+          <div class="social-btn"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></div>
+          <div class="social-btn"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="#services">AC Repair &amp; Diagnostics</a>
+          <a href="#services">New AC Installation</a>
+          <a href="#services">Furnace Repair</a>
+          <a href="#services">Heat Pump Service</a>
+          <a href="#services">Air Duct Cleaning</a>
+          <a href="#services">HVAC Maintenance Plans</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:2142885984" style="color:var(--accent)">(214) 288-5984</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Allen, TX &amp; Collin County</span>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon–Sat: 7am–7pm</span>
+        </div>
+        <div style="margin-top:16px">
+          <a href="tel:2142885984" class="btn-primary" style="font-size:0.88rem;padding:10px 20px">Call Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 JRV Heating &amp; Cooling LLC. All rights reserved. | <a href="#">Privacy Policy</a></p>
+      <span class="footer-lic">Texas HVAC Contractor · Allen, TX 75002</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── Scroll animations ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ── Stat counters ──
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  function update(now) {
+    const elapsed = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - elapsed, 3);
+    el.textContent = Math.round(ease * target) + suffix;
+    if (elapsed < 1) requestAnimationFrame(update);
+    else el.textContent = target + suffix;
+  }
+  requestAnimationFrame(update);
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      if (e.target.dataset.target) animateCounter(e.target);
+      const nested = e.target.querySelectorAll ? e.target.querySelectorAll('[data-target]') : [];
+      nested.forEach(animateCounter);
+      counterObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.counter, .wv-stat-num[data-target]').forEach(el => counterObserver.observe(el));
+
+// ── Header scroll ──
+window.addEventListener('scroll', () => {
+  document.querySelector('.site-header').style.background =
+    window.scrollY > 40 ? 'rgba(6,15,30,0.98)' : 'rgba(6,15,30,0.92)';
+}, { passive: true });
+</script>
+</body>
+</html>

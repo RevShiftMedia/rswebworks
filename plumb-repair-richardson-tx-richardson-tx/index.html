@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plumb Repair | Expert Plumbing Specialists — Richardson, TX</title>
+  <meta name="description" content="Plumb Repair delivers precise, lasting plumbing repairs in Richardson, TX. Fast diagnostics, quality workmanship, satisfaction guaranteed. Call (972) 591-1331.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+    /* ─── TOKENS ─────────────────────────────────────────── */
+    :root {
+      --primary:      #162539;
+      --primary-dark: #0d1a2a;
+      --accent:       #37b0c5;
+      --accent-dark:  #2a8fa0;
+      --accent-light: #7dd3e8;
+      --text-light:   #ffffff;
+      --text-muted:   #94a3b8;
+      --surface:      #1e3350;
+      --surface-alt:  #253d5e;
+      --border:       rgba(55,176,197,0.18);
+      --radius:       10px;
+    }
+
+    /* ─── RESET / BASE ───────────────────────────────────── */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Open Sans',sans-serif;
+      background:var(--primary-dark);
+      color:var(--text-light);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    ul{list-style:none}
+    h1,h2,h3,h4{font-family:'Bebas Neue',sans-serif;letter-spacing:.04em;line-height:1.1}
+
+    /* ─── UTILITIES ──────────────────────────────────────── */
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    .btn-primary{
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--accent);color:#fff;
+      font-family:'Open Sans',sans-serif;font-size:.95rem;font-weight:700;
+      padding:14px 28px;border-radius:6px;border:none;cursor:pointer;
+      transition:background .2s,transform .15s,box-shadow .2s;
+      position:relative;overflow:hidden;
+    }
+    .btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(55,176,197,.35)}
+    .btn-outline{
+      display:inline-flex;align-items:center;gap:8px;
+      background:transparent;color:var(--accent);
+      font-family:'Open Sans',sans-serif;font-size:.95rem;font-weight:600;
+      padding:13px 26px;border-radius:6px;border:2px solid var(--accent);cursor:pointer;
+      transition:all .2s;
+    }
+    .btn-outline:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+
+    .fade-up{opacity:0;transform:translateY(32px);transition:opacity .65s ease,transform .65s ease}
+    .fade-up.visible{opacity:1;transform:translateY(0)}
+
+    .section-label{
+      font-family:'Open Sans',sans-serif;font-size:.7rem;font-weight:700;
+      letter-spacing:.18em;text-transform:uppercase;color:var(--accent);
+      margin-bottom:10px;
+    }
+    .section-title{font-size:clamp(2.2rem,4vw,3.4rem);color:var(--text-light);margin-bottom:16px}
+    .section-sub{font-size:1rem;color:var(--text-muted);max-width:560px;line-height:1.7}
+
+    /* ─── GRAIN OVERLAY ──────────────────────────────────── */
+    .grain::after{
+      content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      background-repeat:repeat;mix-blend-mode:overlay;opacity:.35;
+    }
+
+    /* ─── HEADER ─────────────────────────────────────────── */
+    #site-header{
+      position:fixed;top:0;left:0;width:100%;z-index:100;
+      padding:0 0;
+      background:rgba(13,26,42,.88);
+      backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
+      transition:background .3s;
+    }
+    .header-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      height:66px;
+    }
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-icon{
+      width:38px;height:38px;
+      background:var(--accent);border-radius:8px;
+      display:flex;align-items:center;justify-content:center;
+      flex-shrink:0;
+    }
+    .logo-icon svg{width:22px;height:22px;fill:#fff}
+    .logo-text{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:.06em;color:var(--text-light);line-height:1}
+    .logo-sub{font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-top:2px}
+    .header-phone{
+      display:flex;align-items:center;gap:8px;
+      font-weight:700;font-size:1rem;color:var(--text-light);
+      background:var(--accent);padding:9px 18px;border-radius:6px;
+      transition:background .2s;
+    }
+    .header-phone:hover{background:var(--accent-dark)}
+    .header-phone svg{width:16px;height:16px;fill:#fff;flex-shrink:0}
+    nav{display:flex;gap:28px}
+    nav a{font-size:.88rem;font-weight:600;color:var(--text-muted);transition:color .2s;text-transform:uppercase;letter-spacing:.07em}
+    nav a:hover{color:var(--accent)}
+
+    /* ─── HERO ───────────────────────────────────────────── */
+    #hero{
+      position:relative;
+      min-height:100vh;
+      background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 50%,#1a3050 100%);
+      display:flex;align-items:center;
+      overflow:hidden;
+      padding-top:66px;
+    }
+    .hero-bg-lines{
+      position:absolute;inset:0;pointer-events:none;
+      background-image:
+        linear-gradient(rgba(55,176,197,.04) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(55,176,197,.04) 1px,transparent 1px);
+      background-size:52px 52px;
+    }
+    .hero-bg-circle{
+      position:absolute;top:-120px;right:-80px;
+      width:640px;height:640px;border-radius:50%;
+      background:radial-gradient(circle,rgba(55,176,197,.08) 0%,transparent 70%);
+      pointer-events:none;
+    }
+    .hero-layout{
+      display:grid;grid-template-columns:1fr 420px;gap:56px;align-items:center;
+      position:relative;z-index:2;padding:80px 0;
+    }
+    .hero-eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      background:rgba(55,176,197,.12);border:1px solid rgba(55,176,197,.25);
+      padding:6px 14px;border-radius:40px;
+      font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
+      margin-bottom:22px;
+    }
+    .hero-eyebrow svg{width:12px;height:12px;fill:var(--accent)}
+    .hero-title{
+      font-size:clamp(2.8rem,5.5vw,5rem);
+      color:var(--text-light);margin-bottom:20px;
+    }
+    .hero-title .accent-word{color:var(--accent)}
+    .hero-desc{font-size:1.05rem;color:var(--text-muted);max-width:500px;margin-bottom:32px;line-height:1.75}
+
+    .hero-cta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:44px}
+
+    .hero-repair-badges{display:flex;gap:14px;flex-wrap:wrap}
+    .repair-badge{
+      display:flex;align-items:center;gap:7px;
+      font-size:.78rem;font-weight:600;color:var(--text-muted);
+    }
+    .repair-badge svg{width:14px;height:14px;fill:var(--accent);flex-shrink:0}
+
+    /* Trust panel (right) */
+    .trust-panel{
+      background:rgba(30,51,80,.72);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+      padding:32px 28px;
+    }
+    .trust-panel-header{
+      font-family:'Bebas Neue',sans-serif;font-size:1.5rem;
+      color:var(--text-light);margin-bottom:6px;letter-spacing:.04em;
+    }
+    .trust-panel-sub{font-size:.8rem;color:var(--text-muted);margin-bottom:24px}
+
+    .trust-checklist{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+    .trust-item{
+      display:flex;align-items:flex-start;gap:12px;
+      padding:12px 14px;
+      background:rgba(55,176,197,.06);border:1px solid rgba(55,176,197,.12);
+      border-radius:8px;
+    }
+    .trust-icon{
+      width:32px;height:32px;border-radius:6px;
+      background:rgba(55,176,197,.15);
+      display:flex;align-items:center;justify-content:center;flex-shrink:0;
+      margin-top:1px;
+    }
+    .trust-icon svg{width:16px;height:16px;fill:var(--accent)}
+    .trust-text strong{display:block;font-size:.85rem;font-weight:700;color:var(--text-light);margin-bottom:1px}
+    .trust-text span{font-size:.75rem;color:var(--text-muted)}
+
+    .panel-phone{
+      display:flex;align-items:center;justify-content:center;gap:10px;
+      background:var(--accent);color:#fff;
+      font-weight:700;font-size:1.1rem;
+      padding:15px;border-radius:8px;
+      transition:background .2s;width:100%;
+    }
+    .panel-phone:hover{background:var(--accent-dark)}
+    .panel-phone svg{width:18px;height:18px;fill:#fff}
+
+    /* Pulse ring on CTA */
+    .btn-primary.pulse{animation:pulseRing 2.2s ease infinite}
+    @keyframes pulseRing{
+      0%,100%{box-shadow:0 0 0 0 rgba(55,176,197,.45)}
+      50%{box-shadow:0 0 0 12px rgba(55,176,197,0)}
+    }
+
+    /* Hero fade-up keyframes */
+    @keyframes heroFadeUp{
+      from{opacity:0;transform:translateY(24px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+    .h-fade{opacity:0;animation:heroFadeUp .7s ease forwards}
+    .h-fade:nth-child(1){animation-delay:.1s}
+    .h-fade:nth-child(2){animation-delay:.25s}
+    .h-fade:nth-child(3){animation-delay:.4s}
+    .h-fade:nth-child(4){animation-delay:.55s}
+    .h-fade:nth-child(5){animation-delay:.7s}
+
+    /* ─── TRUST BAR ──────────────────────────────────────── */
+    #trust-bar{
+      background:var(--surface);
+      border-top:2px solid var(--accent);
+      border-bottom:1px solid var(--border);
+      padding:22px 0;
+    }
+    .trust-bar-grid{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+      align-items:center;
+    }
+    .tb-item{
+      display:flex;align-items:center;gap:12px;
+      padding:0 20px;border-right:1px solid var(--border);
+    }
+    .tb-item:last-child{border-right:none}
+    .tb-icon svg{width:26px;height:26px;fill:var(--accent)}
+    .tb-label strong{display:block;font-size:.85rem;font-weight:700;color:var(--text-light)}
+    .tb-label span{font-size:.72rem;color:var(--text-muted)}
+
+    /* ─── SERVICES ───────────────────────────────────────── */
+    #services{padding:96px 0;background:var(--primary-dark)}
+    .services-header{text-align:center;margin-bottom:60px}
+    .services-header .section-sub{margin:0 auto}
+
+    .services-grid{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+    }
+    .svc-card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      overflow:hidden;
+      transition:transform .25s,box-shadow .25s,border-color .25s;
+      position:relative;
+    }
+    .svc-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.3);border-color:rgba(55,176,197,.4)}
+    .svc-card-accent{height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-light))}
+    .svc-card-body{padding:26px}
+    .svc-card-icon{
+      width:48px;height:48px;border-radius:10px;
+      background:rgba(55,176,197,.12);
+      display:flex;align-items:center;justify-content:center;
+      margin-bottom:16px;
+    }
+    .svc-card-icon svg{width:26px;height:26px;fill:var(--accent)}
+    .svc-card-title{
+      font-family:'Bebas Neue',sans-serif;font-size:1.35rem;
+      color:var(--text-light);margin-bottom:8px;letter-spacing:.04em;
+    }
+    .svc-card-desc{font-size:.85rem;color:var(--text-muted);line-height:1.65;margin-bottom:16px}
+    .svc-symptoms{display:flex;flex-direction:column;gap:5px}
+    .svc-symptom{
+      display:flex;align-items:center;gap:7px;
+      font-size:.77rem;color:var(--text-muted);
+    }
+    .svc-symptom::before{
+      content:'';width:5px;height:5px;border-radius:50%;
+      background:var(--accent);flex-shrink:0;
+    }
+
+    /* ─── WHY US ──────────────────────────────────────────── */
+    #why-us{padding:96px 0;background:var(--primary)}
+    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .why-visual{position:relative}
+    .why-main-card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:36px;
+    }
+    .why-card-top{
+      display:flex;align-items:center;gap:14px;margin-bottom:28px;
+      padding-bottom:22px;border-bottom:1px solid var(--border);
+    }
+    .why-logo-icon{
+      width:52px;height:52px;background:var(--accent);border-radius:10px;
+      display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    }
+    .why-logo-icon svg{width:28px;height:28px;fill:#fff}
+    .why-card-title{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--text-light)}
+    .why-card-sub{font-size:.78rem;color:var(--accent);font-weight:600;letter-spacing:.08em}
+
+    .guarantee-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .guarantee-item{
+      display:flex;align-items:flex-start;gap:10px;
+      padding:14px;background:rgba(55,176,197,.06);
+      border:1px solid rgba(55,176,197,.1);border-radius:8px;
+    }
+    .guarantee-item svg{width:18px;height:18px;fill:var(--accent);flex-shrink:0;margin-top:1px}
+    .guarantee-item p{font-size:.8rem;color:var(--text-muted);line-height:1.5}
+    .guarantee-item strong{display:block;font-size:.85rem;color:var(--text-light);margin-bottom:2px;font-weight:700}
+
+    .why-badge{
+      position:absolute;bottom:-18px;right:-18px;
+      width:100px;height:100px;border-radius:50%;
+      background:var(--accent);
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      text-align:center;padding:10px;
+    }
+    .why-badge strong{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:#fff;line-height:1}
+    .why-badge span{font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+
+    .why-points{display:flex;flex-direction:column;gap:24px}
+    .why-point{display:flex;gap:18px;align-items:flex-start}
+    .wp-num{
+      font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--accent);
+      line-height:1;flex-shrink:0;width:32px;text-align:center;
+    }
+    .wp-body h4{font-size:1.1rem;font-family:'Bebas Neue',sans-serif;letter-spacing:.04em;color:var(--text-light);margin-bottom:5px}
+    .wp-body p{font-size:.87rem;color:var(--text-muted);line-height:1.65}
+
+    /* ─── STATS ───────────────────────────────────────────── */
+    #stats{
+      padding:80px 0;
+      background:linear-gradient(135deg,var(--primary-dark),var(--surface));
+      position:relative;overflow:hidden;
+    }
+    #stats::before{
+      content:'';position:absolute;top:-80px;right:-80px;
+      width:400px;height:400px;border-radius:50%;
+      background:radial-gradient(circle,rgba(55,176,197,.08) 0%,transparent 65%);
+      pointer-events:none;
+    }
+    .stats-grid{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+      background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;
+    }
+    .stat-cell{
+      background:var(--surface);
+      padding:40px 24px;text-align:center;
+      transition:background .2s;
+    }
+    .stat-cell:hover{background:var(--surface-alt)}
+    .stat-num{
+      font-family:'Bebas Neue',sans-serif;font-size:3.4rem;
+      color:var(--accent);line-height:1;margin-bottom:8px;
+    }
+    .stat-label{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)}
+
+    /* ─── PROCESS ─────────────────────────────────────────── */
+    #process{padding:96px 0;background:var(--primary-dark)}
+    .process-header{text-align:center;margin-bottom:60px}
+    .process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;position:relative}
+    .process-steps::before{
+      content:'';position:absolute;top:38px;left:calc(16.66% + 20px);right:calc(16.66% + 20px);
+      height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-light),var(--accent));
+      z-index:0;
+    }
+    .process-step{
+      text-align:center;padding:0 20px;position:relative;z-index:1;
+    }
+    .step-circle{
+      width:76px;height:76px;border-radius:50%;
+      background:var(--surface);
+      border:2px solid var(--accent);
+      display:flex;align-items:center;justify-content:center;
+      margin:0 auto 22px;
+      transition:background .25s,transform .25s;
+    }
+    .process-step:hover .step-circle{background:var(--accent);transform:scale(1.06)}
+    .step-circle svg{width:32px;height:32px;fill:var(--accent);transition:fill .25s}
+    .process-step:hover .step-circle svg{fill:#fff}
+    .step-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--text-light);margin-bottom:10px;letter-spacing:.04em}
+    .step-desc{font-size:.87rem;color:var(--text-muted);line-height:1.65}
+
+    /* ─── GUARANTEE STRIP ─────────────────────────────────── */
+    #guarantee{padding:80px 0;background:var(--primary)}
+    .guarantee-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+    .guarantee-text .section-sub{margin-bottom:32px}
+
+    .pledge-card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:36px;
+      border-left:4px solid var(--accent);
+    }
+    .pledge-icon{
+      width:56px;height:56px;background:rgba(55,176,197,.12);border-radius:12px;
+      display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+    }
+    .pledge-icon svg{width:30px;height:30px;fill:var(--accent)}
+    .pledge-title{font-family:'Bebas Neue',sans-serif;font-size:1.7rem;color:var(--text-light);margin-bottom:12px;letter-spacing:.04em}
+    .pledge-body{font-size:.9rem;color:var(--text-muted);line-height:1.75;margin-bottom:24px}
+    .pledge-items{display:flex;flex-direction:column;gap:10px}
+    .pledge-item{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text-light)}
+    .pledge-item svg{width:16px;height:16px;fill:var(--accent);flex-shrink:0}
+
+    .guarantee-list{display:flex;flex-direction:column;gap:16px}
+    .g-item{
+      display:flex;align-items:flex-start;gap:14px;
+      padding:18px;background:var(--surface);
+      border:1px solid var(--border);border-radius:8px;
+    }
+    .g-icon{
+      width:40px;height:40px;border-radius:8px;
+      background:rgba(55,176,197,.12);
+      display:flex;align-items:center;justify-content:center;flex-shrink:0;
+    }
+    .g-icon svg{width:22px;height:22px;fill:var(--accent)}
+    .g-text strong{display:block;font-size:.9rem;font-weight:700;color:var(--text-light);margin-bottom:3px}
+    .g-text span{font-size:.8rem;color:var(--text-muted)}
+
+    /* ─── CTA BAND ────────────────────────────────────────── */
+    #cta-band{
+      position:relative;overflow:hidden;
+      background:linear-gradient(135deg,var(--surface) 0%,var(--primary) 100%);
+      padding:96px 0;
+      border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+    }
+    .cta-bg{
+      position:absolute;inset:0;pointer-events:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      background-repeat:repeat;opacity:.4;
+    }
+    .cta-inner{position:relative;z-index:2;text-align:center;max-width:700px;margin:0 auto}
+    .cta-label{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+    .cta-title{font-size:clamp(2.4rem,5vw,4rem);color:var(--text-light);margin-bottom:18px}
+    .cta-sub{font-size:1rem;color:var(--text-muted);margin-bottom:40px;line-height:1.7}
+    .cta-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+
+    /* ─── FOOTER ──────────────────────────────────────────── */
+    #footer{background:var(--primary-dark);border-top:1px solid var(--border);padding:60px 0 30px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+    .footer-brand-name{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--text-light);margin-bottom:10px}
+    .footer-desc{font-size:.85rem;color:var(--text-muted);line-height:1.7;max-width:280px;margin-bottom:20px}
+    .footer-contact a{
+      display:flex;align-items:center;gap:8px;
+      font-size:.85rem;color:var(--text-muted);margin-bottom:8px;
+      transition:color .2s;
+    }
+    .footer-contact a:hover{color:var(--accent)}
+    .footer-contact svg{width:14px;height:14px;fill:var(--accent)}
+    .footer-col-title{
+      font-family:'Bebas Neue',sans-serif;font-size:1.05rem;
+      color:var(--text-light);letter-spacing:.08em;margin-bottom:16px;
+    }
+    .footer-links{display:flex;flex-direction:column;gap:8px}
+    .footer-links a{font-size:.85rem;color:var(--text-muted);transition:color .2s}
+    .footer-links a:hover{color:var(--accent)}
+    .footer-bottom{
+      display:flex;align-items:center;justify-content:space-between;
+      padding-top:24px;border-top:1px solid var(--border);
+      font-size:.78rem;color:var(--text-muted);
+    }
+    .footer-bottom a{color:var(--text-muted);transition:color .2s}
+    .footer-bottom a:hover{color:var(--accent)}
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media(max-width:900px){
+      .hero-layout{grid-template-columns:1fr;gap:32px}
+      .trust-panel{max-width:480px}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+      .trust-bar-grid{grid-template-columns:repeat(2,1fr)}
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+      .why-grid{grid-template-columns:1fr}
+      .why-badge{display:none}
+      .guarantee-layout{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .process-steps::before{display:none}
+    }
+    @media(max-width:600px){
+      .services-grid{grid-template-columns:1fr}
+      .trust-bar-grid{grid-template-columns:1fr}
+      .stats-grid{grid-template-columns:1fr 1fr}
+      .process-steps{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
+      .guarantee-grid{grid-template-columns:1fr}
+      nav{display:none}
+      .cta-row{flex-direction:column;align-items:center}
+      .hero-cta-row{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ HEADER -->
+<header id="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#hero" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.6 6.4l-4-4a1 1 0 0 0-1.4 0L14 4.6l-.9-.9a1 1 0 0 0-1.4 1.4l.9.9-8.4 8.4A3 3 0 0 0 4 18v2h2a3 3 0 0 0 2.1-.9l8.4-8.4.9.9a1 1 0 0 0 1.4-1.4l-.9-.9 2.2-2.2a1 1 0 0 0 0-1.6zM7.4 18.3A1 1 0 0 1 6.7 18H6v-.7a1 1 0 0 1 .3-.7l7.3-7.3 1.4 1.4-7.6 7.6z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="logo-text">Plumb Repair</div>
+          <div class="logo-sub">Richardson, TX</div>
+        </div>
+      </a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#process">Our Process</a>
+        <a href="#cta-band">Contact</a>
+      </nav>
+      <a href="tel:9725911331" class="header-phone">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        (972) 591-1331
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════ HERO -->
+<section id="hero" class="grain">
+  <div class="hero-bg-lines"></div>
+  <div class="hero-bg-circle"></div>
+  <div class="container">
+    <div class="hero-layout">
+      <!-- Left: Copy -->
+      <div class="hero-copy">
+        <div class="hero-eyebrow h-fade">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8z"/></svg>
+          Richardson's Repair Specialists
+        </div>
+        <h1 class="hero-title h-fade">
+          The <span class="accent-word">Right Fix</span>.<br>
+          Done <span class="accent-word">Right</span>.
+        </h1>
+        <p class="hero-desc h-fade">
+          Plumb Repair delivers precise, lasting plumbing solutions in Richardson, TX. We diagnose the root cause, repair it correctly the first time, and back every job with our satisfaction guarantee.
+        </p>
+        <div class="hero-cta-row h-fade">
+          <a href="tel:9725911331" class="btn-primary pulse">
+            <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            Call Now
+          </a>
+          <a href="#services" class="btn-outline">View Services</a>
+        </div>
+        <div class="hero-repair-badges h-fade">
+          <div class="repair-badge">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8z"/></svg>
+            Licensed & Insured
+          </div>
+          <div class="repair-badge">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8z"/></svg>
+            Same-Day Available
+          </div>
+          <div class="repair-badge">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8z"/></svg>
+            Satisfaction Guarantee
+          </div>
+          <div class="repair-badge">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8z"/></svg>
+            Upfront Pricing
+          </div>
+        </div>
+      </div>
+      <!-- Right: Trust Panel -->
+      <div class="trust-panel h-fade">
+        <div class="trust-panel-header">Why Choose Plumb Repair?</div>
+        <div class="trust-panel-sub">Our commitment to quality workmanship — every visit, every job.</div>
+        <div class="trust-checklist">
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 6.9l-8 8.1z"/></svg>
+            </div>
+            <div class="trust-text">
+              <strong>Licensed Master Plumber</strong>
+              <span>State-certified, fully insured for all work</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.4-1.4 3.6 3.6 7.6-7.6L21.4 8 12 17z"/></svg>
+            </div>
+            <div class="trust-text">
+              <strong>Accurate Diagnosis</strong>
+              <span>We find the real problem — no guesswork repairs</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+            </div>
+            <div class="trust-text">
+              <strong>Upfront Flat-Rate Pricing</strong>
+              <span>You approve the price before any work begins</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+            </div>
+            <div class="trust-text">
+              <strong>Flexible Scheduling</strong>
+              <span>Available same-day & weekend appointments</span>
+            </div>
+          </div>
+        </div>
+        <a href="tel:9725911331" class="panel-phone">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          (972) 591-1331 — Call for a Free Estimate
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ TRUST BAR -->
+<section id="trust-bar">
+  <div class="container">
+    <div class="trust-bar-grid">
+      <div class="tb-item fade-up">
+        <div class="tb-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+        <div class="tb-label"><strong>Licensed & Insured</strong><span>Fully certified in Texas</span></div>
+      </div>
+      <div class="tb-item fade-up">
+        <div class="tb-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg></div>
+        <div class="tb-label"><strong>Same-Day Service</strong><span>Available for urgent repairs</span></div>
+      </div>
+      <div class="tb-item fade-up">
+        <div class="tb-icon"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+        <div class="tb-label"><strong>Flat-Rate Pricing</strong><span>No surprises on your bill</span></div>
+      </div>
+      <div class="tb-item fade-up">
+        <div class="tb-icon"><svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg></div>
+        <div class="tb-label"><strong>Satisfaction Guarantee</strong><span>We make it right or it's free</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="services-header fade-up">
+      <div class="section-label">What We Fix</div>
+      <h2 class="section-title">Repair Services in Richardson</h2>
+      <p class="section-sub">From slow drains to burst pipes, our team diagnoses the issue and delivers lasting repairs — not temporary patches.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="svc-card fade-up">
+        <div class="svc-card-accent"></div>
+        <div class="svc-card-body">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19.82L5.71 21l1-2h1l2-4h1l1-2 3-1 1-2zM9.5 6a3.5 3.5 0 0 1 7 0c0 1.93-1.57 3.5-3.5 3.5A3.5 3.5 0 0 1 9.5 6z"/></svg>
+          </div>
+          <div class="svc-card-title">Leak Detection & Repair</div>
+          <div class="svc-card-desc">Precision leak location using advanced techniques — behind walls, under slabs, and in supply lines. Stop water damage before it escalates.</div>
+          <div class="svc-symptoms">
+            <div class="svc-symptom">Unexplained water bill increases</div>
+            <div class="svc-symptom">Wet spots on walls or ceilings</div>
+            <div class="svc-symptom">Sound of running water when taps are off</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-card fade-up">
+        <div class="svc-card-accent"></div>
+        <div class="svc-card-body">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M7 19c-1.1 0-2 .9-2 2h14c0-1.1-.9-2-2-2h-4v-2h3c1.1 0 2-.9 2-2h-8c-1.1 0-2 .9-2 2h3v2H7zM11.5 1C7.36 1 4 4.36 4 8.5c0 3.16 1.82 5.87 4.5 7.26v2.24h6v-2.24c2.68-1.39 4.5-4.1 4.5-7.26C19 4.36 15.64 1 11.5 1z"/></svg>
+          </div>
+          <div class="svc-card-title">Drain Cleaning & Clearing</div>
+          <div class="svc-card-desc">Hydro-jetting and professional snaking to clear even the most stubborn blockages in kitchen drains, bathroom lines, and main sewer.</div>
+          <div class="svc-symptoms">
+            <div class="svc-symptom">Slow or gurgling drains</div>
+            <div class="svc-symptom">Recurring clogs after DIY attempts</div>
+            <div class="svc-symptom">Multiple fixtures backing up at once</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-card fade-up">
+        <div class="svc-card-accent"></div>
+        <div class="svc-card-body">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5z"/></svg>
+          </div>
+          <div class="svc-card-title">Water Heater Services</div>
+          <div class="svc-card-desc">Repair or replacement of tank and tankless water heaters. We restore reliable hot water fast — same-day service often available.</div>
+          <div class="svc-symptoms">
+            <div class="svc-symptom">No hot water or inconsistent temperature</div>
+            <div class="svc-symptom">Rumbling or popping sounds from tank</div>
+            <div class="svc-symptom">Water heater older than 10 years</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-card fade-up">
+        <div class="svc-card-accent"></div>
+        <div class="svc-card-body">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 6.1H3v2h14V6.1zm4 4H3v2h18v-2zm-4 4H3v2h14v-2z"/></svg>
+          </div>
+          <div class="svc-card-title">Pipe Repair & Replacement</div>
+          <div class="svc-card-desc">From pinhole leaks to complete repiping, we handle all pipe materials — copper, PVC, PEX, and galvanized — with lasting results.</div>
+          <div class="svc-symptoms">
+            <div class="svc-symptom">Low water pressure throughout home</div>
+            <div class="svc-symptom">Discolored or rust-colored water</div>
+            <div class="svc-symptom">Frequent pipe leaks or bursts</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-card fade-up">
+        <div class="svc-card-accent"></div>
+        <div class="svc-card-body">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 3v11c0 1.66 1.34 3 3 3s3-1.34 3-3V3H9zm3 13c-.55 0-1-.45-1-1V5h2v10c0 .55-.45 1-1 1zm-1 6h2v-3h-2v3z"/></svg>
+          </div>
+          <div class="svc-card-title">Toilet Repair & Installation</div>
+          <div class="svc-card-desc">Running toilets waste thousands of gallons annually. We diagnose and fix flappers, fill valves, flush mechanisms, and wax seal failures.</div>
+          <div class="svc-symptoms">
+            <div class="svc-symptom">Toilet running constantly or intermittently</div>
+            <div class="svc-symptom">Water around the base of toilet</div>
+            <div class="svc-symptom">Weak or incomplete flush</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc-card fade-up">
+        <div class="svc-card-accent"></div>
+        <div class="svc-card-body">
+          <div class="svc-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93V18h-2v1.93C7.06 19.45 4.55 16.94 4.07 14H6v-2H4.07C4.55 9.06 7.06 6.55 10 6.07V8h2V6.07c2.94.48 5.45 2.99 5.93 5.93H16v2h1.93c-.48 2.94-2.99 5.45-5.93 5.93z"/></svg>
+          </div>
+          <div class="svc-card-title">Faucet & Fixture Repair</div>
+          <div class="svc-card-desc">Dripping faucets cost you money every day. We repair or replace faucets, showerheads, valves, and fixtures from all major brands.</div>
+          <div class="svc-symptoms">
+            <div class="svc-symptom">Dripping or leaking faucets</div>
+            <div class="svc-symptom">Low flow from showerhead</div>
+            <div class="svc-symptom">Handles that squeak or stick</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ WHY US -->
+<section id="why-us">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-visual fade-up">
+        <div class="why-main-card">
+          <div class="why-card-top">
+            <div class="why-logo-icon">
+              <svg viewBox="0 0 24 24"><path d="M21.6 6.4l-4-4a1 1 0 0 0-1.4 0L14 4.6l-.9-.9a1 1 0 0 0-1.4 1.4l.9.9-8.4 8.4A3 3 0 0 0 4 18v2h2a3 3 0 0 0 2.1-.9l8.4-8.4.9.9a1 1 0 0 0 1.4-1.4l-.9-.9 2.2-2.2a1 1 0 0 0 0-1.6zM7.4 18.3A1 1 0 0 1 6.7 18H6v-.7a1 1 0 0 1 .3-.7l7.3-7.3 1.4 1.4-7.6 7.6z"/></svg>
+            </div>
+            <div>
+              <div class="why-card-title">Plumb Repair Richardson</div>
+              <div class="why-card-sub">Precision Plumbing Specialists</div>
+            </div>
+          </div>
+          <div class="guarantee-grid">
+            <div class="guarantee-item">
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8.1z"/></svg>
+              <div><strong>Licensed Master</strong><p>State-certified plumber on every job</p></div>
+            </div>
+            <div class="guarantee-item">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.4-1.4 3.6 3.6 7.6-7.6L21.4 8 12 17z"/></svg>
+              <div><strong>Written Warranty</strong><p>Every repair backed in writing</p></div>
+            </div>
+            <div class="guarantee-item">
+              <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+              <div><strong>Upfront Pricing</strong><p>No hidden fees or surprises</p></div>
+            </div>
+            <div class="guarantee-item">
+              <svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+              <div><strong>Flexible Hours</strong><p>Weekend & after-hours available</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="why-badge">
+          <strong>4.7★</strong>
+          <span>Verified Reviews</span>
+        </div>
+      </div>
+      <div class="why-points">
+        <div class="section-label fade-up">Why Choose Us</div>
+        <h2 class="section-title fade-up">Precision Repairs. Not Temporary Patches.</h2>
+        <div class="why-point fade-up">
+          <div class="wp-num">01</div>
+          <div class="wp-body">
+            <h4>We Diagnose First</h4>
+            <p>Before a single wrench turns, we thoroughly inspect and diagnose the problem. This means you get a fix that lasts — not a band-aid that fails again in three months.</p>
+          </div>
+        </div>
+        <div class="why-point fade-up">
+          <div class="wp-num">02</div>
+          <div class="wp-body">
+            <h4>Transparent About Costs</h4>
+            <p>We explain exactly what needs to be done and what it costs — before we start. No surprise charges, no upsells you didn't agree to. Just honest, clear pricing.</p>
+          </div>
+        </div>
+        <div class="why-point fade-up">
+          <div class="wp-num">03</div>
+          <div class="wp-body">
+            <h4>We Stand Behind Our Work</h4>
+            <p>Every repair is backed by our written satisfaction guarantee. If something isn't right after we leave, we come back and make it right — at no additional charge.</p>
+          </div>
+        </div>
+        <div class="why-point fade-up">
+          <div class="wp-num">04</div>
+          <div class="wp-body">
+            <h4>Local Richardson Experts</h4>
+            <p>We know Richardson's homes, water quality, and common plumbing issues. As a local company, our reputation depends on every job we do — so we do every job right.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ STATS -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-cell fade-up">
+        <div class="stat-num" data-target="20" data-suffix="+">0</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div class="stat-cell fade-up">
+        <div class="stat-num" data-target="1500" data-suffix="+">0</div>
+        <div class="stat-label">Repairs Completed</div>
+      </div>
+      <div class="stat-cell fade-up">
+        <div class="stat-num" data-target="98" data-suffix="%">0</div>
+        <div class="stat-label">First-Visit Fix Rate</div>
+      </div>
+      <div class="stat-cell fade-up">
+        <div class="stat-num" data-target="100" data-suffix="%">0</div>
+        <div class="stat-label">Satisfaction Guaranteed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="process-header fade-up">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Diagnose. Repair. Guarantee.</h2>
+      <p class="section-sub" style="margin:0 auto">Our proven 3-step process ensures every repair is done correctly, completely, and with your full confidence.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step fade-up">
+        <div class="step-circle">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </div>
+        <div class="step-title">1. Diagnose</div>
+        <div class="step-desc">We arrive on-time, inspect thoroughly, and identify the root cause. No guesswork. We explain what's wrong in plain language before doing anything.</div>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-circle">
+          <svg viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
+        </div>
+        <div class="step-title">2. Repair</div>
+        <div class="step-desc">Once you approve our upfront quote, we get to work using quality parts and proven techniques. We clean up completely and test everything before leaving.</div>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-circle">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8.1z"/></svg>
+        </div>
+        <div class="step-title">3. Guarantee</div>
+        <div class="step-desc">We back every repair in writing. If anything related to our work fails after we leave, we return and fix it at no charge. That's our commitment to you.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ GUARANTEE -->
+<section id="guarantee">
+  <div class="container">
+    <div class="guarantee-layout">
+      <div class="guarantee-text fade-up">
+        <div class="section-label">Our Promise</div>
+        <h2 class="section-title">The Plumb Repair Commitment</h2>
+        <p class="section-sub">We're not the biggest plumbing company in Richardson — we're the most committed. Every technician, every job, every time.</p>
+        <br>
+        <div class="guarantee-list">
+          <div class="g-item">
+            <div class="g-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8.1z"/></svg>
+            </div>
+            <div class="g-text">
+              <strong>We answer our phones</strong>
+              <span>Real people, no call trees. Reach us directly at (972) 591-1331, any day.</span>
+            </div>
+          </div>
+          <div class="g-item">
+            <div class="g-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/></svg>
+            </div>
+            <div class="g-text">
+              <strong>We show up on time</strong>
+              <span>We respect your schedule. If we're running late, we call ahead — always.</span>
+            </div>
+          </div>
+          <div class="g-item">
+            <div class="g-icon">
+              <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+            </div>
+            <div class="g-text">
+              <strong>No surprise bills</strong>
+              <span>You see the price before work starts. The final bill matches the quote — period.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pledge-card fade-up">
+        <div class="pledge-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.4-1.4 3.6 3.6 7.6-7.6L21.4 8 12 17z"/></svg>
+        </div>
+        <div class="pledge-title">Our Written Guarantee</div>
+        <div class="pledge-body">
+          Every repair performed by Plumb Repair is covered by our satisfaction guarantee. If you're not completely satisfied with our work, or if any issue related to our repair occurs, we will return and resolve it — at absolutely no additional cost to you.
+          <br><br>
+          We put this in writing because we stand behind it completely.
+        </div>
+        <div class="pledge-items">
+          <div class="pledge-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8z"/></svg>
+            Workmanship covered — no questions asked
+          </div>
+          <div class="pledge-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8z"/></svg>
+            Parts warranted through manufacturer
+          </div>
+          <div class="pledge-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8z"/></svg>
+            Written documentation provided
+          </div>
+          <div class="pledge-item">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1 14l-4-4 1.4-1.4 2.6 2.6 6.6-6.6L19 8l-8 8z"/></svg>
+            Priority re-service scheduling
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ CTA BAND -->
+<section id="cta-band" class="grain">
+  <div class="cta-bg"></div>
+  <div class="container">
+    <div class="cta-inner fade-up">
+      <div class="cta-label">Ready to Fix It Right?</div>
+      <h2 class="cta-title">Get Your Plumbing Repaired Today</h2>
+      <p class="cta-sub">Don't let a small problem become an expensive emergency. Call Plumb Repair now for fast, precise plumbing service in Richardson, TX.</p>
+      <div class="cta-row">
+        <a href="tel:9725911331" class="btn-primary pulse">
+          <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          (972) 591-1331 — Call Now
+        </a>
+        <a href="#services" class="btn-outline">Browse All Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════ FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Plumb Repair</div>
+        <div class="footer-desc">Expert plumbing repair services in Richardson, TX. Licensed, insured, and committed to doing the job right the first time.</div>
+        <div class="footer-contact">
+          <a href="tel:9725911331">
+            <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            (972) 591-1331
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Richardson, TX
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <div class="footer-links">
+          <a href="#services">Leak Detection</a>
+          <a href="#services">Drain Cleaning</a>
+          <a href="#services">Water Heater Repair</a>
+          <a href="#services">Pipe Repair</a>
+          <a href="#services">Toilet Repair</a>
+          <a href="#services">Faucet Repair</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="#why-us">Why Plumb Repair</a>
+          <a href="#process">Our Process</a>
+          <a href="#guarantee">Our Guarantee</a>
+          <a href="tel:9725911331">Contact Us</a>
+          <a href="#cta-band">Schedule Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 Plumb Repair. All rights reserved. Richardson, TX.</span>
+      <span>Licensed &amp; Insured Plumbing Contractor</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Scroll-triggered fade-up
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Header opacity on scroll
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.style.background = window.scrollY > 60
+      ? 'rgba(13,26,42,0.97)'
+      : 'rgba(13,26,42,0.88)';
+  });
+
+  // Stat counters
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  const counters = document.querySelectorAll('.stat-num[data-target]');
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.target, 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = target > 999 ? 1800 : 1200;
+      let start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        const progress = Math.min((ts - start) / duration, 1);
+        const eased = easeOutCubic(progress);
+        const value = Math.round(eased * target);
+        el.textContent = value.toLocaleString() + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+        else el.textContent = target.toLocaleString() + suffix;
+      }
+      requestAnimationFrame(step);
+      counterObserver.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(c => counterObserver.observe(c));
+</script>
+</body>
+</html>
