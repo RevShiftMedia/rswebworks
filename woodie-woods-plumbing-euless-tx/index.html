@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Woodie Woods Plumbing | Euless, TX — Trusted Neighborhood Plumber</title>
+<meta name="description" content="Woodie Woods Plumbing — Euless's trusted neighborhood plumber. Fast, honest repairs for leaks, drains, water heaters, and more. Call (817) 923-5248.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #1a2229;
+  --primary-dark: #0d1214;
+  --accent: #2ea3f2;
+  --accent-dark: #1e87cc;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: #f8f9fa;
+  color: #1a2229;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+
+img { display: block; max-width: 100%; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── HEADER ── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--primary);
+  border-bottom: 3px solid var(--accent);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.35);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.logo-name {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  color: #fff;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.logo-tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-nav a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.header-nav a:hover { color: var(--accent); }
+
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-header-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  padding: 8px 20px;
+  border-radius: 4px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-header-phone:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .header-nav { display: none; }
+}
+
+@media (max-width: 600px) {
+  .logo-name { font-size: 1.35rem; }
+  .btn-header-phone { font-size: 0.9rem; padding: 8px 14px; }
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  background: var(--primary);
+  overflow: hidden;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 90% at 60% 50%, rgba(46,163,242,0.12) 0%, transparent 70%),
+    linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, #1e2f3a 100%);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 56px;
+  align-items: center;
+  padding: 72px 0 80px;
+  width: 100%;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(46,163,242,0.15);
+  border: 1px solid rgba(46,163,242,0.4);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  width: fit-content;
+  margin-bottom: 20px;
+  animation: heroFadeUp 0.5s ease-out 0.1s both;
+}
+
+.hero-badge svg { flex-shrink: 0; }
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 5.5vw, 5rem);
+  color: #fff;
+  line-height: 1.0;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  animation: heroFadeUp 0.5s ease-out 0.2s both;
+}
+
+.hero-headline span { color: var(--accent); }
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.72);
+  max-width: 500px;
+  margin-bottom: 32px;
+  animation: heroFadeUp 0.5s ease-out 0.35s both;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 36px;
+  animation: heroFadeUp 0.5s ease-out 0.5s both;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  padding: 14px 32px;
+  border-radius: 4px;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(46,163,242,0.35);
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(46,163,242,0.45);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.06em;
+  padding: 14px 32px;
+  border-radius: 4px;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  background: rgba(46,163,242,0.08);
+  transform: translateY(-2px);
+}
+
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  animation: heroFadeUp 0.5s ease-out 0.65s both;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.trust-item svg { color: var(--accent); flex-shrink: 0; }
+
+.hero-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(46,163,242,0.25);
+  border-radius: 12px;
+  padding: 36px 28px;
+  backdrop-filter: blur(8px);
+  animation: heroFadeUp 0.5s ease-out 0.4s both;
+}
+
+.hero-card-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.hero-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.hero-card-score {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  color: #fff;
+  line-height: 1;
+}
+
+.stars {
+  display: flex;
+  gap: 3px;
+}
+
+.stars svg { color: #fbbf24; }
+
+.hero-card-reviews {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 24px;
+}
+
+.hero-card-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin-bottom: 24px;
+}
+
+.hero-card-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hero-card-feature:last-child { margin-bottom: 0; }
+
+.hero-card-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(46,163,242,0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.hero-card-text strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.hero-card-text span {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+}
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 36px; padding: 56px 0 56px; }
+  .hero-card { max-width: 440px; }
+}
+
+@media (max-width: 600px) {
+  .hero-headline { font-size: 2.6rem; }
+  .hero-sub { font-size: 1rem; }
+  .hero-ctas { flex-direction: column; }
+  .btn-primary, .btn-outline { text-align: center; justify-content: center; }
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── STATS BAR ── */
+.stats-bar {
+  background: var(--accent);
+  padding: 0;
+}
+
+.stats-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-item {
+  padding: 28px 20px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  position: relative;
+}
+
+.stat-item:last-child { border-right: none; }
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3), .stat-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.2); }
+}
+
+@media (max-width: 600px) {
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-number { font-size: 1.9rem; }
+}
+
+/* ── SECTION BASE ── */
+.section {
+  padding: 88px 0;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--primary);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+
+.section-sub {
+  font-size: 1rem;
+  color: #5a6472;
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+.section-header { margin-bottom: 52px; }
+
+/* ── GRID ── */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-3 { grid-template-columns: 1fr; } }
+
+/* ── CARD ANIMATION ── */
+.service-card,
+.review-card,
+.why-diff {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.service-card.visible,
+.review-card.visible,
+.why-diff.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── SERVICES ── */
+.services { background: #fff; }
+
+.service-card {
+  background: #f8f9fa;
+  border: 1px solid #e5e8ec;
+  border-radius: 10px;
+  padding: 28px 24px;
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.2s, border-color 0.2s;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 32px rgba(46,163,242,0.12);
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.service-card.visible:hover { transform: translateY(-3px); }
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(46,163,242,0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.service-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--primary);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  font-size: 0.87rem;
+  color: #6b7280;
+  line-height: 1.65;
+}
+
+/* ── WHY CHOOSE US ── */
+.why {
+  background: var(--primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.why::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(46,163,242,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.why .section-title { color: #fff; }
+.why .section-label { color: var(--accent); }
+.why .section-sub { color: rgba(255,255,255,0.6); }
+
+.why-diff {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(46,163,242,0.2);
+  border-radius: 10px;
+  padding: 28px 24px;
+  transition: opacity 0.5s ease, transform 0.5s ease, background 0.2s, border-color 0.2s;
+}
+
+.why-diff:hover {
+  background: rgba(46,163,242,0.06);
+  border-color: rgba(46,163,242,0.5);
+}
+
+.why-diff.visible:hover { transform: none; }
+
+.why-diff-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(46,163,242,0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.why-diff h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: #fff;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.why-diff p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+}
+
+/* ── HOW IT WORKS ── */
+.how { background: #f8f9fa; }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+  margin-top: 52px;
+}
+
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: calc(12.5% + 20px);
+  right: calc(12.5% + 20px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent) 0%, rgba(46,163,242,0.2) 100%);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.step-num {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.step h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--primary);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.step p {
+  font-size: 0.82rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .steps { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .steps::before { display: none; }
+}
+
+@media (max-width: 600px) {
+  .steps { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* ── REVIEWS ── */
+.reviews { background: #fff; }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .reviews-grid { grid-template-columns: 1fr; } }
+
+.review-card {
+  background: #f8f9fa;
+  border: 1px solid #e5e8ec;
+  border-radius: 10px;
+  padding: 28px 24px;
+  position: relative;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.review-quote {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: rgba(46,163,242,0.2);
+}
+
+.review-stars {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+
+.review-stars svg { color: #fbbf24; }
+
+.review-text {
+  font-size: 0.9rem;
+  color: #374151;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.review-author-info strong {
+  display: block;
+  font-size: 0.87rem;
+  color: var(--primary);
+}
+
+.review-author-info span {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* ── SERVICE AREAS ── */
+.areas { background: var(--primary-dark); }
+
+.areas .section-title { color: #fff; }
+.areas .section-label { color: var(--accent); }
+.areas .section-sub { color: rgba(255,255,255,0.6); }
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 900px) { .areas-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .areas-grid { grid-template-columns: 1fr; } }
+
+.area-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(46,163,242,0.2);
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.area-chip:hover {
+  background: rgba(46,163,242,0.08);
+  border-color: rgba(46,163,242,0.5);
+}
+
+.area-chip svg { color: var(--accent); flex-shrink: 0; }
+
+/* ── CONTACT ── */
+.contact { background: #f8f9fa; }
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 56px;
+  align-items: start;
+}
+
+@media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; } }
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.contact-info-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(46,163,242,0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.contact-info-text strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.contact-info-text a,
+.contact-info-text span {
+  font-size: 1rem;
+  color: #374151;
+}
+
+.contact-info-text a:hover { color: var(--accent); }
+
+.contact-form {
+  background: #fff;
+  border: 1px solid #e5e8ec;
+  border-radius: 12px;
+  padding: 36px 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.form-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--primary);
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--primary);
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(46,163,242,0.12);
+}
+
+.form-group textarea { resize: vertical; min-height: 100px; }
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 8px;
+}
+
+.btn-submit:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+/* ── CTA BAND ── */
+.cta-band {
+  background: var(--primary);
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0;
+}
+
+.cta-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.cta-band-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.cta-band-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  color: #fff;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+  line-height: 1.05;
+}
+
+.cta-band-title span { color: var(--accent); }
+
+.cta-band-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 32px;
+}
+
+.cta-band-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--primary-dark);
+  padding: 56px 0 28px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
+
+.footer-brand .logo-name { font-size: 1.5rem; margin-bottom: 4px; }
+.footer-brand .logo-tag { margin-bottom: 14px; }
+
+.footer-brand p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.65;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.footer-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+.footer-col-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--accent); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-bottom p {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.3);
+}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-name">Woodie Woods Plumbing</span>
+        <span class="logo-tag">Euless, TX — Licensed &amp; Insured</span>
+      </a>
+      <nav class="header-nav">
+        <a href="#services">Services</a>
+        <a href="#about">Why Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a href="tel:8179235248" class="btn-header-phone">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          (817) 923-5248
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Euless's Trusted Neighborhood Plumber
+        </div>
+        <h1 class="hero-headline">
+          The Plumber<br>Euless Has<br><span>Trusted for Years</span>
+        </h1>
+        <p class="hero-sub">Fast, honest plumbing for homes and businesses across Euless. No surprises, no runaround — just solid work from a crew your neighbors know by name.</p>
+        <div class="hero-ctas">
+          <a href="tel:8179235248" class="btn-primary">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            Call (817) 923-5248
+          </a>
+          <a href="#contact" class="btn-outline">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            Free Estimate
+          </a>
+        </div>
+        <div class="hero-trust">
+          <span class="trust-item">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            Licensed &amp; Insured
+          </span>
+          <span class="trust-item">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Same-Day Available
+          </span>
+          <span class="trust-item">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+            4.9-Star Rated
+          </span>
+          <span class="trust-item">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Euless Locals
+          </span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-label">Verified Google Rating</div>
+        <div class="hero-card-rating">
+          <span class="hero-card-score">4.9</span>
+          <div>
+            <div class="stars">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div class="hero-card-reviews">Based on 316 Google reviews</div>
+          </div>
+        </div>
+        <div class="hero-card-divider"></div>
+        <div class="hero-card-feature">
+          <div class="hero-card-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div class="hero-card-text">
+            <strong>Rapid Response Times</strong>
+            <span>Often same-day or next-day service</span>
+          </div>
+        </div>
+        <div class="hero-card-feature">
+          <div class="hero-card-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div class="hero-card-text">
+            <strong>Upfront, Honest Pricing</strong>
+            <span>Know the cost before we start</span>
+          </div>
+        </div>
+        <div class="hero-card-feature">
+          <div class="hero-card-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <div class="hero-card-text">
+            <strong>Euless Community Roots</strong>
+            <span>Your neighbors are our customers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS BAR ── -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-number" data-target="316" data-suffix="+">316+</div>
+        <div class="stat-label">5-Star Reviews</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="4000" data-suffix="+">4,000+</div>
+        <div class="stat-label">Jobs Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="100" data-suffix="%">100%</div>
+        <div class="stat-label">Licensed &amp; Insured</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="24" data-suffix="/7">24/7</div>
+        <div class="stat-label">Emergency Line</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Full-Service Plumbing<br>for Euless Homes &amp; Businesses</h2>
+      <p class="section-sub">From dripping faucets to full repipes, Woodie Woods handles it all — backed by proper licensing, real warranties, and work you can count on.</p>
+    </div>
+    <div class="grid-3">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+        </div>
+        <h3>Leak Detection &amp; Repair</h3>
+        <p>Pinpoint and fix leaks fast before they become costly water damage. Slab leaks, pipe leaks, and hidden leaks all handled with precision.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+        </div>
+        <h3>Drain Cleaning</h3>
+        <p>Slow or blocked drains cleared quickly and completely. Kitchen, bath, floor drains — we restore proper flow without damaging your pipes.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/></svg>
+        </div>
+        <h3>Water Heater Services</h3>
+        <p>Tank and tankless water heater repair, replacement, and new installation. Get reliable hot water back fast — most units installed same day.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
+        </div>
+        <h3>Fixture Installation</h3>
+        <p>Faucets, sinks, toilets, showers, and tubs — installed right the first time. We handle all brands and styles for kitchens and bathrooms.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        </div>
+        <h3>Whole-Home Repipe</h3>
+        <p>Aging galvanized or polybutylene pipes replaced with modern PEX or copper. Better water pressure, cleaner water, and lasting peace of mind.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        </div>
+        <h3>Emergency Plumbing</h3>
+        <p>Burst pipes, gas leaks, sewage backups — when time matters, Woodie Woods responds. 24/7 emergency service for Euless and surrounding areas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY CHOOSE US ── -->
+<section class="section why" id="about">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">Plumbing Done the Right Way,<br>By People You Can Trust</h2>
+      <p class="section-sub">Woodie Woods isn't a franchise or a call center — we're your neighbors. Here's what sets us apart from the big guys.</p>
+    </div>
+    <div class="grid-3">
+      <div class="why-diff">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3>State-Licensed Plumbers</h3>
+        <p>Every tech on our crew holds a valid Texas plumbing license. No unlicensed helpers, no corner cutting — just professionals who've earned the right to do this work.</p>
+      </div>
+      <div class="why-diff">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Flat-Rate, Upfront Pricing</h3>
+        <p>We tell you the full cost before we touch a wrench. No hourly surprises, no hidden fees — the price you hear is the price you pay, period.</p>
+      </div>
+      <div class="why-diff">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3>Same-Day Service Available</h3>
+        <p>Most calls are handled the same day. If you're dealing with a plumbing problem right now, there's a good chance we can be there today — not next week.</p>
+      </div>
+      <div class="why-diff">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/></svg>
+        </div>
+        <h3>Workmanship Warranty</h3>
+        <p>We stand behind every repair and installation. If something we fixed fails, we come back and make it right — no charge, no argument, no excuses.</p>
+      </div>
+      <div class="why-diff">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        </div>
+        <h3>Deep Euless Roots</h3>
+        <p>We live here, we work here, and we've built our reputation one satisfied neighbor at a time. Our referral base is the whole neighborhood — that keeps us honest.</p>
+      </div>
+      <div class="why-diff">
+        <div class="why-diff-icon">
+          <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+        </div>
+        <h3>Clean, Thorough Work</h3>
+        <p>We show up on time, explain what we find, do the work cleanly, and leave your home better than we found it. That's just how Woodie Woods operates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="section how">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Our Process</div>
+      <h2 class="section-title">Simple. Straightforward.<br>No Surprises.</h2>
+      <p class="section-sub">Getting your plumbing fixed shouldn't be stressful. Here's exactly what happens when you call Woodie Woods.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Call or Book Online</h4>
+        <p>Reach us by phone or fill out the form. Tell us what's happening — we'll ask a few quick questions to understand the issue.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>We Diagnose &amp; Quote</h4>
+        <p>A licensed plumber arrives, assesses the problem, and gives you an upfront flat-rate price before any work begins.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Work Gets Done Right</h4>
+        <p>You approve the quote, we get to work — cleanly and efficiently, using quality materials built to last.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>You're Covered</h4>
+        <p>Every job comes with a workmanship warranty. If anything goes sideways, call us and we'll be back to make it right at no cost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REVIEWS ── -->
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Customer Reviews</div>
+      <h2 class="section-title">316 Reasons Euless<br>Trusts Woodie Woods</h2>
+      <p class="section-sub">Don't take our word for it — here's what your neighbors have to say about their experience with us.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <svg class="review-quote" width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Found a slab leak on a Friday afternoon. Woodie Woods was out by 6pm, diagnosed it, and had it fixed by noon Saturday. Absolutely outstanding response. These guys are the real deal."</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div class="review-author-info">
+            <strong>Marcus T.</strong>
+            <span>Euless, TX — Slab Leak Repair</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <svg class="review-quote" width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Had three plumbers give me quotes on a water heater replacement. Woodie Woods was the most honest — explained exactly what I needed and what I didn't. Installed same day, fair price."</p>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <div class="review-author-info">
+            <strong>Sandra R.</strong>
+            <span>Hurst, TX — Water Heater Install</span>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <svg class="review-quote" width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <div class="review-stars">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="review-text">"Our kitchen drain had been slow for months. Tried everything from the hardware store — nothing worked. Called Woodie Woods and they had it completely cleared in under an hour. Wish I called sooner."</p>
+        <div class="review-author">
+          <div class="review-avatar">D</div>
+          <div class="review-author-info">
+            <strong>David K.</strong>
+            <span>Euless, TX — Drain Cleaning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICE AREAS ── -->
+<section class="section areas">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Where We Work</div>
+      <h2 class="section-title">Serving Euless &amp;<br>All Surrounding Cities</h2>
+      <p class="section-sub">We're based in Euless and cover the entire mid-cities area. If you're nearby, we can be there today.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Euless, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Hurst, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Bedford, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Grapevine, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Colleyville, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Southlake, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Fort Worth, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        North Richland Hills, TX
+      </div>
+      <div class="area-chip">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Irving, TX
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div>
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Ready to Fix Your<br>Plumbing Problem?</h2>
+        <p class="section-sub" style="margin-bottom: 40px;">Give us a call or fill out the form. We'll respond fast, give you an upfront price, and get the job done right.</p>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          </div>
+          <div class="contact-info-text">
+            <strong>Phone</strong>
+            <a href="tel:8179235248">(817) 923-5248</a>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <div class="contact-info-text">
+            <strong>Service Area</strong>
+            <span>Euless &amp; Mid-Cities, TX</span>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div class="contact-info-text">
+            <strong>Hours</strong>
+            <span>Mon–Sat 7am–7pm | 24/7 Emergency</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="form-title">Request Free Estimate</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="John">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="(817) 555-0000">
+        </div>
+        <div class="form-group">
+          <label for="service">Service Needed</label>
+          <select id="service">
+            <option value="">Select a service...</option>
+            <option>Leak Detection &amp; Repair</option>
+            <option>Drain Cleaning</option>
+            <option>Water Heater Service</option>
+            <option>Fixture Installation</option>
+            <option>Whole-Home Repipe</option>
+            <option>Emergency Plumbing</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Describe the Issue</label>
+          <textarea id="message" placeholder="Tell us what's going on — the more detail the better..."></textarea>
+        </div>
+        <button type="button" class="btn-submit">Get My Free Estimate</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ── -->
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-band-inner">
+      <h2 class="cta-band-title">Plumbing Problem?<br><span>Call Woodie Woods Now.</span></h2>
+      <p class="cta-band-sub">Same-day service available. Upfront pricing. 4.9-star rated by 316 Euless-area homeowners.</p>
+      <div class="cta-band-actions">
+        <a href="tel:8179235248" class="btn-primary">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          (817) 923-5248
+        </a>
+        <a href="#contact" class="btn-outline">Schedule Online</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-name">Woodie Woods Plumbing</span>
+          <span class="logo-tag">Euless, TX — Licensed &amp; Insured</span>
+        </div>
+        <p>Euless's trusted neighborhood plumber. Honest pricing, same-day service, and workmanship you can rely on — backed by 316 five-star reviews.</p>
+        <a href="tel:8179235248" class="footer-phone">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          (817) 923-5248
+        </a>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Leak Detection</a></li>
+          <li><a href="#services">Drain Cleaning</a></li>
+          <li><a href="#services">Water Heaters</a></li>
+          <li><a href="#services">Fixture Install</a></li>
+          <li><a href="#services">Repipe</a></li>
+          <li><a href="#services">Emergency</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#areas">Euless</a></li>
+          <li><a href="#areas">Hurst</a></li>
+          <li><a href="#areas">Bedford</a></li>
+          <li><a href="#areas">Grapevine</a></li>
+          <li><a href="#areas">Colleyville</a></li>
+          <li><a href="#areas">Fort Worth</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Woodie Woods Plumbing. All rights reserved.</p>
+      <p>Licensed Plumbing Contractor — Euless, TX</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  function animateCount(el) {
+    const raw = el.dataset.target;
+    const suffix = el.dataset.suffix || '';
+    const target = parseInt(raw);
+    if (isNaN(target)) return;
+    const duration = 1800;
+    const start = performance.now();
+    const update = (time) => {
+      const progress = Math.min((time - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+      if (progress < 1) requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+  }
+
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        animateCount(e.target);
+        statsObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.stat-number[data-target]').forEach(el => statsObserver.observe(el));
+
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        cardObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.service-card, .review-card, .why-diff').forEach(el => cardObserver.observe(el));
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

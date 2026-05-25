@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tierney Plumbing LLC | Grapevine TX Family Plumber</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #1c1c1c;
+  --primary-dark: #0a0a0a;
+  --accent: #fa9418;
+  --accent-dark: #d07508;
+  --bg: #ffffff;
+  --bg-off: #f6f6f4;
+  --t1: #ffffff;
+  --t2: rgba(255,255,255,0.75);
+  --t3: rgba(255,255,255,0.5);
+  --dark-text: #1a1a1a;
+  --grey-text: #6b7280;
+  --border: #e4e4e4;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --radius: 10px;
+  --shadow: 0 4px 20px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark-text); line-height: 1.65; }
+h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+.site-header {
+  background: var(--primary);
+  position: sticky; top: 0; z-index: 1000;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.5);
+}
+.site-header.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,0.7); }
+.header-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  height: 66px; display: flex; align-items: center; justify-content: space-between;
+}
+.header-brand { display: flex; flex-direction: column; }
+.header-name { font-family: var(--font-display); font-size: 21px; color: #fff; line-height: 1.1; letter-spacing: 0.04em; }
+.header-tag { font-family: var(--font-body); font-size: 12px; color: var(--t2); }
+.header-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: #fff; font-family: var(--font-display); font-size: 16px;
+  padding: 10px 22px; border-radius: 8px; text-decoration: none;
+  box-shadow: 0 4px 14px rgba(250,148,24,0.45); transition: all 0.15s;
+}
+.header-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(250,148,24,0.55); }
+
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #2a1a06 100%);
+  padding: 80px 0 70px; position: relative; overflow: hidden;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.15; pointer-events: none; z-index: 0;
+}
+.hero > * { position: relative; z-index: 1; }
+.hero-inner {
+  max-width: 1100px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: 60% 40%; gap: 40px; align-items: center;
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-badge    { animation: heroFadeUp 0.5s ease-out 0.1s both; }
+.hero-headline { animation: heroFadeUp 0.5s ease-out 0.2s both; }
+.hero-sub      { animation: heroFadeUp 0.5s ease-out 0.35s both; }
+.hero-ctas     { animation: heroFadeUp 0.5s ease-out 0.5s both; }
+.hero-trust    { animation: heroFadeUp 0.5s ease-out 0.65s both; }
+.hero-card     { animation: heroFadeUp 0.5s ease-out 0.4s both; }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--accent); color: #fff; font-family: var(--font-display);
+  font-size: 13px; letter-spacing: 0.1em; padding: 6px 14px; border-radius: 20px; margin-bottom: 18px;
+}
+.hero-headline { font-size: clamp(42px, 6vw, 64px); color: #fff; line-height: 1.0; margin-bottom: 18px; }
+.hero-headline span { color: var(--accent); }
+.hero-sub { font-family: var(--font-body); font-size: 18px; color: var(--t2); line-height: 1.6; margin-bottom: 30px; max-width: 520px; }
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 30px; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--accent); color: #fff; font-family: var(--font-display); font-size: 17px;
+  padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(250,148,24,0.45); transition: all 0.15s; text-decoration: none;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(250,148,24,0.55); }
+.btn-primary:active { transform: scale(0.97); }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent; color: #fff; font-family: var(--font-display); font-size: 17px;
+  padding: 13px 28px; border-radius: 8px; border: 2px solid rgba(255,255,255,0.6);
+  cursor: pointer; transition: all 0.15s; text-decoration: none;
+}
+.btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+.hero-trust { display: flex; align-items: center; gap: 16px; font-family: var(--font-body); font-size: 13px; color: var(--t2); flex-wrap: wrap; }
+.hero-trust-stars { display: flex; align-items: center; gap: 4px; color: #fbbf24; }
+.hero-card {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.13);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4); backdrop-filter: blur(12px);
+  border-radius: 14px; padding: 28px 30px;
+}
+.hero-card-title { font-family: var(--font-display); font-size: 15px; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 20px; text-transform: uppercase; }
+.hero-prop { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.hero-prop:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.hero-check { width: 22px; height: 22px; border-radius: 50%; background: rgba(250,148,24,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: var(--accent); }
+.hero-prop-title { font-family: var(--font-display); font-size: 15px; color: #fff; line-height: 1.2; margin-bottom: 2px; }
+.hero-prop-desc { font-family: var(--font-body); font-size: 12px; color: var(--t2); line-height: 1.5; }
+.hero-phone { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-family: var(--font-display); font-size: 22px; color: #fff; display: flex; align-items: center; gap: 10px; }
+
+.stats-bar { background: var(--primary); border-bottom: 1px solid rgba(255,255,255,0.05); }
+.stats-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat-item { padding: 28px 20px; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
+.stat-item:last-child { border-right: none; }
+.stat-number { font-family: var(--font-display); font-size: clamp(32px, 4vw, 48px); color: var(--accent); line-height: 1; margin-bottom: 6px; }
+.stat-label { font-family: var(--font-body); font-size: 12px; color: var(--t2); text-transform: uppercase; letter-spacing: 0.06em; }
+
+section { padding: 90px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.section-label { font-family: var(--font-display); font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 10px; }
+.section-title { font-family: var(--font-display); font-size: 36px; color: var(--dark-text); margin-bottom: 10px; }
+.section-subtitle { font-family: var(--font-body); font-size: 16px; color: var(--grey-text); margin-bottom: 48px; max-width: 560px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.service-card {
+  background: var(--bg); border: 1px solid var(--border); border-top: 3px solid transparent;
+  border-radius: var(--radius); padding: 28px 24px; box-shadow: var(--shadow);
+  transition: all 0.25s ease; opacity: 0;
+}
+.service-card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.service-card:nth-child(1).visible { animation-delay: 0.1s; }
+.service-card:nth-child(2).visible { animation-delay: 0.2s; }
+.service-card:nth-child(3).visible { animation-delay: 0.3s; }
+.service-card:nth-child(4).visible { animation-delay: 0.4s; }
+.service-card:nth-child(5).visible { animation-delay: 0.5s; }
+.service-card:nth-child(6).visible { animation-delay: 0.6s; }
+.service-card:hover { border-top-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.service-icon { width: 52px; height: 52px; border-radius: 50%; background: rgba(250,148,24,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; color: var(--accent); }
+.service-name { font-family: var(--font-display); font-size: 18px; color: var(--dark-text); margin-bottom: 8px; }
+.service-desc { font-family: var(--font-body); font-size: 14px; color: var(--grey-text); line-height: 1.6; margin-bottom: 14px; }
+.service-link { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--accent); text-decoration: none; }
+
+.why-section { padding: 90px 0; background: var(--primary); position: relative; overflow: hidden; }
+.why-section::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.12; pointer-events: none; }
+.why-section > * { position: relative; z-index: 1; }
+.why-title { font-size: 36px; color: #fff; margin-bottom: 10px; }
+.why-sub { font-family: var(--font-body); font-size: 16px; color: var(--t2); margin-bottom: 48px; max-width: 520px; }
+.why-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 48px; }
+.why-stat-card { background: var(--primary-dark); border-radius: var(--radius); padding: 24px 20px; text-align: center; border: 1px solid rgba(255,255,255,0.06); }
+.why-stat-num { font-family: var(--font-display); font-size: 36px; color: var(--accent); line-height: 1; margin-bottom: 6px; }
+.why-stat-lbl { font-family: var(--font-body); font-size: 12px; color: var(--t2); }
+.why-differentiators { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.why-diff { display: flex; align-items: flex-start; gap: 14px; opacity: 0; }
+.why-diff.visible { animation: fadeUp 0.4s ease-out forwards; }
+.why-diff:nth-child(1).visible { animation-delay: 0.1s; }
+.why-diff:nth-child(2).visible { animation-delay: 0.2s; }
+.why-diff:nth-child(3).visible { animation-delay: 0.3s; }
+.why-diff:nth-child(4).visible { animation-delay: 0.4s; }
+.why-diff-icon { width: 42px; height: 42px; border-radius: 50%; background: rgba(250,148,24,0.18); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); }
+.why-diff-title { font-family: var(--font-display); font-size: 17px; color: #fff; margin-bottom: 4px; }
+.why-diff-desc { font-family: var(--font-body); font-size: 13px; color: var(--t2); line-height: 1.55; }
+
+.how-section { padding: 90px 0; background: var(--primary-dark); }
+.how-title { font-size: 36px; color: #fff; margin-bottom: 10px; }
+.how-sub { font-family: var(--font-body); font-size: 16px; color: var(--t2); margin-bottom: 52px; max-width: 480px; }
+.how-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; position: relative; }
+.how-steps::before { content: ''; position: absolute; top: 32px; left: 16.67%; right: 16.67%; height: 1px; border-top: 2px dashed rgba(255,255,255,0.12); }
+.how-step { padding: 0 32px; text-align: center; }
+.how-step-num { width: 60px; height: 60px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 28px; color: #fff; margin: 0 auto 20px; box-shadow: 0 4px 16px rgba(250,148,24,0.45); }
+.how-step-icon { color: rgba(255,255,255,0.8); margin-bottom: 16px; }
+.how-step-title { font-family: var(--font-display); font-size: 20px; color: #fff; margin-bottom: 10px; }
+.how-step-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.6; }
+
+.reviews-section { padding: 90px 0; background: var(--bg-off); }
+.reviews-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
+.google-badge { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 12px 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.google-badge-text { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); }
+.google-badge-score { font-family: var(--font-display); font-size: 22px; color: var(--dark-text); line-height: 1; }
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.review-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); transition: all 0.25s ease; opacity: 0; }
+.review-card.visible { animation: fadeUp 0.4s ease-out forwards; }
+.review-card:nth-child(1).visible { animation-delay: 0.1s; }
+.review-card:nth-child(2).visible { animation-delay: 0.2s; }
+.review-card:nth-child(3).visible { animation-delay: 0.3s; }
+.review-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.12); transform: translateY(-3px); }
+.review-stars { display: flex; gap: 3px; color: #f59e0b; margin-bottom: 14px; }
+.review-quote-text { font-family: var(--font-body); font-size: 14px; font-style: italic; color: var(--dark-text); line-height: 1.7; margin-bottom: 16px; }
+.review-divider { height: 1px; background: var(--border); margin-bottom: 16px; }
+.review-author { display: flex; align-items: center; gap: 12px; }
+.review-avatar { width: 42px; height: 42px; border-radius: 50%; background: rgba(250,148,24,0.14); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 16px; color: var(--accent); flex-shrink: 0; }
+.review-name { font-family: var(--font-display); font-size: 15px; color: var(--dark-text); }
+.review-location { font-family: var(--font-body); font-size: 12px; color: var(--grey-text); }
+
+.areas-section { padding: 90px 0; background: var(--primary); }
+.areas-inner { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; align-items: center; }
+.areas-title { font-size: 36px; color: #fff; margin-bottom: 14px; }
+.areas-body { font-family: var(--font-body); font-size: 16px; color: var(--t2); line-height: 1.7; margin-bottom: 28px; }
+.areas-card { background: var(--primary-dark); border-radius: var(--radius); padding: 28px; border: 1px solid rgba(255,255,255,0.07); }
+.areas-card-title { font-family: var(--font-display); font-size: 16px; color: var(--accent); margin-bottom: 18px; letter-spacing: 0.06em; text-transform: uppercase; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--font-body); font-size: 13px; color: var(--t2); background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; padding: 6px 12px; cursor: default; transition: all 0.2s; }
+.chip:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.contact-section { padding: 90px 0; background: var(--bg); }
+.contact-inner { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; }
+.contact-title { font-size: 36px; color: var(--dark-text); margin-bottom: 10px; }
+.contact-sub { font-family: var(--font-body); font-size: 15px; color: var(--grey-text); margin-bottom: 30px; }
+.form-group { margin-bottom: 16px; }
+.form-label { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--dark-text); margin-bottom: 6px; display: block; }
+input, select, textarea { width: 100%; background: var(--bg-off); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; font-family: var(--font-body); font-size: 14px; color: var(--dark-text); transition: border-color 0.2s; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(250,148,24,0.1); }
+textarea { min-height: 110px; resize: vertical; }
+.form-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.btn-form { width: 100%; background: var(--accent); color: #fff; font-family: var(--font-display); font-size: 18px; padding: 16px; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 16px rgba(250,148,24,0.4); transition: all 0.15s; margin-top: 6px; }
+.btn-form:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(250,148,24,0.5); }
+.contact-info-card { background: var(--primary); border-radius: var(--radius); padding: 36px; color: #fff; height: fit-content; }
+.contact-info-title { font-family: var(--font-display); font-size: 22px; color: #fff; margin-bottom: 24px; }
+.contact-info-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.contact-info-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.contact-info-icon { width: 40px; height: 40px; border-radius: 50%; background: rgba(250,148,24,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); }
+.contact-info-label { font-family: var(--font-display); font-size: 14px; color: var(--t2); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+.contact-info-value { font-family: var(--font-body); font-size: 15px; color: #fff; font-weight: 600; }
+
+.cta-band { padding: 80px 0; background: linear-gradient(135deg, var(--accent-dark), var(--accent)); text-align: center; position: relative; overflow: hidden; }
+.cta-band::after { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); opacity: 0.12; pointer-events: none; }
+.cta-band > * { position: relative; z-index: 1; }
+.cta-headline { font-family: var(--font-display); font-size: clamp(28px, 4vw, 44px); color: #fff; margin-bottom: 12px; }
+.cta-sub { font-family: var(--font-body); font-size: 17px; color: rgba(255,255,255,0.85); margin-bottom: 32px; }
+.btn-cta-white { display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--accent-dark); font-family: var(--font-display); font-size: 18px; padding: 15px 36px; border-radius: 8px; text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,0.2); transition: all 0.15s; }
+.btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.28); }
+
+.site-footer { background: var(--primary-dark); padding: 64px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; }
+.footer-brand-name { font-family: var(--font-display); font-size: 22px; color: #fff; margin-bottom: 10px; }
+.footer-brand-desc { font-family: var(--font-body); font-size: 14px; color: var(--t2); line-height: 1.7; margin-bottom: 20px; }
+.footer-col-title { font-family: var(--font-display); font-size: 15px; color: #fff; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.06em; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { font-family: var(--font-body); font-size: 13px; color: var(--t2); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding: 20px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.footer-copy { font-family: var(--font-body); font-size: 12px; color: var(--t3); }
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-card { display: none; }
+  .grid-3, .why-stats, .stats-inner, .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .how-steps { grid-template-columns: 1fr; }
+  .how-steps::before { display: none; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .areas-inner, .contact-inner, .why-differentiators { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .grid-3, .why-stats, .stats-inner, .reviews-grid, .why-differentiators { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <span class="header-name">TIERNEY PLUMBING</span>
+      <span class="header-tag">Family-Owned · Grapevine, TX · Licensed &amp; Insured</span>
+    </div>
+    <a href="tel:8172519292" class="header-cta">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      (817) 251-9292
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        FAMILY-OWNED · GRAPEVINE TRUSTED
+      </div>
+      <h1 class="hero-headline">Grapevine's <span>Family Plumber</span> Since Day One</h1>
+      <p class="hero-sub">Tierney Plumbing has been showing up for Grapevine and Southlake homeowners with honest work, fair prices, and zero runaround. We fix it right and we're done — that's the family name on the line.</p>
+      <div class="hero-ctas">
+        <a href="tel:8172519292" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call For Free Estimate
+        </a>
+        <a href="#contact" class="btn-ghost">Book Online</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <span>4.3 Stars · 45 Google Reviews</span>
+        <span>·</span>
+        <span>Licensed &amp; Insured</span>
+        <span>·</span>
+        <span>Family Business</span>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">The Tierney Way</div>
+      <div class="hero-prop">
+        <div class="hero-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="hero-prop-title">Family Name on Every Job</div>
+          <div class="hero-prop-desc">We stand behind our work because our name is on it.</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="hero-prop-title">Honest Upfront Pricing</div>
+          <div class="hero-prop-desc">You approve the price before we start. That's what you pay.</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="hero-prop-title">Licensed Texas Plumbers</div>
+          <div class="hero-prop-desc">Fully licensed, bonded, and insured. Code-compliant every time.</div>
+        </div>
+      </div>
+      <div class="hero-prop">
+        <div class="hero-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div>
+          <div class="hero-prop-title">Same-Day Appointments</div>
+          <div class="hero-prop-desc">Most jobs scheduled same day. We respect your time.</div>
+        </div>
+      </div>
+      <div class="hero-phone">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (817) 251-9292
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-number" data-target="2800" data-suffix="+">0</div><div class="stat-label">Homes Served</div></div>
+    <div class="stat-item"><div class="stat-number" data-target="45" data-suffix="">0</div><div class="stat-label">Google Reviews</div></div>
+    <div class="stat-item"><div class="stat-number" data-target="100" data-suffix="%">0</div><div class="stat-label">Licensed Plumbers</div></div>
+    <div class="stat-item"><div class="stat-number" data-target="1" data-suffix=" Day">0</div><div class="stat-label">Avg Scheduling</div></div>
+  </div>
+</div>
+
+<section style="padding: 90px 0; background: var(--bg);">
+  <div class="container">
+    <div class="section-label">Our Work</div>
+    <h2 class="section-title">Plumbing Services in Grapevine</h2>
+    <p class="section-subtitle">Residential plumbing for the DFW mid-cities area. No job too small, no problem we haven't seen before.</p>
+    <div class="grid-3">
+      <div class="service-card">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="service-name">Leak Repair</div>
+        <div class="service-desc">A small drip wastes hundreds of gallons and causes real structural damage over time. We find it and stop it — walls, slab, or supply line.</div>
+        <a href="tel:8172519292" class="service-link">Fix My Leak →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+        <div class="service-name">Water Heater Repair</div>
+        <div class="service-desc">No hot water is an emergency in most households. We repair or replace tank and tankless units, usually same day when parts are in stock.</div>
+        <a href="tel:8172519292" class="service-link">Restore Hot Water →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <div class="service-name">Drain Cleaning</div>
+        <div class="service-desc">Slow kitchen drain, backed-up bathroom, or a main line clog — we clear it properly with cable or hydro equipment, not a coat hanger.</div>
+        <a href="tel:8172519292" class="service-link">Clear My Drain →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="service-name">Toilet Repair &amp; Install</div>
+        <div class="service-desc">Running toilet, broken flapper, unstable base, or a new install — we handle the whole range and leave everything sealed and functioning right.</div>
+        <a href="tel:8172519292" class="service-link">Book Toilet Repair →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div>
+        <div class="service-name">Sewer Line Service</div>
+        <div class="service-desc">Multiple slow drains or sewage odors mean the main line needs attention. Camera inspection reveals the problem — we fix it without tearing up the yard.</div>
+        <a href="tel:8172519292" class="service-link">Inspect Sewer →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+        <div class="service-name">Repiping</div>
+        <div class="service-desc">Older Grapevine homes with galvanized or polybutylene pipe need full replacement. We repipe efficiently with minimal drywall disturbance.</div>
+        <a href="tel:8172519292" class="service-link">Get Repipe Quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-section">
+  <div class="container">
+    <div class="section-label" style="color:var(--accent)">Why Tierney</div>
+    <h2 class="why-title">Small Shop, Big Standard</h2>
+    <p class="why-sub">We're not a franchise with a rotating door of technicians. When you call Tierney Plumbing, you get experienced plumbers who care about their community.</p>
+    <div class="why-stats">
+      <div class="why-stat-card"><div class="why-stat-num" data-target="2800" data-suffix="+">0</div><div class="why-stat-lbl">Homes Serviced</div></div>
+      <div class="why-stat-card"><div class="why-stat-num" data-target="4" data-suffix=".3">0</div><div class="why-stat-lbl">Star Google Rating</div></div>
+      <div class="why-stat-card"><div class="why-stat-num" data-target="100" data-suffix="%">0</div><div class="why-stat-lbl">Upfront Pricing</div></div>
+      <div class="why-stat-card"><div class="why-stat-num" data-target="24" data-suffix="/7">0</div><div class="why-stat-lbl">Emergency Line</div></div>
+    </div>
+    <div class="why-differentiators">
+      <div class="why-diff">
+        <div class="why-diff-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div>
+          <div class="why-diff-title">Family Business, Not a Franchise</div>
+          <div class="why-diff-desc">You're calling a local family, not a national call center routing you to the next available sub. Same plumbers, same standards, every time.</div>
+        </div>
+      </div>
+      <div class="why-diff">
+        <div class="why-diff-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div>
+          <div class="why-diff-title">Licensed &amp; Fully Insured Texas</div>
+          <div class="why-diff-desc">Every member of our crew is Texas-licensed. We carry liability and workman's comp — your home is covered.</div>
+        </div>
+      </div>
+      <div class="why-diff">
+        <div class="why-diff-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div>
+          <div class="why-diff-title">No Hidden Charges</div>
+          <div class="why-diff-desc">Flat rate, upfront. The price we quote before the job is the price on your invoice. No service fee surprises added at the end.</div>
+        </div>
+      </div>
+      <div class="why-diff">
+        <div class="why-diff-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div>
+          <div class="why-diff-title">Respect for Your Home</div>
+          <div class="why-diff-desc">We wear shoe covers, protect flooring, clean our work area, and explain everything we did before we leave. No mess left behind.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-section">
+  <div class="container">
+    <div class="section-label" style="color:var(--accent)">The Process</div>
+    <h2 class="how-title">Simple. Honest. Done Right.</h2>
+    <p class="how-sub">We keep it straightforward — no upsell scripts, no manufactured urgency.</p>
+    <div class="how-steps">
+      <div class="how-step">
+        <div class="how-step-num">1</div>
+        <div class="how-step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="how-step-title">Call Us Direct</div>
+        <div class="how-step-desc">You reach a real person — not a dispatcher on the other coast. We ask a few questions, schedule your window, and confirm by text.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">2</div>
+        <div class="how-step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <div class="how-step-title">Diagnose and Quote</div>
+        <div class="how-step-desc">We inspect the problem, explain what we found, and give you a flat price before touching anything. No pressure, no upsell, no guessing.</div>
+      </div>
+      <div class="how-step">
+        <div class="how-step-num">3</div>
+        <div class="how-step-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="how-step-title">Fixed Right, Walk Away Clean</div>
+        <div class="how-step-desc">We complete the job, test it, and clean up. We walk you through what was done and answer any questions before we close up the truck.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <div class="container">
+    <div class="reviews-header">
+      <div>
+        <div class="section-label">Customer Stories</div>
+        <h2 class="section-title" style="color:var(--dark-text)">What Our Neighbors Say</h2>
+      </div>
+      <div class="google-badge">
+        <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div><div class="google-badge-score">4.3</div><div class="google-badge-text">Google · 45 Reviews</div></div>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-quote-text">Had a pipe burst in the garage on a cold January morning. Called Tierney at 7am and they were here by 9. The plumber found the break quickly, had the parts on the truck, and had us back up in about two hours total. Fair price, no drama. These are the guys I'll call every time now.</p>
+        <div class="review-divider"></div>
+        <div class="review-author"><div class="review-avatar">JW</div><div><div class="review-name">Jim W.</div><div class="review-location">Grapevine, TX · Google Review</div></div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-quote-text">I'd been putting off a toilet replacement for a year because I kept getting quotes with unexpected "extra fees" once the work started. Called Tierney and they gave me a flat price over the phone, showed up on time, installed the new unit in about 45 minutes, and the final invoice matched exactly. That kind of honesty keeps me coming back.</p>
+        <div class="review-divider"></div>
+        <div class="review-author"><div class="review-avatar">LN</div><div><div class="review-name">Lisa N.</div><div class="review-location">Southlake, TX · Google Review</div></div></div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <svg width="32" height="24" viewBox="0 0 32 24" fill="currentColor" style="color: var(--accent); opacity: 0.5; margin-bottom: 14px; display: block;"><path d="M0 24V14.4C0 6.56 4.64 1.6 13.92 0l1.44 2.24C10.56 3.52 8 6.56 8 11.2H13.6V24H0zm18.4 0V14.4C18.4 6.56 23.04 1.6 32.32 0l1.44 2.24c-4.8 1.28-7.36 4.32-7.36 8.96H32V24H18.4z"/></svg>
+        <p class="review-quote-text">Water heater stopped working on a Thursday afternoon. By Friday morning Tierney had it replaced — they brought the new unit on the truck, had the old one out in 30 minutes, and the installation was clean and up to code. They even showed me the safety shutoff locations and explained the warranty. A professional, start to finish.</p>
+        <div class="review-divider"></div>
+        <div class="review-author"><div class="review-avatar">CG</div><div><div class="review-name">Chris G.</div><div class="review-location">Colleyville, TX · Google Review</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas-section">
+  <div class="container">
+    <div class="areas-inner">
+      <div>
+        <div class="section-label" style="color:var(--accent)">Service Area</div>
+        <h2 class="areas-title">Grapevine and the Mid-Cities</h2>
+        <p class="areas-body">We operate out of Grapevine and cover the DFW mid-cities corridor. Close to you in Southlake, Colleyville, Euless, Bedford, and everything in between.</p>
+        <a href="tel:8172519292" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Request Service
+        </a>
+      </div>
+      <div class="areas-card">
+        <div class="areas-card-title">Neighborhoods We Serve</div>
+        <div class="chips">
+          <span class="chip">Grapevine</span>
+          <span class="chip">Southlake</span>
+          <span class="chip">Colleyville</span>
+          <span class="chip">Euless</span>
+          <span class="chip">Bedford</span>
+          <span class="chip">Hurst</span>
+          <span class="chip">Keller</span>
+          <span class="chip">Trophy Club</span>
+          <span class="chip">North Richland Hills</span>
+          <span class="chip">Coppell</span>
+          <span class="chip">Irving</span>
+          <span class="chip">Flower Mound</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div>
+        <div class="section-label">Book Service</div>
+        <h2 class="contact-title">Get a Free Estimate</h2>
+        <p class="contact-sub">Send us the details and we'll call back within 15 minutes to schedule your appointment.</p>
+        <form>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">First Name</label><input type="text" placeholder="First"></div>
+            <div class="form-group"><label class="form-label">Last Name</label><input type="text" placeholder="Last"></div>
+          </div>
+          <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" placeholder="(817) 000-0000"></div>
+          <div class="form-group">
+            <label class="form-label">Service Needed</label>
+            <select>
+              <option>Leak Repair</option>
+              <option>Water Heater</option>
+              <option>Drain Cleaning</option>
+              <option>Toilet / Fixture</option>
+              <option>Sewer Line</option>
+              <option>Repiping</option>
+              <option>Emergency</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label">Tell Us More</label><textarea placeholder="What's the problem? Where is it in the house?"></textarea></div>
+          <button type="submit" class="btn-form">Request Free Estimate</button>
+        </form>
+      </div>
+      <div>
+        <div class="contact-info-card">
+          <div class="contact-info-title">Contact Tierney Plumbing</div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><div class="contact-info-label">Phone</div><div class="contact-info-value">(817) 251-9292</div></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="contact-info-label">Hours</div><div class="contact-info-value">Mon–Fri 7am–6pm · Emergency Available</div></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="contact-info-label">Location</div><div class="contact-info-value">Grapevine, TX 76051</div></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><div class="contact-info-label">Credentials</div><div class="contact-info-value">Licensed · Insured · Family-Owned</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2 class="cta-headline">Need a Plumber You Can Count On?</h2>
+    <p class="cta-sub">Honest pricing, local family, and real plumbing expertise. Call us today.</p>
+    <a href="tel:8172519292" class="btn-cta-white">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (817) 251-9292
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">TIERNEY PLUMBING LLC</div>
+        <div class="footer-brand-desc">Family-owned plumbing in Grapevine, TX. Honest work, fair prices, and a name we stand behind — because it's ours. Serving the DFW mid-cities with licensed, insured plumbers since day one.</div>
+        <div style="font-family: var(--font-body); font-size: 14px; color: var(--accent); font-weight: 600;">(817) 251-9292</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#">Leak Repair</a></li>
+          <li><a href="#">Water Heater</a></li>
+          <li><a href="#">Drain Cleaning</a></li>
+          <li><a href="#">Toilet Repair</a></li>
+          <li><a href="#">Sewer Line</a></li>
+          <li><a href="#">Repiping</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Areas</div>
+        <ul class="footer-links">
+          <li><a href="#">Grapevine</a></li>
+          <li><a href="#">Southlake</a></li>
+          <li><a href="#">Colleyville</a></li>
+          <li><a href="#">Euless</a></li>
+          <li><a href="#">Bedford</a></li>
+          <li><a href="#">Keller</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="tel:8172519292">(817) 251-9292</a></li>
+          <li><a href="#">tierneyplumbing.com</a></li>
+          <li><a href="#">Grapevine, TX 76051</a></li>
+          <li><a href="#">Licensed &amp; Insured</a></li>
+          <li><a href="#">Family-Owned</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2024 Tierney Plumbing LLC. All rights reserved. Licensed Texas Plumber · Grapevine, TX.</div>
+      <div class="footer-copy">Family-Owned &amp; Operated</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 50);
+});
+function animateCount(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+  const update = (time) => {
+    const progress = Math.min((time - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const cardObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); cardObserver.unobserve(e.target); } });
+}, { threshold: 0.15 });
+document.querySelectorAll('.service-card, .review-card, .why-diff').forEach(el => cardObserver.observe(el));
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting && e.target.dataset.target) { animateCount(e.target); statObserver.unobserve(e.target); } });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-target]').forEach(el => statObserver.observe(el));
+</script>
+</body>
+</html>
